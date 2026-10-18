@@ -1,0 +1,78 @@
+{
+  "checkpoint": "/home/ubuntu/orca-cluster-20261009-224323/checkpoints/formal48-grid48-seed3-u003/step-4148792",
+  "scope": "Offline local CPU session, no network environments, no live TF endpoint, no checkpoint writes; batch fixed final replay first512; four-thread intra/inter",
+  "zero_interval_vs_direct": [
+    {
+      "is_training": false,
+      "max_action_difference": 1.5969302654266357,
+      "max_actor_gradient_difference": 0.6669100522994995,
+      "gradient_relative_l2": 1.0841630697250366,
+      "gradient_cosine": 0.46865448355674744
+    },
+    {
+      "is_training": true,
+      "max_action_difference": 1.5969302654266357,
+      "max_actor_gradient_difference": 0.6669100522994995,
+      "gradient_relative_l2": 1.0841630697250366,
+      "gradient_cosine": 0.46865448355674744
+    }
+  ],
+  "bound_ancestor_ops": 122,
+  "direct_ancestor_ops": 87,
+  "bound_extra_ops": 96,
+  "all_actor_bn_update_ops": [
+    "abstract_actor/abstract_actor/bn1/cond_1/Merge:0",
+    "abstract_actor/abstract_actor/bn1/cond_1/Merge_1:0",
+    "abstract_actor/abstract_actor/bn2/cond_1/Merge:0",
+    "abstract_actor/abstract_actor/bn2/cond_1/Merge_1:0",
+    "actor/batch_normalization/cond_2/Merge",
+    "actor/batch_normalization/cond_3/Merge",
+    "actor/batch_normalization_1/cond_2/Merge",
+    "actor/batch_normalization_1/cond_3/Merge",
+    "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/Merge:0",
+    "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/Merge_1:0",
+    "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/Merge:0",
+    "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/Merge_1:0"
+  ],
+  "relevant_bn_update_ops": [
+    "abstract_actor/abstract_actor/bn1/cond_1/Merge:0",
+    "abstract_actor/abstract_actor/bn1/cond_1/Merge_1:0",
+    "abstract_actor/abstract_actor/bn2/cond_1/Merge:0",
+    "abstract_actor/abstract_actor/bn2/cond_1/Merge_1:0",
+    "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/Merge:0",
+    "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/Merge_1:0",
+    "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/Merge:0",
+    "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/Merge_1:0"
+  ],
+  "benchmark": [
+    {
+      "variant": "stock_zero_interval_all_actor_bn",
+      "mean_ms": 3.7365201200020692,
+      "p50_ms": 3.790045999977565,
+      "p95_ms": 4.044369000018833,
+      "iterations": 100
+    },
+    {
+      "variant": "zero_interval_relevant_bn_only",
+      "mean_ms": 3.3902135599993244,
+      "p50_ms": 3.404522500005669,
+      "p95_ms": 3.6895574500391604,
+      "iterations": 100
+    },
+    {
+      "variant": "concrete_all_actor_bn",
+      "mean_ms": 2.461000209994495,
+      "p50_ms": 2.4327695000181393,
+      "p95_ms": 2.693374449967223,
+      "iterations": 100
+    },
+    {
+      "variant": "concrete_relevant_bn_only",
+      "mean_ms": 2.441299660002869,
+      "p50_ms": 2.4541330000147354,
+      "p95_ms": 2.600556899975004,
+      "iterations": 100
+    }
+  ],
+  "limitation": "Single host/offline batch; numerical equivalence at sampled states is not proof of equal long-run learning or seed stability"
+}

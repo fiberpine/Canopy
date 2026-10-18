@@ -1,0 +1,74 @@
+{
+  "epoch": 1791598926.5612614,
+  "finding": "Five-node make_config omitted LOSS_TYPE, so preserved distributed.setup used its MSE default. Earlier successful single-node baseline explicitly used HUBER. Historical configs and checkpoints are unchanged. Current five-node capacity and formal evidence describe MSE, not a deployment-only HUBER comparison.",
+  "runs": [
+    {
+      "run_id": "cap16-neutral-u025",
+      "config_sha256": "8abf592819d98f17dec600a37e8ce0acaa286ae1a977650a7012c7f606a6a9d4",
+      "loss_field_present": false,
+      "effective_critic_loss": "MSE",
+      "source_baseline_critic_loss": "HUBER",
+      "same_loss_as_source": false
+    },
+    {
+      "run_id": "cap32-neutral-u025",
+      "config_sha256": "ed26d96930abd98ed8c1b7bda7de921e729cd7ddda5e8fa7f95a5458f8028f04",
+      "loss_field_present": false,
+      "effective_critic_loss": "MSE",
+      "source_baseline_critic_loss": "HUBER",
+      "same_loss_as_source": false
+    },
+    {
+      "run_id": "cap4-neutral-u025",
+      "config_sha256": "ecdbc511d4a9c9cbfd759bc47b9ba822ddfb3f1bc6c7a580023f51fb74d82969",
+      "loss_field_present": false,
+      "effective_critic_loss": "MSE",
+      "source_baseline_critic_loss": "HUBER",
+      "same_loss_as_source": false
+    },
+    {
+      "run_id": "cap48-expanded-u003",
+      "config_sha256": "53e3f97cd02d18edc459c0aa35c77c5a6b232a61a6c994d15c70f8668cbf2209",
+      "loss_field_present": false,
+      "effective_critic_loss": "MSE",
+      "source_baseline_critic_loss": "HUBER",
+      "same_loss_as_source": false
+    },
+    {
+      "run_id": "cap48-grid48-u003-safe",
+      "config_sha256": "ec89f3c8e20015915e0d874f408471259c72432b7b2122a1a98c6942443c57d3",
+      "loss_field_present": false,
+      "effective_critic_loss": "MSE",
+      "source_baseline_critic_loss": "HUBER",
+      "same_loss_as_source": false
+    },
+    {
+      "run_id": "cap48-neutral-u025",
+      "config_sha256": "595789d78859246e04f4dbfd5f460e2c8cc7a3f7151a5bb5db4576374065072e",
+      "loss_field_present": false,
+      "effective_critic_loss": "MSE",
+      "source_baseline_critic_loss": "HUBER",
+      "same_loss_as_source": false
+    },
+    {
+      "run_id": "cap8-neutral-u025",
+      "config_sha256": "859615edea8bc38ac228cea9ce3160bef8a75a8cb469b77dfc99b6face8d1973",
+      "loss_field_present": false,
+      "effective_critic_loss": "MSE",
+      "source_baseline_critic_loss": "HUBER",
+      "same_loss_as_source": false
+    },
+    {
+      "run_id": "formal48-grid48-seed3-u003",
+      "config_sha256": "0369c6c67218cc2dcdf4bb232e209a61b8f2d73f03f8b965043b754bc3b6b6a1",
+      "loss_field_present": false,
+      "effective_critic_loss": "MSE",
+      "source_baseline_critic_loss": "HUBER",
+      "same_loss_as_source": false
+    }
+  ],
+  "source_baseline": "/home/ubuntu/orca-capacity-20261009-165124/configs/formal.json",
+  "source_config_sha256": "8d81b64592993b04388590fd26b6349c070d1dc86c11542de6c00f004a9d8e81",
+  "repair": "Factory now requires and copies source LOSS_TYPE for future runs; no new training executed after this fix. One cannot relabel existing MSE weights as HUBER or infer HUBER cluster capacity from MSE timing.",
+  "reproduction": "Existing historical configs bypass factory and retain recorded defaults; rerunning factory with same command after fix produces a different explicit loss and must use fresh run IDs."
+}

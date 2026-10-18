@@ -1,0 +1,28 @@
+{
+  "status": "PASS149_EXACT_WINDOW_Q_EXTENSION_FIXED_TIME_GRADIENT_AND_SCHEMA",
+  "arm": "feedback",
+  "proof": {
+    "source_checkpoint": "/home/ubuntu/orca-interval-accounting-20261015-205000/checkpoints/v28-acked900/step-283381",
+    "source_state_dim": 96,
+    "new_state_dim": 149,
+    "old96_prefix_preserved": true,
+    "extra_weights_zero": true,
+    "window_critic_bn_targets_copied": true,
+    "optimizer_replay_counters_fresh": true,
+    "complete_resume": false,
+    "scratch_training": false,
+    "timer_interface_migrated_explicitly": true,
+    "remaining_limits": [
+      "old raw RTT count remains in96 prefix",
+      "observed peak normalization unchanged",
+      "nonlinear interval reward approximation unchanged"
+    ]
+  },
+  "window_max_error": 0.0,
+  "max_q_error": 0.0001068115234375,
+  "new_input_gradient_norm": 0.30308806896209717,
+  "fixed_time_gradient_zero": false,
+  "temporary_update_only": true,
+  "formal_optimizer_updates": 0,
+  "new_input_fixture": "Synthetic finite values for function/gradient tests; source old96 uses512 real replay states"
+}

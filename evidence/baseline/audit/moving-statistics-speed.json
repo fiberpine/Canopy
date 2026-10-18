@@ -1,0 +1,42 @@
+{
+  "checkpoint": "/home/ubuntu/orca-cluster-20261009-224323/checkpoints/formal48-grid48-seed3-u003/step-4148792",
+  "scope": "Offline local four-thread CPU, fixed512 replay batch, restored same checkpoint before each variant; no live environments, no checkpoint writes",
+  "timings": [
+    {
+      "variant": "stock",
+      "mean_ms": 3.9805484100037347,
+      "p50_ms": 3.955981499984773,
+      "p95_ms": 4.629833850020758,
+      "iterations": 200
+    },
+    {
+      "variant": "moving_statistics_all_bn",
+      "mean_ms": 2.254382185001873,
+      "p50_ms": 2.246049000007133,
+      "p95_ms": 2.49833505002357,
+      "iterations": 200
+    },
+    {
+      "variant": "moving_statistics_relevant_bn",
+      "mean_ms": 2.0504779800029382,
+      "p50_ms": 2.028361500038045,
+      "p95_ms": 2.3195394999845576,
+      "iterations": 200
+    }
+  ],
+  "one_iteration_comparisons": [
+    {
+      "variant": "stock_repeat",
+      "max_online_policy_and_slots_difference_after_one_iteration": 0.0
+    },
+    {
+      "variant": "moving_statistics_all_bn",
+      "max_online_policy_and_slots_difference_after_one_iteration": 0.0
+    },
+    {
+      "variant": "moving_statistics_relevant_bn",
+      "max_online_policy_and_slots_difference_after_one_iteration": 0.0
+    }
+  ],
+  "limitations": "Static outputs/gradients equivalence verified separately. Stock fetches optimizer and BN updates without ordering; scheduling can affect one-iteration equality. This is not a demonstrated end-to-end cluster speedup or long-run learning validation. Candidate not installed in formal code."
+}

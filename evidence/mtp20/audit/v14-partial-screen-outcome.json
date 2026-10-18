@@ -1,0 +1,19 @@
+{
+  "epoch": 1791957400.4223394,
+  "status": "FROZEN_SCREEN_COMPLETE_REQUIRES_ACTION_AND_NETWORK_ANALYSIS",
+  "variant": {
+    "name": "adaptive-partial",
+    "checkpoint": "/home/ubuntu/orca-adaptive-mtp-20261014-115233/checkpoints/v14-joint1800/step-277317",
+    "joint_control": true,
+    "window_policy_mode": "staged_joint",
+    "timing_policy_mode": "learned",
+    "timing_init_ms": 80,
+    "target_bn_consistent": true,
+    "diagnostic_clock_v11": true,
+    "native_clock_mode": "sample",
+    "reader_parse_mode": "fast",
+    "training_seed": 3,
+    "effective_training_samples": 277317,
+    "model_source": "V14 engineering-timeout partial CP277317; not completed1800s; no score-based checkpoint choice"
+  }
+}

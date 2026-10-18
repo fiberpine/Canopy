@@ -1,0 +1,10 @@
+{
+  "returncode": 0,
+  "elapsed_s": 1.8918883800506592,
+  "stdout": "Starting sending rate = 2.24e+06\nStarting sending rate = 2.24e+06\nWORKER_PYTHON_RATE 6.11685e+06\nPASS total=1 ctor_pairs=1 safe_destructors=2\n",
+  "stderr_tail": "7:24.200460: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55ab5579d240 executing computations on platform Host. Devices:\n2026-10-17 13:17:24.200470: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>\nWARNING:tensorflow:From /home/ubuntu/orca-aurora-official-dev-20261016/runtime/python/pcc_rl/udt-plugins/testing/loaded_agent.py:25: The name tf.saved_model.tag_constants.SERVING is deprecated. Please use tf.saved_model.SERVING instead.\n\nWARNING:tensorflow:From /home/ubuntu/orca-aurora-official-dev-20261016/runtime/python/pcc_rl/udt-plugins/testing/loaded_agent.py:25: load (from tensorflow.python.saved_model.loader_impl) is deprecated and will be removed in a future version.\nInstructions for updating:\nThis function will only be available through the v1 compatibility library as tf.compat.v1.saved_model.loader.load or tf.compat.v1.saved_model.load. There will be a new function for importing SavedModels in Tensorflow 2.0.\nWARNING:tensorflow:From /home/ubuntu/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.\nInstructions for updating:\nUse standard file APIs to check for files with this prefix.\n2026-10-17 13:17:24.597201: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.\n",
+  "events": 5,
+  "observations": 1,
+  "inferences": 1,
+  "no_sockets": true
+}

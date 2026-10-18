@@ -1,0 +1,987 @@
+{
+  "status": "PASS",
+  "stage": {
+    "stage": "COMPLETED_48_REUSED_PRIOR_ADMISSION",
+    "epoch": 1792235688.5484884,
+    "deadline_epoch": 1792238647.3306947,
+    "remaining_s": 2958.7822058200836,
+    "formal_runs": 48,
+    "failed_runs": 0,
+    "admission_runs": 0
+  },
+  "checks": {
+    "completed_48": true,
+    "groups24_each": true,
+    "trace_sha_all_match": true,
+    "full_trim_all_present": true,
+    "all_cpu_windows_available": true,
+    "aurora_all_actual_inferences": true,
+    "runtime_all_sha_unchanged": true
+  },
+  "runtime_changed": [],
+  "runs": [
+    {
+      "run_id": "supp-r4-00-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 4000,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.044915199279785,
+      "all_owned_cpu_percent_one_core": 106.20918373388996,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-00-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 4038,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.04505228996277,
+      "all_owned_cpu_percent_one_core": 106.44817064600198,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-00-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.057973384857178,
+      "all_owned_cpu_percent_one_core": 3.3522264035431593,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-00-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.057144165039062,
+      "all_owned_cpu_percent_one_core": 3.3523373392727196,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-01-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 1657,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 24.99816584587097,
+      "all_owned_cpu_percent_one_core": 102.80754259514987,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-01-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 3823,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.034837245941162,
+      "all_owned_cpu_percent_one_core": 106.17205032682746,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-01-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.05610227584839,
+      "all_owned_cpu_percent_one_core": 3.7515811104669194,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-01-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.05736207962036,
+      "all_owned_cpu_percent_one_core": 3.7513924930051603,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-02-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 943,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.037429332733154,
+      "all_owned_cpu_percent_one_core": 106.36075950970242,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-02-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 954,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.053374767303467,
+      "all_owned_cpu_percent_one_core": 106.41280964189022,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-02-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.05749750137329,
+      "all_owned_cpu_percent_one_core": 3.711464003733936,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-02-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "actual_trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.0588698387146,
+      "all_owned_cpu_percent_one_core": 3.591542658518257,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-03-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "5dd675714a4bae63219d04af45acfc9c94bdf951b2c02da460532988a81c8c26",
+      "actual_trace_sha256": "5dd675714a4bae63219d04af45acfc9c94bdf951b2c02da460532988a81c8c26",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 836,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.089658498764038,
+      "all_owned_cpu_percent_one_core": 108.49091469834434,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-03-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "5dd675714a4bae63219d04af45acfc9c94bdf951b2c02da460532988a81c8c26",
+      "actual_trace_sha256": "5dd675714a4bae63219d04af45acfc9c94bdf951b2c02da460532988a81c8c26",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 849,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.077475786209106,
+      "all_owned_cpu_percent_one_core": 108.62337275181473,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-03-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "5dd675714a4bae63219d04af45acfc9c94bdf951b2c02da460532988a81c8c26",
+      "actual_trace_sha256": "5dd675714a4bae63219d04af45acfc9c94bdf951b2c02da460532988a81c8c26",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.0579617023468,
+      "all_owned_cpu_percent_one_core": 5.427416707531441,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-03-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "5dd675714a4bae63219d04af45acfc9c94bdf951b2c02da460532988a81c8c26",
+      "actual_trace_sha256": "5dd675714a4bae63219d04af45acfc9c94bdf951b2c02da460532988a81c8c26",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.0566668510437,
+      "all_owned_cpu_percent_one_core": 5.347878103524309,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-04-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "actual_trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 4745,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.109841108322144,
+      "all_owned_cpu_percent_one_core": 110.03653858583202,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-04-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "actual_trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 4736,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.109430074691772,
+      "all_owned_cpu_percent_one_core": 109.99851417511331,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-04-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "actual_trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.059421062469482,
+      "all_owned_cpu_percent_one_core": 6.305013974829229,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-04-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "actual_trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.05706000328064,
+      "all_owned_cpu_percent_one_core": 6.425334814975132,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-05-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "7751ef86886a77545bce2f7638d282ffa1ca18b4eb5ff91a600c3996604a74c2",
+      "actual_trace_sha256": "7751ef86886a77545bce2f7638d282ffa1ca18b4eb5ff91a600c3996604a74c2",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 4719,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 24.976152420043945,
+      "all_owned_cpu_percent_one_core": 112.18701555293715,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-05-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "7751ef86886a77545bce2f7638d282ffa1ca18b4eb5ff91a600c3996604a74c2",
+      "actual_trace_sha256": "7751ef86886a77545bce2f7638d282ffa1ca18b4eb5ff91a600c3996604a74c2",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 4699,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.20227551460266,
+      "all_owned_cpu_percent_one_core": 112.29144758616125,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-05-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "7751ef86886a77545bce2f7638d282ffa1ca18b4eb5ff91a600c3996604a74c2",
+      "actual_trace_sha256": "7751ef86886a77545bce2f7638d282ffa1ca18b4eb5ff91a600c3996604a74c2",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.05868434906006,
+      "all_owned_cpu_percent_one_core": 7.3028574625412945,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-05-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "7751ef86886a77545bce2f7638d282ffa1ca18b4eb5ff91a600c3996604a74c2",
+      "actual_trace_sha256": "7751ef86886a77545bce2f7638d282ffa1ca18b4eb5ff91a600c3996604a74c2",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.05857563018799,
+      "all_owned_cpu_percent_one_core": 7.2230761505035375,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-06-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "actual_trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 4737,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 24.920363903045654,
+      "all_owned_cpu_percent_one_core": 110.43177421914224,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-06-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "actual_trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 4664,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 24.912007808685303,
+      "all_owned_cpu_percent_one_core": 110.1878267332184,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-06-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "actual_trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.0562424659729,
+      "all_owned_cpu_percent_one_core": 6.265903605187831,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-06-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "actual_trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.056403875350952,
+      "all_owned_cpu_percent_one_core": 6.225953284280504,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-07-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "actual_trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 1047,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.11145305633545,
+      "all_owned_cpu_percent_one_core": 110.0294751483094,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-07-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "actual_trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 1043,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.11398458480835,
+      "all_owned_cpu_percent_one_core": 110.09802091192533,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-07-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "actual_trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.05659031867981,
+      "all_owned_cpu_percent_one_core": 6.305726277617679,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-07-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "actual_trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.056791305541992,
+      "all_owned_cpu_percent_one_core": 6.225857018073033,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-08-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "74568a4ddb06cab827848f2d4e1819cfdd6fcbd4f0bbbdbba03bb678b99e6fe6",
+      "actual_trace_sha256": "74568a4ddb06cab827848f2d4e1819cfdd6fcbd4f0bbbdbba03bb678b99e6fe6",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 2426,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.012672185897827,
+      "all_owned_cpu_percent_one_core": 103.50753333183175,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-08-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "74568a4ddb06cab827848f2d4e1819cfdd6fcbd4f0bbbdbba03bb678b99e6fe6",
+      "actual_trace_sha256": "74568a4ddb06cab827848f2d4e1819cfdd6fcbd4f0bbbdbba03bb678b99e6fe6",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 2398,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.052698850631714,
+      "all_owned_cpu_percent_one_core": 103.46190705655816,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-08-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "74568a4ddb06cab827848f2d4e1819cfdd6fcbd4f0bbbdbba03bb678b99e6fe6",
+      "actual_trace_sha256": "74568a4ddb06cab827848f2d4e1819cfdd6fcbd4f0bbbdbba03bb678b99e6fe6",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.05535650253296,
+      "all_owned_cpu_percent_one_core": 5.188511286473123,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-08-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "74568a4ddb06cab827848f2d4e1819cfdd6fcbd4f0bbbdbba03bb678b99e6fe6",
+      "actual_trace_sha256": "74568a4ddb06cab827848f2d4e1819cfdd6fcbd4f0bbbdbba03bb678b99e6fe6",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.057241439819336,
+      "all_owned_cpu_percent_one_core": 5.108303733570238,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-09-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "2758a21337f5f51eb6b73dd265947ba7132806fdd5a45bad774bf386d8586ff6",
+      "actual_trace_sha256": "2758a21337f5f51eb6b73dd265947ba7132806fdd5a45bad774bf386d8586ff6",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 4766,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.02079701423645,
+      "all_owned_cpu_percent_one_core": 113.6254771733441,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-09-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "2758a21337f5f51eb6b73dd265947ba7132806fdd5a45bad774bf386d8586ff6",
+      "actual_trace_sha256": "2758a21337f5f51eb6b73dd265947ba7132806fdd5a45bad774bf386d8586ff6",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 4754,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.01592254638672,
+      "all_owned_cpu_percent_one_core": 113.16792313977274,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-09-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "2758a21337f5f51eb6b73dd265947ba7132806fdd5a45bad774bf386d8586ff6",
+      "actual_trace_sha256": "2758a21337f5f51eb6b73dd265947ba7132806fdd5a45bad774bf386d8586ff6",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.05679941177368,
+      "all_owned_cpu_percent_one_core": 8.101593370485077,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-09-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "2758a21337f5f51eb6b73dd265947ba7132806fdd5a45bad774bf386d8586ff6",
+      "actual_trace_sha256": "2758a21337f5f51eb6b73dd265947ba7132806fdd5a45bad774bf386d8586ff6",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.05636763572693,
+      "all_owned_cpu_percent_one_core": 8.181553008014546,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-10-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "68b1f538c4cb5f3873fe93fee8309d23e15bfd9b5d02cf08650f0a053ef60d38",
+      "actual_trace_sha256": "68b1f538c4cb5f3873fe93fee8309d23e15bfd9b5d02cf08650f0a053ef60d38",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 988,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 24.805992603302002,
+      "all_owned_cpu_percent_one_core": 112.75501225569514,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-10-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "68b1f538c4cb5f3873fe93fee8309d23e15bfd9b5d02cf08650f0a053ef60d38",
+      "actual_trace_sha256": "68b1f538c4cb5f3873fe93fee8309d23e15bfd9b5d02cf08650f0a053ef60d38",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 957,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.00997805595398,
+      "all_owned_cpu_percent_one_core": 112.71501293176453,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-10-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "68b1f538c4cb5f3873fe93fee8309d23e15bfd9b5d02cf08650f0a053ef60d38",
+      "actual_trace_sha256": "68b1f538c4cb5f3873fe93fee8309d23e15bfd9b5d02cf08650f0a053ef60d38",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.05750060081482,
+      "all_owned_cpu_percent_one_core": 8.540356973713537,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-10-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "68b1f538c4cb5f3873fe93fee8309d23e15bfd9b5d02cf08650f0a053ef60d38",
+      "actual_trace_sha256": "68b1f538c4cb5f3873fe93fee8309d23e15bfd9b5d02cf08650f0a053ef60d38",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.0574734210968,
+      "all_owned_cpu_percent_one_core": 8.540366237396688,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-11-aurora-r1-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "8ba4669243f7bf1709a72cef8ef1de3198aac17dbb18902202c5cc91a604f64a",
+      "actual_trace_sha256": "8ba4669243f7bf1709a72cef8ef1de3198aac17dbb18902202c5cc91a604f64a",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 2004,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.109016180038452,
+      "all_owned_cpu_percent_one_core": 109.72154306030562,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-11-aurora-r2-20261017",
+      "group": "Aurora",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "8ba4669243f7bf1709a72cef8ef1de3198aac17dbb18902202c5cc91a604f64a",
+      "actual_trace_sha256": "8ba4669243f7bf1709a72cef8ef1de3198aac17dbb18902202c5cc91a604f64a",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 2010,
+      "model_unchanged": true,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.097059965133667,
+      "all_owned_cpu_percent_one_core": 109.69412368718217,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-11-cubic-r1-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "8ba4669243f7bf1709a72cef8ef1de3198aac17dbb18902202c5cc91a604f64a",
+      "actual_trace_sha256": "8ba4669243f7bf1709a72cef8ef1de3198aac17dbb18902202c5cc91a604f64a",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.056640625,
+      "all_owned_cpu_percent_one_core": 6.066256138436355,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    },
+    {
+      "run_id": "supp-r4-11-cubic-r2-20261017",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 2,
+      "status": "COMPLETED",
+      "seconds": 60,
+      "trace_sha256": "8ba4669243f7bf1709a72cef8ef1de3198aac17dbb18902202c5cc91a604f64a",
+      "actual_trace_sha256": "8ba4669243f7bf1709a72cef8ef1de3198aac17dbb18902202c5cc91a604f64a",
+      "source_identity": "8671fc08ac4a8972bd5741018f3bb95b6b74b94f",
+      "policy_inferences": 0,
+      "model_unchanged": null,
+      "cpu_measurement_available": true,
+      "cpu_interval_s": 25.058232069015503,
+      "all_owned_cpu_percent_one_core": 6.025963826343179,
+      "metric_windows": [
+        "full",
+        "trim10"
+      ]
+    }
+  ],
+  "transport": "Aurora official UDT over UDP, external pretrained model; lifecycle and RTT float integration repairs; CUBIC kernel TCP. No matched training claim.",
+  "cpu_comparison": "Aurora versus CUBIC only on the same learner. Whole run-owned process CPU includes native embedded TF; wrapper CPU is not inference CPU.",
+  "raw_packet_logs_and_models_retained_cloud": true
+}

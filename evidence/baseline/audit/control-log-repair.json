@@ -1,0 +1,8 @@
+{
+  "reason": "Strict audit found one malformed CSV fragment plus repeated/reordered tail at SIGTERM; all well-formed rows matched actions. Existing signal handler calls exit(), which can flush stdio while the control thread also closes/flushes. Replace only FILE buffering with checked write() of each short record; no fsync.",
+  "failed_run": "cap48-expanded-u003",
+  "actor": 38,
+  "original_sha256": "cc068f3eeaa21af0248ea9d5e58c58d222850abf318efcbd1883f4a6665d9636",
+  "new_sha256": "2c66974f1d81ded6e1ee13034b387093c26eff7b4c6c10c20fe65b81f5754334",
+  "scope": "Logging only; retain original binary and failed logs; rerun capacity before any formal training"
+}

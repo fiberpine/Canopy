@@ -1,0 +1,1988 @@
+{
+  "status": "PASS_IDENTICAL_INPUT_ACTION_CRITIC_COMPARISON",
+  "queries": 65,
+  "results": [
+    {
+      "group": "V31-parent",
+      "queries": 65,
+      "best_period_counts": {
+        "20": 25,
+        "40": 9,
+        "80": 6,
+        "120": 8,
+        "160": 17
+      },
+      "median_Q160_minus_Q20": -1.0439071655273438,
+      "records": [
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r1",
+          "decision": 101,
+          "factual_window_action": -0.18119336664676666,
+          "Q_by_period": {
+            "20": 47.281551361083984,
+            "40": 46.83254623413086,
+            "80": 47.29048156738281,
+            "120": 47.36598205566406,
+            "160": 47.0268669128418
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": -0.2546844482421875
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r1",
+          "decision": 201,
+          "factual_window_action": 0.09332288801670074,
+          "Q_by_period": {
+            "20": 13.593985557556152,
+            "40": 14.502274513244629,
+            "80": 15.643915176391602,
+            "120": 16.341089248657227,
+            "160": 16.452499389648438
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 2.858513832092285
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r1",
+          "decision": 301,
+          "factual_window_action": 0.33188116550445557,
+          "Q_by_period": {
+            "20": 21.70223045349121,
+            "40": 20.97342872619629,
+            "80": 19.697938919067383,
+            "120": 19.06960678100586,
+            "160": 19.150348663330078
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -2.551881790161133
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 201,
+          "factual_window_action": -0.13328072428703308,
+          "Q_by_period": {
+            "20": 115.07325744628906,
+            "40": 114.50589752197266,
+            "80": 113.7176513671875,
+            "120": 112.0499038696289,
+            "160": 109.78659057617188
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -5.2866668701171875
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 301,
+          "factual_window_action": -0.1094527393579483,
+          "Q_by_period": {
+            "20": 121.07232666015625,
+            "40": 121.47969818115234,
+            "80": 120.10424041748047,
+            "120": 117.1583023071289,
+            "160": 115.1467056274414
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -5.925621032714844
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 401,
+          "factual_window_action": -0.0864342525601387,
+          "Q_by_period": {
+            "20": 122.43447875976562,
+            "40": 123.11071014404297,
+            "80": 121.0995864868164,
+            "120": 119.0421142578125,
+            "160": 117.05376434326172
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -5.380714416503906
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 501,
+          "factual_window_action": -0.10353834182024002,
+          "Q_by_period": {
+            "20": 124.495361328125,
+            "40": 124.24252319335938,
+            "80": 123.96184539794922,
+            "120": 122.48450469970703,
+            "160": 120.45773315429688
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -4.037628173828125
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 601,
+          "factual_window_action": -0.13434645533561707,
+          "Q_by_period": {
+            "20": 125.91028594970703,
+            "40": 125.75164794921875,
+            "80": 124.79966735839844,
+            "120": 121.349365234375,
+            "160": 118.82157135009766
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -7.088714599609375
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 701,
+          "factual_window_action": -0.10001716762781143,
+          "Q_by_period": {
+            "20": 123.86973571777344,
+            "40": 123.68486785888672,
+            "80": 122.21673583984375,
+            "120": 120.41098022460938,
+            "160": 118.1906967163086
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -5.679039001464844
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r2",
+          "decision": 101,
+          "factual_window_action": -0.1273975968360901,
+          "Q_by_period": {
+            "20": 123.74910736083984,
+            "40": 123.93765258789062,
+            "80": 124.44103240966797,
+            "120": 124.03160095214844,
+            "160": 123.57196807861328
+          },
+          "best_period": 80,
+          "Q160_minus_Q20": -0.1771392822265625
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r2",
+          "decision": 201,
+          "factual_window_action": -0.5102235674858093,
+          "Q_by_period": {
+            "20": 65.42235565185547,
+            "40": 65.65821075439453,
+            "80": 66.32899475097656,
+            "120": 67.4965591430664,
+            "160": 68.58953094482422
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 3.16717529296875
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r2",
+          "decision": 301,
+          "factual_window_action": -0.06566376984119415,
+          "Q_by_period": {
+            "20": 134.5459747314453,
+            "40": 135.87510681152344,
+            "80": 136.37696838378906,
+            "120": 136.98890686035156,
+            "160": 135.94940185546875
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 1.4034271240234375
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R100-q1p0-r3",
+          "decision": 101,
+          "factual_window_action": 0.078110471367836,
+          "Q_by_period": {
+            "20": 84.36149597167969,
+            "40": 84.8135757446289,
+            "80": 85.24828338623047,
+            "120": 85.10980224609375,
+            "160": 85.16250610351562
+          },
+          "best_period": 80,
+          "Q160_minus_Q20": 0.8010101318359375
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R100-q1p0-r3",
+          "decision": 201,
+          "factual_window_action": -0.7357712984085083,
+          "Q_by_period": {
+            "20": 57.40732192993164,
+            "40": 57.20229721069336,
+            "80": 57.016151428222656,
+            "120": 57.059486389160156,
+            "160": 57.350425720214844
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -0.056896209716796875
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q5p0-r1",
+          "decision": 101,
+          "factual_window_action": -0.3663270175457001,
+          "Q_by_period": {
+            "20": 45.58828353881836,
+            "40": 45.91282272338867,
+            "80": 45.95226287841797,
+            "120": 46.61355209350586,
+            "160": 47.08794403076172
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.4996604919433594
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q5p0-r1",
+          "decision": 201,
+          "factual_window_action": -0.9849156141281128,
+          "Q_by_period": {
+            "20": 41.70637130737305,
+            "40": 42.02082443237305,
+            "80": 42.39400100708008,
+            "120": 42.545413970947266,
+            "160": 42.496456146240234
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 0.7900848388671875
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r1",
+          "decision": 201,
+          "factual_window_action": -0.15409652888774872,
+          "Q_by_period": {
+            "20": 114.97268676757812,
+            "40": 114.34808349609375,
+            "80": 113.43250274658203,
+            "120": 110.66600036621094,
+            "160": 108.51513671875
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -6.457550048828125
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r1",
+          "decision": 301,
+          "factual_window_action": -0.8384300470352173,
+          "Q_by_period": {
+            "20": 45.73490905761719,
+            "40": 48.75815963745117,
+            "80": 51.08308410644531,
+            "120": 51.72325897216797,
+            "160": 51.07954406738281
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 5.344635009765625
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r1",
+          "decision": 401,
+          "factual_window_action": -0.09983790665864944,
+          "Q_by_period": {
+            "20": 119.49715423583984,
+            "40": 118.65567779541016,
+            "80": 117.18694305419922,
+            "120": 115.53800964355469,
+            "160": 113.21867370605469
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -6.278480529785156
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r1",
+          "decision": 501,
+          "factual_window_action": -0.10612352937459946,
+          "Q_by_period": {
+            "20": 120.30375671386719,
+            "40": 119.0099105834961,
+            "80": 117.49240112304688,
+            "120": 113.88532257080078,
+            "160": 111.4458236694336
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -8.857933044433594
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r1",
+          "decision": 601,
+          "factual_window_action": -0.511555016040802,
+          "Q_by_period": {
+            "20": 44.791805267333984,
+            "40": 48.00636672973633,
+            "80": 51.47603225708008,
+            "120": 53.659332275390625,
+            "160": 54.525760650634766
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 9.733955383300781
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r2",
+          "decision": 101,
+          "factual_window_action": -0.24556998908519745,
+          "Q_by_period": {
+            "20": 54.59601974487305,
+            "40": 55.17725372314453,
+            "80": 56.351593017578125,
+            "120": 56.53438186645508,
+            "160": 56.3721809387207
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 1.7761611938476562
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r2",
+          "decision": 201,
+          "factual_window_action": 0.12218213081359863,
+          "Q_by_period": {
+            "20": 19.28289031982422,
+            "40": 19.157777786254883,
+            "80": 18.730438232421875,
+            "120": 19.36170768737793,
+            "160": 19.887218475341797
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 0.6043281555175781
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r2",
+          "decision": 301,
+          "factual_window_action": -0.24183925986289978,
+          "Q_by_period": {
+            "20": 25.338165283203125,
+            "40": 24.668100357055664,
+            "80": 22.382091522216797,
+            "120": 20.766281127929688,
+            "160": 19.61984634399414
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -5.718318939208984
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 201,
+          "factual_window_action": -0.13082408905029297,
+          "Q_by_period": {
+            "20": 113.43683624267578,
+            "40": 111.82035064697266,
+            "80": 109.5479736328125,
+            "120": 105.5765151977539,
+            "160": 103.05123901367188
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -10.385597229003906
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 301,
+          "factual_window_action": -0.05443338677287102,
+          "Q_by_period": {
+            "20": 122.40064239501953,
+            "40": 122.50718688964844,
+            "80": 119.49276733398438,
+            "120": 115.90286254882812,
+            "160": 113.3818130493164
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -9.018829345703125
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 401,
+          "factual_window_action": -0.1471068263053894,
+          "Q_by_period": {
+            "20": 124.85953521728516,
+            "40": 124.53887939453125,
+            "80": 123.16729736328125,
+            "120": 119.69021606445312,
+            "160": 117.23268127441406
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -7.626853942871094
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 501,
+          "factual_window_action": -0.06663411110639572,
+          "Q_by_period": {
+            "20": 125.19574737548828,
+            "40": 124.85782623291016,
+            "80": 122.85459899902344,
+            "120": 119.97819519042969,
+            "160": 117.84992218017578
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -7.3458251953125
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 601,
+          "factual_window_action": -0.1084652841091156,
+          "Q_by_period": {
+            "20": 123.91756439208984,
+            "40": 123.80804443359375,
+            "80": 123.38028717041016,
+            "120": 120.47303771972656,
+            "160": 118.40165710449219
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -5.515907287597656
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 701,
+          "factual_window_action": -0.03794761002063751,
+          "Q_by_period": {
+            "20": 124.23873901367188,
+            "40": 124.144287109375,
+            "80": 122.4046401977539,
+            "120": 120.28318786621094,
+            "160": 118.0795669555664
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -6.159172058105469
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-compound_drop24-R100-q5p0-r3",
+          "decision": 101,
+          "factual_window_action": -0.0629664734005928,
+          "Q_by_period": {
+            "20": 130.18423461914062,
+            "40": 131.29776000976562,
+            "80": 132.84573364257812,
+            "120": 134.00726318359375,
+            "160": 134.59901428222656
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 4.4147796630859375
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-compound_drop24-R100-q5p0-r3",
+          "decision": 201,
+          "factual_window_action": 0.005758064333349466,
+          "Q_by_period": {
+            "20": 149.03976440429688,
+            "40": 150.24813842773438,
+            "80": 151.6292724609375,
+            "120": 152.31227111816406,
+            "160": 152.47610473632812
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 3.43634033203125
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-compound_drop24-R100-q5p0-r3",
+          "decision": 301,
+          "factual_window_action": 0.04380064085125923,
+          "Q_by_period": {
+            "20": 132.57916259765625,
+            "40": 133.42916870117188,
+            "80": 133.89454650878906,
+            "120": 134.07986450195312,
+            "160": 134.34471130371094
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.7655487060546875
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R100-q1p0-r1",
+          "decision": 101,
+          "factual_window_action": 0.009911933913826942,
+          "Q_by_period": {
+            "20": 132.37283325195312,
+            "40": 133.8182830810547,
+            "80": 134.22120666503906,
+            "120": 134.4993896484375,
+            "160": 134.5476837158203
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 2.1748504638671875
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R100-q1p0-r1",
+          "decision": 201,
+          "factual_window_action": -0.7158734798431396,
+          "Q_by_period": {
+            "20": 61.352882385253906,
+            "40": 61.429100036621094,
+            "80": 61.76237487792969,
+            "120": 61.859195709228516,
+            "160": 61.73933410644531
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 0.38645172119140625
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q5p0-r2",
+          "decision": 101,
+          "factual_window_action": -0.7304690480232239,
+          "Q_by_period": {
+            "20": 22.044801712036133,
+            "40": 22.745624542236328,
+            "80": 23.297971725463867,
+            "120": 23.28323745727539,
+            "160": 23.12343406677246
+          },
+          "best_period": 80,
+          "Q160_minus_Q20": 1.0786323547363281
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q5p0-r2",
+          "decision": 201,
+          "factual_window_action": -0.9698852300643921,
+          "Q_by_period": {
+            "20": 17.233871459960938,
+            "40": 17.333629608154297,
+            "80": 17.63245964050293,
+            "120": 18.666439056396484,
+            "160": 19.26942253112793
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 2.035551071166992
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q5p0-r2",
+          "decision": 301,
+          "factual_window_action": -0.9303247928619385,
+          "Q_by_period": {
+            "20": 29.012348175048828,
+            "40": 29.279176712036133,
+            "80": 28.71661949157715,
+            "120": 28.261749267578125,
+            "160": 27.968441009521484
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -1.0439071655273438
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r2",
+          "decision": 201,
+          "factual_window_action": 0.005928766913712025,
+          "Q_by_period": {
+            "20": 119.00447845458984,
+            "40": 119.25175476074219,
+            "80": 118.63321685791016,
+            "120": 116.026123046875,
+            "160": 113.81015014648438
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -5.194328308105469
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r2",
+          "decision": 301,
+          "factual_window_action": -0.6201198101043701,
+          "Q_by_period": {
+            "20": 62.73774337768555,
+            "40": 63.9625358581543,
+            "80": 62.215267181396484,
+            "120": 59.581642150878906,
+            "160": 58.05751419067383
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -4.680229187011719
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r2",
+          "decision": 401,
+          "factual_window_action": -0.16841867566108704,
+          "Q_by_period": {
+            "20": 117.36995697021484,
+            "40": 117.50982666015625,
+            "80": 117.01139831542969,
+            "120": 116.67708587646484,
+            "160": 113.87298583984375
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -3.4969711303710938
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r2",
+          "decision": 501,
+          "factual_window_action": -0.17073146998882294,
+          "Q_by_period": {
+            "20": 114.81462097167969,
+            "40": 114.22007751464844,
+            "80": 112.45518493652344,
+            "120": 108.89768981933594,
+            "160": 106.46763610839844
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -8.34698486328125
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r2",
+          "decision": 601,
+          "factual_window_action": -0.2128983438014984,
+          "Q_by_period": {
+            "20": 88.32305908203125,
+            "40": 90.30142974853516,
+            "80": 91.26853942871094,
+            "120": 91.04299926757812,
+            "160": 90.84969329833984
+          },
+          "best_period": 80,
+          "Q160_minus_Q20": 2.5266342163085938
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q0p5-r3",
+          "decision": 101,
+          "factual_window_action": -0.15105916559696198,
+          "Q_by_period": {
+            "20": 54.241050720214844,
+            "40": 54.850067138671875,
+            "80": 55.74125289916992,
+            "120": 55.85015106201172,
+            "160": 55.44913101196289
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 1.2080802917480469
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q0p5-r3",
+          "decision": 201,
+          "factual_window_action": 0.04110709950327873,
+          "Q_by_period": {
+            "20": 26.386127471923828,
+            "40": 27.303836822509766,
+            "80": 27.273134231567383,
+            "120": 27.43690299987793,
+            "160": 27.744604110717773
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.3584766387939453
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q0p5-r3",
+          "decision": 301,
+          "factual_window_action": -0.21733850240707397,
+          "Q_by_period": {
+            "20": 27.963258743286133,
+            "40": 27.712678909301758,
+            "80": 28.09894561767578,
+            "120": 27.83059310913086,
+            "160": 26.960880279541016
+          },
+          "best_period": 80,
+          "Q160_minus_Q20": -1.0023784637451172
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 201,
+          "factual_window_action": -0.05684474855661392,
+          "Q_by_period": {
+            "20": 115.66456604003906,
+            "40": 114.5910415649414,
+            "80": 113.44595336914062,
+            "120": 110.4421615600586,
+            "160": 108.02003479003906
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -7.64453125
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 301,
+          "factual_window_action": -0.1267411857843399,
+          "Q_by_period": {
+            "20": 122.11277770996094,
+            "40": 121.71833038330078,
+            "80": 120.85565185546875,
+            "120": 117.27963256835938,
+            "160": 114.73837280273438
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -7.3744049072265625
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 401,
+          "factual_window_action": -0.06717725098133087,
+          "Q_by_period": {
+            "20": 122.45027160644531,
+            "40": 121.67183685302734,
+            "80": 120.2313461303711,
+            "120": 117.26577758789062,
+            "160": 115.1808853149414
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -7.269386291503906
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 501,
+          "factual_window_action": -0.17098362743854523,
+          "Q_by_period": {
+            "20": 125.95850372314453,
+            "40": 125.5238265991211,
+            "80": 124.57366943359375,
+            "120": 121.44284057617188,
+            "160": 118.98884582519531
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -6.969657897949219
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 601,
+          "factual_window_action": -0.10474206507205963,
+          "Q_by_period": {
+            "20": 122.41505432128906,
+            "40": 123.50651550292969,
+            "80": 123.27163696289062,
+            "120": 120.75839233398438,
+            "160": 118.82623291015625
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -3.5888214111328125
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 701,
+          "factual_window_action": -0.2599999010562897,
+          "Q_by_period": {
+            "20": 122.639892578125,
+            "40": 122.83997344970703,
+            "80": 122.32842254638672,
+            "120": 119.38225555419922,
+            "160": 117.2373046875
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -5.402587890625
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r1",
+          "decision": 101,
+          "factual_window_action": -0.0886605903506279,
+          "Q_by_period": {
+            "20": 126.57536315917969,
+            "40": 127.3195571899414,
+            "80": 128.88156127929688,
+            "120": 129.76072692871094,
+            "160": 130.23416137695312
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 3.6587982177734375
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r1",
+          "decision": 201,
+          "factual_window_action": -0.07550744712352753,
+          "Q_by_period": {
+            "20": 38.90708541870117,
+            "40": 39.37261962890625,
+            "80": 39.93656921386719,
+            "120": 40.374385833740234,
+            "160": 40.74422073364258
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.8371353149414062
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r1",
+          "decision": 301,
+          "factual_window_action": -0.02899201028048992,
+          "Q_by_period": {
+            "20": 129.85157775878906,
+            "40": 130.46585083007812,
+            "80": 131.02720642089844,
+            "120": 131.60311889648438,
+            "160": 131.75570678710938
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.9041290283203125
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R100-q1p0-r2",
+          "decision": 101,
+          "factual_window_action": 0.020903393626213074,
+          "Q_by_period": {
+            "20": 139.2901153564453,
+            "40": 140.21151733398438,
+            "80": 141.1903076171875,
+            "120": 141.27069091796875,
+            "160": 141.13487243652344
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 1.844757080078125
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R100-q1p0-r2",
+          "decision": 201,
+          "factual_window_action": -0.572477400302887,
+          "Q_by_period": {
+            "20": 65.53047180175781,
+            "40": 64.74482727050781,
+            "80": 63.882572174072266,
+            "120": 63.188350677490234,
+            "160": 62.88116455078125
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -2.6493072509765625
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q5p0-r3",
+          "decision": 101,
+          "factual_window_action": -0.8427649736404419,
+          "Q_by_period": {
+            "20": 36.98303985595703,
+            "40": 39.60383605957031,
+            "80": 41.96403884887695,
+            "120": 43.38386917114258,
+            "160": 43.809814453125
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 6.826774597167969
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q5p0-r3",
+          "decision": 201,
+          "factual_window_action": -0.9113449454307556,
+          "Q_by_period": {
+            "20": 49.02154541015625,
+            "40": 50.67014694213867,
+            "80": 52.2628059387207,
+            "120": 53.48833084106445,
+            "160": 54.195396423339844
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 5.173851013183594
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q5p0-r3",
+          "decision": 301,
+          "factual_window_action": -0.957879900932312,
+          "Q_by_period": {
+            "20": 30.547853469848633,
+            "40": 29.782527923583984,
+            "80": 29.354516983032227,
+            "120": 28.8293514251709,
+            "160": 28.410913467407227
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -2.1369400024414062
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-mixed_timescale48-R20-q5p0-r3",
+          "decision": 201,
+          "factual_window_action": -0.09238173812627792,
+          "Q_by_period": {
+            "20": 115.90975952148438,
+            "40": 114.84036254882812,
+            "80": 113.43632507324219,
+            "120": 110.24676513671875,
+            "160": 107.99661254882812
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -7.91314697265625
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-mixed_timescale48-R20-q5p0-r3",
+          "decision": 301,
+          "factual_window_action": -0.5442186594009399,
+          "Q_by_period": {
+            "20": 35.99756622314453,
+            "40": 37.48855972290039,
+            "80": 38.42095184326172,
+            "120": 38.39761734008789,
+            "160": 37.568546295166016
+          },
+          "best_period": 80,
+          "Q160_minus_Q20": 1.5709800720214844
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-mixed_timescale48-R20-q5p0-r3",
+          "decision": 401,
+          "factual_window_action": -0.11860831081867218,
+          "Q_by_period": {
+            "20": 119.63795471191406,
+            "40": 118.96392059326172,
+            "80": 117.88886260986328,
+            "120": 117.2916030883789,
+            "160": 116.79154205322266
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -2.8464126586914062
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-mixed_timescale48-R20-q5p0-r3",
+          "decision": 501,
+          "factual_window_action": -0.07552500814199448,
+          "Q_by_period": {
+            "20": 115.99970245361328,
+            "40": 115.6549301147461,
+            "80": 112.84019470214844,
+            "120": 109.59571838378906,
+            "160": 107.33883666992188
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -8.660865783691406
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-mixed_timescale48-R20-q5p0-r3",
+          "decision": 601,
+          "factual_window_action": -0.6619381904602051,
+          "Q_by_period": {
+            "20": 30.288639068603516,
+            "40": 33.99226760864258,
+            "80": 38.441768646240234,
+            "120": 39.74162292480469,
+            "160": 40.666099548339844
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 10.377460479736328
+        }
+      ]
+    },
+    {
+      "group": "original-reward",
+      "queries": 65,
+      "best_period_counts": {
+        "20": 2,
+        "40": 7,
+        "80": 5,
+        "120": 10,
+        "160": 41
+      },
+      "median_Q160_minus_Q20": 1.7909774780273438,
+      "records": [
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r1",
+          "decision": 101,
+          "factual_window_action": -0.18119336664676666,
+          "Q_by_period": {
+            "20": 56.83430480957031,
+            "40": 57.371360778808594,
+            "80": 56.873348236083984,
+            "120": 56.58784866333008,
+            "160": 56.43083953857422
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -0.40346527099609375
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r1",
+          "decision": 201,
+          "factual_window_action": 0.09332288801670074,
+          "Q_by_period": {
+            "20": 37.48452377319336,
+            "40": 37.70763397216797,
+            "80": 38.05563735961914,
+            "120": 37.954429626464844,
+            "160": 37.713356018066406
+          },
+          "best_period": 80,
+          "Q160_minus_Q20": 0.22883224487304688
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r1",
+          "decision": 301,
+          "factual_window_action": 0.33188116550445557,
+          "Q_by_period": {
+            "20": 27.799097061157227,
+            "40": 28.375263214111328,
+            "80": 27.826770782470703,
+            "120": 27.586681365966797,
+            "160": 27.4100399017334
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -0.3890571594238281
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 201,
+          "factual_window_action": -0.13328072428703308,
+          "Q_by_period": {
+            "20": 91.52256774902344,
+            "40": 92.41222381591797,
+            "80": 92.46099853515625,
+            "120": 92.70269775390625,
+            "160": 92.60702514648438
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 1.0844573974609375
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 301,
+          "factual_window_action": -0.1094527393579483,
+          "Q_by_period": {
+            "20": 88.93456268310547,
+            "40": 89.98265838623047,
+            "80": 91.08272552490234,
+            "120": 91.4576644897461,
+            "160": 91.48265838623047
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 2.548095703125
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 401,
+          "factual_window_action": -0.0864342525601387,
+          "Q_by_period": {
+            "20": 84.07270050048828,
+            "40": 85.42406463623047,
+            "80": 86.5952377319336,
+            "120": 86.89866638183594,
+            "160": 86.93694305419922
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 2.8642425537109375
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 501,
+          "factual_window_action": -0.10353834182024002,
+          "Q_by_period": {
+            "20": 90.48470306396484,
+            "40": 91.0276870727539,
+            "80": 90.92467498779297,
+            "120": 90.4193344116211,
+            "160": 90.1638412475586
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -0.32086181640625
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 601,
+          "factual_window_action": -0.13434645533561707,
+          "Q_by_period": {
+            "20": 89.15614318847656,
+            "40": 89.66371154785156,
+            "80": 90.04956817626953,
+            "120": 90.1476058959961,
+            "160": 90.34782409667969
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.191680908203125
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r1",
+          "decision": 701,
+          "factual_window_action": -0.10001716762781143,
+          "Q_by_period": {
+            "20": 86.35189056396484,
+            "40": 87.55011749267578,
+            "80": 88.5762710571289,
+            "120": 89.08290100097656,
+            "160": 89.53239440917969
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 3.1805038452148438
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r2",
+          "decision": 101,
+          "factual_window_action": -0.1273975968360901,
+          "Q_by_period": {
+            "20": 125.36328125,
+            "40": 126.07540893554688,
+            "80": 126.44277954101562,
+            "120": 126.76862335205078,
+            "160": 126.43968200683594
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 1.0764007568359375
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r2",
+          "decision": 201,
+          "factual_window_action": -0.5102235674858093,
+          "Q_by_period": {
+            "20": 39.55040740966797,
+            "40": 37.90357208251953,
+            "80": 38.556793212890625,
+            "120": 39.33887481689453,
+            "160": 39.85170364379883
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 0.3012962341308594
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r2",
+          "decision": 301,
+          "factual_window_action": -0.06566376984119415,
+          "Q_by_period": {
+            "20": 124.76284790039062,
+            "40": 125.36505889892578,
+            "80": 126.0367431640625,
+            "120": 126.36896514892578,
+            "160": 126.52628326416016
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.7634353637695312
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R100-q1p0-r3",
+          "decision": 101,
+          "factual_window_action": 0.078110471367836,
+          "Q_by_period": {
+            "20": 87.34807586669922,
+            "40": 88.9900131225586,
+            "80": 90.57829284667969,
+            "120": 91.85189819335938,
+            "160": 93.0560531616211
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 5.707977294921875
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R100-q1p0-r3",
+          "decision": 201,
+          "factual_window_action": -0.7357712984085083,
+          "Q_by_period": {
+            "20": 58.93959426879883,
+            "40": 60.98613739013672,
+            "80": 62.359649658203125,
+            "120": 62.85652160644531,
+            "160": 63.670406341552734
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 4.730812072753906
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q5p0-r1",
+          "decision": 101,
+          "factual_window_action": -0.3663270175457001,
+          "Q_by_period": {
+            "20": 47.728294372558594,
+            "40": 47.76969909667969,
+            "80": 47.69710159301758,
+            "120": 47.14189910888672,
+            "160": 46.60860061645508
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -1.1196937561035156
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q5p0-r1",
+          "decision": 201,
+          "factual_window_action": -0.9849156141281128,
+          "Q_by_period": {
+            "20": 54.98638916015625,
+            "40": 56.33757019042969,
+            "80": 57.97443389892578,
+            "120": 58.77961730957031,
+            "160": 58.94499588012695
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 3.958606719970703
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r1",
+          "decision": 201,
+          "factual_window_action": -0.15409652888774872,
+          "Q_by_period": {
+            "20": 91.66207885742188,
+            "40": 92.01730346679688,
+            "80": 92.3437728881836,
+            "120": 93.002197265625,
+            "160": 93.57810974121094
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.9160308837890625
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r1",
+          "decision": 301,
+          "factual_window_action": -0.8384300470352173,
+          "Q_by_period": {
+            "20": 48.078857421875,
+            "40": 49.59568786621094,
+            "80": 51.28017044067383,
+            "120": 52.06649398803711,
+            "160": 52.35511779785156
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 4.2762603759765625
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r1",
+          "decision": 401,
+          "factual_window_action": -0.09983790665864944,
+          "Q_by_period": {
+            "20": 98.71835327148438,
+            "40": 99.7585678100586,
+            "80": 100.8826904296875,
+            "120": 101.65650177001953,
+            "160": 102.09718322753906
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 3.3788299560546875
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r1",
+          "decision": 501,
+          "factual_window_action": -0.10612352937459946,
+          "Q_by_period": {
+            "20": 95.06543731689453,
+            "40": 95.74413299560547,
+            "80": 96.71036529541016,
+            "120": 97.44730377197266,
+            "160": 97.70215606689453
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 2.63671875
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r1",
+          "decision": 601,
+          "factual_window_action": -0.511555016040802,
+          "Q_by_period": {
+            "20": 53.08652877807617,
+            "40": 56.18749237060547,
+            "80": 58.98631286621094,
+            "120": 60.07431411743164,
+            "160": 60.761016845703125
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 7.674488067626953
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r2",
+          "decision": 101,
+          "factual_window_action": -0.24556998908519745,
+          "Q_by_period": {
+            "20": 66.26592254638672,
+            "40": 66.42700958251953,
+            "80": 65.96837615966797,
+            "120": 65.98564147949219,
+            "160": 65.8484878540039
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -0.4174346923828125
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r2",
+          "decision": 201,
+          "factual_window_action": 0.12218213081359863,
+          "Q_by_period": {
+            "20": 42.98725509643555,
+            "40": 42.371185302734375,
+            "80": 41.14775848388672,
+            "120": 40.69172668457031,
+            "160": 40.1299934387207
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -2.8572616577148438
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q0p5-r2",
+          "decision": 301,
+          "factual_window_action": -0.24183925986289978,
+          "Q_by_period": {
+            "20": 49.1774787902832,
+            "40": 50.46047592163086,
+            "80": 51.75531005859375,
+            "120": 52.834861755371094,
+            "160": 53.73054122924805
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 4.553062438964844
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 201,
+          "factual_window_action": -0.13082408905029297,
+          "Q_by_period": {
+            "20": 90.83393859863281,
+            "40": 91.5689926147461,
+            "80": 92.1820297241211,
+            "120": 92.54847717285156,
+            "160": 92.2922592163086
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 1.4583206176757812
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 301,
+          "factual_window_action": -0.05443338677287102,
+          "Q_by_period": {
+            "20": 90.87866973876953,
+            "40": 91.77638244628906,
+            "80": 93.01567077636719,
+            "120": 93.7671890258789,
+            "160": 94.01783752441406
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 3.1391677856445312
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 401,
+          "factual_window_action": -0.1471068263053894,
+          "Q_by_period": {
+            "20": 91.91983032226562,
+            "40": 92.15994262695312,
+            "80": 92.06027221679688,
+            "120": 92.2113265991211,
+            "160": 92.38958740234375
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 0.469757080078125
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 501,
+          "factual_window_action": -0.06663411110639572,
+          "Q_by_period": {
+            "20": 88.89197540283203,
+            "40": 89.4419174194336,
+            "80": 89.61810302734375,
+            "120": 89.34805297851562,
+            "160": 89.47412109375
+          },
+          "best_period": 80,
+          "Q160_minus_Q20": 0.5821456909179688
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 601,
+          "factual_window_action": -0.1084652841091156,
+          "Q_by_period": {
+            "20": 89.93379974365234,
+            "40": 90.29830169677734,
+            "80": 89.87503814697266,
+            "120": 89.92301940917969,
+            "160": 90.12662506103516
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": 0.1928253173828125
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-anchor-Tconstant24-R20-r2",
+          "decision": 701,
+          "factual_window_action": -0.03794761002063751,
+          "Q_by_period": {
+            "20": 86.66744995117188,
+            "40": 88.13253021240234,
+            "80": 90.261474609375,
+            "120": 91.36023712158203,
+            "160": 91.82766723632812
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 5.16021728515625
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-compound_drop24-R100-q5p0-r3",
+          "decision": 101,
+          "factual_window_action": -0.0629664734005928,
+          "Q_by_period": {
+            "20": 121.04751586914062,
+            "40": 121.87776184082031,
+            "80": 122.93859100341797,
+            "120": 124.07364654541016,
+            "160": 124.81512451171875
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 3.767608642578125
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-compound_drop24-R100-q5p0-r3",
+          "decision": 201,
+          "factual_window_action": 0.005758064333349466,
+          "Q_by_period": {
+            "20": 126.2270736694336,
+            "40": 126.31600952148438,
+            "80": 125.931884765625,
+            "120": 125.9578857421875,
+            "160": 125.76759338378906
+          },
+          "best_period": 40,
+          "Q160_minus_Q20": -0.45948028564453125
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-compound_drop24-R100-q5p0-r3",
+          "decision": 301,
+          "factual_window_action": 0.04380064085125923,
+          "Q_by_period": {
+            "20": 125.05168914794922,
+            "40": 125.84419250488281,
+            "80": 125.99864196777344,
+            "120": 125.93585205078125,
+            "160": 125.68721771240234
+          },
+          "best_period": 80,
+          "Q160_minus_Q20": 0.635528564453125
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R100-q1p0-r1",
+          "decision": 101,
+          "factual_window_action": 0.009911933913826942,
+          "Q_by_period": {
+            "20": 121.1680679321289,
+            "40": 121.46394348144531,
+            "80": 122.83934020996094,
+            "120": 123.868896484375,
+            "160": 124.16691589355469
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 2.9988479614257812
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R100-q1p0-r1",
+          "decision": 201,
+          "factual_window_action": -0.7158734798431396,
+          "Q_by_period": {
+            "20": 57.93831253051758,
+            "40": 60.1794319152832,
+            "80": 62.208282470703125,
+            "120": 63.30796813964844,
+            "160": 64.34529876708984
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 6.406986236572266
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q5p0-r2",
+          "decision": 101,
+          "factual_window_action": -0.7304690480232239,
+          "Q_by_period": {
+            "20": 45.38611602783203,
+            "40": 45.731266021728516,
+            "80": 46.49943542480469,
+            "120": 46.70852279663086,
+            "160": 46.85123062133789
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.4651145935058594
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q5p0-r2",
+          "decision": 201,
+          "factual_window_action": -0.9698852300643921,
+          "Q_by_period": {
+            "20": 14.895986557006836,
+            "40": 15.122797966003418,
+            "80": 14.975946426391602,
+            "120": 15.208909034729004,
+            "160": 15.43216609954834
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 0.5361795425415039
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R20-q5p0-r2",
+          "decision": 301,
+          "factual_window_action": -0.9303247928619385,
+          "Q_by_period": {
+            "20": 26.50753402709961,
+            "40": 28.129125595092773,
+            "80": 29.86753273010254,
+            "120": 30.0731258392334,
+            "160": 30.33346176147461
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 3.825927734375
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r2",
+          "decision": 201,
+          "factual_window_action": 0.005928766913712025,
+          "Q_by_period": {
+            "20": 92.93055725097656,
+            "40": 94.27290344238281,
+            "80": 94.93277740478516,
+            "120": 95.53173065185547,
+            "160": 95.61673736572266
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 2.6861801147460938
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r2",
+          "decision": 301,
+          "factual_window_action": -0.6201198101043701,
+          "Q_by_period": {
+            "20": 74.82147979736328,
+            "40": 77.82905578613281,
+            "80": 81.11067199707031,
+            "120": 82.67786407470703,
+            "160": 83.75012969970703
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 8.92864990234375
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r2",
+          "decision": 401,
+          "factual_window_action": -0.16841867566108704,
+          "Q_by_period": {
+            "20": 91.70925903320312,
+            "40": 92.27055358886719,
+            "80": 93.48973083496094,
+            "120": 93.95887756347656,
+            "160": 94.14325714111328
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 2.4339981079101562
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r2",
+          "decision": 501,
+          "factual_window_action": -0.17073146998882294,
+          "Q_by_period": {
+            "20": 90.68672180175781,
+            "40": 91.05142974853516,
+            "80": 91.1152114868164,
+            "120": 91.51683807373047,
+            "160": 92.01361083984375
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.3268890380859375
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-mixed_timescale48-R20-q5p0-r2",
+          "decision": 601,
+          "factual_window_action": -0.2128983438014984,
+          "Q_by_period": {
+            "20": 74.27656555175781,
+            "40": 74.25536346435547,
+            "80": 74.98482513427734,
+            "120": 75.75438690185547,
+            "160": 76.14358520507812
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.8670196533203125
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q0p5-r3",
+          "decision": 101,
+          "factual_window_action": -0.15105916559696198,
+          "Q_by_period": {
+            "20": 72.33870697021484,
+            "40": 71.54409790039062,
+            "80": 70.60565185546875,
+            "120": 70.1147232055664,
+            "160": 69.22062683105469
+          },
+          "best_period": 20,
+          "Q160_minus_Q20": -3.1180801391601562
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q0p5-r3",
+          "decision": 201,
+          "factual_window_action": 0.04110709950327873,
+          "Q_by_period": {
+            "20": 42.484989166259766,
+            "40": 43.08546447753906,
+            "80": 43.45815658569336,
+            "120": 43.46961975097656,
+            "160": 43.248531341552734
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 0.7635421752929688
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q0p5",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q0p5-r3",
+          "decision": 301,
+          "factual_window_action": -0.21733850240707397,
+          "Q_by_period": {
+            "20": 38.86355209350586,
+            "40": 39.737037658691406,
+            "80": 40.201847076416016,
+            "120": 40.13080596923828,
+            "160": 39.902889251708984
+          },
+          "best_period": 80,
+          "Q160_minus_Q20": 1.039337158203125
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 201,
+          "factual_window_action": -0.05684474855661392,
+          "Q_by_period": {
+            "20": 89.70394134521484,
+            "40": 90.43063354492188,
+            "80": 90.77723693847656,
+            "120": 91.3968276977539,
+            "160": 91.04813385009766
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 1.3441925048828125
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 301,
+          "factual_window_action": -0.1267411857843399,
+          "Q_by_period": {
+            "20": 91.18038177490234,
+            "40": 91.6570816040039,
+            "80": 92.16056060791016,
+            "120": 92.46244812011719,
+            "160": 92.14083862304688
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 0.9604568481445312
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 401,
+          "factual_window_action": -0.06717725098133087,
+          "Q_by_period": {
+            "20": 86.17768096923828,
+            "40": 87.76760864257812,
+            "80": 89.49799346923828,
+            "120": 89.86549377441406,
+            "160": 89.81002044677734
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 3.6323394775390625
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 501,
+          "factual_window_action": -0.17098362743854523,
+          "Q_by_period": {
+            "20": 90.40591430664062,
+            "40": 90.29718780517578,
+            "80": 90.4769515991211,
+            "120": 91.1766357421875,
+            "160": 90.71586608886719
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 0.3099517822265625
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 601,
+          "factual_window_action": -0.10474206507205963,
+          "Q_by_period": {
+            "20": 85.28627014160156,
+            "40": 86.57958984375,
+            "80": 87.23894500732422,
+            "120": 87.76105499267578,
+            "160": 87.67389678955078
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 2.3876266479492188
+        },
+        {
+          "condition": "V17-anchor-Tconstant24-R20",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-anchor-Tconstant24-R20-r3",
+          "decision": 701,
+          "factual_window_action": -0.2599999010562897,
+          "Q_by_period": {
+            "20": 87.53363037109375,
+            "40": 88.17832946777344,
+            "80": 88.2440414428711,
+            "120": 88.04058074951172,
+            "160": 88.23990631103516
+          },
+          "best_period": 80,
+          "Q160_minus_Q20": 0.7062759399414062
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r1",
+          "decision": 101,
+          "factual_window_action": -0.0886605903506279,
+          "Q_by_period": {
+            "20": 120.978271484375,
+            "40": 122.13130187988281,
+            "80": 123.23709869384766,
+            "120": 124.01136016845703,
+            "160": 125.19056701660156
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 4.2122955322265625
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r1",
+          "decision": 201,
+          "factual_window_action": -0.07550744712352753,
+          "Q_by_period": {
+            "20": 32.20702362060547,
+            "40": 32.01188659667969,
+            "80": 31.956701278686523,
+            "120": 32.182899475097656,
+            "160": 32.55867004394531
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 0.35164642333984375
+        },
+        {
+          "condition": "V17-compound_drop24-R100-q5p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-compound_drop24-R100-q5p0-r1",
+          "decision": 301,
+          "factual_window_action": -0.02899201028048992,
+          "Q_by_period": {
+            "20": 121.22927856445312,
+            "40": 121.8511962890625,
+            "80": 122.82548522949219,
+            "120": 123.45927429199219,
+            "160": 124.05825805664062
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 2.8289794921875
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R100-q1p0-r2",
+          "decision": 101,
+          "factual_window_action": 0.020903393626213074,
+          "Q_by_period": {
+            "20": 127.93632507324219,
+            "40": 128.68397521972656,
+            "80": 129.56661987304688,
+            "120": 129.6458282470703,
+            "160": 129.47470092773438
+          },
+          "best_period": 120,
+          "Q160_minus_Q20": 1.5383758544921875
+        },
+        {
+          "condition": "V17-NYC-bus-R100-q1p0",
+          "run_id": "jv-v35-all12-final2-V31-parent-V17-NYC-bus-R100-q1p0-r2",
+          "decision": 201,
+          "factual_window_action": -0.572477400302887,
+          "Q_by_period": {
+            "20": 72.72582244873047,
+            "40": 73.83585357666016,
+            "80": 76.68904113769531,
+            "120": 78.90435791015625,
+            "160": 80.22232818603516
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 7.4965057373046875
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q5p0-r3",
+          "decision": 101,
+          "factual_window_action": -0.8427649736404419,
+          "Q_by_period": {
+            "20": 61.445457458496094,
+            "40": 63.237274169921875,
+            "80": 64.81310272216797,
+            "120": 65.34500122070312,
+            "160": 65.7065658569336
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 4.2611083984375
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q5p0-r3",
+          "decision": 201,
+          "factual_window_action": -0.9113449454307556,
+          "Q_by_period": {
+            "20": 58.78097915649414,
+            "40": 61.017906188964844,
+            "80": 63.05649948120117,
+            "120": 64.24615478515625,
+            "160": 64.94657897949219
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 6.165599822998047
+        },
+        {
+          "condition": "V17-NYC-bus-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-NYC-bus-R20-q5p0-r3",
+          "decision": 301,
+          "factual_window_action": -0.957879900932312,
+          "Q_by_period": {
+            "20": 26.031604766845703,
+            "40": 26.950639724731445,
+            "80": 26.530136108398438,
+            "120": 26.93151092529297,
+            "160": 27.160621643066406
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.1290168762207031
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-mixed_timescale48-R20-q5p0-r3",
+          "decision": 201,
+          "factual_window_action": -0.09238173812627792,
+          "Q_by_period": {
+            "20": 91.74343872070312,
+            "40": 92.88131713867188,
+            "80": 94.18577575683594,
+            "120": 94.37738037109375,
+            "160": 94.70297241210938
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 2.95953369140625
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-mixed_timescale48-R20-q5p0-r3",
+          "decision": 301,
+          "factual_window_action": -0.5442186594009399,
+          "Q_by_period": {
+            "20": 30.75703239440918,
+            "40": 30.90805435180664,
+            "80": 31.098461151123047,
+            "120": 31.308917999267578,
+            "160": 31.55838394165039
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 0.8013515472412109
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-mixed_timescale48-R20-q5p0-r3",
+          "decision": 401,
+          "factual_window_action": -0.11860831081867218,
+          "Q_by_period": {
+            "20": 98.18930053710938,
+            "40": 98.58688354492188,
+            "80": 99.03419494628906,
+            "120": 99.57056427001953,
+            "160": 100.07461547851562
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.88531494140625
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-mixed_timescale48-R20-q5p0-r3",
+          "decision": 501,
+          "factual_window_action": -0.07552500814199448,
+          "Q_by_period": {
+            "20": 92.85820007324219,
+            "40": 93.3375015258789,
+            "80": 94.09278869628906,
+            "120": 94.6017837524414,
+            "160": 94.64917755126953
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 1.7909774780273438
+        },
+        {
+          "condition": "V17-mixed_timescale48-R20-q5p0",
+          "run_id": "jv-v35-core6-third-V31-parent-V17-mixed_timescale48-R20-q5p0-r3",
+          "decision": 601,
+          "factual_window_action": -0.6619381904602051,
+          "Q_by_period": {
+            "20": 39.39441680908203,
+            "40": 41.71046447753906,
+            "80": 44.756439208984375,
+            "120": 46.3538932800293,
+            "160": 47.3110237121582
+          },
+          "best_period": 160,
+          "Q160_minus_Q20": 7.916606903076172
+        }
+      ]
+    }
+  ],
+  "optimizer_operations": 0,
+  "new_TCP_runs": 0,
+  "scope": "Same actual V31-parent states and cwnd actions, same old reward units. Original-reward V35 differs by subsequent full training and critic reset; this is not a controlled cold-start causal experiment. Q-grid rankings are estimates, not true network counterfactual returns.",
+  "epoch": 1792243587.2407188
+}

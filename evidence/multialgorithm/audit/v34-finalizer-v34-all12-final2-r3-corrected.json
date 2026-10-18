@@ -1,0 +1,32 @@
+{
+  "status": "COMPLETE_EVIDENCE_FINALIZED",
+  "root": "/home/ubuntu/orca-v34-evaluation-r3-20261017-1820",
+  "evaluation_id": "v34-all12-final2-r3",
+  "finished_epoch": 1792237114.1231806,
+  "original_partial_finalizer_retained": true,
+  "offline_audit_correction": "/home/ubuntu/orca-v34-evaluation-r3-20261017-1820/audit/legacy-feedback-reuse.json",
+  "tail_cases": 1,
+  "no_new_network": true,
+  "outputs": [
+    {
+      "stage": "audit_rate_feedback_v28.py",
+      "stdout": "{\"status\": \"PASS_NATIVE_ACKED_RATE_FEEDBACK_AND_BYTE_TIME_PARTITIONS\", \"episodes\": 192, \"states\": 183956}\n"
+    },
+    {
+      "stage": "audit_feedback_v34.py",
+      "stdout": "{\"status\": \"PASS_REAL_BOUNDARY_ACTION_FRESHNESS_AGE_RECONSTRUCTION_V34\", \"decisions\": 183956, \"zero_fresh_rtt_boundaries\": 11640, \"csv_float64_rounding_sensitive_decisions\": 0, \"native_percent_checked\": 183956}\n"
+    },
+    {
+      "stage": "collect_v34.py",
+      "stdout": "{\"action_collection_failures\": 0, \"action_records\": 240, \"evaluation_id\": \"v34-all12-final2-r3\", \"expected_runs\": 240, \"failed_manifest_runs\": 0, \"local_only\": false, \"manifest_runs\": 240, \"model_files_transferred\": 0, \"optimizer_updates\": 0, \"status\": \"COMPLETE_SMALL_EVIDENCE\", \"tcp_started\": 0, \"training_arm_status\": {\"v34-fixed120\": \"COMPLETE_LOCAL_EVIDENCE\", \"v34-fixed40\": \"COMPLETE_LOCAL_EVIDENCE\", \"v34-independent\": \"COMPLETE_LOCAL_EVIDENCE\", \"v34-legacy\": \"COMPLETE_LOCAL_EVIDENCE\"}}\n"
+    },
+    {
+      "stage": "analyze_v34.py",
+      "stdout": "{\"all_scene_mean_performance_gate\": false, \"expected_window_records\": 480, \"failed_runs\": 0, \"issues\": 0, \"network_runs_started\": 0, \"optimizer_updates\": 0, \"output\": \"/home/ubuntu/orca-v34-evaluation-r3-20261017-1820/metrics/v34-offline-analysis/final\", \"scenario_top_tier_counts\": {\"DESCRIPTIVE_TOP_TIER_CANDIDATE\": 3, \"NOT_IN_OBSERVED_TOP_TIER\": 9}, \"status\": \"COMPLETE_DESCRIPTIVE_ANALYSIS\", \"valid_window_records\": 480}\n"
+    },
+    {
+      "stage": "final_guard_v34.py",
+      "stdout": "{\"nodes\": 5, \"optimizer_updates\": 0, \"record\": \"/home/ubuntu/orca-v34-evaluation-r3-20261017-1820/audit/final-guard-v34-all12-final2-r3.json\", \"status\": \"PASS_NO_OWNED_PROCESSES_OR_IPC_PROTECTED_HISTORY_UNCHANGED\", \"tcp_started\": 0}\n"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "host": "VM-0-5-ubuntu",
+  "root": "/home/ubuntu/orca-release-node2-20261018",
+  "verified_model_files": 51,
+  "training": [
+    {
+      "framework": "mtp20",
+      "run": "portable-mtp20-smoke-training-r4",
+      "status": "COMPLETED",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 1741,
+        "counters": {
+          "critic_iterations": 177,
+          "critic_optimizer_ops": 354,
+          "actor_updates": 176,
+          "target_updates": 177
+        },
+        "wall_s": 92.65112308200003
+      },
+      "reason": null,
+      "checkpoint_finite": true,
+      "verified_numeric_variables": 106
+    },
+    {
+      "framework": "mtp20",
+      "run": "portable-mtp20-smoke-training-r1",
+      "status": "FAILED",
+      "final": null,
+      "reason": "learner failed before initialization"
+    },
+    {
+      "framework": "mtp20",
+      "run": "portable-mtp20-smoke-training-r3",
+      "status": "COMPLETED",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 504,
+        "counters": {
+          "critic_iterations": 0,
+          "critic_optimizer_ops": 0,
+          "actor_updates": 0,
+          "target_updates": 0
+        },
+        "wall_s": 48.42554715799997
+      },
+      "reason": null
+    },
+    {
+      "framework": "mtp20",
+      "run": "portable-mtp20-smoke-training-r2",
+      "status": "FAILED",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 0,
+        "counters": {
+          "critic_iterations": 0,
+          "critic_optimizer_ops": 0,
+          "actor_updates": 0,
+          "target_updates": 0
+        },
+        "wall_s": 2.144275912000012
+      },
+      "reason": "actor0 failed before first state"
+    }
+  ],
+  "evaluation": [
+    {
+      "run": "portable-mtp20-evaluate-r4",
+      "status": "COMPLETED",
+      "counters": {
+        "valid": 936,
+        "critic_iterations": 0,
+        "critic_optimizer_ops": 0,
+        "actor_updates": 0,
+        "target_updates": 0,
+        "exploration_calls": 0
+      },
+      "policy_hash": "8dd9c797036a5e92365a23dfa4a587993e785bf6d24245d40f6e6442d6359ede"
+    }
+  ],
+  "live": [],
+  "user_ipc": [],
+  "free_gib": 21.458396911621094
+}

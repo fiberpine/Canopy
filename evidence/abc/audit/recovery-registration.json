@@ -1,0 +1,11 @@
+{
+  "original_failure": {
+    "epoch": 1792147212.0171607,
+    "reason": "Traceback (most recent call last):\n  File \"/home/ubuntu/orca-joint-clock-abc-20261016-1833/pipeline_abc.py\", line 20, in <module>\n    try:main()\n  File \"/home/ubuntu/orca-joint-clock-abc-20261016-1833/pipeline_abc.py\", line 11, in main\n    evaluate(str(R/'configs/abc-plan.json'))\n  File \"/home/ubuntu/orca-joint-clock-abc-20261016-1833/joint_frozen_abc.py\", line 65, in main\n    cfg=dict(condition,run_id=run,group=variant['name'],method=variant.get('method','canopy'),checkpoint=variant['checkpoint'],seconds=plan.get('seconds',60),port=26000+round_id*4+slot,seed=3,training_seed=variant.get('training_seed',3),code_commit=commit,evaluation_code_commit=commit,absolute_deadline_epoch=DEADLINE-60,timeout_s=110,backend='moving_stats',evaluation_entry='repair_evaluate.py',server_binary=str(binary),joint_control=joint,baseline_native_startup='cubic' if not joint else None,model_source=variant['model_source'] if variant.get('method')!='cubic' else 'Native CUBIC; no model loaded',effective_training_samples=variant['effective_training_samples'] if variant.get('method')!='cubic' else 0,mtp_min_ms=20,mtp_max_ms=160,gamma=.995,decision_cost=0.,fixed_mtp_ms=variant.get('fixed_mtp_ms'),startup_probe_seconds=variant.get('startup_probe_seconds',0))\nUnboundLocalError: local variable 'run' referenced before assignment\n"
+  },
+  "original_network_runs": 0,
+  "optimizer_operations": 0,
+  "same_deadline": 1792149904,
+  "only_change": "Scheduler host expression without inline comment that accidentally commented out run variable assignment",
+  "new_evaluation_id": "v31-abc-final3-r2"
+}

@@ -1,0 +1,81 @@
+{
+  "scope": "Offline causal check on initial and final saved checkpoints, real replay and synthetic states; no optimizer/update ops executed, no writes to checkpoint",
+  "finding": "Plain Sonnet BatchNorm defaults test_local_stats=True. The IBP wrapper for plain Sonnet BN explicitly uses moving statistics even in training. Direct concrete tensor therefore differs from zero-width interval tensor; explicit moving-statistics forward isolates this cause.",
+  "results": [
+    {
+      "checkpoint": "step-0",
+      "batch_tests": [
+        {
+          "case": "real_replay_512",
+          "lower_upper_max_abs": 0.0,
+          "bound_vs_default_direct_max_abs": 1.166398048400879,
+          "bound_vs_moving_stats_forward_max_abs": 0.0,
+          "bound_vs_moving_stats_gradient_relative_l2": 0.0,
+          "bound_vs_moving_stats_gradient_max_abs": 0.0
+        },
+        {
+          "case": "synthetic_512",
+          "lower_upper_max_abs": 0.0,
+          "bound_vs_default_direct_max_abs": 0.4317379295825958,
+          "bound_vs_moving_stats_forward_max_abs": 0.0,
+          "bound_vs_moving_stats_gradient_relative_l2": 0.0,
+          "bound_vs_moving_stats_gradient_max_abs": 0.0
+        }
+      ],
+      "single_state_tests": {
+        "states": 64,
+        "default_direct_action_min": 0.0,
+        "default_direct_action_max": 0.0,
+        "default_direct_action_sd": 0.0,
+        "bound_action_min": 0.10930530726909637,
+        "bound_action_max": 0.5744034647941589,
+        "bound_action_sd": 0.10135442466063052,
+        "bound_vs_moving_stats_forward_max_abs": 0.0
+      }
+    },
+    {
+      "checkpoint": "step-4148792",
+      "batch_tests": [
+        {
+          "case": "real_replay_512",
+          "lower_upper_max_abs": 0.0,
+          "bound_vs_default_direct_max_abs": 1.4846646785736084,
+          "bound_vs_moving_stats_forward_max_abs": 0.0,
+          "bound_vs_moving_stats_gradient_relative_l2": 0.0,
+          "bound_vs_moving_stats_gradient_max_abs": 0.0
+        },
+        {
+          "case": "synthetic_512",
+          "lower_upper_max_abs": 0.0,
+          "bound_vs_default_direct_max_abs": 1.874418020248413,
+          "bound_vs_moving_stats_forward_max_abs": 0.0,
+          "bound_vs_moving_stats_gradient_relative_l2": 0.0,
+          "bound_vs_moving_stats_gradient_max_abs": 0.0
+        }
+      ],
+      "single_state_tests": {
+        "states": 64,
+        "default_direct_action_min": -0.4594404697418213,
+        "default_direct_action_max": -0.4594404697418213,
+        "default_direct_action_sd": 0.0,
+        "bound_action_min": -1.0,
+        "bound_action_max": 0.7277805209159851,
+        "bound_action_sd": 0.5804505762009966,
+        "bound_vs_moving_stats_forward_max_abs": 0.0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source": "/home/ubuntu/venv/lib/python3.6/site-packages/sonnet/python/modules/batch_norm.py",
+      "saved": "source_snapshot/library-diagnosis/sonnet-batch_norm.py",
+      "sha256": "398779a91d99db95da3e9e0638042e8f55ca295928727bf81c3b681ca0401b92"
+    },
+    {
+      "source": "/home/ubuntu/venv/lib/python3.6/site-packages/interval_bound_propagation/src/verifiable_wrapper.py",
+      "saved": "source_snapshot/library-diagnosis/ibp-verifiable_wrapper.py",
+      "sha256": "a136d9fb4e458ffa0fb7daf261d721527c0c235f81e2e72101d55fc26cf9045a"
+    }
+  ],
+  "limitation": "Does not prove old historical runs used the incorrect branch, nor that this is the unique cause of training collapse. No live policy was changed."
+}

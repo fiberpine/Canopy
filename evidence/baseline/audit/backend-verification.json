@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "variables": 106,
+  "initialization_max_difference": 0.0,
+  "comparisons": [
+    {
+      "checkpoint": "step-0",
+      "case": "real512",
+      "max_action_difference": 0.0,
+      "max_gradient_difference": 0.0
+    },
+    {
+      "checkpoint": "step-0",
+      "case": "synthetic512",
+      "max_action_difference": 0.0,
+      "max_gradient_difference": 0.0
+    },
+    {
+      "checkpoint": "step-0",
+      "case": "real1",
+      "max_action_difference": 0.0,
+      "max_gradient_difference": 0.0
+    },
+    {
+      "checkpoint": "step-4148792",
+      "case": "real512",
+      "max_action_difference": 0.0,
+      "max_gradient_difference": 0.0
+    },
+    {
+      "checkpoint": "step-4148792",
+      "case": "synthetic512",
+      "max_action_difference": 0.0,
+      "max_gradient_difference": 0.0
+    },
+    {
+      "checkpoint": "step-4148792",
+      "case": "real1",
+      "max_action_difference": 0.0,
+      "max_gradient_difference": 0.0
+    }
+  ],
+  "one_actor_update_policy_and_slots_max_difference": 0.0,
+  "benchmark": [
+    {
+      "fast": false,
+      "mean_ms": 3.7117379149685803,
+      "p95_ms": 4.056107400265319,
+      "bn_update_ops": 12
+    },
+    {
+      "fast": true,
+      "mean_ms": 1.925552824945953,
+      "p95_ms": 2.111695999337826,
+      "bn_update_ops": 8
+    }
+  ],
+  "scope": "Exact installed backend; output/gradient and one actor update only. Critic/target paths preserved. Stock concurrent optimizer and BN scheduling limitations remain; not long-run equivalence proof."
+}

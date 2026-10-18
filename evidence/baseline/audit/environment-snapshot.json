@@ -1,0 +1,69 @@
+{
+  "kernel": "4.13.1-0521-learner",
+  "python": "3.6.9",
+  "architecture": "x86_64",
+  "cpu": {
+    "command": [
+      "lscpu"
+    ],
+    "returncode": 0,
+    "output": "Architecture:        x86_64\nCPU op-mode(s):      32-bit, 64-bit\nByte Order:          Little Endian\nCPU(s):              8\nOn-line CPU(s) list: 0-7\nThread(s) per core:  2\nCore(s) per socket:  4\nSocket(s):           1\nNUMA node(s):        1\nVendor ID:           AuthenticAMD\nCPU family:          26\nModel:               0\nModel name:          AMD EPYC 9K85 128-Core Processor\nStepping:            0\nCPU MHz:             2700.190\nBogoMIPS:            5400.38\nHypervisor vendor:   KVM\nVirtualization type: full\nL1d cache:           48K\nL1i cache:           32K\nL2 cache:            1024K\nL3 cache:            32768K\nNUMA node0 CPU(s):   0-7\nFlags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves clzero arat avx512vbmi avx512_vpopcntdq rdpid"
+  },
+  "memory": {
+    "command": [
+      "free",
+      "-m"
+    ],
+    "returncode": 0,
+    "output": "total        used        free      shared  buff/cache   available\nMem:          30898        1130       27952           6        1815       29356\nSwap:             0           0           0"
+  },
+  "disk": {
+    "command": [
+      "df",
+      "-h",
+      "/home/ubuntu/orca-cluster-20261009-224323"
+    ],
+    "returncode": 0,
+    "output": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/vda1        79G   33G   43G  44% /"
+  },
+  "gcc": {
+    "command": [
+      "g++",
+      "--version"
+    ],
+    "returncode": 0,
+    "output": "g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0\nCopyright (C) 2017 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+  },
+  "packages": {
+    "command": [
+      "dpkg-query",
+      "-W",
+      "mahimahi",
+      "libc6"
+    ],
+    "returncode": 1,
+    "output": "dpkg-query: no packages found matching mahimahi\nlibc6:amd64\t2.27-3ubuntu1.6"
+  },
+  "python_packages": {
+    "command": [
+      "/home/ubuntu/venv/bin/python",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "returncode": 0,
+    "output": "absl-py==1.4.0\nastor==0.8.1\ncached-property==1.5.2\ncloudpickle==1.6.0\ncontextlib2==21.6.0\ndataclasses==0.8\ndecorator==5.1.1\ndm-sonnet==1.34\nfuture==1.0.0\ngast==0.7.0\ngoogle-pasta==0.2.0\ngrpcio==1.48.2\ngym==0.17.3\nh5py==3.1.0\nimportlib-metadata==4.8.3\ninterval-bound-propagation @ file:///home/ubuntu/interval-bound-propagation\njoblib==1.1.1\nKeras-Applications==1.0.8\nKeras-Preprocessing==1.1.2\nMarkdown==3.3.7\nnumpy==1.19.5\npkg_resources==0.0.0\nprotobuf==3.19.6\npyglet==1.5.0\nscikit-learn==0.24.2\nscipy==1.5.4\nsemantic-version==2.10.0\nsix==1.17.0\nsysv-ipc==1.1.0\ntensorboard==1.14.0\ntensorflow==1.14.0\ntensorflow-estimator==1.14.0\ntensorflow-probability==0.7.0\ntermcolor==1.1.0\nthreadpoolctl==3.1.0\ntyping_extensions==4.1.1\nWerkzeug==2.0.3\nwrapt==1.16.0\nzipp==3.6.0"
+  },
+  "mahimahi_binary": "/usr/local/bin/mm-link",
+  "native": {
+    "tcp-native": "3d931bf60c15ccfbd2c4300fc494c68f29112265d675d51513ca77a735d7069e",
+    "orca-server-handshake-probe": "f4635998ced6347bbf9fb0a4cb13e71fcd610f432ef5c98672c3f21cf1db64b8",
+    "orca-server-fastss": "6db1f0a8e925c5093882603e08f89b6d4b5884055b789933cc131327f707251d",
+    "orca-server-legacy-protocol": "5f1d1e16313bab2a34c4ad12a21fdffe3261611d299f6d720e1107d7593d35bb",
+    "orca-server-legacy-paced": "50bc32edb2ab8204050a39395f3f84481e1c44c3064b7ae88fdf1faf5d316f4e",
+    "client": "361f85d03abe62a9e457c484f67f2f34dca2288f434c4aa4645dfb5836c8a672",
+    "orca-server": "0e6d3f49566ff6c92672d7237f40c1641b6b18946aaacc696ac6a5a72a1733dd",
+    "orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+    "orca-server-fast-handshake-probe": "578f04d1f6064ceb7c4226a277f10b5cd5da5c514dcace395603d5353b0b027f"
+  }
+}

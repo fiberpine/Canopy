@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "python": "/home/ubuntu/orca-release-20261018/runtime/venv/bin/python",
+  "changed_files": [
+    "runtime/venv/bin/pasteurize",
+    "runtime/venv/bin/pip3.6",
+    "runtime/venv/bin/tensorboard",
+    "runtime/venv/bin/activate.fish",
+    "runtime/venv/bin/pip",
+    "runtime/venv/bin/toco",
+    "runtime/venv/bin/f2py3",
+    "runtime/venv/bin/activate.csh",
+    "runtime/venv/bin/f2py",
+    "runtime/venv/bin/saved_model_cli",
+    "runtime/venv/bin/markdown_py",
+    "runtime/venv/bin/futurize",
+    "runtime/venv/bin/wheel",
+    "runtime/venv/bin/tflite_convert",
+    "runtime/venv/bin/activate",
+    "runtime/venv/bin/freeze_graph",
+    "runtime/venv/bin/f2py3.6",
+    "runtime/venv/bin/toco_from_protos",
+    "runtime/venv/bin/tf_upgrade_v2",
+    "runtime/venv/bin/pip3"
+  ],
+  "stdout": "3.6.9 (default, Mar 10 2023, 16:46:00) \n[GCC 8.4.0]\n1.14.0\n",
+  "stderr": "sing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.\n  _np_quint16 = np.dtype([(\"quint16\", np.uint16, 1)])\n/home/ubuntu/orca-release-20261018/runtime/venv/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.\n  _np_qint32 = np.dtype([(\"qint32\", np.int32, 1)])\n/home/ubuntu/orca-release-20261018/runtime/venv/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.\n  np_resource = np.dtype([(\"resource\", np.ubyte, 1)])\nWARNING:tensorflow:From /home/ubuntu/orca-release-20261018/runtime/venv/lib/python3.6/site-packages/sonnet/python/custom_getters/restore_initializer.py:27: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.\n\nWARNING:tensorflow:\nThe TensorFlow contrib module will not be included in TensorFlow 2.0.\nFor more information, please see:\n  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md\n  * https://github.com/tensorflow/addons\n  * https://github.com/tensorflow/io (for I/O related ops)\nIf you depend on functionality not listed there, please file an issue.\n\n"
+}

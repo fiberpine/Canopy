@@ -1,0 +1,425 @@
+{
+  "status": "PASS_RELOCATED_LOCAL_AND_FOUR_ACTOR_TRAINING_FROZEN_EVALUATION",
+  "nodes": [
+    {
+      "host": "VM-0-15-ubuntu",
+      "root": "/home/ubuntu/orca-release-20261018",
+      "verified_model_files": 51,
+      "training": [
+        {
+          "framework": "mtp20",
+          "run": "portable-distributed-mtp20-r1",
+          "status": "COMPLETED",
+          "final": {
+            "status": "COMPLETED",
+            "reason": "",
+            "inserted": 4422,
+            "counters": {
+              "critic_iterations": 1254,
+              "critic_optimizer_ops": 2508,
+              "actor_updates": 1253,
+              "target_updates": 1254
+            },
+            "wall_s": 96.689178319
+          },
+          "reason": null,
+          "checkpoint_finite": true,
+          "verified_numeric_variables": 106
+        },
+        {
+          "framework": "baseline",
+          "run": "portable-distributed-baseline-r1",
+          "status": "COMPLETED",
+          "final": {
+            "status": "COMPLETED",
+            "reason": "",
+            "inserted": 9756,
+            "counters": {
+              "critic_iterations": 924,
+              "critic_optimizer_ops": 1848,
+              "actor_updates": 924,
+              "target_updates": 924
+            },
+            "wall_s": 69.60299333399996
+          },
+          "reason": null,
+          "checkpoint_finite": true,
+          "verified_numeric_variables": 106
+        },
+        {
+          "framework": "mtpjoint",
+          "run": "portable-distributed-mtpjoint-r1",
+          "status": "COMPLETED",
+          "final": {
+            "status": "COMPLETED",
+            "reason": "",
+            "inserted": 3892,
+            "counters": {
+              "critic_iterations": 1250,
+              "critic_optimizer_ops": 2500,
+              "actor_updates": 1249,
+              "target_updates": 1250
+            },
+            "wall_s": 94.66633454800001
+          },
+          "reason": null,
+          "checkpoint_finite": true,
+          "verified_numeric_variables": 112
+        }
+      ],
+      "evaluation": [],
+      "live": [],
+      "user_ipc": [],
+      "free_gib": 33.48194885253906
+    },
+    {
+      "host": "VM-0-3-ubuntu",
+      "root": "/home/ubuntu/orca-release-node1-20261018",
+      "verified_model_files": 51,
+      "training": [
+        {
+          "framework": "baseline",
+          "run": "portable-baseline-smoke-training-r1",
+          "status": "FAILED",
+          "final": null,
+          "reason": "actor0 first state timeout"
+        },
+        {
+          "framework": "baseline",
+          "run": "portable-baseline-smoke-training-r2",
+          "status": "COMPLETED",
+          "final": {
+            "status": "COMPLETED",
+            "reason": "",
+            "inserted": 2466,
+            "counters": {
+              "critic_iterations": 195,
+              "critic_optimizer_ops": 390,
+              "actor_updates": 195,
+              "target_updates": 195
+            },
+            "wall_s": 58.35002741699998
+          },
+          "reason": null,
+          "checkpoint_finite": true,
+          "verified_numeric_variables": 106
+        }
+      ],
+      "evaluation": [
+        {
+          "run": "portable-baseline-evaluate-r2",
+          "status": "COMPLETED",
+          "counters": {
+            "valid": 920,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "policy_hash": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8"
+        }
+      ],
+      "live": [],
+      "user_ipc": [],
+      "free_gib": 23.979942321777344
+    },
+    {
+      "host": "VM-0-5-ubuntu",
+      "root": "/home/ubuntu/orca-release-node2-20261018",
+      "verified_model_files": 51,
+      "training": [
+        {
+          "framework": "mtp20",
+          "run": "portable-mtp20-smoke-training-r4",
+          "status": "COMPLETED",
+          "final": {
+            "status": "COMPLETED",
+            "reason": "",
+            "inserted": 1741,
+            "counters": {
+              "critic_iterations": 177,
+              "critic_optimizer_ops": 354,
+              "actor_updates": 176,
+              "target_updates": 177
+            },
+            "wall_s": 92.65112308200003
+          },
+          "reason": null,
+          "checkpoint_finite": true,
+          "verified_numeric_variables": 106
+        },
+        {
+          "framework": "mtp20",
+          "run": "portable-mtp20-smoke-training-r1",
+          "status": "FAILED",
+          "final": null,
+          "reason": "learner failed before initialization"
+        },
+        {
+          "framework": "mtp20",
+          "run": "portable-mtp20-smoke-training-r3",
+          "status": "COMPLETED",
+          "final": {
+            "status": "COMPLETED",
+            "reason": "",
+            "inserted": 504,
+            "counters": {
+              "critic_iterations": 0,
+              "critic_optimizer_ops": 0,
+              "actor_updates": 0,
+              "target_updates": 0
+            },
+            "wall_s": 48.42554715799997
+          },
+          "reason": null
+        },
+        {
+          "framework": "mtp20",
+          "run": "portable-mtp20-smoke-training-r2",
+          "status": "FAILED",
+          "final": {
+            "status": "COMPLETED",
+            "reason": "",
+            "inserted": 0,
+            "counters": {
+              "critic_iterations": 0,
+              "critic_optimizer_ops": 0,
+              "actor_updates": 0,
+              "target_updates": 0
+            },
+            "wall_s": 2.144275912000012
+          },
+          "reason": "actor0 failed before first state"
+        }
+      ],
+      "evaluation": [
+        {
+          "run": "portable-mtp20-evaluate-r4",
+          "status": "COMPLETED",
+          "counters": {
+            "valid": 936,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "policy_hash": "8dd9c797036a5e92365a23dfa4a587993e785bf6d24245d40f6e6442d6359ede"
+        }
+      ],
+      "live": [],
+      "user_ipc": [],
+      "free_gib": 21.458396911621094
+    },
+    {
+      "host": "VM-0-9-ubuntu",
+      "root": "/home/ubuntu/orca-release-node3-20261018",
+      "verified_model_files": 51,
+      "training": [
+        {
+          "framework": "mtpjoint",
+          "run": "portable-mtpjoint-smoke-training-r2",
+          "status": "FAILED",
+          "final": {
+            "status": "COMPLETED",
+            "reason": "",
+            "inserted": 0,
+            "counters": {
+              "critic_iterations": 0,
+              "critic_optimizer_ops": 0,
+              "actor_updates": 0,
+              "target_updates": 0
+            },
+            "wall_s": 2.189633352000101
+          },
+          "reason": "actor0 failed before first state"
+        },
+        {
+          "framework": "mtpjoint",
+          "run": "portable-mtpjoint-smoke-training-r3",
+          "status": "COMPLETED",
+          "final": {
+            "status": "COMPLETED",
+            "reason": "",
+            "inserted": 505,
+            "counters": {
+              "critic_iterations": 0,
+              "critic_optimizer_ops": 0,
+              "actor_updates": 0,
+              "target_updates": 0
+            },
+            "wall_s": 48.47206935200006
+          },
+          "reason": null
+        },
+        {
+          "framework": "mtpjoint",
+          "run": "portable-mtpjoint-smoke-training-r4",
+          "status": "COMPLETED",
+          "final": {
+            "status": "COMPLETED",
+            "reason": "",
+            "inserted": 900,
+            "counters": {
+              "critic_iterations": 177,
+              "critic_optimizer_ops": 354,
+              "actor_updates": 176,
+              "target_updates": 177
+            },
+            "wall_s": 93.67427272799989
+          },
+          "reason": null,
+          "checkpoint_finite": true,
+          "verified_numeric_variables": 112
+        },
+        {
+          "framework": "mtpjoint",
+          "run": "portable-mtpjoint-smoke-training-r1",
+          "status": "FAILED",
+          "final": null,
+          "reason": "learner failed before initialization"
+        }
+      ],
+      "evaluation": [
+        {
+          "run": "portable-mtpjoint-evaluate-r4",
+          "status": "COMPLETED",
+          "counters": {
+            "valid": 191,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "policy_hash": "2d3357ecfdccdfeece6b933bec2511d95045139feb1f1a9e2a42adef7aa81664"
+        }
+      ],
+      "live": [],
+      "user_ipc": [],
+      "free_gib": 23.315574645996094
+    },
+    {
+      "host": "VM-0-6-ubuntu",
+      "root": "/home/ubuntu/orca-release-node4-20261018",
+      "verified_model_files": 51,
+      "training": [],
+      "evaluation": [
+        {
+          "run": "portable-comparator-official-orca-r1",
+          "status": "COMPLETED",
+          "counters": {
+            "valid": 915,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "policy_hash": "bc69a1101c120fa42ec07897c067484f59229155119e8687470eb55bf3aaec4b"
+        },
+        {
+          "run": "portable-comparator-fixed20-r1",
+          "status": "COMPLETED",
+          "counters": {
+            "valid": 920,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "policy_hash": "6a2d933c1d1d37485bb24570a4f35dd02fe14341eebcd0426a95d3411e3b7f34"
+        },
+        {
+          "run": "portable-comparator-reno-r1",
+          "status": "COMPLETED",
+          "counters": {
+            "valid": 0,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "policy_hash": null
+        },
+        {
+          "run": "portable-comparator-fixed40-r1",
+          "status": "COMPLETED",
+          "counters": {
+            "valid": 478,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "policy_hash": "7631a40090adbf71fb1ce927366d3e228e477a57fcd898d06cb988c3a5ec3cc1"
+        },
+        {
+          "run": "portable-comparator-fixed120-r1",
+          "status": "COMPLETED",
+          "counters": {
+            "valid": 163,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "policy_hash": "0206957029ea3773c41a62fd7dc1bff2d2f361e90d224eaf341d1a03a43b22b4"
+        },
+        {
+          "run": "portable-comparator-cubic-r1",
+          "status": "COMPLETED",
+          "counters": {
+            "valid": 0,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "policy_hash": null
+        },
+        {
+          "run": "portable-comparator-fixed160-r1",
+          "status": "COMPLETED",
+          "counters": {
+            "valid": 122,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "policy_hash": "1d09faa6cbd0c175fade47e008a14543a2dec96aa8735acee5f5931b5a1f8256"
+        },
+        {
+          "run": "portable-comparator-fixed80-r1",
+          "status": "COMPLETED",
+          "counters": {
+            "valid": 243,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "policy_hash": "0138af5c3628d403eafba39d766e62c9a8a7fe3cae28c3df40a021947965102d"
+        }
+      ],
+      "live": [],
+      "user_ipc": [],
+      "free_gib": 25.39672088623047
+    }
+  ],
+  "epoch": 1792290557.6958394,
+  "limitations": [
+    "Packaging smoke only; no new performance or convergence claim",
+    "No OS reinstall/reboot performed",
+    "Single local smoke and four-actor distributed smoke; previous24actor original engineering evidence remains separate"
+  ]
+}

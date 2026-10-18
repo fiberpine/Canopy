@@ -1,0 +1,1619 @@
+{
+  "purpose": "Reproduce concurrent control-thread stdio plus SIGTERM handler exit(); diagnostic only",
+  "wall_s": 1.009040355682373,
+  "repeats_per_mode": 100,
+  "results": {
+    "stdio-exit": {
+      "failed_runs": 97,
+      "malformed_rows": 140,
+      "nonincreasing_events": 83
+    },
+    "write-exit": {
+      "failed_runs": 0,
+      "malformed_rows": 0,
+      "nonincreasing_events": 0
+    }
+  },
+  "records": [
+    {
+      "mode": "stdio-exit",
+      "seed": 0,
+      "rows": 2123,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 1,
+      "rows": 2860,
+      "malformed": 0,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 2,
+      "rows": 3585,
+      "malformed": 0,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 3,
+      "rows": 4083,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 4,
+      "rows": 4947,
+      "malformed": 0,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 5,
+      "rows": 4952,
+      "malformed": 3,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 6,
+      "rows": 5848,
+      "malformed": 0,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 7,
+      "rows": 6839,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 8,
+      "rows": 7643,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 9,
+      "rows": 8193,
+      "malformed": 6,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 10,
+      "rows": 8979,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 11,
+      "rows": 9608,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 12,
+      "rows": 10343,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 13,
+      "rows": 10811,
+      "malformed": 0,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 14,
+      "rows": 11454,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 15,
+      "rows": 12430,
+      "malformed": 2,
+      "nonincreasing_timestamps": 2,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 16,
+      "rows": 12832,
+      "malformed": 0,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 17,
+      "rows": 13073,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 18,
+      "rows": 14102,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 19,
+      "rows": 14634,
+      "malformed": 1,
+      "nonincreasing_timestamps": 2,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 20,
+      "rows": 15295,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 21,
+      "rows": 16192,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 22,
+      "rows": 2689,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 23,
+      "rows": 3065,
+      "malformed": 2,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 24,
+      "rows": 4143,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 25,
+      "rows": 4766,
+      "malformed": 3,
+      "nonincreasing_timestamps": 3,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 26,
+      "rows": 5247,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 27,
+      "rows": 5835,
+      "malformed": 2,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 28,
+      "rows": 6314,
+      "malformed": 2,
+      "nonincreasing_timestamps": 2,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 29,
+      "rows": 7264,
+      "malformed": 2,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 30,
+      "rows": 7982,
+      "malformed": 1,
+      "nonincreasing_timestamps": 2,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 31,
+      "rows": 8665,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 32,
+      "rows": 9268,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 33,
+      "rows": 10090,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 34,
+      "rows": 10311,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 35,
+      "rows": 11312,
+      "malformed": 0,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 36,
+      "rows": 11901,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 37,
+      "rows": 12505,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 38,
+      "rows": 13067,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 39,
+      "rows": 13543,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 40,
+      "rows": 14638,
+      "malformed": 2,
+      "nonincreasing_timestamps": 2,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 41,
+      "rows": 15345,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 42,
+      "rows": 15669,
+      "malformed": 2,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 43,
+      "rows": 2511,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 44,
+      "rows": 3135,
+      "malformed": 0,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 45,
+      "rows": 3723,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 46,
+      "rows": 4499,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 47,
+      "rows": 5318,
+      "malformed": 2,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 48,
+      "rows": 6078,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 49,
+      "rows": 6492,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 50,
+      "rows": 7108,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 51,
+      "rows": 7930,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 52,
+      "rows": 8358,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 53,
+      "rows": 9172,
+      "malformed": 2,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 54,
+      "rows": 9699,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 55,
+      "rows": 10458,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 56,
+      "rows": 11102,
+      "malformed": 0,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 57,
+      "rows": 11886,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 58,
+      "rows": 12568,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 59,
+      "rows": 13221,
+      "malformed": 3,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 60,
+      "rows": 13760,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 61,
+      "rows": 14326,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 62,
+      "rows": 15145,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 63,
+      "rows": 15455,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 64,
+      "rows": 2314,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 65,
+      "rows": 2871,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 66,
+      "rows": 3731,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 67,
+      "rows": 4322,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 68,
+      "rows": 5030,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 69,
+      "rows": 5734,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 70,
+      "rows": 6377,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 71,
+      "rows": 6992,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 72,
+      "rows": 7411,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 73,
+      "rows": 8164,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 74,
+      "rows": 9180,
+      "malformed": 5,
+      "nonincreasing_timestamps": 3,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 75,
+      "rows": 9674,
+      "malformed": 0,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 76,
+      "rows": 10076,
+      "malformed": 2,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 77,
+      "rows": 10936,
+      "malformed": 2,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 78,
+      "rows": 11487,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 79,
+      "rows": 12266,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 80,
+      "rows": 12661,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 81,
+      "rows": 13054,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 82,
+      "rows": 13791,
+      "malformed": 2,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 83,
+      "rows": 14708,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 84,
+      "rows": 14982,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 85,
+      "rows": 15941,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 86,
+      "rows": 2743,
+      "malformed": 2,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 87,
+      "rows": 3590,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 88,
+      "rows": 4368,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 89,
+      "rows": 4852,
+      "malformed": 4,
+      "nonincreasing_timestamps": 3,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 90,
+      "rows": 5457,
+      "malformed": 3,
+      "nonincreasing_timestamps": 2,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 91,
+      "rows": 6069,
+      "malformed": 1,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 92,
+      "rows": 6715,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 93,
+      "rows": 7625,
+      "malformed": 0,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 94,
+      "rows": 8415,
+      "malformed": 2,
+      "nonincreasing_timestamps": 2,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 95,
+      "rows": 8829,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 96,
+      "rows": 9600,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 97,
+      "rows": 10077,
+      "malformed": 2,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 98,
+      "rows": 10841,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "stdio-exit",
+      "seed": 99,
+      "rows": 11354,
+      "malformed": 1,
+      "nonincreasing_timestamps": 1,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 0,
+      "rows": 227,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 1,
+      "rows": 299,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 2,
+      "rows": 359,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 3,
+      "rows": 440,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 4,
+      "rows": 526,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 5,
+      "rows": 601,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 6,
+      "rows": 678,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 7,
+      "rows": 733,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 8,
+      "rows": 823,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 9,
+      "rows": 894,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 10,
+      "rows": 968,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 11,
+      "rows": 1007,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 12,
+      "rows": 1125,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 13,
+      "rows": 1174,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 14,
+      "rows": 1261,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 15,
+      "rows": 1310,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 16,
+      "rows": 1401,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 17,
+      "rows": 1473,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 18,
+      "rows": 1561,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 19,
+      "rows": 1620,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 20,
+      "rows": 1656,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 21,
+      "rows": 1768,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 22,
+      "rows": 281,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 23,
+      "rows": 362,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 24,
+      "rows": 434,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 25,
+      "rows": 501,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 26,
+      "rows": 568,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 27,
+      "rows": 664,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 28,
+      "rows": 714,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 29,
+      "rows": 823,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 30,
+      "rows": 878,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 31,
+      "rows": 933,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 32,
+      "rows": 1029,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 33,
+      "rows": 1076,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 34,
+      "rows": 1158,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 35,
+      "rows": 1189,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 36,
+      "rows": 1343,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 37,
+      "rows": 1336,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 38,
+      "rows": 1498,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 39,
+      "rows": 1490,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 40,
+      "rows": 1629,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 41,
+      "rows": 1698,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 42,
+      "rows": 1689,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 43,
+      "rows": 244,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 44,
+      "rows": 318,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 45,
+      "rows": 412,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 46,
+      "rows": 491,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 47,
+      "rows": 552,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 48,
+      "rows": 647,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 49,
+      "rows": 720,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 50,
+      "rows": 774,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 51,
+      "rows": 852,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 52,
+      "rows": 915,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 53,
+      "rows": 1025,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 54,
+      "rows": 1066,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 55,
+      "rows": 1164,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 56,
+      "rows": 1215,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 57,
+      "rows": 1295,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 58,
+      "rows": 1378,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 59,
+      "rows": 1454,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 60,
+      "rows": 1523,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 61,
+      "rows": 1569,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 62,
+      "rows": 1692,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 63,
+      "rows": 1721,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 64,
+      "rows": 253,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 65,
+      "rows": 322,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 66,
+      "rows": 410,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 67,
+      "rows": 464,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 68,
+      "rows": 547,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 69,
+      "rows": 612,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 70,
+      "rows": 702,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 71,
+      "rows": 749,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 72,
+      "rows": 844,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 73,
+      "rows": 908,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 74,
+      "rows": 980,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 75,
+      "rows": 1070,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 76,
+      "rows": 1042,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 77,
+      "rows": 1208,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 78,
+      "rows": 1277,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 79,
+      "rows": 1368,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 80,
+      "rows": 1440,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 81,
+      "rows": 1411,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 82,
+      "rows": 1582,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 83,
+      "rows": 1650,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 84,
+      "rows": 1627,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 85,
+      "rows": 1781,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 86,
+      "rows": 296,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 87,
+      "rows": 362,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 88,
+      "rows": 455,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 89,
+      "rows": 528,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 90,
+      "rows": 596,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 91,
+      "rows": 675,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 92,
+      "rows": 696,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 93,
+      "rows": 789,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 94,
+      "rows": 886,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 95,
+      "rows": 957,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 96,
+      "rows": 1036,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 97,
+      "rows": 1090,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 98,
+      "rows": 1190,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    },
+    {
+      "mode": "write-exit",
+      "seed": 99,
+      "rows": 1257,
+      "malformed": 0,
+      "nonincreasing_timestamps": 0,
+      "returncode": 1
+    }
+  ]
+}

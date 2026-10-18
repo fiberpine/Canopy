@@ -1,0 +1,52 @@
+{
+  "host": "VM-0-3-ubuntu",
+  "root": "/home/ubuntu/orca-release-node1-20261018",
+  "verified_model_files": 51,
+  "training": [
+    {
+      "framework": "baseline",
+      "run": "portable-baseline-smoke-training-r1",
+      "status": "FAILED",
+      "final": null,
+      "reason": "actor0 first state timeout"
+    },
+    {
+      "framework": "baseline",
+      "run": "portable-baseline-smoke-training-r2",
+      "status": "COMPLETED",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 2466,
+        "counters": {
+          "critic_iterations": 195,
+          "critic_optimizer_ops": 390,
+          "actor_updates": 195,
+          "target_updates": 195
+        },
+        "wall_s": 58.35002741699998
+      },
+      "reason": null,
+      "checkpoint_finite": true,
+      "verified_numeric_variables": 106
+    }
+  ],
+  "evaluation": [
+    {
+      "run": "portable-baseline-evaluate-r2",
+      "status": "COMPLETED",
+      "counters": {
+        "valid": 920,
+        "critic_iterations": 0,
+        "critic_optimizer_ops": 0,
+        "actor_updates": 0,
+        "target_updates": 0,
+        "exploration_calls": 0
+      },
+      "policy_hash": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8"
+    }
+  ],
+  "live": [],
+  "user_ipc": [],
+  "free_gib": 23.979942321777344
+}

@@ -1,0 +1,199 @@
+--- /home/ubuntu/orca-repair-20261010-114820/cluster_control.py
++++ frameworks/baseline/cluster_control.py
+@@ -1,15 +1,15 @@
+ """Deadline-bounded five-node control; data/inference use TF directly over VPC."""
+ import pathlib,json,time,subprocess,sys,os,concurrent.futures,traceback,csv,hashlib,math
+-R=pathlib.Path(__file__).resolve().parent;PY='/home/ubuntu/venv/bin/python'
++R=pathlib.Path(__file__).resolve().parent;PY=sys.executable
+ import node_control as node
+ A=json.loads(pathlib.Path(os.environ.get('ORCA_AUTHORIZATION_FILE',str(R/'configs/authorization.json'))).read_text());HOSTS=[x['ip'] for x in A['nodes'][1:]];DEADLINE=A['deadline_epoch']
+-SSH=['ssh','-i',str(R/'id_cluster'),'-o','UserKnownHostsFile='+str(R/'known_hosts'),'-o','StrictHostKeyChecking=yes','-o','BatchMode=yes','-o','ConnectTimeout=5','-o','ServerAliveInterval=5','-o','ServerAliveCountMax=2']
++SSH=['ssh','-i',os.environ.get('ORCA_SSH_KEY',str(R/'id_cluster')),'-o','UserKnownHostsFile='+os.environ.get('ORCA_KNOWN_HOSTS',str(R/'known_hosts')),'-o','StrictHostKeyChecking=yes','-o','BatchMode=yes','-o','ConnectTimeout=5','-o','ServerAliveInterval=5','-o','ServerAliveCountMax=2']
+ def rpc(host,request,timeout=35):
+- p=subprocess.run(SSH+['ubuntu@'+host,PY+' '+str(R/'node_control.py')+' rpc'],input=json.dumps(request).encode(),stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=timeout)
++ p=subprocess.run(([PY,str(R/'node_control.py'),'rpc'] if host=='local' else SSH+['ubuntu@'+host,PY+' '+str(R/'node_control.py')+' rpc']),input=json.dumps(request).encode(),stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=timeout)
+  if p.returncode:raise RuntimeError(host+': '+p.stderr.decode(errors='replace')[-1500:]+p.stdout.decode(errors='replace')[-500:])
+  return json.loads(p.stdout)
+ def parallel(fn):
+- with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:return list(pool.map(fn,enumerate(HOSTS)))
++ with concurrent.futures.ThreadPoolExecutor(max_workers=max(1,len(HOSTS))) as pool:return list(pool.map(fn,enumerate(HOSTS)))
+ def progress(stage,**data):node.dump(R/'logs/controller-status.json',dict(stage=stage,epoch=time.time(),remaining_s=DEADLINE-time.time(),**data))
+ def write(host,path,text):return rpc(host,dict(op='write',path=str(path),text=text))
+ def make_config(run,per_host,u,formal=False,steps=100000,portbase=48200):
+@@ -23,7 +23,10 @@
+  run=cfg['run_id'];assert time.time()<DEADLINE-600
+  node.dump(R/'configs'/(run+'.json'),cfg);start=time.time();samples=[];results={};failure=None;stop_reason=None;all_ready=None;debt_since=None;bad_since={}
+  sample_stream=(R/'logs'/(run+'-cluster-samples.jsonl')).open('w',buffering=262144)
+- def get_status():return parallel(lambda hi:rpc(hi[1],dict(op='status',run=run)))
++ def get_status():
++  rows=parallel(lambda hi:rpc(hi[1],dict(op='status',run=run)))
++  for row in rows:row['entries']=[e for e in row['entries'] if e['role']=='actor']
++  return rows
+  def stop(reason):
+   node.signal_stop(run,reason);parallel(lambda hi:rpc(hi[1],dict(op='stop',run=run,reason=reason)))
+  try:
+@@ -40,7 +43,7 @@
+     rpc(host,dict(op='start',cfg=cfg,role='actor',index=index));write(host,'logs/'+run+'-launch-actor'+str(index),str(time.time()))
+     until=time.time()+75
+     while True:
+-     q=rpc(host,dict(op='status',run=run));entry=next(x for x in q['entries'] if x['index']==index)
++     q=rpc(host,dict(op='status',run=run));entry=next(x for x in q['entries'] if x['index']==index and x['role']=='actor')
+      if entry['flow_ready']:break
+      if not entry['alive']:raise RuntimeError('actor%d failed before first state'%index)
+      if time.time()>until:raise RuntimeError('actor%d first state timeout'%index)
+--- /home/ubuntu/orca-repair-20261010-114820/distributed.py
++++ frameworks/baseline/distributed.py
+@@ -12,7 +12,7 @@
+ from utils_v2 import ReplayBuffer
+ 
+ def setup(cfg,role,index):
+- assert cfg['warmup']>=max(10000,20*512)
++ assert cfg['warmup']>=(512 if cfg.get('portable_smoke_training') else max(10000,20*512))
+  assert cfg.get('reward_mode','raw')=='raw','This baseline implements raw Orca reward only; constraint-reward training requires a separate verified backend.'
+  if cfg.get('backend')=='moving_stats':
+   import moving_stats_backend
+--- /home/ubuntu/orca-repair-20261010-114820/node_control.py
++++ frameworks/baseline/node_control.py
+@@ -1,6 +1,6 @@
+ """Small JSON control plane. No RL traffic passes through this process."""
+ import pathlib,json,sys,os,subprocess,time,signal,csv,traceback,hashlib
+-R=pathlib.Path(__file__).resolve().parent;PY='/home/ubuntu/venv/bin/python'
++R=pathlib.Path(__file__).resolve().parent;PY=sys.executable
+ sys.path.insert(0,str(R/'code/runtime/_deps'));import psutil
+ def load(p,default=None):
+  try:return json.loads(p.read_text())
+--- /home/ubuntu/orca-adaptive-mtp-20261014-115233/cluster_control.py
++++ frameworks/mtp20/cluster_control.py
+@@ -1,15 +1,15 @@
+ """Deadline-bounded five-node control; data/inference use TF directly over VPC."""
+ import pathlib,json,time,subprocess,sys,os,concurrent.futures,traceback,csv,hashlib,math
+-R=pathlib.Path(__file__).resolve().parent;PY='/home/ubuntu/venv/bin/python'
++R=pathlib.Path(__file__).resolve().parent;PY=sys.executable
+ import node_control as node
+ A=json.loads(pathlib.Path(os.environ.get('ORCA_AUTHORIZATION_FILE',str(R/'configs/authorization.json'))).read_text());HOSTS=[x['ip'] for x in A['nodes'][1:]];DEADLINE=A['deadline_epoch']
+-SSH=['ssh','-i',str(R/'id_cluster'),'-o','UserKnownHostsFile='+str(R/'known_hosts'),'-o','StrictHostKeyChecking=yes','-o','BatchMode=yes','-o','ConnectTimeout=5','-o','ServerAliveInterval=5','-o','ServerAliveCountMax=2']
++SSH=['ssh','-i',os.environ.get('ORCA_SSH_KEY',str(R/'id_cluster')),'-o','UserKnownHostsFile='+os.environ.get('ORCA_KNOWN_HOSTS',str(R/'known_hosts')),'-o','StrictHostKeyChecking=yes','-o','BatchMode=yes','-o','ConnectTimeout=5','-o','ServerAliveInterval=5','-o','ServerAliveCountMax=2']
+ def rpc(host,request,timeout=35):
+- p=subprocess.run(SSH+['ubuntu@'+host,PY+' '+str(R/'node_control.py')+' rpc'],input=json.dumps(request).encode(),stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=timeout)
++ p=subprocess.run(([PY,str(R/'node_control.py'),'rpc'] if host=='local' else SSH+['ubuntu@'+host,PY+' '+str(R/'node_control.py')+' rpc']),input=json.dumps(request).encode(),stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=timeout)
+  if p.returncode:raise RuntimeError(host+': '+p.stderr.decode(errors='replace')[-1500:]+p.stdout.decode(errors='replace')[-500:])
+  return json.loads(p.stdout)
+ def parallel(fn):
+- with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:return list(pool.map(fn,enumerate(HOSTS)))
++ with concurrent.futures.ThreadPoolExecutor(max_workers=max(1,len(HOSTS))) as pool:return list(pool.map(fn,enumerate(HOSTS)))
+ def progress(stage,**data):node.dump(R/'logs/controller-status.json',dict(stage=stage,epoch=time.time(),remaining_s=DEADLINE-time.time(),**data))
+ def write(host,path,text):return rpc(host,dict(op='write',path=str(path),text=text))
+ def make_config(run,per_host,u,formal=False,steps=100000,portbase=48200):
+@@ -24,7 +24,10 @@
+  node.dump(R/'configs'/(run+'.json'),cfg);start=time.time();samples=[];results={};failure=None;stop_reason=None;all_ready=None;debt_since=None;bad_since={}
+  sample_stream=(R/'logs'/(run+'-cluster-samples.jsonl')).open('w',buffering=262144)
+  boundary_since=None
+- def get_status():return parallel(lambda hi:rpc(hi[1],dict(op='status',run=run)))
++ def get_status():
++  rows=parallel(lambda hi:rpc(hi[1],dict(op='status',run=run)))
++  for row in rows:row['entries']=[e for e in row['entries'] if e['role']=='actor']
++  return rows
+  def stop(reason):
+   node.signal_stop(run,reason);parallel(lambda hi:rpc(hi[1],dict(op='stop',run=run,reason=reason)))
+  try:
+@@ -41,7 +44,7 @@
+     rpc(host,dict(op='start',cfg=cfg,role='actor',index=index));write(host,'logs/'+run+'-launch-actor'+str(index),str(time.time()))
+     until=time.time()+75
+     while True:
+-     q=rpc(host,dict(op='status',run=run));entry=next(x for x in q['entries'] if x['index']==index)
++     q=rpc(host,dict(op='status',run=run));entry=next(x for x in q['entries'] if x['index']==index and x['role']=='actor')
+      if entry['flow_ready']:break
+      if not entry['alive']:raise RuntimeError('actor%d failed before first state'%index)
+      if time.time()>until:raise RuntimeError('actor%d first state timeout'%index)
+--- /home/ubuntu/orca-adaptive-mtp-20261014-115233/distributed.py
++++ frameworks/mtp20/distributed.py
+@@ -14,7 +14,7 @@
+ import staged_timing
+ 
+ def setup(cfg,role,index):
+- assert cfg['warmup']>=max(10000,20*512)
++ assert cfg['warmup']>=(512 if cfg.get('portable_smoke_training') else max(10000,20*512))
+  joint=cfg.get('joint_control',False)
+  if joint:
+   import joint_mtp
+--- /home/ubuntu/orca-adaptive-mtp-20261014-115233/node_control.py
++++ frameworks/mtp20/node_control.py
+@@ -1,6 +1,6 @@
+ """Small JSON control plane. No RL traffic passes through this process."""
+ import pathlib,json,sys,os,subprocess,time,signal,csv,traceback,hashlib
+-R=pathlib.Path(__file__).resolve().parent;PY='/home/ubuntu/venv/bin/python'
++R=pathlib.Path(__file__).resolve().parent;PY=sys.executable
+ sys.path.insert(0,str(R/'code/runtime/_deps'));import psutil
+ def load(p,default=None):
+  try:return json.loads(p.read_text())
+--- /home/ubuntu/orca-feedback-context-20261016-1203/cluster_control.py
++++ frameworks/mtpjoint/cluster_control.py
+@@ -1,22 +1,22 @@
+ """Deadline-bounded five-node control; data/inference use TF directly over VPC."""
+ import pathlib,json,time,subprocess,sys,os,concurrent.futures,traceback,csv,hashlib,math
+-R=pathlib.Path(__file__).resolve().parent;PY='/home/ubuntu/venv/bin/python'
++R=pathlib.Path(__file__).resolve().parent;PY=sys.executable
+ import node_control as node
+ A=json.loads(pathlib.Path(os.environ.get('ORCA_AUTHORIZATION_FILE',str(R/'configs/authorization.json'))).read_text());HOSTS=[x['ip'] for x in A['nodes'][1:]];DEADLINE=A['deadline_epoch']
+ CONTROL_DIR=pathlib.Path('/tmp/orca-v21-ctl-%d'%os.getuid());CONTROL_DIR.mkdir(mode=0o700,exist_ok=True)
+-SSH=['ssh','-o','ControlMaster=auto','-o','ControlPersist=120','-o','ControlPath='+str(CONTROL_DIR/'c-%C'),'-i',str(R/'id_cluster'),'-o','UserKnownHostsFile='+str(R/'known_hosts'),'-o','StrictHostKeyChecking=yes','-o','BatchMode=yes','-o','ConnectTimeout=5','-o','ServerAliveInterval=5','-o','ServerAliveCountMax=2']
++SSH=['ssh','-o','ControlMaster=auto','-o','ControlPersist=120','-o','ControlPath='+str(CONTROL_DIR/'c-%C'),'-i',os.environ.get('ORCA_SSH_KEY',str(R/'id_cluster')),'-o','UserKnownHostsFile='+os.environ.get('ORCA_KNOWN_HOSTS',str(R/'known_hosts')),'-o','StrictHostKeyChecking=yes','-o','BatchMode=yes','-o','ConnectTimeout=5','-o','ServerAliveInterval=5','-o','ServerAliveCountMax=2']
+ def rpc(host,request,timeout=35):
+  # Only idempotent operations may be retried. Never repeat a start whose reply
+  # might have been lost: inspect recorded ownership instead of duplicating actors.
+  attempts=3 if request.get('op') in ('status','read','write','stop','cleanup','evaluation_summary') else 1
+  for attempt in range(attempts):
+-  p=subprocess.run(SSH+['ubuntu@'+host,PY+' '+str(R/'node_control.py')+' rpc'],input=json.dumps(request).encode(),stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=timeout)
++  p=subprocess.run(([PY,str(R/'node_control.py'),'rpc'] if host=='local' else SSH+['ubuntu@'+host,PY+' '+str(R/'node_control.py')+' rpc']),input=json.dumps(request).encode(),stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=timeout)
+   if p.returncode==0:return json.loads(p.stdout)
+   if p.returncode!=255 or attempt+1==attempts:break
+   time.sleep(.5*2**attempt)
+  raise RuntimeError(host+': '+p.stderr.decode(errors='replace')[-1500:]+p.stdout.decode(errors='replace')[-500:])
+ def parallel(fn):
+- with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:return list(pool.map(fn,enumerate(HOSTS)))
++ with concurrent.futures.ThreadPoolExecutor(max_workers=max(1,len(HOSTS))) as pool:return list(pool.map(fn,enumerate(HOSTS)))
+ def progress(stage,**data):node.dump(R/'logs/controller-status.json',dict(stage=stage,epoch=time.time(),remaining_s=DEADLINE-time.time(),**data))
+ def write(host,path,text):return rpc(host,dict(op='write',path=str(path),text=text))
+ def make_config(run,per_host,u,formal=False,steps=100000,portbase=48200):
+@@ -31,7 +31,10 @@
+  node.dump(R/'configs'/(run+'.json'),cfg);start=time.time();samples=[];results={};failure=None;stop_reason=None;all_ready=None;debt_since=None;bad_since={}
+  sample_stream=(R/'logs'/(run+'-cluster-samples.jsonl')).open('w',buffering=262144)
+  boundary_since=None
+- def get_status():return parallel(lambda hi:rpc(hi[1],dict(op='status',run=run)))
++ def get_status():
++  rows=parallel(lambda hi:rpc(hi[1],dict(op='status',run=run)))
++  for row in rows:row['entries']=[e for e in row['entries'] if e['role']=='actor']
++  return rows
+  def stop(reason):
+   node.signal_stop(run,reason);parallel(lambda hi:rpc(hi[1],dict(op='stop',run=run,reason=reason)))
+  try:
+@@ -48,7 +51,7 @@
+     rpc(host,dict(op='start',cfg=cfg,role='actor',index=index));write(host,'logs/'+run+'-launch-actor'+str(index),str(time.time()))
+     until=time.time()+75
+     while True:
+-     q=rpc(host,dict(op='status',run=run));entry=next(x for x in q['entries'] if x['index']==index)
++     q=rpc(host,dict(op='status',run=run));entry=next(x for x in q['entries'] if x['index']==index and x['role']=='actor')
+      if entry['flow_ready']:break
+      if not entry['alive']:raise RuntimeError('actor%d failed before first state'%index)
+      if time.time()>until:raise RuntimeError('actor%d first state timeout'%index)
+--- /home/ubuntu/orca-feedback-context-20261016-1203/distributed.py
++++ frameworks/mtpjoint/distributed.py
+@@ -14,7 +14,7 @@
+ import staged_timing
+ 
+ def setup(cfg,role,index):
+- assert cfg['warmup']>=max(10000,20*512)
++ assert cfg['warmup']>=(512 if cfg.get('portable_smoke_training') else max(10000,20*512))
+  joint=cfg.get('joint_control',False)
+  if joint:
+   import joint_mtp
+--- /home/ubuntu/orca-feedback-context-20261016-1203/node_control.py
++++ frameworks/mtpjoint/node_control.py
+@@ -1,6 +1,6 @@
+ """Small JSON control plane. No RL traffic passes through this process."""
+ import pathlib,json,sys,os,subprocess,time,signal,csv,traceback,hashlib
+-R=pathlib.Path(__file__).resolve().parent;PY='/home/ubuntu/venv/bin/python'
++R=pathlib.Path(__file__).resolve().parent;PY=sys.executable
+ sys.path.insert(0,str(R/'code/runtime/_deps'));import psutil
+ def load(p,default=None):
+  try:return json.loads(p.read_text())

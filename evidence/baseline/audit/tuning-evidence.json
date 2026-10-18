@@ -1,0 +1,145 @@
+{
+  "current_status": {
+    "classification": "PARTIAL",
+    "scope": "User-authorized one-seed reduced grid; not across-seed or paper-level reproduction",
+    "training_seed": 3,
+    "effective_transitions": 2412694,
+    "critic_iterations": 240040,
+    "postwarm_U": 0.09999975004228451,
+    "evaluation_complete": true,
+    "evaluations": 210,
+    "planned_evaluations": 210,
+    "primary_gate": false,
+    "all24_gate": false,
+    "author_proximity_gate": false,
+    "heldout": [
+      {
+        "condition": "H30-R80",
+        "utilization": 0.9967971028098535
+      },
+      {
+        "condition": "H96-R300",
+        "utilization": 0.8117092727518406
+      }
+    ]
+  },
+  "checkpoint_diagnostic": {
+    "status": "COMPLETED",
+    "runs": 8,
+    "failures": [],
+    "epoch": 1791614436.1856549
+  },
+  "progress": [
+    {
+      "samples": 1000012,
+      "condition": "G12-R20",
+      "repeats": 3,
+      "utilization": 0.9718703272939386,
+      "queue_mean_ms": 3.0666839630509504
+    },
+    {
+      "samples": 1000012,
+      "condition": "G12-R200",
+      "repeats": 3,
+      "utilization": 0.9395830932513854,
+      "queue_mean_ms": 12.755434765954083
+    },
+    {
+      "samples": 1000012,
+      "condition": "G24-R50",
+      "repeats": 1,
+      "utilization": 0.9236115260675644,
+      "queue_mean_ms": 1.7944747301435615
+    },
+    {
+      "samples": 1000012,
+      "condition": "G48-R50",
+      "repeats": 1,
+      "utilization": 0.9050592587061227,
+      "queue_mean_ms": 3.177502271266813
+    },
+    {
+      "samples": 2000002,
+      "condition": "G12-R20",
+      "repeats": 1,
+      "utilization": 1.0000013871401439,
+      "queue_mean_ms": 9.588883093958117
+    },
+    {
+      "samples": 2000002,
+      "condition": "G12-R200",
+      "repeats": 1,
+      "utilization": 0.664425190465012,
+      "queue_mean_ms": 8.971259509721047
+    },
+    {
+      "samples": 2000002,
+      "condition": "G24-R50",
+      "repeats": 1,
+      "utilization": 0.999991010264837,
+      "queue_mean_ms": 25.975527070670598
+    },
+    {
+      "samples": 2000002,
+      "condition": "G48-R50",
+      "repeats": 1,
+      "utilization": 0.9594490033763061,
+      "queue_mean_ms": 16.921939748647873
+    },
+    {
+      "samples": 2412694,
+      "condition": "G12-R20",
+      "repeats": 3,
+      "utilization": 0.8930338177653528,
+      "queue_mean_ms": 2.468561025991255
+    },
+    {
+      "samples": 2412694,
+      "condition": "G12-R200",
+      "repeats": 3,
+      "utilization": 0.7509814550033078,
+      "queue_mean_ms": 14.747065850727886
+    },
+    {
+      "samples": 2412694,
+      "condition": "G24-R50",
+      "repeats": 3,
+      "utilization": 0.999907194989223,
+      "queue_mean_ms": 23.253431836892776
+    },
+    {
+      "samples": 2412694,
+      "condition": "G48-R50",
+      "repeats": 3,
+      "utilization": 0.9883550464130971,
+      "queue_mean_ms": 21.63411301605288
+    }
+  ],
+  "weak_condition": {
+    "condition": "G12-R20",
+    "early_2_10_utilization": 0.9241099850971354,
+    "late_30_60_utilization": 0.8889453822460288,
+    "late_reward": 0.86261336269013,
+    "late_delay_factor": 0.9988146925481916
+  },
+  "weak_long_rtt": {
+    "condition": "G12-R200",
+    "early_2_10_utilization": 0.6650584510624071,
+    "late_30_60_utilization": 0.9823816307077261,
+    "late_reward": 0.9468479178782648,
+    "late_delay_factor": 1.0
+  },
+  "new_startup_intervention": {
+    "status": {
+      "status": "COMPLETED",
+      "runs": 3,
+      "failures": [],
+      "epoch": 1791614508.833608
+    },
+    "repeats": 3,
+    "utilization_mean": 0.9848450137646984,
+    "queue_mean_ms": 113.700537509303,
+    "reward_mean": 0.813477336883996,
+    "interpretation": "Neutral-first10-policy-seconds changes the entire startup trajectory; not a max_bw-only causal test and not a formal model score."
+  }
+}

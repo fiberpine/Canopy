@@ -1,0 +1,30 @@
+{
+  "record": {
+    "kind": "Frozen diagnostic, not a new trained algorithm",
+    "root": "/home/ubuntu/orca-joint-clock-abc-20261016-1833",
+    "archive_commit": "95cdefb8f5392f61dd2fdb2a1093e6cc8505bfea",
+    "network_runs": 90,
+    "new_training": 0,
+    "models": {
+      "A-joint": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-feedback600/step-157704",
+      "B-joint-force80": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-feedback600/step-157704",
+      "C-fixed80": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-fixed80600/step-174290"
+    },
+    "B_is_same_A_weights": true,
+    "existing_checkpoint_trend_steps": [
+      75000,
+      125002,
+      157704
+    ],
+    "old_zero_flow_scheduler_failure_preserved": true,
+    "checkpoint_replay_rawlogs_remain_cloud": true,
+    "epoch": 1792149260.7937517
+  },
+  "nodes": [
+    "172.21.0.15",
+    "172.21.0.3",
+    "172.21.0.5",
+    "172.21.0.9",
+    "172.21.0.6"
+  ]
+}

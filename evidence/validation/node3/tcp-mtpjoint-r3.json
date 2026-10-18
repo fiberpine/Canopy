@@ -1,0 +1,9 @@
+[
+  {
+    "command": "smoke-training",
+    "run_id": "portable-mtpjoint-smoke-training-r3",
+    "returncode": 1,
+    "stdout": "{\"run_id\": \"portable-mtpjoint-smoke-training-r3\", \"status\": \"COMPLETED\", \"reason\": null, \"stop_reason\": null, \"wall_s\": 56.55476260185242, \"started_epoch\": 1792290230.8236282, \"all_ready_epoch\": 1792290235.557342, \"final\": {\"status\": \"COMPLETED\", \"reason\": \"\", \"inserted\": 505, \"counters\": {\"critic_iterations\": 0, \"critic_optimizer_ops\": 0, \"actor_updates\": 0, \"target_updates\": 0}, \"wall_s\": 48.47206935200006}, \"producer_records\": {\"0\": {\"generated\": 505, \"enqueued\": 505, \"exploration_calls\": 0, \"errors\": [], \"seed\": 3, \"initial_policy_hash\": \"37aedceed3e57ff4c9333f133e9f3834d8b2b69c86d7badac6080b25801ba29b\"}}}\n",
+    "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/orca-release-20261018/run.py\", line 66, in <module>\n    if __name__=='__main__':sys.exit(main())\n  File \"/home/ubuntu/orca-release-20261018/run.py\", line 63, in main\n    counters=q['final']['counters'];assert counters['critic_iterations']>0 and counters['actor_updates']>0,'No real optimizer update; smoke is not PASS'\nAssertionError: No real optimizer update; smoke is not PASS\n"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "status": "READ_ONLY_ANALYSIS_COLUMNS_ADDED",
+  "epoch": 1792244372.106722,
+  "source_sha256": "1c0f71a2a049d75b10385f747da7bed707c68626a82af9fd1861cd4bfa0bb26a",
+  "reason": "Report effective cwnd-floor occupancy and measured utility/rate to distinguish actuator oscillation and normalization effects; no evaluation/control/training code changed",
+  "definitions": {
+    "rtt_within_interval_fraction": "Fraction of endpoint intervals with actual_dt<observed_sRTT; not proof that no new ACK arrived",
+    "cost_adjusted_density_approx": "Time-average utility minus decision_cost*.02*calls_per_s; not exact finite discounted return",
+    "native_rate_time_mean_bytes_s": "Acked-byte interval rate in V31; historical sample-mean rate in scalar; do not equate cross-interface values"
+  }
+}

@@ -1,0 +1,3527 @@
+{
+  "epoch": 1791614762.519656,
+  "root": "/home/ubuntu/orca-repair-20261010-114820",
+  "files": [
+    {
+      "path": "analyze_cluster.py",
+      "bytes": 4552,
+      "sha256": "9b318bf20d74733b17e48d9a4ca6f1e71ef2dda7a3eda1278b167cd00f91333b",
+      "reused_local": true
+    },
+    {
+      "path": "assess_admission.py",
+      "bytes": 2135,
+      "sha256": "1a6dbc3c5f24b520616e2bc8602e0e481057c59544daa52cc1067f9d7d589eab",
+      "reused_local": true
+    },
+    {
+      "path": "audit/author-checkpoint-node-parity.json",
+      "bytes": 3693,
+      "sha256": "f8c72e258158bbdfd47eac0db7d2067e4cf73f5d7d0bc60b58969042eaefced7",
+      "reused_local": true
+    },
+    {
+      "path": "audit/backend-verification.json",
+      "bytes": 1524,
+      "sha256": "4caa993095cb361362d6014f71afcb8e097ac9cdd7060b66d51568eb96249f9f",
+      "reused_local": true
+    },
+    {
+      "path": "audit/balanced-admission.json",
+      "bytes": 1224,
+      "sha256": "f0bc8e8e63a464fa0e5c91c71d187feee84d43728389626150a8eb3762707ec5",
+      "reused_local": true
+    },
+    {
+      "path": "audit/balanced-formal-completion.json",
+      "bytes": 5186,
+      "sha256": "4ef1fa87b9607a64d7fa5beb3b861bbc5b4020447c93e15f27a2bd92c4fa3416",
+      "reused_local": true
+    },
+    {
+      "path": "audit/balanced-initialization-parity.json",
+      "bytes": 387,
+      "sha256": "1286aff96681e7333997a516be9964717eeedb68b8d28bc5f1c269e44bb3a9b1",
+      "reused_local": true
+    },
+    {
+      "path": "audit/balanced-replay-verification.json",
+      "bytes": 404,
+      "sha256": "006daaa5bd4216ef88d71599cd908c3d8fde3700f2ee868016aafc9b8283b274",
+      "reused_local": true
+    },
+    {
+      "path": "audit/balanced-trajectory-329992.json",
+      "bytes": 6019,
+      "sha256": "7472715acf22b7fbb4c3bb9a7468bc545cd65ceae54fad212661ddd44fe2aa93",
+      "reused_local": true
+    },
+    {
+      "path": "audit/batchnorm-semantics.json",
+      "bytes": 3489,
+      "sha256": "42b1034ed7c73e2520f49309fefd80eef2d30370bde466f08b025260fb35ee74",
+      "reused_local": true
+    },
+    {
+      "path": "audit/bootstrap-layout-repair.json",
+      "bytes": 306,
+      "sha256": "b151befe1b10f5c41680cb1bc85db4c76581ef923dad24865ae24ac622664223",
+      "reused_local": true
+    },
+    {
+      "path": "audit/bootstrap.json",
+      "bytes": 257,
+      "sha256": "85e0b9cdca5723d7bc523a42e1f4afe83dfa34821ed05d9e952ad90fb5f63882",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap16-neutral-u025-cleanup.json",
+      "bytes": 55,
+      "sha256": "5a2f3916f6e4f60f365b1d0a0917245df5b36e6dd0782763aad649c2a056570b",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap24-grid24-balanced-u010-cleanup.json",
+      "bytes": 54,
+      "sha256": "26d578dbd08e61d5044967e4663a903cba7d0d3d8db5e7f68e56afcca4a33f24",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap24-grid24-moving-mse-u010-v2-cleanup.json",
+      "bytes": 55,
+      "sha256": "4a39c225bc1d20f1c4da40f1e43c271e3daea1e52a7a28c0eafd7b17e9ce2383",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap32-neutral-u025-cleanup.json",
+      "bytes": 55,
+      "sha256": "62dc8b9acd49e8fe7f7d1659b769cb31d5b6b455d6bc4121f882ff218617c9e0",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap4-neutral-u025-cleanup.json",
+      "bytes": 55,
+      "sha256": "134c0e9cc5b552c37aa1308e10236ac432c00b5856c77176a8f6249df6939229",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap48-expanded-u003-cleanup.json",
+      "bytes": 55,
+      "sha256": "a89bc769bb1e85c303fd1625220b96d7560d1aa85537eebe02c91d07355802d6",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap48-grid48-u003-safe-cleanup.json",
+      "bytes": 54,
+      "sha256": "dbb8e977f692ab612d8f0a96d5ff832ff570c3909c42247565540ba9572895c4",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap48-moving-mse-u025-cleanup.json",
+      "bytes": 76,
+      "sha256": "30f32d4f2d89ebd911490450bbee2369ee119342e72142ea175567ad8666109a",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap48-moving-mse-u025-v2-cleanup.json",
+      "bytes": 54,
+      "sha256": "4f362150617e3cd765eb727f9e0723b268ed1424c7bd8ebb39e070b2e1643292",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap48-neutral-u025-cleanup.json",
+      "bytes": 55,
+      "sha256": "c929b4b4e046c5832d0b605a4cce606842102f391254d85625b1d1de8424df5f",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap48-stale-coverage-gate-abort.json",
+      "bytes": 292,
+      "sha256": "ef70a8e5579ba542cb7cb22cf592dc6347143d1d46d25c488a6dd0f7a7ccb66a",
+      "reused_local": true
+    },
+    {
+      "path": "audit/cap8-neutral-u025-cleanup.json",
+      "bytes": 55,
+      "sha256": "0dad03e59c682af826de42d881a00209c040c91c6a55ec4e05cb51cb37b5d4c2",
+      "reused_local": true
+    },
+    {
+      "path": "audit/checkpoint-diagnostic-revision.json",
+      "bytes": 523,
+      "sha256": "301f037f6868ae4d4542bea64b202b80979aa4ca0c74e606201e2540b1e8110c",
+      "reused_local": true
+    },
+    {
+      "path": "audit/checkpoint-manifest.json",
+      "bytes": 9414,
+      "sha256": "a439feda28e2ca1e9c82d1f539799e67739f31804948c5c62653132641317d7d",
+      "reused_local": true
+    },
+    {
+      "path": "audit/checkpoint-progress-controller-exit.json",
+      "bytes": 46,
+      "sha256": "c2a092e874293bf6ee27b70830cba936a097c7fc0b592b677daacdc6199d1c90",
+      "reused_local": true
+    },
+    {
+      "path": "audit/checkpoint-progress-diagnostic-status.json",
+      "bytes": 79,
+      "sha256": "3e41f1cfc127f90f6664ae0aef10b6e26e4f1df71446cc088cc1111469e10d3a",
+      "reused_local": true
+    },
+    {
+      "path": "audit/contiguous-run-interruption.json",
+      "bytes": 417,
+      "sha256": "82c6994284b50770bea57643e2d5fee13ada3d945199d16c108e886f8843c196",
+      "reused_local": true
+    },
+    {
+      "path": "audit/control-log-repair.json",
+      "bytes": 673,
+      "sha256": "812db4731c17c4d003ffe2d6b1efa6f25d71d769a0956252b0fd4f644d2a2a1a",
+      "reused_local": true
+    },
+    {
+      "path": "audit/disabled-follow-up-processes.json",
+      "bytes": 222,
+      "sha256": "b191b900f35eb2dd2b4a2cf69c085ead87c0b2cd6ba13e4e99c3d0831e97fb90",
+      "reused_local": true
+    },
+    {
+      "path": "audit/effective-configuration.json",
+      "bytes": 3356,
+      "sha256": "2fc73014ef5dd630f956842be9d9861dd70a8ee672954c91ea341562f7baee87",
+      "reused_local": true
+    },
+    {
+      "path": "audit/environment-snapshot.json",
+      "bytes": 4472,
+      "sha256": "f718014d49953fe897aef0c819b45ad88401d61f666f502bfbd4ff7754a16303",
+      "reused_local": true
+    },
+    {
+      "path": "audit/evaluation-status.json",
+      "bytes": 97,
+      "sha256": "4e9fc6fe01f42cd089cae78c30667a2fdea5c7a59c9760ca826e2ce01eb80f83",
+      "reused_local": true
+    },
+    {
+      "path": "audit/final-node-source-parity.json",
+      "bytes": 2891,
+      "sha256": "c435f0c500f2a1c45b1dc03bd021eea8f0231523296f3345eb501f688c80434a",
+      "reused_local": false
+    },
+    {
+      "path": "audit/final-ownership-at-pause.json",
+      "bytes": 30071,
+      "sha256": "fb8aae9bb842b64fe4e4b8799bdcd8d78c5783ecd0390a99cbd1cdfb4a3f37d7",
+      "reused_local": true
+    },
+    {
+      "path": "audit/final-ownership.json",
+      "bytes": 1243,
+      "sha256": "84d147857053150aba44a38d9c34bfa0789d9e8c882819bdc9bfaf96439bbdff",
+      "reused_local": false
+    },
+    {
+      "path": "audit/final-replay-coverage.json",
+      "bytes": 21431,
+      "sha256": "87e1648356c73543b56fea8cb5289d8ee526ac3bef02af8fa721dae0e4e2d79b",
+      "reused_local": true
+    },
+    {
+      "path": "audit/final-target-moving-statistics.json",
+      "bytes": 1074,
+      "sha256": "971dbfb4e81c86c036cb394e2bbc8e0553abae6c0c7f16d320fd49b793d360b7",
+      "reused_local": true
+    },
+    {
+      "path": "audit/final-training-cadence.json",
+      "bytes": 362,
+      "sha256": "d19818079a699ca3cb8f497c4e595b9c6c08b257665a7df247c033c9a43c27f4",
+      "reused_local": true
+    },
+    {
+      "path": "audit/finalizer-result.json",
+      "bytes": 237,
+      "sha256": "238c60bb6adc85680e20a450e4ad8bd22e4423a5e9f0906e678991fdfc335c5b",
+      "reused_local": false
+    },
+    {
+      "path": "audit/formal-admission-assessment.json",
+      "bytes": 2260,
+      "sha256": "d89d6b3357103eb988244491649f6c36be9065236aff8b4fe129c5661e2882c8",
+      "reused_local": true
+    },
+    {
+      "path": "audit/formal-admission.json",
+      "bytes": 1242,
+      "sha256": "d6e1099fda07fc5b34fe71f85d51e867cce924c1541386472b2b992f20f5a5f7",
+      "reused_local": true
+    },
+    {
+      "path": "audit/formal-initialization.json",
+      "bytes": 523,
+      "sha256": "1503b713a5438b014b12b844b8942b3678812496b389b491bc7095aea339b6d4",
+      "reused_local": true
+    },
+    {
+      "path": "audit/formal24-grid24-seed3-balanced-u010-cleanup.json",
+      "bytes": 55,
+      "sha256": "62b0893a3b8de28dff03cfb0e8b7c485f389bc2fecb64a61bc09a406d0af9565",
+      "reused_local": true
+    },
+    {
+      "path": "audit/formal24-grid24-seed3-balanced-u010-policy-diagnosis-2412694.json",
+      "bytes": 17027,
+      "sha256": "a2f48dc224337f1a9a925f4eedae3fde0499c5b7af02ddd63d34a12ab1109d37",
+      "reused_local": true
+    },
+    {
+      "path": "audit/formal24-grid24-seed3-balanced-u010-policy-diagnosis-500010.json",
+      "bytes": 17265,
+      "sha256": "6a07c9058e9a66898fcd57a316ed11a2092eef4b16fda507cefe715eb4b05e12",
+      "reused_local": true
+    },
+    {
+      "path": "audit/formal24-grid24-seed3-mse-u010-cleanup.json",
+      "bytes": 55,
+      "sha256": "d05ff557bc6de8ee08dd4be96a3494340cac2b6197a46675c577954f23606897",
+      "reused_local": true
+    },
+    {
+      "path": "audit/formal48-grid48-seed3-u003-cleanup.json",
+      "bytes": 55,
+      "sha256": "10a1842e6f3149b6273492b5c0b673ca01f232697ce7f520b65710a41c35bf29",
+      "reused_local": true
+    },
+    {
+      "path": "audit/graph-diagnosis.json",
+      "bytes": 3163,
+      "sha256": "c2828f755fb796824fb3dcc9582c3f773dd8a3ca83cc13de404d968f53e381eb",
+      "reused_local": true
+    },
+    {
+      "path": "audit/intermediate-weak-confirmation-status.json",
+      "bytes": 79,
+      "sha256": "41914f2742c4dce1ffb5f2ec49e3df7f29e000ca5ce4d3f3e32c82acc8164623",
+      "reused_local": false
+    },
+    {
+      "path": "audit/live-evaluation-sockets-cluster.jsonl",
+      "bytes": 6530,
+      "sha256": "7c8a77115fb395ff8df539b29af7af54a24f6e6660f18928d505f143363ade84",
+      "reused_local": true
+    },
+    {
+      "path": "audit/log-shutdown-probe.json",
+      "bytes": 32395,
+      "sha256": "52652e2d11061698c5283dd7b33058126dfc0d13244b239a70189cff0b316a46",
+      "reused_local": true
+    },
+    {
+      "path": "audit/manual-stop-drain-recovery.json",
+      "bytes": 5619,
+      "sha256": "6b66cd20c2245c1788101559a5b2d8b4a2167b060e169e5c7d0101e8d285da01",
+      "reused_local": true
+    },
+    {
+      "path": "audit/moving-statistics-speed.json",
+      "bytes": 1571,
+      "sha256": "2c41106d87719471d501259a76217be37278a2af4d519123b51e939f10f46b81",
+      "reused_local": true
+    },
+    {
+      "path": "audit/network-watch-ownership.json",
+      "bytes": 147,
+      "sha256": "023cf0e7b0c7523b8bb963e9fdbb19b425d6a54e380e631fb4cf583e0499642d",
+      "reused_local": true
+    },
+    {
+      "path": "audit/new-startup-diagnostic-status.json",
+      "bytes": 78,
+      "sha256": "346b3f7df3b15b156b959f17ba160910d7fd0ced9e86780b779b11a05a5f158b",
+      "reused_local": true
+    },
+    {
+      "path": "audit/offline-graph-exit.json",
+      "bytes": 46,
+      "sha256": "a5f6fef091c022ba601ee0989d3d7aa18bee9f52d6f5e646acc85b1bf8da776a",
+      "reused_local": true
+    },
+    {
+      "path": "audit/online-condition-contribution.json",
+      "bytes": 6763,
+      "sha256": "4f09d4d8b953eb58eaabd50093c821a3bf693ad49e37c109024cc61d1401bd26",
+      "reused_local": true
+    },
+    {
+      "path": "audit/pause-drain-recovery.json",
+      "bytes": 259,
+      "sha256": "82ad6ed7c4952fdc3c29e9cd89d19dc1f03a1c5828d21aa8d2481e78e09519d3",
+      "reused_local": true
+    },
+    {
+      "path": "audit/policy-diagnosis-500005.json",
+      "bytes": 16705,
+      "sha256": "7bbf0bbf42d0f219b1d3885a5baa3fe5ec91782812e6307464afd62f6eb1931f",
+      "reused_local": true
+    },
+    {
+      "path": "audit/pre-capacity-inventory.json",
+      "bytes": 1877,
+      "sha256": "148f1e687c77c26e1f587a522b6923a7e6126337bea7e8fbaa733f6445db41ab",
+      "reused_local": true
+    },
+    {
+      "path": "audit/safe-logger-binary-parity.json",
+      "bytes": 876,
+      "sha256": "b1f7d302ad8043f1e844552d2e3df3a6df8dc19ade6531ae562096d11781a516",
+      "reused_local": true
+    },
+    {
+      "path": "audit/sampler-prefix-comparison.json",
+      "bytes": 26752,
+      "sha256": "8135390670498cc3e29c891877ff8e37d36fc498d3dc802682e99ac59bacae31",
+      "reused_local": true
+    },
+    {
+      "path": "audit/saturated-service.json",
+      "bytes": 1257,
+      "sha256": "3fc183df9665b8bcc77399b4e47bfabbcd17f3e4182ea0daff0eb228a86b2b56",
+      "reused_local": true
+    },
+    {
+      "path": "audit/shared-optimizer-counter.json",
+      "bytes": 926,
+      "sha256": "51dc5a375578b128d7da6902092c28fb828dc9c0bfeeeecbecd3ff1ada7291f1",
+      "reused_local": true
+    },
+    {
+      "path": "audit/source-provenance.json",
+      "bytes": 25744,
+      "sha256": "f82265cee2159d23894345f6761214dfe7305d52fbb4b70ab177dbcdf2a334dc",
+      "reused_local": true
+    },
+    {
+      "path": "audit/ssh-public-address-event.json",
+      "bytes": 884,
+      "sha256": "e1427512bc1aa433339c23623a465e50e18618b269db6c233e26079c8526b869",
+      "reused_local": true
+    },
+    {
+      "path": "audit/startup-coverage.json",
+      "bytes": 8625,
+      "sha256": "37132a1c7c63152723711050eb1b8328b96c0812630f7503878f5e27d84d029e",
+      "reused_local": true
+    },
+    {
+      "path": "audit/startup-diagnostic-status.json",
+      "bytes": 51,
+      "sha256": "311969d03a4638126aff9e27ed2d98ace2091c15b5c5f6381be031a5cd89a7b5",
+      "reused_local": true
+    },
+    {
+      "path": "audit/target-batch-context.json",
+      "bytes": 8809,
+      "sha256": "76b48b22af96ff29cef672a68afb9df2d5e28f9d3b5836664010925cd953099c",
+      "reused_local": true
+    },
+    {
+      "path": "audit/target-bn-candidate-verification.json",
+      "bytes": 522,
+      "sha256": "ce15bc65b444ec62eadfbb0a043583877060b04c23d1b243bd7ad882afbbd808",
+      "reused_local": true
+    },
+    {
+      "path": "audit/tuning-evidence.json",
+      "bytes": 3797,
+      "sha256": "7d0f55b15b083366318730c8350128f87a79dad3ca43bd6b50756362a4effa1a",
+      "reused_local": false
+    },
+    {
+      "path": "audit/user-pause-complete.json",
+      "bytes": 256,
+      "sha256": "c60335d178f850f80cacd915989dc46996979f9c484e404c45e131164c315806",
+      "reused_local": true
+    },
+    {
+      "path": "audit/user-pause-request.json",
+      "bytes": 127,
+      "sha256": "a5158ac347571bcdcb94d8fbff692555b389da187796f05b4184b9f8201aedeb",
+      "reused_local": true
+    },
+    {
+      "path": "audit_batchnorm_semantics.py",
+      "bytes": 4700,
+      "sha256": "6d76dfd1913a60fde9185031fcb3aa4f63de50a352a69905f145af098feeee51",
+      "reused_local": true
+    },
+    {
+      "path": "audit_effective_configuration.py",
+      "bytes": 1683,
+      "sha256": "474a79f4308474718b13da7a2372ab8083cabc51d15e7ace3eef71181a5930dd",
+      "reused_local": true
+    },
+    {
+      "path": "audit_final_ownership.py",
+      "bytes": 1767,
+      "sha256": "7544e846def5249e9ca3326aad3f9fb5c36930c56a855230e0303b103177a05c",
+      "reused_local": true
+    },
+    {
+      "path": "audit_graph.py",
+      "bytes": 4061,
+      "sha256": "2a02594d8b7b8ccddbcd7416e13ee169349a4fe5417103cc97094c03dc2a421d",
+      "reused_local": true
+    },
+    {
+      "path": "audit_initialization.py",
+      "bytes": 1296,
+      "sha256": "8fbb48d33a3d284059c7abec128eaa176486cfd7423d393637828d2c953ae7a1",
+      "reused_local": true
+    },
+    {
+      "path": "audit_live_eval_socket.py",
+      "bytes": 944,
+      "sha256": "8b75175715f9d36600b648cc92ed34971ca28272a34a3234d431589e15a6ea12",
+      "reused_local": true
+    },
+    {
+      "path": "audit_moving_stats_speed.py",
+      "bytes": 3741,
+      "sha256": "984d8260d181f36ac348fcb924b2ab675b628bc8c7c67737494f75e94e5c0ee7",
+      "reused_local": true
+    },
+    {
+      "path": "audit_replay_coverage.py",
+      "bytes": 2289,
+      "sha256": "940d91d0f9c4ee1421698e71a70ed0f762f95455dbae7f312872e07a08218256",
+      "reused_local": true
+    },
+    {
+      "path": "audit_shared_optimizer_counter.py",
+      "bytes": 2616,
+      "sha256": "9908ac0c91aab4c7d56fcefe27e9696b75d6d62b6bef95736df099165b2fde34",
+      "reused_local": true
+    },
+    {
+      "path": "audit_source.py",
+      "bytes": 2530,
+      "sha256": "7104fccf7164306587fd5624257af889fff90e788b0eeec3d7cf601fd4a418be",
+      "reused_local": true
+    },
+    {
+      "path": "audit_startup_coverage.py",
+      "bytes": 2156,
+      "sha256": "258d84ac4da079ed0bc1618cded4b6f674d8625d3eebc234c388270e7ee6eaa3",
+      "reused_local": true
+    },
+    {
+      "path": "audit_target_batch_context.py",
+      "bytes": 3131,
+      "sha256": "5bbb4d9205fc872582cbcfddde186e555ac89aa0af63d004915d3dd220d8ec73",
+      "reused_local": true
+    },
+    {
+      "path": "balanced_phase.py",
+      "bytes": 2439,
+      "sha256": "4a17a99a51244d0b27836e4f00c82fd5e1d51d435b7c4a99ffa40163cc762bdb",
+      "reused_local": true
+    },
+    {
+      "path": "bootstrap_repair.py",
+      "bytes": 2550,
+      "sha256": "c8d0619789dce72d7548c7541abb0eb385e060188f4217c9c9f52fd783f39d2c",
+      "reused_local": true
+    },
+    {
+      "path": "build_repair_report.py",
+      "bytes": 26434,
+      "sha256": "3d545f255875ed02dbe809c0af04966f61b56ca402ea1d08e0f95bf68a1d3ddc",
+      "reused_local": true
+    },
+    {
+      "path": "build_report.py",
+      "bytes": 27152,
+      "sha256": "b865cc0b9da158f1cdfa00dede98558bb0f53a99ff6f878e34d682b46adfa6f2",
+      "reused_local": true
+    },
+    {
+      "path": "capacity_sequence.py",
+      "bytes": 1006,
+      "sha256": "26a0381cca43725afe85bdd7ed0e9b2af7bb4453b9423dbe5033c5ac8220427a",
+      "reused_local": true
+    },
+    {
+      "path": "checkpoint_manifest.py",
+      "bytes": 1200,
+      "sha256": "afe3ca659f239452b43a80bc9bbaf47e4d157ceec4cc64feea6528b6f94ef978",
+      "reused_local": true
+    },
+    {
+      "path": "cluster_control.py",
+      "bytes": 10573,
+      "sha256": "660eeb12c7a7749fe7bd8b81dd2fd26caf8ffce542140b8efffb49edc2171429",
+      "reused_local": true
+    },
+    {
+      "path": "collect_diagnostic_resources.py",
+      "bytes": 939,
+      "sha256": "b408523bb1a5fc3a9a772e365e00c88d40a2b0026477b8ef5d47d7fbc8cd13ff",
+      "reused_local": true
+    },
+    {
+      "path": "collect_repair_evidence.py",
+      "bytes": 1852,
+      "sha256": "1b6367bb09da8ecfa2d39ac2e9bf7f37a03a1a7b654ad4148115c180b4be991f",
+      "reused_local": true
+    },
+    {
+      "path": "complete_resumed.py",
+      "bytes": 2979,
+      "sha256": "78732f9cce8cbc066d25c2c29241e0dd50eea72c08e5b24b41199fd63ab5d8ab",
+      "reused_local": true
+    },
+    {
+      "path": "configs/admission-and-formal-plan.json",
+      "bytes": 1278,
+      "sha256": "ad3ceeec8357d165c0f5764336b5abd22d9ac3a63ac616cb217a32d89f757a89",
+      "reused_local": true
+    },
+    {
+      "path": "configs/admission-grid48-amendment.json",
+      "bytes": 1688,
+      "sha256": "2c1dc54be78cd68e3fdb097a0c1432d0b11d72df9eee238c7d38de8bbe211061",
+      "reused_local": true
+    },
+    {
+      "path": "configs/authorization-resumed-20261010.json",
+      "bytes": 1139,
+      "sha256": "6ae81b2adab513ab880e2139d0b2950a1ea5891cf080b8bc8901bcbce017abf1",
+      "reused_local": true
+    },
+    {
+      "path": "configs/authorization.json",
+      "bytes": 848,
+      "sha256": "5e0d4f97214a152a2fb2b57c35119628ae75cc8e4a33875895b0c070b9fb25bc",
+      "reused_local": true
+    },
+    {
+      "path": "configs/balanced-frozen.json",
+      "bytes": 9895,
+      "sha256": "04e68f2ca8ae31fc611906b2ae3b492fc0376e607ca76511bfc6c18b28faadb1",
+      "reused_local": true
+    },
+    {
+      "path": "configs/balanced-protocol.json",
+      "bytes": 11757,
+      "sha256": "a22b537552dd790b589cd8084be4cd1b1a137b960c3203aa52d2ab29e8b6a47d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/cap16-neutral-u025.json",
+      "bytes": 5580,
+      "sha256": "8abf592819d98f17dec600a37e8ce0acaa286ae1a977650a7012c7f606a6a9d4",
+      "reused_local": true
+    },
+    {
+      "path": "configs/cap24-grid24-balanced-u010.json",
+      "bytes": 9843,
+      "sha256": "230848292bf3b145d593f81119dff1504fb2e37e31848212f629d169ce7c6c05",
+      "reused_local": true
+    },
+    {
+      "path": "configs/cap24-grid24-moving-mse-u010-v2.json",
+      "bytes": 9813,
+      "sha256": "f95525dfa702577bbeb35b5186f75a657af263ac9e0055635f3620d78e5e5e25",
+      "reused_local": true
+    },
+    {
+      "path": "configs/cap32-neutral-u025.json",
+      "bytes": 10080,
+      "sha256": "ed26d96930abd98ed8c1b7bda7de921e729cd7ddda5e8fa7f95a5458f8028f04",
+      "reused_local": true
+    },
+    {
+      "path": "configs/cap4-neutral-u025.json",
+      "bytes": 2201,
+      "sha256": "ecdbc511d4a9c9cbfd759bc47b9ba822ddfb3f1bc6c7a580023f51fb74d82969",
+      "reused_local": true
+    },
+    {
+      "path": "configs/cap48-expanded-u003.json",
+      "bytes": 17684,
+      "sha256": "53e3f97cd02d18edc459c0aa35c77c5a6b232a61a6c994d15c70f8668cbf2209",
+      "reused_local": true
+    },
+    {
+      "path": "configs/cap48-grid48-u003-safe.json",
+      "bytes": 17866,
+      "sha256": "ec89f3c8e20015915e0d874f408471259c72432b7b2122a1a98c6942443c57d3",
+      "reused_local": true
+    },
+    {
+      "path": "configs/cap48-moving-mse-u025-v2.json",
+      "bytes": 14978,
+      "sha256": "c497845b5dec623d6b2c229ef8be86e5a63122ac42183ba6c038b9db86c539b6",
+      "reused_local": true
+    },
+    {
+      "path": "configs/cap48-moving-mse-u025.json",
+      "bytes": 14969,
+      "sha256": "dbf6c9ac387478b255c60f0ef1b542f9cb1c337008e1d2cd7a2039b1a709254e",
+      "reused_local": true
+    },
+    {
+      "path": "configs/cap48-neutral-u025.json",
+      "bytes": 14580,
+      "sha256": "595789d78859246e04f4dbfd5f460e2c8cc7a3f7151a5bb5db4576374065072e",
+      "reused_local": true
+    },
+    {
+      "path": "configs/cap8-neutral-u025.json",
+      "bytes": 3326,
+      "sha256": "859615edea8bc38ac228cea9ce3160bef8a75a8cb469b77dfc99b6face8d1973",
+      "reused_local": true
+    },
+    {
+      "path": "configs/checkpoint-progress-diagnostic-plan.json",
+      "bytes": 794,
+      "sha256": "d2251723b1dee296cc17d5fe6218f583c824ffff6c23978951804b393a68eb11",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/confirm-1000012-G12-R20-r2.json",
+      "bytes": 1381,
+      "sha256": "aa11ebc5b2b16ab34784faf6fe74c86f1781ba8ff5b7693cabc20fd381dcccbf",
+      "reused_local": false
+    },
+    {
+      "path": "configs/evaluations/confirm-1000012-G12-R20-r3.json",
+      "bytes": 1381,
+      "sha256": "93ea51bd6577dbe73192a1d704eb50ae4f6142f474b8c60e1aeff3c803bf1559",
+      "reused_local": false
+    },
+    {
+      "path": "configs/evaluations/confirm-1000012-G12-R200-r2.json",
+      "bytes": 1387,
+      "sha256": "00cad29226b6cc9d68173ff3dfb7a1b044ea2d692d3f30a35f9f6e2e3524ce52",
+      "reused_local": false
+    },
+    {
+      "path": "configs/evaluations/confirm-1000012-G12-R200-r3.json",
+      "bytes": 1387,
+      "sha256": "b3f083aaec8bd60037893176312f8135e61f2cc12b36290870186409c218cf95",
+      "reused_local": false
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G12-R20-r1.json",
+      "bytes": 1388,
+      "sha256": "ae9b285a561e58a9135ce66d3ded503fc1cb40c0707882ef2e9b4c1ba20b5553",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G12-R20-r2.json",
+      "bytes": 1388,
+      "sha256": "ec41638eb678f744076727abb070a15d4bbf72696b60ea151487936ef299d319",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G12-R20-r3.json",
+      "bytes": 1388,
+      "sha256": "ab8dbe18eee60d9deaba1a73789cad22a5f5fbd4baec38a838e3b604a92b383a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G12-R50-r1.json",
+      "bytes": 1388,
+      "sha256": "46b0d27c73c1a4971644306767d5f9551e48a22e5c88f9f4e6f71a3ef20eb1d3",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G12-R50-r2.json",
+      "bytes": 1388,
+      "sha256": "582bec3e7a730305c46668039e808581e5fb6b286dd44375e9cfd7a5594def3a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G12-R50-r3.json",
+      "bytes": 1388,
+      "sha256": "bad3a9570bbd6b624aa88fdb4f7aa4e61a3a5b46221cd7c302d82f15de6c4fc0",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G24-R20-r1.json",
+      "bytes": 1388,
+      "sha256": "f5bc84b62058d1e02513065f08b6b3d42e0013f8470d623f00e1fbd3ba5e72ea",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G24-R20-r2.json",
+      "bytes": 1388,
+      "sha256": "692830837667f2408d0c2020ab76b72793d1ee0f535158b69710b71c53d54edc",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G24-R20-r3.json",
+      "bytes": 1388,
+      "sha256": "7da953434bbb8e06d0a09f7c025c675dd4ec706156beb8590a45c3602aff74f6",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G24-R50-r1.json",
+      "bytes": 1388,
+      "sha256": "d8d1dd85f99d533f4f5699337fbf1c6853a017c6513facc606bede847e55fc67",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G24-R50-r2.json",
+      "bytes": 1388,
+      "sha256": "8d1a6bed7027fcc986ee7605532c82a0ea46417e8a6d7f4a5a8914efff7aeb22",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G24-R50-r3.json",
+      "bytes": 1388,
+      "sha256": "627b2ba66dea88d4bd7af7199367f342be24c31942c54c19c0b8cbf4f3713a33",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G42-R20-r1.json",
+      "bytes": 1386,
+      "sha256": "213674a1f942fd65cc247f215dae73436160445904f58a265df850034c08bb23",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G42-R20-r2.json",
+      "bytes": 1386,
+      "sha256": "b648068db0ddde9a3d550cc767f77d494e4f34b23246bc569788831f1812a9c9",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G42-R20-r3.json",
+      "bytes": 1386,
+      "sha256": "ac8281b923b3f6500b5592893fc87eb4947134a3bcaae6b7db77de40cbdc6026",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G42-R50-r1.json",
+      "bytes": 1387,
+      "sha256": "1ee545d30f4e1af24fdb91ed58e8428c2b0a8f27a14605beafebb338d7bddb1a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G42-R50-r2.json",
+      "bytes": 1387,
+      "sha256": "9747f04b999c1074977ed5b02cb22bb412878bc1045ded76284f358a189c7e9e",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G42-R50-r3.json",
+      "bytes": 1387,
+      "sha256": "71052957f272620e5b68483bbc60fc4cfba0ea7acd23e46bea393e070eb85949",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G48-R20-r1.json",
+      "bytes": 1388,
+      "sha256": "b7c0d17ef6153bc87dfcdd5144b183c66a6eeff738aad3268e4c9fe57c23c2fd",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G48-R20-r2.json",
+      "bytes": 1388,
+      "sha256": "da44a35d3e514566889932c0d5a02e77864e57a18167cba7856b5cffc4701e69",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G48-R20-r3.json",
+      "bytes": 1388,
+      "sha256": "1f7581e8a800d8b81dc5b7b5a258e7b7ceb49fd611052f66b3436eca963eac84",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G48-R50-r1.json",
+      "bytes": 1390,
+      "sha256": "4664ffe7cdcfafd3b3aff922d01073040c013e44b80f0b5951dc1ef746f463f4",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G48-R50-r2.json",
+      "bytes": 1390,
+      "sha256": "ee34218317f596bc2616a6b3117c43ee4a3aa6223cab525b9a4d0810856f68ad",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-canopy-G48-R50-r3.json",
+      "bytes": 1390,
+      "sha256": "d5b54898ba620980e3191f41a7e57b18b02b8fcc27c09222d5966f89dfbecbb2",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G12-R20-r1.json",
+      "bytes": 1381,
+      "sha256": "b8121ae8f7c1c311253dffdc76d165c1bb2892ff34ce63bdbdaca972d9640298",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G12-R20-r2.json",
+      "bytes": 1381,
+      "sha256": "4b1c1e1e59efe511f9addba3bf35253975927844d42f8f8e08ffa3de0cc704fc",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G12-R20-r3.json",
+      "bytes": 1381,
+      "sha256": "f8c6d869dd721350cf06c0ec37f32c941b115ea9751613f79d42b773712d2077",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G12-R50-r1.json",
+      "bytes": 1381,
+      "sha256": "9a25e715ad54d71ce57af482bc50c28f4186b3303769832611b052862f872818",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G12-R50-r2.json",
+      "bytes": 1381,
+      "sha256": "cef47d0e4c05fffa9db56eaf98a6993d669d85096a4cec6db7b0dd893c5adfd6",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G12-R50-r3.json",
+      "bytes": 1381,
+      "sha256": "a4eccb5c0bc50c1f33295db2ed5250d78bf1ed019e477f4377e394d293180144",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G24-R20-r1.json",
+      "bytes": 1381,
+      "sha256": "390ab16d83ec87c17cf0f026519688eefa2b1bf55cf18a7e7217f8f6ca2a814f",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G24-R20-r2.json",
+      "bytes": 1381,
+      "sha256": "489591fd042862b99519c798037cb6f1a8750bde1d3e98190224a6cae6bbbeb9",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G24-R20-r3.json",
+      "bytes": 1381,
+      "sha256": "70d3b2aa5c04b1e43154a9b654e76708321f21c39d143f986dbb266c4aee2896",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G24-R50-r1.json",
+      "bytes": 1381,
+      "sha256": "b0b0d3aedd85814166c91ef786c6aa15a26dbaa28d44c39b3341ea2fab9e83dc",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G24-R50-r2.json",
+      "bytes": 1381,
+      "sha256": "c6cc5d9284b1d9b888bc0da57f323924bd7c0912a72892792c6e8d4706cfeb6d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G24-R50-r3.json",
+      "bytes": 1381,
+      "sha256": "d5d9aa4c4db985ab1047b9759f5d2056611a6ae39aa06efbac4c7426d41a0824",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G42-R20-r1.json",
+      "bytes": 1379,
+      "sha256": "dd96600f5b61d72db90fb580c9a59837e8a2bc7a656f5ca7c1b67e9a7516c68c",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G42-R20-r2.json",
+      "bytes": 1379,
+      "sha256": "3caa0a769280e3fb3aff07a5c92160d8504931d09315dc8978503654095082ad",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G42-R20-r3.json",
+      "bytes": 1379,
+      "sha256": "61052756c8ac60297ac79df046fc9242070ae420a732d6d275b6500d5b748ded",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G42-R50-r1.json",
+      "bytes": 1380,
+      "sha256": "a8502f8012fc795f084cc78cd6487addc3fb4a57ffdcfdf53858a1bc888fc317",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G42-R50-r2.json",
+      "bytes": 1380,
+      "sha256": "bbd819bf4f85e12537260f3e2b337792284f170d6b7152ef6f5d11834e599371",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G42-R50-r3.json",
+      "bytes": 1380,
+      "sha256": "f8ce36011736f60533db9c6337e9e4ceccb97ecdb8a47cfef11bacbc8bbe6d73",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G48-R20-r1.json",
+      "bytes": 1381,
+      "sha256": "ee6657a639e660c6459eda07ad8497af90d874d8726aaa1c5dfdce394144b230",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G48-R20-r2.json",
+      "bytes": 1381,
+      "sha256": "89f1615af4ad604060e33e31c930295e736af4db2ab5dc74b44f679083d7df0b",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G48-R20-r3.json",
+      "bytes": 1381,
+      "sha256": "b6443b022fa8222d5543e61128671af64a8ad0a6bd68d3a607e2c231c06bd02d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G48-R50-r1.json",
+      "bytes": 1383,
+      "sha256": "a0bc28425c01479500cff33ad1812cc96e46091de03f9688fe44d84b05c1ae06",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G48-R50-r2.json",
+      "bytes": 1383,
+      "sha256": "5d5acf25fc2b2b43bc4410c2b1c0bfeba511f1e4ecde3f94f16044192f2f5076",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-author-orca-G48-R50-r3.json",
+      "bytes": 1383,
+      "sha256": "69e84d62b3853d2621747c0e3b3261cc0aacf929a8e48eaa5db388f4f4910d18",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G12-R20-r1.json",
+      "bytes": 1386,
+      "sha256": "16017caee6eddfa54273cacc0a631897ac0aa876a119f0793206b83205bf1145",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G12-R20-r2.json",
+      "bytes": 1386,
+      "sha256": "7445cf91bc49894602ccf6f92500a03f5886f32a32cafc8442c8b0a8581fa6ca",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G12-R20-r3.json",
+      "bytes": 1386,
+      "sha256": "7065f8871520a1694c4e18f7c363d84693da352d38f27c4b866c076ab01705fa",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G12-R50-r1.json",
+      "bytes": 1386,
+      "sha256": "24ddd492eec03228e7d92f709b22dc4cfd197a5dbf99c03c4e570bc7baa60441",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G12-R50-r2.json",
+      "bytes": 1386,
+      "sha256": "42837fad4b22f8286a9162dcb2e56e7a40ad2baa6591d8c3750c02052826df37",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G12-R50-r3.json",
+      "bytes": 1386,
+      "sha256": "c140435fb92e326fd813bed7531eebedd330d8f0359bfac0aa83742465c1cc63",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G24-R20-r1.json",
+      "bytes": 1386,
+      "sha256": "d3e20b3bf690f65f520c22c997a79d4e0dba585378b5aba7c3faec0cd01ece3a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G24-R20-r2.json",
+      "bytes": 1386,
+      "sha256": "7f15dfa7cd48cb3f5769c5e82bf26b8e62c0bd00fbb5a510204b8627d5e59245",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G24-R20-r3.json",
+      "bytes": 1386,
+      "sha256": "2c6a1a94e1be161d447e9c2cc9364c3cfff9ab03d40f175bad4af1a66963fe82",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G24-R50-r1.json",
+      "bytes": 1386,
+      "sha256": "a17feff58f38a10d7256a01c5485b8166bb27ed68f279321756a31ce2bfe6dc2",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G24-R50-r2.json",
+      "bytes": 1386,
+      "sha256": "87a1d02660d3cb0af91c3f59ec69a9ef801c12b6d0c64f36d01ef47d8c64c0ca",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G24-R50-r3.json",
+      "bytes": 1386,
+      "sha256": "c75bb991bac0d01cdbd784dde72b2328f900fe65ec0d6e7efa6dc9a0477e2b6a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G42-R20-r1.json",
+      "bytes": 1384,
+      "sha256": "a9460a99d1b6722b7fc5f313d668de5723278aa14734ae3e165c19c89096d839",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G42-R20-r2.json",
+      "bytes": 1384,
+      "sha256": "ace26505f586e605f97bf5d3bb65dcb0cf90c0446e0a792602ba4bb7fe6481bf",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G42-R20-r3.json",
+      "bytes": 1384,
+      "sha256": "b7cd13cf1983853e49838452c7e991cf47c1d304e7833881961c8c7d0cf161c9",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G42-R50-r1.json",
+      "bytes": 1385,
+      "sha256": "63d45eae0e6b7c83d4884909b3d3c238c8f865d507c538ad0c65cedd570df0eb",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G42-R50-r2.json",
+      "bytes": 1385,
+      "sha256": "3efc20cb02c0fbbf6e62624095be95ff2c670780f17da0be8d8623364851502a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G42-R50-r3.json",
+      "bytes": 1385,
+      "sha256": "1d585fb204d7b9f9248296b54915f47f2c76fbd33b3be96cb8969cc7131a9630",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G48-R20-r1.json",
+      "bytes": 1386,
+      "sha256": "d94c7c1ef72661d46fbab19d732f31d46b0c521153b4bf3fa75cc60eaa6a80d3",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G48-R20-r2.json",
+      "bytes": 1386,
+      "sha256": "5de1c84c554c711a3d23f5eaf4132f13e05845c43aea94ab3f515296c2471057",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G48-R20-r3.json",
+      "bytes": 1386,
+      "sha256": "a97730bc08928b29111a7baab05f910d9dec6466105ffc793c600aa3af239468",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G48-R50-r1.json",
+      "bytes": 1388,
+      "sha256": "0c0d03d9a8e6cc092f9642b70016925eff9fe915f721cd66c6b3cd21789a1c11",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G48-R50-r2.json",
+      "bytes": 1388,
+      "sha256": "f10a687912e3cddde1a792c2cb2168d34b102ab556e11982cbb6e6eeed8023c2",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-cubic-G48-R50-r3.json",
+      "bytes": 1388,
+      "sha256": "77960a31ad0739f0335a5e72cf14520e45715e29911f05d0017ae04029235029",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-canopy-H30-R80-r1.json",
+      "bytes": 1406,
+      "sha256": "d6a01d91f5bacd148327873065d69ca95f5bb730923cc0595362c500f6a895d5",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-canopy-H30-R80-r2.json",
+      "bytes": 1406,
+      "sha256": "20245a5e800460c27b4e780902b48be9817da5074133ed7b1101d228b9f73400",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-canopy-H30-R80-r3.json",
+      "bytes": 1406,
+      "sha256": "5b0de468e52b936d20f8cc1cd4ffc9aea23de421df11ae87493d2687cdb18829",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-canopy-H96-R300-r1.json",
+      "bytes": 1411,
+      "sha256": "048c136412fd3f5872850d208f0e1523d01509ff1d93b782aecb94aabb7026ed",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-canopy-H96-R300-r2.json",
+      "bytes": 1411,
+      "sha256": "870a189a3a93d5f219685182b9bfd02793d530da77ef180aaed118eaa72474ac",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-canopy-H96-R300-r3.json",
+      "bytes": 1411,
+      "sha256": "76776e4e5e5f550d69e8cde3449a8098c99cfc3319e9183957194d010267f2b8",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-orca-H30-R80-r1.json",
+      "bytes": 1399,
+      "sha256": "85acd8cb6a8b87d41221369cd5b03ddfaf046e9279732141b72eeb9c3c215a1c",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-orca-H30-R80-r2.json",
+      "bytes": 1399,
+      "sha256": "7f4368216efe56908cf9f2d04efe466b704fa292c17f483860c18de53cfc58a2",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-orca-H30-R80-r3.json",
+      "bytes": 1399,
+      "sha256": "3a85e3eaccfe0705ed1c3f33525d7a7b563692aa7b3615acf603981e53407152",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-orca-H96-R300-r1.json",
+      "bytes": 1404,
+      "sha256": "bae2ab2cc6fa27fef82be3905eb016148d67f1f8255c20723a5b08c686eae44d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-orca-H96-R300-r2.json",
+      "bytes": 1404,
+      "sha256": "0b1d186c8b5614b3c90f48a63fd16ae7c368d348f9dfaff8ab00ea596a653f0d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-author-orca-H96-R300-r3.json",
+      "bytes": 1404,
+      "sha256": "8b42e1c160dfd93aca4105e515920af2e42bc6431c8a78ecfb6ce41ff65c194a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-trained-H30-R80-r1.json",
+      "bytes": 1544,
+      "sha256": "31a151c5acf7183f578c8572e2f23421ef0dd02ba4b53d00f542f95542cdfe19",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-trained-H30-R80-r2.json",
+      "bytes": 1544,
+      "sha256": "a225f50e5fb39b2482f0ae6db62d0f970efad2a2a0ac786b3293f92d25bc06f7",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-trained-H30-R80-r3.json",
+      "bytes": 1544,
+      "sha256": "8cd1989cfaf31ca2f5dc9911cfe851f2c762ac368397d00d1d3a3d04a14d2d1d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-trained-H96-R300-r1.json",
+      "bytes": 1549,
+      "sha256": "f442562783160c71d82246a82b6feae8477456233667ed18d0f3ca90f059e5c6",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-trained-H96-R300-r2.json",
+      "bytes": 1549,
+      "sha256": "1df9a687d77adb22b179051272b04e3d6ad862b7b0bc822035040df9e550e22f",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-heldout-trained-H96-R300-r3.json",
+      "bytes": 1549,
+      "sha256": "e7ea7b6ae2496a4be41c60748225183496c99be3e92dc53bdc8d20d61d43e6cc",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G12-R20-r1.json",
+      "bytes": 1388,
+      "sha256": "a7ba86150a058848225c056bdec70b3da0ebf1065015a4bb649399c130baff33",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G12-R20-r2.json",
+      "bytes": 1388,
+      "sha256": "23ee93c57c150734ce86112f40b98a88819aea0c03f3658cc9c2670f212d9d2f",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G12-R20-r3.json",
+      "bytes": 1388,
+      "sha256": "5d55093806316649cfac7542041c56b2ed90b3427d230f131552c154d14a9c6d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G12-R50-r1.json",
+      "bytes": 1388,
+      "sha256": "3358f986df1b1574fe8b6cbe4b941e0a1f8421e3d17aafddde283ae2b56c6a79",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G12-R50-r2.json",
+      "bytes": 1388,
+      "sha256": "71e91e4c19d2248cf6a2ac92daa4818cae4651bbe9ad74439801b8e766d0c75a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G12-R50-r3.json",
+      "bytes": 1388,
+      "sha256": "433265302b204d490d2465b75ca2bb4c4bb0e6158608c654367256470e004ad4",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G24-R20-r1.json",
+      "bytes": 1388,
+      "sha256": "0913581bc56955e524a5f3d278b9f16febd32790ec2354893c9e72b272b33641",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G24-R20-r2.json",
+      "bytes": 1388,
+      "sha256": "aed4f8cea50cd5d9d01880317cc459bbb2e48d99d6fbeadec48fb8ced93bead3",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G24-R20-r3.json",
+      "bytes": 1388,
+      "sha256": "75f10e8a0dde37de697f7ae8ec21d6153c35d0751d930c9fd49a65b7dea4e94d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G24-R50-r1.json",
+      "bytes": 1388,
+      "sha256": "4bd5c80be1492447d3e941ae493904fb6eac44e6d42d1adbdbbfcd8567db854d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G24-R50-r2.json",
+      "bytes": 1388,
+      "sha256": "2fa145df76fdbc110e4e18632457bc86b3415ccad0002e785f333a5a56099052",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G24-R50-r3.json",
+      "bytes": 1388,
+      "sha256": "cfde3dd269b888cc8987835a1601ba5d97f0d007420413507c4a253a6c9d880c",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G42-R20-r1.json",
+      "bytes": 1386,
+      "sha256": "d594f831b641247b494ad5df3125c6147dc3237850bceebec794337f0254b846",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G42-R20-r2.json",
+      "bytes": 1386,
+      "sha256": "c116d4e21ec79c608b43e8836e4f6a0d44e6a79b6c7ba7f919d63a2ec6c58c07",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G42-R20-r3.json",
+      "bytes": 1386,
+      "sha256": "c79ab78d030a47955f2447c4afa994a30988e5b02c3e7002de1c552f2ad47f62",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G42-R50-r1.json",
+      "bytes": 1387,
+      "sha256": "7b3ddb41b1bc4ed5b338e211b78bca4fe09711ac82506e29981ac8fdcb6b2e20",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G42-R50-r2.json",
+      "bytes": 1387,
+      "sha256": "2343fa8c9c5624e27ed934c115c9f663c17a39ae35bccd56f913f4a55560f655",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G42-R50-r3.json",
+      "bytes": 1387,
+      "sha256": "a56093229808ecf7020e79614c32cf6bb8eb5415cab42ce3e79ae542d9ea7427",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G48-R20-r1.json",
+      "bytes": 1388,
+      "sha256": "21cb515e11711c15cb67cd408f6ef08bc80a307c76bae276735c1bf9869df905",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G48-R20-r2.json",
+      "bytes": 1388,
+      "sha256": "de5b7e1b8e33f241a3473c77a0dee72864df20f27f3df65cb1f79bf91ad84a12",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G48-R20-r3.json",
+      "bytes": 1388,
+      "sha256": "88894aead380b97905d13a423f306b4347263e6d4d6229b22197e82848273fbe",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G48-R50-r1.json",
+      "bytes": 1390,
+      "sha256": "09ccbb83bacd0f6459521c15d6b135ad5cf42e0a72b222a32a49c797baee0863",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G48-R50-r2.json",
+      "bytes": 1390,
+      "sha256": "700fa26d889d582248d36d747674418cbdf224581dd625432b02c3e8667dead3",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-neutral-G48-R50-r3.json",
+      "bytes": 1390,
+      "sha256": "a0df50c5ca14d8078de84a02ce3be2437c00ea4ea0ad3c3214aa3fb0d03837b4",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G12-R20-r1.json",
+      "bytes": 1384,
+      "sha256": "5e75f4353d6bb7c0e37126f8fa88dfb88f79717c1c15ddd95ccb43ac2f7a68d7",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G12-R20-r2.json",
+      "bytes": 1384,
+      "sha256": "795eb6a7a7ade6a4eec02f1f55664fa7d25fc298c7d065dff99501ed5a86414b",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G12-R20-r3.json",
+      "bytes": 1384,
+      "sha256": "2b2527c89bcf94b8748f8ef77e8d78695ea689470923c8522d1fec5694586fa4",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G12-R50-r1.json",
+      "bytes": 1384,
+      "sha256": "5e1c562d3567bd402b9e353df59c9091f4bd976ace954213bd2aca72052fa06a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G12-R50-r2.json",
+      "bytes": 1384,
+      "sha256": "16457511382f17dfd1d81c864ab85aae9fb872bd9f313c6250a757a52d162190",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G12-R50-r3.json",
+      "bytes": 1384,
+      "sha256": "f57c1af0bee7249f244cac560c59f81e40b7db294d5533bea8ece8a18eec5fde",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G24-R20-r1.json",
+      "bytes": 1384,
+      "sha256": "eae6dc67294ad2060ee0c50eebb4df116140ead3f92ebedbf2d31701934d1ac2",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G24-R20-r2.json",
+      "bytes": 1384,
+      "sha256": "b71413e82aa12e0f4f42fb33fa5a18405e46fad1deb3be254b0548a0ec50a95e",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G24-R20-r3.json",
+      "bytes": 1384,
+      "sha256": "fb9b394b8e0d3d54b048d66543cd2d862e55fe9f2045081b52dabc68a218a412",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G24-R50-r1.json",
+      "bytes": 1384,
+      "sha256": "2056e7a3701ecd50fa0f876fe3a225b79ed5b6c5e4b9fb027c563468acc13c72",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G24-R50-r2.json",
+      "bytes": 1384,
+      "sha256": "d2fdd3972ba25812271306635b87a5f54b0ebd60e20feb67e6c9d453c1052fde",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G24-R50-r3.json",
+      "bytes": 1384,
+      "sha256": "334dba292b056f6f28738567d10783baa1c9ff9273e15cb27f105c898d83c399",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G42-R20-r1.json",
+      "bytes": 1382,
+      "sha256": "00fcaf7eff351d35188947351624b3ff1dbc2523c9c48c5d53a93ea6cb79790f",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G42-R20-r2.json",
+      "bytes": 1382,
+      "sha256": "5d92996fd4556b1d51b9ec47e1947c194b5e31ca81a6d2414a81384b2b3442cc",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G42-R20-r3.json",
+      "bytes": 1382,
+      "sha256": "45b41295dbf1ae863e2bc1636530366443ba6a27f5b2fa74e71009f9d852ec47",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G42-R50-r1.json",
+      "bytes": 1383,
+      "sha256": "8b18db99587508e541ac2442095c3458a562795a92d7c8972f0439fa51895eb3",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G42-R50-r2.json",
+      "bytes": 1383,
+      "sha256": "f8b66293d4318891eb88b9a877633793b045bb513361e2bd02aecb68fb101113",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G42-R50-r3.json",
+      "bytes": 1383,
+      "sha256": "9c9971d9df29e395c50d4c651db0eed3e06417a111bc99578f13892cc1990afd",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G48-R20-r1.json",
+      "bytes": 1384,
+      "sha256": "51732ac7b779b21d600348db40b2816ff067a475f55a68186cef96225fa5daeb",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G48-R20-r2.json",
+      "bytes": 1384,
+      "sha256": "cf22adad31e49b6d60d06c3a4f6a0e4c2b2a16eef74ae5b91b12bf6b6184b74a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G48-R20-r3.json",
+      "bytes": 1384,
+      "sha256": "fa791ebb4826b68a1ab25b01b9345f0fa4666d0623ec65e1684dba253b05219b",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G48-R50-r1.json",
+      "bytes": 1386,
+      "sha256": "4f96c78b1ca8c9f7010187e5c3c56427ab4ebd0039f93ac5eed290a3fb9ab7e8",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G48-R50-r2.json",
+      "bytes": 1386,
+      "sha256": "181a80930853e1d0519742bf8180e568e865299838f4e32c591ba91ebaa1a948",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-random-G48-R50-r3.json",
+      "bytes": 1386,
+      "sha256": "d59ea306a6a1a197720a6db46023c2f96d7c5368f89cab83188a76a732d69b7e",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G12-R100-r1.json",
+      "bytes": 1543,
+      "sha256": "92dd16874dbfd3314f5a65de601f556512fd6537878acc35daeb671eb686251f",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G12-R100-r2.json",
+      "bytes": 1543,
+      "sha256": "8ca27c2cecda4c3de45bd11a9ef7c84b21c90732d57b53df169e2976dbd7cc60",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G12-R100-r3.json",
+      "bytes": 1543,
+      "sha256": "4dcd5462c2199605c77011ce5da1aa4e1a90ab7fe4d28b462ab216847ef3dd18",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G12-R200-r1.json",
+      "bytes": 1546,
+      "sha256": "3eec526de2749656d7cd9e35a072de6b1e5f4a6b0f3ea33eba94684ee5ea2ecc",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G12-R200-r2.json",
+      "bytes": 1546,
+      "sha256": "815c4696efae6761e1e1ab836fc3735c506367ffdf50b091603c95bba3bcb29d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G12-R200-r3.json",
+      "bytes": 1546,
+      "sha256": "1690ec4b1d5bd78334c01ff4225ef4a06256da71840151a323212ad4dce0fc23",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G24-R100-r1.json",
+      "bytes": 1545,
+      "sha256": "a5cb2e58c655475691e71498e7e58efa75ba06bdd01d6d01076aca3562f9ff7d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G24-R100-r2.json",
+      "bytes": 1545,
+      "sha256": "b2eebe8dafa08cad31eab8abd42982ebe495d59b9c9818bf280577513a0d1cb4",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G24-R100-r3.json",
+      "bytes": 1545,
+      "sha256": "b270834a0366bee14251f1275ba3112659dd0f402d5c2b1dfe7d723f53ff1205",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G24-R200-r1.json",
+      "bytes": 1546,
+      "sha256": "001d2e9e442136da18176ca0869f5a1e508ff3a09c432e18f0450944c44e4c77",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G24-R200-r2.json",
+      "bytes": 1546,
+      "sha256": "62e55d24502fd7033ed6823b8306fef26b544225b364d840ce469ccf2cd1d07b",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G24-R200-r3.json",
+      "bytes": 1546,
+      "sha256": "c6eb3e9d26f3d8ae80dfd7163df097311de0db413a44457d4a8cc1d69f159d03",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R100-r1.json",
+      "bytes": 1546,
+      "sha256": "d1185d20874119986840c804076d943d8bb81f309b0b38adb32ac8f4441f4763",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R100-r2.json",
+      "bytes": 1546,
+      "sha256": "6fbdbcaf5941640dc9cc14075459b7424aa57e392a3916e4cb5e3cdc38f46188",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R100-r3.json",
+      "bytes": 1546,
+      "sha256": "6a71051da12fc7ebb43846865f34d87c91c55afc185ba8ddcc3a196a63658e9d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R20-r1.json",
+      "bytes": 1541,
+      "sha256": "d86390e3af5669d682ad34943f0f283abab1ca870d9007e0e7eb2283edd8e945",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R20-r2.json",
+      "bytes": 1541,
+      "sha256": "fefa84490a8952e4acad5b2877aedad25b690ee87d18cbe32b568da7ef798ca8",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R20-r3.json",
+      "bytes": 1541,
+      "sha256": "e66e964828d7ca587064a03d3b6da54d4016f854c7211bd8b5ce0aff8b4b3d1c",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R200-r1.json",
+      "bytes": 1547,
+      "sha256": "1b784f2663cf0a185d96e2cb275fec7b62675d21ec1d778edbba068ef9343177",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R200-r2.json",
+      "bytes": 1547,
+      "sha256": "eef5d0b4c92e3018b8872d39991df8700f7db06a841a1c781663e10bc8e8048c",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R200-r3.json",
+      "bytes": 1547,
+      "sha256": "6ae276c87f15da51b129d620584091b35ae58ed7f48be4074dbf30de8b88f05e",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R50-r1.json",
+      "bytes": 1542,
+      "sha256": "dc5e88eeb3f687a8ad1b5ccd1c3ab4cfeb6fcae080a74b176835203aec73dcab",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R50-r2.json",
+      "bytes": 1542,
+      "sha256": "491ae3e8ea38b5f4894ecf0952b20a109573dd805844624379a5ea4c732819f7",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G36-R50-r3.json",
+      "bytes": 1542,
+      "sha256": "ca112623332373f7724b45fae7f7dd0742acb4daa83ab4ab35c1014849303788",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G42-R100-r1.json",
+      "bytes": 1543,
+      "sha256": "23db87def90b7a7fce70e10d1398874028c0cc7d9f8c76609cb1010725b9f8d6",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G42-R100-r2.json",
+      "bytes": 1543,
+      "sha256": "c1a95a0333263dbbc0b6e3a282f05ef7c08981c15b8157be8b957a0885dd7113",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G42-R100-r3.json",
+      "bytes": 1543,
+      "sha256": "8638d146837573f0a391c0adb4380a439f5af8b9641f2e70e9d6585f0a4731ef",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G42-R200-r1.json",
+      "bytes": 1544,
+      "sha256": "37e387cae8e574f2ddfa37ab054e2b3b31b6550db9a4f9acc9fafabd3c672940",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G42-R200-r2.json",
+      "bytes": 1544,
+      "sha256": "2a5e504e51d65b667f0dc653e565c333f3d6a7ec4f2cfdd099f9caafa86ce950",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G42-R200-r3.json",
+      "bytes": 1544,
+      "sha256": "eb74fdcfe7d295dbb629b54f8081ea58a5c6b5ebc69a5dbc155267136efe5e8b",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G48-R100-r1.json",
+      "bytes": 1545,
+      "sha256": "ce537aa00597ec11694a8d1b958dd5dc388e46b2718dab3ac7e47249b9e8bede",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G48-R100-r2.json",
+      "bytes": 1545,
+      "sha256": "e5f9bbe4bab2bbf2745863a4edaae45690863d61bf14a5e1a580e8b2d1dda83d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G48-R100-r3.json",
+      "bytes": 1545,
+      "sha256": "52854bfcd49ae4ae09073f8be5ed8ba03e097dace355988582450491e7f01740",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G48-R200-r1.json",
+      "bytes": 1546,
+      "sha256": "fc5a44224f224b1c20ed867a3493262a0b132e6c926b1f86247714092ef558ad",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G48-R200-r2.json",
+      "bytes": 1546,
+      "sha256": "879f7a0793b11910f270093bfb5ac24a025067917e74db8bc49c9493af3d1fbe",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G48-R200-r3.json",
+      "bytes": 1546,
+      "sha256": "3e392edf377d904fc460fd44e08ee0e0996f569367c4670c7336e9c4b3cf13ef",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R100-r1.json",
+      "bytes": 1546,
+      "sha256": "005a0cf4f4a2c25fd1546b99427755f22f50cda3e94d452401391b6c1e921923",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R100-r2.json",
+      "bytes": 1546,
+      "sha256": "463ce2f7e46c91e321f501aea1b5b50b86b59dee1cac52a9c137c523eaa30e04",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R100-r3.json",
+      "bytes": 1546,
+      "sha256": "f43b06a34a9c7812369f9144ef1641013e1aa7ef0e788ce62a7ef33c1e23cc37",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R20-r1.json",
+      "bytes": 1541,
+      "sha256": "6b9723695b5c407d385b3423581f61ed65b432445a63cb9b0750924d0cfaee21",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R20-r2.json",
+      "bytes": 1541,
+      "sha256": "9988700b9f460cbf1daebddb6984981e98a801b3ccfd12e65a2294fba2c680cc",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R20-r3.json",
+      "bytes": 1541,
+      "sha256": "885a81ba25e7e71817723106554a5b3e0df3bcde2d102c3f8c34cd875314c1b3",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R200-r1.json",
+      "bytes": 1547,
+      "sha256": "1be5fce035fdacc936cb13fc66580b8a6e28aa3696a490ec4e209327b41d76ee",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R200-r2.json",
+      "bytes": 1547,
+      "sha256": "70a84663079b59f02345259777d304c76b1e8605a6b2af876aa8140054868eb4",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R200-r3.json",
+      "bytes": 1547,
+      "sha256": "b5c84a50aeda46c8af14d659a28205c9786e6c388f3f68da55460c662d68a8b9",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R50-r1.json",
+      "bytes": 1543,
+      "sha256": "16af492f216eb3e28397ee194c62cafb8553ae07fe49f17bc8a7d4a3dfeef65a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R50-r2.json",
+      "bytes": 1543,
+      "sha256": "cab22c415965e4ba9e92b17a93e8d53887dfb585d5b3f76f6bf7cf58601ee151",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-screen-trained-G72-R50-r3.json",
+      "bytes": 1543,
+      "sha256": "d045ef599dadf1706033ce688d6fd166ac617bfe95484c00039136aad7d82b36",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G12-R20-r1.json",
+      "bytes": 1526,
+      "sha256": "85177742448d4ad79ad179e41b5ed4a4e4cc79d62a9bc3b61bc7c60b1cea83ee",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G12-R20-r2.json",
+      "bytes": 1526,
+      "sha256": "f441f41dcdcd63a462a64a1e0d146dfc31056723db7d9c2ccbb2b8485e1d739e",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G12-R20-r3.json",
+      "bytes": 1526,
+      "sha256": "822beaf11c14e534e78c02a4a932807a700299b59abca788bd8b3c250547fe5b",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G12-R50-r1.json",
+      "bytes": 1526,
+      "sha256": "076af09faa6c2289736c5f5179cebcc606bff8a80a787a5999b31ed4f0f8e1f0",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G12-R50-r2.json",
+      "bytes": 1526,
+      "sha256": "72b86b383889fc0325ef9871a4a1b5c0746773537aa919b7c6016f61eefdbb7f",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G12-R50-r3.json",
+      "bytes": 1526,
+      "sha256": "f46f5aa4e9c9dae4b7c36f9f76ee56ef60490f5c3305687a244a0a829d2b10be",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G24-R20-r1.json",
+      "bytes": 1526,
+      "sha256": "b2b8a9616bc3bc63b962297a996661614d22bf17427cf360db6de007deb77424",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G24-R20-r2.json",
+      "bytes": 1526,
+      "sha256": "0474ee744b47debe130713040ba5c417491cb1590ab4e0db2c522a8437cc0e12",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G24-R20-r3.json",
+      "bytes": 1526,
+      "sha256": "f925c2187053b494ae51086af6926d12b8f1fad9a2dfa2e6d3903eb02e398f54",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G24-R50-r1.json",
+      "bytes": 1526,
+      "sha256": "48223dde46aeb5387e71a901bf975928f0f9992dbf066dd291c6d83e52f3df3c",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G24-R50-r2.json",
+      "bytes": 1526,
+      "sha256": "b68722b7a6cd9fdafcfd99f1f15ef4b0cc9a238d623997a4cc0b5ca8015e44c2",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G24-R50-r3.json",
+      "bytes": 1526,
+      "sha256": "5cc752a845f16b6cdab779f203ef8043e944de856d4dafbe54ccc74f72cc57e5",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G42-R20-r1.json",
+      "bytes": 1524,
+      "sha256": "cc19ce243ebfea9a150537603a0e3a2724c2c2578c7626c6285588b4f3f70053",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G42-R20-r2.json",
+      "bytes": 1524,
+      "sha256": "ff54693ff7876d518418179e8435f3a8e5080a8aa20b5542641cfd653064d461",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G42-R20-r3.json",
+      "bytes": 1524,
+      "sha256": "f334074634225512cf7210babad1591cc366c2b23c9f3edcee9e486cd9227f76",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G42-R50-r1.json",
+      "bytes": 1525,
+      "sha256": "88f77e082fc6df87a1920c8f8e5bb6861a80b09df845d03a4ff267541da1a2cd",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G42-R50-r2.json",
+      "bytes": 1525,
+      "sha256": "fc95ecd0b092e93028d60c078404fa591a2ed8cab08cbfead2b75ec6346a755d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G42-R50-r3.json",
+      "bytes": 1525,
+      "sha256": "2b7138250209037d4cc8cb06180c3be747c3ce9f9ee90c7ed71c357196bc736e",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G48-R20-r1.json",
+      "bytes": 1526,
+      "sha256": "9bdc0c112b0d9bf54d3ab45ca8e3f1549796b4a760a3cacc324933d6d1e7ff15",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G48-R20-r2.json",
+      "bytes": 1526,
+      "sha256": "0bebffa8c3c5ea7dfc062ab89af025b13a13c9a2db00359106c05b02a645e216",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G48-R20-r3.json",
+      "bytes": 1526,
+      "sha256": "46f6fcaa8f1bb6817fe51b9faad13d7066c483263a8717d1fca3886fccb66d80",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G48-R50-r1.json",
+      "bytes": 1528,
+      "sha256": "0c2dd5c5a4efa7fb74b478215b9eb99171a7d6860d29ca6c695716de3e074ae4",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G48-R50-r2.json",
+      "bytes": 1528,
+      "sha256": "01bb4b8d5ab8f158633857e32e6829e12b602189b2943fa56459e1b9c7bc1729",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/eval-trained-G48-R50-r3.json",
+      "bytes": 1528,
+      "sha256": "f4f6dff6d87ae860e8ff2f49192011670ebf91a52c43bbbd9ac9e513213b8214",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/progress-1000012-G12-R20-r1.json",
+      "bytes": 1382,
+      "sha256": "092da150444609f5c8f42b966bcca1cce1db53fbfd9edf711dc1a92665b1aa28",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/progress-1000012-G12-R200-r1.json",
+      "bytes": 1388,
+      "sha256": "8ba920543a7e090b1bbf5fbe2b013aefc19acb35d8da641115d1652fdbca4d27",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/progress-1000012-G24-R50-r1.json",
+      "bytes": 1382,
+      "sha256": "b1a6175bba562764f2331434d916338a17bee31c78057679b41e6845a3fe130b",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/progress-1000012-G48-R50-r1.json",
+      "bytes": 1384,
+      "sha256": "772e06055390a9fc59b94b50351ba7874a7cbe986b631d8ed8b4614ef9cf5de7",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/progress-2000002-G12-R20-r1.json",
+      "bytes": 1382,
+      "sha256": "dc856069bf0837ab639e47f65be6b13c83c621ed35b79ed0009447e0acace6f7",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/progress-2000002-G12-R200-r1.json",
+      "bytes": 1388,
+      "sha256": "76a353c5e9cebc33027dd4b2f0eb33cc8c0b8e67ee21c85776cfeab8061e631a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/progress-2000002-G24-R50-r1.json",
+      "bytes": 1382,
+      "sha256": "be03942360b9c6a26d0e8c8f2dce4267ef3f6eb2cf1e3ca1d604dacc4e07d9ff",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/progress-2000002-G48-R50-r1.json",
+      "bytes": 1384,
+      "sha256": "72d30336dc8f044686982756bb599a95ce1e38b7722e1e322b5c8711c7996b5c",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-cold-G42-R20-r1.json",
+      "bytes": 1196,
+      "sha256": "5a9386e1f4182b269c065733f9df65121ecba02ad7cc17de75c1bf55b5083531",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-cold-G42-R20-r2.json",
+      "bytes": 1196,
+      "sha256": "e68f12bbec67cb0b927d9b1aa2d1cfc300450b1e04d7a140e18255dc7e8b976b",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-cold-G42-R20-r3.json",
+      "bytes": 1196,
+      "sha256": "e6c468c243c2ab3ecc961adb39ea362b85de94d13ac94e386225e38a08d4259b",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-cold-G48-R20-r1.json",
+      "bytes": 1198,
+      "sha256": "a80d0df7fc26f1bd59381443db4065c22b353a16523bb7dfe613cd4591e9b8c7",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-cold-G48-R20-r2.json",
+      "bytes": 1198,
+      "sha256": "ce8ac353a8f3e8cfc28b9e0c1ddf4c0c7bdb55816956205f252a53cfab0d8da9",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-cold-G48-R20-r3.json",
+      "bytes": 1198,
+      "sha256": "e24c9db566e14cd3a5772914445c177ac314e36da466e5b25b98eda347ba7538",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-neutral10-G42-R20-r1.json",
+      "bytes": 1207,
+      "sha256": "ee12759272b803f5755a28eeabac11d7f401e88e0d7b99068584de7513f5c463",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-neutral10-G42-R20-r2.json",
+      "bytes": 1207,
+      "sha256": "e6339822b699350dc22502d944e4b200db1392b7e96f6d300b2a8af55ad15145",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-neutral10-G42-R20-r3.json",
+      "bytes": 1207,
+      "sha256": "023c63fc07ea05772cb842a4d411948d9825fa8ad5d8c9f5dccbb85fce265115",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-neutral10-G48-R20-r1.json",
+      "bytes": 1209,
+      "sha256": "84385a91d454bc62857be02e6abd8ad3439c7b5ad38520806a9c126dbf27a7f3",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-neutral10-G48-R20-r2.json",
+      "bytes": 1209,
+      "sha256": "fe9956077fffcd227ccfd4cc0b25c6ac21be470d675787db289a41f4466fcfee",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-neutral10-G48-R20-r3.json",
+      "bytes": 1209,
+      "sha256": "12aeff6348d1b55a7132d69b6a94ef3bfacea3446559ae165c152fa56d4227a1",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-new-G12-R200-neutral10-r1.json",
+      "bytes": 1562,
+      "sha256": "da8cbcd1f7a2e106f3b0418a0312688af41e091d02d610fd88d8d3e3ad7985a1",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-new-G12-R200-neutral10-r2.json",
+      "bytes": 1562,
+      "sha256": "06d9a08c4239327d107d51df803a067c096ff967ef51117b6db999742ca68ec9",
+      "reused_local": true
+    },
+    {
+      "path": "configs/evaluations/startup-new-G12-R200-neutral10-r3.json",
+      "bytes": 1562,
+      "sha256": "17c6db13d0918728699ca24adb57e7f1194531e15d6e7460fb38b1e220da9b73",
+      "reused_local": true
+    },
+    {
+      "path": "configs/expanded-grid.json",
+      "bytes": 3159,
+      "sha256": "a695aa06d8327b72d2f44b8d611333ff8f8f8e56f3eaee9aed993704106cbbd1",
+      "reused_local": true
+    },
+    {
+      "path": "configs/formal-frozen.json",
+      "bytes": 9824,
+      "sha256": "7517a422086712bdc4dbb0e355d863f01e433b6be42e7e8beb7fd1764ea34da5",
+      "reused_local": true
+    },
+    {
+      "path": "configs/formal24-grid24-seed3-balanced-u010.json",
+      "bytes": 9895,
+      "sha256": "04e68f2ca8ae31fc611906b2ae3b492fc0376e607ca76511bfc6c18b28faadb1",
+      "reused_local": true
+    },
+    {
+      "path": "configs/formal24-grid24-seed3-mse-u010.json",
+      "bytes": 9824,
+      "sha256": "7517a422086712bdc4dbb0e355d863f01e433b6be42e7e8beb7fd1764ea34da5",
+      "reused_local": true
+    },
+    {
+      "path": "configs/formal48-grid48-seed3-u003.json",
+      "bytes": 17878,
+      "sha256": "0369c6c67218cc2dcdf4bb232e209a61b8f2d73f03f8b965043b754bc3b6b6a1",
+      "reused_local": true
+    },
+    {
+      "path": "configs/frozen-evaluation-plan.json",
+      "bytes": 12397,
+      "sha256": "261181e175b59a69fb75d12aeaaaece2850f3adabcc593a71009c12a34d089a2",
+      "reused_local": true
+    },
+    {
+      "path": "configs/grid48.json",
+      "bytes": 18920,
+      "sha256": "6cee350904747d0fc36086d0a7f69de8444b8627741b585989eac1d8ba279c03",
+      "reused_local": true
+    },
+    {
+      "path": "configs/heldout.json",
+      "bytes": 793,
+      "sha256": "fba653cd8704f0aac9c1b41911b37a0c46d0e92ad7f0a7668f908928e5e4c06c",
+      "reused_local": true
+    },
+    {
+      "path": "configs/heldout48.json",
+      "bytes": 793,
+      "sha256": "13ae1ff41867e6c936b61165249b7b8a67c559fe3917dbca6226bc939b89952c",
+      "reused_local": true
+    },
+    {
+      "path": "configs/intermediate-weak-confirmation-plan.json",
+      "bytes": 393,
+      "sha256": "561410ca57668cb3c2ce98235a08ddcb246450856cde0b24bbaa43c11037e926",
+      "reused_local": false
+    },
+    {
+      "path": "configs/reduced-grid24.json",
+      "bytes": 8218,
+      "sha256": "9ebd1abd27f94e4bc36c18052c3cea62b45674ef1b9dd8dd5c2373ccbfee056d",
+      "reused_local": true
+    },
+    {
+      "path": "configs/repair-heldout.json",
+      "bytes": 688,
+      "sha256": "ac36c389f5e548fae750c6f65ec80fa1bcfd8e440428bf0a124740a00716d5e2",
+      "reused_local": true
+    },
+    {
+      "path": "configs/repair-protocol.json",
+      "bytes": 10922,
+      "sha256": "3171dcbbf1412d3637e61c5dacb3759450d958df0ab477af4044e2fbe40cae4c",
+      "reused_local": true
+    },
+    {
+      "path": "configs/startup-diagnostic-plan.json",
+      "bytes": 1107,
+      "sha256": "3b356ec467730986e2063f69ce11ed946191456e8e80be7ab4b569de93cabecf",
+      "reused_local": true
+    },
+    {
+      "path": "configs/trace-generation.json",
+      "bytes": 4671,
+      "sha256": "9e635b7e72532bbe3c4a60c031b4cb59983584b54ccc0888f747e7bed02fa3a6",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/bump500_24_12",
+      "bytes": 166288,
+      "sha256": "6bfb0d7c7de008f4b5a80b5d3f68bdd66fcbddc6be975fb413a6add75e3a774b",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant12",
+      "bytes": 3883,
+      "sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant18",
+      "bytes": 5825,
+      "sha256": "1f69797be7f9e4701564472b8d249ea6d529292db5edc55e9cf450ba70228fa5",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant192",
+      "bytes": 62122,
+      "sha256": "658171c7d2247ba0907d62786e446553a163674f463af8c832b92338abb67a68",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant24",
+      "bytes": 7764,
+      "sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant27",
+      "bytes": 8737,
+      "sha256": "34bb4d164a4355db3502aed28cc5437d91b671bb8f8c5ab73aaf7109d0be8e21",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant30",
+      "bytes": 9707,
+      "sha256": "a2b9f00a0946febbbe68d6ddee02c74e0e8bf584a2bdb0f5306623d48cfe9697",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant36",
+      "bytes": 11649,
+      "sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant42",
+      "bytes": 13588,
+      "sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant45",
+      "bytes": 14561,
+      "sha256": "108dcc3bd392977cc8894571dce9825aa5743f3a925f5c68e00fa72752046c8f",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant48",
+      "bytes": 15531,
+      "sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant54",
+      "bytes": 17473,
+      "sha256": "8be13a29ef423fa404e06d01f44e4d67d28054236d1225a2420977f342873024",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant72",
+      "bytes": 23297,
+      "sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/constant96",
+      "bytes": 31060,
+      "sha256": "f449ce1e7f980201355e48b29914e651ce3400c953af5ebe1662f41c52a20cd5",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/heldout36-long",
+      "bytes": 11649,
+      "sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "reused_local": true
+    },
+    {
+      "path": "configs/traces/sawtooth500_24_12",
+      "bytes": 141506,
+      "sha256": "68671cf886eb071bce5708bb72c7294e30f1c26a50b637ad8ecadc1bc3548a59",
+      "reused_local": true
+    },
+    {
+      "path": "confirm_intermediate_weak.py",
+      "bytes": 3184,
+      "sha256": "74d976543e363d3f5b5e0f345c0702001da926e7631a4a5cdbb44801d5d5bf00",
+      "reused_local": true
+    },
+    {
+      "path": "consistent_target_bn.py",
+      "bytes": 1727,
+      "sha256": "ac64991d4bb40c10afff580b5c8140ec1e6587c9eb64344e8a37b3b5b00380a5",
+      "reused_local": true
+    },
+    {
+      "path": "deployment_diagnostic.py",
+      "bytes": 4178,
+      "sha256": "46c38787fd18fa0f681f0b4a2702bd2269828786c7ae1dba80aaa80e408a14fc",
+      "reused_local": true
+    },
+    {
+      "path": "diagnose_checkpoint_progress.py",
+      "bytes": 7046,
+      "sha256": "733c9020dd59f325d1fc5594f359c0df1787a51fa30cc404c03f6067bde72785",
+      "reused_local": true
+    },
+    {
+      "path": "diagnose_frozen_dynamics.py",
+      "bytes": 2594,
+      "sha256": "d25c02f167119bb76adf09f59ead00825db6416278d22b1dcb42b41b487e8d13",
+      "reused_local": true
+    },
+    {
+      "path": "diagnose_policy_numpy.py",
+      "bytes": 4144,
+      "sha256": "b1fd646e8aadd268a9db946aeff0e4cf0551021a25c5aae4bd36fc6eb1ddb4d8",
+      "reused_local": true
+    },
+    {
+      "path": "diagnose_sampling.py",
+      "bytes": 3588,
+      "sha256": "afd6f5357c1f4b17538b6dea7bc7ef6e86964916209735242028f5a647144c9b",
+      "reused_local": true
+    },
+    {
+      "path": "diagnose_startup.py",
+      "bytes": 2773,
+      "sha256": "c728cf2db3135d1d262f4c2d3a148c8d80ab370589409ff13f87c08323999819",
+      "reused_local": true
+    },
+    {
+      "path": "distributed.py",
+      "bytes": 18829,
+      "sha256": "373321a7b9c310e810c21392f552009b4aefa27e2e14d2ed92f16ece5eb5bf34",
+      "reused_local": true
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 13835,
+      "sha256": "1d9c522fb162115018dca8b780951df22797be1c7857be7ddbfd9e6955b1e234",
+      "reused_local": true
+    },
+    {
+      "path": "evaluate_cluster.py",
+      "bytes": 5803,
+      "sha256": "a4d4928f7c732e935fcdba701ef4b9998102227a269da21e9f973d39e9daba58",
+      "reused_local": true
+    },
+    {
+      "path": "evaluate_repair.py",
+      "bytes": 7460,
+      "sha256": "018e77e4c96a54998930f64c442491b7217f8e8e357e14afae2d6abd4b1ceeae",
+      "reused_local": true
+    },
+    {
+      "path": "finalize_experiment.py",
+      "bytes": 5068,
+      "sha256": "711f554fd6343a3af2d746544f69d2e4789a5bd6537977bd3df39b2637ac69b9",
+      "reused_local": true
+    },
+    {
+      "path": "finalize_repair_evidence.py",
+      "bytes": 2140,
+      "sha256": "9bb3848476b19bf5f5b6992cc07ff478ee6a19bf2c01b23e460c9d9c115a426b",
+      "reused_local": true
+    },
+    {
+      "path": "finalize_repair_round.py",
+      "bytes": 2604,
+      "sha256": "724e064c5ff618b48af7cca86d5299dec19df319eced7cf6727327765e10a535",
+      "reused_local": true
+    },
+    {
+      "path": "finish_pause_drain.py",
+      "bytes": 2715,
+      "sha256": "31dec9e983c0f645d0c55889cbae41cfdc01f920dac55457ddcf54a2a9fbc74d",
+      "reused_local": true
+    },
+    {
+      "path": "formal_after_gate.py",
+      "bytes": 1237,
+      "sha256": "3ef6005267d75d13c79dea00db5c4e22e5ac0ea92606e57079da731080d42969",
+      "reused_local": true
+    },
+    {
+      "path": "frozen_evaluate.py",
+      "bytes": 435,
+      "sha256": "927c92be944ae93f8325e0f2424e13d1116e6df69f418b18275a009eef1e943b",
+      "reused_local": true
+    },
+    {
+      "path": "frozen_rpc_server.py",
+      "bytes": 1024,
+      "sha256": "0faf0c05a3eb6b845be3fafa96f8334237966454cda16c85f7322d5e6beeb055",
+      "reused_local": true
+    },
+    {
+      "path": "inspect_evaluations.py",
+      "bytes": 1688,
+      "sha256": "3b67bc9420da14981f9342a8c7d5abf5dced0f464b8d97d0d0e646543ec5c81f",
+      "reused_local": true
+    },
+    {
+      "path": "inspect_progress.py",
+      "bytes": 1361,
+      "sha256": "1b18f9924ae539c6b80e4d546bdfdee9e21418eb124a4a7b0d5dea9b1110c5b0",
+      "reused_local": true
+    },
+    {
+      "path": "inspect_repair_progress.py",
+      "bytes": 1245,
+      "sha256": "fd73f929c5a27e2d8bcd71213f7e2521e3d9be683e129958285e6dc7352bd59d",
+      "reused_local": true
+    },
+    {
+      "path": "log_shutdown_probe.py",
+      "bytes": 1567,
+      "sha256": "b43d7a602cefc5a528b3674c90eb00ef3c2f04de1ed7d2f2311ca37ba91c4e7c",
+      "reused_local": true
+    },
+    {
+      "path": "mahimahi_metrics.py",
+      "bytes": 2899,
+      "sha256": "b0dc674cf6e33a70f53971ff89542f384a8ea26c8c562b1453e5dccf7159aa80",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/action-histograms.json",
+      "bytes": 41652,
+      "sha256": "16e43f81d623da1a9c818d58ad6fe42ad0f699ab6b25994456aac622df7a3eea",
+      "reused_local": false
+    },
+    {
+      "path": "metrics/actor_coverage.csv",
+      "bytes": 3094,
+      "sha256": "a883983c4deef6d1c6dea3db6fb7e2a154b3193cc8da0c8f31667d6cdf409ce1",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/author-proximity.json",
+      "bytes": 1638,
+      "sha256": "467abf2c488fe0ba7637e075fa873cc3f00b265f3ad2e54cc29e454bb4ec65dc",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/cap24-grid24-balanced-u010-actors.json",
+      "bytes": 50134,
+      "sha256": "8353bcb08442c7f0e5cdc07012189fb55597ef9c6224de6f374cfe9d3435c6ee",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/cap24-grid24-balanced-u010-capacity.json",
+      "bytes": 1442,
+      "sha256": "d029e636015af054c0ea90d558ca7e8b9fbd7281bf9b0c13af510f4dff77790a",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/cap24-grid24-balanced-u010-cluster-result.json",
+      "bytes": 4983,
+      "sha256": "43207ada0980a9356eb0c9a735c45a46ce9ebaca2b990aa301a773ca5cd964bf",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/cap24-grid24-moving-mse-u010-v2-actors.json",
+      "bytes": 50370,
+      "sha256": "cd753686b5d7f4500cc54b5d91b18e473e1bb38aef8e7ed1a7e6cd753670fb02",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/cap24-grid24-moving-mse-u010-v2-capacity.json",
+      "bytes": 1468,
+      "sha256": "e9414d9a89a4059440cfbd133099dd1d4397b242e8f697bb324a2b0a6714c06f",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/cap24-grid24-moving-mse-u010-v2-cluster-result.json",
+      "bytes": 4987,
+      "sha256": "509f821c3bdbe9309fe8f54677c7c9d06be7ede01168e5f3e39fbd077e56678b",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/cap48-moving-mse-u025-cluster-result.json",
+      "bytes": 257,
+      "sha256": "9fbc0cc0500b78f01d2c7018e0baa8a256869a7e4897328d56a3085618d4bb2f",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/cap48-moving-mse-u025-v2-actors.json",
+      "bytes": 97240,
+      "sha256": "ee287e40988231a94d25b603a1d7de8975f38bc1404af32739a42baf7c48be1e",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/cap48-moving-mse-u025-v2-capacity.json",
+      "bytes": 1487,
+      "sha256": "96c1db7a85ff3a64a95aae312a5b2eb4216a2d411e2ee0269279cd0efd33a9b2",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/cap48-moving-mse-u025-v2-cluster-result.json",
+      "bytes": 9515,
+      "sha256": "88ce7f5bce9837c3c33a771de83ebb75cb4a63298ebab57c7b70f973b540c5d6",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/checkpoint_progress_runs.csv",
+      "bytes": 12877,
+      "sha256": "749eaa065211fb72ba3da183dd5000cb4083822b1b2a40525dea8cfb9ca6fb48",
+      "reused_local": false
+    },
+    {
+      "path": "metrics/checkpoint_progress_summary.csv",
+      "bytes": 732,
+      "sha256": "dd39a4738e4e600af1bbb0d297bc950fae6d87df16e43fbfe95c3f9ae894e90c",
+      "reused_local": false
+    },
+    {
+      "path": "metrics/evaluation_runs.csv",
+      "bytes": 203098,
+      "sha256": "1322e4307ef7ddf6e4ced9436fcf5acee162a66be8b55021532542cd33f3ab12",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/evaluation_summary.csv",
+      "bytes": 120312,
+      "sha256": "91a261d083d23d2dcd983d331916aadadc7a151559f830006623b7f59e06dbf7",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/formal24-grid24-seed3-balanced-u010-actors.json",
+      "bytes": 51755,
+      "sha256": "827318bf8e1441ce042fe023c8a79d987910a743a21bd384d51ce73477c7ccc1",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/formal24-grid24-seed3-balanced-u010-cluster-result.json",
+      "bytes": 5186,
+      "sha256": "4ef1fa87b9607a64d7fa5beb3b861bbc5b4020447c93e15f27a2bd92c4fa3416",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/formal24-grid24-seed3-mse-u010-actors.json",
+      "bytes": 51424,
+      "sha256": "c7834ace42bcbcc60ad8217ae0130c417be4200df7a66564f88d9a0c20a24323",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/formal24-grid24-seed3-mse-u010-cluster-result.json",
+      "bytes": 5330,
+      "sha256": "7458329e4391f620c17cbe43cf1bb3b0e69b4c8c3a99680cdb0352911a8bb0c8",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/frozen_dynamics.csv",
+      "bytes": 225108,
+      "sha256": "5f4807cdeb04e8da048bda30ca9d512e3a534e7e46c296984d0a547a05899006",
+      "reused_local": false
+    },
+    {
+      "path": "metrics/network_training_metrics.csv",
+      "bytes": 301224,
+      "sha256": "41a161d19f0cd042e09d36f36c1dfca0e237df52710a24593e789e2ae20d7bdd",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/new_startup_runs.csv",
+      "bytes": 3871,
+      "sha256": "e9b6bf60ad1492417f48e9d0fbff67442f7b9483d1ccb2740bc52bea92ca4f3e",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/optimizer_stage_summary.csv",
+      "bytes": 857,
+      "sha256": "e11f5812b5196c278da93a1d7c90558f3406d3daa2e4e43b5b5f19cae7b053d9",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/process_resource_metrics.csv",
+      "bytes": 4014309,
+      "sha256": "96975456ff0117eb63a6fe0af0bb7ee88df7c01425164ea0e23181b699274374",
+      "reused_local": false
+    },
+    {
+      "path": "metrics/replay_coverage.json",
+      "bytes": 766,
+      "sha256": "43cff90fbc2106443a79256448515a35f737cd360ec05f34e820e79d69a1cef4",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/resource_metrics.csv",
+      "bytes": 463719,
+      "sha256": "0c79a38e641f8ebe68d00df2e197f4398e18d5d4fd88357508534001b99434bf",
+      "reused_local": false
+    },
+    {
+      "path": "metrics/startup_diagnostic_runs.csv",
+      "bytes": 12770,
+      "sha256": "f1caafbb74fd06e6ab125e3b39299d011c18e599ca6d483b2ceb057f74afafb4",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/training_metrics.csv",
+      "bytes": 116387,
+      "sha256": "e94932659d8ba4e85095de5ca093c7974b0d61872cdc43d174b6356609d89305",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/training_timeline.csv",
+      "bytes": 145789,
+      "sha256": "d8f1f423da538f5241e5e5966a4b66f41269f24b2feacbb8e874c717a15147fb",
+      "reused_local": true
+    },
+    {
+      "path": "metrics/warmup_diversity.csv",
+      "bytes": 5697,
+      "sha256": "c85e0305d2ebe31156d20a92af340fb07f6a05c552664a747366f6132bacf6a3",
+      "reused_local": true
+    },
+    {
+      "path": "moving_stats_backend.py",
+      "bytes": 1823,
+      "sha256": "8134cbf68d0eb2eacbbed5c065817f998a7c7ccac6779c358c72af7fdefff952",
+      "reused_local": true
+    },
+    {
+      "path": "network_watch.py",
+      "bytes": 2770,
+      "sha256": "0c5f5d690539714992f79b38fe3e989619745c9a94f7937daf8cbf591c7d2f5c",
+      "reused_local": true
+    },
+    {
+      "path": "node_control.py",
+      "bytes": 10929,
+      "sha256": "fbd0eebb1d3e102dc1b1462b7e25b1591ba7b42b2702ac056f669770d5db5fff",
+      "reused_local": true
+    },
+    {
+      "path": "package_pause.py",
+      "bytes": 4164,
+      "sha256": "6aa27943c23a8d9c83b1e41ecad18628c351717b853670331574cb4480838516",
+      "reused_local": true
+    },
+    {
+      "path": "package_repair_delivery.py",
+      "bytes": 2639,
+      "sha256": "b54c37a214fc71b878a60dcef8c1962e7e8df31d03c7d3f4ea51bf37e0f52f8c",
+      "reused_local": true
+    },
+    {
+      "path": "package_resumed.py",
+      "bytes": 1833,
+      "sha256": "faac1bda62e5e7a5b4336290a30bd8b258776a0af2b32fb4ac4be401d70a483c",
+      "reused_local": true
+    },
+    {
+      "path": "pause_cluster.py",
+      "bytes": 3226,
+      "sha256": "a1f5bef6163763f5b9ad40237f9d4f3a08394a4bf0d58fe9b01b35b9ee3069cf",
+      "reused_local": true
+    },
+    {
+      "path": "plots/action_distribution.png",
+      "bytes": 33108,
+      "sha256": "0f837ba93c551f01819904aeb7be1445ea0512c56dd82ca4eb879f3008b28f7f",
+      "reused_local": true
+    },
+    {
+      "path": "plots/checkpoint_progress.png",
+      "bytes": 83213,
+      "sha256": "09974506e1e7e1b7e50ae164c8749eb50dd85358e9b7f37ecee3fdf7cb650122",
+      "reused_local": false
+    },
+    {
+      "path": "plots/condition_coverage.png",
+      "bytes": 67195,
+      "sha256": "138304018783a54d5a1a6d7f3e1ce4840ba412918f5e72f3eabe5683367622b8",
+      "reused_local": true
+    },
+    {
+      "path": "plots/learning_curve.png",
+      "bytes": 117456,
+      "sha256": "eff31910a1d6a52800db7eacaac2f617cf966e74ea8834da30ef86f7af7debfa",
+      "reused_local": true
+    },
+    {
+      "path": "plots/throughput_delay_comparison.png",
+      "bytes": 62276,
+      "sha256": "040a4a619d0855c5c322d101fc148e85a1f0f56810c1743a61b4062be6941f04",
+      "reused_local": true
+    },
+    {
+      "path": "plots/training_physical_utilization.png",
+      "bytes": 85087,
+      "sha256": "eb53f688116c8b92031a9fdfaeb4c2e88d42e481ac22e1760efa6a84d6012aaf",
+      "reused_local": true
+    },
+    {
+      "path": "post_confirmation_delivery.py",
+      "bytes": 1897,
+      "sha256": "1e8c2c455395fddc4e8def211c83f980d609a3b34b4b0629c28f0e00b06b5178",
+      "reused_local": true
+    },
+    {
+      "path": "postprocess_node.py",
+      "bytes": 1114,
+      "sha256": "932d516b3ff20a9580ac2554664d9cf3435bfab2751d6480040e3ab9c3e817d7",
+      "reused_local": true
+    },
+    {
+      "path": "postprocess_weak_conditions.py",
+      "bytes": 2039,
+      "sha256": "e2f866feb46398f38a8f59721c69e6467f5d075407f27e7a6ebcb99aaa86fc19",
+      "reused_local": true
+    },
+    {
+      "path": "prepare_expanded.py",
+      "bytes": 2311,
+      "sha256": "82ba693c1bcbacfe217fd2184f5cb216a496710aa8dd54f349fe699cd8dd309c",
+      "reused_local": true
+    },
+    {
+      "path": "prepare_resumed_evaluation.py",
+      "bytes": 1409,
+      "sha256": "79e0fbe7bf6b06a5157dcace17f0c1b3e0de57f303c7160f919ff7678c84bccd",
+      "reused_local": true
+    },
+    {
+      "path": "remote_frozen_evaluate.py",
+      "bytes": 1396,
+      "sha256": "ae3cd0adfeec03f81b7718b82c2fe1eee6f849e8fc07d331be10656230d4bab4",
+      "reused_local": true
+    },
+    {
+      "path": "repair_bootstrap_layout.py",
+      "bytes": 1183,
+      "sha256": "ae2438cffd90c07caa32762f0604f803baa19f5900de97628947a7427dbaee0e",
+      "reused_local": true
+    },
+    {
+      "path": "repair_evaluate.py",
+      "bytes": 832,
+      "sha256": "eeadbcbac1c7dfce152c86ae7af1a8bdfed9fe0d62a2a32f4bec546a2b8b9311",
+      "reused_local": true
+    },
+    {
+      "path": "repair_phase.py",
+      "bytes": 5989,
+      "sha256": "257a4e5c0db861386c1b5b6fa4d1740d16e4ad552e37edb6c0d27a29811c5e80",
+      "reused_local": true
+    },
+    {
+      "path": "report/canopy-source.patch",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reused_local": true
+    },
+    {
+      "path": "report/checkpoint-progress-manifest.json",
+      "bytes": 41680,
+      "sha256": "e9968a1e367f4ae25fa3e3224b8b675169d9870a8f77da8f8f87de8607a4f5eb",
+      "reused_local": false
+    },
+    {
+      "path": "report/control-log-safe.patch",
+      "bytes": 3405,
+      "sha256": "572ac9216e6c81174608370f59dfca7471ace72e30d78727cfdf71366101ccfc",
+      "reused_local": true
+    },
+    {
+      "path": "report/evaluation-manifest.json",
+      "bytes": 729206,
+      "sha256": "93e470c158bf2fb76b5701d7bfbdc372bc1974be0913d9a28e18821eed8bb76e",
+      "reused_local": true
+    },
+    {
+      "path": "report/new-startup-manifest.json",
+      "bytes": 11494,
+      "sha256": "3c970fc8faead4cf06173a2be24bdf4c2e2a1d79498bb6c75b560c35e0b88668",
+      "reused_local": true
+    },
+    {
+      "path": "report/pause_summary.md",
+      "bytes": 1944,
+      "sha256": "e4450233f0463cddace3e672705d009fc487d06ca10c62a452e7122f4216bd7c",
+      "reused_local": true
+    },
+    {
+      "path": "report/repair-code.bundle",
+      "bytes": 2046160,
+      "sha256": "9466d43cf0f1abc6f95b5196bf4ff79ff28695c3a915e81acf3386f99574f878",
+      "reused_local": false
+    },
+    {
+      "path": "report/repair-code.patch",
+      "bytes": 153524,
+      "sha256": "75dedf8104f825a99cf3855574be0c0148214943d2d2a0bbb86435f37a144cd6",
+      "reused_local": false
+    },
+    {
+      "path": "report/reproduce.md",
+      "bytes": 10348,
+      "sha256": "25c188d74d1aabcf6d5003c913861e960b54f5285649223de19294b997dba9ec",
+      "reused_local": true
+    },
+    {
+      "path": "report/result-status.json",
+      "bytes": 531,
+      "sha256": "7eff018515d9bbafacb8f90f4127187a6588ce9c81bf6f01f858160cd914dee5",
+      "reused_local": true
+    },
+    {
+      "path": "report/resumed_findings.md",
+      "bytes": 6337,
+      "sha256": "efad0618b9f29d0ec411493515d83da69f5d52e8c227e8e8cd5f6ff2a93ae0e8",
+      "reused_local": true
+    },
+    {
+      "path": "report/run_manifest.csv",
+      "bytes": 107353,
+      "sha256": "834890296f1a7f5bd2388f63cb6424553df39572634efdaba7cee8976862faf4",
+      "reused_local": false
+    },
+    {
+      "path": "report/startup-diagnostic-manifest.json",
+      "bytes": 37633,
+      "sha256": "3ae37e0796aafebe09ee4f5d618ca2e7756c245e2e424b143edf0d4ad7eff8fa",
+      "reused_local": true
+    },
+    {
+      "path": "report/summary.md",
+      "bytes": 10315,
+      "sha256": "b5cdc593b96ed9d4b0de0f7eab8c68fa5e7e09a17afdcc5238ddff26061d7a0a",
+      "reused_local": true
+    },
+    {
+      "path": "report/training_design.md",
+      "bytes": 6792,
+      "sha256": "25f75991ec7557d0bffc12497c898350c27d35b220b079b66e27c80e30b063b4",
+      "reused_local": true
+    },
+    {
+      "path": "report/tuning_findings.md",
+      "bytes": 8467,
+      "sha256": "86971cff7e6957ec364fa39421d02c819b42ca5dff54a38cca4d892ad1a64ec6",
+      "reused_local": false
+    },
+    {
+      "path": "report_tuning_findings.py",
+      "bytes": 12558,
+      "sha256": "a0ab6007c92ba0f9682f78bda45ed52fc43f2574d85cc86ded70aeaa279dbcd4",
+      "reused_local": true
+    },
+    {
+      "path": "run_balanced_pipeline.py",
+      "bytes": 1314,
+      "sha256": "994d77fbefd8f4d7227973df4aab5989afd5ab20e2697d1b5b372d3edc39fef0",
+      "reused_local": true
+    },
+    {
+      "path": "run_expanded.py",
+      "bytes": 2413,
+      "sha256": "f0010ce63c3303d09c7b67891c39b7634d803ad4b2eb4fcc612d76a5b8daed33",
+      "reused_local": true
+    },
+    {
+      "path": "run_formal_and_evaluate.py",
+      "bytes": 1171,
+      "sha256": "ee65ad0c354ea95d8f3029705b54d6ab52b34829bf78d5388386999613eaf957",
+      "reused_local": true
+    },
+    {
+      "path": "run_saved_baseline.py",
+      "bytes": 2094,
+      "sha256": "6e3608bbbbab08162411402a42c393708da7a214eb038a05e3aa879928e40bc4",
+      "reused_local": true
+    },
+    {
+      "path": "sample_network.py",
+      "bytes": 1461,
+      "sha256": "3df73d7a7d7ec2d0f1ba2057fcc721ef04c351b4ab46463320277059077c972e",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/actor_v0.sh",
+      "bytes": 3207,
+      "sha256": "785fd234208b8b6a91ff0ee53bfbf03323ea65fbd0e48f42f9b9eb76613deb8e",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/actor_v2.sh",
+      "bytes": 3059,
+      "sha256": "44c9cb8f0ab074739a482d18e4a50d813fa8cb3af59fdcaf83a6e929f0d120b0",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/build.sh",
+      "bytes": 231,
+      "sha256": "54b6dea8f8fea301bddb7acd30896ee4f84c196f573d681d51aa5d2991d364fa",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/build_v0.sh",
+      "bytes": 240,
+      "sha256": "c13229802a07bc5b298aa20502e53892456615a573ac97e5216a325ac258acf9",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/build_v2.sh",
+      "bytes": 539,
+      "sha256": "6abf7d88db51b2ad7c370d721ec2a8ed07b55e6bc313006bf666dbd29217e8dd",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/cloudlab/ci.sh",
+      "bytes": 537,
+      "sha256": "07141a641d350d850944e1d7ad48b7505e5078c13a5686023c562c3c264a3cdf",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/cloudlab/conda_setup.sh",
+      "bytes": 820,
+      "sha256": "26e550a7cc22d96bf91ae741c5ef1c65c32fd061a811838da666cef8cf700bb4",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/cloudlab/config.sh",
+      "bytes": 6198,
+      "sha256": "33dbc55862091ba979b4c2074518191e478c547f02086a623a32262b72e82503",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/cloudlab/copy_files.sh",
+      "bytes": 1896,
+      "sha256": "7eb0be2c1aa1e5c89b5cd6b2b75efd64356d410108d7293a2f0a8d3673bd4d01",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/cloudlab/download_traces_ckpt.sh",
+      "bytes": 850,
+      "sha256": "8f2dcd05b22f27f93e4ad1de4a0aad8579a3b1ef1a3e130b0208941d61dfccc5",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/cloudlab/get_ips.sh",
+      "bytes": 1404,
+      "sha256": "8cf93a7f0178bcc8d914e024885d2d0eb484db88f2bc91b94a21b1e15ed935e2",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/cloudlab/nodes.sh",
+      "bytes": 1507,
+      "sha256": "bed71a8e60ec5d36a1c85c5d81e0626749240214113ea0cde210618a245f51de",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/cloudlab/run_command.sh",
+      "bytes": 1901,
+      "sha256": "0d6907a600cb980daaa9855df08c0977e50934dad609af6595ae1209dc1a0a9e",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/cloudlab/run_experiment.sh",
+      "bytes": 797,
+      "sha256": "01c12fe514b49a79d82000ba9833c89f5c001ac5ca8e2fe2ccf23df9b8f04b57",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/cloudlab/setup_params.sh",
+      "bytes": 1262,
+      "sha256": "715fdc2ca6215613ed06e9d54851683d3304515bbbf04930ea49598753ba0fa6",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/eval.sh",
+      "bytes": 3686,
+      "sha256": "21ad75326fba9c055e13a9381c4aeaa2a7b7a0b3f1de7cd61c26a59c1e0a73a2",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/eval_robustness.sh",
+      "bytes": 3156,
+      "sha256": "09e807a9377852c91dcfa012baefde81db89246b1f248aaacd66369fcdfca017",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/kernel_update.sh",
+      "bytes": 349,
+      "sha256": "52aee2d435e3362ee0bcd5368fbf3256c46c60d95f7ffd27514a23714caa7c09",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/learner.sh",
+      "bytes": 1451,
+      "sha256": "96768a4ea2543652db306af5defcf8744bbf8053bb4868df9c4ec6bd55da537f",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/learner_v0.sh",
+      "bytes": 579,
+      "sha256": "357c2859615a765ab2caa566ab445a46d3c257f2023210d645172228b7e03ee1",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/learner_v2.sh",
+      "bytes": 2562,
+      "sha256": "699bcb37a00beb9a19116f44f6a1e7dc720bee93dcb3b840fa12bf63ee7afc7d",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/orca-standalone-emulation.sh",
+      "bytes": 1690,
+      "sha256": "730744410169203bf5783ce82b2650fd83d8eb1de19aa83497c1d9bdfba66e91",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/orca_v0.sh",
+      "bytes": 5427,
+      "sha256": "50c0f5016d507dfe7e23971430bfd4f05c5066f95cef842cc62addb8cbeb70d9",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/orca_v2.sh",
+      "bytes": 5840,
+      "sha256": "c710304e9e11db14146ae84f3a192a721156dceb549ff3713d8e9b6b7859f2fc",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/orca_v2_multi.sh",
+      "bytes": 12904,
+      "sha256": "e983be49d8ac082a9668af56b22101196cacb65a6419640572cc8c3791dbf92c",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/orca_v2_multi_collect_traces.sh",
+      "bytes": 4232,
+      "sha256": "be8e0cd7d80421ee84514970ee84d6940fc6616cb8706a61ffb73989142e3a3f",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/orca_v2_multi_eval.sh",
+      "bytes": 3633,
+      "sha256": "70bf9a4533851e85cfc9e51f76cb97dce1801405959214bbe5621068f50d95ad",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/params_base.json",
+      "bytes": 2860,
+      "sha256": "a0e4f2cb6bbbfd2f5cc7c287d82f068a4d42b34102492626ef2edcd441da3f99",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/params_base_eval.json",
+      "bytes": 2856,
+      "sha256": "c9d2df517d331a8ad13152b8faabb374269ad8cadd4fb30a0678b33c8cb2a75c",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/agent_v0.py",
+      "bytes": 27727,
+      "sha256": "8d2a0d890a34f95d4808f478cdfca30560ddf641e42b3207d096094780bb19e4",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/agent_v2.py",
+      "bytes": 30421,
+      "sha256": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/constants.py",
+      "bytes": 2758,
+      "sha256": "61a3db083eb85acf978932bed234ea47874318074767a5b57af294cff4be20cb",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/constrained_reward.py",
+      "bytes": 35978,
+      "sha256": "b15bd24c364eb51a03be93ef28f659f8b9cd542e5bbb589b402a7e8de926912e",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/d5_v0.py",
+      "bytes": 35082,
+      "sha256": "b89cb9d24e0f394a3ffb016f015e09da08a495faadbb117ecccd2ee3c7c5d741",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/d5_v2.py",
+      "bytes": 46524,
+      "sha256": "710e703d944ad35873cd3ada12d3375d32ea517c3e0f25af8a617fe444afe1f8",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/envwrapper_v0.py",
+      "bytes": 15133,
+      "sha256": "15b455a8f40925ca994367bb128b08a446903e9c7d39a75c0d1516ba548caaa7",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/envwrapper_v2.py",
+      "bytes": 17288,
+      "sha256": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/neural_transition.py",
+      "bytes": 11905,
+      "sha256": "2ac59c7fea03bb1c702179544206fb231dd0f9ba0cee85b3db480ad673ed1b4b",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/params.json",
+      "bytes": 985,
+      "sha256": "f7c01014c5dc6ceff581d94b1551eef41482152a502acafe1f659d1fd7ca5909",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/params_backup.json",
+      "bytes": 2860,
+      "sha256": "a0e4f2cb6bbbfd2f5cc7c287d82f068a4d42b34102492626ef2edcd441da3f99",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/symbolic_transitions.py",
+      "bytes": 23935,
+      "sha256": "871877341645c37ead65b6d43f97717281750507dca29dc26a9810e826a45642",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/test_model.py",
+      "bytes": 2445,
+      "sha256": "e8422140efdb29617c534f1df8a5f80af9297db0d3f9ef2ba56d6e98ef5dc2a5",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/utils_v0.py",
+      "bytes": 8781,
+      "sha256": "2a492860490ffb6fe949cb04788d1e07315b95403eef638223adce392b72e55d",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/rl-module/utils_v2.py",
+      "bytes": 8782,
+      "sha256": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/robustness.sh",
+      "bytes": 2400,
+      "sha256": "793e94c234351836efc865833df1947aa2294242e00e2d459a885087c97f3380",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/run_mm.sh",
+      "bytes": 287,
+      "sha256": "d17fd925b550fd710a462d4e697bed8830b5b84198d4e48ee79e7e2372e72e93",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/run_real_world.sh",
+      "bytes": 1338,
+      "sha256": "4b75c0589fbe8340bfd4f44bb2f1289067a12bd204bf7b5af243c7991a993df6",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/collate_train_files.sh",
+      "bytes": 1074,
+      "sha256": "6c477b1353163a976e9c82696b21fd58bab24ca26ac3d484425d53f281ebf3b4",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/eval_orca.sh",
+      "bytes": 5353,
+      "sha256": "3d7f5415d897293a20129af5a7626aa4dd2899d4af8577ac7fdd023b6bee9be3",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/plots/plot_thr_delay.py",
+      "bytes": 4345,
+      "sha256": "96d4565424b12b15eaf354dacab6e78bb0ced025fbb63eabe8e733c74fde2970",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/plots/utils.py",
+      "bytes": 2497,
+      "sha256": "f970e513a4ecceaa65f3b34d88943605b0ddf757f651543e1af65aedff5e5485",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/process_down_file.sh",
+      "bytes": 623,
+      "sha256": "889816637929be37a43e9def99f01acce4668d3218a9ae2656135dc4dbd7a451",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/process_down_files.py",
+      "bytes": 1392,
+      "sha256": "ad164998a3f7584ead83081dbcfde97b35fe0b79b0a1f1d66fabf31b03097ce6",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/real_world.sh",
+      "bytes": 2677,
+      "sha256": "55eb6fee8b2170a61922c88c5bc4bc2725b9bccbec0af804549f450a69252a97",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/run_eval.sh",
+      "bytes": 950,
+      "sha256": "175bb742858747bfe78301b424b9603226276d87caea7564f94ffc8c29305ecb",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/v10_multi_train.sh",
+      "bytes": 3484,
+      "sha256": "49c8a52b6af5d7d2069418cbbba5767d1a1ca4b662be5411e9023bc0ba3a143b",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/v7_tcp_collect_traces.sh",
+      "bytes": 963,
+      "sha256": "a7c4bdbbc9662da48047a32ef323cb0a372b240baaf605cef8c43f6281e43e6d",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/v9_eval_single_trace.sh",
+      "bytes": 1363,
+      "sha256": "e784cf9f621e6464a2cc28e387806fbd83c1d1c021882afe1628eab97bcceef3",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/v9_multi_train.sh",
+      "bytes": 2740,
+      "sha256": "78a8732a80c5489929115f925a4f3d629ce7749bea44faa09754e5ea311df51a",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/v9_multi_train_and_eval_only_heu.sh",
+      "bytes": 187,
+      "sha256": "9790e75ebc575611ee88c978fc873ee97bd13ea3720ac971b1bb1034c5eefb7e",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/v9_run_multi_only-heu.sh",
+      "bytes": 1990,
+      "sha256": "f2324096f5a9cbdd0ea4e683b4ab62e8d60be328a36b2d2030a830d28cdc71a0",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/v9_run_multi_only_heu_eval.sh",
+      "bytes": 1174,
+      "sha256": "6fa60fca68c71ca79aea74bdea9a70439b86bb672a97f437aed643c1628a34d7",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/scripts/v9_run_multi_train.sh",
+      "bytes": 2827,
+      "sha256": "cc58eb23a77847cb6522b5313044da40a9d8249b9e5ac01750fafed59b056395",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/setup.sh",
+      "bytes": 477,
+      "sha256": "656448e5ae9086b512996a67994f239b1cb133acbbbc6bd482526f792eeef2b1",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/src/common.h",
+      "bytes": 8935,
+      "sha256": "7b628edc25fc856101a99515029f2fef4e7074ad6a6285c56047500c89315b97",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/src/define_v0.h",
+      "bytes": 7033,
+      "sha256": "7ce6a8869506654769175342cc05139088cd34b0396569f65626401e24381a67",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/src/define_v2.h",
+      "bytes": 7264,
+      "sha256": "230081ed8f5b7fc20e7a3ec5e79fc0b16bae687ad8cdfb61e0f092df795ebe09",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/src/flow.cc",
+      "bytes": 2432,
+      "sha256": "d7f1f2c32cfa123a6a0c4251ba535f66e38a2731d2edde470906349825f5852a",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/src/flow.h",
+      "bytes": 2601,
+      "sha256": "ad46f1853ae31680469f5ac0c75947cd1280e638754ee660d84bf976c5a96750",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/src/orca-server-mahimahi_v0.cc",
+      "bytes": 26807,
+      "sha256": "df185fdac3ac747eb66070ae1ae2114cdbb2960d918705800fff673fa0559072",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/src/orca-server-mahimahi_v2.cc",
+      "bytes": 27900,
+      "sha256": "ce26820d77bf49ee980a4255ce7e82b4441d615ec5364b3d0f46746cfdec9a99",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/src/real_world.cc",
+      "bytes": 27309,
+      "sha256": "90d2e59fbb25d660df429c3bfa53075c23c5bf87403d4e97b5d77549df37b8d4",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/src/tcp_eval.cc",
+      "bytes": 13805,
+      "sha256": "979acbbe4c5ace169810ee03b640c75debe8de705dfe6c43640f70fc434a31b7",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/src/util.h",
+      "bytes": 2171,
+      "sha256": "a9982aa98b5441d5d8ee5692ebc94526c1c7f384702e150ae184554836fc58c7",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/canopy/tcp_baselines.sh",
+      "bytes": 5681,
+      "sha256": "c96553015e69a056c167f0ffb971f42e2f37af3d8101a92a50ac162dce9d5141",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/library-diagnosis/ibp-verifiable_wrapper.py",
+      "bytes": 9206,
+      "sha256": "a136d9fb4e458ffa0fb7daf261d721527c0c235f81e2e72101d55fc26cf9045a",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/library-diagnosis/sonnet-batch_norm.py",
+      "bytes": 23031,
+      "sha256": "398779a91d99db95da3e9e0638042e8f55ca295928727bf81c3b681ca0401b92",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/common.h",
+      "bytes": 8935,
+      "sha256": "7b628edc25fc856101a99515029f2fef4e7074ad6a6285c56047500c89315b97",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/define_v0.h",
+      "bytes": 7033,
+      "sha256": "7ce6a8869506654769175342cc05139088cd34b0396569f65626401e24381a67",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/define_v2.h",
+      "bytes": 7301,
+      "sha256": "97a9ce508cfcf2ad3dd6b158f4fba4aac3a120d3545f17aa796430f8659f92cd",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/flow.cc",
+      "bytes": 2432,
+      "sha256": "d7f1f2c32cfa123a6a0c4251ba535f66e38a2731d2edde470906349825f5852a",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/flow.h",
+      "bytes": 2601,
+      "sha256": "ad46f1853ae31680469f5ac0c75947cd1280e638754ee660d84bf976c5a96750",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/orca-server-control-log-safe.cc",
+      "bytes": 26544,
+      "sha256": "7c9fde43ed07de6e475d026f89417c87af205077b7db38103d1d3d1adeec84a5",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/orca-server-fast-handshake-probe.cc",
+      "bytes": 25355,
+      "sha256": "ec481292a5b81b51bae7740b0abe37e12782fe3f19a925808283481840983c93",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/orca-server-fastss.cc",
+      "bytes": 25288,
+      "sha256": "28a218c6cdf20d15b404fb52d005c992adb7cfce8aa5017f82b63213583935b7",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/orca-server-handshake-probe.cc",
+      "bytes": 25376,
+      "sha256": "9f4d42412d5c6670dbc3821af79c96b466135fafe1135d098a6c53b759c4b050",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/orca-server-legacy-paced.cc",
+      "bytes": 25202,
+      "sha256": "080fd2fc1b7a42b6de3463c5d31cf5124accca42e9ca722e52bf14c1b7b5519e",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/orca-server-legacy-protocol.cc",
+      "bytes": 25181,
+      "sha256": "5596ac4d99d05bc5b5bf86dfc3f58571a2bbf226ad5861e988e61843790984f1",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/orca-server-mahimahi_v0.cc",
+      "bytes": 26807,
+      "sha256": "df185fdac3ac747eb66070ae1ae2114cdbb2960d918705800fff673fa0559072",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/orca-server-mahimahi_v2.cc",
+      "bytes": 25309,
+      "sha256": "cc068f3eeaa21af0248ea9d5e58c58d222850abf318efcbd1883f4a6665d9636",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/real_world.cc",
+      "bytes": 27309,
+      "sha256": "90d2e59fbb25d660df429c3bfa53075c23c5bf87403d4e97b5d77549df37b8d4",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/tcp_eval.cc",
+      "bytes": 14433,
+      "sha256": "9ebc6f0e808edce7b48ae044838effafaf4a362cb2dc97fd9a3a76d826aae979",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/native/util.h",
+      "bytes": 2171,
+      "sha256": "a9982aa98b5441d5d8ee5692ebc94526c1c7f384702e150ae184554836fc58c7",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/runtime-binaries/client",
+      "bytes": 13808,
+      "sha256": "361f85d03abe62a9e457c484f67f2f34dca2288f434c4aa4645dfb5836c8a672",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/runtime-binaries/orca-server-control-log-safe",
+      "bytes": 35368,
+      "sha256": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+      "reused_local": true
+    },
+    {
+      "path": "source_snapshot/runtime-binaries/tcp-native",
+      "bytes": 26664,
+      "sha256": "3d931bf60c15ccfbd2c4300fc494c68f29112265d675d51513ca77a735d7069e",
+      "reused_local": true
+    },
+    {
+      "path": "summarize_resumed.py",
+      "bytes": 9812,
+      "sha256": "98bcff6af82d4c72520293f346ab8f0855e6025dd2bc399536f8d90ae55b2b70",
+      "reused_local": true
+    },
+    {
+      "path": "sync_grid.py",
+      "bytes": 2446,
+      "sha256": "571cf275fb8b5ed4494c53dc7d14994a2929a19a78594660bd65fe39cf25bc89",
+      "reused_local": true
+    },
+    {
+      "path": "sync_safe_logger.py",
+      "bytes": 1060,
+      "sha256": "43b3c14f12baefd49109412e68e8ddc7a945547788ec1231c37a61c0bd9bccf1",
+      "reused_local": true
+    },
+    {
+      "path": "timed_distributed.py",
+      "bytes": 2094,
+      "sha256": "7f500b410913a74559eba1082cef1db16a9de7a0da574087f209821a6d1f64e9",
+      "reused_local": true
+    },
+    {
+      "path": "verify_backend.py",
+      "bytes": 3891,
+      "sha256": "e2229e33137161a2fc3aab7aaf9baa3452f11826183332cddfee80407ed9fa7a",
+      "reused_local": true
+    },
+    {
+      "path": "verify_balanced_replay.py",
+      "bytes": 2282,
+      "sha256": "6b5172bd0ed8bb0f58adb997acb9638479824be6be80c67c1ab72e815c2eccb2",
+      "reused_local": true
+    },
+    {
+      "path": "verify_target_bn_candidate.py",
+      "bytes": 3059,
+      "sha256": "6beda71bb6ee0a2a5dcd19396463db1fc51cf074b6200d91005cd396346e87cb",
+      "reused_local": true
+    }
+  ],
+  "files_total": 586,
+  "files_transferred": 22,
+  "files_reused": 564,
+  "uncompressed_changed_bytes": 7212970,
+  "excluded": "Keys, checkpoints, replay, raw logs and unaggregated node evidence stay in cloud"
+}

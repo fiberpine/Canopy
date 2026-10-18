@@ -1,0 +1,88 @@
+{
+  "host": "VM-0-9-ubuntu",
+  "root": "/home/ubuntu/orca-release-node3-20261018",
+  "verified_model_files": 51,
+  "training": [
+    {
+      "framework": "mtpjoint",
+      "run": "portable-mtpjoint-smoke-training-r2",
+      "status": "FAILED",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 0,
+        "counters": {
+          "critic_iterations": 0,
+          "critic_optimizer_ops": 0,
+          "actor_updates": 0,
+          "target_updates": 0
+        },
+        "wall_s": 2.189633352000101
+      },
+      "reason": "actor0 failed before first state"
+    },
+    {
+      "framework": "mtpjoint",
+      "run": "portable-mtpjoint-smoke-training-r3",
+      "status": "COMPLETED",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 505,
+        "counters": {
+          "critic_iterations": 0,
+          "critic_optimizer_ops": 0,
+          "actor_updates": 0,
+          "target_updates": 0
+        },
+        "wall_s": 48.47206935200006
+      },
+      "reason": null
+    },
+    {
+      "framework": "mtpjoint",
+      "run": "portable-mtpjoint-smoke-training-r4",
+      "status": "COMPLETED",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 900,
+        "counters": {
+          "critic_iterations": 177,
+          "critic_optimizer_ops": 354,
+          "actor_updates": 176,
+          "target_updates": 177
+        },
+        "wall_s": 93.67427272799989
+      },
+      "reason": null,
+      "checkpoint_finite": true,
+      "verified_numeric_variables": 112
+    },
+    {
+      "framework": "mtpjoint",
+      "run": "portable-mtpjoint-smoke-training-r1",
+      "status": "FAILED",
+      "final": null,
+      "reason": "learner failed before initialization"
+    }
+  ],
+  "evaluation": [
+    {
+      "run": "portable-mtpjoint-evaluate-r4",
+      "status": "COMPLETED",
+      "counters": {
+        "valid": 191,
+        "critic_iterations": 0,
+        "critic_optimizer_ops": 0,
+        "actor_updates": 0,
+        "target_updates": 0,
+        "exploration_calls": 0
+      },
+      "policy_hash": "2d3357ecfdccdfeece6b933bec2511d95045139feb1f1a9e2a42adef7aa81664"
+    }
+  ],
+  "live": [],
+  "user_ipc": [],
+  "free_gib": 23.315574645996094
+}

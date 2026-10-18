@@ -1,0 +1,49 @@
+{
+  "version": "V36_DIAGNOSTIC_ONLY",
+  "implementation_base": "V31",
+  "status": "PARTIAL_CAUSES_NARROWED_NO_MODEL_CHANGE",
+  "cloud_root": "/home/ubuntu/orca-causal-diagnosis-v36-20261017-2130-r2",
+  "local_evidence": "D:\\Canopy\\innovations\\causal-diagnosis-v36-20261017-2130\\r2\\final",
+  "formal_runs": 64,
+  "formal_failures": 0,
+  "protocol_runs": 8,
+  "training_runs": 0,
+  "optimizer_operations": 0,
+  "learned_action_health": {
+    "passed": 8,
+    "total": 8
+  },
+  "evaluation_entry_commit": "db2cc8b3be0568d0e42ebb5045ab2e9999aa5c0a",
+  "frozen_model_references": [
+    "/home/ubuntu/orca-canopy-pretrained-eval-20261008-1148/models/orca/model.ckpt-1283529",
+    "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-feedback600/step-157704",
+    "/home/ubuntu/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694"
+  ],
+  "forced_periods_are_same_weights_not_trained_baselines": true,
+  "architecture_window_definition_unchanged": true,
+  "baseline_old_rate_schema_preserved": true,
+  "V31_acked_rate_schema_preserved": true,
+  "MTP_is_observation_and_action_period": true,
+  "clock_and_interval_byte_audits": "PASS",
+  "five_node_idle_protection_guard": "PASS",
+  "scope": "Four development scenes x eight variants x two frozen60s repeats. Full/trim10 retained; CPU25..50s; one training ancestry; no new independent train seed or heldout claim.",
+  "findings": {
+    "execution_failure_found": false,
+    "startup_only_change_not_main_explanation": true,
+    "shallow_scene_not_rescued_by_MTP_overrides": true,
+    "short_period_override_can_destabilize_window_control": true,
+    "learned_period_benefits_are_scene_dependent": true,
+    "unique_cause_proven": false
+  },
+  "setup_failures_retained": {
+    "first_root": "/home/ubuntu/orca-causal-diagnosis-v36-20261017-2130",
+    "official_loader": "Missing inherited official source directory; failed before TCP; repaired new-root source symlink with five-node source hashes verified",
+    "first_final_guard": "Concurrent guard SSH connections counted as root processes; corrected by finishing remote guards before learner guard; no process filtering relaxed"
+  },
+  "models_replay_raw_logs_downloaded": false,
+  "local_archive_commit": "805c4a3178cab47a097041808cc837b071817c39",
+  "local_archive_tag": "v31-base-v36-causal-diagnosed-partial-20261017",
+  "cloud_archive_commit": "1fe9032f39e63a688b340ed4a8c4fa771331c69e",
+  "cloud_archive_is_not_evaluation_entry": true,
+  "epoch": 1792244884.1258059
+}

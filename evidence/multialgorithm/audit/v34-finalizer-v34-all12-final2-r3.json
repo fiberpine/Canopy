@@ -1,0 +1,22 @@
+{
+  "deadline_epoch": 1792238647.3306947,
+  "evaluation_id": "v34-all12-final2-r3",
+  "finalizer_pid": 4566,
+  "finished_epoch": 1792236768.8994548,
+  "guard_exclusion": "Guard excludes itself and ancestors, including this finalizer; actors are inspected before learner.",
+  "optimizer_updates": 0,
+  "root": "/home/ubuntu/orca-v34-evaluation-r3-20261017-1820",
+  "scope": "Only this experiment root. No TCP/optimizer start or process/IPC deletion; independent Aurora root is outside scope.",
+  "stages": [],
+  "started_epoch": 1792232666.0865157,
+  "status": "PARTIAL",
+  "tcp_started": 0,
+  "trigger": "FAILURE",
+  "trigger_evidence": {
+    "record": {
+      "epoch": 1792236753.632358,
+      "reason": "Traceback (most recent call last):\n  File \"evaluation_r3_v34.py\", line 8, in <module>\n    audits('jv-'+eid,'v34-frozen-r3');dump(R/'audit/v34-outcome.json',dict(status='FOUR_MATCHED_ARMS_240_FROZEN_COMPLETE',formal_runs=240,epoch=time.time(),all_training_reused=True));progress('V34_FROZEN_DONE_NO_AUTO_NEXT',runs=240)\n  File \"/home/ubuntu/orca-v34-evaluation-r3-20261017-1820/pipeline_recovery_v34.py\", line 11, in audits\n    for script,name in [('audit_decision_v21.py','clock'),('audit_rate_feedback_v28.py','rate'),('audit_feedback_v34.py','feedback')]:call(script,[prefix],tag+'-'+name)\n  File \"/home/ubuntu/orca-v34-evaluation-r3-20261017-1820/pipeline_decision_v21.py\", line 8, in call\n    with (R/'logs'/(label+'.stdout')).open('w') as o,(R/'logs'/(label+'.stderr')).open('w') as e:subprocess.check_call([PY,str(R/n)]+list(map(str,args)),cwd=str(R),stdout=o,stderr=e)\n  File \"/usr/lib/python3.6/subprocess.py\", line 311, in check_call\n    raise CalledProcessError(retcode, cmd)\nsubprocess.CalledProcessError: Command '['/home/ubuntu/venv/bin/python', '/home/ubuntu/orca-v34-evaluation-r3-20261017-1820/audit_decision_v21.py', 'jv-v34-all12-final2-r3']' returned non-zero exit status 1.\n"
+    },
+    "source": "v34-recovery-failure.json"
+  }
+}

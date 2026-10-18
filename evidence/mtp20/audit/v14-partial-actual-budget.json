@@ -1,0 +1,40 @@
+{
+  "epoch": 1791956969.6413045,
+  "run": "v14-joint1800",
+  "planned_seconds_per_actor": 1800,
+  "actual_seconds_by_actor": [
+    1451.8118944950402,
+    1451.5966251790524,
+    1449.9695200622082,
+    1449.9887421876192,
+    1449.266526158899,
+    1448.1905154120177,
+    1447.2619824875146,
+    1449.0264111291617,
+    1447.0846161227673,
+    1444.6063579283655,
+    1446.186923475936,
+    1445.5085452273488,
+    1445.230109937489,
+    1442.4369624592364,
+    1444.3545343875885,
+    1442.6859139371663,
+    1442.4883390720934,
+    1439.705336222425,
+    1441.5996867399663,
+    1439.8341727685183,
+    1436.2698869407177,
+    1433.984391381964,
+    1438.6622022986412,
+    1437.2055895309895
+  ],
+  "reason": "Inherited timeout_s=1550 stopped controller before planned exposure; not a learning-health stop. Partial saved final CP will first be frozen-screened, not silently treated as complete1800s.",
+  "inserted": 277317,
+  "counters": {
+    "critic_iterations": 124259,
+    "critic_optimizer_ops": 248518,
+    "actor_updates": 119259,
+    "target_updates": 124259
+  },
+  "future_fair_control": "Match this exact per-actor physical exposure vector if candidate is worth further comparison; no full rerun selected by favorable score."
+}

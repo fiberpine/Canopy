@@ -1,0 +1,44 @@
+[
+  {
+    "variant": "baseline",
+    "command": [
+      "g++",
+      "-std=c++11",
+      "-pthread",
+      "/home/ubuntu/orca-release-20261018/frameworks/baseline/code/runtime/src/orca-server-control-log-safe.cc",
+      "/home/ubuntu/orca-release-20261018/frameworks/baseline/code/runtime/src/flow.cc",
+      "-o",
+      "/home/ubuntu/orca-release-20261018/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+    ],
+    "binary": "frameworks/baseline/code/runtime/orca-server-control-log-safe",
+    "sha256": "88c32e6ab8f910a8136709269a68908768ca84caca713d8529bf295a67cf3bcd"
+  },
+  {
+    "variant": "mtp20",
+    "command": [
+      "g++",
+      "-std=c++11",
+      "-pthread",
+      "/home/ubuntu/orca-release-20261018/frameworks/mtp20/code/runtime/src/orca-server-joint-mtp.cc",
+      "/home/ubuntu/orca-release-20261018/frameworks/mtp20/code/runtime/src/flow.cc",
+      "-o",
+      "/home/ubuntu/orca-release-20261018/frameworks/mtp20/code/runtime/orca-server-joint-mtp"
+    ],
+    "binary": "frameworks/mtp20/code/runtime/orca-server-joint-mtp",
+    "sha256": "fe70fb23d17b6e935d55efc79d3c3e7f1fb27a467ff3b59760b81c87b9790129"
+  },
+  {
+    "variant": "mtpjoint",
+    "command": [
+      "g++",
+      "-std=c++11",
+      "-pthread",
+      "/home/ubuntu/orca-release-20261018/frameworks/mtpjoint/code/runtime/src/orca-server-joint-mtp.cc",
+      "/home/ubuntu/orca-release-20261018/frameworks/mtpjoint/code/runtime/src/flow.cc",
+      "-o",
+      "/home/ubuntu/orca-release-20261018/frameworks/mtpjoint/native-v28/orca-server-joint-mtp"
+    ],
+    "binary": "frameworks/mtpjoint/native-v28/orca-server-joint-mtp",
+    "sha256": "87d6899fae8aee05ea3ea6cab8810e7b79c283eb6ff980e62e3ba3cacf110794"
+  }
+]

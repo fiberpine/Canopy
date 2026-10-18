@@ -1,0 +1,21 @@
+{
+  "saved_checkpoint": "step-4148792",
+  "recorded_complete_iterations": 124156,
+  "independent_optimizer_operations": 372468,
+  "saved_global_step": 372361,
+  "difference": 107,
+  "offline_dual_critic_group_trials": 300,
+  "global_step_increment_histogram": {
+    "2": 298,
+    "1": 2
+  },
+  "shared_critic_beta1_power_after_group_histogram": {
+    "0.729": 295,
+    "0.81": 5
+  },
+  "initial_beta1_power": 0.9,
+  "expected_if_two_serial_power_updates": 0.7290000000000001,
+  "expected_if_one_shared_time_step": 0.81,
+  "scope": "Local offline MSE stock graph, no live environment or checkpoint writes; graph rebuilt per trial assign op but same Session and model weights evolve only in RAM",
+  "limitation": "Shared global_step/Adam state and concurrent group observed; not proof of historical collapse cause. Independent Python counters remain authoritative for sample/update accounting; no optimizer semantics changed."
+}

@@ -1,0 +1,71 @@
+{
+  "host": "VM-0-15-ubuntu",
+  "root": "/home/ubuntu/orca-release-20261018",
+  "verified_model_files": 51,
+  "training": [
+    {
+      "framework": "mtp20",
+      "run": "portable-distributed-mtp20-r1",
+      "status": "COMPLETED",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 4422,
+        "counters": {
+          "critic_iterations": 1254,
+          "critic_optimizer_ops": 2508,
+          "actor_updates": 1253,
+          "target_updates": 1254
+        },
+        "wall_s": 96.689178319
+      },
+      "reason": null,
+      "checkpoint_finite": true,
+      "verified_numeric_variables": 106
+    },
+    {
+      "framework": "baseline",
+      "run": "portable-distributed-baseline-r1",
+      "status": "COMPLETED",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 9756,
+        "counters": {
+          "critic_iterations": 924,
+          "critic_optimizer_ops": 1848,
+          "actor_updates": 924,
+          "target_updates": 924
+        },
+        "wall_s": 69.60299333399996
+      },
+      "reason": null,
+      "checkpoint_finite": true,
+      "verified_numeric_variables": 106
+    },
+    {
+      "framework": "mtpjoint",
+      "run": "portable-distributed-mtpjoint-r1",
+      "status": "COMPLETED",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 3892,
+        "counters": {
+          "critic_iterations": 1250,
+          "critic_optimizer_ops": 2500,
+          "actor_updates": 1249,
+          "target_updates": 1250
+        },
+        "wall_s": 94.66633454800001
+      },
+      "reason": null,
+      "checkpoint_finite": true,
+      "verified_numeric_variables": 112
+    }
+  ],
+  "evaluation": [],
+  "live": [],
+  "user_ipc": [],
+  "free_gib": 33.48194885253906
+}

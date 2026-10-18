@@ -1,0 +1,87 @@
+# Canopy：baseline与两种MTP双动作实现
+
+本仓库保存三个完整、独立的拥塞控制实现，以及选定模型、必要训练先验、五个独立训练的固定周期对照、网络trace、训练/评测框架和审计证据。**工程迁移已通过；两个创新版本的研究结论仍是PARTIAL。** 这里不宣称论文性能复现、全场景领先或动态MTP因果收益已全部证明。
+
+| 入口名称 | 选定实现 | 状态/动作 | 观测周期 | RL窗口动作执行周期 | 详细说明 |
+|---|---|---|---|---|---|
+| `baseline` | 冻结seed3，step2412694 | 70/1 | 原20ms | 原20ms | [baseline](docs/BASELINE.md) |
+| `mtp20` | V14，step277317 | 72/2 | 固定20ms | 学习20—160ms | [V14](docs/MTP20_V14.md) |
+| `mtpjoint` | 健康V31，step157704 | 149/2 | 学习20—160ms | 与观测同周期 | [V31](docs/MTPJOINT_V31.md) |
+
+两个创新均保留原窗口动作：归一化输出映射为窗口倍率，执行端按整数百分比写入；CUBIC继续逐ACK工作。MTP不是重复施加窗口倍率的次数。V31长MTP期间没有隐藏20ms RL观测，没有提前唤醒、QC或fallback。
+
+## 完整性与交付方式
+
+- Git直接包含三套源码、native源码和二进制、必要本地依赖、**全部11组模型与先验**、训练/评测模板、trace、IBP和Mahimahi源码、性能与失败证据、原始来源清单及许可证文件。
+- 完整Python3.6/TF1.14环境和定制内核安装包放在同一私有仓库的[Release](../../releases/tag/consolidated-20261018)。完整迁移包也包含上述源码与模型，可独立解压使用。它不依赖原五台服务器的路径。
+- Git与Release共同构成完整交付；直接clone尚未包含Python环境和内核deb。历史replay、所有旧checkpoint、逐包历史档案不是当前运行依赖，没有上传到GitHub。选定模型和必要先验均已包含，绝不是只有checkpoint路径的空索引。
+- [模型清单](docs/MODELS.md)、[原便携包说明](docs/PORTABLE_RELEASE.md)、[验证范围](docs/VALIDATION.md)、[试错记录](EXPLORATION_HISTORY.md)、[来源清单](manifest.json)。历史绝对路径仅说明来源，原实验目录已退役，不用于新运行。
+
+## 快速使用完整迁移包
+
+要求：**Ubuntu18.04 x86_64、Python3.6、定制4.13.1-0521-learner内核、Mahimahi、TUN、sudo。** Windows只用于查看源码，不能直接执行TCP实验。未验证任意新OS的一键安装，也未通过重装系统验收。
+
+```sh
+gh release download consolidated-20261018 --repo fiberpine/Canopy \
+  --pattern orca-portable-release-20261018.tar.gz \
+  --pattern orca-portable-release-20261018.tar.gz.sha256
+sha256sum -c orca-portable-release-20261018.tar.gz.sha256
+tar -xzf orca-portable-release-20261018.tar.gz
+cd orca-release-20261018
+bash setup.sh --system # 新机安装依赖、构建Mahimahi、安装定制内核；不会自动重启
+# 重启到4.13.1-0521-learner后：
+bash setup.sh
+runtime/venv/bin/python build_native.py
+runtime/venv/bin/python run.py doctor
+```
+
+私有Release下载需要自己的GitHub访问权限；上述命令需要先安装官方GitHub CLI并登录，也可在登录后的GitHub网页下载同名资产再传到目标服务器。没有在仓库中嵌入token或SSH私钥，不需要访问原五台服务器。若服务器已有匹配内核与工具，可跳过系统安装与重启。
+
+## 使用Git源码
+
+```sh
+git clone https://github.com/fiberpine/Canopy.git
+cd Canopy
+python3 tools/verify_repository.py
+mkdir -p assets
+gh release download consolidated-20261018 --repo fiberpine/Canopy \
+  --pattern orca-portable-release-20261018.tar.gz --dir assets
+python3 tools/install_runtime_assets.py --archive assets/orca-portable-release-20261018.tar.gz
+bash setup.sh # 新机仍须先按上节安装系统依赖及定制内核
+runtime/venv/bin/python build_native.py
+runtime/venv/bin/python run.py doctor
+```
+
+`run.py`是本交付支持的训练/评测入口。旧helper中保留的历史pipeline/factory CLI不是迁移入口；不要直接重启旧pipeline。仓库包含`setup.sh`依赖与完整原生代码。
+
+## 三套模型的评测和训练
+
+```sh
+runtime/venv/bin/python run.py evaluate --variant baseline --scenario 0 --seconds 60
+runtime/venv/bin/python run.py evaluate --variant mtp20 --scenario 0 --seconds 60
+runtime/venv/bin/python run.py evaluate --variant mtpjoint --scenario 0 --seconds 60
+# 90秒打包短测降低warmup，仅验证真实更新链路：
+runtime/venv/bin/python run.py smoke-training --variant mtpjoint --actors 1 --seconds 90
+```
+
+正式训练先复制并填写`configs/cluster.example.json`；使用自己的SSH key和known_hosts，保持主机密钥验证。所有机器采用相同绝对入口路径，或使用同名软链接；路径不能含空格。
+
+```sh
+runtime/venv/bin/python run.py train --variant baseline --actors 24 --samples 2400000 --cluster configs/my-cluster.json
+runtime/venv/bin/python run.py train --variant mtp20 --actors 24 --seconds-per-actor 1800 --cluster configs/my-cluster.json
+runtime/venv/bin/python run.py train --variant mtpjoint --actors 24 --seconds-per-actor 600 --cluster configs/my-cluster.json
+```
+
+实际规模为1learner＋24actor，四台actor机器各6个独立环境；通过重连轮换环境，不是同时运行56actor。默认不传cluster时为本机1actor。每次使用独立run ID，禁止覆盖旧结果。训练会使用明确的有限时间/样本预算；调用命令即启动对应工作，不会自动继续下一轮实验。
+
+评测关闭探索和优化，结果位于`frameworks/<实现>/logs/<run_id>/result.json`。默认场景列表因实现不同而不同；正式比较须统一trace、RTT、队列、启动、评测窗口和重复数。固定周期入口`fixed20/fixed40/fixed80/fixed120/fixed160`均为独立训练模型，另可评测`official-orca/cubic/reno`。同权重强制周期诊断不能冒充独立训练对照。
+
+## 结果和限制
+
+本仓库保留逐场景吞吐/利用率、平均/P95/P99排队、丢包、调用及CPU指标；不能只凭总平均或调用数宣布优势。[V31说明](docs/MTPJOINT_V31.md)列出了弱场景与正常启动参照，完整多算法结果在`evidence/multialgorithm`。
+
+V14四个浅队列动态条件MTP变化不足；V31仍有浅队列/高RTT吞吐及尾延迟弱项。一个训练seed来源的评测重复不等于多训练seed。少调用不等于同比例省CPU。完整resume加载器不存在；V14/V31正式模板按原谱系从包内先验新建优化器/replay/计数/TCP，并非从最终交付模型无缝续训。
+
+三套通过重编译、离线模型更新与重载、迁移后1actor真实训练、四机4actor训练、冻结评测及完整包解压验证。初次同机并行解包冻结中两MTP首次反馈超时，原因未定位，失败日志保留；前后顺序冻结均通过。本交付认证顺序冻结流程，不宣称同机多冻结流已通过。
+
+上游代码及第三方文件保留原许可证；项目新增研究代码未另行授权开源，当前仓库为私有。来源见[第三方说明](docs/THIRD_PARTY.md)。
