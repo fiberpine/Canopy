@@ -13,7 +13,7 @@
 ## 完整性与交付方式
 
 - Git直接包含三套源码、native源码和二进制、必要本地依赖、**全部11组模型与先验**、训练/评测模板、trace、IBP和Mahimahi源码、性能与失败证据、原始来源清单及许可证文件。
-- 完整Python3.6/TF1.14环境和定制内核安装包放在同一私有仓库的[Release](../../releases/tag/consolidated-20261018)。完整迁移包也包含上述源码与模型，可独立解压使用。它不依赖原五台服务器的路径。
+- 完整Python3.6/TF1.14环境和定制内核安装包放在同一仓库的[Release](../../releases/tag/consolidated-20261018)。完整迁移包也包含上述源码与模型，可独立解压使用。它不依赖原五台服务器的路径。
 - Git与Release共同构成完整交付；直接clone尚未包含Python环境和内核deb。历史replay、所有旧checkpoint、逐包历史档案不是当前运行依赖，没有上传到GitHub。选定模型和必要先验均已包含，绝不是只有checkpoint路径的空索引。
 - [模型清单](docs/MODELS.md)、[原便携包说明](docs/PORTABLE_RELEASE.md)、[验证范围](docs/VALIDATION.md)、[试错记录](EXPLORATION_HISTORY.md)、[来源清单](manifest.json)。历史绝对路径仅说明来源，原实验目录已退役，不用于新运行。
 
@@ -35,7 +35,7 @@ runtime/venv/bin/python build_native.py
 runtime/venv/bin/python run.py doctor
 ```
 
-私有Release下载需要自己的GitHub访问权限；上述命令需要先安装官方GitHub CLI并登录，也可在登录后的GitHub网页下载同名资产再传到目标服务器。没有在仓库中嵌入token或SSH私钥，不需要访问原五台服务器。若服务器已有匹配内核与工具，可跳过系统安装与重启。
+仓库已于2026-10-20从Private改为Public，源码与Release资产均可公开访问。上述gh命令需要官方GitHub CLI，也可直接在Release网页下载同名资产再传到目标服务器。没有在仓库中嵌入token或SSH私钥，不需要访问原五台服务器。若服务器已有匹配内核与工具，可跳过系统安装与重启。
 
 ## 使用Git源码
 
@@ -84,4 +84,8 @@ V14四个浅队列动态条件MTP变化不足；V31仍有浅队列/高RTT吞吐�
 
 三套通过重编译、离线模型更新与重载、迁移后1actor真实训练、四机4actor训练、冻结评测及完整包解压验证。初次同机并行解包冻结中两MTP首次反馈超时，原因未定位，失败日志保留；前后顺序冻结均通过。本交付认证顺序冻结流程，不宣称同机多冻结流已通过。
 
-上游代码及第三方文件保留原许可证；项目新增研究代码未另行授权开源，当前仓库为私有。来源见[第三方说明](docs/THIRD_PARTY.md)。
+上游代码及第三方文件保留原许可证；仓库现公开可读；本次没有为新增研究代码另行选择开源许可证，第三方代码继续遵循各自许可证。来源见[第三方说明](docs/THIRD_PARTY.md)。
+
+## 下一步研究审阅
+
+请先读[当前研究状态与优先问题](docs/RESEARCH_REVIEW_BRIEF.md)。它区分已确认事实、待验证机制与最小实验；原始收敛快照固定在tag `consolidated-20261018`，本轮仅更新公开访问说明及研究交接，不修改算法或模型。
