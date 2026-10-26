@@ -147,6 +147,7 @@ def main():
                 assert cfg['interval_rate_v28'] in ('audit_only','acked_bytes')
                 envv['ORCA_INTERVAL_RATE_V28']=cfg['interval_rate_v28']
                 envv['ORCA_INTERVAL_RATE_LOG']=str(run/'interval-rate.csv')
+                envv['ORCA_INTERVAL_AUDIT_V38']='1' if cfg.get('interval_audit_v38',False) else '0'
             injected=int(cfg.get('clock_injected_delay_us',0))
             if injected and (not cfg.get('clock_protocol_diagnostic') or cfg.get('training_mode')):
                 raise ValueError('Clock fault injection is restricted to frozen protocol diagnostics')

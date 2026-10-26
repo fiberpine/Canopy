@@ -1,0 +1,30 @@
+{
+  "status": "PASS_LOCAL_PUBLICATION_CHECKS",
+  "date": "2026-10-26",
+  "unit_tests": 53,
+  "test_groups": [
+    {
+      "command": "python -m unittest discover -s tools -p test_v31*.py",
+      "status": "PASS",
+      "tests": 41
+    },
+    {
+      "command": "python -m unittest discover -s tools/scalar_audit -p test_audit.py",
+      "status": "PASS",
+      "tests": 7
+    },
+    {
+      "command": "python -m unittest discover -s tools/interval_reward -p test_shadow_reward.py",
+      "status": "PASS",
+      "tests": 5
+    }
+  ],
+  "original_selected_model_files_unchanged": 51,
+  "scalar_plan": "PASS_NO_SIDE_EFFECTS",
+  "python36_syntax": "PASS_NEW_PYTHON_SOURCES",
+  "credential_scan": "PASS_KNOWN_KEY_TOKEN_PATTERNS",
+  "fresh_TF_native_TCP_on_packaging_adapter": "NOT_RUN",
+  "historical_runtime_validation": "See retained cloud evidence; not newly executed to publish",
+  "new_training_runs": 0,
+  "new_TCP_runs": 0
+}

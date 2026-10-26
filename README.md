@@ -1,6 +1,8 @@
 # Canopy：baseline与两种MTP双动作实现
 
-本仓库保存三个完整、独立的拥塞控制实现，以及选定模型、必要训练先验、五个独立训练的固定周期对照、网络trace、训练/评测框架和审计证据。**工程迁移已通过；两个创新版本的研究结论仍是PARTIAL。** 这里不宣称论文性能复现、全场景领先或动态MTP因果收益已全部证明。
+本仓库保存三个原始交付实现、选定模型、训练/评测框架，以及后续基线与双动作研究的代码和证据。**截至2026-10-26，研究仍为PARTIAL：新的Orca基座未通过多场景验收，Canopy正式训练中途按用户要求暂停，双动作模型尚未证明稳定的性能—CPU优势。**
+
+最新审阅入口是[研究交接](docs/RESEARCH_REVIEW_BRIEF.md)。新增内容包括健康149维V31兼容初始化与actor冻结门控、独立critic Adam、单动作Orca/Canopy研究框架、正常CUBIC启动修正、区间RTT奖励离线诊断，以及只读checkpoint方向审计。原始快照tag `consolidated-20261018` 和51个选定模型文件保持不变；新增源码不意味着新增合格模型，也不代表完整复现论文。
 
 | 入口名称 | 选定实现 | 状态/动作 | 观测周期 | RL窗口动作执行周期 | 详细说明 |
 |---|---|---|---|---|---|
@@ -12,7 +14,7 @@
 
 ## 完整性与交付方式
 
-- Git直接包含三套源码、native源码和二进制、必要本地依赖、**全部11组模型与先验**、训练/评测模板、trace、IBP和Mahimahi源码、性能与失败证据、原始来源清单及许可证文件。
+- Git直接包含原三套源码、native源码和二进制、必要本地依赖、**原始11组模型与先验**、训练/评测模板、trace、IBP和Mahimahi源码、性能与失败证据、原始来源清单及许可证文件。后续研究新增checkpoint/replay仍在原实验存储，不在Git中，不能把证据中的来源路径当成已下载模型。
 - 完整Python3.6/TF1.14环境和定制内核安装包放在同一仓库的[Release](../../releases/tag/consolidated-20261018)。完整迁移包也包含上述源码与模型，可独立解压使用。它不依赖原五台服务器的路径。
 - Git与Release共同构成完整交付；直接clone尚未包含Python环境和内核deb。历史replay、所有旧checkpoint、逐包历史档案不是当前运行依赖，没有上传到GitHub。选定模型和必要先验均已包含，绝不是只有checkpoint路径的空索引。
 - [模型清单](docs/MODELS.md)、[原便携包说明](docs/PORTABLE_RELEASE.md)、[验证范围](docs/VALIDATION.md)、[试错记录](EXPLORATION_HISTORY.md)、[来源清单](manifest.json)。历史绝对路径仅说明来源，原实验目录已退役，不用于新运行。
@@ -88,4 +90,19 @@ V14四个浅队列动态条件MTP变化不足；V31仍有浅队列/高RTT吞吐�
 
 ## 下一步研究审阅
 
-请先读[当前研究状态与优先问题](docs/RESEARCH_REVIEW_BRIEF.md)。它区分已确认事实、待验证机制与最小实验；原始收敛快照固定在tag `consolidated-20261018`，本轮仅更新公开访问说明及研究交接，不修改算法或模型。
+请先读[当前研究状态与优先问题](docs/RESEARCH_REVIEW_BRIEF.md)。它区分已确认事实、待验证机制与最小实验。2026-10-26更新同步后续研究源码和小证据，没有为发布新增TCP实验或训练，也没有替换原模型。
+
+可直接检查：
+
+- [单动作研究框架及有限运行入口](frameworks/canopy_single/README.md)，包含明确的artifact/initializer QC模式及正常启动native源码；与原`baseline`身份不同。
+- [V31兼容校准实现与实验](docs/V31_COMPATIBLE_CRITIC_CALIBRATION.md)，新方案均需显式启用，价值门槛通过不等于网络性能收益。
+- [两组Orca全部144次冻结结果](evidence/scalar-20261025/evaluation_runs.csv)、[逐条件均值](evidence/scalar-20261025/evaluation_summary.csv)，保留full/trim10和失败方向，不只报告总体平均。
+- [16个checkpoint只读方向审计](evidence/scalar-direction-20261026/learner-outcome.json)和[可复现原奖励数值核查](tools/scalar_audit/audit.py)。Q网格和梯度是模型预测，不能冒充真实网络反事实。
+
+```sh
+# 本机数值/证据检查，无网络控制实验；需要NumPy
+python3 -m unittest discover -s tools -p 'test_v31*.py'
+python3 -m unittest discover -s tools/scalar_audit -p 'test_audit.py'
+python3 -m unittest discover -s tools/interval_reward -p 'test_shadow_reward.py'
+python3 tools/scalar_audit/audit.py --output diagnostics/scalar-offline-audit.json
+```

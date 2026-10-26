@@ -1,0 +1,16 @@
+{
+  "status": "PASS_LOCAL_NUMERICAL_AND_SCHEMA_TESTS",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_constant_density_integral_split_merge (test_shadow_reward.Tests.test_constant_density_integral_split_merge) ... ok\ntest_existing_empirical_summaries_not_fabricated_dense (test_shadow_reward.Tests.test_existing_empirical_summaries_not_fabricated_dense) ... ok\ntest_original_149_encoder_exact (test_shadow_reward.Tests.test_original_149_encoder_exact) ... ok\ntest_reward_identity_with_once_cost (test_shadow_reward.Tests.test_reward_identity_with_once_cost) ... ok\ntest_schema_is_explicit_reward_change (test_shadow_reward.Tests.test_schema_is_explicit_reward_change) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.131s\n\nOK\n",
+  "actual_tensorflow_status": "BLOCKED_LOCAL_NO_TENSORFLOW",
+  "new_tcp_runs": 0,
+  "actor_release": false,
+  "deviations": [
+    {
+      "event": "Initial existing-summary aggregation counted48 reports instead of24 unique runs",
+      "resolution": "Both original and downloaded audit copies existed; now deduplicates run_id only after full record equality check",
+      "network_failure": false
+    }
+  ]
+}

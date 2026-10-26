@@ -61,13 +61,13 @@ int main(int argc, char **argv)
         DBGPRINT(0,0,"[MAIN] Received %d args in OSM_v2\n", argc);
     }
     else
-	{
+    {
         DBGERROR("argc:%d\n",argc);
         for(int i=0;i<argc;i++)
-        	DBGERROR("argv[%d]:%s\n",i,argv[i]);
-		usage();
-		return 0;
-	}
+            DBGERROR("argv[%d]:%s\n",i,argv[i]);
+        usage();
+        return 0;
+    }
 
     srand(raw_timestamp());
 
@@ -80,19 +80,19 @@ int main(int argc, char **argv)
     }
     DBGPRINT(0,0,"[MAIN] Using trace_dir: %s\n", FINAL_TRACE_DIR);
 
-	signal(SIGSEGV, handler);   // install our handler
-	signal(SIGTERM, handler);   // install our handler
-	signal(SIGABRT, handler);   // install our handler
-	signal(SIGFPE, handler);   // install our handler
+    signal(SIGSEGV, handler);   // install our handler
+    signal(SIGTERM, handler);   // install our handler
+    signal(SIGABRT, handler);   // install our handler
+    signal(SIGFPE, handler);   // install our handler
     signal(SIGKILL,handler);   // install our handler
     int flow_num;
-	flow_num=FLOW_NUM;
-	client_port=atoi(argv[1]);
+    flow_num=FLOW_NUM;
+    client_port=atoi(argv[1]);
     path=argv[2];
     target=50;
     target_ratio=1;
     report_period=atoi(argv[3]);
-   	first_time=atoi(argv[4]);
+    first_time=atoi(argv[4]);
     scheme=argv[5];
     actor_id=atoi(argv[6]);
     downlink=argv[7];
@@ -123,7 +123,7 @@ int main(int argc, char **argv)
     DBGPRINT(0,0,"[MAIN] Training_session_idx=%d (rav_val: %s) in OSM_v2\n", training_session_idx, argv[29]);
 
     start_server(flow_num, client_port);
-	DBGMARK(DBGSERVER,5,"DONE!\n");
+    DBGMARK(DBGSERVER,5,"DONE!\n");
     shmdt(shared_memory);
     shmctl(shmid, IPC_RMID, NULL);
     shmdt(shared_memory_rl);
@@ -133,33 +133,33 @@ int main(int argc, char **argv)
 
 void usage()
 {
-	DBGMARK(0,0,"./server [port] [path to ddpg.py] [Report Period: 20 msec] [First Time: 1=yes(learn), 0=no(continue learning), 2=evaluate] [actor id=0, 1, ...] [downlink] [uplink] [one-way delay]\n");
+    DBGMARK(0,0,"./server [port] [path to ddpg.py] [Report Period: 20 msec] [First Time: 1=yes(learn), 0=no(continue learning), 2=evaluate] [actor id=0, 1, ...] [downlink] [uplink] [one-way delay]\n");
 }
 
 void start_server(int flow_num, int client_port)
 {
-	cFlow *flows;
+    cFlow *flows;
     int num_lines=0;
-	sInfo *info;
-	info = new sInfo;
-	flows = new cFlow[flow_num];
-	if(flows==NULL)
-	{
-		DBGMARK(0,0,"flow generation failed\n");
-		return;
-	}
+    sInfo *info;
+    info = new sInfo;
+    flows = new cFlow[flow_num];
+    if(flows==NULL)
+    {
+        DBGMARK(0,0,"flow generation failed\n");
+        return;
+    }
 
-	//threads
-	pthread_t data_thread;
-	pthread_t cnt_thread;
-	pthread_t timer_thread;
+    //threads
+    pthread_t data_thread;
+    pthread_t cnt_thread;
+    pthread_t timer_thread;
 
-	//Server address
-	struct sockaddr_in server_addr[FLOW_NUM];
-	//Client address
-	struct sockaddr_in client_addr[FLOW_NUM];
-	//Controller address
-	//struct sockaddr_in ctr_addr;
+    //Server address
+    struct sockaddr_in server_addr[FLOW_NUM];
+    //Client address
+    struct sockaddr_in client_addr[FLOW_NUM];
+    //Controller address
+    //struct sockaddr_in ctr_addr;
     for(int i=0;i<FLOW_NUM;i++)
     {
         memset(&server_addr[i],0,sizeof(server_addr[i]));
@@ -288,7 +288,7 @@ void start_server(int flow_num, int client_port)
     fd_set rset;
     FD_ZERO(&rset);
     //The maximum number of concurrent connections is 1
-	for(int i=0;i<FLOW_NUM;i++)
+    for(int i=0;i<FLOW_NUM;i++)
     {
         listen(sock[i],1);
         //To be used in select() function
@@ -320,9 +320,9 @@ void start_server(int flow_num, int client_port)
         return;
     }
 
-	int sin_size=sizeof(struct sockaddr_in);
-	while(flow_index<flow_num)
-	{
+    int sin_size=sizeof(struct sockaddr_in);
+    while(flow_index<flow_num)
+    {
         if (FD_ISSET(sock[flow_index], &rset))
         {
             int value=accept(sock[flow_index],(struct sockaddr *)&client_addr[flow_index],(socklen_t*)&sin_size);
@@ -404,7 +404,7 @@ void* CntThread(void* information)
         DBGPRINT(0,0,"Cannot get priority for the Data thread: %s\n",strerror(errno));
     }
     */
-	int ret1;
+    int ret1;
     double min_rtt_=0.0;
     double pacing_rate=0.0;
     double lost_bytes=0.0;
@@ -415,7 +415,7 @@ void* CntThread(void* information)
     double retrans_out=0.0;
     double max_packets_out=0.0;
 
-	int reuse = 1;
+    int reuse = 1;
     int pre_id=9230;
     int pre_id_tmp=0;
     if(!getenv("ORCA_JOINT_PROTOCOL")) { fprintf(stderr,"JOINT_PROTOCOL_REQUIRED\n"); abort(); }
@@ -485,7 +485,7 @@ void* CntThread(void* information)
     const char *control_header="time_us,state_id,action_id,percent,cwnd_before,cwnd_requested,return_code,socket,apply\n";
     if(write(control_log,control_header,strlen(control_header))!=(ssize_t)strlen(control_header)) abort();
     while(send_traffic)
-	{
+    {
        for(int i=0;i<flow_index;i++)
        {
            got_no_zero=0;
@@ -510,7 +510,8 @@ void* CntThread(void* information)
                     sample_previous=sample_clock.previous;
                     sample_mono=joint_monotonic_us();
                     double measured_thr=interval_rate.sample(sock_for_cnt[i],sample_sequence+1,sample_mono,
-                        double(orca_info.thr),orca_info.lost_bytes,orca_info.cnt,orca_info.thr_cnt);
+                        double(orca_info.thr),orca_info.lost_bytes,orca_info.cnt,orca_info.thr_cnt,
+                        orca_info.avg_urtt,orca_info.srtt_us,orca_info.min_rtt,orca_info.cwnd);
                     sample_wall=raw_timestamp();
                     reported_us=sample_clock.observe(sample_mono);
                     legacy_us=sample_mono-legacy_reference;
@@ -691,7 +692,7 @@ void* CntThread(void* information)
 void* DataThread(void* info)
 {
     /*
-	struct sched_param param;
+    struct sched_param param;
     param.__sched_priority=sched_get_priority_max(SCHED_RR);
     int policy=SCHED_RR;
     int s = pthread_setschedparam(pthread_self(), policy, &param);
@@ -707,102 +708,102 @@ void* DataThread(void* info)
     }*/
     //pthread_t send_msg_thread;
 
-	cFlow* flow = (cFlow*)info;
-	int sock_local = flow->flowinfo.sock;
-	char* src_ip;
-	char write_message[BUFSIZ+1];
-	char read_message[1024]={0};
-	int len;
-	char *savePtr;
-	char* dst_addr;
-	u64 loop;
-	u64  remaining_size;
+    cFlow* flow = (cFlow*)info;
+    int sock_local = flow->flowinfo.sock;
+    char* src_ip;
+    char write_message[BUFSIZ+1];
+    char read_message[1024]={0};
+    int len;
+    char *savePtr;
+    char* dst_addr;
+    u64 loop;
+    u64  remaining_size;
 
-	memset(write_message,1,BUFSIZ);
-	write_message[BUFSIZ]='\0';
-	/**
-	 * Get the RQ from client : {src_add} {flowid} {size} {dst_add}
-	 */
-	len=recv(sock_local,read_message,1024,0);
-	if(len<=0)
-	{
-		DBGMARK(DBGSERVER,1,"recv failed! \n");
-		close(sock_local);
-		return 0;
-	}
-	/**
-	 * For Now: we send the src IP in the RQ to!
-	 */
-	src_ip=strtok_r(read_message," ",&savePtr);
-	if(src_ip==NULL)
-	{
-		//discard message:
-		DBGMARK(DBGSERVER,1,"id: %d discarding this message:%s \n",flow->flowinfo.flowid,savePtr);
-		close(sock_local);
-		return 0;
-	}
-	char * isstr = strtok_r(NULL," ",&savePtr);
-	if(isstr==NULL)
-	{
-		//discard message:
-		DBGMARK(DBGSERVER,1,"id: %d discarding this message:%s \n",flow->flowinfo.flowid,savePtr);
-		close(sock_local);
-		return 0;
-	}
-	flow->flowinfo.flowid=atoi(isstr);
-	char* size_=strtok_r(NULL," ",&savePtr);
-	flow->flowinfo.size=1024*atoi(size_);
+    memset(write_message,1,BUFSIZ);
+    write_message[BUFSIZ]='\0';
+    /**
+     * Get the RQ from client : {src_add} {flowid} {size} {dst_add}
+     */
+    len=recv(sock_local,read_message,1024,0);
+    if(len<=0)
+    {
+        DBGMARK(DBGSERVER,1,"recv failed! \n");
+        close(sock_local);
+        return 0;
+    }
+    /**
+     * For Now: we send the src IP in the RQ to!
+     */
+    src_ip=strtok_r(read_message," ",&savePtr);
+    if(src_ip==NULL)
+    {
+        //discard message:
+        DBGMARK(DBGSERVER,1,"id: %d discarding this message:%s \n",flow->flowinfo.flowid,savePtr);
+        close(sock_local);
+        return 0;
+    }
+    char * isstr = strtok_r(NULL," ",&savePtr);
+    if(isstr==NULL)
+    {
+        //discard message:
+        DBGMARK(DBGSERVER,1,"id: %d discarding this message:%s \n",flow->flowinfo.flowid,savePtr);
+        close(sock_local);
+        return 0;
+    }
+    flow->flowinfo.flowid=atoi(isstr);
+    char* size_=strtok_r(NULL," ",&savePtr);
+    flow->flowinfo.size=1024*atoi(size_);
     DBGPRINT(DBGSERVER,4,"%s\n",size_);
-	dst_addr=strtok_r(NULL," ",&savePtr);
-	if(dst_addr==NULL)
-	{
-		//discard message:
-		DBGMARK(DBGSERVER,1,"id: %d discarding this message:%s \n",flow->flowinfo.flowid,savePtr);
-		close(sock_local);
-		return 0;
-	}
-	char* time_s_=strtok_r(NULL," ",&savePtr);
+    dst_addr=strtok_r(NULL," ",&savePtr);
+    if(dst_addr==NULL)
+    {
+        //discard message:
+        DBGMARK(DBGSERVER,1,"id: %d discarding this message:%s \n",flow->flowinfo.flowid,savePtr);
+        close(sock_local);
+        return 0;
+    }
+    char* time_s_=strtok_r(NULL," ",&savePtr);
     char *endptr;
     start_of_client=strtoimax(time_s_,&endptr,10);
-	got_message=1;
+    got_message=1;
     DBGPRINT(DBGSERVER,2,"Got message: %" PRIu64 " us\n",timestamp());
     flow->flowinfo.rem_size=flow->flowinfo.size;
     DBGPRINT(DBGSERVER,2,"time_rcv:%" PRIu64 " get:%s\n",start_of_client,time_s_);
 
-	//Get detailed address
-	strtok_r(src_ip,".",&savePtr);
-	if(dst_addr==NULL)
-	{
-		//discard message:
-		DBGMARK(DBGSERVER,1,"id: %d discarding this message:%s \n",flow->flowinfo.flowid,savePtr);
-		close(sock_local);
-		return 0;
-	}
+    //Get detailed address
+    strtok_r(src_ip,".",&savePtr);
+    if(dst_addr==NULL)
+    {
+        //discard message:
+        DBGMARK(DBGSERVER,1,"id: %d discarding this message:%s \n",flow->flowinfo.flowid,savePtr);
+        close(sock_local);
+        return 0;
+    }
 
-	//Calculate loops. In each loop, we can send BUFSIZ (8192) bytes of data
-	loop=flow->flowinfo.size/BUFSIZ*1024;
-	//Calculate remaining size to be sent
-	remaining_size=flow->flowinfo.size*1024-loop*BUFSIZ;
-	//Send data with 8192 bytes each loop
-	DBGPRINT(0,0,"Server is sending the traffic ...\n");
+    //Calculate loops. In each loop, we can send BUFSIZ (8192) bytes of data
+    loop=flow->flowinfo.size/BUFSIZ*1024;
+    //Calculate remaining size to be sent
+    remaining_size=flow->flowinfo.size*1024-loop*BUFSIZ;
+    //Send data with 8192 bytes each loop
+    DBGPRINT(0,0,"Server is sending the traffic ...\n");
 
    // for(u64 i=0;i<loop;i++)
-	while(send_traffic)
+    while(send_traffic)
     {
-		len=strlen(write_message);
-		while(len>0)
-		{
-			DBGMARK(DBGSERVER,5,"++++++\n");
-			len-=send(sock_local,write_message,strlen(write_message),0);
-		    usleep(50);
+        len=strlen(write_message);
+        while(len>0)
+        {
+            DBGMARK(DBGSERVER,5,"++++++\n");
+            len-=send(sock_local,write_message,strlen(write_message),0);
+            usleep(50);
             DBGMARK(DBGSERVER,5,"------\n");
-		}
+        }
         usleep(100);
-	}
-	flow->flowinfo.rem_size=0;
+    }
+    flow->flowinfo.rem_size=0;
     done=true;
     DBGPRINT(DBGSERVER,1,"done=true\n");
     close(sock_local);
     DBGPRINT(DBGSERVER,1,"done\n");
-	return((void *)0);
+    return((void *)0);
 }

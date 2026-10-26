@@ -1,0 +1,1535 @@
+{
+  "status": "COMPLETED_EXISTING_MEASUREMENT_CHECKS",
+  "schema": "shadow-rtt-existing-evidence-v1",
+  "raw_schema": "v31-observed-interval-orca-density-srtt-v1",
+  "shadow_schema": "shadow-v1-same-149-state-ack-sample-mean-rtt-density",
+  "check1": {
+    "name": "Independent boundary reward reconstruction",
+    "max_abs": 4.3798298321462426e-12,
+    "passed": true
+  },
+  "check2": {
+    "name": "Same-interval raw versus ACK-sample mean RTT utility ranking",
+    "runs": [
+      {
+        "run_id": "telemetry-s0-r0-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "valid": 245,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 1.2925216452686072e-12,
+        "time_weighted_density_difference": -0.016186162825273527,
+        "selected_interval_rank_reversals": 4,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s0-r0-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "valid": 1842,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 3.2951419370874646e-12,
+        "time_weighted_density_difference": 0.005941010090985164,
+        "selected_interval_rank_reversals": 1,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s0-r0-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "valid": 483,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 2.0099477637813834e-12,
+        "time_weighted_density_difference": -0.011956207482208835,
+        "selected_interval_rank_reversals": 4,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s0-r1-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "valid": 245,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 2.8415048092256256e-12,
+        "time_weighted_density_difference": -0.00870851167791556,
+        "selected_interval_rank_reversals": 6,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s0-r1-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "valid": 1837,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 3.6665115388245795e-12,
+        "time_weighted_density_difference": 0.007165885998285088,
+        "selected_interval_rank_reversals": 4,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s0-r1-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "valid": 483,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 2.6632029914708255e-12,
+        "time_weighted_density_difference": -0.011584878464605042,
+        "selected_interval_rank_reversals": 1,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s1-r0-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "valid": 246,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 1.872724197937714e-12,
+        "time_weighted_density_difference": 0.03387690399362742,
+        "selected_interval_rank_reversals": 0,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s1-r0-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "valid": 1844,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 3.654854197066015e-12,
+        "time_weighted_density_difference": 0.0022569353651974364,
+        "selected_interval_rank_reversals": 0,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s1-r0-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "valid": 488,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 2.180811087271195e-12,
+        "time_weighted_density_difference": 0.004029507033237107,
+        "selected_interval_rank_reversals": 2,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s1-r1-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "valid": 246,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 1.9789725413943415e-12,
+        "time_weighted_density_difference": 0.03504351156583011,
+        "selected_interval_rank_reversals": 1,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s1-r1-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "valid": 1844,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 3.557043548596539e-12,
+        "time_weighted_density_difference": 0.0018393015254505117,
+        "selected_interval_rank_reversals": 0,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s1-r1-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "valid": 488,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 2.1135315719789105e-12,
+        "time_weighted_density_difference": 0.004644210770144708,
+        "selected_interval_rank_reversals": 1,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s2-r0-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "valid": 246,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 3.0223046287858324e-12,
+        "time_weighted_density_difference": 0.0130662417300404,
+        "selected_interval_rank_reversals": 0,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s2-r0-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "valid": 1822,
+        "no_fresh": 21,
+        "reward_reconstruction_max_abs": 4.103717365921966e-12,
+        "time_weighted_density_difference": 0.001957748801645868,
+        "selected_interval_rank_reversals": 0,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s2-r0-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "valid": 488,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 3.0375701953744283e-12,
+        "time_weighted_density_difference": 0.00467356439523804,
+        "selected_interval_rank_reversals": 3,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s2-r1-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "valid": 246,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 3.0233593406592263e-12,
+        "time_weighted_density_difference": 0.014287893547085132,
+        "selected_interval_rank_reversals": 0,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s2-r1-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "valid": 1829,
+        "no_fresh": 15,
+        "reward_reconstruction_max_abs": 4.288902566429442e-12,
+        "time_weighted_density_difference": 0.0021621640650289695,
+        "selected_interval_rank_reversals": 0,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s2-r1-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "valid": 488,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 4.333200465111986e-12,
+        "time_weighted_density_difference": 0.0054745323886245326,
+        "selected_interval_rank_reversals": 1,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s3-r0-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "valid": 245,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 2.998712389512548e-12,
+        "time_weighted_density_difference": 0.0030454861561954993,
+        "selected_interval_rank_reversals": 2,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s3-r0-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "valid": 1797,
+        "no_fresh": 42,
+        "reward_reconstruction_max_abs": 2.4021895583814512e-12,
+        "time_weighted_density_difference": -5.8784295379028974e-05,
+        "selected_interval_rank_reversals": 0,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s3-r0-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "valid": 485,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 3.84525744578923e-12,
+        "time_weighted_density_difference": -6.437981566003522e-05,
+        "selected_interval_rank_reversals": 0,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s3-r1-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "valid": 245,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 2.9971580772780726e-12,
+        "time_weighted_density_difference": 0.00541927718121307,
+        "selected_interval_rank_reversals": 1,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s3-r1-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "valid": 1790,
+        "no_fresh": 45,
+        "reward_reconstruction_max_abs": 4.3798298321462426e-12,
+        "time_weighted_density_difference": -0.00020529727009203078,
+        "selected_interval_rank_reversals": 1,
+        "selected_interval_pairs": 10
+      },
+      {
+        "run_id": "telemetry-s3-r1-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "valid": 485,
+        "no_fresh": 0,
+        "reward_reconstruction_max_abs": 3.732014697277464e-12,
+        "time_weighted_density_difference": -0.00021624852167874794,
+        "selected_interval_rank_reversals": 1,
+        "selected_interval_pairs": 10
+      }
+    ],
+    "by_condition": [
+      {
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "runs": 6,
+        "mean_time_weighted_density_difference": 0.0013200089057664544,
+        "minimum_run_difference": -0.00021624852167874794,
+        "maximum_run_difference": 0.00541927718121307
+      },
+      {
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "runs": 6,
+        "mean_time_weighted_density_difference": 0.00693702415461049,
+        "minimum_run_difference": 0.001957748801645868,
+        "maximum_run_difference": 0.014287893547085132
+      },
+      {
+        "condition": "V17-anchor-Tconstant24-R20",
+        "runs": 6,
+        "mean_time_weighted_density_difference": -0.005888144060122118,
+        "minimum_run_difference": -0.016186162825273527,
+        "maximum_run_difference": 0.007165885998285088
+      },
+      {
+        "condition": "audit-constant24-R20-q0p5",
+        "runs": 6,
+        "mean_time_weighted_density_difference": 0.013615061708914552,
+        "minimum_run_difference": 0.0018393015254505117,
+        "maximum_run_difference": 0.03504351156583011
+      }
+    ],
+    "selected_intervals": [
+      {
+        "run_id": "telemetry-s0-r0-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 78,
+        "actual_dt_ms": 162.797,
+        "raw_density": 0.8282553249726206,
+        "shadow_density": 0.3628876845578574,
+        "interval_avg_rtt_ms": 72.731,
+        "endpoint_srtt_ms": 31.866
+      },
+      {
+        "run_id": "telemetry-s0-r0-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 68,
+        "actual_dt_ms": 162.823,
+        "raw_density": 0.7863220993212833,
+        "shadow_density": 0.3615967559602388,
+        "interval_avg_rtt_ms": 72.979,
+        "endpoint_srtt_ms": 33.56
+      },
+      {
+        "run_id": "telemetry-s0-r0-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 128,
+        "actual_dt_ms": 162.843,
+        "raw_density": 0.7805504857739898,
+        "shadow_density": 0.39847965176247363,
+        "interval_avg_rtt_ms": 66.216,
+        "endpoint_srtt_ms": 33.804
+      },
+      {
+        "run_id": "telemetry-s0-r0-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 82,
+        "actual_dt_ms": 162.808,
+        "raw_density": 0.7210765286863555,
+        "shadow_density": 0.36420016766836794,
+        "interval_avg_rtt_ms": 72.464,
+        "endpoint_srtt_ms": 36.6
+      },
+      {
+        "run_id": "telemetry-s0-r0-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 61,
+        "actual_dt_ms": 162.793,
+        "raw_density": 0.6729235888537676,
+        "shadow_density": 0.341383489597834,
+        "interval_avg_rtt_ms": 76.84,
+        "endpoint_srtt_ms": 38.982
+      },
+      {
+        "run_id": "telemetry-s0-r0-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 1264,
+        "actual_dt_ms": 21.586,
+        "raw_density": 0.8510084691298613,
+        "shadow_density": 0.7783727739782631,
+        "interval_avg_rtt_ms": 31.036,
+        "endpoint_srtt_ms": 28.387
+      },
+      {
+        "run_id": "telemetry-s0-r0-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 1533,
+        "actual_dt_ms": 21.589,
+        "raw_density": 0.8470409764543346,
+        "shadow_density": 0.7811338362515945,
+        "interval_avg_rtt_ms": 30.922,
+        "endpoint_srtt_ms": 28.516
+      },
+      {
+        "run_id": "telemetry-s0-r0-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 1579,
+        "actual_dt_ms": 21.588,
+        "raw_density": 0.8957037732536496,
+        "shadow_density": 0.8403318614404043,
+        "interval_avg_rtt_ms": 28.745,
+        "endpoint_srtt_ms": 26.968
+      },
+      {
+        "run_id": "telemetry-s0-r0-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 618,
+        "actual_dt_ms": 22.713,
+        "raw_density": 0.8965707380123732,
+        "shadow_density": 0.9433097886029543,
+        "interval_avg_rtt_ms": 26.491,
+        "endpoint_srtt_ms": 27.872
+      },
+      {
+        "run_id": "telemetry-s0-r0-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 1768,
+        "actual_dt_ms": 22.655,
+        "raw_density": 0.8149292518250953,
+        "shadow_density": 0.7702083559578323,
+        "interval_avg_rtt_ms": 29.885,
+        "endpoint_srtt_ms": 28.245
+      },
+      {
+        "run_id": "telemetry-s0-r0-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 329,
+        "actual_dt_ms": 82.802,
+        "raw_density": 0.9637983298469828,
+        "shadow_density": 0.777074191579172,
+        "interval_avg_rtt_ms": 33.215,
+        "endpoint_srtt_ms": 26.78
+      },
+      {
+        "run_id": "telemetry-s0-r0-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 91,
+        "actual_dt_ms": 82.809,
+        "raw_density": 0.8756827256809548,
+        "shadow_density": 0.6996409972870036,
+        "interval_avg_rtt_ms": 37.342,
+        "endpoint_srtt_ms": 29.835
+      },
+      {
+        "run_id": "telemetry-s0-r0-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 259,
+        "actual_dt_ms": 82.798,
+        "raw_density": 0.9197753011669421,
+        "shadow_density": 0.747714136818987,
+        "interval_avg_rtt_ms": 34.923,
+        "endpoint_srtt_ms": 28.39
+      },
+      {
+        "run_id": "telemetry-s0-r0-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 330,
+        "actual_dt_ms": 82.781,
+        "raw_density": 0.6547237503032811,
+        "shadow_density": 0.808602697380324,
+        "interval_avg_rtt_ms": 31.928,
+        "endpoint_srtt_ms": 39.432
+      },
+      {
+        "run_id": "telemetry-s0-r0-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 117,
+        "actual_dt_ms": 82.742,
+        "raw_density": 0.718606651103294,
+        "shadow_density": 0.5680099128577777,
+        "interval_avg_rtt_ms": 46.009,
+        "endpoint_srtt_ms": 36.367
+      },
+      {
+        "run_id": "telemetry-s0-r1-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 62,
+        "actual_dt_ms": 162.785,
+        "raw_density": 0.7625859269241525,
+        "shadow_density": 0.3277454915675218,
+        "interval_avg_rtt_ms": 80.264,
+        "endpoint_srtt_ms": 34.496
+      },
+      {
+        "run_id": "telemetry-s0-r1-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 217,
+        "actual_dt_ms": 162.851,
+        "raw_density": 0.6737691995590082,
+        "shadow_density": 0.2806185605312123,
+        "interval_avg_rtt_ms": 71.956,
+        "endpoint_srtt_ms": 29.969
+      },
+      {
+        "run_id": "telemetry-s0-r1-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 68,
+        "actual_dt_ms": 162.763,
+        "raw_density": 0.6716349938524097,
+        "shadow_density": 0.3500390784231875,
+        "interval_avg_rtt_ms": 74.24,
+        "endpoint_srtt_ms": 38.692
+      },
+      {
+        "run_id": "telemetry-s0-r1-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 52,
+        "actual_dt_ms": 162.786,
+        "raw_density": 0.6557381872796659,
+        "shadow_density": 0.3672763923387683,
+        "interval_avg_rtt_ms": 71.186,
+        "endpoint_srtt_ms": 39.871
+      },
+      {
+        "run_id": "telemetry-s0-r1-m160-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 181,
+        "actual_dt_ms": 162.744,
+        "raw_density": 0.5837030560239702,
+        "shadow_density": 0.295509542776245,
+        "interval_avg_rtt_ms": 68.375,
+        "endpoint_srtt_ms": 34.616
+      },
+      {
+        "run_id": "telemetry-s0-r1-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 1301,
+        "actual_dt_ms": 21.602,
+        "raw_density": 0.9396446663106812,
+        "shadow_density": 0.872764834817088,
+        "interval_avg_rtt_ms": 28.384,
+        "endpoint_srtt_ms": 26.225
+      },
+      {
+        "run_id": "telemetry-s0-r1-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 726,
+        "actual_dt_ms": 21.594,
+        "raw_density": 0.8552557338116769,
+        "shadow_density": 0.8039432904298605,
+        "interval_avg_rtt_ms": 29.485,
+        "endpoint_srtt_ms": 27.716
+      },
+      {
+        "run_id": "telemetry-s0-r1-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 226,
+        "actual_dt_ms": 21.59,
+        "raw_density": 0.8588775857788068,
+        "shadow_density": 0.9045419648228066,
+        "interval_avg_rtt_ms": 26.614,
+        "endpoint_srtt_ms": 28.029
+      },
+      {
+        "run_id": "telemetry-s0-r1-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 802,
+        "actual_dt_ms": 21.64,
+        "raw_density": 0.8980953796286492,
+        "shadow_density": 0.8539923430629849,
+        "interval_avg_rtt_ms": 28.957,
+        "endpoint_srtt_ms": 27.535
+      },
+      {
+        "run_id": "telemetry-s0-r1-m20-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 1443,
+        "actual_dt_ms": 21.61,
+        "raw_density": 0.8224554627297673,
+        "shadow_density": 0.8662491708095853,
+        "interval_avg_rtt_ms": 27.344,
+        "endpoint_srtt_ms": 28.8
+      },
+      {
+        "run_id": "telemetry-s0-r1-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 319,
+        "actual_dt_ms": 82.764,
+        "raw_density": 0.8292173679699545,
+        "shadow_density": 0.6711740423714774,
+        "interval_avg_rtt_ms": 39.015,
+        "endpoint_srtt_ms": 31.579
+      },
+      {
+        "run_id": "telemetry-s0-r1-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 82,
+        "actual_dt_ms": 82.742,
+        "raw_density": 0.8077531102959512,
+        "shadow_density": 0.652694258692735,
+        "interval_avg_rtt_ms": 40.19,
+        "endpoint_srtt_ms": 32.475
+      },
+      {
+        "run_id": "telemetry-s0-r1-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 226,
+        "actual_dt_ms": 82.753,
+        "raw_density": 0.8254672380453449,
+        "shadow_density": 0.6772320743738255,
+        "interval_avg_rtt_ms": 38.702,
+        "endpoint_srtt_ms": 31.752
+      },
+      {
+        "run_id": "telemetry-s0-r1-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 65,
+        "actual_dt_ms": 82.716,
+        "raw_density": 0.8346064775724698,
+        "shadow_density": 0.6869656688975168,
+        "interval_avg_rtt_ms": 38.197,
+        "endpoint_srtt_ms": 31.44
+      },
+      {
+        "run_id": "telemetry-s0-r1-m80-audit",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "decision": 132,
+        "actual_dt_ms": 82.826,
+        "raw_density": 0.7575761546618963,
+        "shadow_density": 0.6135261096501597,
+        "interval_avg_rtt_ms": 42.683,
+        "endpoint_srtt_ms": 34.567
+      },
+      {
+        "run_id": "telemetry-s1-r0-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 104,
+        "actual_dt_ms": 161.659,
+        "raw_density": 0.776922044460484,
+        "shadow_density": 0.9138243144864993,
+        "interval_avg_rtt_ms": 26.196,
+        "endpoint_srtt_ms": 30.927
+      },
+      {
+        "run_id": "telemetry-s1-r0-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 8,
+        "actual_dt_ms": 161.617,
+        "raw_density": 0.8352430234933725,
+        "shadow_density": 0.968606112136534,
+        "interval_avg_rtt_ms": 26.893,
+        "endpoint_srtt_ms": 31.187
+      },
+      {
+        "run_id": "telemetry-s1-r0-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 7,
+        "actual_dt_ms": 161.616,
+        "raw_density": 0.8648267724290992,
+        "shadow_density": 0.9971278485332901,
+        "interval_avg_rtt_ms": 26.461,
+        "endpoint_srtt_ms": 30.509
+      },
+      {
+        "run_id": "telemetry-s1-r0-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 53,
+        "actual_dt_ms": 162.687,
+        "raw_density": 0.8016614995899676,
+        "shadow_density": 0.9311849972132843,
+        "interval_avg_rtt_ms": 25.985,
+        "endpoint_srtt_ms": 30.542
+      },
+      {
+        "run_id": "telemetry-s1-r0-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 65,
+        "actual_dt_ms": 161.613,
+        "raw_density": 0.7766859520659389,
+        "shadow_density": 0.9024400293441026,
+        "interval_avg_rtt_ms": 26.229,
+        "endpoint_srtt_ms": 30.551
+      },
+      {
+        "run_id": "telemetry-s1-r0-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 1281,
+        "actual_dt_ms": 21.615,
+        "raw_density": 0.9311764349197201,
+        "shadow_density": 0.866848053643615,
+        "interval_avg_rtt_ms": 28.198,
+        "endpoint_srtt_ms": 25.979
+      },
+      {
+        "run_id": "telemetry-s1-r0-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 226,
+        "actual_dt_ms": 21.623,
+        "raw_density": 0.9482654319174949,
+        "shadow_density": 0.8899187042141474,
+        "interval_avg_rtt_ms": 28.027,
+        "endpoint_srtt_ms": 25.296
+      },
+      {
+        "run_id": "telemetry-s1-r0-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 1629,
+        "actual_dt_ms": 21.598,
+        "raw_density": 0.8639576480016166,
+        "shadow_density": 0.8127177301574067,
+        "interval_avg_rtt_ms": 27.905,
+        "endpoint_srtt_ms": 25.978
+      },
+      {
+        "run_id": "telemetry-s1-r0-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 791,
+        "actual_dt_ms": 21.584,
+        "raw_density": 0.8055782550102455,
+        "shadow_density": 0.7555349255662174,
+        "interval_avg_rtt_ms": 29.024,
+        "endpoint_srtt_ms": 27.221
+      },
+      {
+        "run_id": "telemetry-s1-r0-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 81,
+        "actual_dt_ms": 21.634,
+        "raw_density": 0.7545374971032643,
+        "shadow_density": 0.7049175990682898,
+        "interval_avg_rtt_ms": 29.698,
+        "endpoint_srtt_ms": 27.745
+      },
+      {
+        "run_id": "telemetry-s1-r0-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 220,
+        "actual_dt_ms": 81.628,
+        "raw_density": 0.9066773024271928,
+        "shadow_density": 0.9759992584641977,
+        "interval_avg_rtt_ms": 26.027,
+        "endpoint_srtt_ms": 28.257
+      },
+      {
+        "run_id": "telemetry-s1-r0-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 306,
+        "actual_dt_ms": 82.757,
+        "raw_density": 0.907461094092913,
+        "shadow_density": 0.9740082409930599,
+        "interval_avg_rtt_ms": 26.109,
+        "endpoint_srtt_ms": 28.175
+      },
+      {
+        "run_id": "telemetry-s1-r0-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 179,
+        "actual_dt_ms": 81.65,
+        "raw_density": 0.9106548182044834,
+        "shadow_density": 0.9757362825454972,
+        "interval_avg_rtt_ms": 26.183,
+        "endpoint_srtt_ms": 28.126
+      },
+      {
+        "run_id": "telemetry-s1-r0-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 95,
+        "actual_dt_ms": 81.63,
+        "raw_density": 0.8772849647225299,
+        "shadow_density": 0.9367907278335541,
+        "interval_avg_rtt_ms": 27.348,
+        "endpoint_srtt_ms": 29.203
+      },
+      {
+        "run_id": "telemetry-s1-r0-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 185,
+        "actual_dt_ms": 81.615,
+        "raw_density": 0.8812787659592832,
+        "shadow_density": 0.9368601293931528,
+        "interval_avg_rtt_ms": 27.351,
+        "endpoint_srtt_ms": 29.076
+      },
+      {
+        "run_id": "telemetry-s1-r1-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 20,
+        "actual_dt_ms": 161.616,
+        "raw_density": 0.8658657011180024,
+        "shadow_density": 0.9999999999986662,
+        "interval_avg_rtt_ms": 26.029,
+        "endpoint_srtt_ms": 30.38
+      },
+      {
+        "run_id": "telemetry-s1-r1-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 155,
+        "actual_dt_ms": 162.757,
+        "raw_density": 0.7215846623553247,
+        "shadow_density": 0.8467967818611726,
+        "interval_avg_rtt_ms": 26.191,
+        "endpoint_srtt_ms": 30.805
+      },
+      {
+        "run_id": "telemetry-s1-r1-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 6,
+        "actual_dt_ms": 161.662,
+        "raw_density": 0.8720499044087714,
+        "shadow_density": 0.9902402964387209,
+        "interval_avg_rtt_ms": 26.717,
+        "endpoint_srtt_ms": 30.338
+      },
+      {
+        "run_id": "telemetry-s1-r1-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 104,
+        "actual_dt_ms": 161.648,
+        "raw_density": 0.771439476041,
+        "shadow_density": 0.88949175700316,
+        "interval_avg_rtt_ms": 25.739,
+        "endpoint_srtt_ms": 30.267
+      },
+      {
+        "run_id": "telemetry-s1-r1-m160-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 92,
+        "actual_dt_ms": 162.743,
+        "raw_density": 0.7574152887861624,
+        "shadow_density": 0.8716851891540363,
+        "interval_avg_rtt_ms": 26.606,
+        "endpoint_srtt_ms": 30.62
+      },
+      {
+        "run_id": "telemetry-s1-r1-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 184,
+        "actual_dt_ms": 21.577,
+        "raw_density": 0.9154180187868509,
+        "shadow_density": 0.8370350540230572,
+        "interval_avg_rtt_ms": 28.905,
+        "endpoint_srtt_ms": 26.43
+      },
+      {
+        "run_id": "telemetry-s1-r1-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 1238,
+        "actual_dt_ms": 21.593,
+        "raw_density": 0.8823808278702979,
+        "shadow_density": 0.8146969135813376,
+        "interval_avg_rtt_ms": 29.059,
+        "endpoint_srtt_ms": 26.83
+      },
+      {
+        "run_id": "telemetry-s1-r1-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 581,
+        "actual_dt_ms": 21.614,
+        "raw_density": 0.6811600391952612,
+        "shadow_density": 0.6208222642433895,
+        "interval_avg_rtt_ms": 28.934,
+        "endpoint_srtt_ms": 26.371
+      },
+      {
+        "run_id": "telemetry-s1-r1-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 982,
+        "actual_dt_ms": 21.591,
+        "raw_density": 0.9873989091591703,
+        "shadow_density": 0.9280209290814021,
+        "interval_avg_rtt_ms": 28.286,
+        "endpoint_srtt_ms": 26.585
+      },
+      {
+        "run_id": "telemetry-s1-r1-m20-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 312,
+        "actual_dt_ms": 21.623,
+        "raw_density": 0.9350976554799765,
+        "shadow_density": 0.8761766055111806,
+        "interval_avg_rtt_ms": 28.154,
+        "endpoint_srtt_ms": 26.38
+      },
+      {
+        "run_id": "telemetry-s1-r1-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 222,
+        "actual_dt_ms": 81.607,
+        "raw_density": 0.8744196944760545,
+        "shadow_density": 0.9646895940375673,
+        "interval_avg_rtt_ms": 26.561,
+        "endpoint_srtt_ms": 29.303
+      },
+      {
+        "run_id": "telemetry-s1-r1-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 392,
+        "actual_dt_ms": 81.617,
+        "raw_density": 0.8981197279265319,
+        "shadow_density": 0.9758199146740045,
+        "interval_avg_rtt_ms": 25.693,
+        "endpoint_srtt_ms": 28.521
+      },
+      {
+        "run_id": "telemetry-s1-r1-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 419,
+        "actual_dt_ms": 82.666,
+        "raw_density": 0.891948603123817,
+        "shadow_density": 0.9631201811855419,
+        "interval_avg_rtt_ms": 26.907,
+        "endpoint_srtt_ms": 29.054
+      },
+      {
+        "run_id": "telemetry-s1-r1-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 417,
+        "actual_dt_ms": 81.61,
+        "raw_density": 0.9094852089143054,
+        "shadow_density": 0.975903614456733,
+        "interval_avg_rtt_ms": 26.237,
+        "endpoint_srtt_ms": 28.167
+      },
+      {
+        "run_id": "telemetry-s1-r1-m80-audit",
+        "condition": "audit-constant24-R20-q0p5",
+        "decision": 264,
+        "actual_dt_ms": 81.644,
+        "raw_density": 0.9202377888856574,
+        "shadow_density": 0.9848704589323635,
+        "interval_avg_rtt_ms": 26.326,
+        "endpoint_srtt_ms": 28.175
+      },
+      {
+        "run_id": "telemetry-s2-r0-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 64,
+        "actual_dt_ms": 161.608,
+        "raw_density": 0.46301830375282965,
+        "shadow_density": 0.6438473537913936,
+        "interval_avg_rtt_ms": 28.765,
+        "endpoint_srtt_ms": 39.999
+      },
+      {
+        "run_id": "telemetry-s2-r0-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 49,
+        "actual_dt_ms": 161.652,
+        "raw_density": 0.41203551954660644,
+        "shadow_density": 0.5902358070813414,
+        "interval_avg_rtt_ms": 29.839,
+        "endpoint_srtt_ms": 42.744
+      },
+      {
+        "run_id": "telemetry-s2-r0-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 174,
+        "actual_dt_ms": 161.657,
+        "raw_density": 0.22272518513072884,
+        "shadow_density": 0.38974575685302904,
+        "interval_avg_rtt_ms": 28.656,
+        "endpoint_srtt_ms": 50.145
+      },
+      {
+        "run_id": "telemetry-s2-r0-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 62,
+        "actual_dt_ms": 161.59,
+        "raw_density": 0.7543318176136425,
+        "shadow_density": 0.886318333358384,
+        "interval_avg_rtt_ms": 23.742,
+        "endpoint_srtt_ms": 30.843
+      },
+      {
+        "run_id": "telemetry-s2-r0-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 154,
+        "actual_dt_ms": 161.622,
+        "raw_density": 0.35145872248969834,
+        "shadow_density": 0.47946870994670837,
+        "interval_avg_rtt_ms": 28.735,
+        "endpoint_srtt_ms": 39.201
+      },
+      {
+        "run_id": "telemetry-s2-r0-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 1301,
+        "actual_dt_ms": 21.574,
+        "raw_density": -0.28505203903462617,
+        "shadow_density": -0.4462054263327582,
+        "interval_avg_rtt_ms": 35.824,
+        "endpoint_srtt_ms": 56.077
+      },
+      {
+        "run_id": "telemetry-s2-r0-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 1443,
+        "actual_dt_ms": 21.583,
+        "raw_density": -0.2566599376140372,
+        "shadow_density": -0.3290233737390464,
+        "interval_avg_rtt_ms": 25.91,
+        "endpoint_srtt_ms": 33.651
+      },
+      {
+        "run_id": "telemetry-s2-r0-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 209,
+        "actual_dt_ms": 21.591,
+        "raw_density": -1.0404898969752876,
+        "shadow_density": -0.9694091607362878,
+        "interval_avg_rtt_ms": 35.922,
+        "endpoint_srtt_ms": 33.468
+      },
+      {
+        "run_id": "telemetry-s2-r0-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 465,
+        "actual_dt_ms": 21.586,
+        "raw_density": -0.5332366628326841,
+        "shadow_density": -0.46651183249390543,
+        "interval_avg_rtt_ms": 38.903,
+        "endpoint_srtt_ms": 34.035
+      },
+      {
+        "run_id": "telemetry-s2-r0-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 31,
+        "actual_dt_ms": 21.612,
+        "raw_density": 0.6466159627177495,
+        "shadow_density": 0.7123491214308327,
+        "interval_avg_rtt_ms": 28.301,
+        "endpoint_srtt_ms": 31.178
+      },
+      {
+        "run_id": "telemetry-s2-r0-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 8,
+        "actual_dt_ms": 81.657,
+        "raw_density": 0.5952785867101291,
+        "shadow_density": 0.7757670542006403,
+        "interval_avg_rtt_ms": 26.146,
+        "endpoint_srtt_ms": 34.209
+      },
+      {
+        "run_id": "telemetry-s2-r0-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 172,
+        "actual_dt_ms": 81.601,
+        "raw_density": 0.45119097719678936,
+        "shadow_density": 0.5901226005705229,
+        "interval_avg_rtt_ms": 26.458,
+        "endpoint_srtt_ms": 34.605
+      },
+      {
+        "run_id": "telemetry-s2-r0-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 165,
+        "actual_dt_ms": 81.612,
+        "raw_density": 0.7096072417796483,
+        "shadow_density": 0.5713861992857597,
+        "interval_avg_rtt_ms": 32.6,
+        "endpoint_srtt_ms": 24.754
+      },
+      {
+        "run_id": "telemetry-s2-r0-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 133,
+        "actual_dt_ms": 81.626,
+        "raw_density": 0.26193438927332197,
+        "shadow_density": 0.3954232007991511,
+        "interval_avg_rtt_ms": 34.227,
+        "endpoint_srtt_ms": 51.67
+      },
+      {
+        "run_id": "telemetry-s2-r0-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 331,
+        "actual_dt_ms": 81.598,
+        "raw_density": 0.3988000997639857,
+        "shadow_density": 0.2850511264480497,
+        "interval_avg_rtt_ms": 36.725,
+        "endpoint_srtt_ms": 25.379
+      },
+      {
+        "run_id": "telemetry-s2-r1-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 62,
+        "actual_dt_ms": 161.627,
+        "raw_density": 0.6969558109291255,
+        "shadow_density": 0.976030192973927,
+        "interval_avg_rtt_ms": 26.043,
+        "endpoint_srtt_ms": 36.761
+      },
+      {
+        "run_id": "telemetry-s2-r1-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 174,
+        "actual_dt_ms": 161.629,
+        "raw_density": 0.2167363240657073,
+        "shadow_density": 0.4131667865621675,
+        "interval_avg_rtt_ms": 30.345,
+        "endpoint_srtt_ms": 57.847
+      },
+      {
+        "run_id": "telemetry-s2-r1-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 93,
+        "actual_dt_ms": 161.611,
+        "raw_density": 0.4791024878759221,
+        "shadow_density": 0.639196982664592,
+        "interval_avg_rtt_ms": 27.586,
+        "endpoint_srtt_ms": 36.804
+      },
+      {
+        "run_id": "telemetry-s2-r1-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 49,
+        "actual_dt_ms": 161.623,
+        "raw_density": 0.4001808962549019,
+        "shadow_density": 0.5533723872729777,
+        "interval_avg_rtt_ms": 30.603,
+        "endpoint_srtt_ms": 42.318
+      },
+      {
+        "run_id": "telemetry-s2-r1-m160-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 87,
+        "actual_dt_ms": 161.63,
+        "raw_density": 0.44935406324060434,
+        "shadow_density": 0.6013331687652625,
+        "interval_avg_rtt_ms": 28.668,
+        "endpoint_srtt_ms": 38.364
+      },
+      {
+        "run_id": "telemetry-s2-r1-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 1292,
+        "actual_dt_ms": 21.648,
+        "raw_density": 0.638447530071455,
+        "shadow_density": 0.574772891924425,
+        "interval_avg_rtt_ms": 29.649,
+        "endpoint_srtt_ms": 26.692
+      },
+      {
+        "run_id": "telemetry-s2-r1-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 253,
+        "actual_dt_ms": 21.571,
+        "raw_density": 0.9891328871178859,
+        "shadow_density": 0.9321733583760253,
+        "interval_avg_rtt_ms": 28.219,
+        "endpoint_srtt_ms": 26.594
+      },
+      {
+        "run_id": "telemetry-s2-r1-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 89,
+        "actual_dt_ms": 21.585,
+        "raw_density": 0.4525673776202419,
+        "shadow_density": 0.507450097050334,
+        "interval_avg_rtt_ms": 25.376,
+        "endpoint_srtt_ms": 29.495
+      },
+      {
+        "run_id": "telemetry-s2-r1-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 100,
+        "actual_dt_ms": 21.594,
+        "raw_density": 0.3897518617783354,
+        "shadow_density": 0.336913492677523,
+        "interval_avg_rtt_ms": 45.261,
+        "endpoint_srtt_ms": 39.125
+      },
+      {
+        "run_id": "telemetry-s2-r1-m20-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 87,
+        "actual_dt_ms": 21.593,
+        "raw_density": 0.3564690929176689,
+        "shadow_density": 0.31145664305493725,
+        "interval_avg_rtt_ms": 36.722,
+        "endpoint_srtt_ms": 32.085
+      },
+      {
+        "run_id": "telemetry-s2-r1-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 8,
+        "actual_dt_ms": 81.667,
+        "raw_density": 0.6485630060307036,
+        "shadow_density": 0.8215090375714713,
+        "interval_avg_rtt_ms": 25.071,
+        "endpoint_srtt_ms": 33.367
+      },
+      {
+        "run_id": "telemetry-s2-r1-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 164,
+        "actual_dt_ms": 81.608,
+        "raw_density": 0.5235844477885189,
+        "shadow_density": 0.664774217430712,
+        "interval_avg_rtt_ms": 26.704,
+        "endpoint_srtt_ms": 33.905
+      },
+      {
+        "run_id": "telemetry-s2-r1-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 31,
+        "actual_dt_ms": 82.749,
+        "raw_density": 0.5072214934391861,
+        "shadow_density": 0.6396693252897605,
+        "interval_avg_rtt_ms": 27.485,
+        "endpoint_srtt_ms": 34.662
+      },
+      {
+        "run_id": "telemetry-s2-r1-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 185,
+        "actual_dt_ms": 81.589,
+        "raw_density": 0.46762007018796675,
+        "shadow_density": 0.337795940438514,
+        "interval_avg_rtt_ms": 36.567,
+        "endpoint_srtt_ms": 26.415
+      },
+      {
+        "run_id": "telemetry-s2-r1-m80-audit",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "decision": 125,
+        "actual_dt_ms": 81.633,
+        "raw_density": 0.4673749476010025,
+        "shadow_density": 0.5967281148405401,
+        "interval_avg_rtt_ms": 29.74,
+        "endpoint_srtt_ms": 37.971
+      },
+      {
+        "run_id": "telemetry-s3-r0-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 83,
+        "actual_dt_ms": 162.766,
+        "raw_density": 0.7588934601904951,
+        "shadow_density": 0.5721123939235571,
+        "interval_avg_rtt_ms": 167.587,
+        "endpoint_srtt_ms": 123.9
+      },
+      {
+        "run_id": "telemetry-s3-r0-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 37,
+        "actual_dt_ms": 162.768,
+        "raw_density": 0.6362523077342127,
+        "shadow_density": 0.4827213530160006,
+        "interval_avg_rtt_ms": 166.564,
+        "endpoint_srtt_ms": 108.344
+      },
+      {
+        "run_id": "telemetry-s3-r0-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 51,
+        "actual_dt_ms": 162.822,
+        "raw_density": 0.7186882045863601,
+        "shadow_density": 0.5735305829318624,
+        "interval_avg_rtt_ms": 158.316,
+        "endpoint_srtt_ms": 118.059
+      },
+      {
+        "run_id": "telemetry-s3-r0-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 91,
+        "actual_dt_ms": 162.801,
+        "raw_density": 0.741085417528665,
+        "shadow_density": 0.5995385203791528,
+        "interval_avg_rtt_ms": 156.168,
+        "endpoint_srtt_ms": 108.837
+      },
+      {
+        "run_id": "telemetry-s3-r0-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 13,
+        "actual_dt_ms": 161.688,
+        "raw_density": 0.8780964458183828,
+        "shadow_density": 0.9985796240247217,
+        "interval_avg_rtt_ms": 126.551,
+        "endpoint_srtt_ms": 143.915
+      },
+      {
+        "run_id": "telemetry-s3-r0-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 1775,
+        "actual_dt_ms": 21.602,
+        "raw_density": 0.5151004060630139,
+        "shadow_density": 0.47505734305771474,
+        "interval_avg_rtt_ms": 139.828,
+        "endpoint_srtt_ms": 128.958
+      },
+      {
+        "run_id": "telemetry-s3-r0-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 1480,
+        "actual_dt_ms": 21.64,
+        "raw_density": 0.19454628056860435,
+        "shadow_density": 0.15984088885347073,
+        "interval_avg_rtt_ms": 155.568,
+        "endpoint_srtt_ms": 127.816
+      },
+      {
+        "run_id": "telemetry-s3-r0-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 495,
+        "actual_dt_ms": 21.638,
+        "raw_density": 0.39368241057417896,
+        "shadow_density": 0.38748371321811614,
+        "interval_avg_rtt_ms": 128.45,
+        "endpoint_srtt_ms": 121.323
+      },
+      {
+        "run_id": "telemetry-s3-r0-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 992,
+        "actual_dt_ms": 22.662,
+        "raw_density": 0.06264892772023126,
+        "shadow_density": 0.05693320377623301,
+        "interval_avg_rtt_ms": 139.12,
+        "endpoint_srtt_ms": 109.808
+      },
+      {
+        "run_id": "telemetry-s3-r0-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 27,
+        "actual_dt_ms": 22.749,
+        "raw_density": 0.3964936707343094,
+        "shadow_density": 0.3913065365382276,
+        "interval_avg_rtt_ms": 141.563,
+        "endpoint_srtt_ms": 139.711
+      },
+      {
+        "run_id": "telemetry-s3-r0-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 481,
+        "actual_dt_ms": 82.776,
+        "raw_density": 0.4251969103055447,
+        "shadow_density": 0.34624098917232865,
+        "interval_avg_rtt_ms": 155.161,
+        "endpoint_srtt_ms": 117.358
+      },
+      {
+        "run_id": "telemetry-s3-r0-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 442,
+        "actual_dt_ms": 82.759,
+        "raw_density": 0.35985590590824046,
+        "shadow_density": 0.29608845983084003,
+        "interval_avg_rtt_ms": 153.56,
+        "endpoint_srtt_ms": 116.397
+      },
+      {
+        "run_id": "telemetry-s3-r0-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 95,
+        "actual_dt_ms": 81.667,
+        "raw_density": 0.6469901637333915,
+        "shadow_density": 0.708854249572025,
+        "interval_avg_rtt_ms": 125.801,
+        "endpoint_srtt_ms": 138.43
+      },
+      {
+        "run_id": "telemetry-s3-r0-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 473,
+        "actual_dt_ms": 81.624,
+        "raw_density": 0.30957799758811716,
+        "shadow_density": 0.24957118716988425,
+        "interval_avg_rtt_ms": 156.728,
+        "endpoint_srtt_ms": 125.223
+      },
+      {
+        "run_id": "telemetry-s3-r0-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 207,
+        "actual_dt_ms": 82.695,
+        "raw_density": 0.3000593976093283,
+        "shadow_density": 0.2456154408236911,
+        "interval_avg_rtt_ms": 202.101,
+        "endpoint_srtt_ms": 165.431
+      },
+      {
+        "run_id": "telemetry-s3-r1-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 51,
+        "actual_dt_ms": 162.807,
+        "raw_density": 0.7752711429210043,
+        "shadow_density": 0.6033240324590687,
+        "interval_avg_rtt_ms": 162.334,
+        "endpoint_srtt_ms": 117.611
+      },
+      {
+        "run_id": "telemetry-s3-r1-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 93,
+        "actual_dt_ms": 162.736,
+        "raw_density": 0.6689472083577823,
+        "shadow_density": 0.5105707412697281,
+        "interval_avg_rtt_ms": 165.494,
+        "endpoint_srtt_ms": 126.239
+      },
+      {
+        "run_id": "telemetry-s3-r1-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 37,
+        "actual_dt_ms": 162.885,
+        "raw_density": 0.6687941519031992,
+        "shadow_density": 0.533465968773499,
+        "interval_avg_rtt_ms": 158.446,
+        "endpoint_srtt_ms": 110.617
+      },
+      {
+        "run_id": "telemetry-s3-r1-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 192,
+        "actual_dt_ms": 162.743,
+        "raw_density": 0.4011715204857709,
+        "shadow_density": 0.2686150391871765,
+        "interval_avg_rtt_ms": 222.69,
+        "endpoint_srtt_ms": 149.108
+      },
+      {
+        "run_id": "telemetry-s3-r1-m160-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 181,
+        "actual_dt_ms": 162.74,
+        "raw_density": 0.43207022611286594,
+        "shadow_density": 0.3125046687022315,
+        "interval_avg_rtt_ms": 181.847,
+        "endpoint_srtt_ms": 131.525
+      },
+      {
+        "run_id": "telemetry-s3-r1-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 1772,
+        "actual_dt_ms": 21.584,
+        "raw_density": 0.6862109187636891,
+        "shadow_density": 0.6329309263255909,
+        "interval_avg_rtt_ms": 136.917,
+        "endpoint_srtt_ms": 125.961
+      },
+      {
+        "run_id": "telemetry-s3-r1-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 1477,
+        "actual_dt_ms": 21.669,
+        "raw_density": 0.23922713259145184,
+        "shadow_density": 0.19450574022439257,
+        "interval_avg_rtt_ms": 161.377,
+        "endpoint_srtt_ms": 131.209
+      },
+      {
+        "run_id": "telemetry-s3-r1-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 1799,
+        "actual_dt_ms": 21.61,
+        "raw_density": 0.5345403913326411,
+        "shadow_density": 0.5077834757709682,
+        "interval_avg_rtt_ms": 139.464,
+        "endpoint_srtt_ms": 132.483
+      },
+      {
+        "run_id": "telemetry-s3-r1-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 1290,
+        "actual_dt_ms": 21.674,
+        "raw_density": 0.31264418196923166,
+        "shadow_density": 0.28955806308585647,
+        "interval_avg_rtt_ms": 136.363,
+        "endpoint_srtt_ms": 123.233
+      },
+      {
+        "run_id": "telemetry-s3-r1-m20-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 1762,
+        "actual_dt_ms": 21.627,
+        "raw_density": 0.2722145601023161,
+        "shadow_density": 0.2947621854534119,
+        "interval_avg_rtt_ms": 133.369,
+        "endpoint_srtt_ms": 144.416
+      },
+      {
+        "run_id": "telemetry-s3-r1-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 172,
+        "actual_dt_ms": 82.757,
+        "raw_density": 0.559086643225751,
+        "shadow_density": 0.49260633458699477,
+        "interval_avg_rtt_ms": 143.362,
+        "endpoint_srtt_ms": 114.353
+      },
+      {
+        "run_id": "telemetry-s3-r1-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 164,
+        "actual_dt_ms": 81.648,
+        "raw_density": 0.6453821478879624,
+        "shadow_density": 0.5836163656837274,
+        "interval_avg_rtt_ms": 167.14,
+        "endpoint_srtt_ms": 151.144
+      },
+      {
+        "run_id": "telemetry-s3-r1-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 95,
+        "actual_dt_ms": 81.663,
+        "raw_density": 0.595705206805871,
+        "shadow_density": 0.6444900519226795,
+        "interval_avg_rtt_ms": 126.761,
+        "endpoint_srtt_ms": 137.142
+      },
+      {
+        "run_id": "telemetry-s3-r1-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 355,
+        "actual_dt_ms": 81.681,
+        "raw_density": 0.48904182037204813,
+        "shadow_density": 0.4427696142893721,
+        "interval_avg_rtt_ms": 148.925,
+        "endpoint_srtt_ms": 134.834
+      },
+      {
+        "run_id": "telemetry-s3-r1-m80-audit",
+        "condition": "V17-NYC-bus-R100-q1p0",
+        "decision": 380,
+        "actual_dt_ms": 81.714,
+        "raw_density": 0.29976503414350786,
+        "shadow_density": 0.2567750573895635,
+        "interval_avg_rtt_ms": 147.463,
+        "endpoint_srtt_ms": 126.285
+      }
+    ],
+    "selected_pair_rank_reversals": 33,
+    "selected_pairs": 240,
+    "selection": "Prior report retained5 largest utility differences per run. Deliberately selected diagnostic subset, not population reversal estimate."
+  },
+  "critic_status": "BLOCKED_LOCAL_NO_DENSE_NPZ_OR_TENSORFLOW",
+  "actor_release": false,
+  "new_tcp_runs": 0,
+  "next": "Run shadow_reward_audit.py on existing V38 actor logs; dense exports stay cloud, only manifests transfer. Then one-step same-reward TD calibration with frozen149 actor/BN.",
+  "limitations": [
+    "ACK-sample average RTT is not physical-time RTT mean or tail delay",
+    "Observed peak normalization remains unchanged",
+    "Raw and shadow finite-horizon returns are different objectives; old raw-Q tail must not label shadow-Q",
+    "No fitted critic, training improvement or causal Q claim"
+  ],
+  "source_files": {
+    "@LOCAL_WORKSPACE@\\experiments\\v38-stage0-20261024\\canopy-actor1-audit-telemetry-analysis.json": {
+      "bytes": 54853,
+      "sha256": "b6c577d4a092d33f24c68710cf34866cafa69fe38f7d8ed29c515318be259aa4"
+    },
+    "@LOCAL_WORKSPACE@\\experiments\\v38-stage0-20261024\\canopy-actor1-telemetry-analysis.json": {
+      "bytes": 52776,
+      "sha256": "f25960f0e3bea6c33c1d6617ec3caf628ff639c454aecd5fdca65eda00b773b5"
+    },
+    "@LOCAL_WORKSPACE@\\experiments\\v38-stage0-20261024\\canopy-actor2-audit-telemetry-analysis.json": {
+      "bytes": 56574,
+      "sha256": "7bbc8b3bba21de2e68068b674df0e728db835e519ed95680e368205e8d3a7752"
+    },
+    "@LOCAL_WORKSPACE@\\experiments\\v38-stage0-20261024\\canopy-actor2-telemetry-analysis.json": {
+      "bytes": 54268,
+      "sha256": "11f8d04421aa110067242dfd1fcf3506353ae1601a57c8f891ae51413facc529"
+    },
+    "@LOCAL_WORKSPACE@\\experiments\\v38-stage0-20261024\\canopy-actor3-audit-telemetry-analysis.json": {
+      "bytes": 58568,
+      "sha256": "3fa9697e82d2ca23f78acb88843c2609c0d9f6b3844bbda60ec98b668cfa79b8"
+    },
+    "@LOCAL_WORKSPACE@\\experiments\\v38-stage0-20261024\\canopy-actor3-telemetry-analysis.json": {
+      "bytes": 56216,
+      "sha256": "9343f752a3b54c267160dbfe86cb24a4b1f4d298eee6e3f1b5d885dea739f558"
+    },
+    "@LOCAL_WORKSPACE@\\experiments\\v38-stage0-20261024\\canopy-actor4-audit-telemetry-analysis.json": {
+      "bytes": 58829,
+      "sha256": "f3cf224d837ba6881f68ca0ab179f15a0998bec4c05e05e716bb1fa68c4e06ba"
+    },
+    "@LOCAL_WORKSPACE@\\experiments\\v38-stage0-20261024\\canopy-actor4-telemetry-analysis.json": {
+      "bytes": 56441,
+      "sha256": "1b40bf792a6b3dfc4b9979e379753e91cf86cce45443db6a132ed4cf22d8b687"
+    }
+  }
+}

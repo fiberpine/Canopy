@@ -1,0 +1,280 @@
+{
+  "status": "PARTIAL_REPRODUCIBLE_OPTIMIZER_NO_ACTOR_RELEASE",
+  "date": "2026-10-24",
+  "execution_base": "902520bc79bcfd21fa4b115942b7e0d5ca0dc2d9",
+  "cloud_root": "@EXPERIMENT@",
+  "local_evidence": "@LOCAL_WORKSPACE@\\experiments\\v38-followup-20261024",
+  "optimizer": {
+    "opt_in_flag": "independent_critic_adam_v34",
+    "default": false,
+    "origin": "Previously verified V34 independent critic Adam; adapted opt-in reset for same-process legacy graphs",
+    "AA_q_difference_at_1_10_100": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "centering_null": {
+      "td_max_abs": 1.1920928955078125e-05,
+      "gradient_max_abs": 2.86102294921875e-06,
+      "short100_q_max_abs": 0.01616644859313965,
+      "short100_within_registered_tolerance": true
+    },
+    "independent_fresh_clock_check": "PASS9 real TF1 fixtures; actual149-state healthy initialization67 tensors",
+    "D0_refit_same_seed_all_saved_Q_grid_difference": 0.0
+  },
+  "d0": {
+    "data": "Same120 preserved one-shot TCP datasets; phase0 training8135, phase1 holdout7780",
+    "architecture": "Healthy V31 actor/BN frozen; critics/targets fresh",
+    "critic_iterations_per_arm": 5000,
+    "critic_optimizer_ops_per_arm": 10000,
+    "actor_updates": 0,
+    "arms": {
+      "raw_zero_prior": {
+        "heldout_RMSE": 85.50425306955974,
+        "window_Q1_gradient_cosine_to_source": -0.5789248943328857
+      },
+      "raw_global_bias_prior": {
+        "heldout_RMSE": 40.63237730662028,
+        "window_Q1_gradient_cosine_to_source": -0.5676171183586121
+      },
+      "environment_centered_zero_prior": {
+        "heldout_RMSE": 36.42969190778844,
+        "window_Q1_gradient_cosine_to_source": -0.5057059526443481
+      }
+    },
+    "limits": "One fitting seed; proxy20s return+source tail, not true Q"
+  },
+  "normalizer": {
+    "mode": "OFFLINE_ONLY",
+    "horizon": "Past real boundaries spanning at least max160ms,current sRTT",
+    "shallow24_R20_20ms_raw_peaks_mbps": [
+      55.251308173188,
+      54.7250243156872
+    ],
+    "smoothed_peaks_mbps": [
+      26.66068274270379,
+      26.500179537365167
+    ],
+    "remaining_deep160_peak_mbps": 30.03,
+    "decision": "NOT_DEPLOYED; partial suppression, retains MTP dependence and historical peak. No state/reward schema silently changed."
+  },
+  "causal_window_probe": {
+    "completed": 72,
+    "network_failures": 0,
+    "smoke_seconds": 40,
+    "seconds_per_connection": 40,
+    "scenes": 4,
+    "periods_ms": [
+      20,
+      80,
+      160
+    ],
+    "one_action_window_deltas": [
+      -0.1,
+      0,
+      0.1
+    ],
+    "repeats": 2,
+    "NN_architecture_and_action_mapping_unchanged": true,
+    "hidden_observations": 0,
+    "nonzero_probes_lost_to_native_rounding": 0,
+    "parent_forward_tolerance": 2e-05,
+    "parent_forward_verified_max": 1.9919127225875854e-05,
+    "batched_context_rechecks": 5,
+    "source_association": {
+      "equal_block_score": -0.034492746419163056,
+      "block_scores": [
+        -0.030190031472287406,
+        0.00810090177268652,
+        -0.5681644342454916,
+        -0.8826100441075931,
+        0.8677285799967374,
+        0.494918813620809,
+        0.09895110173045402,
+        -0.26467685864861923
+      ],
+      "bootstrap_block_ci95": [
+        -0.4000424095840878,
+        0.31928035308544866
+      ],
+      "randomization_p_two_sided": 0.855036240939765,
+      "blocks": 8,
+      "period_triplets": 24,
+      "interpretation": "Positive score supports window direction. Exploratory sparse blocks, not exact per-state causal Q or multi-seed validation"
+    },
+    "source_Q1_secondary": {
+      "equal_block_score": -0.048033519953064,
+      "block_scores": [
+        -0.23689975915676095,
+        0.7158406290350561,
+        -0.5681644342454916,
+        -0.8826100441075931,
+        0.5975276855782194,
+        0.11179651139609677,
+        -0.2601153612797586,
+        0.13835661315571998
+      ],
+      "bootstrap_block_ci95": [
+        -0.40291370437786633,
+        0.3127940378544121
+      ],
+      "randomization_p_two_sided": 0.8037990502374407,
+      "blocks": 8,
+      "period_triplets": 24,
+      "interpretation": "Positive score supports window direction. Exploratory sparse blocks, not exact per-state causal Q or multi-seed validation"
+    },
+    "source_Q2_secondary": {
+      "equal_block_score": -0.02577589109262246,
+      "block_scores": [
+        -0.011574069274933346,
+        -0.7058957536545186,
+        -0.8848013478794243,
+        -0.6961921391171472,
+        0.8677285799967374,
+        1.3855179229926111,
+        0.4375910105370058,
+        -0.5985813323413108
+      ],
+      "bootstrap_block_ci95": [
+        -0.5548859704243043,
+        0.5402943182030656
+      ],
+      "randomization_p_two_sided": 0.8940264933766559,
+      "blocks": 8,
+      "period_triplets": 24,
+      "interpretation": "Positive score supports window direction. Exploratory sparse blocks, not exact per-state causal Q or multi-seed validation"
+    },
+    "fitted_associations": {
+      "raw_zero_prior": {
+        "equal_block_score": -0.03169806000910534,
+        "block_scores": [
+          0.2485943490675467,
+          -0.39797140573733575,
+          -0.19290016523709905,
+          -0.1891592300788005,
+          0.1645972544244296,
+          0.28852594343528015,
+          0.11866471773014864,
+          -0.2939359436770126
+        ],
+        "bootstrap_block_ci95": [
+          -0.20831573900957048,
+          0.13727927957128136
+        ],
+        "randomization_p_two_sided": 0.7590602349412647,
+        "blocks": 8,
+        "period_triplets": 24,
+        "interpretation": "Positive score supports window direction. Exploratory sparse blocks, not exact per-state causal Q or multi-seed validation"
+      },
+      "raw_global_bias_prior": {
+        "equal_block_score": -0.03226206329509465,
+        "block_scores": [
+          0.1949646759004775,
+          -0.07701702579252283,
+          -0.26016454726010113,
+          -0.17716638612315608,
+          0.0886008133747141,
+          0.056222553049713665,
+          0.052409971190043446,
+          -0.13594656069992583
+        ],
+        "bootstrap_block_ci95": [
+          -0.13275546178591324,
+          0.0652171952810558
+        ],
+        "randomization_p_two_sided": 0.5821044738815296,
+        "blocks": 8,
+        "period_triplets": 24,
+        "interpretation": "Positive score supports window direction. Exploratory sparse blocks, not exact per-state causal Q or multi-seed validation"
+      },
+      "environment_centered_zero_prior": {
+        "equal_block_score": -0.03798207558688834,
+        "block_scores": [
+          0.168824726994557,
+          -0.2674480831802985,
+          -0.1403052520602849,
+          -0.0958349090634011,
+          0.06683990371348378,
+          0.0013759849095357883,
+          0.03856639428262757,
+          -0.0758753702913263
+        ],
+        "bootstrap_block_ci95": [
+          -0.12849405378730258,
+          0.04865463014171603
+        ],
+        "randomization_p_two_sided": 0.5498625343664084,
+        "blocks": 8,
+        "period_triplets": 24,
+        "interpretation": "Positive score supports window direction. Exploratory sparse blocks, not exact per-state causal Q or multi-seed validation"
+      }
+    },
+    "inference": "All block intervals include0. Window value directions remain unidentified with this budget. This does not prove wrong critic or ineffective window control.",
+    "cpu": "NOT_MEASURED_MATCHED_ENDPOINTS",
+    "source_training_seeds": 1,
+    "new_online_training_runs": 0
+  },
+  "go_no_go": {
+    "large_joint_training": false,
+    "reason": "Repeatability fixed, factual value-guidance and network/CPU benefit not verified. Do not select model on RMSE alone.",
+    "next": "Validate a SACK-aware delivery statistic at original decision boundaries and its schema; retain original V31 and do not silently replace measurement or combine reward/exploration changes."
+  },
+  "closure": [
+    {
+      "status": "PASS_CLOSED_PROTECTED_MODELS",
+      "host": "VM-0-15-ubuntu",
+      "epoch": 1792810572.5300593,
+      "owned_live_processes": [],
+      "owned_shared_memory": [],
+      "checked_model_files": 51,
+      "model_mismatches": [],
+      "free_bytes": 49501814784,
+      "scope": "This experiment only; servers remain running, no shutdown performed"
+    },
+    {
+      "status": "PASS_CLOSED_PROTECTED_MODELS",
+      "host": "VM-0-3-ubuntu",
+      "epoch": 1792810573.976987,
+      "owned_live_processes": [],
+      "owned_shared_memory": [],
+      "checked_model_files": 51,
+      "model_mismatches": [],
+      "free_bytes": 41379545088,
+      "scope": "This experiment only; servers remain running, no shutdown performed"
+    },
+    {
+      "status": "PASS_CLOSED_PROTECTED_MODELS",
+      "host": "VM-0-5-ubuntu",
+      "epoch": 1792810574.933734,
+      "owned_live_processes": [],
+      "owned_shared_memory": [],
+      "checked_model_files": 51,
+      "model_mismatches": [],
+      "free_bytes": 40727625728,
+      "scope": "This experiment only; servers remain running, no shutdown performed"
+    },
+    {
+      "status": "PASS_CLOSED_PROTECTED_MODELS",
+      "host": "VM-0-9-ubuntu",
+      "epoch": 1792810573.637541,
+      "owned_live_processes": [],
+      "owned_shared_memory": [],
+      "checked_model_files": 51,
+      "model_mismatches": [],
+      "free_bytes": 41305096192,
+      "scope": "This experiment only; servers remain running, no shutdown performed"
+    },
+    {
+      "status": "PASS_CLOSED_PROTECTED_MODELS",
+      "host": "VM-0-6-ubuntu",
+      "epoch": 1792810571.7249951,
+      "owned_live_processes": [],
+      "owned_shared_memory": [],
+      "checked_model_files": 51,
+      "model_mismatches": [],
+      "free_bytes": 40762806272,
+      "scope": "This experiment only; servers remain running, no shutdown performed"
+    }
+  ],
+  "large_transfers": "Critic-only fitted tensors stay learner; new NPZ and packet logs stay actors; no checkpoint/raw packet download"
+}

@@ -1,3 +1,46 @@
+# 当前研究审阅交接（2026-10-26）
+
+本次同步后续研究源码与小证据。原始快照仍为 `85baf09b6f43a9f3223f7a8eaa1a4321b1a11b3b` / `consolidated-20261018`，51个原模型文件未变。新增代码不代表新增合格模型；实际训练入口、事后归档与发布commit必须区分，参见[来源说明](../evidence/20261026-publication-provenance.json)。本文后半保留原2026-10-20交接，其服务器状态仅属当时。
+
+## 当前结论与身份
+
+**仍为PARTIAL，没有论文级性能—实际CPU突破。** 健康V31保持149状态、两个连续动作、原乘窗和20—160ms真共周期。长MTP没有隐藏20ms RL观测，CUBIC逐ACK执行；无提前唤醒、QC或fallback。单个RL控制耦合动作没有被证明不可行，当前证据也不支持仅换时间头就能解决。
+
+| 对象 | 实际工作 | 结论与限制 |
+|---|---|---|
+| V31兼容校准 | 完整actor/critic/target/BN迁移，fresh优化器/replay/计数，独立actor gate | 迁移与冻结验证通过；未产生可替换成功策略，不是连续resume |
+| 独立critic Adam | 显式opt-in、A/A与中心化短数值对照 | 数值修正可重复；不是网络性能收益证明 |
+| 五个fixed-MTP149模型 | 各3600s/actor独立随机长训 | 仍有弱项，不能把短周期失败包装成动态MTP优势；新模型未上传 |
+| Orca control / moving | 正常启动，同一完整随机step0，24actor各3600s，各72冻结 | util>=80%条件为19/36、16/36，均未全面验收 |
+| Canopy单动作artifact | 70状态/1动作，约2192s/actor后用户暂停 | 1872730入库、186044完整critic；正式冻结0次，性能未知 |
+| 区间RTT奖励shadow | 24条旧连接重建149状态，两奖励各2000完整critic，actor/BN冻结 | Q1留出Bellman RMSE .4660/.4702，无决定性优势，actor未开放 |
+
+两组Orca完整critic为255642/354516，优化器操作511284/709032。统一每入库transition .1完整更新，因此实际经验/更新数不同，是行为差异的下游结果，不是额外配置处理。均只一个训练seed；两次冻结不等于多训练seed。原始11组模型仍在Git，新研究checkpoint/replay留原实验存储，来源路径不是已交付模型。
+
+## 优先阅读的新增证据
+
+1. scalar旧native在第一条策略前辅助放大窗口，可能达到约2^31。新分支去掉辅助写窗并审计首反馈，原baseline未覆盖。启动交接因此不同，旧模型比较必须匹配启动。
+2. 原Orca公式以连接自身observed_peak归一。真实原函数的合成fixture可让3.33%与83.33%利用率对应相同状态和reward=1。这是数学性质，不是TCP实验。144冻结中有5个观察配对（4 full、1 trim10）网络五指标均不更好却reward更高，非5个独立场景。保留[逐run数据](../evidence/scalar-20261025/evaluation_runs.csv)和[逐条件均值](../evidence/scalar-20261025/evaluation_summary.csv)。
+3. 动作=-1、Gaussian std.2时，非减窗概率约2.87e-7，46calls/s下每流小时预期.0475次；说明边界附近支持稀少，不证明永久不可恢复。
+4. [16个checkpoint只读方向审计](../evidence/scalar-direction-20261026/learner-outcome.json)表明moving最终actor梯度与部署函数一致，但弱低RTT条件actor接近critic预测的负动作优选。Q网格/梯度不是正确反事实；每臂使用自身最终replay，早期CP查询为分布偏移敏感性，768诊断batch不等于某次512历史更新。
+5. 部分整段训练摘要平均cwnd仍达1e8—6e8级。首反馈正常不保证之后正常；具体形成时点与来源尚未定位，不能静默加窗口上限或改动作定义掩盖。
+6. scalar对上游的回放容量/采样、warmup、更新节奏、target BN和Adam有工程调整，不能将其失败直接当作官方Orca上限。边界sRTT、ACK样本均RTT与精确效用积分/尾延迟不是同一口径。
+
+## 代码、复现与下一步
+
+- [单动作研究入口](../frameworks/canopy_single/README.md)：artifact/initializer QC模式分离、正常启动native源码、隔离目录。新包装入口须另做环境smoke，本次发布未新增TCP验收。
+- [V31兼容初始化与冻结门控](V31_COMPATIBLE_CRITIC_CALIBRATION.md)：新特性显式启用，未替换健康V31模型。
+- `tools/scalar_audit/audit.py`：本机NumPy执行原公式与证据检查；`checkpoint_direction_audit.py`在兼容TF1主机只读现有网络/replay。
+- `tools/interval_reward/`：从既有真边界导出两奖励，149状态不改，校准结果actor_release=false。ACK均RTT不等于精确区间效用。
+
+CPU沿用resource_cost.py进程归属口径，包含运行时和数据路径，不能当纯NN成本。每run只有一次25..50s CPU测量，CSV的full/trim10行重复该值，不能当两个独立CPU样本。证据中的私有端点和绝对路径改为占位符，不能直接当部署配置。旧SHA回执对应原始文件；公开文件以repository-files.json校验。
+
+下一步先用既有控制日志定位异常大窗，再选择一个可证伪修复；不默认扩网络、扩集群或同时更改奖励/探索/结构。原单动作baseline与V14/V31角色均保留，新的scalar研究不冒充已认证的论文复现。
+
+---
+
+## 原2026-10-20交接（历史记录）
+
 # V31研究审阅交接（2026-10-20）
 
 源码仓库：https://github.com/fiberpine/Canopy 。原始三实现收敛快照commit为`85baf09b6f43a9f3223f7a8eaa1a4321b1a11b3b`，tag `consolidated-20261018`。当前仅公开仓库并补充研究交接，未做新训练/评测，云服务器没有启动。
@@ -33,7 +76,7 @@
 
 这些override改变未来观测、状态、窗口输出及累积乘窗强度，不是独立训练fixed baseline，更不是保持窗口轨迹不变的纯频率反事实。CPU来自冻结单流25—50秒归属进程user+system，部分口径含Mahimahi；不能解释成纯NN CPU或训练集群开销。完整/P95/P99/丢包/CPU见原始CSV，不只看该表。
 
-原始CSV：`evidence/causal/metrics/v36-causal-final2/evaluation_summary.csv`及`evaluation_runs.csv`。全部开发多算法比较：`evidence/multialgorithm/metrics/v34-all12-final2-r3/`，12变体×10条件×2=240次。另有Aurora预训练参考，其协议/覆盖不完全匹配，尚缺统一公平重训的纯学习强对照。现有重复不是多个独立训练seed，发现/调优场景不等于盲测。
+原始CSV：`evidence/causal/metrics/v36-causal-final2/evaluation_summary.csv`及`evaluation_runs.csv`。全部开发多算法比较：`evidence/multialgorithm/metrics/v34-all12-final2-r3/`，经2026-10-20重解析为10组算法×12条件×2=240次；full/trim10是分析窗口，不是额外重复。另有Aurora预训练参考，其协议/覆盖不完全匹配，尚缺统一公平重训的纯学习强对照。现有重复不是多个独立训练seed，发现/调优场景不等于盲测。
 
 ## 第一性原理下的优先判断（建议，不是新实验结论）
 

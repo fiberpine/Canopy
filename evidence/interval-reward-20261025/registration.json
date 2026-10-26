@@ -1,0 +1,13 @@
+{
+  "schema": "shadow-rtt-offline-paired-critic-v1",
+  "candidate_reward": "Original throughput-minus5loss divided by unchanged observed_peak, replacing only endpoint-sRTT delay factor by fresh interval ACK-sample avgRTT delay factor; gamma mass and one decision cost unchanged",
+  "old_checkpoint_use": "Full67 healthy149 model/target/BN/schema tensors canonically restored and function-checked. Actor inherited and frozen; both critics deliberately reset identically for both arms. Not a shadow-reward-compatible resumed checkpoint.",
+  "state_interface": "149 unchanged, original continuous2action and native mapping unchanged; no hidden observations or runtime intervention",
+  "existing_source": "V38 stage0 existing telemetry audit runs only:4conditions x3forcedperiods x2independentconnections. Forced periods do not constitute independently trained fixed baselines.",
+  "split": "repeat0 connections train, repeat1 independent connections heldout. No trace-phase blind generalization claimed.",
+  "optimization_budget": "2000 complete critic iterations per reward arm,4000 independent critic optimizer operations; explicit maximum5000. No actor optimizer. Same random mini-batches balanced per training connection.",
+  "target": "One-step TD, deterministic frozen V31 actor at next149state, each reward own target critic. No TD3 smoothing and no finite-MC regression.",
+  "eligibility": "Diagnostic only; actor_release alwaysfalse. Better heldout Bellman RMSE is self-consistency, not trueQ or policy gain.",
+  "measurement_limit": "ACK-sample mean RTT is not physical-time mean, tail latency or exact nonlinear utility integral. No-fresh sample intervals excluded in both arms. observed_peak issue retained.",
+  "source_data_transfer": "Run exporters on actor nodes, keep dense NPZ there/cloud; transfer only small manifests initially; learner calibration needs only required exported dense transition shards within private network."
+}

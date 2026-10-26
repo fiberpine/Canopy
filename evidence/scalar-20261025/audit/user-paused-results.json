@@ -1,0 +1,152 @@
+{
+  "status": "USER_PAUSED_SAFELY",
+  "epoch": 1792945551.2902455,
+  "completed_arms": {
+    "orca_control": {
+      "checkpoint": "@EXPERIMENT@/frameworks/orca_control/checkpoints/twotrack-formal-orca_control-seed3-3600/step-2568715",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 2568715,
+        "counters": {
+          "critic_iterations": 255642,
+          "critic_optimizer_ops": 511284,
+          "actor_updates": 255642,
+          "target_updates": 255642
+        },
+        "wall_s": 3626.2198758390005
+      },
+      "frozen_evaluations": 72
+    },
+    "orca_moving": {
+      "checkpoint": "@EXPERIMENT@/frameworks/orca_moving/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "final": {
+        "status": "COMPLETED",
+        "reason": "",
+        "inserted": 3557457,
+        "counters": {
+          "critic_iterations": 354516,
+          "critic_optimizer_ops": 709032,
+          "actor_updates": 354516,
+          "target_updates": 354516
+        },
+        "wall_s": 3626.958828014999
+      },
+      "frozen_evaluations": 72
+    }
+  },
+  "partial_arm": "canopy_artifact",
+  "partial_checkpoint": "@EXPERIMENT@/frameworks/canopy_artifact/checkpoints/twotrack-formal-canopy_artifact-seed3-3600/step-1872730",
+  "partial_training": {
+    "status": "COMPLETED",
+    "reason": "",
+    "inserted": 1872730,
+    "counters": {
+      "critic_iterations": 186044,
+      "critic_optimizer_ops": 372088,
+      "actor_updates": 186044,
+      "target_updates": 186044
+    },
+    "wall_s": 2216.607096255999
+  },
+  "real_generated": 1872730,
+  "real_enqueued": 1872730,
+  "update_debt": 0,
+  "tensor_validation": {
+    "variables": 108,
+    "nonfinite": []
+  },
+  "checkpoint_files": {
+    "step-1872730.policy.sha256": {
+      "bytes": 64,
+      "sha256": "517c8d8b8d86e3ad41022dcfb5009a60f0fe5de5c0ccac10e8424dbee398263f"
+    },
+    "step-1872730.variables.json": {
+      "bytes": 4451,
+      "sha256": "54950854398357d556de0a92d65f872a7ea54d39327fdf220a64208a04fa166d"
+    },
+    "step-1872730.counters.json": {
+      "bytes": 16079,
+      "sha256": "c2f60c221ab7f79853cf50607d3ca84d350eb64f4a89abb07d046e5859167317"
+    },
+    "step-1872730.data-00000-of-00001": {
+      "bytes": 4410456,
+      "sha256": "a6be068c03e4a17debefead6a0b0f0423c348fdd3048226ef1c1eb6a12b850ff"
+    },
+    "replay.npz": {
+      "bytes": 175203371,
+      "sha256": "26af18a413e1b51d2795712c18357d8b15bd922c71f607b7bbb122bdabd896cc"
+    },
+    "step-1872730.index": {
+      "bytes": 3854,
+      "sha256": "dd7a3c515f84b5f77edfecdeede5bb7d91df54272cf87b1d0b13fe88f9950b97"
+    },
+    "python-state.pkl": {
+      "bytes": 6599,
+      "sha256": "4a0150abda9d772ce2788582b00ce477581f84399cb5c53387f5fbffb089696c"
+    },
+    "sample-coverage.json": {
+      "bytes": 1086,
+      "sha256": "7864848a7bc5b371fc9b6ee0bb57ccedc6d97b9c9ce03a01566ab3747d747668"
+    }
+  },
+  "actual_exposure_after_all_ready_s": 2191.830949783325,
+  "canopy_formal_evaluations": 0,
+  "five_node_closure": [
+    {
+      "epoch": 1792945544.3799138,
+      "host": "VM-0-15-ubuntu",
+      "protected_files": 51,
+      "protected_changed": [],
+      "processes": [],
+      "owned_ipc": [],
+      "foreign_reused_keys": [],
+      "free_gib": 42.08479690551758
+    },
+    {
+      "epoch": 1792945542.8413591,
+      "host": "VM-0-3-ubuntu",
+      "protected_files": 51,
+      "protected_changed": [],
+      "processes": [],
+      "owned_ipc": [],
+      "foreign_reused_keys": [],
+      "free_gib": 29.99652099609375
+    },
+    {
+      "epoch": 1792945543.2088344,
+      "host": "VM-0-5-ubuntu",
+      "protected_files": 51,
+      "protected_changed": [],
+      "processes": [],
+      "owned_ipc": [],
+      "foreign_reused_keys": [],
+      "free_gib": 28.88943862915039
+    },
+    {
+      "epoch": 1792945542.6380749,
+      "host": "VM-0-9-ubuntu",
+      "protected_files": 51,
+      "protected_changed": [],
+      "processes": [],
+      "owned_ipc": [],
+      "foreign_reused_keys": [],
+      "free_gib": 29.760700225830078
+    },
+    {
+      "epoch": 1792945545.387973,
+      "host": "VM-0-6-ubuntu",
+      "protected_files": 51,
+      "protected_changed": [],
+      "processes": [],
+      "owned_ipc": [],
+      "foreign_reused_keys": [],
+      "free_gib": 29.13546371459961
+    }
+  ],
+  "automation": "canopy deleted",
+  "server_shutdown": false,
+  "automatic_continuation": false,
+  "resume_limit": "Checkpoint/replay/optimizer/BN/counters and partial RNG saved. TCP connections/history/max_bw/actor random state are not completely restorable; not uninterrupted resume.",
+  "worker_assertion": "Existing worker expected complete3600s and CAPACITY_WINDOW_COMPLETE, so its post-drain AssertionError is expected after external USER pause; retain failure record, do not count as an unsolicited training failure."
+}

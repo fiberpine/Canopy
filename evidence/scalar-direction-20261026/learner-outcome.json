@@ -1,0 +1,285 @@
+{
+  "status": "COMPLETE_LEARNER_ONLY_READ_ONLY_DIAGNOSIS",
+  "new_TCP_runs": 0,
+  "optimizer_updates": 0,
+  "actor_release": false,
+  "server_shutdown": false,
+  "arms": {
+    "orca_control": {
+      "checkpoints": 7,
+      "query_rows": 768,
+      "core_query_elapsed_s": 1.811112403869629,
+      "final_gradient_cosine": -0.2717205882072449,
+      "final_actor_gradient_norm": 0.3004502058029175,
+      "final_tanh_derivative_mean": 0.37602224946022034,
+      "conditions_fully_negative_saturated_on_query_states": 12,
+      "selected_lowRTT": {
+        "G24-R20-q2": {
+          "policy_mean": -0.6256057024002075,
+          "critic_minQ_grid_greedy_mean": -0.640625,
+          "neutral_Q_minus_policy_Q_mean": -0.6896419525146484,
+          "all_retained_rows": 18913,
+          "all_retained_nonreducing_actions": 602,
+          "all_retained_nonreducing_fraction": 0.031829958229789033,
+          "frozen_utilization": 0.8434112710471842
+        },
+        "G36-R20-q2": {
+          "policy_mean": -0.5705899000167847,
+          "critic_minQ_grid_greedy_mean": -0.5625,
+          "neutral_Q_minus_policy_Q_mean": -0.6182959079742432,
+          "all_retained_rows": 18630,
+          "all_retained_nonreducing_actions": 693,
+          "all_retained_nonreducing_fraction": 0.03719806763285024,
+          "frozen_utilization": 0.6991650162845602
+        },
+        "G72-R20-q2": {
+          "policy_mean": -0.5601880550384521,
+          "critic_minQ_grid_greedy_mean": -0.5546875,
+          "neutral_Q_minus_policy_Q_mean": -0.5953919887542725,
+          "all_retained_rows": 18915,
+          "all_retained_nonreducing_actions": 284,
+          "all_retained_nonreducing_fraction": 0.015014538725878932,
+          "frozen_utilization": 0.3259812380888042
+        }
+      },
+      "large_window_whole_training_summaries": [
+        {
+          "condition": "G12-R200-q2",
+          "whole_training_cwnd_mean": 12246126.673070773
+        },
+        {
+          "condition": "G24-R200-q2",
+          "whole_training_cwnd_mean": 28359209.45864803
+        },
+        {
+          "condition": "G24-R100-q2",
+          "whole_training_cwnd_mean": 2653073.0334717506
+        },
+        {
+          "condition": "G36-R100-q2",
+          "whole_training_cwnd_mean": 6802250.529323875
+        },
+        {
+          "condition": "G36-R200-q2",
+          "whole_training_cwnd_mean": 35906268.57414684
+        },
+        {
+          "condition": "G42-R100-q2",
+          "whole_training_cwnd_mean": 7049792.953027287
+        },
+        {
+          "condition": "G42-R200-q2",
+          "whole_training_cwnd_mean": 29115891.16384135
+        },
+        {
+          "condition": "G48-R100-q2",
+          "whole_training_cwnd_mean": 7634435.013317396
+        },
+        {
+          "condition": "G48-R200-q2",
+          "whole_training_cwnd_mean": 98052493.89344685
+        },
+        {
+          "condition": "G72-R200-q2",
+          "whole_training_cwnd_mean": 92839037.12081759
+        },
+        {
+          "condition": "G72-R100-q2",
+          "whole_training_cwnd_mean": 10493678.394727958
+        }
+      ]
+    },
+    "orca_moving": {
+      "checkpoints": 9,
+      "query_rows": 768,
+      "core_query_elapsed_s": 1.4409823417663574,
+      "final_gradient_cosine": 1.0,
+      "final_actor_gradient_norm": 0.4612084627151489,
+      "final_tanh_derivative_mean": 0.7810011506080627,
+      "conditions_fully_negative_saturated_on_query_states": 0,
+      "selected_lowRTT": {
+        "G24-R20-q2": {
+          "policy_mean": -0.5956846475601196,
+          "critic_minQ_grid_greedy_mean": -0.6015625,
+          "neutral_Q_minus_policy_Q_mean": -0.6038992404937744,
+          "all_retained_rows": 12542,
+          "all_retained_nonreducing_actions": 484,
+          "all_retained_nonreducing_fraction": 0.038590336469462604,
+          "frozen_utilization": 0.32299467551590944
+        },
+        "G36-R20-q2": {
+          "policy_mean": -0.5370718240737915,
+          "critic_minQ_grid_greedy_mean": -0.546875,
+          "neutral_Q_minus_policy_Q_mean": -0.518338680267334,
+          "all_retained_rows": 12369,
+          "all_retained_nonreducing_actions": 461,
+          "all_retained_nonreducing_fraction": 0.03727059584444983,
+          "frozen_utilization": 0.4708694461827284
+        },
+        "G72-R20-q2": {
+          "policy_mean": -0.5432471036911011,
+          "critic_minQ_grid_greedy_mean": -0.5546875,
+          "neutral_Q_minus_policy_Q_mean": -0.7199149131774902,
+          "all_retained_rows": 12530,
+          "all_retained_nonreducing_actions": 474,
+          "all_retained_nonreducing_fraction": 0.037829209896249,
+          "frozen_utilization": 0.5740811712438845
+        }
+      },
+      "large_window_whole_training_summaries": [
+        {
+          "condition": "G12-R200-q2",
+          "whole_training_cwnd_mean": 6677141.901859394
+        },
+        {
+          "condition": "G24-R200-q2",
+          "whole_training_cwnd_mean": 16197824.714060223
+        },
+        {
+          "condition": "G24-R100-q2",
+          "whole_training_cwnd_mean": 1722002.751655489
+        },
+        {
+          "condition": "G36-R100-q2",
+          "whole_training_cwnd_mean": 2079603.653874132
+        },
+        {
+          "condition": "G36-R200-q2",
+          "whole_training_cwnd_mean": 19152939.358844906
+        },
+        {
+          "condition": "G42-R100-q2",
+          "whole_training_cwnd_mean": 4248883.085362749
+        },
+        {
+          "condition": "G42-R200-q2",
+          "whole_training_cwnd_mean": 16283896.992511626
+        },
+        {
+          "condition": "G48-R100-q2",
+          "whole_training_cwnd_mean": 3995212.368666929
+        },
+        {
+          "condition": "G48-R200-q2",
+          "whole_training_cwnd_mean": 599995954.5653187
+        },
+        {
+          "condition": "G72-R200-q2",
+          "whole_training_cwnd_mean": 606176923.1838362
+        },
+        {
+          "condition": "G72-R100-q2",
+          "whole_training_cwnd_mean": 6536278.089553716
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Each arm queries its own final replay cohort, not common inputs across arms.",
+    "Configured loss gradients use a768row diagnostic batch, not the historical512row optimization batch.",
+    "Earlier checkpoint queries are on later final replay states.",
+    "Q rankings/action gradients/TD residuals are model diagnostics, not verified network counterfactual returns.",
+    "Per-condition action coverage is marginal and does not establish coverage at each individual state.",
+    "Tiny float32 tanh overshoots can make computed1-a^2 slightly negative; do not interpret as a true negative tanh derivative."
+  ],
+  "closure": {
+    "epoch": 1792992584.9382608,
+    "status": "COMPLETE_NO_RUNNING_DIAGNOSTIC_OR_TRAINING",
+    "host": "VM-0-15-ubuntu",
+    "protected_files": 51,
+    "protected_changed": [],
+    "input_files_unchanged": true,
+    "owned_processes": [],
+    "owned_ipc": [],
+    "new_TCP_runs": 0,
+    "optimizer_updates": 0,
+    "actor_release": false,
+    "server_shutdown": false
+  },
+  "primary_interpretation": "Moving-forward actor is not globally saturated and follows its critic locally on several weak lowRTT training conditions. Reward-quality mismatch and action-support limitations remain higher-priority than replacing the actor architecture. This does not establish one unique root cause.",
+  "next_action": "No automatic training. Offline specify a single controlled diagnostic/correction; separately determine whether excessive post-handoff windows come from policy exploration, feedback, or execution before another long run.",
+  "first_update_timing": {
+    "orca_control": {
+      "first_update": {
+        "epoch": 1792933298.2028503,
+        "inserted": 26263,
+        "per_actor_inserted": [
+          1397,
+          1387,
+          1333,
+          1315,
+          1311,
+          1289,
+          1201,
+          1237,
+          1202,
+          1210,
+          1109,
+          1137,
+          1080,
+          1112,
+          934,
+          1011,
+          939,
+          984,
+          896,
+          921,
+          839,
+          832,
+          778,
+          809
+        ],
+        "minimum_required": 512,
+        "definition": "Exact actor-ID metadata carried with each successfully inserted FIFO transition. No actor action is blocked."
+      },
+      "learner_start_epoch": 1792933262.3337429,
+      "all_ready_epoch": 1792933281.4640937,
+      "first_update_after_cluster_start_s": 35.869107484817505,
+      "first_update_after_all_ready_s": 16.73875665664673
+    },
+    "orca_moving": {
+      "first_update": {
+        "epoch": 1792938285.2141287,
+        "inserted": 25808,
+        "per_actor_inserted": [
+          1371,
+          1368,
+          1342,
+          1239,
+          1303,
+          1273,
+          1208,
+          1269,
+          825,
+          1191,
+          1099,
+          1127,
+          1074,
+          1105,
+          933,
+          1033,
+          932,
+          981,
+          901,
+          946,
+          828,
+          854,
+          775,
+          831
+        ],
+        "minimum_required": 512,
+        "definition": "Exact actor-ID metadata carried with each successfully inserted FIFO transition. No actor action is blocked."
+      },
+      "learner_start_epoch": 1792938249.4439957,
+      "all_ready_epoch": 1792938268.4884455,
+      "first_update_after_cluster_start_s": 35.77013301849365,
+      "first_update_after_all_ready_s": 16.725683212280273
+    }
+  },
+  "next_read_only_evidence_request": {
+    "host": "canopy-actor1",
+    "requires_user_start": true,
+    "new_TCP_runs": 0,
+    "purpose": "Compare first actual large-window requests with first learner optimization epoch using existing control logs; determine warmup-policy, learning or execution/recording origin. No additional server connections made."
+  }
+}

@@ -35,6 +35,11 @@ def setup(cfg,role,index):
   import frozen_window,trainable_timing
   if trainable_timing.enabled(cfg):trainable_timing.install(agent_v2,cfg)
   else:frozen_window.install(agent_v2,cfg)
+ independent_adam=cfg.get('independent_critic_adam_v34',False)
+ if not isinstance(independent_adam,bool):raise ValueError('independent_critic_adam_v34 must be an explicit boolean')
+ if independent_adam or getattr(Agent,'_independent_critic_adam_v34_installed',False):
+  import independent_critic_v34
+  independent_critic_v34.install(agent_v2,cfg)
  random.seed(cfg['seed']+index*1009);np.random.seed(cfg['seed']+index*1009);tf.set_random_seed(cfg['seed'])
  cluster=tf.train.ClusterSpec({'learner':[cfg['learner_endpoint']]} if cfg.get('direct_actor_session',False) else {'learner':[cfg['learner_endpoint']],'actor':['127.0.0.1:%d'%(47101+i) for i in range(cfg['num_actors'])]})
  direct=role=='actor' and cfg.get('direct_actor_session',False)
@@ -57,6 +62,10 @@ class Replay(ReplayBuffer):
   self.joint=cfg.get('joint_control',False)
   self.warmup_physical_seconds=None
   self.period_bank=None
+  self.calibration_holdout=None
+  if cfg.get('compatible_v31_checkpoint'):
+   from compatible_calibration_v37 import Holdout
+   self.calibration_holdout=Holdout(cfg)
   if cfg.get('period_bank_enabled'):
    from period_coverage import PeriodBank
    assert cfg.get('period_bank_fraction')==.25,'V8 uses an explicit quarter-batch bank'
@@ -86,7 +95,9 @@ class Replay(ReplayBuffer):
     self.slot_position[self.ptr]=len(self.actor_slots[actor_id]);self.actor_slots[actor_id].append(self.ptr);self.actor_ids[self.ptr]=actor_id;self.actor_inserted[actor_id]+=1
     if self.joint:
      self.duration[self.ptr]=duration;self.discounts[self.ptr]=discount;self.actor_seconds[actor_id]+=duration
-    if self.period_bank:self.period_bank.store(actor_id,row,self.inserted)
+    heldout=self.calibration_holdout is not None and self.inserted%17==0
+    if heldout:self.calibration_holdout.store(row,actor_id,self.inserted)
+    if self.period_bank and not heldout:self.period_bank.store(actor_id,row,self.inserted)
     self.birth[self.ptr]=self.inserted;self.store(*values);self.inserted+=1
     # Optional matched warmup: both real sample coverage and measured exposure,
     # never wall time. Legacy configs retain their original sample threshold.
@@ -99,12 +110,20 @@ class Replay(ReplayBuffer):
    if self.cfg['sampler']=='balanced_actor':
     actors=self.cfg['num_actors'];base,remainder=divmod(k,actors);extra={(self.sample_calls*remainder+j)%actors for j in range(remainder)};indices=[]
     for actor_id,pool in enumerate(self.actor_slots):
-     quota=base+int(actor_id in extra);assert len(pool)>=quota,'insufficient retained real samples for actor%d'%actor_id;indices+=random.sample(pool,quota)
+     quota=base+int(actor_id in extra);assert len(pool)>=quota,'insufficient retained real samples for actor%d'%actor_id
+     chosen=random.sample(pool,quota)
+     if self.calibration_holdout is not None:
+      chosen=[ix for ix in chosen if self.birth[ix]%17!=0]
+      while len(chosen)<quota:
+       candidate=random.choice(pool)
+       if self.birth[candidate]%17!=0 and candidate not in chosen:chosen.append(candidate)
+     indices+=chosen
     idx=np.asarray(indices);self.sample_calls+=1
    elif self.cfg['sampler']=='iid':idx=np.array(random.sample(range(n),k))
    else:idx=(np.arange(k)+int(n*random.random()))%n
    self.sampled_by_actor+=np.bincount(self.actor_ids[idx],minlength=self.cfg['num_actors'])
    births=self.birth[idx].copy()
+   if self.calibration_holdout is not None:assert np.all(births%17!=0),'holdout leaked to optimizer'
    arrays=self.peek_buffer()+([self.duration,self.discounts] if self.joint else [])
    batch=[x[idx].copy() for x in arrays]
    if self.period_bank:
@@ -130,7 +149,10 @@ def learner(cfg):
  if staged_timing.enabled(cfg):
   if cfg.get('cold_init_checkpoint'):raise ValueError('Staged source provenance must be explicit; cold_init is scratch-only')
   import frozen_window,trainable_timing
-  if cfg.get('initialize_joint_from_scratch') or cfg.get('matching_clock_prior_checkpoint'):
+  if cfg.get('compatible_v31_checkpoint'):
+   import compatible_calibration_v37
+   provenance=compatible_calibration_v37.initialize(a,cfg);teacher_hash=None
+  elif cfg.get('initialize_joint_from_scratch') or cfg.get('matching_clock_prior_checkpoint'):
    import decision_clock_v21
    provenance=decision_clock_v21.fresh_initialize(a,cfg);teacher_hash=None
   elif trainable_timing.enabled(cfg):provenance=trainable_timing.initialize(a,cfg['staged_joint_checkpoint'],dict(cfg,fixed_mtp_ms=None) if cfg.get('fixed_period_train_window') else cfg);teacher_hash=None
@@ -172,7 +194,16 @@ def learner(cfg):
  window_probe=a._moving_action[:,0] if cfg.get('decision_observation_clock') else None
  head_probe=tf.gradients(a.a_loss,a._moving_logits)[0] if cfg.get('decision_observation_clock') else None
  stage_rows=[];timing_stage=False;timing_diagnostics=[];timing_flat_since=None
+ v37_snapshot=None
+ v37_gate_history=[];v37_last_gate=None
+ if cfg.get('compatible_v31_checkpoint'):
+  import compatible_calibration_v37
+  v37_snapshot=compatible_calibration_v37.policy_snapshot(a)
+  a.rp_buffer.calibration_holdout.tensors(a)
+  if cfg.get('actor_update_mode_v37')=='quality_gate':timing_stage=True
  status='RUNNING';reason='';next_checkpoint=cfg.get('checkpoint_interval',50000);producer_check=0;producers_done=False;produced=0
+ physical_checkpoint_interval=cfg.get('checkpoint_physical_seconds',0)
+ next_physical_checkpoint=physical_checkpoint_interval
  try:
   while not stop.is_set():
    with a.rp_buffer.lock:
@@ -188,9 +219,11 @@ def learner(cfg):
     if producers_done:produced=sum(json.loads(p.read_text())['enqueued'] for p in producer_paths)
    received_all=producers_done and n==produced
    if received_all and (cfg.get('capacity_only') or it>=limit):break
-   if n>=next_checkpoint:
+   physical_checkpoint_due=physical_checkpoint_interval>0 and physical>=next_physical_checkpoint
+   if n>=next_checkpoint or physical_checkpoint_due:
     with a.rp_buffer.lock:checkpoint(a.rp_buffer.inserted)
     next_checkpoint=((a.rp_buffer.inserted//cfg.get('checkpoint_interval',50000))+1)*cfg.get('checkpoint_interval',50000)
+    if physical_checkpoint_due:next_physical_checkpoint=(int(physical/physical_checkpoint_interval)+1)*physical_checkpoint_interval
    if it>=limit:time.sleep(.01);continue
    if cfg.get('require_coverage_gate') and not (R/'logs'/run.name/'coverage-ready.json').exists():time.sleep(.02);continue
    if cfg.get('require_coverage_gate') and int(a.rp_buffer.actor_inserted.min())<cfg.get('minimum_enqueued_per_actor',512):time.sleep(.02);continue
@@ -210,6 +243,14 @@ def learner(cfg):
      sess.run(a.enable_timing_learning);stage=True;timing_stage=True
      (run/'window-learning-start.json').write_text(json.dumps(dict(epoch=time.time(),critic_iterations=it,inserted=n,meaning='Calibration opens cwnd only; MTP stays hard-masked at configured fixed period and has zero gradient'),indent=2))
     train_actor=staged_timing.actor_update_enabled(cfg['timing_policy_mode'],stage,cfg.get('fixed_period_train_window',False))
+   if cfg.get('compatible_v31_checkpoint'):
+    train_actor,gate_reason=compatible_calibration_v37.actor_gate(cfg,it,period_coverage,a.rp_buffer.calibration_holdout.history)
+    if (train_actor,gate_reason)!=v37_last_gate:
+     v37_last_gate=(train_actor,gate_reason)
+     v37_gate_history.append(dict(epoch=time.time(),critic_iterations=it,actor_updates=counter['actor_updates'],actor_optimizer_allowed=train_actor,reason=gate_reason,time_forward_active=bool(sess.run(a.timing_learning_enabled)),phase='JOINT_POLICY_UPDATE' if train_actor else 'HEALTHY_ACTOR_FROZEN_CRITIC_CALIBRATION'))
+     (run/'actor-gate-history.json').write_text(json.dumps(v37_gate_history,indent=2))
+    losses=sess.run([a.c_loss,a.c_loss2,a.a_loss],fd)
+    if not np.isfinite(losses).all():raise FloatingPointError('Nonfinite loss blocks optimizer before update')
    t0=time.perf_counter();sess.run(a.critic_train_op,fd);t1=time.perf_counter()
    if train_actor:sess.run([a.actor_train_op,bn],fd)
    elif not cfg.get('warm_start_window_checkpoint') and cfg.get('window_policy_mode')!='staged_joint':sess.run(bn,fd)
@@ -219,6 +260,12 @@ def learner(cfg):
    t3=time.perf_counter()
    if cfg.get('profile_stages'):stage_rows.append((time.time(),n,it,(t1-t0)*1000,(t2-t1)*1000,(t3-t2)*1000))
    for k,v in [('critic_iterations',1),('critic_optimizer_ops',2),('actor_updates',int(train_actor)),('target_updates',1)]:counter[k]+=v
+   if a.rp_buffer.calibration_holdout is not None and counter['critic_iterations']%1000==0:
+    if cfg.get('actor_update_mode_v37')=='quality_gate' and counter['actor_updates']==0:compatible_calibration_v37.assert_policy_frozen(a,v37_snapshot)
+    value=a.rp_buffer.calibration_holdout.diagnose(a,counter['critic_iterations'])
+    (run/'calibration-holdout.json').write_text(json.dumps(a.rp_buffer.calibration_holdout.history,indent=2))
+    if counter['actor_updates']>0 and max(value['window_single_boundary_fraction'],value['mtp_single_boundary_fraction'])>=.98:
+     raise RuntimeError('COMPATIBLE_CALIBRATION_POLICY_BOUNDARY_DEGENERACY')
    if counter['critic_iterations']%100==0:
     diagnostic_started=time.perf_counter()
     diag=list(map(float,sess.run([a.c_loss,a.c_loss2,a.a_loss,qmean]+grads,fd)))
@@ -249,7 +296,11 @@ def learner(cfg):
        raise RuntimeError('TIMING_POLICY_PERSISTENT_BOUNDARY_NO_STATE_RESPONSE')
    if cfg.get('optimizer_sleep_ms',5)>0:time.sleep(cfg.get('optimizer_sleep_ms',5)/1000.)
   if errors:raise RuntimeError(errors[0])
-  stop.set();t.join(10);checkpoint(a.rp_buffer.inserted)
+  stop.set();t.join(10)
+  if cfg.get('actor_update_mode_v37')=='quality_gate' and counter['actor_updates']==0:
+   compatible_calibration_v37.assert_policy_frozen(a,v37_snapshot)
+   (run/'actor-freeze-proof.json').write_text(json.dumps(dict(actor_bn_exact=True,actor_updates=counter['actor_updates'],time_forward_active=bool(sess.run(a.timing_learning_enabled)),complete_resume=False)))
+  checkpoint(a.rp_buffer.inserted)
   rp=a.rp_buffer
   if rp.period_bank:
    with rp.lock:
@@ -260,7 +311,14 @@ def learner(cfg):
   import pickle
   with (cp/'python-state.pkl').open('wb') as out:pickle.dump(dict(counters=counter,inserted=rp.inserted,numpy_random=np.random.get_state(),python_random=random.getstate(),period_bank_storage_rng=rp.period_bank.rng.get_state() if rp.period_bank else None,period_bank_sampling_rng=rp.period_bank.draw_rng.get_state() if rp.period_bank else None),out,protocol=4)
   status='COMPLETED'
- except Exception as e:status='FAILED';reason=str(e);(run/'failure.txt').write_text(traceback.format_exc())
+ except Exception as e:
+  status='FAILED';reason=str(e);(run/'failure.txt').write_text(traceback.format_exc())
+  if cfg.get('compatible_v31_checkpoint'):
+   stop.set();t.join(10)
+   try:
+    with a.rp_buffer.lock:checkpoint(a.rp_buffer.inserted)
+    (run/'failure-checkpoint.json').write_text(json.dumps(dict(inserted=a.rp_buffer.inserted,counters=counter,reason=reason,producer_drain_complete=False,complete_resume=False)))
+   except Exception:(run/'failure-checkpoint-error.txt').write_text(traceback.format_exc())
  finally:
   stop.set();f.close()
   if staged_timing.enabled(cfg):(run/'timing-diagnostics.json').write_text(json.dumps(timing_diagnostics,indent=2))
@@ -327,10 +385,14 @@ def actor(cfg,index):
       if cfg.get('window_policy_mode')=='staged_joint':x=np.clip(x+np.random.normal(0,cfg.get('exploration_std',.2),size=2),-1,1)
       else:x[1]=np.clip(x[1]+np.random.normal(0,cfg.get('exploration_std',.2)),-1,1)
       counts['exploration_calls']+=1
-     if cfg.get('fixed_period_train_window') and stage=='fixed' and a.timing_stage_enabled and not cfg.get('capacity_only'):
+     if cfg.get('fixed_period_train_window') and stage=='fixed' and (a.timing_stage_enabled or cfg.get('fixed_window_exploration_from_start',False)) and not cfg.get('capacity_only'):
       x[0]=np.clip(x[0]+np.random.normal(0,cfg.get('exploration_std',.2)),-1,1);counts['exploration_calls']+=1
      action.behavior_source=stage
-     if stage=='learned' and not cfg.get('capacity_only') and cfg.get('wide_period_probe_probability',0)>0 and wide_rng.random_sample()<cfg['wide_period_probe_probability']:
+     probe_probability=cfg.get('wide_period_probe_probability',0)
+     if cfg.get('compatible_v31_checkpoint'):
+      if not hasattr(action,'v37_started'):action.v37_started=time.monotonic()
+      if time.monotonic()-action.v37_started<cfg.get('calibration_probe_seconds_v37',0):probe_probability=1.
+     if stage=='learned' and not cfg.get('capacity_only') and probe_probability>0 and wide_rng.random_sample()<probe_probability:
       x[1]=joint_mtp.mtp_action(float(cfg['timing_calibration_periods_ms'][int(wide_rng.randint(len(cfg['timing_calibration_periods_ms'])))]),cfg);counts['wide_period_probes']=counts.get('wide_period_probes',0)+1;action.behavior_source='training-wide-period-probe'
      action.no_noise=no_noise;return x
     if cfg.get('fixed_action') is not None:x[0]=float(cfg['fixed_action'])
@@ -372,6 +434,7 @@ def actor(cfg,index):
   for key in ['window_policy_mode','frozen_teacher_schema','timing_policy_mode','timing_init_ms','timing_calibration_periods_ms','timing_critic_calibration_updates','timing_min_retained_per_period','connection_reset_seconds','target_bn_consistent','window_teacher_planned_context_ms','time_head_nonlinearity','timing_context_features','timing_context_tau_s','joint_state_dim','decision_observation_clock','initialize_joint_from_scratch','reward_sampling_semantics','matching_clock_prior_checkpoint','utility_normalization','reward_reference_table','reward_reference_sha256','time_statistics_v27','time_statistics_mode']:
    if key in cfg:ecfg[key]=cfg[key]
  if cfg.get('scheduled_observation_v30'):ecfg['scheduled_observation_v30']=True
+ if cfg.get('compatible_v31_checkpoint'):ecfg['compatible_v31_checkpoint']=cfg['compatible_v31_checkpoint']
  for key in ['feedback_context_v31','feedback_context_mode','fixed_period_train_window']:
   if key in cfg:ecfg[key]=cfg[key]
  path=R/'configs'/(run_id+'.json');path.write_text(json.dumps(ecfg,indent=2));sys.argv=['evaluate.py','--config',str(path)]

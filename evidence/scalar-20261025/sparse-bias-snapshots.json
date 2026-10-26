@@ -1,0 +1,194 @@
+{
+  "observed_snapshots": [
+    {
+      "file": "@LOCAL_WORKSPACE@\\experiments\\two-track-run-20261025\\check-20261025-210621.json",
+      "arm": "orca_control",
+      "current_arm": true,
+      "stage": "RUNNING",
+      "inserted": "216898",
+      "critic_iterations": "20461",
+      "actor_grad": "0.03758690878748894",
+      "actors": 24,
+      "strong_negative": 24,
+      "last_action_mean_range": [
+        -0.9999995529651642,
+        -0.9991714837960899
+      ],
+      "cwnd_mean_range": [
+        6.0,
+        8.6953125
+      ]
+    },
+    {
+      "file": "@LOCAL_WORKSPACE@\\experiments\\two-track-run-20261025\\check-20261025-211242.json",
+      "arm": "orca_control",
+      "current_arm": true,
+      "stage": "RUNNING",
+      "inserted": "470707",
+      "critic_iterations": "45841",
+      "actor_grad": "3.839682847228687e-07",
+      "actors": 24,
+      "strong_negative": 24,
+      "last_action_mean_range": [
+        -1.0,
+        -0.9999980316497386
+      ],
+      "cwnd_mean_range": [
+        5.984375,
+        8.875
+      ]
+    },
+    {
+      "file": "@LOCAL_WORKSPACE@\\experiments\\two-track-run-20261025\\check-20261025-220724.json",
+      "arm": "orca_control",
+      "current_arm": true,
+      "stage": "UNIT_COMPLETE",
+      "inserted": 2568715,
+      "critic_iterations": 255642,
+      "actor_grad": null,
+      "actors": 18,
+      "strong_negative": 10,
+      "last_action_mean_range": [
+        -1.0,
+        0.021435361024487065
+      ],
+      "cwnd_mean_range": [
+        6.0,
+        427.2421875
+      ]
+    },
+    {
+      "file": "@LOCAL_WORKSPACE@\\experiments\\two-track-run-20261025\\check-20261025-230659.json",
+      "arm": "orca_control",
+      "current_arm": false,
+      "stage": "UNIT_COMPLETE",
+      "inserted": 2568715,
+      "critic_iterations": 255642,
+      "actor_grad": null,
+      "actors": 24,
+      "strong_negative": 12,
+      "last_action_mean_range": [
+        -1.0,
+        0.021435361024487065
+      ],
+      "cwnd_mean_range": [
+        6.0,
+        427.2421875
+      ]
+    },
+    {
+      "file": "@LOCAL_WORKSPACE@\\experiments\\two-track-run-20261025\\check-20261025-230659.json",
+      "arm": "orca_moving",
+      "current_arm": true,
+      "stage": "RUNNING",
+      "inserted": "2407789",
+      "critic_iterations": "239549",
+      "actor_grad": "0.45656394958496094",
+      "actors": 24,
+      "strong_negative": 0,
+      "last_action_mean_range": [
+        -0.5656210595334414,
+        0.024700250602336382
+      ],
+      "cwnd_mean_range": [
+        31.5546875,
+        1637.7265625
+      ]
+    },
+    {
+      "file": "@LOCAL_WORKSPACE@\\experiments\\two-track-run-20261025\\check-20261026-000939.json",
+      "arm": "orca_control",
+      "current_arm": false,
+      "stage": "UNIT_COMPLETE",
+      "inserted": 2568715,
+      "critic_iterations": 255642,
+      "actor_grad": null,
+      "actors": 24,
+      "strong_negative": 12,
+      "last_action_mean_range": [
+        -1.0,
+        0.021435361024487065
+      ],
+      "cwnd_mean_range": [
+        6.0,
+        427.2421875
+      ]
+    },
+    {
+      "file": "@LOCAL_WORKSPACE@\\experiments\\two-track-run-20261025\\check-20261026-000939.json",
+      "arm": "orca_moving",
+      "current_arm": false,
+      "stage": "UNIT_COMPLETE",
+      "inserted": 3557457,
+      "critic_iterations": 354516,
+      "actor_grad": null,
+      "actors": 24,
+      "strong_negative": 0,
+      "last_action_mean_range": [
+        -0.5362849821103737,
+        0.015076775660418207
+      ],
+      "cwnd_mean_range": [
+        35.4609375,
+        1662.5078125
+      ]
+    },
+    {
+      "file": "@LOCAL_WORKSPACE@\\experiments\\two-track-run-20261025\\check-20261026-000939.json",
+      "arm": "canopy_artifact",
+      "current_arm": true,
+      "stage": "RUNNING",
+      "inserted": "924873",
+      "critic_iterations": "91256",
+      "actor_grad": "0.19451336562633514",
+      "actors": 24,
+      "strong_negative": 0,
+      "last_action_mean_range": [
+        -0.9245558837428689,
+        0.033109460840933025
+      ],
+      "cwnd_mean_range": [
+        8.640625,
+        1511.6015625
+      ]
+    }
+  ],
+  "gaussian_coverage": [
+    {
+      "actor_output": -1.0,
+      "std": 0.2,
+      "probability_nonreducing_action": 2.866515718791955e-07,
+      "expected_nonreducing_actions_per_actor_hour_at46_calls_s": 0.04746950030319478,
+      "probability_no_nonreducing_action_in_one_hour_at46_calls_s": 0.9536395519182843
+    },
+    {
+      "actor_output": -0.75,
+      "std": 0.2,
+      "probability_nonreducing_action": 8.841728520080404e-05,
+      "expected_nonreducing_actions_per_actor_hour_at46_calls_s": 14.641902429253149,
+      "probability_no_nonreducing_action_in_one_hour_at46_calls_s": 4.373422506808248e-07
+    },
+    {
+      "actor_output": -0.5,
+      "std": 0.2,
+      "probability_nonreducing_action": 0.006209665325776144,
+      "expected_nonreducing_actions_per_actor_hour_at46_calls_s": 1028.3205779485295,
+      "probability_no_nonreducing_action_in_one_hour_at46_calls_s": 0.0
+    },
+    {
+      "actor_output": -0.25,
+      "std": 0.2,
+      "probability_nonreducing_action": 0.1056497736668553,
+      "expected_nonreducing_actions_per_actor_hour_at46_calls_s": 17495.602519231237,
+      "probability_no_nonreducing_action_in_one_hour_at46_calls_s": 0.0
+    },
+    {
+      "actor_output": 0.0,
+      "std": 0.2,
+      "probability_nonreducing_action": 0.5,
+      "expected_nonreducing_actions_per_actor_hour_at46_calls_s": 82800.0,
+      "probability_no_nonreducing_action_in_one_hour_at46_calls_s": 0.0
+    }
+  ],
+  "interpretation": "At saturated negative output, current Gaussian noise gives extremely little neutral/increase support. This is inherited exploration, not proof of permanent collapse: actor gradients and generalization can still move the policy. Sparse saved checks do not identify the exact first update or uninterrupted bias duration."
+}

@@ -1,0 +1,43 @@
+{
+  "host": "VM-0-15-ubuntu",
+  "native_binary_sha256": "7f815d534eae2ddccf3bb1889e6319866abf9d583b9272e41663cdbba9b8d911",
+  "native_source_sha256": "1f9f203d30554597507d4f1c98c8f0fee0c0e0b3cac7d3535d544de0c93d1a42",
+  "source_sha256": {
+    "remote_frozen_evaluate.py": "ae3cd0adfeec03f81b7718b82c2fe1eee6f849e8fc07d331be10656230d4bab4",
+    "moving_stats_backend.py": "8134cbf68d0eb2eacbbed5c065817f998a7c7ccac6779c358c72af7fdefff952",
+    "orca_backend.py": "7a3e0a1b100f2765ef3eff3f0f1c11a0b947b44b198017592732b51d71144680",
+    "distributed.py": "002e1075411c155364c3d42e38e4073f394385de3ffe599c29655cfad45973a1",
+    "verify_canopy.py": "952d27fe5a597510f47ceb575101e2c4a66162f445cc12e1969371d49247f74d",
+    "verify_orca.py": "7590a9414659b13a1b928a8f017755929b61cf60d2ec1ce225059dad877eff07",
+    "timed_distributed.py": "0b8f196d0890cc6bea86470dc9c2d08564104dfc2c0fa914a3440c8e35b7ffd4",
+    "constants.py": "61a3db083eb85acf978932bed234ea47874318074767a5b57af294cff4be20cb",
+    "independent_critic_v34.py": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266",
+    "frozen_evaluate.py": "927c92be944ae93f8325e0f2424e13d1116e6df69f418b18275a009eef1e943b",
+    "repair_evaluate.py": "eeadbcbac1c7dfce152c86ae7af1a8bdfed9fe0d62a2a32f4bec546a2b8b9311",
+    "constrained_reward.py": "b15bd24c364eb51a03be93ef28f659f8b9cd542e5bbb589b402a7e8de926912e",
+    "evaluate.py": "35ffde57f6f89743b3273bb9f355df0c1839d788faf22493399104a76336a6b7",
+    "cluster_control.py": "519438d2533f87104ae2e1dcc508b6c243b258e617102f7d2d4fbf648a69c698",
+    "node_control.py": "039ccbe7c87e8a1a8688135b2e0dc52f636ab0c5f674bb5549c191134094206c",
+    "canopy_feedback.py": "48316ab4f17239dc9e430037ccc3824e5a0beda6e83d2432690c56f79d9e2df9",
+    "verify_canopy_qc_modes.py": "3fab0f6c4229faf131314fb5bed63162e4cebab797b983e98d7830c028710806",
+    "mahimahi_metrics.py": "83dd2ab21b6e99524c8b66edee5f9d24915331a44f87dd3a2df29e71683aac15",
+    "symbolic_transitions.py": "871877341645c37ead65b6d43f97717281750507dca29dc26a9810e826a45642",
+    "resource_cost.py": "37489568d4bbfaf4ad7b45cb5f7fcdabe17e242f171f96df4e31ed77a10437ae",
+    "consistent_target_bn.py": "ac64991d4bb40c10afff580b5c8140ec1e6587c9eb64344e8a37b3b5b00380a5",
+    "orca_moving_actor_loss.py": "fe886a668a09a05518c37013c768a66ff6c03f328d46a82003a5ba2d6c08e154",
+    "canopy_qc_modes.py": "986ee9b2349dedfbdd6a9505b4ea6cb52c71f7497845c481ea3dec889025a0d7"
+  },
+  "compile_command": [
+    "g++",
+    "-std=c++11",
+    "-O2",
+    "-pthread",
+    "-I",
+    "@EXPERIMENT@/frameworks/orca_single/code/runtime/src",
+    "@EXPERIMENT@/native/orca-server-normal-start.cc",
+    "@EXPERIMENT@/frameworks/orca_single/code/runtime/src/flow.cc",
+    "-o",
+    "@EXPERIMENT@/native/orca-server-normal-start"
+  ],
+  "first_compile_failure": "Missing flow.cc linkage before any TCP; corrected with explicit translation unit"
+}

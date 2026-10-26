@@ -1,0 +1,44 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "scope": "Existing-checkpoint read-only diagnosis on learner only; no actors, TCP, optimization, resumed training or fresh experiment runs",
+  "requires": "User starts the learner and authorizes connection; current run checkpoint/replay are not local and local Python has no TensorFlow module",
+  "maximum_seconds_per_arm": 600,
+  "arms": [
+    "orca_control",
+    "orca_moving"
+  ],
+  "source_root": "@EXPERIMENT@",
+  "checks": [
+    "Actual actor-loss versus deployed-function gradients and tanh saturation",
+    "Both critic action derivatives at actual deterministic policy outputs",
+    "Joint same-state scalar action-grid sensitivity and neutral-versus-policy Q gap",
+    "Retained factual exploration action support per training condition",
+    "Own bootstrap residual, clearly not true Q accuracy",
+    "All model/target/BN/optimizer/counter variables unchanged after all queries"
+  ],
+  "interpretation_rules": [
+    "If critic favors increasing the window while actor remains strongly negative, inspect actor gradient/saturation/BN before a reward patch; Q predictions alone do not establish correct network actions.",
+    "If both critics favor shrinking and the retained action data contain almost no nonreducing actions, prioritize identifying reward-scale versus extrapolation/support. Do not claim critic correctness from low TD loss.",
+    "If critics disagree or conclusions depend on unsupported action grid points, stop before training and design a bounded factual probe.",
+    "Earlier checkpoints query final replay states; all historical on-policy claims are prohibited.",
+    "This read-only check cannot open actor updates, choose a new production checkpoint, or schedule long training automatically."
+  ],
+  "already_confirmed": [
+    "Source reward/state have a self-peak normalization alias on synthetic fixtures",
+    "144 real frozen runs contain observed reward/network-quality conflicts in full and trim10 windows",
+    "Gaussian std0.2 supplies extremely sparse nonreducing actions at saturated negative policy output",
+    "Current scalar training protocol differs from upstream in several material engineering choices"
+  ],
+  "still_unknown": [
+    "Exact first update that initiated negative bias in current normal-start runs",
+    "Whether current critics or actor optimization primarily sustain the bad window policy",
+    "Whether natural-CUBIC slow-start handoff, without auxiliary writes, changes learning outcomes",
+    "Whether any reward/exploration correction yields a reliable network/CPU gain"
+  ],
+  "prohibited": [
+    "Start all five servers for an offline query",
+    "Repeat long baseline training",
+    "Silently restore original window-boost helper",
+    "Change reward, sampling, initialization and exploration together"
+  ]
+}

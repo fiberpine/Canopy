@@ -9,6 +9,9 @@ def enabled(cfg):return cfg.get('window_policy_mode') in ('frozen_scalar','stage
 
 def validate(cfg):
  if not enabled(cfg):return
+ if cfg.get('fixed_window_exploration_from_start'):
+  if not (cfg.get('initialize_joint_from_scratch') and cfg.get('fixed_period_train_window') and cfg.get('timing_policy_mode')=='fixed'):
+   raise ValueError('Initial window exploration is opt-in for scratch fixed-period training only')
  if not cfg.get('joint_control') or cfg.get('backend')!='moving_stats' or not cfg.get('target_bn_consistent'):
   raise ValueError('Frozen scalar requires joint/moving_stats/consistent target BN')
  if cfg.get('timing_policy_mode') not in MODES:raise ValueError('Explicit timing policy mode required')
@@ -61,4 +64,3 @@ class Scheduler:
    self.stable+=1
    if self.stable>=3:self.period=min(hi,self.period*1.5);self.stable=0
   return mtp_action(self.period,self.cfg),'hysteresis'
-

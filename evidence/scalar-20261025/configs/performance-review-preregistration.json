@@ -1,0 +1,19 @@
+{
+  "schema": "paired-scalar-review-v1",
+  "primary_pair": "orca_moving versus contemporaneous orca_control; same random complete step0, normal startup and budget",
+  "engineering_validity": "All three training outcomes complete, all24 producer records, debt drained, finite tensors, exact initial identity for paired Orca, correct normal startup, frozen policy hashes unchanged, all72 evaluations per arm, protected51files unchanged on all5hosts.",
+  "descriptive_noninferiority": {
+    "utilization_absolute_tolerance": 0.03,
+    "queue_multiplier": 1.2,
+    "queue_additive_ms": 2.0,
+    "drop_fraction_absolute_tolerance": 0.005
+  },
+  "protocol_origin": "Reuse conservative development comparison tolerances; add before seeing any current formal frozen results. These are engineering screens, not statistical proof.",
+  "necessary_utilization_screen": 0.8,
+  "reporting": "Report every condition, full and trim10, individual repeats and repeat means; all throughput/mean/P95/P99/drop/action/CPU. Do not select checkpoint by score. Report INTMAX window and action oscillation separately. Do not merge histories or old startup results into paired causal estimate.",
+  "comparisons": "Canopy artifact QC versus Orca is an algorithm plus source-network comparison, not a reward-only ablation. No claim of exact paper reproduction. Cannot infer dynamicMTP benefits from these scalar results.",
+  "innovation": "Existing registered two-reward frozen-actor diagnostic only; actor release remains false regardless of Bellman RMSE. No network or CPU improvement has been established.",
+  "escalation": "No automatic extension, repeated seed, reward modification, alternative QC arm, dual-actor training, or server shutdown. Early bad performance alone does not stop long training.",
+  "limitations": "One training seed; two frozen repeats are not two training seeds. Development conditions not blind tests. No equivalence between policy call reduction and CPU savings.",
+  "epoch": 1792933671.333936
+}
