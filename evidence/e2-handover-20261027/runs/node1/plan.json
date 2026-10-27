@@ -1,0 +1,3138 @@
+{
+  "deadline_epoch": 1793090518.916527,
+  "pilot": [],
+  "formal": [
+    {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100-q2",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1200,
+      "queue_bytes": 1804800,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G72-R100-q2-r2-A0",
+      "group": "e2-A0",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2702,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A0",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    },
+    {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100-q2",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1200,
+      "queue_bytes": 1804800,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G72-R100-q2-r2-A1",
+      "group": "e2-A1",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2702,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A1",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    },
+    {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100-q2",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1200,
+      "queue_bytes": 1804800,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G72-R100-q2-r2-A4",
+      "group": "e2-A4",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2702,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A4",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    },
+    {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100-q2",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1200,
+      "queue_bytes": 1804800,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G72-R100-q2-r2-A2",
+      "group": "e2-A2",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2702,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A2",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    },
+    {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100-q2",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1200,
+      "queue_bytes": 1804800,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G72-R100-q2-r0-A2",
+      "group": "e2-A2",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2700,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A2",
+      "e2_warmup_s": 10,
+      "e2_repeat": 0
+    },
+    {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100-q2",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1200,
+      "queue_bytes": 1804800,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G72-R100-q2-r0-A1",
+      "group": "e2-A1",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2700,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A1",
+      "e2_warmup_s": 10,
+      "e2_repeat": 0
+    },
+    {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100-q2",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1200,
+      "queue_bytes": 1804800,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G72-R100-q2-r0-A0",
+      "group": "e2-A0",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2700,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A0",
+      "e2_warmup_s": 10,
+      "e2_repeat": 0
+    },
+    {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100-q2",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1200,
+      "queue_bytes": 1804800,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G72-R100-q2-r0-A4",
+      "group": "e2-A4",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2700,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A4",
+      "e2_warmup_s": 10,
+      "e2_repeat": 0
+    },
+    {
+      "trace": "dyn-constant24-s0",
+      "kind": "constant",
+      "seed": 2702,
+      "packet_bytes": 1504,
+      "trace_period_ms": 60000,
+      "capacity_mbps": 23.999829333333334,
+      "nominal_mbps": 24,
+      "peak_mbps": 24,
+      "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "packets": 119680,
+      "segments": [
+        {
+          "start_s": 0.0,
+          "end_s": 1.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 1.0,
+          "end_s": 2.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 2.0,
+          "end_s": 3.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 3.0,
+          "end_s": 4.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 4.0,
+          "end_s": 5.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 5.0,
+          "end_s": 6.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 6.0,
+          "end_s": 7.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 7.0,
+          "end_s": 8.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 8.0,
+          "end_s": 9.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 9.0,
+          "end_s": 10.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 10.0,
+          "end_s": 11.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 11.0,
+          "end_s": 12.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 12.0,
+          "end_s": 13.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 13.0,
+          "end_s": 14.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 14.0,
+          "end_s": 15.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 15.0,
+          "end_s": 16.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 16.0,
+          "end_s": 17.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 17.0,
+          "end_s": 18.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 18.0,
+          "end_s": 19.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 19.0,
+          "end_s": 20.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 20.0,
+          "end_s": 21.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 21.0,
+          "end_s": 22.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 22.0,
+          "end_s": 23.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 23.0,
+          "end_s": 24.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 24.0,
+          "end_s": 25.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 25.0,
+          "end_s": 26.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 26.0,
+          "end_s": 27.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 27.0,
+          "end_s": 28.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 28.0,
+          "end_s": 29.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 29.0,
+          "end_s": 30.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 30.0,
+          "end_s": 31.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 31.0,
+          "end_s": 32.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 32.0,
+          "end_s": 33.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 33.0,
+          "end_s": 34.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 34.0,
+          "end_s": 35.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 35.0,
+          "end_s": 36.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 36.0,
+          "end_s": 37.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 37.0,
+          "end_s": 38.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 38.0,
+          "end_s": 39.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 39.0,
+          "end_s": 40.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 40.0,
+          "end_s": 41.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 41.0,
+          "end_s": 42.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 42.0,
+          "end_s": 43.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 43.0,
+          "end_s": 44.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 44.0,
+          "end_s": 45.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 45.0,
+          "end_s": 46.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 46.0,
+          "end_s": 47.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 47.0,
+          "end_s": 48.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 48.0,
+          "end_s": 49.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 49.0,
+          "end_s": 50.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 50.0,
+          "end_s": 51.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 51.0,
+          "end_s": 52.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 52.0,
+          "end_s": 53.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 53.0,
+          "end_s": 54.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 54.0,
+          "end_s": 55.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 55.0,
+          "end_s": 56.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 56.0,
+          "end_s": 57.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 57.0,
+          "end_s": 58.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 58.0,
+          "end_s": 59.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 59.0,
+          "end_s": 60.0,
+          "nominal_mbps": 24
+        }
+      ],
+      "capacity_definition": "1504-byte service opportunities; total bytes / actual 60s repeat period; evaluation uses logged capacity integral",
+      "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+      "split": "Development evaluation outside this scalar training grid; not a sealed blind test",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "base_rtt_ms": 20,
+      "delay_ms": 10,
+      "queue_packets": 200,
+      "queue_bytes": 299296,
+      "policy_inverse_rtt_noise": 0.0,
+      "queue_bdp": 5,
+      "episode_environments": [
+        {
+          "trace": "dyn-constant24-s0",
+          "kind": "constant",
+          "seed": 0,
+          "packet_bytes": 1504,
+          "trace_period_ms": 60000,
+          "capacity_mbps": 23.999829333333334,
+          "nominal_mbps": 24,
+          "peak_mbps": 24,
+          "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+          "packets": 119680,
+          "segments": [
+            {
+              "start_s": 0.0,
+              "end_s": 1.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 1.0,
+              "end_s": 2.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 2.0,
+              "end_s": 3.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 3.0,
+              "end_s": 4.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 4.0,
+              "end_s": 5.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 5.0,
+              "end_s": 6.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 6.0,
+              "end_s": 7.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 7.0,
+              "end_s": 8.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 8.0,
+              "end_s": 9.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 9.0,
+              "end_s": 10.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 10.0,
+              "end_s": 11.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 11.0,
+              "end_s": 12.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 12.0,
+              "end_s": 13.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 13.0,
+              "end_s": 14.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 14.0,
+              "end_s": 15.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 15.0,
+              "end_s": 16.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 16.0,
+              "end_s": 17.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 17.0,
+              "end_s": 18.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 18.0,
+              "end_s": 19.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 19.0,
+              "end_s": 20.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 20.0,
+              "end_s": 21.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 21.0,
+              "end_s": 22.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 22.0,
+              "end_s": 23.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 23.0,
+              "end_s": 24.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 24.0,
+              "end_s": 25.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 25.0,
+              "end_s": 26.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 26.0,
+              "end_s": 27.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 27.0,
+              "end_s": 28.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 28.0,
+              "end_s": 29.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 29.0,
+              "end_s": 30.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 30.0,
+              "end_s": 31.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 31.0,
+              "end_s": 32.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 32.0,
+              "end_s": 33.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 33.0,
+              "end_s": 34.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 34.0,
+              "end_s": 35.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 35.0,
+              "end_s": 36.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 36.0,
+              "end_s": 37.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 37.0,
+              "end_s": 38.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 38.0,
+              "end_s": 39.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 39.0,
+              "end_s": 40.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 40.0,
+              "end_s": 41.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 41.0,
+              "end_s": 42.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 42.0,
+              "end_s": 43.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 43.0,
+              "end_s": 44.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 44.0,
+              "end_s": 45.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 45.0,
+              "end_s": 46.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 46.0,
+              "end_s": 47.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 47.0,
+              "end_s": 48.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 48.0,
+              "end_s": 49.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 49.0,
+              "end_s": 50.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 50.0,
+              "end_s": 51.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 51.0,
+              "end_s": 52.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 52.0,
+              "end_s": 53.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 53.0,
+              "end_s": 54.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 54.0,
+              "end_s": 55.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 55.0,
+              "end_s": 56.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 56.0,
+              "end_s": 57.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 57.0,
+              "end_s": 58.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 58.0,
+              "end_s": 59.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 59.0,
+              "end_s": 60.0,
+              "nominal_mbps": 24
+            }
+          ],
+          "capacity_definition": "1504-byte service opportunities; total bytes / actual 60s repeat period; evaluation uses logged capacity integral",
+          "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+          "split": "train-and-seen-evaluation",
+          "condition": "V17-anchor-Tconstant24-R20",
+          "base_rtt_ms": 20,
+          "delay_ms": 10,
+          "queue_packets": 200,
+          "queue_bytes": 299296,
+          "policy_inverse_rtt_noise": 0.0,
+          "queue_bdp": 5
+        }
+      ],
+      "prior_experiment_split": "seen-anchor",
+      "method": "orca",
+      "run_id": "e2-formal-V17-anchor-Tconstant24-R20-r2-A1",
+      "group": "e2-A1",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A1",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    },
+    {
+      "trace": "dyn-constant24-s0",
+      "kind": "constant",
+      "seed": 2702,
+      "packet_bytes": 1504,
+      "trace_period_ms": 60000,
+      "capacity_mbps": 23.999829333333334,
+      "nominal_mbps": 24,
+      "peak_mbps": 24,
+      "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "packets": 119680,
+      "segments": [
+        {
+          "start_s": 0.0,
+          "end_s": 1.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 1.0,
+          "end_s": 2.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 2.0,
+          "end_s": 3.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 3.0,
+          "end_s": 4.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 4.0,
+          "end_s": 5.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 5.0,
+          "end_s": 6.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 6.0,
+          "end_s": 7.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 7.0,
+          "end_s": 8.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 8.0,
+          "end_s": 9.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 9.0,
+          "end_s": 10.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 10.0,
+          "end_s": 11.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 11.0,
+          "end_s": 12.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 12.0,
+          "end_s": 13.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 13.0,
+          "end_s": 14.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 14.0,
+          "end_s": 15.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 15.0,
+          "end_s": 16.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 16.0,
+          "end_s": 17.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 17.0,
+          "end_s": 18.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 18.0,
+          "end_s": 19.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 19.0,
+          "end_s": 20.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 20.0,
+          "end_s": 21.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 21.0,
+          "end_s": 22.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 22.0,
+          "end_s": 23.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 23.0,
+          "end_s": 24.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 24.0,
+          "end_s": 25.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 25.0,
+          "end_s": 26.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 26.0,
+          "end_s": 27.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 27.0,
+          "end_s": 28.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 28.0,
+          "end_s": 29.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 29.0,
+          "end_s": 30.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 30.0,
+          "end_s": 31.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 31.0,
+          "end_s": 32.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 32.0,
+          "end_s": 33.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 33.0,
+          "end_s": 34.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 34.0,
+          "end_s": 35.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 35.0,
+          "end_s": 36.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 36.0,
+          "end_s": 37.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 37.0,
+          "end_s": 38.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 38.0,
+          "end_s": 39.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 39.0,
+          "end_s": 40.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 40.0,
+          "end_s": 41.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 41.0,
+          "end_s": 42.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 42.0,
+          "end_s": 43.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 43.0,
+          "end_s": 44.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 44.0,
+          "end_s": 45.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 45.0,
+          "end_s": 46.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 46.0,
+          "end_s": 47.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 47.0,
+          "end_s": 48.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 48.0,
+          "end_s": 49.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 49.0,
+          "end_s": 50.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 50.0,
+          "end_s": 51.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 51.0,
+          "end_s": 52.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 52.0,
+          "end_s": 53.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 53.0,
+          "end_s": 54.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 54.0,
+          "end_s": 55.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 55.0,
+          "end_s": 56.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 56.0,
+          "end_s": 57.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 57.0,
+          "end_s": 58.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 58.0,
+          "end_s": 59.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 59.0,
+          "end_s": 60.0,
+          "nominal_mbps": 24
+        }
+      ],
+      "capacity_definition": "1504-byte service opportunities; total bytes / actual 60s repeat period; evaluation uses logged capacity integral",
+      "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+      "split": "Development evaluation outside this scalar training grid; not a sealed blind test",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "base_rtt_ms": 20,
+      "delay_ms": 10,
+      "queue_packets": 200,
+      "queue_bytes": 299296,
+      "policy_inverse_rtt_noise": 0.0,
+      "queue_bdp": 5,
+      "episode_environments": [
+        {
+          "trace": "dyn-constant24-s0",
+          "kind": "constant",
+          "seed": 0,
+          "packet_bytes": 1504,
+          "trace_period_ms": 60000,
+          "capacity_mbps": 23.999829333333334,
+          "nominal_mbps": 24,
+          "peak_mbps": 24,
+          "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+          "packets": 119680,
+          "segments": [
+            {
+              "start_s": 0.0,
+              "end_s": 1.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 1.0,
+              "end_s": 2.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 2.0,
+              "end_s": 3.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 3.0,
+              "end_s": 4.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 4.0,
+              "end_s": 5.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 5.0,
+              "end_s": 6.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 6.0,
+              "end_s": 7.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 7.0,
+              "end_s": 8.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 8.0,
+              "end_s": 9.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 9.0,
+              "end_s": 10.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 10.0,
+              "end_s": 11.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 11.0,
+              "end_s": 12.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 12.0,
+              "end_s": 13.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 13.0,
+              "end_s": 14.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 14.0,
+              "end_s": 15.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 15.0,
+              "end_s": 16.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 16.0,
+              "end_s": 17.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 17.0,
+              "end_s": 18.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 18.0,
+              "end_s": 19.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 19.0,
+              "end_s": 20.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 20.0,
+              "end_s": 21.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 21.0,
+              "end_s": 22.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 22.0,
+              "end_s": 23.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 23.0,
+              "end_s": 24.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 24.0,
+              "end_s": 25.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 25.0,
+              "end_s": 26.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 26.0,
+              "end_s": 27.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 27.0,
+              "end_s": 28.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 28.0,
+              "end_s": 29.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 29.0,
+              "end_s": 30.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 30.0,
+              "end_s": 31.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 31.0,
+              "end_s": 32.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 32.0,
+              "end_s": 33.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 33.0,
+              "end_s": 34.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 34.0,
+              "end_s": 35.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 35.0,
+              "end_s": 36.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 36.0,
+              "end_s": 37.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 37.0,
+              "end_s": 38.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 38.0,
+              "end_s": 39.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 39.0,
+              "end_s": 40.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 40.0,
+              "end_s": 41.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 41.0,
+              "end_s": 42.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 42.0,
+              "end_s": 43.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 43.0,
+              "end_s": 44.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 44.0,
+              "end_s": 45.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 45.0,
+              "end_s": 46.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 46.0,
+              "end_s": 47.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 47.0,
+              "end_s": 48.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 48.0,
+              "end_s": 49.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 49.0,
+              "end_s": 50.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 50.0,
+              "end_s": 51.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 51.0,
+              "end_s": 52.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 52.0,
+              "end_s": 53.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 53.0,
+              "end_s": 54.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 54.0,
+              "end_s": 55.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 55.0,
+              "end_s": 56.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 56.0,
+              "end_s": 57.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 57.0,
+              "end_s": 58.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 58.0,
+              "end_s": 59.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 59.0,
+              "end_s": 60.0,
+              "nominal_mbps": 24
+            }
+          ],
+          "capacity_definition": "1504-byte service opportunities; total bytes / actual 60s repeat period; evaluation uses logged capacity integral",
+          "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+          "split": "train-and-seen-evaluation",
+          "condition": "V17-anchor-Tconstant24-R20",
+          "base_rtt_ms": 20,
+          "delay_ms": 10,
+          "queue_packets": 200,
+          "queue_bytes": 299296,
+          "policy_inverse_rtt_noise": 0.0,
+          "queue_bdp": 5
+        }
+      ],
+      "prior_experiment_split": "seen-anchor",
+      "method": "orca",
+      "run_id": "e2-formal-V17-anchor-Tconstant24-R20-r2-A0",
+      "group": "e2-A0",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A0",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    },
+    {
+      "trace": "dyn-constant24-s0",
+      "kind": "constant",
+      "seed": 2702,
+      "packet_bytes": 1504,
+      "trace_period_ms": 60000,
+      "capacity_mbps": 23.999829333333334,
+      "nominal_mbps": 24,
+      "peak_mbps": 24,
+      "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "packets": 119680,
+      "segments": [
+        {
+          "start_s": 0.0,
+          "end_s": 1.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 1.0,
+          "end_s": 2.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 2.0,
+          "end_s": 3.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 3.0,
+          "end_s": 4.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 4.0,
+          "end_s": 5.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 5.0,
+          "end_s": 6.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 6.0,
+          "end_s": 7.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 7.0,
+          "end_s": 8.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 8.0,
+          "end_s": 9.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 9.0,
+          "end_s": 10.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 10.0,
+          "end_s": 11.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 11.0,
+          "end_s": 12.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 12.0,
+          "end_s": 13.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 13.0,
+          "end_s": 14.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 14.0,
+          "end_s": 15.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 15.0,
+          "end_s": 16.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 16.0,
+          "end_s": 17.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 17.0,
+          "end_s": 18.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 18.0,
+          "end_s": 19.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 19.0,
+          "end_s": 20.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 20.0,
+          "end_s": 21.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 21.0,
+          "end_s": 22.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 22.0,
+          "end_s": 23.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 23.0,
+          "end_s": 24.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 24.0,
+          "end_s": 25.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 25.0,
+          "end_s": 26.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 26.0,
+          "end_s": 27.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 27.0,
+          "end_s": 28.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 28.0,
+          "end_s": 29.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 29.0,
+          "end_s": 30.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 30.0,
+          "end_s": 31.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 31.0,
+          "end_s": 32.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 32.0,
+          "end_s": 33.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 33.0,
+          "end_s": 34.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 34.0,
+          "end_s": 35.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 35.0,
+          "end_s": 36.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 36.0,
+          "end_s": 37.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 37.0,
+          "end_s": 38.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 38.0,
+          "end_s": 39.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 39.0,
+          "end_s": 40.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 40.0,
+          "end_s": 41.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 41.0,
+          "end_s": 42.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 42.0,
+          "end_s": 43.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 43.0,
+          "end_s": 44.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 44.0,
+          "end_s": 45.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 45.0,
+          "end_s": 46.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 46.0,
+          "end_s": 47.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 47.0,
+          "end_s": 48.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 48.0,
+          "end_s": 49.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 49.0,
+          "end_s": 50.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 50.0,
+          "end_s": 51.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 51.0,
+          "end_s": 52.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 52.0,
+          "end_s": 53.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 53.0,
+          "end_s": 54.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 54.0,
+          "end_s": 55.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 55.0,
+          "end_s": 56.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 56.0,
+          "end_s": 57.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 57.0,
+          "end_s": 58.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 58.0,
+          "end_s": 59.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 59.0,
+          "end_s": 60.0,
+          "nominal_mbps": 24
+        }
+      ],
+      "capacity_definition": "1504-byte service opportunities; total bytes / actual 60s repeat period; evaluation uses logged capacity integral",
+      "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+      "split": "Development evaluation outside this scalar training grid; not a sealed blind test",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "base_rtt_ms": 20,
+      "delay_ms": 10,
+      "queue_packets": 200,
+      "queue_bytes": 299296,
+      "policy_inverse_rtt_noise": 0.0,
+      "queue_bdp": 5,
+      "episode_environments": [
+        {
+          "trace": "dyn-constant24-s0",
+          "kind": "constant",
+          "seed": 0,
+          "packet_bytes": 1504,
+          "trace_period_ms": 60000,
+          "capacity_mbps": 23.999829333333334,
+          "nominal_mbps": 24,
+          "peak_mbps": 24,
+          "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+          "packets": 119680,
+          "segments": [
+            {
+              "start_s": 0.0,
+              "end_s": 1.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 1.0,
+              "end_s": 2.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 2.0,
+              "end_s": 3.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 3.0,
+              "end_s": 4.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 4.0,
+              "end_s": 5.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 5.0,
+              "end_s": 6.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 6.0,
+              "end_s": 7.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 7.0,
+              "end_s": 8.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 8.0,
+              "end_s": 9.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 9.0,
+              "end_s": 10.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 10.0,
+              "end_s": 11.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 11.0,
+              "end_s": 12.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 12.0,
+              "end_s": 13.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 13.0,
+              "end_s": 14.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 14.0,
+              "end_s": 15.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 15.0,
+              "end_s": 16.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 16.0,
+              "end_s": 17.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 17.0,
+              "end_s": 18.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 18.0,
+              "end_s": 19.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 19.0,
+              "end_s": 20.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 20.0,
+              "end_s": 21.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 21.0,
+              "end_s": 22.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 22.0,
+              "end_s": 23.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 23.0,
+              "end_s": 24.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 24.0,
+              "end_s": 25.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 25.0,
+              "end_s": 26.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 26.0,
+              "end_s": 27.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 27.0,
+              "end_s": 28.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 28.0,
+              "end_s": 29.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 29.0,
+              "end_s": 30.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 30.0,
+              "end_s": 31.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 31.0,
+              "end_s": 32.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 32.0,
+              "end_s": 33.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 33.0,
+              "end_s": 34.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 34.0,
+              "end_s": 35.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 35.0,
+              "end_s": 36.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 36.0,
+              "end_s": 37.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 37.0,
+              "end_s": 38.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 38.0,
+              "end_s": 39.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 39.0,
+              "end_s": 40.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 40.0,
+              "end_s": 41.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 41.0,
+              "end_s": 42.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 42.0,
+              "end_s": 43.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 43.0,
+              "end_s": 44.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 44.0,
+              "end_s": 45.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 45.0,
+              "end_s": 46.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 46.0,
+              "end_s": 47.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 47.0,
+              "end_s": 48.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 48.0,
+              "end_s": 49.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 49.0,
+              "end_s": 50.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 50.0,
+              "end_s": 51.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 51.0,
+              "end_s": 52.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 52.0,
+              "end_s": 53.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 53.0,
+              "end_s": 54.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 54.0,
+              "end_s": 55.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 55.0,
+              "end_s": 56.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 56.0,
+              "end_s": 57.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 57.0,
+              "end_s": 58.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 58.0,
+              "end_s": 59.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 59.0,
+              "end_s": 60.0,
+              "nominal_mbps": 24
+            }
+          ],
+          "capacity_definition": "1504-byte service opportunities; total bytes / actual 60s repeat period; evaluation uses logged capacity integral",
+          "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+          "split": "train-and-seen-evaluation",
+          "condition": "V17-anchor-Tconstant24-R20",
+          "base_rtt_ms": 20,
+          "delay_ms": 10,
+          "queue_packets": 200,
+          "queue_bytes": 299296,
+          "policy_inverse_rtt_noise": 0.0,
+          "queue_bdp": 5
+        }
+      ],
+      "prior_experiment_split": "seen-anchor",
+      "method": "orca",
+      "run_id": "e2-formal-V17-anchor-Tconstant24-R20-r2-A4",
+      "group": "e2-A4",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A4",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    },
+    {
+      "trace": "dyn-constant24-s0",
+      "kind": "constant",
+      "seed": 2702,
+      "packet_bytes": 1504,
+      "trace_period_ms": 60000,
+      "capacity_mbps": 23.999829333333334,
+      "nominal_mbps": 24,
+      "peak_mbps": 24,
+      "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+      "packets": 119680,
+      "segments": [
+        {
+          "start_s": 0.0,
+          "end_s": 1.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 1.0,
+          "end_s": 2.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 2.0,
+          "end_s": 3.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 3.0,
+          "end_s": 4.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 4.0,
+          "end_s": 5.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 5.0,
+          "end_s": 6.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 6.0,
+          "end_s": 7.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 7.0,
+          "end_s": 8.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 8.0,
+          "end_s": 9.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 9.0,
+          "end_s": 10.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 10.0,
+          "end_s": 11.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 11.0,
+          "end_s": 12.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 12.0,
+          "end_s": 13.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 13.0,
+          "end_s": 14.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 14.0,
+          "end_s": 15.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 15.0,
+          "end_s": 16.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 16.0,
+          "end_s": 17.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 17.0,
+          "end_s": 18.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 18.0,
+          "end_s": 19.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 19.0,
+          "end_s": 20.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 20.0,
+          "end_s": 21.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 21.0,
+          "end_s": 22.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 22.0,
+          "end_s": 23.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 23.0,
+          "end_s": 24.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 24.0,
+          "end_s": 25.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 25.0,
+          "end_s": 26.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 26.0,
+          "end_s": 27.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 27.0,
+          "end_s": 28.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 28.0,
+          "end_s": 29.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 29.0,
+          "end_s": 30.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 30.0,
+          "end_s": 31.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 31.0,
+          "end_s": 32.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 32.0,
+          "end_s": 33.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 33.0,
+          "end_s": 34.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 34.0,
+          "end_s": 35.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 35.0,
+          "end_s": 36.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 36.0,
+          "end_s": 37.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 37.0,
+          "end_s": 38.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 38.0,
+          "end_s": 39.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 39.0,
+          "end_s": 40.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 40.0,
+          "end_s": 41.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 41.0,
+          "end_s": 42.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 42.0,
+          "end_s": 43.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 43.0,
+          "end_s": 44.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 44.0,
+          "end_s": 45.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 45.0,
+          "end_s": 46.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 46.0,
+          "end_s": 47.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 47.0,
+          "end_s": 48.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 48.0,
+          "end_s": 49.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 49.0,
+          "end_s": 50.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 50.0,
+          "end_s": 51.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 51.0,
+          "end_s": 52.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 52.0,
+          "end_s": 53.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 53.0,
+          "end_s": 54.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 54.0,
+          "end_s": 55.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 55.0,
+          "end_s": 56.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 56.0,
+          "end_s": 57.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 57.0,
+          "end_s": 58.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 58.0,
+          "end_s": 59.0,
+          "nominal_mbps": 24
+        },
+        {
+          "start_s": 59.0,
+          "end_s": 60.0,
+          "nominal_mbps": 24
+        }
+      ],
+      "capacity_definition": "1504-byte service opportunities; total bytes / actual 60s repeat period; evaluation uses logged capacity integral",
+      "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+      "split": "Development evaluation outside this scalar training grid; not a sealed blind test",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "base_rtt_ms": 20,
+      "delay_ms": 10,
+      "queue_packets": 200,
+      "queue_bytes": 299296,
+      "policy_inverse_rtt_noise": 0.0,
+      "queue_bdp": 5,
+      "episode_environments": [
+        {
+          "trace": "dyn-constant24-s0",
+          "kind": "constant",
+          "seed": 0,
+          "packet_bytes": 1504,
+          "trace_period_ms": 60000,
+          "capacity_mbps": 23.999829333333334,
+          "nominal_mbps": 24,
+          "peak_mbps": 24,
+          "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+          "packets": 119680,
+          "segments": [
+            {
+              "start_s": 0.0,
+              "end_s": 1.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 1.0,
+              "end_s": 2.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 2.0,
+              "end_s": 3.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 3.0,
+              "end_s": 4.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 4.0,
+              "end_s": 5.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 5.0,
+              "end_s": 6.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 6.0,
+              "end_s": 7.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 7.0,
+              "end_s": 8.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 8.0,
+              "end_s": 9.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 9.0,
+              "end_s": 10.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 10.0,
+              "end_s": 11.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 11.0,
+              "end_s": 12.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 12.0,
+              "end_s": 13.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 13.0,
+              "end_s": 14.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 14.0,
+              "end_s": 15.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 15.0,
+              "end_s": 16.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 16.0,
+              "end_s": 17.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 17.0,
+              "end_s": 18.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 18.0,
+              "end_s": 19.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 19.0,
+              "end_s": 20.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 20.0,
+              "end_s": 21.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 21.0,
+              "end_s": 22.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 22.0,
+              "end_s": 23.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 23.0,
+              "end_s": 24.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 24.0,
+              "end_s": 25.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 25.0,
+              "end_s": 26.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 26.0,
+              "end_s": 27.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 27.0,
+              "end_s": 28.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 28.0,
+              "end_s": 29.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 29.0,
+              "end_s": 30.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 30.0,
+              "end_s": 31.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 31.0,
+              "end_s": 32.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 32.0,
+              "end_s": 33.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 33.0,
+              "end_s": 34.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 34.0,
+              "end_s": 35.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 35.0,
+              "end_s": 36.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 36.0,
+              "end_s": 37.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 37.0,
+              "end_s": 38.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 38.0,
+              "end_s": 39.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 39.0,
+              "end_s": 40.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 40.0,
+              "end_s": 41.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 41.0,
+              "end_s": 42.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 42.0,
+              "end_s": 43.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 43.0,
+              "end_s": 44.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 44.0,
+              "end_s": 45.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 45.0,
+              "end_s": 46.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 46.0,
+              "end_s": 47.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 47.0,
+              "end_s": 48.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 48.0,
+              "end_s": 49.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 49.0,
+              "end_s": 50.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 50.0,
+              "end_s": 51.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 51.0,
+              "end_s": 52.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 52.0,
+              "end_s": 53.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 53.0,
+              "end_s": 54.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 54.0,
+              "end_s": 55.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 55.0,
+              "end_s": 56.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 56.0,
+              "end_s": 57.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 57.0,
+              "end_s": 58.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 58.0,
+              "end_s": 59.0,
+              "nominal_mbps": 24
+            },
+            {
+              "start_s": 59.0,
+              "end_s": 60.0,
+              "nominal_mbps": 24
+            }
+          ],
+          "capacity_definition": "1504-byte service opportunities; total bytes / actual 60s repeat period; evaluation uses logged capacity integral",
+          "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+          "split": "train-and-seen-evaluation",
+          "condition": "V17-anchor-Tconstant24-R20",
+          "base_rtt_ms": 20,
+          "delay_ms": 10,
+          "queue_packets": 200,
+          "queue_bytes": 299296,
+          "policy_inverse_rtt_noise": 0.0,
+          "queue_bdp": 5
+        }
+      ],
+      "prior_experiment_split": "seen-anchor",
+      "method": "orca",
+      "run_id": "e2-formal-V17-anchor-Tconstant24-R20-r2-A2",
+      "group": "e2-A2",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A2",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    },
+    {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R20-q2",
+      "nominal_mbps": 36,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 120,
+      "queue_bytes": 180480,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G36-R20-q2-r2-A1",
+      "group": "e2-A1",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2702,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A1",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    },
+    {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R20-q2",
+      "nominal_mbps": 36,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 120,
+      "queue_bytes": 180480,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G36-R20-q2-r2-A2",
+      "group": "e2-A2",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2702,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A2",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    },
+    {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R20-q2",
+      "nominal_mbps": 36,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 120,
+      "queue_bytes": 180480,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G36-R20-q2-r2-A0",
+      "group": "e2-A0",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2702,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A0",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    },
+    {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R20-q2",
+      "nominal_mbps": 36,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 120,
+      "queue_bytes": 180480,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation",
+      "method": "orca",
+      "run_id": "e2-formal-G36-R20-q2-r2-A4",
+      "group": "e2-A4",
+      "checkpoint": "@SCALAR_FRAMEWORK@/checkpoints/twotrack-formal-orca_moving-seed3-3600/step-3557457",
+      "backend": "moving_stats",
+      "evaluation_entry": "handover_runner.py",
+      "seconds": 60,
+      "port": 38127,
+      "seed": 2702,
+      "no_training": true,
+      "code_commit": "7faff2432243b6f6a44a78010cd05b259c932547+explicit-normal-start-and-QC-mode",
+      "evaluation_code_commit": "E2-20261027-isolated-hooks-see-e2-provenance-sha256",
+      "absolute_deadline_epoch": 1793090518.916527,
+      "timeout_s": 135,
+      "control_period_ms": 20,
+      "server_binary": "@OLD_TWO_TRACK_ROOT@/native/orca-server-normal-start",
+      "require_normal_cubic_start": true,
+      "minimum_valid_feedback_samples": 5,
+      "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure",
+      "e2_arm": "A4",
+      "e2_warmup_s": 10,
+      "e2_repeat": 2
+    }
+  ]
+}

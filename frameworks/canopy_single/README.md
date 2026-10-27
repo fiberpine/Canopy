@@ -102,3 +102,8 @@ The768-row query gradients are not a particular512-row training update.
 Decision-weighted reward summaries are not physical-time reward integrals.
 CPU metrics include process ownership defined in `resource_cost.py`; raw calls
 and lower total throughput cannot establish a controller CPU advantage.
+
+
+## 2026-10-27接管诊断补充
+
+同一moving模型的E2冻结干预支持接管条件影响弱场景，但固定10秒预启动未通过正常条件守门，不能作为修复默认值。历史训练的初始乘窗异常及一条raw字段异常尚未解决；本框架没有据此改动作、初始化或native。参见[当前交接](../../docs/RESEARCH_REVIEW_BRIEF.md)与[E2工具](../../tools/e2_handover/README.md)。

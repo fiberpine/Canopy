@@ -1,0 +1,55 @@
+{
+  "status": "COMPLETE_FROZEN_DIAGNOSTIC",
+  "decision": "SUPPORT_STARTUP_HYPOTHESIS",
+  "primary_gain_percentage_points": 39.92280450458274,
+  "weak_positive_pairs": {
+    "G48-R20-q2": 3,
+    "G36-R20-q2": 3,
+    "V17-anchor-Tconstant24-R20": 3,
+    "G72-R100-q2": 3
+  },
+  "normal_guard": [
+    {
+      "condition": "G12-R50-q2",
+      "utilization_pass": true,
+      "queue_mean_pass": true
+    },
+    {
+      "condition": "G48-R50-q2",
+      "utilization_pass": false,
+      "queue_mean_pass": false
+    }
+  ],
+  "normal_guard_all_pass": false,
+  "formal_runs": 72,
+  "training_runs": 0,
+  "training_seed": 3,
+  "freeze_repeats": 3,
+  "limitations": [
+    "Paired initial configuration and host, not identical TCP random trajectories.",
+    "A2 retains full TCP/CUBIC/RTT connection state, not only cwnd.",
+    "A4 changes normalized policy input using privileged configured capacity; not deployable evidence.",
+    "Support for startup mechanism is not acceptance of a baseline or innovation.",
+    "Development constants only; no new dynamic-network or multi-training-seed evidence."
+  ],
+  "deployment_candidate_acceptance": "REJECT_FIXED_10S_HANDOVER_NORMAL_GUARD_FAILED",
+  "telemetry_audit": {
+    "formal_feedbacks": 199482,
+    "packets_out_above_one_million": 1,
+    "affected_run": "e2-formal-G48-R50-q2-r1-A2",
+    "recorded_packets_out": 2790000000,
+    "simultaneous_cwnd": 476,
+    "source": "raw-field-sanity.json",
+    "interpretation": "Implausible auxiliary field; kernel versus IPC origin NOT_CONFIRMED. Packets_out is not in current7 actor features. Do not use affected occupancy aggregate; other fields not proven immune."
+  },
+  "handover_tail_diagnostic": {
+    "condition": "G72-R100-q2",
+    "A1_p99_mean_ms": 178.33333333333334,
+    "A0_p99_mean_ms": 45.0,
+    "all_three_A1_repeats_delay_above100ms_after10s_confined_to_second10": true,
+    "source": "followup-raw-tail.json",
+    "interpretation": "Startup/handover cost retained. No new trimming window used for acceptance."
+  },
+  "A2_manipulation_limit": "After reset, current full-rate feedback immediately recreates reference; A2/A1 similarity does not show bandwidth reference is unnecessary.",
+  "training_go_no_go": "NO_GO_PENDING_EARLY_WINDOW_EXPLOSION_AND_TELEMETRY_INTEGRITY_DIAGNOSIS"
+}

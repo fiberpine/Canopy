@@ -1,0 +1,77 @@
+{
+  "publication_date": "2026-10-27",
+  "previous_public_main": "e4d9219008271ce92a9af1ee56ceacd574e47367",
+  "original_snapshot": "85baf09b6f43a9f3223f7a8eaa1a4321b1a11b3b",
+  "meaning": "After-experiment publication, not a training entrypoint. No new model or native patch.",
+  "evidence": "All72 formal runs,144 windows,48 condition/arm/window means and5 real pilot runs retained. One training seed,3 frozen repeats. CPU repeated across full/trim rows is one measurement.",
+  "redaction": "Node aliases and filesystem roots replaced in keys and values. Numeric metrics unchanged. Source receipts hash original bytes; repository-files.json hashes current public files.",
+  "adaptations": {
+    "e2_support.py": {
+      "executed_source_sha256": "29bac530b265029c51743a3dd0e87c16282cb68984e4340e0a37bb81ba1a88ad",
+      "published_source_sha256": "29bac530b265029c51743a3dd0e87c16282cb68984e4340e0a37bb81ba1a88ad",
+      "replacements": [],
+      "reverse_substitution_recreates_execution_bytes": true
+    },
+    "test_e2_support.py": {
+      "executed_source_sha256": "eded4f181332239acd630e4aee8e3386e9a5c4de0d47991b22eb9dbd2b8b58a7",
+      "published_source_sha256": "eded4f181332239acd630e4aee8e3386e9a5c4de0d47991b22eb9dbd2b8b58a7",
+      "replacements": [],
+      "reverse_substitution_recreates_execution_bytes": true
+    },
+    "handover_runner.py": {
+      "executed_source_sha256": "7072bbf9f5420bcaf68f62f880e4da7b5458a9717788d30cc3a72379f56fa413",
+      "published_source_sha256": "6aa679e11cabf4db4d4ae61478ab44497ade6e5d6be4b6dce38730e13594418f",
+      "replacements": [
+        {
+          "before": "import csv\n",
+          "after": "import csv\nimport os\n"
+        },
+        {
+          "before": "OLD = pathlib.Path('/home/ubuntu/orca-two-track-run-20261025-2030/frameworks/orca_moving')",
+          "after": "OLD = pathlib.Path(os.environ['CANOPY_E2_FRAMEWORK']).resolve()"
+        }
+      ],
+      "reverse_substitution_recreates_execution_bytes": true
+    },
+    "node_driver.py": {
+      "executed_source_sha256": "42581762c8da961a1e96958a108e3493fb721f27f679635a90a4f727dddb0427",
+      "published_source_sha256": "9b426742b3f5af4e1816c8e862fe852767e9221d0c7f9619ea5b34e3b640bf99",
+      "replacements": [
+        {
+          "before": "OLD = pathlib.Path('/home/ubuntu/orca-two-track-run-20261025-2030/frameworks/orca_moving')",
+          "after": "OLD = pathlib.Path(os.environ['CANOPY_E2_FRAMEWORK']).resolve()"
+        }
+      ],
+      "reverse_substitution_recreates_execution_bytes": true
+    },
+    "history_scan.py": {
+      "executed_source_sha256": "d546e54a79715a377ea34f8ef36b390ac06c140f5950a2a2692533e215b205bf",
+      "published_source_sha256": "0b2260997ad04526768b248ec640880ac98052dcf6badbfd2f0c2a3e92d45efd",
+      "replacements": [
+        {
+          "before": "OLD = pathlib.Path('/home/ubuntu/orca-two-track-run-20261025-2030')",
+          "after": "OLD = pathlib.Path(os.environ['CANOPY_E2_HISTORY_ROOT']).resolve()"
+        },
+        {
+          "before": "OUT = pathlib.Path('/home/ubuntu/orca-e2-handover-20261027')",
+          "after": "OUT = pathlib.Path(os.environ['CANOPY_E2_WORKSPACE']).resolve()"
+        }
+      ],
+      "reverse_substitution_recreates_execution_bytes": true
+    },
+    "boundary_audit.py": {
+      "executed_source_sha256": "228c0a010cac083ba46a4ad6966de37bec9a3ee395bb2835018220b8faa14a68",
+      "published_source_sha256": "ad908dbbd7a25b017e85c68dc8df2a06afde78e41224863e7b5deb60cee9113a",
+      "replacements": [
+        {
+          "before": "ROOT=pathlib.Path('/home/ubuntu/orca-e2-handover-20261027')",
+          "after": "ROOT=pathlib.Path(os.environ['CANOPY_E2_WORKSPACE']).resolve()"
+        }
+      ],
+      "reverse_substitution_recreates_execution_bytes": true
+    }
+  },
+  "infrastructure": "Personal SSH deployment, launch and collection wrappers omitted; complete executed model/handover loop and node driver are included. prepare.py is a new packaging adapter, not extra TCP certification.",
+  "assets": "No checkpoint/replay/packet logs uploaded. Source moving step3557457 model is not among original bundled51 files; provide it explicitly for replaying live experiments.",
+  "state": "Finite experiment finished. Original51 models, baseline/V14/V31 and consolidated tag preserved. Fixed10s handover rejected; no automatic training."
+}
