@@ -1,0 +1,19 @@
+{
+  "base_public_commit": "5ca361bc81534acfab3c82323789ccafffde5300",
+  "input": "Pre-update real replay birth<27436; every actor count matches source coverage; copied step0 tensors verified exactly.",
+  "source_versions": {
+    "first_updates_replay-v1.py": "60aa6b6ccd97cc36d2a4153d10e65394a53edc9aacb456d07dcc3f6054373782",
+    "first_updates_replay-v2.py": "6acbd6518aa342057b494b13b4127134e1ddb4eb804e28e049c91f179cc0dfe4"
+  },
+  "original_patch_sha256": "92d8288ee57e72a014bc26e26bee77910a97a6dd1d12ed5560bad264d01f694d",
+  "tests": {
+    "real_TF_jobs": 16,
+    "pilot_updates": 10,
+    "local_tools_tests": 73,
+    "new_TCP_experiments": 0,
+    "checkpoint_writes": 0
+  },
+  "strict_bitwise_observer_equivalence": "FAIL_RETAINED",
+  "new_online_candidate": "NOT_RUN",
+  "limitations": "Sampling repetitions, one source policy/trace provenance; no new network or CPU outcome."
+}

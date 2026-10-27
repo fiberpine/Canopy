@@ -73,5 +73,15 @@ class WindowBindingTest(unittest.TestCase):
         self.assertGreater(r['jitter']['trim10']['binding_rtt_fraction'], 0.9)
 
 
+class ActorSpeedTest(unittest.TestCase):
+    """Synthetic constant-gradient illustration, not universal scale independence."""
+    def test_speed_is_independent_of_gradient_magnitude(self):
+        import actor_speed_sim as sim
+        big = sim.first(sim.run(c=0.02, seed=3, steps=120), .9)
+        tiny = sim.first(sim.run(c=0.001, seed=3, steps=120), .9)
+        frozen = sim.first(sim.run(c=0.02, seed=3, steps=120, bn_mode='frozen'), .9)
+        self.assertTrue(55 <= big <= 110 and 55 <= tiny <= 110 and 55 <= frozen <= 110, (big, tiny, frozen))
+        self.assertLessEqual(abs(big - tiny), 15)
+
 if __name__ == '__main__':
     unittest.main()

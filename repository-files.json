@@ -1,5 +1,5 @@
 {
-  "scope": "Published scalar L1 safety stop; complete negative evidence and actor/BN audit; original51 models and tag preserved; no new qualified model",
+  "scope": "Published TF first-update diagnostics and all counterevidence; no new online model or network performance claim; original51 models preserved",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 9804,
-      "sha256": "45bf85b682d3f934a6af47088b86b7b52e86983ac0e913200acf93cb4d63abdc"
+      "bytes": 10210,
+      "sha256": "468d377cfb0a401cb5dbeed8bfd8d53973146d17053a4b3f311d6f51f7c69f2a"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -69,13 +69,18 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 28252,
-      "sha256": "6ccec42b7dfd427d75a985b2d0d5508819513d770357baf0373057c9a315951d"
+      "bytes": 31645,
+      "sha256": "79562f1f545bcb737e1c94c22b41198a657100e37506ea7de9564bf85449c1af"
     },
     {
       "path": "docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md",
       "bytes": 15666,
       "sha256": "72d45f211b4a64e5b0fa07efc78fc8a4ae9eda7672a0ee782c82ce6649ad2b35"
+    },
+    {
+      "path": "docs/SCALAR_FIRST_UPDATES_DIAGNOSIS.md",
+      "bytes": 14008,
+      "sha256": "d9cdcf2d61d22bfa09ad75a46719c12d5297b16dd30d0ed82d7319c243a2cca5"
     },
     {
       "path": "docs/SCALAR_LIMITED_LEARNING_PLAN.md",
@@ -2581,6 +2586,341 @@
       "path": "evidence/scalar-exploration-20261027/validation.json",
       "bytes": 3398,
       "sha256": "50ad949d999da9d93ce3ca6ee603e7b3e2f9176291956baa64753b496e1f6af5"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/arm-summary.csv",
+      "bytes": 3723,
+      "sha256": "a4dac46c03ed9ccf2ec3b707b52b133e8e5997cfbc324c9bd5c38f32b5a4e879"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-a/audit/R1-init101.json",
+      "bytes": 114307,
+      "sha256": "e81a661bf4e6fe868e35e982d187b7d8f0bc996a34fee23b7008e7eb650f81fc"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-a/audit/R1-init102.json",
+      "bytes": 118653,
+      "sha256": "b2bd84141f3d3ebb2dba1ec0a724dd0a334e8f6cc758c4c7ead501494a28fa63"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-a/audit/R1-init103.json",
+      "bytes": 115306,
+      "sha256": "ae10435931ecf7d2c3d31b2b55ab455932b39094255210835c2f64f0a2c46c67"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-a/audit/R6-lr-only-s3.json",
+      "bytes": 209849,
+      "sha256": "7e0cbd24d333e12ab4c0408042d553441e2ef2243feddc3f3ae5ebe84f36ad9e"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-a/audit/R6-lr-only-s4.json",
+      "bytes": 210147,
+      "sha256": "159cdf93614e0ef76922172c69cda197f1e678dff4ec2f95ccace94c9e698e8a"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-a/audit/R6-lr-only-s5.json",
+      "bytes": 210429,
+      "sha256": "e54fbf6c85fc524d4b09bd884e8ef5f3a667cca3178f5fe7d84bb44e8052e550"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-a/audit/jobs-launch.json",
+      "bytes": 50,
+      "sha256": "7fd72fec004414b54a82454aaa27c82ffda199364dff8a66c81440fbd53657ef"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-a/audit/jobs-r2-launch.json",
+      "bytes": 50,
+      "sha256": "4b6f1d2c08511b18b7ccba73d499e1a0391520371211002abe8cc2da138814ce"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-a/audit/jobs-status-r2.json",
+      "bytes": 5008,
+      "sha256": "388c388322b7c263670c90ba78e9935477d8ecd6a8bb8656dc5bc3e27bc6461a"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-a/audit/jobs-status.json",
+      "bytes": 4921,
+      "sha256": "a2ec620e2855b8a69dcec8b4bac9d5b5687d3cd6d1b90472aa94ccec49485254"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-a/receipt.json",
+      "bytes": 1010,
+      "sha256": "7ef5395ded937fa7d39f9a6b84714d9fe53d1aa693c77d64c1cc55ecd32de46d"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-b/audit/R2-s3.json",
+      "bytes": 132093,
+      "sha256": "fad95b426627f49ec1a5a471a4b5a3234ad3ace60c72f55f5e9df386444dfefc"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-b/audit/R5-s4.json",
+      "bytes": 639602,
+      "sha256": "df0ba4a389eaef23d4fbf5e97333a7142c3e87fe2cffd33e435d0db332979a9f"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-b/audit/jobs-launch.json",
+      "bytes": 49,
+      "sha256": "cef813a3a33634cd60052c94bb33d7393efbbb2a30b4afdc7d158075d6c58bba"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-b/audit/jobs-r2-launch.json",
+      "bytes": 50,
+      "sha256": "6bd06c75c26bbcdf6c4e8029527c66dc6290ffc786e882436f134075a0585ae9"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-b/audit/jobs-status-r2.json",
+      "bytes": 1876,
+      "sha256": "ee91d0e6424b6d91ef13235980f51be5a5412ea16d59dc3761bee1d970483fd9"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-b/audit/jobs-status.json",
+      "bytes": 1687,
+      "sha256": "d83468d0501125b2a1f3d4a09ee553d9ec58f3a1ef4b03fc7d239c1d0bfb8c7d"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-b/receipt.json",
+      "bytes": 603,
+      "sha256": "f31c3f54f58e7bae0d761b45c3b6cacbca674dbf37ab6081d53b0eb6931e21ed"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-c/audit/R3-s3.json",
+      "bytes": 561034,
+      "sha256": "bf1be6820dfa5394ee90c6aea05de7421b0c072f837a5101c272d876433002a2"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-c/audit/jobs-launch.json",
+      "bytes": 50,
+      "sha256": "ca05f24dafaa60e4e9af67f57cb58a582867a9d1a551a696ed1fc2b6bc2c3cd2"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-c/audit/jobs-status.json",
+      "bytes": 1878,
+      "sha256": "20e63316e7a46eec8d815d1e579c76dbeaa099f2e36ed67587b041a064af3c71"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-c/receipt.json",
+      "bytes": 309,
+      "sha256": "82bba0f0f569195d93bbde9b3e64732574af3ef14b08807ed5b350d03aa83d91"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-d/audit/R4-s3.json",
+      "bytes": 208891,
+      "sha256": "ea9f17ba889a5c80ef0f9f195114e9529d40b8bb2a4882c1097812c1dc45a8d2"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-d/audit/R5-s3.json",
+      "bytes": 639069,
+      "sha256": "8e726c81d5e823c82b06b15fa25a68c1faaa704469f29aaa2fb0d5bbde548d30"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-d/audit/R5-s5.json",
+      "bytes": 639374,
+      "sha256": "e35b4be7e0565604890fbdf9f1ec3d26fb637a15246e4bd7044b062c6ce6b8e2"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-d/audit/jobs-launch.json",
+      "bytes": 49,
+      "sha256": "b8e337a831eb0f89e1039498ae1af904e33e67e01342985c624b38f973af7b08"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-d/audit/jobs-r2-launch.json",
+      "bytes": 50,
+      "sha256": "78d00d8f733f3596ffe63d8e9bcf0f5f84f25bba109170fd5cd442807a7bf5ba"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-d/audit/jobs-status-r2.json",
+      "bytes": 1868,
+      "sha256": "15a8f8cde37356aafbc395350705135bee0b41490372e7a799d5bf6fa1f31459"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-d/audit/jobs-status.json",
+      "bytes": 3535,
+      "sha256": "9b84f77386659cd375b79725bf8776096711f8aa0246c16dcae6db99ef983086"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/actor-d/receipt.json",
+      "bytes": 695,
+      "sha256": "9b230fd64d9838082f352fa729bab606b367bd016163a30f1390ee550abb2889"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/learner/audit/R0-s3-thin.json",
+      "bytes": 35393,
+      "sha256": "dd2b97c07b1f28d908db2e79f530dc806a4035decbc9e7f443c4bf62d04ed510"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/learner/audit/R0-s3.json",
+      "bytes": 132284,
+      "sha256": "2672f35df6aa03257601fa422fac46be76d71c4478d7ab1955118b298be541e3"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/learner/audit/R0-s4.json",
+      "bytes": 131889,
+      "sha256": "cbe6548676c9981675319d04d4d68883ab56bfe9a972dbbb8803a8ff6d2561e0"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/learner/audit/R0-s5.json",
+      "bytes": 132707,
+      "sha256": "47a4fd2fb95fe44a65eaf09546ec519132713679ad229de46eabfb5846b2c7f3"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/learner/audit/input-proof.json",
+      "bytes": 1146,
+      "sha256": "649dc92b16dca438716b835dbe76ba5a9482f8da8f105b3aff54ed2b750d70f0"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/learner/audit/jobs-launch.json",
+      "bytes": 50,
+      "sha256": "d0e75ea6b7079de7392140a038c70db9f65559f047302aed9afa24f9cf919f8b"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/learner/audit/jobs-status.json",
+      "bytes": 6585,
+      "sha256": "9dc9a71fac16cdc7f87a2ed527eec493d85c481ce559f4a9e5b4627bcedf21c5"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/learner/audit/pilot-launch.json",
+      "bytes": 267,
+      "sha256": "c254ec6af41e86f7d7f395cdaa1e9c609347c521921c0ba123d3a613c75d8484"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/learner/audit/pilot.json",
+      "bytes": 14300,
+      "sha256": "442604e47b208ea9d313fead3b23a45f7559ffa8442726c5346f702e3c0a6705"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collected/learner/receipt.json",
+      "bytes": 879,
+      "sha256": "767161c45b233c422d737c2bcb87d79103251b2995229c756c0317a14fce8650"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/collection.json",
+      "bytes": 30363,
+      "sha256": "79d4b468bd9f7aaec00d58d373c940304b7dd905d5e15254f7933128dc41e8d3"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/deploy-actor-a.json",
+      "bytes": 225,
+      "sha256": "22ee2f57d6848ddbe976be3d2b16208d5762103988c58e3ca14a4749f60a2bc4"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/deploy-actor-b.json",
+      "bytes": 225,
+      "sha256": "570133ecf8f03102a4ea25b314ddaef844b7a35acb5447c0cea5b6a8d3d9fa50"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/deploy-actor-c.json",
+      "bytes": 225,
+      "sha256": "8994feeb8ebfe620434b48c124eea1938644197952c439364f43caf8b1bcc697"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/deploy-actor-d.json",
+      "bytes": 225,
+      "sha256": "e635a0793a3eadca0b2b227903907b85c1994fe09383c1c4536ec6fd77b561b2"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/deploy-learner.json",
+      "bytes": 225,
+      "sha256": "87f4e64154833f09f062ac1570a61a6fdd1821ceedc92151f82f90631afe7c00"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/executed-sources/first_updates_replay-v1.py",
+      "bytes": 9622,
+      "sha256": "60aa6b6ccd97cc36d2a4153d10e65394a53edc9aacb456d07dcc3f6054373782"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/executed-sources/first_updates_replay-v2.py",
+      "bytes": 9647,
+      "sha256": "6acbd6518aa342057b494b13b4127134e1ddb4eb804e28e049c91f179cc0dfe4"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/final-analysis.json",
+      "bytes": 15190,
+      "sha256": "ccf34a788304fa8f169af61e54254847b6e9229d8a658dd379b9b53d5e3f217c"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/five-node-closure.json",
+      "bytes": 1777,
+      "sha256": "03e3d0a51bea62611bf59592be9b12c70741ca532a46771ba8c836e84c90e749"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/launch-actor-a.json",
+      "bytes": 142,
+      "sha256": "b60553c895e5e01b5b7c094e003a458c628e6fdc936b9ce040e10f19c538a6a7"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/launch-actor-b.json",
+      "bytes": 141,
+      "sha256": "20200ec7ed752347fcbc9ac8535dc4b914970048a83fae4df18200f12c62479b"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/launch-actor-c.json",
+      "bytes": 142,
+      "sha256": "0e99e994f45d63305fb4f7d8f1b7e13ea052c11f6e202b29751e2e917863a0a9"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/launch-actor-d.json",
+      "bytes": 141,
+      "sha256": "032b0a1a4c90b310e6047665f704c4d1db95ec9f510a7fef8536b79011a4722f"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/launch-learner.json",
+      "bytes": 142,
+      "sha256": "51552b5a64f10f5bbbcd84e0a971a72ff4f15097fbd6f3cd585d618bcb912043"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/launch-r2-actor-a.json",
+      "bytes": 142,
+      "sha256": "73602574c98054b3b3bbee6f9192ae0dc118580c7631363d485f79c711152794"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/launch-r2-actor-b.json",
+      "bytes": 142,
+      "sha256": "2c3fbdafd9035033d6f1d6509201105ca4e2a54b9b2bb55207935934c5184d99"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/launch-r2-actor-d.json",
+      "bytes": 142,
+      "sha256": "1ddafa8fb93cf6edbfc808ce9bdab7a0ea3337f6a4c48d4fadcb2d1ff93cbbee"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/pilot-command.json",
+      "bytes": 5445,
+      "sha256": "ab140499ebbf627f220377585c00420e080f530c49a382f3bbdf7810c1f1d2e1"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/preflight.json",
+      "bytes": 906,
+      "sha256": "d8b2bf7b2e59cbbc62b24c0975ac3508f8941ee9e153bcb69f9a97555ac784de"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/prepare-inputs.json",
+      "bytes": 1206,
+      "sha256": "9e4b30212ce99b65cefe6bb6c35bfc8afb719d6b3f27ef918b4fb41a243c33a6"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/provenance.json",
+      "bytes": 886,
+      "sha256": "0228eabc033a7917a7bf0dfa64f1bf23aaec3913184cd8614e93ac9f94e4b6ca"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/publication-provenance.json",
+      "bytes": 20950,
+      "sha256": "37e247cdb4339f90874e6d113b68124ae85ec550255e6764c01b613eb5e884b5"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/publication-validation.json",
+      "bytes": 1679,
+      "sha256": "82052c79f3eb219b9cebcdc480492a3542910b12cbdebca594fad94f946e3324"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/replication.json",
+      "bytes": 331,
+      "sha256": "195cbaffbf7e26d6a69d827e0ab68cf2b83e34eb69bf5388cccd87f87479c10c"
+    },
+    {
+      "path": "evidence/scalar-first-updates-20261027/supplement-registration.json",
+      "bytes": 1014,
+      "sha256": "da05123ed84b87c1092915247c3530714a527958a67120731415876ab068c12d"
     },
     {
       "path": "evidence/scalar-ipc-init-20261027/closure.json",
@@ -9486,13 +9826,23 @@
     },
     {
       "path": "tools/scalar_learning_check/README.md",
-      "bytes": 3642,
-      "sha256": "0b24a50ad7ab7dc3397fc322c961d5f9b9ab056c4c4f2f6c169774fd795f26ce"
+      "bytes": 5642,
+      "sha256": "f4f74a445b185d76b46f0242e7f288047094d1982860ce44ce27bf56898fe7d1"
+    },
+    {
+      "path": "tools/scalar_learning_check/actor_speed_sim.py",
+      "bytes": 5483,
+      "sha256": "89060ba42c1ff6986f14f2291dc8167b1421aea8a09ba5777b9d2f35e0b89469"
     },
     {
       "path": "tools/scalar_learning_check/adjudicate_learning.py",
       "bytes": 11312,
       "sha256": "84b5f7d8c7008d97bd8f3f84a443cfcca2d564c6bb106cac71ebae278fb0d003"
+    },
+    {
+      "path": "tools/scalar_learning_check/analyze_first_updates.py",
+      "bytes": 4445,
+      "sha256": "1375cb5b9e89119ebda6ef42207a6469b146404c19b754e26e6f83a0d0891f49"
     },
     {
       "path": "tools/scalar_learning_check/learning_monitor.py",
@@ -9513,6 +9863,11 @@
       "path": "tools/scalar_learning_check/runtime/export_actor.py",
       "bytes": 1612,
       "sha256": "016e0d732b83dee3373fd59981d4dd54d137a20bc478392d9c5abfff00d95e41"
+    },
+    {
+      "path": "tools/scalar_learning_check/runtime/first_updates_replay.py",
+      "bytes": 9647,
+      "sha256": "6acbd6518aa342057b494b13b4127134e1ddb4eb804e28e049c91f179cc0dfe4"
     },
     {
       "path": "tools/scalar_learning_check/runtime/guard_agent.py",
@@ -9546,8 +9901,8 @@
     },
     {
       "path": "tools/test_learning_check.py",
-      "bytes": 3673,
-      "sha256": "f68ababa5de88fd9fe9a52869ef0337655e5efac4b8b3f226a149d1f0e08d41f"
+      "bytes": 4276,
+      "sha256": "90b49d005e7072ef46f6c7641eb1be3350e5c08db0f736204606ee897d080ff0"
     },
     {
       "path": "tools/test_scalar_exploration.py",

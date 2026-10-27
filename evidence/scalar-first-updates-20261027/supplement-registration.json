@@ -1,0 +1,42 @@
+{
+  "stage": "SUPPLEMENTAL_OFFLINE_ONLY",
+  "epoch": 1793113172.1513603,
+  "jobs": {
+    "actor-a": [
+      {
+        "arm": "R6",
+        "seed": 3,
+        "id": "R6-lr-only-s3"
+      },
+      {
+        "arm": "R6",
+        "seed": 4,
+        "id": "R6-lr-only-s4"
+      },
+      {
+        "arm": "R6",
+        "seed": 5,
+        "id": "R6-lr-only-s5"
+      }
+    ],
+    "actor-b": [
+      {
+        "arm": "R5",
+        "seed": 4,
+        "id": "R5-s4"
+      }
+    ],
+    "actor-d": [
+      {
+        "arm": "R5",
+        "seed": 5,
+        "id": "R5-s5"
+      }
+    ]
+  },
+  "reason": "R5 changes both gate and LR. Add lr1e-6-only to test whether gate is needed for first1000 actor updates; add two sampler-seed R5 repetitions. Not independent online training seeds.",
+  "no_new_TCP": true,
+  "no_online_candidate": true,
+  "new_source_sha256": "6acbd6518aa342057b494b13b4127134e1ddb4eb804e28e049c91f179cc0dfe4",
+  "previous_source_sha256": "60aa6b6ccd97cc36d2a4153d10e65394a53edc9aacb456d07dcc3f6054373782"
+}

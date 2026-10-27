@@ -1,3 +1,23 @@
+# 最新：真实TF首批更新重放与速度对照
+
+已完成16个离线case，结果见[交接](../../docs/RESEARCH_REVIEW_BRIEF.md)与[实测修正](../../docs/SCALAR_FIRST_UPDATES_DIAGNOSIS.md)。`actor_speed_sim.py`只是同结构/合成输入的数量级演示，不是与真实TF逐值相同的证明。
+
+`runtime/first_updates_replay.py`每次运行一个独立TF1进程，R0原设置、R1仅重抽critics、R2冻结BN统计、R3校准3000后开放、R4 lr1e-5、R5校准后lr1e-6、R6仅lr1e-6。它在内存训练模型，会用CPU；不启动TCP环境/TF Server，不写checkpoint。读取显式输入目录的registration.json、first-update-coverage.json、step-0.index/data和真实replay.npz；不含这些新输入资产。`CANOPY_FIRST_FRAMEWORK`须指向具有完整`code/orca`/依赖的scalar框架。
+
+```sh
+CANOPY_FIRST_SOURCE=/path/to/inputs CANOPY_FIRST_CHECKPOINT_DIR=/path/to/inputs CANOPY_FIRST_FRAMEWORK=/path/to/scalar-framework \
+python3 tools/scalar_learning_check/runtime/first_updates_replay.py --arm R0 --seed 3 --output /new/output/R0.json
+python3 tools/scalar_learning_check/analyze_first_updates.py --out diagnostics/first-updates
+```
+
+第二条复算无需TF/服务器，读取已公布逐次JSON，重建16组CSV和分析（原值完全匹配）。原脚本每次诊断会消耗随机平滑噪声；实际版本改用无平滑TD残差作诊断，不作为真实价值标签。低学习率只feed已有Adam的lr，slot/global_step路径不变。R3/R5允许BN变化，冻结的是actor trainables而非完整forward。R1核对仅critic/target发生重抽。
+
+实际v1/v2源在证据`executed-sources`；v2只增加R6的选择/参数，不重写前轮结果。保留了R0密集/稀疏诊断的非逐位等价；不能称精确重建在线轨迹。历史summary字段`updates_to_abs_mean_pi_point9`实际测的是均值偏移，绝对policy均值阈值应读新CSV对应列。
+
+没有在本轮重新在线训练，下面是前一轮L1的历史工具说明。
+
+---
+
 # L1实测：安全停止，未完成训练预算
 
 实际结果：24 actor零优化通过；正式28,513条后S3停止，14 actor爆窗。110冻结评测NOT_RUN，不能把工具存在当成这些评测已通过。详细结果见[最新研究交接](../../docs/RESEARCH_REVIEW_BRIEF.md)。

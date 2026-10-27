@@ -1,0 +1,35 @@
+{
+  "status": "PASS_PUBLICATION_CHECKS",
+  "unit_tests": 85,
+  "checks": [
+    {
+      "command": "tools",
+      "result": ".........................................................................\r\n----------------------------------------------------------------------\r\nRan 73 tests in 7.999s\r\n\r\nOK\r\n"
+    },
+    {
+      "command": "tools/e2_handover",
+      "result": ".....\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.087s\r\n\r\nOK\r\n"
+    },
+    {
+      "command": "tools/scalar_audit",
+      "result": ".......\r\n----------------------------------------------------------------------\r\nRan 7 tests in 0.049s\r\n\r\nOK\r\n"
+    }
+  ],
+  "recompute": "16cases JSON exactly equal and CSV byte-identical",
+  "python36_files": [
+    "evidence/scalar-first-updates-20261027/executed-sources/first_updates_replay-v1.py",
+    "evidence/scalar-first-updates-20261027/executed-sources/first_updates_replay-v2.py",
+    "tools/scalar_learning_check/actor_speed_sim.py",
+    "tools/scalar_learning_check/analyze_first_updates.py",
+    "tools/scalar_learning_check/runtime/first_updates_replay.py",
+    "tools/test_learning_check.py"
+  ],
+  "scan": "PASS_NO_CREDENTIALS_OR_PRIVATE_INFRASTRUCTURE",
+  "original_tag": "51b5ba5144c69690fa8fc30410ec628b822dd3dd",
+  "original_snapshot": "85baf09b6f43a9f3223f7a8eaa1a4321b1a11b3b",
+  "real_TF_proof": "16 recorded cases+10update pilot. Init96 tensors verified; critic-only actor trainables unchanged; observer strict bitwise equivalence FAILED and retained.",
+  "publication_cloud_connections": 0,
+  "new_TCP_experiments": 0,
+  "new_online_training_runs": 0,
+  "new_models": 0
+}
