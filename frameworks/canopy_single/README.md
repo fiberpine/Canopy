@@ -106,4 +106,21 @@ and lower total throughput cannot establish a controller CPU advantage.
 
 ## 2026-10-27接管诊断补充
 
-同一moving模型的E2冻结干预支持接管条件影响弱场景，但固定10秒预启动未通过正常条件守门，不能作为修复默认值。历史训练的初始乘窗异常及一条raw字段异常尚未解决；本框架没有据此改动作、初始化或native。参见[当前交接](../../docs/RESEARCH_REVIEW_BRIEF.md)与[E2工具](../../tools/e2_handover/README.md)。
+同一moving模型的E2冻结干预支持接管条件影响弱场景，但固定10秒预启动未通过正常条件守门，不能作为修复默认值。参见[当前交接](../../docs/RESEARCH_REVIEW_BRIEF.md)与[E2工具](../../tools/e2_handover/README.md)。
+
+## 2026-10-27双向IPC与初始化诊断（opt-in）
+
+`verified_ipc_v2: true`要求独立native和SHA/schema sidecar。两个方向均用整帧flock、头及载荷CRC32、递增64位序号，动作绑定反馈序号/CRC/state ID；错误立即拒绝，不退回旧协议。默认旧ASCII路径保留，没有修改原native、模型、奖励、乘窗或观测周期。这是完整性修复，未证明CPU改善。
+
+```sh
+# Linux / 原自定义TCP内核环境；新路径不得覆盖现有二进制。
+python3 tools/build_scalar_verified_ipc.py --framework frameworks/canopy_single --output /absolute/new-directory/orca-server-verified-ipc
+```
+
+在自有运行JSON显式指定`server_binary`为该绝对路径，并启用`verified_ipc_v2`和`require_normal_cubic_start`。此构建包装只做本机CLI/静态检查；云端已实际编译并运行的是其等价编译命令，见证据中的deployment。部署仍需原有完整runtime/trace/内核。
+
+`scalar_window_initialization: small_uniform`仅允许fresh Orca，把actor输出层kernel/bias设为U[-.003,.003]，随后原`init_target`复制target；不允许改已恢复checkpoint。默认`upstream`保持原初始化。`diagnostic_no_optimizer: true`关闭全部learner优化，实际training actor/RPC/探索/FIFO仍运行。该诊断开关不可用于声称完成训练。
+
+实际完成2次smoke和32次60秒零优化TCP检查，32次全部96个TF变量前后不变；双向159166个正式接收帧一致、CRC/序号失败0。原初始化16次中6次百万窗口、8次超过预注册持续时间门槛；small_uniform仍有2次和7次失败。因此小幅初始化不足，长训NO-GO。持续时间来自边界actual_dt加权近似；两种初始化种子不是独立训练seed。两条small_uniform残余失败的直接乘窗命令与原生区间增长已能解释爆窗，不能归因为critic更新（本轮0更新）。
+
+本轮没有运行E2b、窗口cap或后续训练。IPC日志与锁会增加成本，不能用于低开销创新宣称。原始模型/replay/逐包日志保留云端；精简机器结果见`evidence/scalar-ipc-init-20261027`。新native的verified动作等待依赖外部有限运行监督，本轮不将其当成经过故障注入验证的独立部署watchdog。

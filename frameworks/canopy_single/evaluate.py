@@ -82,13 +82,16 @@ def main():
     if cfg.get('require_normal_cubic_start'):
         assert cfg.get('server_binary') and pathlib.Path(cfg['server_binary']).is_file(),'Explicit normal-start native required'
     cfg['feedback_completion_rule']='At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure'
+    if cfg.get('verified_ipc_v2'):
+        from verified_ipc import validate_native
+        validate_native(cfg['server_binary'])
     if not cfg.get('code_commit'):cfg['code_commit']=subprocess.check_output(['git','-C',str(R),'rev-parse','HEAD']).decode().strip()
     cfg['trace_sha256']=hashlib.sha256((R/'configs/traces'/cfg['trace']).read_bytes()).hexdigest()
     pathlib.Path(args.config).write_text(json.dumps(cfg,indent=2))
     run=R/'logs'/cfg['run_id'];run.mkdir(exist_ok=False)
     (run/'config.json').write_text(json.dumps(cfg,indent=2))
     b=R/'code/runtime';server=None;owned={};shm_r=shm_w=None;stop=threading.Event();errors=[];resources=[];sess=None
-    start=time.monotonic();status='RUNNING';reason='';valid=0;before=after=None;vars_used=[]
+    start=time.monotonic();status='RUNNING';reason='';valid=0;before=after=None;vars_used=[];verified_pair=None
     states=(run/'states.csv').open('w',buffering=262144);sw=csv.writer(states)
     sw.writerow(['time_us','elapsed_s','transition','state_id','action','action_no_noise','percent','reward','throughput_term','loss_term','delay_term','max_bw','cwnd','delta_t','srtt_ms','min_rtt_ms','state'])
     try:
@@ -98,6 +101,11 @@ def main():
         else:
             shm_r=sysv_ipc.SharedMemory(None,sysv_ipc.IPC_CREX,mode=0o600,size=2048);shm_w=sysv_ipc.SharedMemory(None,sysv_ipc.IPC_CREX,mode=0o600,size=2048)
             shm_r.write(b'\0'*2048);shm_w.write(b'\0'*2048);envv.update(ORCA_SHM_R=str(shm_r.key),ORCA_SHM_W=str(shm_w.key))
+            if cfg.get('verified_ipc_v2'):
+                from verified_ipc import Pair
+                verified_pair=Pair(shm_r,shm_w,run)
+                shm_r,shm_w=verified_pair.reader,verified_pair.writer_shm
+                envv.update(ORCA_VERIFIED_IPC='1',ORCA_IPC_LOCK_DIR=str(run))
             cmd=[str(pathlib.Path(cfg.get('server_binary',str(b/'orca-server')))),str(cfg.get('port',46000)),str(b),'20','4','cubic','0',cfg['trace'],'constant192',str(cfg['delay_ms']),str(run/'down.log'),str(cfg['seconds']),str(cfg['queue_packets']),'0','pretrained','0','0','200000','0','0','0','1','0','0','0','0','none','raw','0','-1']
         server=subprocess.Popen(cmd,env=envv,stdout=(run/'server.log').open('w'),stderr=subprocess.STDOUT,start_new_session=True)
         server.created=psutil.Process(server.pid).create_time()
@@ -174,6 +182,9 @@ def main():
             assert len(matches)==1,'Missing or repeated first-feedback provenance'
             assert 0<int(matches[0][0])<1000000,'Abnormal window before first policy action'
             (run/'startup-audit.json').write_text(json.dumps(dict(cwnd=int(matches[0][0]),ssthresh=int(matches[0][1]),prepolicy_cwnd_writes=0,source='Native first TCP snapshot, before first policy write')))
+        if cfg.get('verified_ipc_v2'):
+            native_text=(run/'server.log').read_text()
+            assert 'IPC_V2_ENABLED' in native_text and 'IPC_V2_REJECT' not in native_text,'Verified native rejected transport'
         if errors:raise RuntimeError(errors[0])
         status='COMPLETED'
     except Exception as e:
@@ -184,6 +195,7 @@ def main():
             if shm:
                 try:shm.remove()
                 except sysv_ipc.ExistentialError:pass
+        if verified_pair:verified_pair.close()
         states.close()
         result={'cfg':cfg,'status':status,'reason':reason,'counters':{'valid':valid,'critic_iterations':0,'critic_optimizer_ops':0,'actor_updates':0,'target_updates':0,'exploration_calls':0},
             'inserted':0,'wall_s':time.monotonic()-start,'policy_sha256_before':before,'policy_sha256_after':after,'policy_variables':vars_used,

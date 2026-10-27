@@ -1,0 +1,81 @@
+{
+  "publication_date": "2026-10-27",
+  "previous_public_main": "629b91f937531593204fe5c368e0e40bf7d013ef",
+  "source_research_commit": "dec0e39b5a7a9994faa988502273991dd8ae1e0b",
+  "original_snapshot": "85baf09b6f43a9f3223f7a8eaa1a4321b1a11b3b",
+  "meaning": "Post-experiment publication. Actual entrypoint was previous main plus source hashes in deployment.json; this publication commit was not the training entrypoint.",
+  "redaction": "Experiment roots replaced with placeholders. Numeric metrics and 32 formal result objects unchanged. repository-files.json describes public bytes; deployment and source receipts describe execution bytes.",
+  "adaptations": {
+    "probe_driver.py": {
+      "executed_source_sha256": "c257c589eaee8383274366afa3825ab424825027a1dcd6257a070ba83b161179",
+      "published_source_sha256": "07e23e90a73f31ee8686fd429348e8b7a570ea6c31f00056fe190297b02115fc",
+      "replacements": [
+        {
+          "before": "ROOT=pathlib.Path(__file__).resolve().parent",
+          "after": "ROOT=pathlib.Path(os.environ['CANOPY_IPC_DIAGNOSTIC_ROOT']).resolve()"
+        }
+      ],
+      "reverse_substitution_matches_execution_after_LF_normalization": true,
+      "validation": "Original script executed during diagnosis. Published path/CLI adaptation has local syntax/CLI checks only; no new TCP."
+    },
+    "ipc_stress.py": {
+      "executed_source_sha256": "bf5a8c7ac94c34430f3493b204c47f84f1254cbf25c9cca0f5308a691a1bea32",
+      "published_source_sha256": "1a55150615e388fd11b3dd35dc6991a12e2097d9acd7623a718a7cdae842b192",
+      "replacements": [
+        {
+          "before": "import json\n",
+          "after": "import json\nimport os\n"
+        },
+        {
+          "before": "ROOT=pathlib.Path(__file__).resolve().parent",
+          "after": "ROOT=pathlib.Path(os.environ['CANOPY_IPC_DIAGNOSTIC_ROOT']).resolve()"
+        },
+        {
+          "before": "str(ROOT/'framework')",
+          "after": "str(ROOT/'frameworks/canopy_single')"
+        }
+      ],
+      "reverse_substitution_matches_execution_after_LF_normalization": true,
+      "validation": "Original script executed during diagnosis. Published path/CLI adaptation has local syntax/CLI checks only; no new TCP."
+    },
+    "ipc_stress_peer.cc": {
+      "executed_source_sha256": "62eb3aacd4bc556d2960f342ecbabe679f619cd2e47fa5493b73e2abde1b0ade",
+      "published_source_sha256": "62eb3aacd4bc556d2960f342ecbabe679f619cd2e47fa5493b73e2abde1b0ade",
+      "replacements": [],
+      "reverse_substitution_matches_execution_after_LF_normalization": true,
+      "validation": "Original script executed during diagnosis. Published path/CLI adaptation has local syntax/CLI checks only; no new TCP."
+    },
+    "ipc_echo_audit.py": {
+      "executed_source_sha256": "0382fd75ce925b45cd00d18517019a622590bc7b9e727f559021eb1a04da56fe",
+      "published_source_sha256": "5c1815e4f6cbc79888bfe643234b1fd0e63aa1edf94ab796a3a614633eaa0e5c",
+      "replacements": [
+        {
+          "before": "import bisect\n",
+          "after": "import bisect\nimport argparse\n"
+        },
+        {
+          "before": "    started=time.time();rows=[]\n    root=pathlib.Path('/home/ubuntu/orca-two-track-run-20261025-2030/frameworks')",
+          "after": "    ap=argparse.ArgumentParser(description=__doc__)\n    ap.add_argument('--scalar-root',type=pathlib.Path,required=True,help='Directory containing orca_control/orca_moving')\n    ap.add_argument('--e2-logs',type=pathlib.Path,required=True)\n    ap.add_argument('--output-directory',type=pathlib.Path,required=True)\n    args=ap.parse_args()\n    started=time.time();rows=[]\n    root=args.scalar_root"
+        },
+        {
+          "before": "pathlib.Path('/home/ubuntu/orca-e2-handover-20261027/framework/logs')",
+          "after": "args.e2_logs"
+        },
+        {
+          "before": "pathlib.Path('/home/ubuntu/orca-scalar-ipc-init-20261027')",
+          "after": "args.output_directory"
+        }
+      ],
+      "reverse_substitution_matches_execution_after_LF_normalization": true,
+      "validation": "Original script executed during diagnosis. Published path/CLI adaptation has local syntax/CLI checks only; no new TCP."
+    }
+  },
+  "verification": {
+    "formal_objects_exactly_equal": 32,
+    "full_trim_csv_rows_exactly_equal": 64
+  },
+  "missing": "Large checkpoints/replay/raw logs remain on experiment storage. Per-run 96-variable no-update proofs passed. Additional producer accounting/pair receipt blocked by intermittent SSH, not reported as PASS.",
+  "publication_new_TCP_runs": 0,
+  "publication_new_training_runs": 0,
+  "publication_cloud_connections": 0
+}

@@ -1,5 +1,5 @@
 {
-  "scope": "2026-10-27 E2 handover diagnosis and reproducible evidence; original51 selected model files unchanged; original runtime/kernel assets remain in Release",
+  "scope": "2026-10-27 scalar verified IPC and zero-update initialization evidence, plus E2; original51 selected model files unchanged",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 9513,
-      "sha256": "e581c2447bc508033014a21fdffb264d9b5be3aef3f8c585f496123b8d881487"
+      "bytes": 9821,
+      "sha256": "19904b0fc5b846f39fb68ebc2714f15fb951e710db4bfe3d6f43aa6db38fc5e2"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -69,8 +69,8 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 19820,
-      "sha256": "b95bbbe0aa02f2ab3102f1c8ec00d9648a1cb1a14ff74456f916f3eb869e6dc8"
+      "bytes": 23746,
+      "sha256": "0986c7a2359bd52888a73a52e74fc9e42502aca9bf6bc137ec2d18c2d50e7e06"
     },
     {
       "path": "docs/THIRD_PARTY.md",
@@ -2398,6 +2398,76 @@
       "sha256": "ca20a681ee623654b020a3cf5c3aba9b714f9a686b5e1adedd5a7266a1c06715"
     },
     {
+      "path": "evidence/scalar-ipc-init-20261027/closure.json",
+      "bytes": 177,
+      "sha256": "26e88aefe7a8999a5af76e7f7556ccaf6a53ebe35bf89c94df8e361a9f1dfda1"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/deployment.json",
+      "bytes": 4329,
+      "sha256": "d123c6aaf2bbb14009e4c106fec5937e34b806631ea7753d6f6d662b931b3c3c"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/evaluation-runs.csv",
+      "bytes": 12354,
+      "sha256": "d7cda249095becb8fc3976ba0541cb68ab934c66a9a218ee195af7fcc6fc25c3"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/final-summary.json",
+      "bytes": 585,
+      "sha256": "b1922133ff662f02b14107dd6da585dd557c046dda1a5d3708d1bacdbbea95ee"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/formal-results.json",
+      "bytes": 110128,
+      "sha256": "774918964d7cfbaf5ed8f283890f393ca3ccc57b835d455b116298633c38565d"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/formal-status.json",
+      "bytes": 91,
+      "sha256": "ee3c2058e648edaf8f68512d710d5ab2002e6194a8f615df4252ab8b0ac5eafb"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/ipc-stress-result.json",
+      "bytes": 381,
+      "sha256": "5f57c13aba6c9788ebba4f2753a94384520640c2649bd510502e6b163c627d4a"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/legacy-echo-summary.json",
+      "bytes": 568,
+      "sha256": "49a12f1afa07c78cb083b8c61bc66973587389ae7053c73152cedbfde7df2a82"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/publication-provenance.json",
+      "bytes": 4614,
+      "sha256": "6b7bea43086e75fdffe0abcc7deafd2e47df1782bcb38020c3852d653bc46485"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/publication-validation.json",
+      "bytes": 802,
+      "sha256": "2884ce9af8cdf73e6298b2cc497f1496bbdd3e63e3da05baa8bb304fc9465895"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/registration.json",
+      "bytes": 119413,
+      "sha256": "aad2019d2d4f12553a5e46f6eb615d185472e4196b68a9dc029d2e278416fd67"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/small-failure-decomposition.json",
+      "bytes": 1002,
+      "sha256": "25f3fb38c71077112cc060a3f3837cc3c3bc56b440fa89436eaf3845b21dcd6c"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/smoke-results.json",
+      "bytes": 6855,
+      "sha256": "bc58090cfc80a331892fedda99f92bad5e53cc113c002c9507bbb7cd773f1ff0"
+    },
+    {
+      "path": "evidence/scalar-ipc-init-20261027/validation.json",
+      "bytes": 10105,
+      "sha256": "00e2f2256e82cf9313a36b0e4ff645634629f289d9baa40f9ce53ab062728a15"
+    },
+    {
       "path": "evidence/v38-followup/results.json",
       "bytes": 9926,
       "sha256": "d786809361266b68c91fa85e015b99884d41f18b7c6cefad78f6ba43f2ed4a0e"
@@ -3953,8 +4023,8 @@
     },
     {
       "path": "frameworks/canopy_single/README.md",
-      "bytes": 7206,
-      "sha256": "fc9c7bf2b9782e891b005128c84c4679a5ce158306f1aba4340e2eff068a9be0"
+      "bytes": 9334,
+      "sha256": "dfbd10cc919300560d403491cbaad8994bb9b73b060671a658c1bda6209a336a"
     },
     {
       "path": "frameworks/canopy_single/canopy_feedback.py",
@@ -3988,13 +4058,13 @@
     },
     {
       "path": "frameworks/canopy_single/distributed.py",
-      "bytes": 19809,
-      "sha256": "002e1075411c155364c3d42e38e4073f394385de3ffe599c29655cfad45973a1"
+      "bytes": 20109,
+      "sha256": "ff866bed459fa0de33cc122980851efbfefeabb9186f83d5dac19b38ad9795a0"
     },
     {
       "path": "frameworks/canopy_single/evaluate.py",
-      "bytes": 14991,
-      "sha256": "35ffde57f6f89743b3273bb9f355df0c1839d788faf22493399104a76336a6b7"
+      "bytes": 15701,
+      "sha256": "d88e580c418bdb6a4b936f04d489645170a22ef7086cc33bf12d7f9f26138275"
     },
     {
       "path": "frameworks/canopy_single/frozen_evaluate.py",
@@ -4042,9 +4112,19 @@
       "sha256": "c09b30a28f1f2e622679a6b16c9ac48a68ee2cf34bf3326fbae9cdc5b8bb8bc7"
     },
     {
+      "path": "frameworks/canopy_single/native/src/orca-server-verified-ipc.cc",
+      "bytes": 28268,
+      "sha256": "e35eea5f29d3b52d7d726a1f094b4b8f78896bfb889247fcbab35e263bc0e77a"
+    },
+    {
       "path": "frameworks/canopy_single/native/src/util.h",
       "bytes": 2107,
       "sha256": "c6a79c0fdbeed14351e275a360c86e694964a862f2546a9c5675fa8ab37d0594"
+    },
+    {
+      "path": "frameworks/canopy_single/native/src/verified_scalar_ipc.h",
+      "bytes": 4061,
+      "sha256": "12988bf444a9455b0ec0dd22dff0e679a965bdfdde48a4d9acc2a03dfb95032a"
     },
     {
       "path": "frameworks/canopy_single/node_control.py",
@@ -4077,6 +4157,11 @@
       "sha256": "37489568d4bbfaf4ad7b45cb5f7fcdabe17e242f171f96df4e31ed77a10437ae"
     },
     {
+      "path": "frameworks/canopy_single/scalar_window_init.py",
+      "bytes": 1612,
+      "sha256": "1d0a3424cb441b4f6141dcdb6287a3687725e18fcad3a489735f4d2e2b401de3"
+    },
+    {
       "path": "frameworks/canopy_single/symbolic_transitions.py",
       "bytes": 23891,
       "sha256": "468390187ff406f433e3763bb95f87cf1762d8772a25c64b20f141921f75733a"
@@ -4085,6 +4170,11 @@
       "path": "frameworks/canopy_single/timed_distributed.py",
       "bytes": 2187,
       "sha256": "0b8f196d0890cc6bea86470dc9c2d08564104dfc2c0fa914a3440c8e35b7ffd4"
+    },
+    {
+      "path": "frameworks/canopy_single/verified_ipc.py",
+      "bytes": 5965,
+      "sha256": "79d9152fbaf42e1ca2cab73bdd89f5779b92b22bac8353538babc8f11c69a706"
     },
     {
       "path": "frameworks/canopy_single/verify_canopy.py",
@@ -8175,6 +8265,11 @@
       "sha256": "b1eff100fdcf4c75210361f9a0e31ccd8c024394095984fd0722140b6c079e48"
     },
     {
+      "path": "tools/build_scalar_verified_ipc.py",
+      "bytes": 1545,
+      "sha256": "a7dc0a4071a6159d6fde545aa8ee4434d1a26cdd6a3942012b43cc3547e76386"
+    },
+    {
       "path": "tools/e2_handover/README.md",
       "bytes": 4997,
       "sha256": "89b39f41046b55c50b0c1cbe7c25039a662f7a83f98776a358b38abe955bc8e1"
@@ -8255,9 +8350,44 @@
       "sha256": "8d9d1d2a22b9870296465a1b11cf66be9bd7b4d5088fc069c3e3b3d6b5030a30"
     },
     {
+      "path": "tools/scalar_ipc_diagnostic/README.md",
+      "bytes": 5118,
+      "sha256": "275ceae9b5880428f0b495e03c41e9fc7afe431d73e4c6f64d19dd5debe629d4"
+    },
+    {
+      "path": "tools/scalar_ipc_diagnostic/analyze.py",
+      "bytes": 2540,
+      "sha256": "e2fb51a08e1b1ecea0e0678a490c53070d331b271ee82f29a9297f8c02260bd4"
+    },
+    {
+      "path": "tools/scalar_ipc_diagnostic/ipc_echo_audit.py",
+      "bytes": 4054,
+      "sha256": "5c1815e4f6cbc79888bfe643234b1fd0e63aa1edf94ab796a3a614633eaa0e5c"
+    },
+    {
+      "path": "tools/scalar_ipc_diagnostic/ipc_stress.py",
+      "bytes": 1972,
+      "sha256": "1a55150615e388fd11b3dd35dc6991a12e2097d9acd7623a718a7cdae842b192"
+    },
+    {
+      "path": "tools/scalar_ipc_diagnostic/ipc_stress_peer.cc",
+      "bytes": 1206,
+      "sha256": "62eb3aacd4bc556d2960f342ecbabe679f619cd2e47fa5493b73e2abde1b0ade"
+    },
+    {
+      "path": "tools/scalar_ipc_diagnostic/probe_driver.py",
+      "bytes": 7920,
+      "sha256": "07e23e90a73f31ee8686fd429348e8b7a570ea6c31f00056fe190297b02115fc"
+    },
+    {
       "path": "tools/scalar_research.py",
       "bytes": 7174,
       "sha256": "aecc1f7fe0718c38caeb9af4af91ba085b41e86c46f4e28cc7d15dcba3816e02"
+    },
+    {
+      "path": "tools/test_scalar_verified_ipc.py",
+      "bytes": 2261,
+      "sha256": "6e98bee9ef2f6a2708fc5909419235566c9dcdad52af2b0efc61d59396f81f8b"
     },
     {
       "path": "tools/test_v31_boundary_rate.py",

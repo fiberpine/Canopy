@@ -1,0 +1,27 @@
+{
+  "status": "PASS_LOCAL_PUBLICATION",
+  "unit_tests_executed": 62,
+  "unit_test_groups": {
+    "tools": 50,
+    "e2": 5,
+    "scalar_audit": 7
+  },
+  "python36_syntax_files": 10,
+  "cli_checks": [
+    "probe_driver --help",
+    "ipc_echo_audit --help",
+    "build_scalar_verified_ipc --help"
+  ],
+  "numeric_formal_objects_equal": 32,
+  "numeric_full_trim_csv_rows_equal": 64,
+  "source_adaptations": "Reverse substitution verified; see publication-provenance.json",
+  "sensitive_pattern_scan": "PASS",
+  "cloud_connections": 0,
+  "new_TCP_runs": 0,
+  "new_optimizer_updates": 0,
+  "not_verified": [
+    "Published path wrappers on a new TF/TCP machine",
+    "Extra producer accounting/pair receipt blocked after experiment",
+    "Network quality or CPU improvement from initialization or IPC"
+  ]
+}

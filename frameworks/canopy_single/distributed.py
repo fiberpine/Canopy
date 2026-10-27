@@ -77,7 +77,11 @@ class Replay(ReplayBuffer):
 def learner(cfg):
  run=R/'logs'/cfg['run_id'];run.mkdir(exist_ok=False);(run/'config.json').write_text(json.dumps(cfg,indent=2))
  a,sess,fifo,ph,enq,nph,deq,size=setup(cfg,'learner',0)
- sess.run(tf.global_variables_initializer());a.init_target();a.rp_buffer=Replay(cfg)
+ sess.run(tf.global_variables_initializer())
+ from scalar_window_init import initialize
+ initial_window=initialize(a,sess,cfg)
+ a.init_target();a.rp_buffer=Replay(cfg)
+ if initial_window:(run/'window-initialization.json').write_text(json.dumps(initial_window,indent=2))
  save=tf.train.Saver(max_to_keep=None);cp=R/'checkpoints'/cfg['model_id'];cp.mkdir(exist_ok=False)
  if cfg.get('cold_init_checkpoint'):
   initial=cfg['cold_init_checkpoint'];assert initial.startswith(str(R/'checkpoints')) and pathlib.Path(initial).name=='step-0','Only an own random step-0 checkpoint can be used for a paired cold initialization'
@@ -112,6 +116,7 @@ def learner(cfg):
  try:
   while not stop.is_set():
    n=a.rp_buffer.inserted;it=counter['critic_iterations'];limit=int(max(0,n-cfg['warmup'])*cfg['update_ratio'])
+   if cfg.get('diagnostic_no_optimizer',False):limit=0
    if time.monotonic()-last>5:
     w.writerow([time.monotonic()-start,n,a.rp_buffer.length_buf,it,it*2,it,it,it/max(1,n),it/max(1,n-cfg['warmup']),int(sess.run(size)),float(np.mean(a.rp_buffer.ages)) if a.rp_buffer.ages else 0]+diag+[int(a.rp_buffer.actor_inserted.min()),int(np.count_nonzero(a.rp_buffer.actor_inserted)),int(a.rp_buffer.sampled_by_actor.min()),int(a.rp_buffer.sampled_by_actor.max())]);f.flush();last=time.monotonic()
    if time.monotonic()-producer_check>=1:
@@ -236,6 +241,7 @@ def actor(cfg,index):
  ecfg=dict(cfg['conditions'][index],method='orca' if cfg.get('policy_family')=='orca' else 'canopy',run_id=run_id,seconds=0,training_steps=cfg['steps_per_actor'],port=cfg.get('actor_port_base',48200)+index,seed=cfg['seed'],actor_rng_seed=cfg['seed']+index*1009,actor_index=index,code_commit=cfg.get('code_commit'),reward_mode='raw',control_period_ms=20,history_frames=10,use_normalizer=False,stop_file=cfg.get('stop_file'))
  if cfg.get('server_binary'):ecfg['server_binary']=cfg['server_binary']
  if cfg.get('require_normal_cubic_start'):ecfg['require_normal_cubic_start']=True
+ if cfg.get('verified_ipc_v2'):ecfg['verified_ipc_v2']=True
  path=R/'configs'/(run_id+'.json');path.write_text(json.dumps(ecfg,indent=2));sys.argv=['evaluate.py','--config',str(path)]
  if cfg.get('serialized_start'):
   release=R/'logs'/(cfg['run_id']+'-launch-actor%d'%index)

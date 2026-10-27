@@ -1,3 +1,36 @@
+# 最新补充：IPC修复通过，初始化仍未过关（2026-10-27）
+
+**仍为PARTIAL、NO-GO长训；尚无新的合格Orca/Canopy基座，也没有双动作性能—CPU突破。** 本节是E2之后完成的单动作固定20ms诊断。原baseline、V14、健康149维V31及51个选定模型文件未改，V31的观测/执行真共周期语义未变。
+
+## 已完成的修复与真实检查
+
+- 新增opt-in `verified_ipc_v2`：双向整帧flock、头/载荷CRC32、64位递增序号，动作绑定state ID/反馈序号/CRC；异常即拒绝，默认旧ASCII保留。没有额外TCP采样或改乘窗、奖励。实际Linux编译、Python/C++ mmap 5000次交换通过；后者不是TCP实验。
+- 经实际training actor/RPC/探索/FIFO路径完成2次12s smoke、32次60s正式检查。8条件×初始化种子3/4×原初始化/小幅初始化，均2BDP、Gaussian std=.2，learner优化锁0；不是24actor训练，不是多训练seed。
+- 正式159166个接收帧与发送payload/CRC一致，CRC/序号失败0；每次全部96个TF变量（含BN、optimizer和计数）前后不变。IPC正确不代表学习或网络性能合格，也未证明新锁/日志省CPU。
+
+| 初始化 | 正式次数 | 百万窗口门槛失败 | 持续时间门槛失败 |
+|---|---:|---:|---:|
+| upstream | 16 | 6 | 8 |
+| 输出kernel/bias U[-.003,.003] | 16 | 2 | 7 |
+
+持续时间门槛为边界actual_dt加权的cwnd>4×(BDP+queue)比例<1%，不是区间内部精确占用。完整full/trim10利用率、吞吐、mean/P95/P99、丢包、低窗口及动作保留，不能把中性初始化的高吞吐单独当成功。
+
+两个小初始化残余失败均为seed4/R200：G48/G72最大窗口37202245/52372832，超界比例61.68%/58.30%。无探索输出均值约-.0034/-.0031；到首次百万窗口前，探索+clip理想log冲量约8.660/8.303、确定性项-.465/-.393、整数取整项-2.443/-2.185、命令之间native增长5.810/5.207，代数重建误差<4e-15。已校验的连续乘窗命令和native增长足以解释这两个局部案例，不需要假设发生critic更新或撕裂读；不能因此排除其他连接中的PRR恢复效应。
+
+## 反证、限制和下一步
+
+旧264条连接的6714230个cwnd配对中36不一致；percent配对0不一致，9个percent=24两端一致。旧raw拼接重建支持撕裂读风险，不能唯一证明每条异常的源头，更不能把24都归因于动作通道损坏。新协议不将未校验半帧交给策略。
+
+小幅初始化减少爆窗但不足，不能立即长训。下一步只应单变量检验乘性探索的累计冲量，先用零优化短测通过，再决定有限训练；尚未实现或启动。未运行E2b、窗口cap或后续双动作训练。额外配对初始化/producer账本后验收集先有字段错误，修正后受SSH阻断；该额外结果明确BLOCKED，不能冒称完整PASS。各次96变量不变的原证明已保存。
+
+结果收尾确认learner归属进程/IPC为0、51保护文件SHA未变。大模型、replay和逐包留实验存储；下面发布的均为源码和小证据，不需要开启服务器来阅读。
+
+- [全部32次正式检查](../evidence/scalar-ipc-init-20261027/formal-results.json)、[64个full/trim10窗口CSV](../evidence/scalar-ipc-init-20261027/evaluation-runs.csv)、[汇总判定](../evidence/scalar-ipc-init-20261027/final-summary.json)、[旧echo审计](../evidence/scalar-ipc-init-20261027/legacy-echo-summary.json)。
+- [残余失败分解](../evidence/scalar-ipc-init-20261027/small-failure-decomposition.json)、[实际注册计划](../evidence/scalar-ipc-init-20261027/registration.json)、[收尾](../evidence/scalar-ipc-init-20261027/closure.json)、[验证状态](../evidence/scalar-ipc-init-20261027/validation.json)。
+- [执行脚本与复算入口](../tools/scalar_ipc_diagnostic/README.md)、[发布来源与改写边界](../evidence/scalar-ipc-init-20261027/publication-provenance.json)。
+
+---
+
 # 当前研究审阅交接（2026-10-27）
 
 当前仍为PARTIAL。原健康V31、baseline、V14及51个选定模型未改。以下是新完成的单动作Orca冻结诊断；没有新增训练或已通过性能验收的模型。此前10-26结论保留在后文，日期和运行状态不得混用。

@@ -1,0 +1,67 @@
+{
+  "mode": "COMPILED_AND_IPC_TESTED_NO_TCP",
+  "files": {
+    "frameworks/canopy_single/remote_frozen_evaluate.py": "ae3cd0adfeec03f81b7718b82c2fe1eee6f849e8fc07d331be10656230d4bab4",
+    "frameworks/canopy_single/moving_stats_backend.py": "8134cbf68d0eb2eacbbed5c065817f998a7c7ccac6779c358c72af7fdefff952",
+    "frameworks/canopy_single/orca_backend.py": "7a3e0a1b100f2765ef3eff3f0f1c11a0b947b44b198017592732b51d71144680",
+    "frameworks/canopy_single/distributed.py": "ff866bed459fa0de33cc122980851efbfefeabb9186f83d5dac19b38ad9795a0",
+    "frameworks/canopy_single/verify_canopy.py": "952d27fe5a597510f47ceb575101e2c4a66162f445cc12e1969371d49247f74d",
+    "frameworks/canopy_single/verify_orca.py": "7590a9414659b13a1b928a8f017755929b61cf60d2ec1ce225059dad877eff07",
+    "frameworks/canopy_single/timed_distributed.py": "0b8f196d0890cc6bea86470dc9c2d08564104dfc2c0fa914a3440c8e35b7ffd4",
+    "frameworks/canopy_single/constants.py": "7e292b938d0dfee9bf21da09eb959c5c2de328a7321948b1ed64683d1620b37c",
+    "frameworks/canopy_single/independent_critic_v34.py": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266",
+    "frameworks/canopy_single/frozen_evaluate.py": "927c92be944ae93f8325e0f2424e13d1116e6df69f418b18275a009eef1e943b",
+    "frameworks/canopy_single/repair_evaluate.py": "eeadbcbac1c7dfce152c86ae7af1a8bdfed9fe0d62a2a32f4bec546a2b8b9311",
+    "frameworks/canopy_single/constrained_reward.py": "ef4a18ef50b75653237c35f3ec4275f410576d582e70889840ef4a5d65f3cc09",
+    "frameworks/canopy_single/evaluate.py": "d88e580c418bdb6a4b936f04d489645170a22ef7086cc33bf12d7f9f26138275",
+    "frameworks/canopy_single/cluster_control.py": "339e550df9167b999f4b2f874e4284c66b39d564bb8c9da8950f4373bdc3670c",
+    "frameworks/canopy_single/scalar_window_init.py": "1d0a3424cb441b4f6141dcdb6287a3687725e18fcad3a489735f4d2e2b401de3",
+    "frameworks/canopy_single/node_control.py": "039ccbe7c87e8a1a8688135b2e0dc52f636ab0c5f674bb5549c191134094206c",
+    "frameworks/canopy_single/canopy_feedback.py": "48316ab4f17239dc9e430037ccc3824e5a0beda6e83d2432690c56f79d9e2df9",
+    "frameworks/canopy_single/verify_canopy_qc_modes.py": "3fab0f6c4229faf131314fb5bed63162e4cebab797b983e98d7830c028710806",
+    "frameworks/canopy_single/mahimahi_metrics.py": "83dd2ab21b6e99524c8b66edee5f9d24915331a44f87dd3a2df29e71683aac15",
+    "frameworks/canopy_single/symbolic_transitions.py": "468390187ff406f433e3763bb95f87cf1762d8772a25c64b20f141921f75733a",
+    "frameworks/canopy_single/resource_cost.py": "37489568d4bbfaf4ad7b45cb5f7fcdabe17e242f171f96df4e31ed77a10437ae",
+    "frameworks/canopy_single/consistent_target_bn.py": "ac64991d4bb40c10afff580b5c8140ec1e6587c9eb64344e8a37b3b5b00380a5",
+    "frameworks/canopy_single/verified_ipc.py": "79d9152fbaf42e1ca2cab73bdd89f5779b92b22bac8353538babc8f11c69a706",
+    "frameworks/canopy_single/orca_moving_actor_loss.py": "fe886a668a09a05518c37013c768a66ff6c03f328d46a82003a5ba2d6c08e154",
+    "frameworks/canopy_single/canopy_qc_modes.py": "50b4914a10c3b297105bab026a03e82f4b73c6f1a906c701ae6316dea0c91f94",
+    "native-src/verified_scalar_ipc.h": "12988bf444a9455b0ec0dd22dff0e679a965bdfdde48a4d9acc2a03dfb95032a",
+    "native-src/orca-server-verified-ipc.cc": "e35eea5f29d3b52d7d726a1f094b4b8f78896bfb889247fcbab35e263bc0e77a"
+  },
+  "native": {
+    "schema": 2,
+    "binary_sha256": "9af1e6835bd066beec5c683e47f42bae5f669ceccff4c686f88ae8bf23c9d5f9",
+    "source_sha256": {
+      "orca-server-verified-ipc.cc": "e35eea5f29d3b52d7d726a1f094b4b8f78896bfb889247fcbab35e263bc0e77a",
+      "verified_scalar_ipc.h": "12988bf444a9455b0ec0dd22dff0e679a965bdfdde48a4d9acc2a03dfb95032a"
+    }
+  },
+  "commands": [
+    [
+      "g++",
+      "-std=c++11",
+      "-O2",
+      "-pthread",
+      "-I",
+      "${EXPERIMENT_ROOT}/native-src",
+      "-I",
+      "${SOURCE_EXPERIMENT_ROOT}/frameworks/orca_moving/code/runtime/src",
+      "${EXPERIMENT_ROOT}/native-src/orca-server-verified-ipc.cc",
+      "${SOURCE_EXPERIMENT_ROOT}/frameworks/orca_moving/code/runtime/src/flow.cc",
+      "-o",
+      "${EXPERIMENT_ROOT}/native/orca-server-verified-ipc"
+    ],
+    [
+      "g++",
+      "-std=c++11",
+      "-O2",
+      "-pthread",
+      "-I",
+      "${EXPERIMENT_ROOT}/native-src",
+      "${EXPERIMENT_ROOT}/ipc_stress_peer.cc",
+      "-o",
+      "${EXPERIMENT_ROOT}/native/ipc-stress-peer"
+    ]
+  ]
+}
