@@ -25,6 +25,7 @@ def tail(path,size=65536):
   header=f.readline().decode().strip().split(',');f.seek(0,2);end=f.tell();f.seek(max(0,end-size));lines=f.read().decode(errors='replace').splitlines()
  return [dict(zip(header,row)) for row in csv.reader(lines[1:-1]) if len(row)==len(header)]
 def status(run):
+ if (R.parent/'audit/lease-before.json').exists():(R.parent/'audit/lease-heartbeat').touch()
  entries=[]
  for z in load(own_path(run),[]):
   try:
@@ -39,7 +40,7 @@ def status(run):
    recent=tail(d/'states.csv',65536)[-200:]
    if recent:q['recent']=dict(step=int(recent[-1]['transition']),min_saturation=sum(float(x['action_no_noise'])<=-.99 for x in recent)/len(recent),cwnd_mean=sum(float(x['cwnd']) for x in recent)/len(recent),action_mean=sum(float(x['action_no_noise']) for x in recent)/len(recent),reward_mean=sum(float(x['reward']) for x in recent)/len(recent))
   entries.append(q)
- return dict(host=os.uname()[1],epoch=time.time(),load=list(os.getloadavg()),mem_available=psutil.virtual_memory().available,cpu_times=psutil.cpu_times()._asdict(),network=psutil.net_io_counters()._asdict(),entries=entries)
+ return dict(host=os.uname()[1],epoch=time.time(),load=list(os.getloadavg()),mem_available=psutil.virtual_memory().available,cpu_times=psutil.cpu_times()._asdict(),network=psutil.net_io_counters()._asdict(),entries=entries,learning_monitor=load(R/'audit'/(run+'-online-monitor.json')))
 def signal_stop(run,reason):
  dump(R/'logs'/(run+'-stop.json'),dict(reason=reason,epoch=time.time()))
 def recent_network(run,index):
@@ -61,7 +62,7 @@ def start_evaluation(cfg):
  work=R/'logs'/(run+'-work');work.mkdir(exist_ok=False)
  entry='remote_frozen_evaluate.py' if cfg.get('inference_endpoint') else 'frozen_evaluate.py'
  if cfg.get('evaluation_entry'):
-  assert cfg['evaluation_entry']=='repair_evaluate.py';entry=cfg['evaluation_entry']
+  assert cfg['evaluation_entry'] in ['repair_evaluate.py','limited_evaluate.py'];entry=cfg['evaluation_entry']
  p=subprocess.Popen([PY,str(R/entry),'--config',str(path)],cwd=str(work),stdout=(R/'logs'/(run+'.stdout')).open('w'),stderr=subprocess.STDOUT,start_new_session=True)
  dump(own_path(run),[dict(pid=p.pid,created=psutil.Process(p.pid).create_time(),role='evaluation',index=0)])
  subprocess.Popen([PY,str(R/'node_control.py'),'watch',run],stdout=(R/'logs'/(run+'-watchdog.stdout')).open('w'),stderr=subprocess.STDOUT,start_new_session=True)
@@ -155,7 +156,19 @@ def main():
  if cmd=='watch':watch(sys.argv[2]);return
  if cmd=='rpc':
   request=json.load(sys.stdin);cmd=request['op'];run=request.get('run')
-  if cmd=='start':out=start(request['cfg'],request['role'],request['index'])
+  if cmd=='lease_heartbeat':(R.parent/'audit/lease-heartbeat').touch();out=True
+  elif cmd=='set_active_training':dump(R.parent/'audit/active-training-config.json',request['cfg']);out=True
+  elif cmd=='set_eval_registration':
+   assert not (R.parent/'eval-registration.json').exists();dump(R.parent/'eval-registration.json',request['registration']);out=True
+  elif cmd=='start_eval_worker':
+   root=R.parent;receipt=root/'audit/eval-worker-launch.json';assert not receipt.exists()
+   stream=(root/'eval-worker.stdout').open('w');p=subprocess.Popen([PY,'-B',str(root/'eval_worker.py')],stdin=subprocess.DEVNULL,stdout=stream,stderr=subprocess.STDOUT,start_new_session=True,env=dict(os.environ,CANOPY_L1_ROOT=str(root)));stream.close()
+   out=dict(pid=p.pid,created=psutil.Process(p.pid).create_time());dump(receipt,out)
+  elif cmd=='read_root_audit':
+   assert request['name'] in ['evaluation-status.json','evaluation-results.json','lease-restored.json','lease-failure.json'];out=load(R.parent/'audit'/request['name'])
+  elif cmd=='end_lease':(R.parent/'audit/LEASE_COMPLETE').touch();out=True
+  elif cmd=='stop_evaluation':(R.parent/'audit/STOP_EVALUATION').touch();out=True
+  elif cmd=='start':out=start(request['cfg'],request['role'],request['index'])
   elif cmd=='start_evaluation':out=start_evaluation(request['cfg'])
   elif cmd=='evaluation_summary':out=evaluation_summary(run)
   elif cmd=='recent_network':out=recent_network(run,request['index'])

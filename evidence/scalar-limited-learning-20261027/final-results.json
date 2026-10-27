@@ -1,0 +1,96 @@
+{
+  "status": "STOPPED_SAFETY_NOT_COMPLETED_TRAINING_BUDGET",
+  "decision": "NO_GO_LONG_TRAINING",
+  "seed": 3,
+  "source_base_commit": "216b3ee0ed5cf64fdf311b1109687b9003e862a3",
+  "model_family": "single-action Orca;70 state;one window action;fixed20ms;CUBIC",
+  "zero_TCP_proxy_recheck": {
+    "zero_sum_ge_point8": 20,
+    "zero_sum_runs": 20,
+    "high_RTT_iid_lt_point5": 2,
+    "high_RTT_iid_runs": 4,
+    "prediction": "PARTIAL_FAIL"
+  },
+  "smoke": {
+    "real_inserted": 45207,
+    "optimizer_updates": 0,
+    "all96_variables_unchanged": true,
+    "formal_step0_all96_equal": true,
+    "actors": 24,
+    "max_requested_or_observed_cwnd": 2897
+  },
+  "training": {
+    "planned_inserted": 1200000,
+    "actual_inserted": 28513,
+    "critic_iterations": 1622,
+    "critic_optimizer_ops": 3244,
+    "actor_updates": 1622,
+    "target_updates": 1622,
+    "stop": "L1_S3_WINDOW_EXPLOSION",
+    "actors_exceeding_million": 14,
+    "max_cumulative_exploration": 0.574751982908764,
+    "first_explosion_after_recorded_first_optimizer_s": 0.3999898433685303,
+    "cross_host_clock_error_not_quantified": true
+  },
+  "evaluations": {
+    "planned": 110,
+    "actual": 0,
+    "status": "NOT_RUN_SAFETY_STOP"
+  },
+  "IPC": {
+    "matched_frames": 147584,
+    "incoming_rejected": 0,
+    "matches_are_exact_payload_and_crc": true
+  },
+  "final_checkpoint": {
+    "step": 28513,
+    "location": "Cloud learner only; model/replay/raw packet logs not downloaded",
+    "after_drain": true,
+    "same_input_384_states": {
+      "initial_pi": {
+        "mean": -0.003060724586248398,
+        "min": -0.035386428236961365,
+        "p50": -0.004144054837524891,
+        "max": 0.1740424484014511,
+        "positive_fraction": 0.033854166666666664,
+        "saturated_fraction": 0.0
+      },
+      "final_pi": {
+        "mean": -0.9631786346435547,
+        "min": -1.0,
+        "p50": -0.9875751733779907,
+        "max": -0.53952556848526,
+        "positive_fraction": 0.0,
+        "saturated_fraction": 0.7005208333333334
+      },
+      "final_weights_initial_BN": {
+        "mean": -0.998851478099823,
+        "min": -1.0000001192092896,
+        "p50": -0.9999967813491821,
+        "max": -0.9519274830818176,
+        "positive_fraction": 0.0,
+        "saturated_fraction": 1.0
+      },
+      "initial_weights_final_BN": {
+        "mean": -0.015315859578549862,
+        "min": -0.06242142990231514,
+        "p50": -0.017341751605272293,
+        "max": 0.3077525198459625,
+        "positive_fraction": 0.026041666666666668,
+        "saturated_fraction": 0.0
+      },
+      "final_dQ_da": {
+        "mean": -0.01937156915664673,
+        "min": -0.316619336605072,
+        "p50": -0.009779611602425575,
+        "max": 0.017284872010350227,
+        "positive_fraction": 0.22916666666666666,
+        "saturated_fraction": 0.0
+      }
+    }
+  },
+  "closure_all_five_PASS": true,
+  "no_automatic_continuation": true,
+  "no_new_paper_performance_or_CPU_claim": true,
+  "next": "Offline first100 update replay and actor/critic/BN attribution; then consider one-variable actor release gate. No additional TCP or optimizer candidate launched."
+}

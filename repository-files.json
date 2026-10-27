@@ -1,5 +1,5 @@
 {
-  "scope": "2026-10-27 stationary scalar exploration and independent buffer diagnostics; original51 model files unchanged, no new trained model",
+  "scope": "Published scalar L1 safety stop; complete negative evidence and actor/BN audit; original51 models and tag preserved; no new qualified model",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10271,
-      "sha256": "9e5c3f62156f952b7ed9c951ebea919b67a8a92d05558ac3b2ef6227bf351fed"
+      "bytes": 9804,
+      "sha256": "45bf85b682d3f934a6af47088b86b7b52e86983ac0e913200acf93cb4d63abdc"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -69,13 +69,18 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 24656,
-      "sha256": "022fa58abc6bece99b1a85b185b7166fb40b66cd8926df66a3b867d1a6bba5cd"
+      "bytes": 28252,
+      "sha256": "6ccec42b7dfd427d75a985b2d0d5508819513d770357baf0373057c9a315951d"
     },
     {
       "path": "docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md",
       "bytes": 15666,
       "sha256": "72d45f211b4a64e5b0fa07efc78fc8a4ae9eda7672a0ee782c82ce6649ad2b35"
+    },
+    {
+      "path": "docs/SCALAR_LIMITED_LEARNING_PLAN.md",
+      "bytes": 12885,
+      "sha256": "c6f9eccb839658dd9194df7734a91fab72f6b12f97e29f06f3325b68a52228ea"
     },
     {
       "path": "docs/THIRD_PARTY.md",
@@ -2648,6 +2653,891 @@
       "sha256": "00e2f2256e82cf9313a36b0e4ff645634629f289d9baa40f9ce53ab062728a15"
     },
     {
+      "path": "evidence/scalar-limited-learning-20261027/actor-outcomes.csv",
+      "bytes": 4982,
+      "sha256": "0475fea721851b127fa677f73059c5b49c1ff61d128c31b0f86c6e0adc045aa3"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/checkpoint-receipt.json",
+      "bytes": 18665,
+      "sha256": "e28ab37dfebd93f36184741d8c638458967523e29eb54b1908c95173ceb92d68"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/audit/active-training-config.json",
+      "bytes": 14600,
+      "sha256": "cbe7ead99e5fbe3a32f9779c1b905c27e714522b519d5f44ada56aad212d3733"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/audit/closure.json",
+      "bytes": 229,
+      "sha256": "8714ec0f77b278ed0c2034664b4ac090c989b8561d0023f580dec2349e05cdce"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/audit/deployment.json",
+      "bytes": 5388,
+      "sha256": "d6a9674910c5c0945eeb46357267ced2a05387d27fa3d65014ad6bb71753161d"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/audit/guard-launch.json",
+      "bytes": 76,
+      "sha256": "952c37983a6c156fc3633733e3335ce40b5fae76cdb308e618960b92a1579e0a"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/audit/lease-active.json",
+      "bytes": 313,
+      "sha256": "43c5dcb707760b36c2f8d2b3dfd6b4465fe85f6de13d7cef219ab4fb9a599281"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/audit/lease-before.json",
+      "bytes": 324,
+      "sha256": "fb6b7fe19485625b3d2025685641d1ed7bf2be6fb11a082160093c01023130d7"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/audit/lease-restored.json",
+      "bytes": 327,
+      "sha256": "1d79617db10b125e613f4bddb5069227dedeed187030c10ba6d9ed80899ebe03"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/collection-manifest.json",
+      "bytes": 3701,
+      "sha256": "063112dffdbf892267b4dfa9ded0aafe3a6069454b9f005b239f7b6de43ff854"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/audit/learncheck-L1-orca_moving-s3-cleanup.json",
+      "bytes": 387,
+      "sha256": "df0d402a74decb4288ae720538b01ea89cb0efa952681b65a772cb7098079ff0"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/audit/learncheck-L1-orca_moving-s3-online-monitor.json",
+      "bytes": 2194,
+      "sha256": "365e78a907b286ff2551edd2b80af36cac9f023cd862a28603baeb125ba82b84"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/audit/learncheck-L1-orca_moving-s3-smoke-cleanup.json",
+      "bytes": 64,
+      "sha256": "584dea86278550dda32d37ebe057e6b08e996234761f0a27fed1d2a7ef040eb5"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/audit/learncheck-L1-orca_moving-s3-smoke-online-monitor.json",
+      "bytes": 5462,
+      "sha256": "7cca77b6975ccafc625867c62420273cf7561b34eab372636d0541e917bdf516"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-actor0/result.json",
+      "bytes": 1799,
+      "sha256": "e6da36afd7471917f0b40ec1cbedce1ae531bc4ca30d4843765c6d5ca11392f5"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-actor1/result.json",
+      "bytes": 1805,
+      "sha256": "9f5c810de9265158f12e18f59d99ba6bb38b93cfaaa1fc539d44397144dd4801"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-actor2/result.json",
+      "bytes": 1808,
+      "sha256": "b8f1021a1bcd6a3523ee1c67a19270f22c01b0e8ba507ec321771b2ca4e42689"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-actor3/result.json",
+      "bytes": 1809,
+      "sha256": "55d5b93dcfb7b4abed992758e19463ca8c0bdb44613ea66171844731e1f22c7a"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-actor4/result.json",
+      "bytes": 1810,
+      "sha256": "a8fa12ef64f8e991220e5a92cf3f25d5afd645e08cbe759c35b0ceb4aabbb585"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-actor5/result.json",
+      "bytes": 1887,
+      "sha256": "c2e5ccfc29e64e023eb89171e85f3296d4783a2eea4b6e3bdffb8522a02e5e2d"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor0/result.json",
+      "bytes": 1811,
+      "sha256": "ab4a7851382be34e5aa8f0210da183d6220ddd7c14e0df6ec6718737784c7b82"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor1/result.json",
+      "bytes": 1817,
+      "sha256": "80ab77e48edec497d9b4fbbd7796f169063b748ee6f6a6d1e486911967ca9723"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor2/result.json",
+      "bytes": 1819,
+      "sha256": "bf93f3507fdd1fd1a6b3cb6b9a164d8f378dbe448543989cc51db60d84881e18"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor3/result.json",
+      "bytes": 1819,
+      "sha256": "f0205fbe20f7d7a7a7a68e0e9101ea200a7bba151af17437f5d2751d8a5d6a29"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor4/result.json",
+      "bytes": 1822,
+      "sha256": "4e45ace6f2a7f95a94878c706c5f6f5ed9f01856a3b57cd751cb168890bd3e70"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor5/result.json",
+      "bytes": 1901,
+      "sha256": "932e7a1278d320858a95895e45f466072cfa3e4e06607726ba4e5d15eca37f22"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/metrics/learncheck-L1-orca_moving-s3-actor-summary.json",
+      "bytes": 15898,
+      "sha256": "b8e7e52232c78f925ac254e104cb737e5aa069dd36ec530e1b4dacffbf715adb"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/framework/metrics/learncheck-L1-orca_moving-s3-smoke-actor-summary.json",
+      "bytes": 15847,
+      "sha256": "1b42eabcf220f79a4ed27259c8cce4512d21973dd54d7c7ba0377d2b71cb67f0"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/guard.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-a/registration.json",
+      "bytes": 34487,
+      "sha256": "249030697aa3caedd9cda0dcdb43853d5bff659f64e3a0b3e7b469cabe3eb2e1"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/audit/active-training-config.json",
+      "bytes": 14600,
+      "sha256": "cbe7ead99e5fbe3a32f9779c1b905c27e714522b519d5f44ada56aad212d3733"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/audit/closure.json",
+      "bytes": 228,
+      "sha256": "4f03bd02394e139d200418f0b62c2e4e342e478906b6d07a150f6be54b741d01"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/audit/deployment.json",
+      "bytes": 5386,
+      "sha256": "74837752434863cee1a36bbbb2cd4ad2a78c73c927d832d03af8f3d75d546917"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/audit/guard-launch.json",
+      "bytes": 78,
+      "sha256": "75303c0216d265c44f2098a7de42c4e9eefc9977e8a9510e8e73459d901ac987"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/audit/lease-active.json",
+      "bytes": 314,
+      "sha256": "8bb030b2c8bb7f881d35c8f098db5f12fe608bbff8fce5c926d9297656ddb6b7"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/audit/lease-before.json",
+      "bytes": 324,
+      "sha256": "b56ac35f30e09d917f7a376d611a3e8445a3c7ed88ffe76ac5313e50cad77059"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/audit/lease-restored.json",
+      "bytes": 328,
+      "sha256": "a61c4d30bf1eda7fb020fb02941df7b9f39c4f642fdf6e3134d7a0f0b6aed7af"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/collection-manifest.json",
+      "bytes": 3704,
+      "sha256": "3eee5e5060b813d4e204ac812ee53985d07a8570a18e2b209e38afd88690b252"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/audit/learncheck-L1-orca_moving-s3-cleanup.json",
+      "bytes": 62,
+      "sha256": "645d4e3ca27190f6f09dc57deba51e87ac95088b3c1a6e2196301897d05361de"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/audit/learncheck-L1-orca_moving-s3-online-monitor.json",
+      "bytes": 2224,
+      "sha256": "547acd230c23764feafeff4e4cb3ac841531cc22ca2569cae18642f57e289ef8"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/audit/learncheck-L1-orca_moving-s3-smoke-cleanup.json",
+      "bytes": 64,
+      "sha256": "e6b803a0bc2d6d3fa87c68e7a6ef411b248912911c4b8bbb7da3c94b097b6e27"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/audit/learncheck-L1-orca_moving-s3-smoke-online-monitor.json",
+      "bytes": 5419,
+      "sha256": "a043df3ccc5ebd39c93aa7ca6efb6094c482aa6b3fa186858afed287e7acd7af"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-actor10/result.json",
+      "bytes": 1807,
+      "sha256": "09a219689469aef5a7fffc789229eaba1f71b1a9a27f52cb96f881f3d32830cd"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-actor11/result.json",
+      "bytes": 1807,
+      "sha256": "f99deab1f66a0629e1f08f2effca42c1f1758d63a0f63c71297dd8a36f33dc8b"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-actor6/result.json",
+      "bytes": 1805,
+      "sha256": "d23826b630031146b0f681925356342d7d2ef551eb5515727f4c6b2752b515b8"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-actor7/result.json",
+      "bytes": 1807,
+      "sha256": "1f602722e996740a2823394ee43dbb6c0ef2157fbb809f7030f51f5dccafe841"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-actor8/result.json",
+      "bytes": 1808,
+      "sha256": "3331cc081839eae13b3f353b21356b9d3c7fee101ba0b7c5f77ac7b730444bad"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-actor9/result.json",
+      "bytes": 1811,
+      "sha256": "ec449d8c47984f8df056aa01ba302a3017449e343ed4b73851c62bc6b81e8d53"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor10/result.json",
+      "bytes": 1821,
+      "sha256": "2f385876bfd4948515a377ce20a5043cc47ab1b48da1fbc59db5e1d9ae76705a"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor11/result.json",
+      "bytes": 1820,
+      "sha256": "f408ea6f31e57fecf144c858d45263f06af05f448c206ff3b0e27067ad61a567"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor6/result.json",
+      "bytes": 1817,
+      "sha256": "360e5ac1cec44a70c10cb373ebedcc0edf5912ffa16945c154f618760cbe72b7"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor7/result.json",
+      "bytes": 1819,
+      "sha256": "da0dcb8f436226545e03b705760a3c8d855641fba8452077ae6c0942b35ba273"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor8/result.json",
+      "bytes": 1819,
+      "sha256": "10e15c64af33286653daf73130e98ce8c142208a16373cdc81ae2d9bbb6ef35e"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor9/result.json",
+      "bytes": 1822,
+      "sha256": "69360d30a2fca3ab25e47ee4606edd72df6e73e52ede8958272f4bcb5dce4c86"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/metrics/learncheck-L1-orca_moving-s3-actor-summary.json",
+      "bytes": 15809,
+      "sha256": "0afd255083f6c9bee70f69435ad409fd545d183286c5205f30d22bfb25eacda3"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/framework/metrics/learncheck-L1-orca_moving-s3-smoke-actor-summary.json",
+      "bytes": 15818,
+      "sha256": "c9a3de03cb5d6d611d1e2af10d9bf95083b2bb6997ceaf3d93530e2bf903fa83"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/guard.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-b/registration.json",
+      "bytes": 34487,
+      "sha256": "249030697aa3caedd9cda0dcdb43853d5bff659f64e3a0b3e7b469cabe3eb2e1"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/audit/active-training-config.json",
+      "bytes": 14600,
+      "sha256": "cbe7ead99e5fbe3a32f9779c1b905c27e714522b519d5f44ada56aad212d3733"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/audit/closure.json",
+      "bytes": 229,
+      "sha256": "5c2f68569edf30c57460a77230f4fc7eaf2148a9fa670087be67803559b581de"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/audit/deployment.json",
+      "bytes": 5388,
+      "sha256": "2e5b674de4f4a76e076876b3b7e0604bc06130202ab16de09c9a82b409537ce3"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/audit/guard-launch.json",
+      "bytes": 77,
+      "sha256": "6d9f6b7eed6ee9b9e456760427d5d5b084b8c94de18deee3cd02a3f79e5aa2b0"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/audit/lease-active.json",
+      "bytes": 314,
+      "sha256": "d705717d8f76c2585efe1c13959ecc5e0a40c84d6c8467dbf483281219588868"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/audit/lease-before.json",
+      "bytes": 323,
+      "sha256": "386d1ec858b63d2c955d2c1fb9bf1f940feee1bf81835d055dac32837a9cefb7"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/audit/lease-restored.json",
+      "bytes": 328,
+      "sha256": "1b1201fa12547f5d416d78ddcbd8fd89ffb68dac361143c31aea258fb611a4f0"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/collection-manifest.json",
+      "bytes": 3713,
+      "sha256": "7ac9a7aa3c14c3df548d9f88f833f3a8d238c89052ba0220d7ce5069656390ab"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/audit/learncheck-L1-orca_moving-s3-cleanup.json",
+      "bytes": 64,
+      "sha256": "780587c7d7e48bf4b05a4ff9b2657544885457cf99d9f72a57df218594b1f2a0"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/audit/learncheck-L1-orca_moving-s3-online-monitor.json",
+      "bytes": 2179,
+      "sha256": "10367a102188df6296ce86b1d220302de7e472c4c9618bb2d25fc29277817733"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/audit/learncheck-L1-orca_moving-s3-smoke-cleanup.json",
+      "bytes": 64,
+      "sha256": "e622f7c278bca6e58c680358a22faba6af73d2ff7475be8c16d56178f9299385"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/audit/learncheck-L1-orca_moving-s3-smoke-online-monitor.json",
+      "bytes": 5457,
+      "sha256": "fce9c216b9d7944b2c964069b71f8645b083d40e15e5e0ca46b640b1d0c6ffc3"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-actor12/result.json",
+      "bytes": 1807,
+      "sha256": "d6e5297e809a52eefc909df07fc2733515523f1a91004b56de740ce0587180b9"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-actor13/result.json",
+      "bytes": 1810,
+      "sha256": "32162c133cf9b52f05cccc1e5c207a2bd33d30e50177743791fc8d900126fcad"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-actor14/result.json",
+      "bytes": 1812,
+      "sha256": "2b9d6d942f5a9d3b47c8c4f1d5993de0640fde8e417900cb2ff653ab32b3e6d2"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-actor15/result.json",
+      "bytes": 1807,
+      "sha256": "6d0d04735cb4dba28a8446371daa79447584b45e3af634e9d08df956b137fec3"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-actor16/result.json",
+      "bytes": 1893,
+      "sha256": "2d6b748f69506c0d7d16ee01cfcce99867f955993a8d9feecb9952d38893ba50"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-actor17/result.json",
+      "bytes": 1807,
+      "sha256": "635d6f5c9c55ef81969305cdb788d0048b9e915e3c893315d13b38a053e08695"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor12/result.json",
+      "bytes": 1820,
+      "sha256": "994aa1ad04869135a7518644d621fbb1c764dd64105dcbd68439f62f1667cf2e"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor13/result.json",
+      "bytes": 1823,
+      "sha256": "57373a651e5972ae20788a099658937ebaa8516758149a7c7c032c7cee4295f0"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor14/result.json",
+      "bytes": 1823,
+      "sha256": "cf731426002458afabb9265adaad3f6008ea893b5c54cb3807b700ccd83fbf4b"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor15/result.json",
+      "bytes": 1820,
+      "sha256": "c339a1d960f97da83d0b84abbef87f65f9f46e72060403243b524deb58189fd0"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor16/result.json",
+      "bytes": 1904,
+      "sha256": "2cfc50dc8059e74ce6e5117295cc73bbd23d7e2634fbc1023cdc1b054ca0d655"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor17/result.json",
+      "bytes": 1821,
+      "sha256": "113e9dc42d41c570f7270bd8ad3ebae560193ba3b511c3f15a4fc36f777db199"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/metrics/learncheck-L1-orca_moving-s3-actor-summary.json",
+      "bytes": 15915,
+      "sha256": "258684b8d39a2075eb863d06c17ac88b6ec2174b4984e064300a2de408465e7d"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/framework/metrics/learncheck-L1-orca_moving-s3-smoke-actor-summary.json",
+      "bytes": 15896,
+      "sha256": "1649199623253c818b516f9ae778aa728e393f2049183f750b23f91c40ae8b8c"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/guard.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-c/registration.json",
+      "bytes": 34487,
+      "sha256": "249030697aa3caedd9cda0dcdb43853d5bff659f64e3a0b3e7b469cabe3eb2e1"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/audit/active-training-config.json",
+      "bytes": 14600,
+      "sha256": "cbe7ead99e5fbe3a32f9779c1b905c27e714522b519d5f44ada56aad212d3733"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/audit/closure.json",
+      "bytes": 228,
+      "sha256": "055bee928c480520e30b5ae4376e60958359f08c7fa96e6160f382d641cbb670"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/audit/deployment.json",
+      "bytes": 5388,
+      "sha256": "00ca6afae1c13f52141bb588ff825c118c4392eeb4002a820804126b01ebb740"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/audit/guard-launch.json",
+      "bytes": 78,
+      "sha256": "dda29675f89c08db9aa366fe872676887b81da40724607f106523b41534c95e3"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/audit/lease-active.json",
+      "bytes": 314,
+      "sha256": "291b2584eec12e7283bbfed299d7835fed27fe366f125ade8a9975b2454dd7fd"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/audit/lease-before.json",
+      "bytes": 324,
+      "sha256": "5cea70247a5204891157ead99135acecef6fa053b72c392ac22f36ab041631c1"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/audit/lease-restored.json",
+      "bytes": 328,
+      "sha256": "306d36b7654ca7ae3e96aa5e60c3d21a81c3126e61cb29ceaf44b63608c0bf50"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/collection-manifest.json",
+      "bytes": 3712,
+      "sha256": "dfdf031358c0125f8955d6f7c0cd6dcd3f367bd9983564fd9cf41827b4c430fa"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/audit/learncheck-L1-orca_moving-s3-cleanup.json",
+      "bytes": 402,
+      "sha256": "69e1672e1c8fd79f5a092e43de7863cbe7dc2650e9a898faa8d0ff2ee65657de"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/audit/learncheck-L1-orca_moving-s3-online-monitor.json",
+      "bytes": 2243,
+      "sha256": "d9092ff57f295a5de2d6b27de831ba039858d79dad8a62ccc5557bac5946270a"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/audit/learncheck-L1-orca_moving-s3-smoke-cleanup.json",
+      "bytes": 64,
+      "sha256": "9f3ab9c9c1ac157eb342f2951bd812bf25910973a427d4d59a8356759a981508"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/audit/learncheck-L1-orca_moving-s3-smoke-online-monitor.json",
+      "bytes": 5427,
+      "sha256": "c5196deacefc1b03a490134f9f5c8f5894b634147f1b7c00b69bd5b4809938d0"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-actor18/result.json",
+      "bytes": 1811,
+      "sha256": "e56af83ee4c3b687419c1fa9ca8eeaa03aa5ca76d9e1745b318f98a6998ca39f"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-actor19/result.json",
+      "bytes": 1814,
+      "sha256": "f410f2ac38dbe12c05f0cccd9fedda812b1161aeece5bc45389ad867cc6312a3"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-actor20/result.json",
+      "bytes": 1814,
+      "sha256": "4e42875c8d1463b01a8a163dece50abb91c544bdcf07932410a9bd0d1fec4c1b"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-actor21/result.json",
+      "bytes": 1809,
+      "sha256": "4ab7d9dca263007759e0cb28f2ef01f5b46ed09c00bb36b59b6624f0504af2b0"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-actor22/result.json",
+      "bytes": 1808,
+      "sha256": "4e4f976f5cdebef51f1aa8118e41e19e6e3028a7fb5b2ccb729a9f5212466a94"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-actor23/result.json",
+      "bytes": 1812,
+      "sha256": "35f7189c2f2436fe2d84aa8d3f7444d1c89a5bde9aa4a4bcd2d2403e5f7d28cb"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor18/result.json",
+      "bytes": 1822,
+      "sha256": "94914e589c01aeb143ec6e7bd89be00406a2a2e6873d61793ff8491affabd3b8"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor19/result.json",
+      "bytes": 1825,
+      "sha256": "4a95dac1b4b1f00165990e3826665d7c5e73a272723fae867b63fb7d338dff03"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor20/result.json",
+      "bytes": 1825,
+      "sha256": "bf5c018248fbf8da9d21ee12fce9fa2a3faf2f4b9cc8f5ed3f8fabae261890c6"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor21/result.json",
+      "bytes": 1820,
+      "sha256": "c71b3f545fc6a5c434f77f479b9ebfe9af544f40424ef77ccf17883ae13652ea"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor22/result.json",
+      "bytes": 1820,
+      "sha256": "b4796b2fc46f2458a4ddf0c3776c7bdd88d8e66c05ebb7f0d9e9a1b26100008c"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/logs/learncheck-L1-orca_moving-s3-smoke-actor23/result.json",
+      "bytes": 1824,
+      "sha256": "16d1dbd7199eb369b72d77f5a2a584d6ac7932c327d02944b809db98ec73f907"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/metrics/learncheck-L1-orca_moving-s3-actor-summary.json",
+      "bytes": 15838,
+      "sha256": "3c7cda9b1e213042fa76ce1539dcacf68313bed073f7fbbe972582b964d502e4"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/framework/metrics/learncheck-L1-orca_moving-s3-smoke-actor-summary.json",
+      "bytes": 15815,
+      "sha256": "08ac9e474ddb3365f351fb16390bdcd657d15f4356eef21511dc205209bea352"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/guard.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/actor-d/registration.json",
+      "bytes": 34487,
+      "sha256": "249030697aa3caedd9cda0dcdb43853d5bff659f64e3a0b3e7b469cabe3eb2e1"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/active-training-config.json",
+      "bytes": 14600,
+      "sha256": "cbe7ead99e5fbe3a32f9779c1b905c27e714522b519d5f44ada56aad212d3733"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/closure.json",
+      "bytes": 228,
+      "sha256": "8d8044e6151058ff21fdbd795f562bbdc29109beca7140db86a6052765193a49"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/deployment.json",
+      "bytes": 5387,
+      "sha256": "eac5dce7d0fdb931d229db25279e65524e693e18a2a7ca6aea857528fed52d8d"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/guard-launch.json",
+      "bytes": 78,
+      "sha256": "3f1b14a4edc6533513a556ddd3768127b23a683ffeccbe053d8da9a9ddc5274b"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/lease-active.json",
+      "bytes": 313,
+      "sha256": "dfe357793cbfbcdaf9254cde024e414b739326126940557a61d256fdb41a3b9f"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/lease-before.json",
+      "bytes": 324,
+      "sha256": "69f19bfc7df2d7ba9532b0a519da811cbcf5b0fe5dbe8e453f6c5c2f0ac629d5"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/lease-restored.json",
+      "bytes": 328,
+      "sha256": "b186f482aa8eb7e3162eb0f0109113bdcbf93fd87faaa6b83cc2c16b44f389cc"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/monitor-learncheck-L1-orca_moving-s3-smoke.json",
+      "bytes": 19951,
+      "sha256": "e9d0c0e888aa41af4d330a8471cbdc343d19e52acea8597e9af5fb3340435130"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/monitor-learncheck-L1-orca_moving-s3.json",
+      "bytes": 662,
+      "sha256": "e4a71541c3b09ac220e8af5917efc714afa9316c66f19784b8b5a115d6eadb64"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/outcome.json",
+      "bytes": 158,
+      "sha256": "25206871a0cd01044aed2fa0125170cf9a104f261ec82baa057d82c56a54d173"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/pipeline-launch.json",
+      "bytes": 77,
+      "sha256": "017f46e0835eed3ce3c2ecc464b360f2a53f674389daf7fef7fa0b755ba91204"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/pipeline-started.json",
+      "bytes": 50,
+      "sha256": "6cee1db46d676d96d695d3ee1cdf6077fa9dbd776cebcc3c09da01c07e39ad2b"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/pipeline-status.json",
+      "bytes": 92,
+      "sha256": "0c546c930b775e542b00209f56d096fddcb1e51ec5ffc45e45d58d75de9a2534"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/smoke-result.json",
+      "bytes": 6226,
+      "sha256": "3bfe40e13cade2af47a6bcc8d2dd01dfef6a4777678991d44d654cc3159d3caa"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/audit/training-result.json",
+      "bytes": 6213,
+      "sha256": "f9a9d80cddd0d5b4593a421cfb299ffd6cb4fa599e095479394dfd266f4d389f"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/collection-manifest.json",
+      "bytes": 3497,
+      "sha256": "9465486030c50bb4e90fef045316c9233e71a036a320e5e8e3c2960197adf3d2"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/framework/audit/learncheck-L1-orca_moving-s3-cleanup.json",
+      "bytes": 64,
+      "sha256": "0ef49f239782eee06c3bfa91d87c92efe0c9f83b9cb2b1bd2b88224996ed733c"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/framework/audit/learncheck-L1-orca_moving-s3-online-monitor.json",
+      "bytes": 88,
+      "sha256": "abf0381788769efa17f3899af2c91183ef849fd5ae51ed9e3cd96effa35be7ff"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/framework/audit/learncheck-L1-orca_moving-s3-smoke-cleanup.json",
+      "bytes": 64,
+      "sha256": "04abac894c396995ae3f86f9594fe1468ef71f1e201208d6e691cf41bb4f292e"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/framework/audit/learncheck-L1-orca_moving-s3-smoke-online-monitor.json",
+      "bytes": 88,
+      "sha256": "99a23bcb6a8219ec96c6005b5f31162bfc61eb41fe04e64b288545497e704c1f"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/framework/logs/learncheck-L1-orca_moving-s3-smoke/result.json",
+      "bytes": 224,
+      "sha256": "50b2c08579b31c4b523897d4dfcc346e045b51b4e38143268a1e5f99ebc6c1d8"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/framework/logs/learncheck-L1-orca_moving-s3/result.json",
+      "bytes": 236,
+      "sha256": "eb556115fafefbbf08384ad7e6624f09a3d5d06200d0ba2daf152f58c07a0935"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/framework/metrics/learncheck-L1-orca_moving-s3-actors.json",
+      "bytes": 63451,
+      "sha256": "14b5f9e8fd0d1dfb33956680da98a9eb980f9d25c81e5ce3c988e73751b98907"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/framework/metrics/learncheck-L1-orca_moving-s3-cluster-result.json",
+      "bytes": 6213,
+      "sha256": "f9a9d80cddd0d5b4593a421cfb299ffd6cb4fa599e095479394dfd266f4d389f"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/framework/metrics/learncheck-L1-orca_moving-s3-smoke-actors.json",
+      "bytes": 63367,
+      "sha256": "a7c4591e397f4a5ab1a608b4d43548ad3b5f5b9bea3fc5bbe6a74e9b59d5c6c1"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/framework/metrics/learncheck-L1-orca_moving-s3-smoke-cluster-result.json",
+      "bytes": 6226,
+      "sha256": "3bfe40e13cade2af47a6bcc8d2dd01dfef6a4777678991d44d654cc3159d3caa"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/guard.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/pipeline.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collected/learner/registration.json",
+      "bytes": 34487,
+      "sha256": "249030697aa3caedd9cda0dcdb43853d5bff659f64e3a0b3e7b469cabe3eb2e1"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/collection-receipt.json",
+      "bytes": 1770,
+      "sha256": "18ddd4b0eaf93eeae4a2a673e380792502284713229c19d654672ca806002c38"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/deployment-actor-a.json",
+      "bytes": 170,
+      "sha256": "5827979ec60c1ab838f22b7236ea37c8b601b8d8be33858916f73cf73d17b08c"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/deployment-actor-b.json",
+      "bytes": 169,
+      "sha256": "d5eddc090317eb334d8114e860658cef7b4a8590908d3424179303667703b9c0"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/deployment-actor-c.json",
+      "bytes": 170,
+      "sha256": "b3dbe3603577fac645b720664a71690f820100cf65bb0617f7fde77ae9e1fc28"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/deployment-actor-d.json",
+      "bytes": 170,
+      "sha256": "39d7d2ad00d5230b14a0c285587c92d66ad5f759cfe4828805ce603ccba57fc8"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/deployment-learner.json",
+      "bytes": 169,
+      "sha256": "d63a3b87e0b3bc7978c64925585d6bd92c70a5204e5907ad5a5e35a2cc514e87"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/final-results.json",
+      "bytes": 3126,
+      "sha256": "03a3ee52f7dd5bb26ceea06266cfe091d18b193543e7a6ff09eec3cb561db39c"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/first-explosion-optimizer-join.json",
+      "bytes": 10210,
+      "sha256": "3f217c866cffe4bdaf12881d03da96da6fee41b584bdd2255af42196dc2ac56a"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/forensics-actor-a.json",
+      "bytes": 86040,
+      "sha256": "d2efcfd6814522f3ccec2474930e2771b22c9f312b8bc482a77adaee1b80ad60"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/forensics-actor-b.json",
+      "bytes": 96963,
+      "sha256": "55360bbabbc208c26e863886cd1aca19f2c3055ac743ca93bc62943c3e330d68"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/forensics-actor-c.json",
+      "bytes": 75188,
+      "sha256": "57ac02ac07a491d5bad7395e24f64cdd74c906e8c6cf4bd7f4487dc7e42dc4ae"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/forensics-actor-d.json",
+      "bytes": 107556,
+      "sha256": "1aa8481836f452bd45811b3a3f0f52882cd9c8b8fe79bda8ac6a4ada539379df"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/forensics-compact.json",
+      "bytes": 14561,
+      "sha256": "d9b4456e481a0a281c7296ec5e5e4316f5ae3af5203b6b20571c180ebf7d36cd"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/forensics-learner.json",
+      "bytes": 68,
+      "sha256": "c6e99ea1487f69586e0e3d6ffff9d52bcbcb8e6ffb5459927b7924c133101b75"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/guard-actor-a.json",
+      "bytes": 227,
+      "sha256": "724a73acd1d69ccd5b9df6c937a40f826ea72cc1bd35725194c9fe8c515c4c9d"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/guard-actor-b.json",
+      "bytes": 229,
+      "sha256": "b5fd6b4879ac8d4653c4f27aabe8e873149b2c98999b1af5672f34f97c8fd4ba"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/guard-actor-c.json",
+      "bytes": 228,
+      "sha256": "4f0ff8ae4e2840482206fb7c5fac1685149524a7b8152e0f2d085c01c9f09a57"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/guard-actor-d.json",
+      "bytes": 229,
+      "sha256": "8b7a1353a94dffce8afa5f34bdf2eae88bbc64dd0527334aec27231a7dbfdd78"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/guard-learner.json",
+      "bytes": 229,
+      "sha256": "ca5697408963ddc0670633bbec5031c107d0fcc68d32ad4cb97e2e82a8270ce9"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/pipeline-launch.json",
+      "bytes": 169,
+      "sha256": "8bfdbcc9f4e55246ad0977ba331b6c66b5de7f453a4779197e9b4f12337f35d1"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/prior-ss-audit.json",
+      "bytes": 2691,
+      "sha256": "b7633ba7cce71706dcf00cd0c8ef9a789605dc7b57c75689c596be33239bd6ba"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/provenance.json",
+      "bytes": 6488,
+      "sha256": "8f9879431d38344bc2b07f2725abb842e6345f5fe6e391dca7061250056b6797"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/publication-provenance.json",
+      "bytes": 55418,
+      "sha256": "0f60822f96d2f78c30814aaf2afc0ea55cd036f4ee1af91cc52b430eeb0aa40a"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/publication-validation.json",
+      "bytes": 2105,
+      "sha256": "bb049b2d69e6b11f41f9079702343aed9d0006c60838ad5dad0b282b704e3be8"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/registration.json",
+      "bytes": 34487,
+      "sha256": "249030697aa3caedd9cda0dcdb43853d5bff659f64e3a0b3e7b469cabe3eb2e1"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/rtt-proxy-recheck.json",
+      "bytes": 74304,
+      "sha256": "2e9b0d0e33298d628bbebfdaf1a0703887c226e5bd0a52135a32dba543d4d371"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/rtt-recheck-actor-a.json",
+      "bytes": 9472,
+      "sha256": "ad8ac32d58b455a63f6e6157150b85a67924e0df5656742b0bffe11cb180b104"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/rtt-recheck-actor-b.json",
+      "bytes": 9338,
+      "sha256": "2627b51816a18bca15af6f61dd70d6bc8c778e3695ecf37a53d4a4fe9b218f46"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/rtt-recheck-actor-c.json",
+      "bytes": 12549,
+      "sha256": "54efa26fe09fad446018773a457264119499eb8bd5292b7a784f486d484202ba"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/rtt-recheck-actor-d.json",
+      "bytes": 11049,
+      "sha256": "222535a9fd59f7042c4b36bc096d6b08e599129bc4fe7b292dd06d104b8a49c7"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/rtt-recheck-learner.json",
+      "bytes": 14098,
+      "sha256": "9e99e696f2e436e0080a8fce261dc23512e8ec85b3c026126b964359afe02e8c"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/source-manifest.json",
+      "bytes": 5010,
+      "sha256": "189333ba69945bebbc1dafb292f224b9aeef4790c2bb66cc8d2266ee28fffd00"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/tf-postmortem-command.json",
+      "bytes": 56358,
+      "sha256": "395ad610acc1d4e4c6fef30a219449fe0f3227045422ca3f2ca93dcf59d46e1f"
+    },
+    {
+      "path": "evidence/scalar-limited-learning-20261027/tf-postmortem.json",
+      "bytes": 63933,
+      "sha256": "8ada9f93119a4ed9a231555c700b76d040d2270cd2107bf06b9ab644c1925b4e"
+    },
+    {
       "path": "evidence/v38-followup/results.json",
       "bytes": 9926,
       "sha256": "d786809361266b68c91fa85e015b99884d41f18b7c6cefad78f6ba43f2ed4a0e"
@@ -4218,8 +5108,8 @@
     },
     {
       "path": "frameworks/canopy_single/cluster_control.py",
-      "bytes": 8963,
-      "sha256": "339e550df9167b999f4b2f874e4284c66b39d564bb8c9da8950f4373bdc3670c"
+      "bytes": 9296,
+      "sha256": "6b111ed12a7f141883adeb546fea6c376fefe42f7a3700054f9b15bbc2799048"
     },
     {
       "path": "frameworks/canopy_single/consistent_target_bn.py",
@@ -4308,8 +5198,8 @@
     },
     {
       "path": "frameworks/canopy_single/node_control.py",
-      "bytes": 11762,
-      "sha256": "039ccbe7c87e8a1a8688135b2e0dc52f636ab0c5f674bb5549c191134094206c"
+      "bytes": 13120,
+      "sha256": "dccd468d53fa81c723606f523bda6c3dd9a2bf801bda79f6ac57eb2309d9fc09"
     },
     {
       "path": "frameworks/canopy_single/orca_backend.py",
@@ -8591,8 +9481,58 @@
     },
     {
       "path": "tools/scalar_ipc_diagnostic/window_binding.py",
-      "bytes": 13520,
-      "sha256": "d62e8009eaafa6be9559cec80eb1f8dec6ab433ac20f67dae2e75e7e9f3892d3"
+      "bytes": 16011,
+      "sha256": "11fcaa256f5480c4d064a836fbe7da2f044ea876f3d8fca1ab4822e6db2134e3"
+    },
+    {
+      "path": "tools/scalar_learning_check/README.md",
+      "bytes": 3642,
+      "sha256": "0b24a50ad7ab7dc3397fc322c961d5f9b9ab056c4c4f2f6c169774fd795f26ce"
+    },
+    {
+      "path": "tools/scalar_learning_check/adjudicate_learning.py",
+      "bytes": 11312,
+      "sha256": "84b5f7d8c7008d97bd8f3f84a443cfcca2d564c6bb106cac71ebae278fb0d003"
+    },
+    {
+      "path": "tools/scalar_learning_check/learning_monitor.py",
+      "bytes": 11881,
+      "sha256": "2da75fa5d01b738107d81cc9f9c398f0a8603083ce8ca46c6d0a91d775bcb7ac"
+    },
+    {
+      "path": "tools/scalar_learning_check/make_learning_registration.py",
+      "bytes": 8849,
+      "sha256": "19abc2a9a2893e8f4b033524c51a85d952ed9ee502bad56d7f7075f528409dba"
+    },
+    {
+      "path": "tools/scalar_learning_check/runtime/eval_worker.py",
+      "bytes": 2897,
+      "sha256": "1b5cf4e1baaa25d1fafdf99c1a52138a278272e25e0076e4fb9199e34f3e95b1"
+    },
+    {
+      "path": "tools/scalar_learning_check/runtime/export_actor.py",
+      "bytes": 1612,
+      "sha256": "016e0d732b83dee3373fd59981d4dd54d137a20bc478392d9c5abfff00d95e41"
+    },
+    {
+      "path": "tools/scalar_learning_check/runtime/guard_agent.py",
+      "bytes": 5211,
+      "sha256": "10d951062f1233393c335b50040c9d8ec4f45e35ec8b10d6239f264837be09eb"
+    },
+    {
+      "path": "tools/scalar_learning_check/runtime/limited_evaluate.py",
+      "bytes": 1463,
+      "sha256": "9829e0a9d1991592606770c8b4d88f407eceeb266c3f47c6671754ca0d5e30fc"
+    },
+    {
+      "path": "tools/scalar_learning_check/runtime/pipeline.py",
+      "bytes": 10390,
+      "sha256": "c2b0a5f4d25befe6a62b9407e5eae66059efae6a3446c4bf6d08d75015941636"
+    },
+    {
+      "path": "tools/scalar_learning_check/runtime/tf_postmortem.py",
+      "bytes": 4860,
+      "sha256": "7a874b0cd14cba211194735f44ee99b9280dc4c9be0b4718cdf8eb2911530a05"
     },
     {
       "path": "tools/scalar_research.py",
@@ -8603,6 +9543,11 @@
       "path": "tools/test_exploration_check.py",
       "bytes": 6166,
       "sha256": "d9e406be7f9c18a52f50881bd4c29c7c4100e01ea163ea8cf1298b8bf27d3b86"
+    },
+    {
+      "path": "tools/test_learning_check.py",
+      "bytes": 3673,
+      "sha256": "f68ababa5de88fd9fe9a52869ef0337655e5efac4b8b3f226a149d1f0e08d41f"
     },
     {
       "path": "tools/test_scalar_exploration.py",

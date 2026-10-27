@@ -1,3 +1,36 @@
+# 最新实测：L1有限学习触发安全停止（2026-10-27）
+
+**仍为PARTIAL、长训NO-GO。** 本轮实际训练的是单动作Orca（70维状态、一个窗口动作、固定20ms），不是双动作固定MTP模型。原baseline、V14、健康149维V31与51个选定模型未修改。
+
+| 阶段 | 实际结果 |
+|---|---|
+| 24 actor零优化检查 | 45,207条真实经验、0优化；96变量前后相同；最大观测/请求窗口2,897 |
+| 正式有限学习 | 原计划120万条；28,513条时因S3百万窗口安全停止；14 actor触发，未完成预算 |
+| 更新账本 | critic完整迭代1,622；critic优化器操作3,244；actor/target各1,622；最终欠额0 |
+| 110次冻结评测 | 全部NOT_RUN，不能报告本轮性能或CPU收益 |
+| IPC与收尾 | 147,584接收帧逐payload/CRC一致、拒绝0；五机进程/归属IPC0、sysctl恢复、保护模型未变 |
+
+输入初始化与smoke完整96变量一致。正式学习使用已验证的verified IPC、小幅输出初始化、zero_sum(rho0)、临时64MiB缓冲；奖励、架构、窗口映射、立即接管与每actor单连接沿历史moving模板。没有修改双动作语义。
+
+新的证据把问题收紧到更新阶段：在线无噪声输出迅速趋近+1、继而爆窗，累计探索峰仍只有0.575。按已记录跨机wallclock，首条百万窗口出现在首次完整更新约0.400秒后、约64次更新时；跨机时钟误差尚未量化，不能将其当严格时延测量。critic方向、BN、权重变化与开闸时积累额度的因果贡献仍需分解。
+
+**最终checkpoint不是首次危险策略的快照。** 停止环境后仍排空更新额度，最终step28513在384个相同真实replay输入上的输出均值为-0.963，70.1%达到|pi|>=.95；不能用最终负动作否定在线正饱和。交换初始/最终BN统计的分析是模型敏感性，不是真实网络反事实，也未证明BN完全无关。
+
+另对36条旧run复核新RTT窗口代理：20个zero_sum均>=0.863，但4个高RTT iid仅2个<0.5，Claude预测部分失败；原binding门槛失败仍保留，不能事后换指标宣布通过。
+
+下一步先做零TCP的最初约100次更新复现，核对critic方向、actor/BN变化和延迟开闸的更新突发，再只改变一个变量做匹配验证。**这项复现尚未完成；没有自动重训、开双动作或放宽安全门槛。**
+
+审阅入口：
+
+- [预注册方案与实际失败修正](SCALAR_LIMITED_LEARNING_PLAN.md)、[实际注册JSON](../evidence/scalar-limited-learning-20261027/registration.json)。
+- [机器可读结论](../evidence/scalar-limited-learning-20261027/final-results.json)、[48条actor连接结果CSV](../evidence/scalar-limited-learning-20261027/actor-outcomes.csv)、[首次爆窗与更新时刻](../evidence/scalar-limited-learning-20261027/first-explosion-optimizer-join.json)。
+- [真实TF检查/同输入BN敏感性](../evidence/scalar-limited-learning-20261027/tf-postmortem.json)、[五机收尾](../evidence/scalar-limited-learning-20261027/collection-receipt.json)、[源码与发布来源](../evidence/scalar-limited-learning-20261027/publication-provenance.json)。
+- [执行/分析工具说明](../tools/scalar_learning_check/README.md)。实际新模型、replay和原始日志留实验存储；Git保存小证据与校验，不把路径当成模型交付。
+
+后文均为历史阶段，尤其“基座尚未重训”已被本节的有限训练失败取代。用户已授权后续每轮Claude方案相关实验有新结果时，在完成核验后主动同步GitHub；这不授权自动追加实验。
+
+---
+
 # 后续实测：累计探索修正通过，基座尚未重训（2026-10-27）
 
 五机32次同日配对零优化检查：zero_sum16/16通过窗口门槛，iid有2次百万窗口/8次持续时间失败；12组配对丢包均下降。独立12次CUBIC缓冲干预支持端主机限制影响评测；4次大缓冲zero_sum也过窗口门槛，但约束比例0.5预测未过，排队仍高。原设置已恢复、五机空闲、51保护文件未变。没有新增合格Orca/Canopy模型、没有双动作/CPU突破、没有长训。

@@ -1,0 +1,42 @@
+{
+  "tools": {
+    "status": "PASS",
+    "output": "........................................................................\r\n----------------------------------------------------------------------\r\nRan 72 tests in 1.441s\r\n\r\nOK\r\n"
+  },
+  "e2_handover": {
+    "status": "PASS",
+    "output": ".....\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.104s\r\n\r\nOK\r\n"
+  },
+  "scalar_audit": {
+    "status": "PASS",
+    "output": ".......\r\n----------------------------------------------------------------------\r\nRan 7 tests in 0.085s\r\n\r\nOK\r\n"
+  },
+  "status": "PASS_PUBLICATION_CHECKS",
+  "python36_syntax": {
+    "status": "PASS",
+    "files": [
+      "frameworks/canopy_single/cluster_control.py",
+      "frameworks/canopy_single/node_control.py",
+      "tools/scalar_ipc_diagnostic/window_binding.py",
+      "tools/scalar_learning_check/adjudicate_learning.py",
+      "tools/scalar_learning_check/learning_monitor.py",
+      "tools/scalar_learning_check/make_learning_registration.py",
+      "tools/scalar_learning_check/runtime/eval_worker.py",
+      "tools/scalar_learning_check/runtime/export_actor.py",
+      "tools/scalar_learning_check/runtime/guard_agent.py",
+      "tools/scalar_learning_check/runtime/limited_evaluate.py",
+      "tools/scalar_learning_check/runtime/pipeline.py",
+      "tools/scalar_learning_check/runtime/tf_postmortem.py",
+      "tools/test_learning_check.py"
+    ]
+  },
+  "credential_and_infrastructure_scan": "PASS",
+  "numeric_evidence": "168 JSON objects exactly equal to infrastructure-redacted research objects;48 actor outcomes derived without rounding; native/model hashes retained.",
+  "original_tag_object": "51b5ba5144c69690fa8fc30410ec628b822dd3dd",
+  "original_snapshot_commit": "85baf09b6f43a9f3223f7a8eaa1a4321b1a11b3b",
+  "original_selected_models": 51,
+  "test_scope": "84 local fixture tests; no new TCP or TF. Historical real TF/TCP proofs are supplied separately. Frozen evaluations/export were NOT_RUN.",
+  "publication_cloud_connections": 0,
+  "new_TCP_runs": 0,
+  "new_training_runs": 0
+}

@@ -17,6 +17,14 @@ Window binding (kernel 4.13 rules, approximated from the per-decision snapshots)
               not proof of socket cause or absence of kernel cwnd validation.
   in-flight   packets_out*mss.  The same ceiling at different capacities indicates an
               end-host buffer cap rather than a policy choice.
+  binding_rtt packets_out >= 0.9*min(cwnd over the trailing max(2, ceil(2*srtt/dt)) decisions).
+              Per-step multiplicative jitter (zero_sum exploration) moves cwnd every 20 ms
+              while in-flight follows only within about an RTT, so the snapshot proxy above
+              settles near 0.45 at RTT 200 ms even for an uncapped flow.  This variant asks
+              whether the window bounded sending over the last RTTs; it stays near 0 when
+              cwnd is persistently far above in-flight (end-host cap).
+  ss_mode     cwnd < ssthresh: the kernel adds one packet per ACK between RL writes
+              (about x2 per RTT), so holding the window needs a negative action.
 
 Command decomposition (ln units, sums over the run)
   command_log_growth          sum ln(cwnd_requested/cwnd_before) over bound native commands
@@ -81,25 +89,44 @@ def _summary(rows, binding_ratio):
 
     inflight = [s['packets_out'] * s['mss'] for _, _, s in rows]
     ratio = [s['cwnd'] / max(s['packets_out'], 1.0) for _, _, s in rows]
+    to_ssthresh = [s['cwnd'] / max(s['ssthresh'], 1.0) for _, _, s in rows if s['ssthresh'] < INFINITE_SSTHRESH]
     return dict(
         decisions=len(rows), seconds=total,
         binding_fraction=frac(lambda s: s['packets_out'] >= binding_ratio * s['cwnd']),
+        binding_rtt_fraction=frac(lambda s: s['packets_out'] >= binding_ratio * s['_cwnd_rtt_min']),
         unanchored_fraction=frac(lambda s: s['cwnd'] > 2.0 * max(s['max_packets_out'], s['packets_out'], 1.0)),
         slow_start_growth_eligible_fraction=frac(lambda s: s['cwnd'] < s['ssthresh'] and s['cwnd'] < 2.0 * s['max_packets_out']),
+        ss_mode_fraction=frac(lambda s: s['cwnd'] < s['ssthresh']),
         infinite_ssthresh_fraction=frac(lambda s: s['ssthresh'] >= INFINITE_SSTHRESH),
+        cwnd_over_ssthresh_p50=_quantile(to_ssthresh, .5),
         inflight_bytes_p50=_quantile(inflight, .5), inflight_bytes_p95=_quantile(inflight, .95),
         inflight_bytes_max=max(inflight), cwnd_max=max(s['cwnd'] for _, _, s in rows),
         cwnd_over_packets_out_p50=_quantile(ratio, .5), cwnd_over_packets_out_p95=_quantile(ratio, .95))
 
 
+def _annotate_rtt_min(states, rtt_multiple=2.0):
+    """Attach the trailing min cwnd over about rtt_multiple sRTTs (at least 2 decisions) to each state."""
+    from collections import deque
+    window, elapsed = deque(), 0.0
+    for s in states:
+        dt = max(s['time_delta'], 1e-6)
+        elapsed += dt
+        window.append((elapsed, s['cwnd']))
+        horizon = max(rtt_multiple * s['srtt_ms'] / 1000.0, 0.0)
+        while len(window) > 2 and elapsed - window[1][0] >= horizon:
+            window.popleft()
+        s['_cwnd_rtt_min'] = min(c for _, c in window)
+
+
 def binding_metrics(states, trim_s=10.0, binding_ratio=0.9):
+    _annotate_rtt_min(states)
     t, rows = 0.0, []
     for s in states:
         dt = max(s['time_delta'], 0.0)
         t += dt
         rows.append((t, dt, s))
     return dict(full=_summary(rows, binding_ratio), trim10=_summary([r for r in rows if r[0] > trim_s], binding_ratio),
-                binding_ratio=binding_ratio, trim_s=trim_s)
+                binding_ratio=binding_ratio, trim_s=trim_s, rtt_window='trailing max(2 decisions, 2*srtt)')
 
 
 def command_decomposition(folder, states=None):
@@ -232,8 +259,18 @@ def self_test(tmp):
     assert b2['binding_fraction'] == 1.0 and b2['unanchored_fraction'] == 0.0, b2
     assert d2['max_abs_cumulative_exploration'] < 0.75, d2      # about 5 sigma_o for sigma=.2, rho=0
     assert d['max_abs_cumulative_exploration'] > 2.0, d          # the iid walk on the same length
+    assert b['binding_rtt_fraction'] == 0.0 and b['ss_mode_fraction'] == 1.0, b
+    assert b2['binding_rtt_fraction'] == 1.0 and b2['ss_mode_fraction'] == 0.0, b2
+    # Uncapped long-RTT flow with per-step window jitter: in-flight follows the recent median with lag.
+    jr = np.random.RandomState(5)
+    jitter = [1500.0 * 4 ** (0.2 / math.sqrt(2) * jr.randn()) for _ in range(n)]
+    lagged = [0.87 * sorted(jitter[max(0, i - 10):i] or [jitter[0]])[len(jitter[max(0, i - 10):i] or [0]) // 2] for i in range(n)]
+    _write_run(root / 'jitter', jitter, lagged, lagged, [900.0] * n, zs, pi)
+    b3 = analyze(root / 'jitter')['binding']['trim10']
+    assert b3['binding_fraction'] < 0.6 and b3['binding_rtt_fraction'] > 0.9 and b3['unanchored_fraction'] < 0.01, b3
     return dict(capped=dict(trim10=b, per_step=d['per_step'], max_abs_cumulative_exploration=d['max_abs_cumulative_exploration']),
-                binding=dict(trim10=b2, max_abs_cumulative_exploration=d2['max_abs_cumulative_exploration']))
+                binding=dict(trim10=b2, max_abs_cumulative_exploration=d2['max_abs_cumulative_exploration']),
+                jitter=dict(trim10=b3))
 
 
 def main():

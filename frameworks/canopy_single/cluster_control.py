@@ -56,6 +56,12 @@ def execute(cfg,duration=None):
     if entry['result'] and entry['result']['status']!='COMPLETED':raise RuntimeError('actor%d: %s'%(i,entry['result']['reason']))
     if not entry['alive'] and not entry['producer']:raise RuntimeError('actor%d died without producer record'%i)
    training=local['entries'][0]['training'];latest=training[-1] if training else {}
+   if cfg.get('limited_learning_guard'):
+    reports=[s.get('learning_monitor') for s in statuses]
+    safety=globals().get('limited_learning_guard')
+    assert safety is not None,'Explicit limited-learning safety hook required'
+    reason=safety(cfg,reports,latest)
+    if reason and not stop_reason:stop_reason=reason;stop(reason)
    if cfg.get('require_coverage_gate') and not (R/'logs'/run/'coverage-ready.json').exists():
     minimum=cfg.get('minimum_enqueued_per_actor',512)
     coverage={e['index']:e.get('ingress_progress',{}).get('enqueued',0) for e in entries}

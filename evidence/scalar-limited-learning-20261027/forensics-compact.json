@@ -1,0 +1,556 @@
+[
+  {
+    "host": "learner",
+    "rows": []
+  },
+  {
+    "host": "actor-a",
+    "rows": [
+      {
+        "index": 0,
+        "condition": "G12-R20-q2",
+        "smoke": true,
+        "max": 117,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.003101399866864085
+      },
+      {
+        "index": 1,
+        "condition": "G12-R50-q2",
+        "smoke": true,
+        "max": 219,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.0033748841378837824
+      },
+      {
+        "index": 2,
+        "condition": "G12-R100-q2",
+        "smoke": true,
+        "max": 528,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.00401667132973671
+      },
+      {
+        "index": 3,
+        "condition": "G12-R200-q2",
+        "smoke": true,
+        "max": 1236,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.003570468397811055
+      },
+      {
+        "index": 4,
+        "condition": "G24-R200-q2",
+        "smoke": true,
+        "max": 1683,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.004086721688508987
+      },
+      {
+        "index": 5,
+        "condition": "G24-R20-q2",
+        "smoke": true,
+        "max": 225,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.003634201129898429
+      },
+      {
+        "index": 0,
+        "condition": "G12-R20-q2",
+        "smoke": false,
+        "max": 11520,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": 0.999897837638855
+      },
+      {
+        "index": 1,
+        "condition": "G12-R50-q2",
+        "smoke": false,
+        "max": 201440,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": 1.0
+      },
+      {
+        "index": 2,
+        "condition": "G12-R100-q2",
+        "smoke": false,
+        "max": 2147483647,
+        "first_epoch": 1793107808.529749,
+        "prefix": {
+          "total_log_growth": 11.87457673371304,
+          "deterministic": 1.0925645539131537,
+          "exploration": -0.48438773556946363,
+          "rounding": -9.693027902285696,
+          "native_between": 20.95942781765507,
+          "reconstruction_error": -2.1316282072803006e-14
+        },
+        "last_pi": 1.0
+      },
+      {
+        "index": 3,
+        "condition": "G12-R200-q2",
+        "smoke": false,
+        "max": 2147483647,
+        "first_epoch": 1793107808.511752,
+        "prefix": {
+          "total_log_growth": 12.18251924742486,
+          "deterministic": 0.7405384435164701,
+          "exploration": -0.06499299686644644,
+          "rounding": -8.277715055353237,
+          "native_between": 19.784688856128078,
+          "reconstruction_error": -3.552713678800501e-15
+        },
+        "last_pi": 1.0
+      },
+      {
+        "index": 4,
+        "condition": "G24-R200-q2",
+        "smoke": false,
+        "max": 2147483647,
+        "first_epoch": 1793107808.512427,
+        "prefix": {
+          "total_log_growth": 12.101741902504767,
+          "deterministic": 1.204594881589636,
+          "exploration": -0.1946202764568299,
+          "rounding": -6.580508368008592,
+          "native_between": 17.67227566538054,
+          "reconstruction_error": 1.4210854715202004e-14
+        },
+        "last_pi": 1.0
+      },
+      {
+        "index": 5,
+        "condition": "G24-R20-q2",
+        "smoke": false,
+        "max": 5376,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": 0.9995097517967224
+      }
+    ]
+  },
+  {
+    "host": "actor-b",
+    "rows": [
+      {
+        "index": 10,
+        "condition": "G36-R20-q2",
+        "smoke": true,
+        "max": 367,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.005469000432640314
+      },
+      {
+        "index": 11,
+        "condition": "G36-R50-q2",
+        "smoke": true,
+        "max": 565,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.0069226897321641445
+      },
+      {
+        "index": 6,
+        "condition": "G24-R50-q2",
+        "smoke": true,
+        "max": 513,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.0042906710878014565
+      },
+      {
+        "index": 7,
+        "condition": "G24-R100-q2",
+        "smoke": true,
+        "max": 871,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.005203382112085819
+      },
+      {
+        "index": 8,
+        "condition": "G36-R100-q2",
+        "smoke": true,
+        "max": 854,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.0035954636987298727
+      },
+      {
+        "index": 9,
+        "condition": "G36-R200-q2",
+        "smoke": true,
+        "max": 2572,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.005280731245875359
+      },
+      {
+        "index": 10,
+        "condition": "G36-R20-q2",
+        "smoke": false,
+        "max": 62016,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": 1.0
+      },
+      {
+        "index": 11,
+        "condition": "G36-R50-q2",
+        "smoke": false,
+        "max": 1190912,
+        "first_epoch": 1793107808.518398,
+        "prefix": {
+          "total_log_growth": 11.217641235878336,
+          "deterministic": 4.184460779575868,
+          "exploration": -0.2887774638269077,
+          "rounding": -5.765219295614836,
+          "native_between": 13.0871772157442,
+          "reconstruction_error": 1.2434497875801753e-14
+        },
+        "last_pi": 0.9918983578681946
+      },
+      {
+        "index": 6,
+        "condition": "G24-R50-q2",
+        "smoke": false,
+        "max": 78920,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": 0.9999983310699463
+      },
+      {
+        "index": 7,
+        "condition": "G24-R100-q2",
+        "smoke": false,
+        "max": 2147483647,
+        "first_epoch": 1793107808.503992,
+        "prefix": {
+          "total_log_growth": 11.075582617964042,
+          "deterministic": -0.35430720458432274,
+          "exploration": -0.09811089343371734,
+          "rounding": -8.958065619534441,
+          "native_between": 20.486066335516544,
+          "reconstruction_error": -2.1316282072803006e-14
+        },
+        "last_pi": 1.0
+      },
+      {
+        "index": 8,
+        "condition": "G36-R100-q2",
+        "smoke": false,
+        "max": 1935998976,
+        "first_epoch": 1793107808.494593,
+        "prefix": {
+          "total_log_growth": 11.967510841487583,
+          "deterministic": 0.4039535706370341,
+          "exploration": -0.25335970983256056,
+          "rounding": -7.762158708146222,
+          "native_between": 19.579075688829327,
+          "reconstruction_error": 3.552713678800501e-15
+        },
+        "last_pi": 1.0
+      },
+      {
+        "index": 9,
+        "condition": "G36-R200-q2",
+        "smoke": false,
+        "max": 2147483647,
+        "first_epoch": 1793107808.491748,
+        "prefix": {
+          "total_log_growth": 10.916198852290217,
+          "deterministic": -0.6042503432175883,
+          "exploration": -0.2223808345287713,
+          "rounding": -6.468887715489481,
+          "native_between": 18.211717745526066,
+          "reconstruction_error": -1.0658141036401503e-14
+        },
+        "last_pi": 1.0
+      }
+    ]
+  },
+  {
+    "host": "actor-c",
+    "rows": [
+      {
+        "index": 12,
+        "condition": "G42-R50-q2",
+        "smoke": true,
+        "max": 608,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.0049173892475664616
+      },
+      {
+        "index": 13,
+        "condition": "G42-R100-q2",
+        "smoke": true,
+        "max": 698,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.00194975221529603
+      },
+      {
+        "index": 14,
+        "condition": "G42-R200-q2",
+        "smoke": true,
+        "max": 1769,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.0032660136930644512
+      },
+      {
+        "index": 15,
+        "condition": "G42-R20-q2",
+        "smoke": true,
+        "max": 363,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.00140460638795048
+      },
+      {
+        "index": 16,
+        "condition": "G48-R20-q2",
+        "smoke": true,
+        "max": 466,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.0037540800403803587
+      },
+      {
+        "index": 17,
+        "condition": "G48-R50-q2",
+        "smoke": true,
+        "max": 927,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.0037491843104362488
+      },
+      {
+        "index": 12,
+        "condition": "G42-R50-q2",
+        "smoke": false,
+        "max": 382360,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": 1.0
+      },
+      {
+        "index": 13,
+        "condition": "G42-R100-q2",
+        "smoke": false,
+        "max": 690043904,
+        "first_epoch": 1793107808.520154,
+        "prefix": {
+          "total_log_growth": 11.97387499398107,
+          "deterministic": 1.9146743478408885,
+          "exploration": -0.29719663703972105,
+          "rounding": -9.003062254906384,
+          "native_between": 19.35945953808626,
+          "reconstruction_error": 2.842170943040401e-14
+        },
+        "last_pi": 0.9999982118606567
+      },
+      {
+        "index": 14,
+        "condition": "G42-R200-q2",
+        "smoke": false,
+        "max": 1211282016,
+        "first_epoch": 1793107808.496333,
+        "prefix": {
+          "total_log_growth": 11.591073835140218,
+          "deterministic": -1.869794383060166,
+          "exploration": -0.06544071607683934,
+          "rounding": -7.650497878268148,
+          "native_between": 21.176806812545358,
+          "reconstruction_error": 1.4210854715202004e-14
+        },
+        "last_pi": 0.9999901056289673
+      },
+      {
+        "index": 15,
+        "condition": "G42-R20-q2",
+        "smoke": false,
+        "max": 9272,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": 0.9999023675918579
+      },
+      {
+        "index": 16,
+        "condition": "G48-R20-q2",
+        "smoke": false,
+        "max": 3140,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": 0.9959182739257812
+      },
+      {
+        "index": 17,
+        "condition": "G48-R50-q2",
+        "smoke": false,
+        "max": 926912,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": 0.9999248385429382
+      }
+    ]
+  },
+  {
+    "host": "actor-d",
+    "rows": [
+      {
+        "index": 18,
+        "condition": "G48-R100-q2",
+        "smoke": true,
+        "max": 2897,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.004588155075907707
+      },
+      {
+        "index": 19,
+        "condition": "G48-R200-q2",
+        "smoke": true,
+        "max": 1397,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.0027530023362487555
+      },
+      {
+        "index": 20,
+        "condition": "G72-R200-q2",
+        "smoke": true,
+        "max": 2590,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.002181065734475851
+      },
+      {
+        "index": 21,
+        "condition": "G72-R20-q2",
+        "smoke": true,
+        "max": 576,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": 0.001677099266089499
+      },
+      {
+        "index": 22,
+        "condition": "G72-R50-q2",
+        "smoke": true,
+        "max": 1261,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.0035489038564264774
+      },
+      {
+        "index": 23,
+        "condition": "G72-R100-q2",
+        "smoke": true,
+        "max": 848,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": -0.0013790883822366595
+      },
+      {
+        "index": 18,
+        "condition": "G48-R100-q2",
+        "smoke": false,
+        "max": 2147483647,
+        "first_epoch": 1793107808.524309,
+        "prefix": {
+          "total_log_growth": 12.093486084780608,
+          "deterministic": -0.15032547731268853,
+          "exploration": -0.13934244887731814,
+          "rounding": -8.683263826946146,
+          "native_between": 21.06641783791678,
+          "reconstruction_error": -2.1316282072803006e-14
+        },
+        "last_pi": 0.9999998211860657
+      },
+      {
+        "index": 19,
+        "condition": "G48-R200-q2",
+        "smoke": false,
+        "max": 2147483647,
+        "first_epoch": 1793107808.507917,
+        "prefix": {
+          "total_log_growth": 12.275412123608787,
+          "deterministic": -1.1896136580880814,
+          "exploration": -0.116113385912768,
+          "rounding": -7.590189529666932,
+          "native_between": 21.17132869727654,
+          "reconstruction_error": 2.842170943040401e-14
+        },
+        "last_pi": 1.0
+      },
+      {
+        "index": 20,
+        "condition": "G72-R200-q2",
+        "smoke": false,
+        "max": 2147483647,
+        "first_epoch": 1793107808.504312,
+        "prefix": {
+          "total_log_growth": 12.028986360753553,
+          "deterministic": -0.6089060672872066,
+          "exploration": -0.19808611572129708,
+          "rounding": -6.721038711992287,
+          "native_between": 19.557017255754328,
+          "reconstruction_error": 1.7763568394002505e-14
+        },
+        "last_pi": 1.0
+      },
+      {
+        "index": 21,
+        "condition": "G72-R20-q2",
+        "smoke": false,
+        "max": 26236,
+        "first_epoch": null,
+        "prefix": null,
+        "last_pi": 1.0
+      },
+      {
+        "index": 22,
+        "condition": "G72-R50-q2",
+        "smoke": false,
+        "max": 20884928,
+        "first_epoch": 1793107808.822698,
+        "prefix": {
+          "total_log_growth": 11.309360863977584,
+          "deterministic": 24.138499598494434,
+          "exploration": -0.41964405808163796,
+          "rounding": -7.84689547038742,
+          "native_between": -4.56259920604779,
+          "reconstruction_error": -2.6645352591003757e-15
+        },
+        "last_pi": 0.9999988675117493
+      },
+      {
+        "index": 23,
+        "condition": "G72-R100-q2",
+        "smoke": false,
+        "max": 2147483647,
+        "first_epoch": 1793107808.506149,
+        "prefix": {
+          "total_log_growth": 11.892325819533044,
+          "deterministic": 3.3841057335330316,
+          "exploration": -0.026014686421092094,
+          "rounding": -5.027492236485708,
+          "native_between": 13.561727008906812,
+          "reconstruction_error": 0.0
+        },
+        "last_pi": 0.999991774559021
+      }
+    ]
+  }
+]

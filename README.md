@@ -2,7 +2,9 @@
 
 本仓库保存三个原始交付实现、选定模型、训练/评测框架，以及后续基线与双动作研究的代码和证据。**截至2026-10-27，研究仍为PARTIAL：新的Orca基座未通过多场景验收，Canopy正式训练中途按用户要求暂停，双动作模型尚未证明稳定的性能—CPU优势。**
 
-最新审阅入口是[研究交接](docs/RESEARCH_REVIEW_BRIEF.md)。 最新实测为[累计探索修正与缓冲对照](docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md)：zero_sum的16次零优化检查全部通过窗口门槛，原iid有2次百万窗口；12次CUBIC缓冲对照和4次大缓冲复核保留全部结果及未通过预测。[58条有效连接的116个完整/trim10窗口](evidence/scalar-exploration-20261027/all-network-windows.csv)可复算；基座尚未重训，没有论文级性能或CPU收益结论。 最新完成[双向IPC与初始化诊断](tools/scalar_ipc_diagnostic/README.md)：IPC一致性通过，但小幅初始化仍有2/16次百万窗口、7/16次持续时间门槛失败，长训仍为NO-GO；[全部32次结果与64个统计窗口](evidence/scalar-ipc-init-20261027/evaluation-runs.csv)保留。 2026-10-27新增[E2接管诊断代码](tools/e2_handover/README.md)及[全部72次冻结结果](evidence/e2-handover-20261027/e2-results.csv)：接管预启动显著改善四个弱场景，但正常场景和尾延迟守门失败，不能作为已修好的基线。另保留训练优化前异常大窗与一条异常遥测证据。新增内容包括健康149维V31兼容初始化与actor冻结门控、独立critic Adam、单动作Orca/Canopy研究框架、正常CUBIC启动修正、区间RTT奖励离线诊断，以及只读checkpoint方向审计。原始快照tag `consolidated-20261018` 和51个选定模型文件保持不变；新增源码不意味着新增合格模型，也不代表完整复现论文。
+最新审阅入口是[研究交接](docs/RESEARCH_REVIEW_BRIEF.md)。最新[Orca单动作有限学习L1](docs/SCALAR_LIMITED_LEARNING_PLAN.md)在24 actor零优化检查通过后，28,513条真实经验时因百万窗口安全停止；14 actor触发，原计划110次冻结评测全部NOT_RUN。没有新增合格基座或双动作性能—CPU收益。[48条actor连接结果](evidence/scalar-limited-learning-20261027/actor-outcomes.csv)、[机器可读结论](evidence/scalar-limited-learning-20261027/final-results.json)及[TF/BN同输入诊断](evidence/scalar-limited-learning-20261027/tf-postmortem.json)完整保留失败。最终checkpoint在排空更新后偏负，不能代替在线正饱和时的策略快照。
+
+此前[累计探索/缓冲诊断](docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md)、[双向IPC/初始化诊断](tools/scalar_ipc_diagnostic/README.md)、[E2接管诊断](tools/e2_handover/README.md)保留全部结果。原始快照tag `consolidated-20261018` 和51个选定模型文件未变；归档源码不意味着论文复现或新模型合格。
 
 | 入口名称 | 选定实现 | 状态/动作 | 观测周期 | RL窗口动作执行周期 | 详细说明 |
 |---|---|---|---|---|---|
