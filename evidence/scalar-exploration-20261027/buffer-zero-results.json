@@ -1,0 +1,1303 @@
+[
+  {
+    "status.json": {
+      "status": "COMPLETE",
+      "runs": 2,
+      "epoch": 1793101782.5513415
+    },
+    "restored.json": {
+      "status": "PASS",
+      "values": {
+        "net.ipv4.tcp_wmem": [
+          "4096",
+          "32768",
+          "4194304"
+        ],
+        "net.ipv4.tcp_rmem": [
+          "4096",
+          "87380",
+          "6291456"
+        ],
+        "net.core.wmem_max": [
+          "212992"
+        ],
+        "net.core.rmem_max": [
+          "212992"
+        ]
+      },
+      "epoch": 1793101782.568149
+    },
+    "original.json": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "active-sysctls.json": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "67108864"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "67108864"
+      ],
+      "net.core.wmem_max": [
+        "67108864"
+      ],
+      "net.core.rmem_max": [
+        "67108864"
+      ]
+    },
+    "results.json": [
+      {
+        "run_id": "explorecheck-buffer64-G48-R200-q2-s4-zero_sum",
+        "mode": "small_uniform",
+        "seed": 4,
+        "condition": "G48-R200-q2",
+        "physical_exposure_s": 60.06546699999995,
+        "transitions": 2746,
+        "optimizer_counters": {
+          "critic_iterations": 0,
+          "critic_optimizer_ops": 0,
+          "actor_updates": 0,
+          "target_updates": 0
+        },
+        "observed_max_cwnd": 3269.0,
+        "requested_max_cwnd": 3269,
+        "bdp_packets": 797.8,
+        "queue_packets": 1600,
+        "registered_window_bound": 9591.2,
+        "boundary_weighted_seconds_above_bound": 0,
+        "boundary_weighted_fraction_above_bound": 0.0,
+        "low_window_fraction": 0.0,
+        "deterministic_action_mean": 0.0035299759271725244,
+        "deterministic_action_min": -0.0054116034880280495,
+        "deterministic_action_max": 0.008442430756986141,
+        "first32_no_noise_actions": [
+          0.000748102436773479,
+          0.002534075640141964,
+          0.0016692576464265585,
+          -0.001194691052660346,
+          -0.002453506924211979,
+          -0.0054116034880280495,
+          0.008442430756986141,
+          0.002291834680363536,
+          0.006285097450017929,
+          0.0013802254106849432,
+          0.0022166292183101177,
+          0.001412169891409576,
+          0.002490696730092168,
+          0.002318574348464608,
+          0.003936205990612507,
+          0.004816328641027212,
+          0.003249490400776267,
+          0.0041720508597791195,
+          0.0028813162352889776,
+          0.0027234130539000034,
+          0.0033670421689748764,
+          0.0006510987295769155,
+          0.003326148260384798,
+          0.0021178312599658966,
+          0.005076213739812374,
+          0.0028083156794309616,
+          0.0039647407829761505,
+          0.003079719142988324,
+          0.0016995540354400873,
+          0.002950623631477356,
+          0.0009518604492768645,
+          0.005193302407860756
+        ],
+        "million_window_pass": true,
+        "four_bdp_queue_time_pass": true,
+        "mean_reward": 0.7638407821797379,
+        "ipc": {
+          "status": "PASS_BOTH_DIRECTIONS",
+          "matched_frames": 5495,
+          "unaccepted_terminal_frames": [],
+          "received_crc_or_sequence_failures": 0,
+          "action_state_binding": "Native enforces every accepted action"
+        },
+        "tensors": {
+          "status": "PASS_ALL_TENSORS_UNCHANGED",
+          "variables": 96,
+          "changed": []
+        },
+        "limitation": "Boundary actual_dt weighting approximates duration; no hidden intermediate TCP samples. Raw and requested maxima both retained. No learned-policy quality/CPU claim.",
+        "packet_windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 46.454770133333334,
+            "capacity_mbps": 47.994845866666665,
+            "utilization": 0.9679116433124553,
+            "queue_mean_ms": 116.16452133675205,
+            "queue_p95_ms": 166.0,
+            "queue_p99_ms": 202.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 232289.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 63.682,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 47.99566464,
+            "capacity_mbps": 47.995648,
+            "utilization": 1.0000003466981007,
+            "queue_mean_ms": 119.1805396787197,
+            "queue_p95_ms": 168.0,
+            "queue_p99_ms": 204.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 199478.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 63.682,
+            "complete_window": true
+          }
+        ],
+        "exploration_process": "zero_sum_offset",
+        "exploration_offset_rho": 0.0,
+        "window_diagnostics": {
+          "run": "${EXPERIMENT_ROOT}/frameworks/canopy_single/logs/explorecheck-buffer64-G48-R200-q2-s4-zero_sum-actor0",
+          "binding": {
+            "full": {
+              "decisions": 2747,
+              "seconds": 60.26863099999996,
+              "binding_fraction": 0.44493116161872,
+              "unanchored_fraction": 0.0014376633177548045,
+              "slow_start_growth_eligible_fraction": 0.034628760689785716,
+              "infinite_ssthresh_fraction": 0.03209230022165264,
+              "inflight_bytes_p50": 1828824.0,
+              "inflight_bytes_p95": 2145936.0,
+              "inflight_bytes_max": 2523864.0,
+              "cwnd_max": 3269.0,
+              "cwnd_over_packets_out_p50": 1.1373112868439972,
+              "cwnd_over_packets_out_p95": 1.597938144329897
+            },
+            "trim10": {
+              "decisions": 2307,
+              "seconds": 50.283444999999915,
+              "binding_fraction": 0.45079562468323386,
+              "unanchored_fraction": 0.0008617547982243475,
+              "slow_start_growth_eligible_fraction": 0.0017230720767043737,
+              "infinite_ssthresh_fraction": 0.0,
+              "inflight_bytes_p50": 1843304.0,
+              "inflight_bytes_p95": 2156072.0,
+              "inflight_bytes_max": 2523864.0,
+              "cwnd_max": 3269.0,
+              "cwnd_over_packets_out_p50": 1.1347861178369654,
+              "cwnd_over_packets_out_p95": 1.5829903978052127
+            },
+            "binding_ratio": 0.9,
+            "trim_s": 10.0
+          },
+          "decomposition": {
+            "bound_commands": 2747,
+            "completed_commands": 2746,
+            "pending_commands": 1,
+            "unbound_control_rows": 0,
+            "states_rows": 2746,
+            "command_log_growth": -2.3085547891057008,
+            "ideal_command_log_impulse": 13.342200658238754,
+            "deterministic_log_impulse": 13.437786394611702,
+            "exploration_log_impulse": -0.0955857363729482,
+            "percent_truncation_log": -14.296228926008146,
+            "cwnd_floor_and_clamp_log": -1.3545265213362758,
+            "integer_rounding_residual": -15.650755447344455,
+            "per_step": {
+              "deterministic": 0.004893585722728223,
+              "exploration": -3.480908098068034e-05,
+              "percent_truncation": -0.005206201356885705,
+              "integer_rounding": -0.005699473942951367
+            },
+            "max_abs_cumulative_exploration": 0.5962773921196308,
+            "final_cumulative_exploration": -0.06895053392250096,
+            "total_log_growth": 4.398555936625092,
+            "between_command_native_log_growth": 6.707110725730793
+          }
+        }
+      },
+      {
+        "run_id": "explorecheck-buffer64-G48-R200-q2-s3-zero_sum",
+        "mode": "small_uniform",
+        "seed": 3,
+        "condition": "G48-R200-q2",
+        "physical_exposure_s": 60.082247000000116,
+        "transitions": 2746,
+        "optimizer_counters": {
+          "critic_iterations": 0,
+          "critic_optimizer_ops": 0,
+          "actor_updates": 0,
+          "target_updates": 0
+        },
+        "observed_max_cwnd": 4754.0,
+        "requested_max_cwnd": 4754,
+        "bdp_packets": 797.8,
+        "queue_packets": 1600,
+        "registered_window_bound": 9591.2,
+        "boundary_weighted_seconds_above_bound": 0,
+        "boundary_weighted_fraction_above_bound": 0.0,
+        "low_window_fraction": 0.0,
+        "deterministic_action_mean": -0.004899446250587968,
+        "deterministic_action_min": -0.0140861626714468,
+        "deterministic_action_max": 0.005966689437627792,
+        "first32_no_noise_actions": [
+          -0.0015171836130321026,
+          0.004201043397188187,
+          0.005966689437627792,
+          -0.0017972653731703758,
+          -0.005783233791589737,
+          -0.0048373993486166,
+          0.0018328388687223196,
+          -0.0030806714203208685,
+          -0.004781337454915047,
+          -0.0140861626714468,
+          -0.010069433599710464,
+          -0.008000865578651428,
+          -0.009193171747028828,
+          -0.010952084325253963,
+          -0.010065896436572075,
+          -0.00897767674177885,
+          -0.01000603474676609,
+          -0.012694766744971275,
+          -0.010449709370732307,
+          -0.010590389370918274,
+          -0.007638449314981699,
+          -0.00754525838419795,
+          -0.01127249002456665,
+          -0.010798929259181023,
+          -0.007272281218320131,
+          -0.006175856571644545,
+          -0.00996376946568489,
+          -0.010208599269390106,
+          -0.008188354782760143,
+          -0.005904380232095718,
+          -0.008653740398585796,
+          -0.010494044981896877
+        ],
+        "million_window_pass": true,
+        "four_bdp_queue_time_pass": true,
+        "mean_reward": 0.5468184596336458,
+        "ipc": {
+          "status": "PASS_BOTH_DIRECTIONS",
+          "matched_frames": 5495,
+          "unaccepted_terminal_frames": [],
+          "received_crc_or_sequence_failures": 0,
+          "action_state_binding": "Native enforces every accepted action"
+        },
+        "tensors": {
+          "status": "PASS_ALL_TENSORS_UNCHANGED",
+          "variables": 96,
+          "changed": []
+        },
+        "limitation": "Boundary actual_dt weighting approximates duration; no hidden intermediate TCP samples. Raw and requested maxima both retained. No learned-policy quality/CPU claim.",
+        "packet_windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 46.23097493333333,
+            "capacity_mbps": 47.994845866666665,
+            "utilization": 0.9632487426205409,
+            "queue_mean_ms": 258.11109954456737,
+            "queue_p95_ms": 353.0,
+            "queue_p99_ms": 383.0,
+            "dropped_packets": 5.0,
+            "arrival_packets": 231636.0,
+            "drop_fraction": 2.1585591186171405e-05,
+            "last_log_s": 63.154,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 47.99566464,
+            "capacity_mbps": 47.995648,
+            "utilization": 1.0000003466981007,
+            "queue_mean_ms": 253.3103453462487,
+            "queue_p95_ms": 345.0,
+            "queue_p99_ms": 384.0,
+            "dropped_packets": 5.0,
+            "arrival_packets": 199093.0,
+            "drop_fraction": 2.5113891497943174e-05,
+            "last_log_s": 63.154,
+            "complete_window": true
+          }
+        ],
+        "exploration_process": "zero_sum_offset",
+        "exploration_offset_rho": 0.0,
+        "window_diagnostics": {
+          "run": "${EXPERIMENT_ROOT}/frameworks/canopy_single/logs/explorecheck-buffer64-G48-R200-q2-s3-zero_sum-actor0",
+          "binding": {
+            "full": {
+              "decisions": 2747,
+              "seconds": 60.28566800000012,
+              "binding_fraction": 0.4581492901430562,
+              "unanchored_fraction": 0.002458212787822135,
+              "slow_start_growth_eligible_fraction": 0.2436984193324349,
+              "infinite_ssthresh_fraction": 0.04553151837017043,
+              "inflight_bytes_p50": 2607848.0,
+              "inflight_bytes_p95": 3221800.0,
+              "inflight_bytes_max": 4762472.0,
+              "cwnd_max": 4754.0,
+              "cwnd_over_packets_out_p50": 1.1351819757365684,
+              "cwnd_over_packets_out_p95": 1.6327995582551076
+            },
+            "trim10": {
+              "decisions": 2307,
+              "seconds": 50.30137100000008,
+              "binding_fraction": 0.47021255146306046,
+              "unanchored_fraction": 0.002175725985679393,
+              "slow_start_growth_eligible_fraction": 0.19796901758403335,
+              "infinite_ssthresh_fraction": 0.0,
+              "inflight_bytes_p50": 2589024.0,
+              "inflight_bytes_p95": 3168224.0,
+              "inflight_bytes_max": 4762472.0,
+              "cwnd_max": 4754.0,
+              "cwnd_over_packets_out_p50": 1.1293532338308458,
+              "cwnd_over_packets_out_p95": 1.6278218425869433
+            },
+            "binding_ratio": 0.9,
+            "trim_s": 10.0
+          },
+          "decomposition": {
+            "bound_commands": 2747,
+            "completed_commands": 2746,
+            "pending_commands": 1,
+            "unbound_control_rows": 0,
+            "states_rows": 2746,
+            "command_log_growth": -34.1943664895348,
+            "ideal_command_log_impulse": -18.72784968231977,
+            "deterministic_log_impulse": -18.651037153111062,
+            "exploration_log_impulse": -0.07681252920870918,
+            "percent_truncation_log": -14.371550839595038,
+            "cwnd_floor_and_clamp_log": -1.0949659676201335,
+            "integer_rounding_residual": -15.46651680721503,
+            "per_step": {
+              "deterministic": -0.006792074709800096,
+              "exploration": -2.797251609931143e-05,
+              "percent_truncation": -0.005233631041367457,
+              "integer_rounding": -0.005632380483326668
+            },
+            "max_abs_cumulative_exploration": 0.523606665373371,
+            "final_cumulative_exploration": -0.05540852748380481,
+            "total_log_growth": 4.680071494161209,
+            "between_command_native_log_growth": 38.87443798369601
+          }
+        }
+      }
+    ],
+    "registration": {
+      "jobs": [
+        {
+          "run_id": "explorecheck-buffer64-G48-R200-q2-s4-zero_sum",
+          "model_id": "explorecheck-buffer64-G48-R200-q2-s4-zero_sum",
+          "seed": 4,
+          "num_actors": 1,
+          "steps_per_actor": 10000000,
+          "memsize": 300000,
+          "sampler": "balanced_actor",
+          "warmup": 12288,
+          "update_ratio": 0.1,
+          "reward_mode": "raw",
+          "LOSS_TYPE": "MSE",
+          "control_period_ms": 20,
+          "conditions": [
+            {
+              "trace": "constant48",
+              "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+              "capacity_mbps": 47.995648,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G48-R200-q2",
+              "nominal_mbps": 48,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 1600,
+              "queue_bytes": 2406400,
+              "queue_bdp": 2,
+              "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation"
+            }
+          ],
+          "actor_hosts": [
+            0
+          ],
+          "learner_endpoint": "127.0.0.1:49371",
+          "direct_actor_session": true,
+          "tf_threads": 4,
+          "optimizer_sleep_ms": 0,
+          "target_no_fetch": false,
+          "serialized_start": false,
+          "instrument_timing": true,
+          "profile_stages": true,
+          "checkpoint_interval": 500000,
+          "exploration_std": 0.2,
+          "fixed_action": null,
+          "capacity_only": true,
+          "stop_file": "${EXPERIMENT_ROOT}/audit/explorecheck-buffer64-G48-R200-q2-s4-zero_sum.stop",
+          "absolute_deadline_epoch": 1793102636.8216624,
+          "timeout_s": 4800,
+          "shutdown_barrier_s": 120,
+          "actor_port_base": 49901,
+          "code_commit": "a969f67+claude-zero-sum+audited-diagnostics; exact source hashes in deployment",
+          "model_source": "Saved genuinely random Orca seed3 step0; all counters/optimizer/replay fresh, not a trained prior. Both Orca arms share the exact complete96-variable step0.",
+          "configuration_notes": "Source-based scalar baselines. All arms normal CUBIC startup; no pre-policy window assistance. Orca control/moving differ ONLY actor-loss forward flag plus identities/endpoints. Shared unchanged raw reward, conditions, optimizer, replay, update rule, exploration, physical exposure. Canopy QC uses artifact loss centers, moving-stat bound engineering, independent Adam. One seed; no exact-paper-reproduction or convergence claim.",
+          "backend": "moving_stats",
+          "bn_relevant_only": true,
+          "server_binary": "${EXPERIMENT_ROOT}/native/orca-server-verified-ipc",
+          "require_coverage_gate": false,
+          "minimum_enqueued_per_actor": 512,
+          "collapse_guard_after_samples": 1000000000,
+          "collapse_guard_seconds": 180,
+          "evaluation_reserve_s": 1200,
+          "capacity_settle_s": 65,
+          "sample_budget": null,
+          "target_bn_consistent": true,
+          "independent_critic_adam_v34": true,
+          "policy_family": "orca",
+          "canopy_shallow_loss_centers": true,
+          "canopy_constraints_id": 12,
+          "canopy_lambda": 0.25,
+          "canopy_partitions": 5,
+          "canopy_history_k": 3,
+          "portable_smoke_training": false,
+          "source_diff_sha256": "35be9df2dc5bbbbe870e7e661ccceebba54cea8999e2ee4d99534f822b616352",
+          "require_normal_cubic_start": true,
+          "orca_actor_loss_moving_stats": true,
+          "diagnostic_no_optimizer": true,
+          "scalar_window_initialization": "small_uniform",
+          "verified_ipc_v2": true,
+          "probe_seconds": 60,
+          "exploration_process": "zero_sum_offset",
+          "exploration_offset_rho": 0.0,
+          "ss_snapshot_seconds": [
+            15,
+            30,
+            45
+          ]
+        },
+        {
+          "run_id": "explorecheck-buffer64-G48-R200-q2-s3-zero_sum",
+          "model_id": "explorecheck-buffer64-G48-R200-q2-s3-zero_sum",
+          "seed": 3,
+          "num_actors": 1,
+          "steps_per_actor": 10000000,
+          "memsize": 300000,
+          "sampler": "balanced_actor",
+          "warmup": 12288,
+          "update_ratio": 0.1,
+          "reward_mode": "raw",
+          "LOSS_TYPE": "MSE",
+          "control_period_ms": 20,
+          "conditions": [
+            {
+              "trace": "constant48",
+              "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+              "capacity_mbps": 47.995648,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G48-R200-q2",
+              "nominal_mbps": 48,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 1600,
+              "queue_bytes": 2406400,
+              "queue_bdp": 2,
+              "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation"
+            }
+          ],
+          "actor_hosts": [
+            0
+          ],
+          "learner_endpoint": "127.0.0.1:49371",
+          "direct_actor_session": true,
+          "tf_threads": 4,
+          "optimizer_sleep_ms": 0,
+          "target_no_fetch": false,
+          "serialized_start": false,
+          "instrument_timing": true,
+          "profile_stages": true,
+          "checkpoint_interval": 500000,
+          "exploration_std": 0.2,
+          "fixed_action": null,
+          "capacity_only": true,
+          "stop_file": "${EXPERIMENT_ROOT}/audit/explorecheck-buffer64-G48-R200-q2-s3-zero_sum.stop",
+          "absolute_deadline_epoch": 1793102636.8216624,
+          "timeout_s": 4800,
+          "shutdown_barrier_s": 120,
+          "actor_port_base": 49902,
+          "code_commit": "a969f67+claude-zero-sum+audited-diagnostics; exact source hashes in deployment",
+          "model_source": "Saved genuinely random Orca seed3 step0; all counters/optimizer/replay fresh, not a trained prior. Both Orca arms share the exact complete96-variable step0.",
+          "configuration_notes": "Source-based scalar baselines. All arms normal CUBIC startup; no pre-policy window assistance. Orca control/moving differ ONLY actor-loss forward flag plus identities/endpoints. Shared unchanged raw reward, conditions, optimizer, replay, update rule, exploration, physical exposure. Canopy QC uses artifact loss centers, moving-stat bound engineering, independent Adam. One seed; no exact-paper-reproduction or convergence claim.",
+          "backend": "moving_stats",
+          "bn_relevant_only": true,
+          "server_binary": "${EXPERIMENT_ROOT}/native/orca-server-verified-ipc",
+          "require_coverage_gate": false,
+          "minimum_enqueued_per_actor": 512,
+          "collapse_guard_after_samples": 1000000000,
+          "collapse_guard_seconds": 180,
+          "evaluation_reserve_s": 1200,
+          "capacity_settle_s": 65,
+          "sample_budget": null,
+          "target_bn_consistent": true,
+          "independent_critic_adam_v34": true,
+          "policy_family": "orca",
+          "canopy_shallow_loss_centers": true,
+          "canopy_constraints_id": 12,
+          "canopy_lambda": 0.25,
+          "canopy_partitions": 5,
+          "canopy_history_k": 3,
+          "portable_smoke_training": false,
+          "source_diff_sha256": "35be9df2dc5bbbbe870e7e661ccceebba54cea8999e2ee4d99534f822b616352",
+          "require_normal_cubic_start": true,
+          "orca_actor_loss_moving_stats": true,
+          "diagnostic_no_optimizer": true,
+          "scalar_window_initialization": "small_uniform",
+          "verified_ipc_v2": true,
+          "probe_seconds": 60,
+          "exploration_process": "zero_sum_offset",
+          "exploration_offset_rho": 0.0,
+          "ss_snapshot_seconds": [
+            15,
+            30,
+            45
+          ]
+        }
+      ],
+      "deadline_epoch": 1793102636.8216624
+    },
+    "current_sysctls": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "host": "actor-c"
+  },
+  {
+    "status.json": {
+      "status": "COMPLETE",
+      "runs": 1,
+      "epoch": 1793101716.2137413
+    },
+    "restored.json": {
+      "status": "PASS",
+      "values": {
+        "net.ipv4.tcp_wmem": [
+          "4096",
+          "32768",
+          "4194304"
+        ],
+        "net.ipv4.tcp_rmem": [
+          "4096",
+          "87380",
+          "6291456"
+        ],
+        "net.core.wmem_max": [
+          "212992"
+        ],
+        "net.core.rmem_max": [
+          "212992"
+        ]
+      },
+      "epoch": 1793101716.2319264
+    },
+    "original.json": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "active-sysctls.json": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "67108864"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "67108864"
+      ],
+      "net.core.wmem_max": [
+        "67108864"
+      ],
+      "net.core.rmem_max": [
+        "67108864"
+      ]
+    },
+    "results.json": [
+      {
+        "run_id": "explorecheck-buffer64-G72-R200-q2-s4-zero_sum",
+        "mode": "small_uniform",
+        "seed": 4,
+        "condition": "G72-R200-q2",
+        "physical_exposure_s": 60.060908,
+        "transitions": 2747,
+        "optimizer_counters": {
+          "critic_iterations": 0,
+          "critic_optimizer_ops": 0,
+          "actor_updates": 0,
+          "target_updates": 0
+        },
+        "observed_max_cwnd": 4842.0,
+        "requested_max_cwnd": 4842,
+        "bdp_packets": 1196.8000000000002,
+        "queue_packets": 2400,
+        "registered_window_bound": 14387.2,
+        "boundary_weighted_seconds_above_bound": 0,
+        "boundary_weighted_fraction_above_bound": 0.0,
+        "low_window_fraction": 0.0,
+        "deterministic_action_mean": 0.0038438604413559693,
+        "deterministic_action_min": -0.005552705843001604,
+        "deterministic_action_max": 0.009638942778110504,
+        "first32_no_noise_actions": [
+          0.0006585590308532119,
+          0.002061548177152872,
+          0.0010161215905100107,
+          -0.0020195841789245605,
+          -0.002639134181663394,
+          -0.005552705843001604,
+          0.009638942778110504,
+          0.0025988512206822634,
+          0.00607305346056819,
+          0.0014514726353809237,
+          0.002128639491274953,
+          0.001737407292239368,
+          0.0024396206717938185,
+          0.002669548848643899,
+          0.004703926853835583,
+          0.0049358936958014965,
+          0.0036254343576729298,
+          0.003995207604020834,
+          0.002862738212570548,
+          0.0025434328708797693,
+          0.003305969061329961,
+          0.00025448595988564193,
+          0.0032650711946189404,
+          0.0018132940167561173,
+          0.00537033611908555,
+          0.0031623428221791983,
+          0.004051120951771736,
+          0.003332641441375017,
+          0.0016898228786885738,
+          0.0032268338836729527,
+          0.0010428146924823523,
+          0.005275633651763201
+        ],
+        "million_window_pass": true,
+        "four_bdp_queue_time_pass": true,
+        "mean_reward": 0.8204359623196353,
+        "ipc": {
+          "status": "PASS_BOTH_DIRECTIONS",
+          "matched_frames": 5497,
+          "unaccepted_terminal_frames": [],
+          "received_crc_or_sequence_failures": 0,
+          "action_state_binding": "Native enforces every accepted action"
+        },
+        "tensors": {
+          "status": "PASS_ALL_TENSORS_UNCHANGED",
+          "variables": 96,
+          "changed": []
+        },
+        "limitation": "Boundary actual_dt weighting approximates duration; no hidden intermediate TCP samples. Raw and requested maxima both retained. No learned-policy quality/CPU claim.",
+        "packet_windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 68.94238453333332,
+            "capacity_mbps": 71.9982848,
+            "utilization": 0.9575559296286643,
+            "queue_mean_ms": 91.29692326486449,
+            "queue_p95_ms": 164.0,
+            "queue_p99_ms": 210.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 344479.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 64.138,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 71.99927231999999,
+            "capacity_mbps": 71.999488,
+            "utilization": 0.9999970044231425,
+            "queue_mean_ms": 101.25247825883517,
+            "queue_p95_ms": 168.0,
+            "queue_p99_ms": 212.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 299466.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 64.138,
+            "complete_window": true
+          }
+        ],
+        "exploration_process": "zero_sum_offset",
+        "exploration_offset_rho": 0.0,
+        "window_diagnostics": {
+          "run": "${EXPERIMENT_ROOT}/frameworks/canopy_single/logs/explorecheck-buffer64-G72-R200-q2-s4-zero_sum-actor0",
+          "binding": {
+            "full": {
+              "decisions": 2748,
+              "seconds": 60.263996000000006,
+              "binding_fraction": 0.4531981417229611,
+              "unanchored_fraction": 0.0014392673197442796,
+              "slow_start_growth_eligible_fraction": 0.03337843710198043,
+              "infinite_ssthresh_fraction": 0.03230006519979192,
+              "inflight_bytes_p50": 2528208.0,
+              "inflight_bytes_p95": 3155192.0,
+              "inflight_bytes_max": 4070328.0,
+              "cwnd_max": 4842.0,
+              "cwnd_over_packets_out_p50": 1.1354642313546424,
+              "cwnd_over_packets_out_p95": 1.5944272445820433
+            },
+            "trim10": {
+              "decisions": 2306,
+              "seconds": 50.27246399999994,
+              "binding_fraction": 0.45980726148612894,
+              "unanchored_fraction": 0.0012939886932934114,
+              "slow_start_growth_eligible_fraction": 0.0,
+              "infinite_ssthresh_fraction": 0.0,
+              "inflight_bytes_p50": 2597712.0,
+              "inflight_bytes_p95": 3207320.0,
+              "inflight_bytes_max": 4070328.0,
+              "cwnd_max": 4842.0,
+              "cwnd_over_packets_out_p50": 1.1332033788174138,
+              "cwnd_over_packets_out_p95": 1.5810276679841897
+            },
+            "binding_ratio": 0.9,
+            "trim_s": 10.0
+          },
+          "decomposition": {
+            "bound_commands": 2748,
+            "completed_commands": 2747,
+            "pending_commands": 1,
+            "unbound_control_rows": 0,
+            "states_rows": 2747,
+            "command_log_growth": -0.8757663374884381,
+            "ideal_command_log_impulse": 14.509396286480762,
+            "deterministic_log_impulse": 14.637999484490512,
+            "exploration_log_impulse": -0.12860319800975084,
+            "percent_truncation_log": -14.284978485161364,
+            "cwnd_floor_and_clamp_log": -1.1001841388078373,
+            "integer_rounding_residual": -15.3851626239692,
+            "per_step": {
+              "deterministic": 0.005328722054783587,
+              "exploration": -4.681587113569379e-05,
+              "percent_truncation": -0.00520021058797283,
+              "integer_rounding": -0.005600714460855187
+            },
+            "max_abs_cumulative_exploration": 0.5962773921196308,
+            "final_cumulative_exploration": -0.09276759800555137,
+            "total_log_growth": 4.787491742782046,
+            "between_command_native_log_growth": 5.663258080270484
+          }
+        }
+      }
+    ],
+    "registration": {
+      "jobs": [
+        {
+          "run_id": "explorecheck-buffer64-G72-R200-q2-s4-zero_sum",
+          "model_id": "explorecheck-buffer64-G72-R200-q2-s4-zero_sum",
+          "seed": 4,
+          "num_actors": 1,
+          "steps_per_actor": 10000000,
+          "memsize": 300000,
+          "sampler": "balanced_actor",
+          "warmup": 12288,
+          "update_ratio": 0.1,
+          "reward_mode": "raw",
+          "LOSS_TYPE": "MSE",
+          "control_period_ms": 20,
+          "conditions": [
+            {
+              "trace": "constant72",
+              "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+              "capacity_mbps": 71.999488,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G72-R200-q2",
+              "nominal_mbps": 72,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 2400,
+              "queue_bytes": 3609600,
+              "queue_bdp": 2,
+              "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation"
+            }
+          ],
+          "actor_hosts": [
+            0
+          ],
+          "learner_endpoint": "127.0.0.1:49371",
+          "direct_actor_session": true,
+          "tf_threads": 4,
+          "optimizer_sleep_ms": 0,
+          "target_no_fetch": false,
+          "serialized_start": false,
+          "instrument_timing": true,
+          "profile_stages": true,
+          "checkpoint_interval": 500000,
+          "exploration_std": 0.2,
+          "fixed_action": null,
+          "capacity_only": true,
+          "stop_file": "${EXPERIMENT_ROOT}/audit/explorecheck-buffer64-G72-R200-q2-s4-zero_sum.stop",
+          "absolute_deadline_epoch": 1793102636.8216624,
+          "timeout_s": 4800,
+          "shutdown_barrier_s": 120,
+          "actor_port_base": 49901,
+          "code_commit": "a969f67+claude-zero-sum+audited-diagnostics; exact source hashes in deployment",
+          "model_source": "Saved genuinely random Orca seed3 step0; all counters/optimizer/replay fresh, not a trained prior. Both Orca arms share the exact complete96-variable step0.",
+          "configuration_notes": "Source-based scalar baselines. All arms normal CUBIC startup; no pre-policy window assistance. Orca control/moving differ ONLY actor-loss forward flag plus identities/endpoints. Shared unchanged raw reward, conditions, optimizer, replay, update rule, exploration, physical exposure. Canopy QC uses artifact loss centers, moving-stat bound engineering, independent Adam. One seed; no exact-paper-reproduction or convergence claim.",
+          "backend": "moving_stats",
+          "bn_relevant_only": true,
+          "server_binary": "${EXPERIMENT_ROOT}/native/orca-server-verified-ipc",
+          "require_coverage_gate": false,
+          "minimum_enqueued_per_actor": 512,
+          "collapse_guard_after_samples": 1000000000,
+          "collapse_guard_seconds": 180,
+          "evaluation_reserve_s": 1200,
+          "capacity_settle_s": 65,
+          "sample_budget": null,
+          "target_bn_consistent": true,
+          "independent_critic_adam_v34": true,
+          "policy_family": "orca",
+          "canopy_shallow_loss_centers": true,
+          "canopy_constraints_id": 12,
+          "canopy_lambda": 0.25,
+          "canopy_partitions": 5,
+          "canopy_history_k": 3,
+          "portable_smoke_training": false,
+          "source_diff_sha256": "35be9df2dc5bbbbe870e7e661ccceebba54cea8999e2ee4d99534f822b616352",
+          "require_normal_cubic_start": true,
+          "orca_actor_loss_moving_stats": true,
+          "diagnostic_no_optimizer": true,
+          "scalar_window_initialization": "small_uniform",
+          "verified_ipc_v2": true,
+          "probe_seconds": 60,
+          "exploration_process": "zero_sum_offset",
+          "exploration_offset_rho": 0.0,
+          "ss_snapshot_seconds": [
+            15,
+            30,
+            45
+          ]
+        }
+      ],
+      "deadline_epoch": 1793102636.8216624
+    },
+    "current_sysctls": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "host": "actor-d"
+  },
+  {
+    "status.json": {
+      "status": "COMPLETE",
+      "runs": 1,
+      "epoch": 1793101718.4884372
+    },
+    "restored.json": {
+      "status": "PASS",
+      "values": {
+        "net.ipv4.tcp_wmem": [
+          "4096",
+          "32768",
+          "4194304"
+        ],
+        "net.ipv4.tcp_rmem": [
+          "4096",
+          "87380",
+          "6291456"
+        ],
+        "net.core.wmem_max": [
+          "212992"
+        ],
+        "net.core.rmem_max": [
+          "212992"
+        ]
+      },
+      "epoch": 1793101718.5060682
+    },
+    "original.json": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "active-sysctls.json": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "67108864"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "67108864"
+      ],
+      "net.core.wmem_max": [
+        "67108864"
+      ],
+      "net.core.rmem_max": [
+        "67108864"
+      ]
+    },
+    "results.json": [
+      {
+        "run_id": "explorecheck-buffer64-G72-R200-q2-s3-zero_sum",
+        "mode": "small_uniform",
+        "seed": 3,
+        "condition": "G72-R200-q2",
+        "physical_exposure_s": 60.139346999999894,
+        "transitions": 2742,
+        "optimizer_counters": {
+          "critic_iterations": 0,
+          "critic_optimizer_ops": 0,
+          "actor_updates": 0,
+          "target_updates": 0
+        },
+        "observed_max_cwnd": 4837.0,
+        "requested_max_cwnd": 4837,
+        "bdp_packets": 1196.8000000000002,
+        "queue_packets": 2400,
+        "registered_window_bound": 14387.2,
+        "boundary_weighted_seconds_above_bound": 0,
+        "boundary_weighted_fraction_above_bound": 0.0,
+        "low_window_fraction": 0.0,
+        "deterministic_action_mean": -0.004519672914649979,
+        "deterministic_action_min": -0.013507812283933163,
+        "deterministic_action_max": 0.006940365768969059,
+        "first32_no_noise_actions": [
+          -0.0013180593959987164,
+          0.002966474276036024,
+          0.006940365768969059,
+          -0.001124998671002686,
+          -0.005757574457675219,
+          -0.006132247392088175,
+          -0.0005080847768113017,
+          -0.0027929923962801695,
+          -0.005126679316163063,
+          -0.013507812283933163,
+          -0.011619995348155499,
+          -0.008476675488054752,
+          -0.011427640914916992,
+          -0.011124951764941216,
+          -0.00975229125469923,
+          -0.009593142196536064,
+          -0.010926690883934498,
+          -0.012935683131217957,
+          -0.009788897819817066,
+          -0.009716514497995377,
+          -0.007108576595783234,
+          -0.007147885859012604,
+          -0.011364934965968132,
+          -0.010310681536793709,
+          -0.007089956197887659,
+          -0.0061511509120464325,
+          -0.009320746175944805,
+          -0.009879565797746181,
+          -0.007625266909599304,
+          -0.005636328365653753,
+          -0.008368060924112797,
+          -0.00971205998212099
+        ],
+        "million_window_pass": true,
+        "four_bdp_queue_time_pass": true,
+        "mean_reward": 0.7134664613093905,
+        "ipc": {
+          "status": "PASS_BOTH_DIRECTIONS",
+          "matched_frames": 5487,
+          "unaccepted_terminal_frames": [],
+          "received_crc_or_sequence_failures": 0,
+          "action_state_binding": "Native enforces every accepted action"
+        },
+        "tensors": {
+          "status": "PASS_ALL_TENSORS_UNCHANGED",
+          "variables": 96,
+          "changed": []
+        },
+        "limitation": "Boundary actual_dt weighting approximates duration; no hidden intermediate TCP samples. Raw and requested maxima both retained. No learned-policy quality/CPU claim.",
+        "packet_windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 69.11644053333333,
+            "capacity_mbps": 71.9982848,
+            "utilization": 0.9599734316633795,
+            "queue_mean_ms": 141.71401299202432,
+            "queue_p95_ms": 189.0,
+            "queue_p99_ms": 207.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 345632.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 64.384,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 71.99950464,
+            "capacity_mbps": 71.999488,
+            "utilization": 1.0000002311127545,
+            "queue_mean_ms": 143.53096570210093,
+            "queue_p95_ms": 190.0,
+            "queue_p99_ms": 208.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 299379.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 64.384,
+            "complete_window": true
+          }
+        ],
+        "exploration_process": "zero_sum_offset",
+        "exploration_offset_rho": 0.0,
+        "window_diagnostics": {
+          "run": "${EXPERIMENT_ROOT}/frameworks/canopy_single/logs/explorecheck-buffer64-G72-R200-q2-s3-zero_sum-actor0",
+          "binding": {
+            "full": {
+              "decisions": 2743,
+              "seconds": 60.34246199999989,
+              "binding_fraction": 0.46109588634285525,
+              "unanchored_fraction": 0.0010785937106775677,
+              "slow_start_growth_eligible_fraction": 0.16150025499456802,
+              "infinite_ssthresh_fraction": 0.04540971496986656,
+              "inflight_bytes_p50": 2953920.0,
+              "inflight_bytes_p95": 3375288.0,
+              "inflight_bytes_max": 3757560.0,
+              "cwnd_max": 4837.0,
+              "cwnd_over_packets_out_p50": 1.1360774818401937,
+              "cwnd_over_packets_out_p95": 1.6197519083969465
+            },
+            "trim10": {
+              "decisions": 2303,
+              "seconds": 50.34472299999992,
+              "binding_fraction": 0.4743978430470272,
+              "unanchored_fraction": 0.0012927869322073757,
+              "slow_start_growth_eligible_fraction": 0.12227899237820831,
+              "infinite_ssthresh_fraction": 0.0,
+              "inflight_bytes_p50": 2965504.0,
+              "inflight_bytes_p95": 3388320.0,
+              "inflight_bytes_max": 3757560.0,
+              "cwnd_max": 4837.0,
+              "cwnd_over_packets_out_p50": 1.130632911392405,
+              "cwnd_over_packets_out_p95": 1.6089622641509433
+            },
+            "binding_ratio": 0.9,
+            "trim_s": 10.0
+          },
+          "decomposition": {
+            "bound_commands": 2743,
+            "completed_commands": 2742,
+            "pending_commands": 1,
+            "unbound_control_rows": 0,
+            "states_rows": 2742,
+            "command_log_growth": -32.58191762241516,
+            "ideal_command_log_impulse": -17.251843968144826,
+            "deterministic_log_impulse": -17.180267181529803,
+            "exploration_log_impulse": -0.07157678661502231,
+            "percent_truncation_log": -14.272137183565858,
+            "cwnd_floor_and_clamp_log": -1.0579364707046146,
+            "integer_rounding_residual": -15.330073654270336,
+            "per_step": {
+              "deterministic": -0.006265597075685559,
+              "exploration": -2.6103860909927905e-05,
+              "percent_truncation": -0.005205009913773107,
+              "integer_rounding": -0.005590836489522369
+            },
+            "max_abs_cumulative_exploration": 0.523606665373371,
+            "final_cumulative_exploration": -0.051631737546105005,
+            "total_log_growth": 4.735320870453137,
+            "between_command_native_log_growth": 37.3172384928683
+          }
+        }
+      }
+    ],
+    "registration": {
+      "jobs": [
+        {
+          "run_id": "explorecheck-buffer64-G72-R200-q2-s3-zero_sum",
+          "model_id": "explorecheck-buffer64-G72-R200-q2-s3-zero_sum",
+          "seed": 3,
+          "num_actors": 1,
+          "steps_per_actor": 10000000,
+          "memsize": 300000,
+          "sampler": "balanced_actor",
+          "warmup": 12288,
+          "update_ratio": 0.1,
+          "reward_mode": "raw",
+          "LOSS_TYPE": "MSE",
+          "control_period_ms": 20,
+          "conditions": [
+            {
+              "trace": "constant72",
+              "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+              "capacity_mbps": 71.999488,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G72-R200-q2",
+              "nominal_mbps": 72,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 2400,
+              "queue_bytes": 3609600,
+              "queue_bdp": 2,
+              "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation"
+            }
+          ],
+          "actor_hosts": [
+            0
+          ],
+          "learner_endpoint": "127.0.0.1:49371",
+          "direct_actor_session": true,
+          "tf_threads": 4,
+          "optimizer_sleep_ms": 0,
+          "target_no_fetch": false,
+          "serialized_start": false,
+          "instrument_timing": true,
+          "profile_stages": true,
+          "checkpoint_interval": 500000,
+          "exploration_std": 0.2,
+          "fixed_action": null,
+          "capacity_only": true,
+          "stop_file": "${EXPERIMENT_ROOT}/audit/explorecheck-buffer64-G72-R200-q2-s3-zero_sum.stop",
+          "absolute_deadline_epoch": 1793102636.8216624,
+          "timeout_s": 4800,
+          "shutdown_barrier_s": 120,
+          "actor_port_base": 49901,
+          "code_commit": "a969f67+claude-zero-sum+audited-diagnostics; exact source hashes in deployment",
+          "model_source": "Saved genuinely random Orca seed3 step0; all counters/optimizer/replay fresh, not a trained prior. Both Orca arms share the exact complete96-variable step0.",
+          "configuration_notes": "Source-based scalar baselines. All arms normal CUBIC startup; no pre-policy window assistance. Orca control/moving differ ONLY actor-loss forward flag plus identities/endpoints. Shared unchanged raw reward, conditions, optimizer, replay, update rule, exploration, physical exposure. Canopy QC uses artifact loss centers, moving-stat bound engineering, independent Adam. One seed; no exact-paper-reproduction or convergence claim.",
+          "backend": "moving_stats",
+          "bn_relevant_only": true,
+          "server_binary": "${EXPERIMENT_ROOT}/native/orca-server-verified-ipc",
+          "require_coverage_gate": false,
+          "minimum_enqueued_per_actor": 512,
+          "collapse_guard_after_samples": 1000000000,
+          "collapse_guard_seconds": 180,
+          "evaluation_reserve_s": 1200,
+          "capacity_settle_s": 65,
+          "sample_budget": null,
+          "target_bn_consistent": true,
+          "independent_critic_adam_v34": true,
+          "policy_family": "orca",
+          "canopy_shallow_loss_centers": true,
+          "canopy_constraints_id": 12,
+          "canopy_lambda": 0.25,
+          "canopy_partitions": 5,
+          "canopy_history_k": 3,
+          "portable_smoke_training": false,
+          "source_diff_sha256": "35be9df2dc5bbbbe870e7e661ccceebba54cea8999e2ee4d99534f822b616352",
+          "require_normal_cubic_start": true,
+          "orca_actor_loss_moving_stats": true,
+          "diagnostic_no_optimizer": true,
+          "scalar_window_initialization": "small_uniform",
+          "verified_ipc_v2": true,
+          "probe_seconds": 60,
+          "exploration_process": "zero_sum_offset",
+          "exploration_offset_rho": 0.0,
+          "ss_snapshot_seconds": [
+            15,
+            30,
+            45
+          ]
+        }
+      ],
+      "deadline_epoch": 1793102636.8216624
+    },
+    "current_sysctls": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "host": "learner"
+  }
+]

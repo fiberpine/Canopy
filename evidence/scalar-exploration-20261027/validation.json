@@ -1,0 +1,52 @@
+{
+  "base_commit": "a969f673b2e0618003acd72bf077d2ef182ce043",
+  "supplied_patch_sha256": "fd2ba6e02d762ff4e971d68fb1b311988b932e1edb75ef5d094d56d4438576b2",
+  "actual_execution": "Base plus supplied patch and audited changes; per-host source hashes retained. Later archive commit was not the execution commit.",
+  "audit_changes": [
+    "Stationary Gaussian exploration is not a hard bound on actual cwnd or a true zero-total perturbation.",
+    "Variance matching is stationary/no-clipping; temporal correlation differs and first step has smaller variance.",
+    "All16 pairs have same-day/same-host iid controls; no causal loss comparison against prior day.",
+    "Native completed command alignment excludes final pending action and verifies previous percent.",
+    "Suspected-limit flag is a hypothesis; no automatic causal attribution or training.",
+    "Separate send/receive2x2 factorial. Three pre-TCP EADDRINUSE failures retained;7 missing modes completed with distinct ports, no successful TCP repeated."
+  ],
+  "observed": {
+    "smokes": 10,
+    "formal_exploration": 32,
+    "pure_CUBIC": 12,
+    "buffer_zero": 4,
+    "pre_TCP_bind_failures": 3,
+    "formal_zero_million_failures": 0,
+    "formal_zero_duration_failures": 0,
+    "formal_iid_million_failures": 2,
+    "formal_iid_duration_failures": 8,
+    "matched_formal_frames": 174524,
+    "formal_optimizer_updates": 0,
+    "paired_initial_variables": 96,
+    "paired_initial_conditions_seeds": 16,
+    "buffer_zero_initial96_pairs": 4
+  },
+  "counterevidence": [
+    "Enlarged-buffer binding proxy0.45-0.47 missed the predeclared0.5 threshold in all4; unanchored proxy<0.1 passed.",
+    "Exploratory untrained policies still have high queue, not qualified learned baselines or CPU advantage.",
+    "CUBIC unacked*mss is an outstanding-byte proxy, includes lost/SACKed data; not exact pipe when loss occurs.",
+    "CUBIC monitor is buffered; reported quantiles cover logged samples, not a continuous full60s in-flight integral.",
+    "Each buffer factorial cell has one run, initialization/exploration seeds are not independently trained seeds."
+  ],
+  "tests": {
+    "local_tools": 66,
+    "other_existing_e2": 5,
+    "other_existing_scalar_audit": 7,
+    "actual_cloud_python36": "New14/16 tests plus9 IPC codec; real TF initialization/freeze and TCP are separate evidence"
+  },
+  "protected": "All5 hosts:51 files unchanged; no experiment processes/IPC; exact original4 buffer settings restored.",
+  "next": "Review finite single-action Orca learning on a preregistered common environment. No training started and no global64MiB adoption.",
+  "transfer": "Small sources/registrations/results only. All new checkpoint/replay/packet logs remain cloud.",
+  "github_pushed": false,
+  "native_source_archival": {
+    "base": "frameworks/baseline/code/runtime/src/tcp_eval.cc",
+    "executed_sha256": "ef9f5be44a1111c2db4071314e4ef053816a27e8aaacf0097a9c9301a6b056f2",
+    "archived_sha256": "4a4b1ea328924206ba8aa28ca61b62f4163ab344149df0de7ac452a946407408",
+    "transformation": "Archive removes trailing whitespace and expands indentation tabs only; executed source is unchanged retained baseline tcp_eval.cc with the two NativeMonitor fprintf fields extended by unacked/mss. Exact original emitted source retained in local experiment and cloud native/tcp-buffer-probe.cc. No native semantic change or new compile claim."
+  }
+}

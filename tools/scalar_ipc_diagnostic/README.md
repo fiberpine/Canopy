@@ -1,3 +1,33 @@
+# 最新：累计探索与端主机缓冲对照（2026-10-27）
+
+新增的是零优化训练采样诊断，未训练成功模型。zero_sum16/16过窗口门槛，iid2/16百万窗口、8/16持续时间失败；32次配对模型初值96变量相同。4次大缓冲复核过窗口门槛，但binding proxy>.5的预测全未过，不能省略。原始初始化诊断和IPC工具说明保留在后文。
+
+无需服务器的主试验复算：
+
+```sh
+python3 tools/scalar_ipc_diagnostic/analyze_exploration.py --results evidence/scalar-exploration-20261027/formal-results.json --registration evidence/scalar-exploration-20261027/registration-master.json
+python3 -m unittest discover -s tools -p 'test_*.py'
+python3 tools/verify_repository.py
+```
+
+`analyze_exploration.py`使用`same_day_all`支持全部16组同日同机配对；默认历史reference仍是a969f67的初始化结果，仅供来源对照，P2主判断实际使用本轮同日iid。判定只供后续审阅，不自动开长训。`make_exploration_registration.py --same-day-all`生成32次计划；默认20次是Claude原提案，实际执行32次。必须另用新目录、新预算与实际路径，不能重启证据中的已结束计划。
+
+新代码：`frameworks/canopy_single/scalar_exploration.py`的rho0平稳offset差分，`exploration_process=zero_sum_offset`显式启用；缺省iid原路径保留。Replay仍存真实执行动作。累计探索平稳不是硬界限，不保证CUBIC真实窗口或学习后策略稳定。`window_binding.py`用已完成动作配对，排除终止后pending命令；`unacked*mss`/binding均是代理，丢包时不是严格pipe。
+
+独立环境工具`environment_probe.py`与`tcp-buffer-probe.cc`对应三条件×current/send64/recv64/both64的12次纯CUBIC运行，读取同一原有20ms TCP_INFO调用、仅增加unacked/mss日志字段，没有RL写窗。`buffer_zero_probe.py`对应4次大缓冲零优化复核。两个Python工具显式读取`CANOPY_IPC_DIAGNOSTIC_ROOT`和注册JSON，包含有限截止、原参数回执、异常恢复及独立恢复watcher；会实际启动TCP/临时改内核缓冲，**本次发布不执行它们**。格式整理后的CUBIC源与执行SHA区别见`validation.json`。
+
+构建纯CUBIC诊断程序（Linux，FRAME须为含完整code/runtime的独立scalar框架）：
+
+```sh
+g++ -std=c++11 -O2 -pthread -I "$FRAME/code/runtime/src" tools/scalar_ipc_diagnostic/tcp-buffer-probe.cc "$FRAME/code/runtime/src/flow.cc" -o "$CANOPY_IPC_DIAGNOSTIC_ROOT/native/tcp-buffer-probe"
+```
+
+实际运行须准备`environment-registration.json`（condition/mode_order/deadline_epoch，可选output_directory/port_base）或`buffer-zero-registration.json`（jobs/deadline_epoch）；58次有效TCP的计划、完整结果、3次端口失败、7项缺失补测与恢复记录都在[evidence/scalar-exploration-20261027](../../evidence/scalar-exploration-20261027)。原始sysctl均已恢复，没有采用64MiB为新全局默认值。每个CUBIC组合只有一次；初始化种子不是训练seed。原源码/大模型/replay/逐包仍在实验存储，未新增Release资产。
+
+[实测及限制](../../docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md) · [发布来源](../../evidence/scalar-exploration-20261027/publication-provenance.json)
+
+---
+
 # 单动作IPC完整性与零优化初始化检查
 
 这组工具对应2026-10-27实际完成的诊断，不是新增训练方案。结论为：**新IPC完整性检查通过，小幅初始化仍失败，长训NO-GO**。健康V31及原baseline模型未改。

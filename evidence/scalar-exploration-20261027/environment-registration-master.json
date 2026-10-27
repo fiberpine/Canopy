@@ -1,0 +1,110 @@
+[
+  {
+    "host": "actor-a",
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R200-q2",
+      "nominal_mbps": 48,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 1600,
+      "queue_bytes": 2406400,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation"
+    },
+    "mode_order": [
+      "both64",
+      "send64",
+      "current",
+      "recv64"
+    ],
+    "deadline_epoch": 1793102636.8216624,
+    "seconds": 60,
+    "hypothesis": "End-host in-flight limit; distinguish send vs receive socket buffers without RL.",
+    "source_sha256": "ef9f5be44a1111c2db4071314e4ef053816a27e8aaacf0097a9c9301a6b056f2",
+    "monitor": "Same20ms TCP_INFO reads as retained CUBIC native; append unacked/mss only, no RL or writes",
+    "restoration": "Restore all4 values and verify; independent owner-death/deadline watcher",
+    "rule": "Report individual socket snapshots and full/trim10. Causal support requires only-buffer interventions to move in-flight distribution and socket limits consistently; no automatic global adoption or training.",
+    "predictions": {
+      "current": "inflight about2.8-3.3MB and no packet loss (hypothesis)",
+      "both64": "inflight>3.5MB and loss (hypothesis)",
+      "single_sides": "Identify active limit from data; not assumed"
+    }
+  },
+  {
+    "host": "actor-b",
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R200-q2",
+      "nominal_mbps": 72,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 2400,
+      "queue_bytes": 3609600,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation"
+    },
+    "mode_order": [
+      "current",
+      "send64",
+      "both64",
+      "recv64"
+    ],
+    "deadline_epoch": 1793102636.8216624,
+    "seconds": 60,
+    "hypothesis": "End-host in-flight limit; distinguish send vs receive socket buffers without RL.",
+    "source_sha256": "ef9f5be44a1111c2db4071314e4ef053816a27e8aaacf0097a9c9301a6b056f2",
+    "monitor": "Same20ms TCP_INFO reads as retained CUBIC native; append unacked/mss only, no RL or writes",
+    "restoration": "Restore all4 values and verify; independent owner-death/deadline watcher",
+    "rule": "Report individual socket snapshots and full/trim10. Causal support requires only-buffer interventions to move in-flight distribution and socket limits consistently; no automatic global adoption or training.",
+    "predictions": {
+      "current": "inflight about2.8-3.3MB and no packet loss (hypothesis)",
+      "both64": "inflight>3.5MB and loss (hypothesis)",
+      "single_sides": "Identify active limit from data; not assumed"
+    }
+  },
+  {
+    "host": "actor-c",
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R200-q5",
+      "nominal_mbps": 48,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 4000,
+      "queue_bytes": 6016000,
+      "queue_bdp": 5,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation"
+    },
+    "mode_order": [
+      "send64",
+      "both64",
+      "recv64",
+      "current"
+    ],
+    "deadline_epoch": 1793102636.8216624,
+    "seconds": 60,
+    "hypothesis": "End-host in-flight limit; distinguish send vs receive socket buffers without RL.",
+    "source_sha256": "ef9f5be44a1111c2db4071314e4ef053816a27e8aaacf0097a9c9301a6b056f2",
+    "monitor": "Same20ms TCP_INFO reads as retained CUBIC native; append unacked/mss only, no RL or writes",
+    "restoration": "Restore all4 values and verify; independent owner-death/deadline watcher",
+    "rule": "Report individual socket snapshots and full/trim10. Causal support requires only-buffer interventions to move in-flight distribution and socket limits consistently; no automatic global adoption or training.",
+    "predictions": {
+      "current": "inflight about2.8-3.3MB and no packet loss (hypothesis)",
+      "both64": "inflight>3.5MB and loss (hypothesis)",
+      "single_sides": "Identify active limit from data; not assumed"
+    }
+  }
+]

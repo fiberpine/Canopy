@@ -1,0 +1,39 @@
+{
+  "previous_public_main": "a969f673b2e0618003acd72bf077d2ef182ce043",
+  "research_archive_commit": "7272a2535728453f3ffde02f177471fa19d51a93",
+  "original_tag": "consolidated-20261018",
+  "actual_execution": "a969f67 plus supplied Claude patch and audited corrections; exact per-node deployment hashes retained. Later archive/publication commits are not the execution commit.",
+  "redaction": "Experiment roots replaced by placeholders, node aliases replaced consistently in JSON keys/values and directory names. Exact numeric metrics preserved. Original receipts hash execution bytes, repository-files.json hashes public bytes.",
+  "source_files_identical_to_research_archive": {
+    "frameworks/canopy_single/distributed.py": "cdfc9f7c56e03a2835e1f1788daffdf5d3e95fb2955585eb9a2b05883b5815ba",
+    "frameworks/canopy_single/scalar_exploration.py": "764ad57eda4962c77352c53a566295fa12c5c9fcd6e5ff367b03880519427828",
+    "tools/scalar_ipc_diagnostic/analyze_exploration.py": "c33301e7aac425059236593d2f897f2519b33281288a5c85e0c7fb82c253acf0",
+    "tools/scalar_ipc_diagnostic/buffer_zero_probe.py": "d8bcaa1b7801f1afe164384a8150aa329776cf5911c69769a546a472d5ccadea",
+    "tools/scalar_ipc_diagnostic/environment_probe.py": "75f41a9f4a87bb81ac44b4f8585d06a6b8f2de0c0b72046ef11dc28b432beaca",
+    "tools/scalar_ipc_diagnostic/make_exploration_registration.py": "521e9ae767306f031ed7837bcc97c0a053989093091a6588f1fb02b99bbc74f5",
+    "tools/scalar_ipc_diagnostic/probe_driver.py": "cebbbfae5a2337117f35d18eb65a48d001cf80614dcce11db574a87e9c61f5ad",
+    "tools/scalar_ipc_diagnostic/tcp-buffer-probe.cc": "4a4b1ea328924206ba8aa28ca61b62f4163ab344149df0de7ac452a946407408",
+    "tools/scalar_ipc_diagnostic/window_binding.py": "d62e8009eaafa6be9559cec80eb1f8dec6ab433ac20f67dae2e75e7e9f3892d3",
+    "tools/test_exploration_check.py": "d9e406be7f9c18a52f50881bd4c29c7c4100e01ea163ea8cf1298b8bf27d3b86",
+    "tools/test_scalar_exploration.py": "73afb15d3dcea163f6b8a907486ed7acb7a53b2cc8979b6938a6ddf1dac4c884"
+  },
+  "metrics": {
+    "formal_runs": 32,
+    "smokes": 10,
+    "CUBIC": 12,
+    "buffer_zero": 4,
+    "all_full_trim_csv_rows": 116,
+    "all_numeric_metrics_exact": true
+  },
+  "failures": "Three EADDRINUSE pre-TCP starts retained with FAILED statuses. Only seven missing CUBIC arms completed using distinct ports. No completed TCP repeated.",
+  "limitations": [
+    "No new trained or qualified baseline. No dual-action performance/CPU improvement claim.",
+    "Binding proxy>0.5 prediction failed in all four enlarged-buffer zero-update checks.",
+    "Published CUBIC source differs from executed source only by documented whitespace cleanup.",
+    "Historical registration deadlines expired; not a new run authorization.",
+    "No new model/replay/raw packet logs uploaded; retained in experiment storage."
+  ],
+  "publication_cloud_connections": 0,
+  "publication_new_TCP_runs": 0,
+  "publication_new_optimizer_updates": 0
+}

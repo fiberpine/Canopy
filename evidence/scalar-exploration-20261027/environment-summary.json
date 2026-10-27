@@ -1,0 +1,95 @@
+[
+  {
+    "host": "actor-a",
+    "condition": "G48-R200-q2",
+    "restored": true,
+    "results": {
+      "both64": {
+        "outstanding_payload_MB": 4.614776,
+        "util": 1.000000560050778,
+        "mean_queue_ms": 314.3408729740975,
+        "drop": 0.000600282132602323
+      },
+      "send64": {
+        "outstanding_payload_MB": 3.20008,
+        "util": 0.9999988398948171,
+        "mean_queue_ms": 343.01710520444436,
+        "drop": 0.0
+      },
+      "current": {
+        "outstanding_payload_MB": 3.314472,
+        "util": 1.0000021601958577,
+        "mean_queue_ms": 271.0297608562138,
+        "drop": 0.0
+      },
+      "recv64": {
+        "outstanding_payload_MB": 3.271032,
+        "util": 0.9840292053146152,
+        "mean_queue_ms": 261.17182208173404,
+        "drop": 0.00035692807165942217
+      }
+    }
+  },
+  {
+    "host": "actor-b",
+    "condition": "G72-R200-q2",
+    "restored": true,
+    "results": {
+      "current": {
+        "outstanding_payload_MB": 3.285512,
+        "util": 0.999998657768233,
+        "mean_queue_ms": 140.62723834678027,
+        "drop": 0.0
+      },
+      "send64": {
+        "outstanding_payload_MB": 3.227592,
+        "util": 0.9999996622198203,
+        "mean_queue_ms": 161.4982145665164,
+        "drop": 0.0
+      },
+      "both64": {
+        "outstanding_payload_MB": 5.518328,
+        "util": 1.0000023555723063,
+        "mean_queue_ms": 267.80060151380974,
+        "drop": 0.0009658142014929878
+      },
+      "recv64": {
+        "outstanding_payload_MB": 3.785072,
+        "util": 1.0000006222266469,
+        "mean_queue_ms": 148.60004927290873,
+        "drop": 0.0
+      }
+    }
+  },
+  {
+    "host": "actor-c",
+    "condition": "G48-R200-q5",
+    "restored": true,
+    "results": {
+      "send64": {
+        "outstanding_payload_MB": 3.194288,
+        "util": 1.0000009867561326,
+        "mean_queue_ms": 342.989923782457,
+        "drop": 0.0
+      },
+      "both64": {
+        "outstanding_payload_MB": 9.429376,
+        "util": 1.0000026269048394,
+        "mean_queue_ms": 654.7136319894144,
+        "drop": 0.0031950636266967537
+      },
+      "recv64": {
+        "outstanding_payload_MB": 3.701088,
+        "util": 0.9999973330915336,
+        "mean_queue_ms": 312.8217851338353,
+        "drop": 0.0
+      },
+      "current": {
+        "outstanding_payload_MB": 3.314472,
+        "util": 1.0000013067851485,
+        "mean_queue_ms": 270.32556689450337,
+        "drop": 0.0
+      }
+    }
+  }
+]

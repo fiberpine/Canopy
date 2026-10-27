@@ -1,5 +1,5 @@
 {
-  "scope": "2026-10-27 scalar verified IPC and zero-update initialization evidence, plus E2; original51 selected model files unchanged",
+  "scope": "2026-10-27 stationary scalar exploration and independent buffer diagnostics; original51 model files unchanged, no new trained model",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 9821,
-      "sha256": "19904b0fc5b846f39fb68ebc2714f15fb951e710db4bfe3d6f43aa6db38fc5e2"
+      "bytes": 10271,
+      "sha256": "9e5c3f62156f952b7ed9c951ebea919b67a8a92d05558ac3b2ef6227bf351fed"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -69,8 +69,13 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 23746,
-      "sha256": "0986c7a2359bd52888a73a52e74fc9e42502aca9bf6bc137ec2d18c2d50e7e06"
+      "bytes": 24656,
+      "sha256": "022fa58abc6bece99b1a85b185b7166fb40b66cd8926df66a3b867d1a6bba5cd"
+    },
+    {
+      "path": "docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md",
+      "bytes": 15666,
+      "sha256": "72d45f211b4a64e5b0fa07efc78fc8a4ae9eda7672a0ee782c82ce6649ad2b35"
     },
     {
       "path": "docs/THIRD_PARTY.md",
@@ -2398,6 +2403,181 @@
       "sha256": "ca20a681ee623654b020a3cf5c3aba9b714f9a686b5e1adedd5a7266a1c06715"
     },
     {
+      "path": "evidence/scalar-exploration-20261027/all-network-windows.csv",
+      "bytes": 22876,
+      "sha256": "74c12261b0e2e2577990ad28a8bf14f1698ea4a0fe4eb1c5de6db946e3a1f8a6"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/buffer-zero-registration-master.json",
+      "bytes": 15817,
+      "sha256": "c1afb517c4504569918fc5590ab638f70146c1eb45da4bd56d2173f7e32874cf"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/buffer-zero-results.json",
+      "bytes": 47729,
+      "sha256": "2a28392ac640493a7e72a448516edab007322826378f5be43b7e88a139cc2c18"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/buffer-zero-summary.json",
+      "bytes": 1486,
+      "sha256": "e486c42c820486784cbf6de1d20dea629b5ab57e148e485ef0f582868903400e"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/environment-registration-master.json",
+      "bytes": 4647,
+      "sha256": "f8342639478f9327a017c5f845f5c249f6f530d1d116df843686c2f6a0a8740e"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/environment-results.json",
+      "bytes": 130745,
+      "sha256": "54d024ccc1c8ec7a63a3a60a68aa42eb8cbd31f8ea5377c1034e1d7e9dddebbb"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/environment-summary.json",
+      "bytes": 2456,
+      "sha256": "2a71b61390fa4f365b4db97cfe1b0bd61592528f0bf141d989eb96fae33aa8af"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/evaluation-runs.csv",
+      "bytes": 11381,
+      "sha256": "88e90fe074db1f0d2093debb26bca5e71547c94a60034d7e5fcd3146089a4ac9"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/exploration-adjudication.json",
+      "bytes": 50269,
+      "sha256": "acc8308944c7cf3fcd8a7b8d97c9f9abaec68fa4327543cd5709371f49dc97ea"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/five-node-closure.json",
+      "bytes": 10659,
+      "sha256": "8effcb4f15281da1037bb3dd7204b14ac3e3286eebaa6616ce0f153e288b84d3"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/formal-results.json",
+      "bytes": 192632,
+      "sha256": "fce43cf153e6ec074da49e1cb3e2d12132392aa0ae77983f5cdc938a7be42af7"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-a/collection-receipt.json",
+      "bytes": 101,
+      "sha256": "8fb31b17cec637cc653b15abc5385458f0cbdf2bb36465656ac2129423fc4cb9"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-a/deployment.json",
+      "bytes": 6083,
+      "sha256": "3cd606f3d6a331287d27cfd662dad366d134f3c7cca602973c193e266e8b9935"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-a/exploration-closure.json",
+      "bytes": 2112,
+      "sha256": "4fa229272c185a6e241653b02aaf546de8c724b8298f87399b33c97fdaa28107"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-a/smoke-results.json",
+      "bytes": 11917,
+      "sha256": "7b15a1f4e7c6ee4e2c999d50426692353b694ba0cdb00a442e15f6168917e314"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-b/collection-receipt.json",
+      "bytes": 101,
+      "sha256": "98d700fac03dde4c1677e2c894eaad22e483c040519a1da6d71c15287fdd98ce"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-b/deployment.json",
+      "bytes": 6083,
+      "sha256": "d81d3c7023c5b68bdce32039bd2d4f3d697d2357b9014c87b35176bb2d68b943"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-b/exploration-closure.json",
+      "bytes": 2116,
+      "sha256": "5005d361557aa8aa5e48adbd45d14b2206075ae3b350d9332eee90f2f2cd35a3"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-b/smoke-results.json",
+      "bytes": 11885,
+      "sha256": "72b3b4e29e6d5ec5b0a8eb1e68c50f80a14204b75950a87c807dbaf7bba501e2"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-c/collection-receipt.json",
+      "bytes": 101,
+      "sha256": "d05efa00f1d76c18d37a6e067614d6c34794f6817d62ee6e6fa546a700aa512a"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-c/deployment.json",
+      "bytes": 6083,
+      "sha256": "5ca1b631afca214b9a802f126303eb02b81b264d71dd25433a54c5080afafc38"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-c/exploration-closure.json",
+      "bytes": 2119,
+      "sha256": "b59491df0639caf25cda34f43774031bb81e6fa28961833ce42a99c207196950"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-c/smoke-results.json",
+      "bytes": 11913,
+      "sha256": "5fe8619b076a92aaa1c8400691545e7e186ed452072df837db374390ed09b877"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-d/collection-receipt.json",
+      "bytes": 101,
+      "sha256": "d4ed621e985cfaaa838d4c5abb8a2376a380bfe20f44ed568d2e9a81c96ecfd4"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-d/deployment.json",
+      "bytes": 6083,
+      "sha256": "7eb4aece7bac2cc1acc67191818f55760cf111d024fa35a998a49f6b26d22baa"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-d/exploration-closure.json",
+      "bytes": 2120,
+      "sha256": "962dae3cce27c923433fca6cb14528077220ad847b2b6519d31557601c674bfd"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/actor-d/smoke-results.json",
+      "bytes": 11903,
+      "sha256": "7f42eac2e12d57ad08ccebdb71ef04bcfa89aacbfb646f459fb3c96f1a9d0017"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/learner/collection-receipt.json",
+      "bytes": 102,
+      "sha256": "b44dad019e043635870cb85c3010200164dc6fb77ed9f1f67c18d3124ce5b029"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/learner/deployment.json",
+      "bytes": 6083,
+      "sha256": "5f8fa2218666f2658dec7957b08aae04dbaae5b9a9933ff16d362df8ec67f054"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/learner/exploration-closure.json",
+      "bytes": 2510,
+      "sha256": "556332c3bbc5081aa89ae7459295b50635b524e3cb13b1a84ffc5037c8cd32de"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/nodes/learner/smoke-results.json",
+      "bytes": 11918,
+      "sha256": "f06773d15a77be1f97d5c0206d694601c23a963db396910dbc80ab2314b55082"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/publication-provenance.json",
+      "bytes": 2939,
+      "sha256": "3034fdd118475985e79a08e981798331857f0254156be842a243e77e7d6b3494"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/publication-validation.json",
+      "bytes": 620,
+      "sha256": "b4ca115366b51d7a32bfcf0a1da64d537ca9af3e9b47a99bc986c05618852274"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/registration-master.json",
+      "bytes": 129676,
+      "sha256": "3d45c43eec2bf99ac6b644ce7e306f479666a1677048e208c6be1689541fd6d8"
+    },
+    {
+      "path": "evidence/scalar-exploration-20261027/validation.json",
+      "bytes": 3398,
+      "sha256": "50ad949d999da9d93ce3ca6ee603e7b3e2f9176291956baa64753b496e1f6af5"
+    },
+    {
       "path": "evidence/scalar-ipc-init-20261027/closure.json",
       "bytes": 177,
       "sha256": "26e88aefe7a8999a5af76e7f7556ccaf6a53ebe35bf89c94df8e361a9f1dfda1"
@@ -4058,8 +4238,8 @@
     },
     {
       "path": "frameworks/canopy_single/distributed.py",
-      "bytes": 20109,
-      "sha256": "ff866bed459fa0de33cc122980851efbfefeabb9186f83d5dac19b38ad9795a0"
+      "bytes": 20559,
+      "sha256": "cdfc9f7c56e03a2835e1f1788daffdf5d3e95fb2955585eb9a2b05883b5815ba"
     },
     {
       "path": "frameworks/canopy_single/evaluate.py",
@@ -4155,6 +4335,11 @@
       "path": "frameworks/canopy_single/resource_cost.py",
       "bytes": 3870,
       "sha256": "37489568d4bbfaf4ad7b45cb5f7fcdabe17e242f171f96df4e31ed77a10437ae"
+    },
+    {
+      "path": "frameworks/canopy_single/scalar_exploration.py",
+      "bytes": 3279,
+      "sha256": "764ad57eda4962c77352c53a566295fa12c5c9fcd6e5ff367b03880519427828"
     },
     {
       "path": "frameworks/canopy_single/scalar_window_init.py",
@@ -8351,13 +8536,28 @@
     },
     {
       "path": "tools/scalar_ipc_diagnostic/README.md",
-      "bytes": 5118,
-      "sha256": "275ceae9b5880428f0b495e03c41e9fc7afe431d73e4c6f64d19dd5debe629d4"
+      "bytes": 8389,
+      "sha256": "6b9ff2c10e9111ffda04681aea965c5a53ca6fc2cf5ac0e5c1fa3972eefe4aa6"
     },
     {
       "path": "tools/scalar_ipc_diagnostic/analyze.py",
       "bytes": 2540,
       "sha256": "e2fb51a08e1b1ecea0e0678a490c53070d331b271ee82f29a9297f8c02260bd4"
+    },
+    {
+      "path": "tools/scalar_ipc_diagnostic/analyze_exploration.py",
+      "bytes": 6121,
+      "sha256": "c33301e7aac425059236593d2f897f2519b33281288a5c85e0c7fb82c253acf0"
+    },
+    {
+      "path": "tools/scalar_ipc_diagnostic/buffer_zero_probe.py",
+      "bytes": 3062,
+      "sha256": "d8bcaa1b7801f1afe164384a8150aa329776cf5911c69769a546a472d5ccadea"
+    },
+    {
+      "path": "tools/scalar_ipc_diagnostic/environment_probe.py",
+      "bytes": 7217,
+      "sha256": "75f41a9f4a87bb81ac44b4f8585d06a6b8f2de0c0b72046ef11dc28b432beaca"
     },
     {
       "path": "tools/scalar_ipc_diagnostic/ipc_echo_audit.py",
@@ -8375,14 +8575,39 @@
       "sha256": "62eb3aacd4bc556d2960f342ecbabe679f619cd2e47fa5493b73e2abde1b0ade"
     },
     {
+      "path": "tools/scalar_ipc_diagnostic/make_exploration_registration.py",
+      "bytes": 8653,
+      "sha256": "521e9ae767306f031ed7837bcc97c0a053989093091a6588f1fb02b99bbc74f5"
+    },
+    {
       "path": "tools/scalar_ipc_diagnostic/probe_driver.py",
-      "bytes": 7920,
-      "sha256": "07e23e90a73f31ee8686fd429348e8b7a570ea6c31f00056fe190297b02115fc"
+      "bytes": 9465,
+      "sha256": "cebbbfae5a2337117f35d18eb65a48d001cf80614dcce11db574a87e9c61f5ad"
+    },
+    {
+      "path": "tools/scalar_ipc_diagnostic/tcp-buffer-probe.cc",
+      "bytes": 14849,
+      "sha256": "4a4b1ea328924206ba8aa28ca61b62f4163ab344149df0de7ac452a946407408"
+    },
+    {
+      "path": "tools/scalar_ipc_diagnostic/window_binding.py",
+      "bytes": 13520,
+      "sha256": "d62e8009eaafa6be9559cec80eb1f8dec6ab433ac20f67dae2e75e7e9f3892d3"
     },
     {
       "path": "tools/scalar_research.py",
       "bytes": 7174,
       "sha256": "aecc1f7fe0718c38caeb9af4af91ba085b41e86c46f4e28cc7d15dcba3816e02"
+    },
+    {
+      "path": "tools/test_exploration_check.py",
+      "bytes": 6166,
+      "sha256": "d9e406be7f9c18a52f50881bd4c29c7c4100e01ea163ea8cf1298b8bf27d3b86"
+    },
+    {
+      "path": "tools/test_scalar_exploration.py",
+      "bytes": 3123,
+      "sha256": "73afb15d3dcea163f6b8a907486ed7acb7a53b2cc8979b6938a6ddf1dac4c884"
     },
     {
       "path": "tools/test_scalar_verified_ipc.py",

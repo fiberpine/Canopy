@@ -1,0 +1,2990 @@
+[
+  {
+    "environment": {
+      "status": {
+        "status": "FAILED",
+        "epoch": 1793100948.5977294,
+        "traceback": "Traceback (most recent call last):\n  File \"${EXPERIMENT_ROOT}/environment_probe.py\", line 90, in main\n    rows=list(csv.DictReader((run/'control.csv').open()))\n  File \"/usr/lib/python3.6/pathlib.py\", line 1183, in open\n    opener=self._opener)\n  File \"/usr/lib/python3.6/pathlib.py\", line 1037, in _opener\n    return self._accessor.open(self, flags, mode)\n  File \"/usr/lib/python3.6/pathlib.py\", line 387, in wrapped\n    return strfunc(str(pathobj), *args)\nFileNotFoundError: [Errno 2] No such file or directory: '${EXPERIMENT_ROOT}/environment/send64/control.csv'\n"
+      },
+      "restored": {
+        "status": "PASS",
+        "values": {
+          "net.ipv4.tcp_wmem": {
+            "expected": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "actual": [
+              "4096",
+              "32768",
+              "4194304"
+            ]
+          },
+          "net.ipv4.tcp_rmem": {
+            "expected": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "actual": [
+              "4096",
+              "87380",
+              "6291456"
+            ]
+          },
+          "net.core.wmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          },
+          "net.core.rmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          }
+        },
+        "epoch": 1793100948.6103623
+      },
+      "original": {
+        "net.ipv4.tcp_wmem": [
+          "4096",
+          "32768",
+          "4194304"
+        ],
+        "net.ipv4.tcp_rmem": [
+          "4096",
+          "87380",
+          "6291456"
+        ],
+        "net.core.wmem_max": [
+          "212992"
+        ],
+        "net.core.rmem_max": [
+          "212992"
+        ]
+      },
+      "result": [
+        {
+          "mode": "both64",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "67108864"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "67108864"
+            ],
+            "net.core.wmem_max": [
+              "67108864"
+            ],
+            "net.core.rmem_max": [
+              "67108864"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.043434858322144,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         14559640               10.0.0.1:49731              10.0.0.2:46420     \n\t skmem:(r0,rb374400,t0,tb21733888,f2009192,w15570840,o0,bl0,d0) cubic wscale:11,11 rto:768 rtt:566.423/0.254 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2310 ssthresh:1769 bytes_acked:77155072 bytes_received:38 segs_out:55746 segs_in:32914 data_segs_out:55745 data_segs_in:1 send 47.2Mbps lastrcv:14660 pacing_rate 56.7Mbps delivery_rate 46.2Mbps busy:14660ms rwnd_limited:96ms(0.7%) unacked:2308 retrans:0/124 rcv_space:43440 rcv_ssthresh:43440 notsent:11217656 minrtt:201.299\n"
+            },
+            {
+              "elapsed_s": 30.09215545654297,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         15804920               10.0.0.1:49731              10.0.0.2:46420     \n\t skmem:(r0,rb374400,t0,tb21733888,f1867784,w16764920,o0,bl0,d0) cubic wscale:11,11 rto:720 rtt:518.459/0.359 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2072 ssthresh:1703 bytes_acked:164071272 bytes_received:38 segs_out:115566 segs_in:65174 data_segs_out:115565 data_segs_in:1 send 46.3Mbps lastrcv:29708 pacing_rate 55.6Mbps delivery_rate 46.2Mbps busy:29708ms rwnd_limited:96ms(0.3%) unacked:2072 retrans:0/155 rcv_space:43440 rcv_ssthresh:43440 notsent:12804664 minrtt:201.299\n"
+            },
+            {
+              "elapsed_s": 45.13833951950073,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         16075696               10.0.0.1:49731              10.0.0.2:46420     \n\t skmem:(r0,rb374400,t0,tb21733888,f1511504,w17125296,o0,bl0,d0) cubic wscale:11,11 rto:780 rtt:578.845/0.47 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2346 ssthresh:1730 bytes_acked:250984576 bytes_received:38 segs_out:175929 segs_in:97258 data_segs_out:175928 data_segs_in:1 send 46.9Mbps lastrcv:44756 pacing_rate 56.3Mbps delivery_rate 46.3Mbps busy:44756ms rwnd_limited:96ms(0.2%) unacked:2343 retrans:0/224 rcv_space:43440 rcv_ssthresh:43440 notsent:12683032 minrtt:201.299\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 4614776,
+          "inflight_payload_bytes_max": 8333240,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 46.79192746666667,
+              "capacity_mbps": 47.994845866666665,
+              "utilization": 0.974936508738005,
+              "queue_mean_ms": 302.66846063203,
+              "queue_p95_ms": 399.0,
+              "queue_p99_ms": 401.0,
+              "dropped_packets": 244.0,
+              "arrival_packets": 234880.0,
+              "drop_fraction": 0.0010388283378746593,
+              "last_log_s": 62.43,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 47.99567488,
+              "capacity_mbps": 47.995648,
+              "utilization": 1.000000560050778,
+              "queue_mean_ms": 314.3408729740975,
+              "queue_p95_ms": 398.0,
+              "queue_p99_ms": 401.0,
+              "dropped_packets": 120.0,
+              "arrival_packets": 199906.0,
+              "drop_fraction": 0.000600282132602323,
+              "last_log_s": 62.43,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        }
+      ],
+      "failures": {
+        "send64/server.log": "\n[tcp-buffer-probe.cc-start_server-153] bind error srv_ctr_ip: 000000: Address already in use\n"
+      },
+      "monitor_coverage": {
+        "both64": {
+          "first_us": "1793100886235745",
+          "last_us": "1793100946234238",
+          "rows": 2992
+        }
+      }
+    },
+    "environment-r2": {
+      "status": {
+        "status": "COMPLETE",
+        "runs": 3,
+        "epoch": 1793101339.8819907
+      },
+      "restored": {
+        "status": "PASS",
+        "values": {
+          "net.ipv4.tcp_wmem": {
+            "expected": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "actual": [
+              "4096",
+              "32768",
+              "4194304"
+            ]
+          },
+          "net.ipv4.tcp_rmem": {
+            "expected": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "actual": [
+              "4096",
+              "87380",
+              "6291456"
+            ]
+          },
+          "net.core.wmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          },
+          "net.core.rmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          }
+        },
+        "epoch": 1793101339.8942795
+      },
+      "original": {
+        "net.ipv4.tcp_wmem": [
+          "4096",
+          "32768",
+          "4194304"
+        ],
+        "net.ipv4.tcp_rmem": [
+          "4096",
+          "87380",
+          "6291456"
+        ],
+        "net.core.wmem_max": [
+          "212992"
+        ],
+        "net.core.rmem_max": [
+          "212992"
+        ]
+      },
+      "result": [
+        {
+          "mode": "send64",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "67108864"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "net.core.wmem_max": [
+              "67108864"
+            ],
+            "net.core.rmem_max": [
+              "212992"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.043479681015015,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49802 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         12971184               10.0.0.1:49802              10.0.0.2:58972     \n\t skmem:(r0,rb374400,t0,tb20219392,f1107792,w13887664,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.731/0.857 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:77132000 bytes_received:38 segs_out:55782 segs_in:17710 data_segs_out:55781 data_segs_in:1 send 49.4Mbps lastrcv:14656 pacing_rate 59.3Mbps delivery_rate 46.8Mbps busy:14656ms rwnd_limited:1920ms(13.1%) unacked:2192 rcv_space:28960 rcv_ssthresh:28960 notsent:9827576 minrtt:201.422\n"
+            },
+            {
+              "elapsed_s": 30.09126329421997,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49802 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         15745552               10.0.0.1:49802              10.0.0.2:58972     \n\t skmem:(r0,rb374400,t0,tb20219392,f1419504,w16709392,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.867/0.248 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:164017792 bytes_received:38 segs_out:116485 segs_in:36564 data_segs_out:116484 data_segs_in:1 send 49.4Mbps lastrcv:29704 pacing_rate 59.3Mbps delivery_rate 46.9Mbps busy:29704ms rwnd_limited:5724ms(19.3%) unacked:2184 rcv_space:28960 rcv_ssthresh:28960 notsent:12600496 minrtt:201.422\n"
+            },
+            {
+              "elapsed_s": 45.139193058013916,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49802 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         18589424               10.0.0.1:49802              10.0.0.2:58972     \n\t skmem:(r0,rb374400,t0,tb20219392,f633872,w19604464,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.535/0.525 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:250899240 bytes_received:38 segs_out:177201 segs_in:54976 data_segs_out:177200 data_segs_in:1 send 49.4Mbps lastrcv:44752 pacing_rate 59.3Mbps delivery_rate 46.6Mbps busy:44752ms rwnd_limited:9536ms(21.3%) unacked:2205 rcv_space:28960 rcv_ssthresh:28960 notsent:15445784 minrtt:201.422\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 3200080,
+          "inflight_payload_bytes_max": 3213112,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 46.791755200000004,
+              "capacity_mbps": 47.994845866666665,
+              "utilization": 0.9749329194637077,
+              "queue_mean_ms": 326.0783446707207,
+              "queue_p95_ms": 344.0,
+              "queue_p99_ms": 344.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 237027.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 61.469,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 47.99559232,
+              "capacity_mbps": 47.995648,
+              "utilization": 0.9999988398948171,
+              "queue_mean_ms": 343.01710520444436,
+              "queue_p95_ms": 344.0,
+              "queue_p99_ms": 344.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 201671.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 61.469,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        },
+        {
+          "mode": "current",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "net.core.wmem_max": [
+              "212992"
+            ],
+            "net.core.rmem_max": [
+              "212992"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.045096158981323,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49801 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2555272               10.0.0.3:49801               10.0.0.4:57936     \n\t skmem:(r0,rb374400,t0,tb4194304,f946296,w3305352,o0,bl0,d0) cubic wscale:7,7 rto:612 rtt:409.341/3.826 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2338 ssthresh:1043 bytes_acked:77067936 bytes_received:38 segs_out:56847 segs_in:18998 data_segs_out:56846 data_segs_in:1 send 66.2Mbps lastsnd:100 lastrcv:14656 pacing_rate 79.4Mbps delivery_rate 48.9Mbps app_limited busy:14656ms rwnd_limited:224ms(1.5%) sndbuf_limited:4668ms(31.9%) unacked:1860 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.164\n"
+            },
+            {
+              "elapsed_s": 30.093604564666748,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49801 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2274200               10.0.0.3:49801               10.0.0.4:57936     \n\t skmem:(r0,rb374400,t0,tb4194304,f1318248,w2933400,o0,bl0,d0) cubic wscale:7,7 rto:644 rtt:443.121/3.825 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2338 ssthresh:1043 bytes_acked:163807232 bytes_received:38 segs_out:119846 segs_in:40095 data_segs_out:119845 data_segs_in:1 send 61.1Mbps lastsnd:148 lastrcv:29704 pacing_rate 73.3Mbps delivery_rate 49.0Mbps app_limited busy:29704ms rwnd_limited:700ms(2.4%) sndbuf_limited:15148ms(51.0%) unacked:1657 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.164\n"
+            },
+            {
+              "elapsed_s": 45.141239404678345,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49801 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3144336               10.0.0.3:49801               10.0.0.4:57936     \n\t skmem:(r0,rb374400,t0,tb4194304,f190832,w4060816,o0,bl0,d0) cubic wscale:7,7 rto:708 rtt:506.731/4.919 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2338 ssthresh:1043 bytes_acked:250552320 bytes_received:38 segs_out:183699 segs_in:61095 data_segs_out:183698 data_segs_in:1 send 53.4Mbps lastrcv:44752 pacing_rate 64.1Mbps delivery_rate 49.0Mbps app_limited busy:44752ms rwnd_limited:1176ms(2.6%) sndbuf_limited:25624ms(57.3%) unacked:2290 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.164\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 3314472,
+          "inflight_payload_bytes_max": 3326056,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 46.79282453333333,
+              "capacity_mbps": 47.994845866666665,
+              "utilization": 0.9749551996338807,
+              "queue_mean_ms": 261.175042314328,
+              "queue_p95_ms": 344.0,
+              "queue_p99_ms": 345.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 245627.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 60.727,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 47.99575168,
+              "capacity_mbps": 47.995648,
+              "utilization": 1.0000021601958577,
+              "queue_mean_ms": 271.0297608562138,
+              "queue_p95_ms": 344.0,
+              "queue_p99_ms": 345.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 210039.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 60.727,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        },
+        {
+          "mode": "recv64",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "67108864"
+            ],
+            "net.core.wmem_max": [
+              "212992"
+            ],
+            "net.core.rmem_max": [
+              "67108864"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.044396877288818,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49803 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2780920               10.0.0.1:49803               10.0.0.2:40758     \n\t skmem:(r0,rb374400,t0,tb4194304,f652296,w3591160,o0,bl0,d0) cubic wscale:11,11 rto:608 rtt:401.111/23.656 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2253 ssthresh:1726 bytes_acked:75885392 bytes_received:38 segs_out:55721 segs_in:28931 data_segs_out:55720 data_segs_in:1 send 65.1Mbps lastsnd:60 lastrcv:14652 pacing_rate 78.1Mbps delivery_rate 49.0Mbps app_limited busy:14652ms unacked:2013 retrans:0/8 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.266\n"
+            },
+            {
+              "elapsed_s": 30.092366933822632,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49803 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2327032               10.0.0.1:49803               10.0.0.2:40758     \n\t skmem:(r0,rb374400,t0,tb4194304,f1292296,w2959352,o0,bl0,d0) cubic wscale:11,11 rto:672 rtt:469.437/2.62 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2090 ssthresh:1722 bytes_acked:161519264 bytes_received:38 segs_out:116903 segs_in:60711 data_segs_out:116902 data_segs_in:1 send 51.6Mbps lastsnd:100 lastrcv:29700 pacing_rate 61.9Mbps delivery_rate 49.1Mbps app_limited busy:29700ms unacked:1654 retrans:0/13 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.266\n"
+            },
+            {
+              "elapsed_s": 45.14006519317627,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49803 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3136720               10.0.0.1:49803               10.0.0.2:40758     \n\t skmem:(r0,rb374400,t0,tb4194304,f290352,w3957200,o0,bl0,d0) cubic wscale:11,11 rto:696 rtt:492.736/0.45 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2087 ssthresh:1758 bytes_acked:247161648 bytes_received:38 segs_out:178956 segs_in:92568 data_segs_out:178955 data_segs_in:1 send 49.1Mbps lastrcv:44748 pacing_rate 58.9Mbps delivery_rate 49.1Mbps app_limited busy:44748ms unacked:2087 retrans:0/61 rcv_space:43440 rcv_ssthresh:43440 notsent:216760 minrtt:201.266\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 3271032,
+          "inflight_payload_bytes_max": 3579456,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 46.15081013333333,
+              "capacity_mbps": 47.994845866666665,
+              "utilization": 0.961578463269656,
+              "queue_mean_ms": 252.452402633644,
+              "queue_p95_ms": 338.0,
+              "queue_p99_ms": 365.0,
+              "dropped_packets": 81.0,
+              "arrival_packets": 239644.0,
+              "drop_fraction": 0.0003380013686969004,
+              "last_log_s": 60.602,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 47.22911936,
+              "capacity_mbps": 47.995648,
+              "utilization": 0.9840292053146152,
+              "queue_mean_ms": 261.17182208173404,
+              "queue_p95_ms": 339.0,
+              "queue_p99_ms": 366.0,
+              "dropped_packets": 73.0,
+              "arrival_packets": 204523.0,
+              "drop_fraction": 0.00035692807165942217,
+              "last_log_s": 60.602,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        }
+      ],
+      "failures": {},
+      "monitor_coverage": {
+        "send64": {
+          "first_us": "1793101155581176",
+          "last_us": "1793101215577663",
+          "rows": 2992
+        },
+        "recv64": {
+          "first_us": "1793101278756206",
+          "last_us": "1793101338754522",
+          "rows": 2992
+        },
+        "current": {
+          "first_us": "1793101217169953",
+          "last_us": "1793101277168001",
+          "rows": 2992
+        }
+      }
+    },
+    "all_results": [
+      {
+        "mode": "both64",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "67108864"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "67108864"
+          ],
+          "net.core.wmem_max": [
+            "67108864"
+          ],
+          "net.core.rmem_max": [
+            "67108864"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.043434858322144,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         14559640               10.0.0.1:49731              10.0.0.2:46420     \n\t skmem:(r0,rb374400,t0,tb21733888,f2009192,w15570840,o0,bl0,d0) cubic wscale:11,11 rto:768 rtt:566.423/0.254 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2310 ssthresh:1769 bytes_acked:77155072 bytes_received:38 segs_out:55746 segs_in:32914 data_segs_out:55745 data_segs_in:1 send 47.2Mbps lastrcv:14660 pacing_rate 56.7Mbps delivery_rate 46.2Mbps busy:14660ms rwnd_limited:96ms(0.7%) unacked:2308 retrans:0/124 rcv_space:43440 rcv_ssthresh:43440 notsent:11217656 minrtt:201.299\n"
+          },
+          {
+            "elapsed_s": 30.09215545654297,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         15804920               10.0.0.1:49731              10.0.0.2:46420     \n\t skmem:(r0,rb374400,t0,tb21733888,f1867784,w16764920,o0,bl0,d0) cubic wscale:11,11 rto:720 rtt:518.459/0.359 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2072 ssthresh:1703 bytes_acked:164071272 bytes_received:38 segs_out:115566 segs_in:65174 data_segs_out:115565 data_segs_in:1 send 46.3Mbps lastrcv:29708 pacing_rate 55.6Mbps delivery_rate 46.2Mbps busy:29708ms rwnd_limited:96ms(0.3%) unacked:2072 retrans:0/155 rcv_space:43440 rcv_ssthresh:43440 notsent:12804664 minrtt:201.299\n"
+          },
+          {
+            "elapsed_s": 45.13833951950073,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         16075696               10.0.0.1:49731              10.0.0.2:46420     \n\t skmem:(r0,rb374400,t0,tb21733888,f1511504,w17125296,o0,bl0,d0) cubic wscale:11,11 rto:780 rtt:578.845/0.47 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2346 ssthresh:1730 bytes_acked:250984576 bytes_received:38 segs_out:175929 segs_in:97258 data_segs_out:175928 data_segs_in:1 send 46.9Mbps lastrcv:44756 pacing_rate 56.3Mbps delivery_rate 46.3Mbps busy:44756ms rwnd_limited:96ms(0.2%) unacked:2343 retrans:0/224 rcv_space:43440 rcv_ssthresh:43440 notsent:12683032 minrtt:201.299\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 4614776,
+        "inflight_payload_bytes_max": 8333240,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 46.79192746666667,
+            "capacity_mbps": 47.994845866666665,
+            "utilization": 0.974936508738005,
+            "queue_mean_ms": 302.66846063203,
+            "queue_p95_ms": 399.0,
+            "queue_p99_ms": 401.0,
+            "dropped_packets": 244.0,
+            "arrival_packets": 234880.0,
+            "drop_fraction": 0.0010388283378746593,
+            "last_log_s": 62.43,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 47.99567488,
+            "capacity_mbps": 47.995648,
+            "utilization": 1.000000560050778,
+            "queue_mean_ms": 314.3408729740975,
+            "queue_p95_ms": 398.0,
+            "queue_p99_ms": 401.0,
+            "dropped_packets": 120.0,
+            "arrival_packets": 199906.0,
+            "drop_fraction": 0.000600282132602323,
+            "last_log_s": 62.43,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      },
+      {
+        "mode": "send64",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "67108864"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "6291456"
+          ],
+          "net.core.wmem_max": [
+            "67108864"
+          ],
+          "net.core.rmem_max": [
+            "212992"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.043479681015015,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49802 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         12971184               10.0.0.1:49802              10.0.0.2:58972     \n\t skmem:(r0,rb374400,t0,tb20219392,f1107792,w13887664,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.731/0.857 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:77132000 bytes_received:38 segs_out:55782 segs_in:17710 data_segs_out:55781 data_segs_in:1 send 49.4Mbps lastrcv:14656 pacing_rate 59.3Mbps delivery_rate 46.8Mbps busy:14656ms rwnd_limited:1920ms(13.1%) unacked:2192 rcv_space:28960 rcv_ssthresh:28960 notsent:9827576 minrtt:201.422\n"
+          },
+          {
+            "elapsed_s": 30.09126329421997,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49802 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         15745552               10.0.0.1:49802              10.0.0.2:58972     \n\t skmem:(r0,rb374400,t0,tb20219392,f1419504,w16709392,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.867/0.248 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:164017792 bytes_received:38 segs_out:116485 segs_in:36564 data_segs_out:116484 data_segs_in:1 send 49.4Mbps lastrcv:29704 pacing_rate 59.3Mbps delivery_rate 46.9Mbps busy:29704ms rwnd_limited:5724ms(19.3%) unacked:2184 rcv_space:28960 rcv_ssthresh:28960 notsent:12600496 minrtt:201.422\n"
+          },
+          {
+            "elapsed_s": 45.139193058013916,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49802 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         18589424               10.0.0.1:49802              10.0.0.2:58972     \n\t skmem:(r0,rb374400,t0,tb20219392,f633872,w19604464,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.535/0.525 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:250899240 bytes_received:38 segs_out:177201 segs_in:54976 data_segs_out:177200 data_segs_in:1 send 49.4Mbps lastrcv:44752 pacing_rate 59.3Mbps delivery_rate 46.6Mbps busy:44752ms rwnd_limited:9536ms(21.3%) unacked:2205 rcv_space:28960 rcv_ssthresh:28960 notsent:15445784 minrtt:201.422\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 3200080,
+        "inflight_payload_bytes_max": 3213112,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 46.791755200000004,
+            "capacity_mbps": 47.994845866666665,
+            "utilization": 0.9749329194637077,
+            "queue_mean_ms": 326.0783446707207,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 344.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 237027.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 61.469,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 47.99559232,
+            "capacity_mbps": 47.995648,
+            "utilization": 0.9999988398948171,
+            "queue_mean_ms": 343.01710520444436,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 344.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 201671.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 61.469,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      },
+      {
+        "mode": "current",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "4194304"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "6291456"
+          ],
+          "net.core.wmem_max": [
+            "212992"
+          ],
+          "net.core.rmem_max": [
+            "212992"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.045096158981323,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49801 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2555272               10.0.0.3:49801               10.0.0.4:57936     \n\t skmem:(r0,rb374400,t0,tb4194304,f946296,w3305352,o0,bl0,d0) cubic wscale:7,7 rto:612 rtt:409.341/3.826 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2338 ssthresh:1043 bytes_acked:77067936 bytes_received:38 segs_out:56847 segs_in:18998 data_segs_out:56846 data_segs_in:1 send 66.2Mbps lastsnd:100 lastrcv:14656 pacing_rate 79.4Mbps delivery_rate 48.9Mbps app_limited busy:14656ms rwnd_limited:224ms(1.5%) sndbuf_limited:4668ms(31.9%) unacked:1860 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.164\n"
+          },
+          {
+            "elapsed_s": 30.093604564666748,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49801 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2274200               10.0.0.3:49801               10.0.0.4:57936     \n\t skmem:(r0,rb374400,t0,tb4194304,f1318248,w2933400,o0,bl0,d0) cubic wscale:7,7 rto:644 rtt:443.121/3.825 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2338 ssthresh:1043 bytes_acked:163807232 bytes_received:38 segs_out:119846 segs_in:40095 data_segs_out:119845 data_segs_in:1 send 61.1Mbps lastsnd:148 lastrcv:29704 pacing_rate 73.3Mbps delivery_rate 49.0Mbps app_limited busy:29704ms rwnd_limited:700ms(2.4%) sndbuf_limited:15148ms(51.0%) unacked:1657 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.164\n"
+          },
+          {
+            "elapsed_s": 45.141239404678345,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49801 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3144336               10.0.0.3:49801               10.0.0.4:57936     \n\t skmem:(r0,rb374400,t0,tb4194304,f190832,w4060816,o0,bl0,d0) cubic wscale:7,7 rto:708 rtt:506.731/4.919 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2338 ssthresh:1043 bytes_acked:250552320 bytes_received:38 segs_out:183699 segs_in:61095 data_segs_out:183698 data_segs_in:1 send 53.4Mbps lastrcv:44752 pacing_rate 64.1Mbps delivery_rate 49.0Mbps app_limited busy:44752ms rwnd_limited:1176ms(2.6%) sndbuf_limited:25624ms(57.3%) unacked:2290 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.164\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 3314472,
+        "inflight_payload_bytes_max": 3326056,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 46.79282453333333,
+            "capacity_mbps": 47.994845866666665,
+            "utilization": 0.9749551996338807,
+            "queue_mean_ms": 261.175042314328,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 245627.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 60.727,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 47.99575168,
+            "capacity_mbps": 47.995648,
+            "utilization": 1.0000021601958577,
+            "queue_mean_ms": 271.0297608562138,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 210039.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 60.727,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      },
+      {
+        "mode": "recv64",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "4194304"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "67108864"
+          ],
+          "net.core.wmem_max": [
+            "212992"
+          ],
+          "net.core.rmem_max": [
+            "67108864"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.044396877288818,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49803 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2780920               10.0.0.1:49803               10.0.0.2:40758     \n\t skmem:(r0,rb374400,t0,tb4194304,f652296,w3591160,o0,bl0,d0) cubic wscale:11,11 rto:608 rtt:401.111/23.656 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2253 ssthresh:1726 bytes_acked:75885392 bytes_received:38 segs_out:55721 segs_in:28931 data_segs_out:55720 data_segs_in:1 send 65.1Mbps lastsnd:60 lastrcv:14652 pacing_rate 78.1Mbps delivery_rate 49.0Mbps app_limited busy:14652ms unacked:2013 retrans:0/8 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.266\n"
+          },
+          {
+            "elapsed_s": 30.092366933822632,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49803 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2327032               10.0.0.1:49803               10.0.0.2:40758     \n\t skmem:(r0,rb374400,t0,tb4194304,f1292296,w2959352,o0,bl0,d0) cubic wscale:11,11 rto:672 rtt:469.437/2.62 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2090 ssthresh:1722 bytes_acked:161519264 bytes_received:38 segs_out:116903 segs_in:60711 data_segs_out:116902 data_segs_in:1 send 51.6Mbps lastsnd:100 lastrcv:29700 pacing_rate 61.9Mbps delivery_rate 49.1Mbps app_limited busy:29700ms unacked:1654 retrans:0/13 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.266\n"
+          },
+          {
+            "elapsed_s": 45.14006519317627,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49803 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3136720               10.0.0.1:49803               10.0.0.2:40758     \n\t skmem:(r0,rb374400,t0,tb4194304,f290352,w3957200,o0,bl0,d0) cubic wscale:11,11 rto:696 rtt:492.736/0.45 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2087 ssthresh:1758 bytes_acked:247161648 bytes_received:38 segs_out:178956 segs_in:92568 data_segs_out:178955 data_segs_in:1 send 49.1Mbps lastrcv:44748 pacing_rate 58.9Mbps delivery_rate 49.1Mbps app_limited busy:44748ms unacked:2087 retrans:0/61 rcv_space:43440 rcv_ssthresh:43440 notsent:216760 minrtt:201.266\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 3271032,
+        "inflight_payload_bytes_max": 3579456,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 46.15081013333333,
+            "capacity_mbps": 47.994845866666665,
+            "utilization": 0.961578463269656,
+            "queue_mean_ms": 252.452402633644,
+            "queue_p95_ms": 338.0,
+            "queue_p99_ms": 365.0,
+            "dropped_packets": 81.0,
+            "arrival_packets": 239644.0,
+            "drop_fraction": 0.0003380013686969004,
+            "last_log_s": 60.602,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 47.22911936,
+            "capacity_mbps": 47.995648,
+            "utilization": 0.9840292053146152,
+            "queue_mean_ms": 261.17182208173404,
+            "queue_p95_ms": 339.0,
+            "queue_p99_ms": 366.0,
+            "dropped_packets": 73.0,
+            "arrival_packets": 204523.0,
+            "drop_fraction": 0.00035692807165942217,
+            "last_log_s": 60.602,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      }
+    ],
+    "current_sysctls": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R200-q2",
+      "nominal_mbps": 48,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 1600,
+      "queue_bytes": 2406400,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation"
+    },
+    "host": "actor-a"
+  },
+  {
+    "environment": {
+      "status": {
+        "status": "FAILED",
+        "epoch": 1793101073.0704353,
+        "traceback": "Traceback (most recent call last):\n  File \"${EXPERIMENT_ROOT}/environment_probe.py\", line 90, in main\n    rows=list(csv.DictReader((run/'control.csv').open()))\n  File \"/usr/lib/python3.6/pathlib.py\", line 1183, in open\n    opener=self._opener)\n  File \"/usr/lib/python3.6/pathlib.py\", line 1037, in _opener\n    return self._accessor.open(self, flags, mode)\n  File \"/usr/lib/python3.6/pathlib.py\", line 387, in wrapped\n    return strfunc(str(pathobj), *args)\nFileNotFoundError: [Errno 2] No such file or directory: '${EXPERIMENT_ROOT}/environment/recv64/control.csv'\n"
+      },
+      "restored": {
+        "status": "PASS",
+        "values": {
+          "net.ipv4.tcp_wmem": {
+            "expected": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "actual": [
+              "4096",
+              "32768",
+              "4194304"
+            ]
+          },
+          "net.ipv4.tcp_rmem": {
+            "expected": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "actual": [
+              "4096",
+              "87380",
+              "6291456"
+            ]
+          },
+          "net.core.wmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          },
+          "net.core.rmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          }
+        },
+        "epoch": 1793101073.0830007
+      },
+      "original": {
+        "net.ipv4.tcp_wmem": [
+          "4096",
+          "32768",
+          "4194304"
+        ],
+        "net.ipv4.tcp_rmem": [
+          "4096",
+          "87380",
+          "6291456"
+        ],
+        "net.core.wmem_max": [
+          "212992"
+        ],
+        "net.core.rmem_max": [
+          "212992"
+        ]
+      },
+      "result": [
+        {
+          "mode": "current",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "net.core.wmem_max": [
+              "212992"
+            ],
+            "net.core.rmem_max": [
+              "212992"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.044152975082397,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2942232               10.0.0.1:49731               10.0.0.2:49480     \n\t skmem:(r0,rb374400,t0,tb4194304,f882920,w3364632,o0,bl0,d0) cubic wscale:7,7 rto:532 rtt:331.325/3.177 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2278 ssthresh:1244 bytes_acked:114671616 bytes_received:38 segs_out:83826 segs_in:26417 data_segs_out:83825 data_segs_in:1 send 79.6Mbps lastsnd:24 lastrcv:14656 pacing_rate 95.6Mbps delivery_rate 72.7Mbps app_limited busy:14656ms rwnd_limited:584ms(4.0%) sndbuf_limited:3728ms(25.4%) unacked:2111 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.784\n"
+            },
+            {
+              "elapsed_s": 30.09384560585022,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2983416               10.0.0.1:49731               10.0.0.2:49480     \n\t skmem:(r0,rb374400,t0,tb4194304,f832776,w3414776,o0,bl0,d0) cubic wscale:7,7 rto:532 rtt:328.342/2.985 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2278 ssthresh:1244 bytes_acked:244850688 bytes_received:38 segs_out:177498 segs_in:57070 data_segs_out:177497 data_segs_in:1 send 80.4Mbps lastsnd:20 lastrcv:29704 lastack:4 pacing_rate 96.4Mbps delivery_rate 72.9Mbps app_limited busy:29704ms rwnd_limited:1424ms(4.8%) sndbuf_limited:9628ms(32.4%) unacked:2138 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.784\n"
+            },
+            {
+              "elapsed_s": 45.142154693603516,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3156344               10.0.0.1:49731               10.0.0.2:49480     \n\t skmem:(r0,rb374400,t0,tb4194304,f711560,w3544184,o0,bl0,d0) cubic wscale:7,7 rto:528 rtt:327.338/2.874 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:3460 ssthresh:1244 bytes_acked:375054336 bytes_received:38 segs_out:271289 segs_in:87839 data_segs_out:271288 data_segs_in:1 send 122.4Mbps lastrcv:44752 pacing_rate 146.9Mbps delivery_rate 73.0Mbps app_limited busy:44752ms rwnd_limited:2244ms(5.0%) sndbuf_limited:15296ms(34.2%) unacked:2258 rcv_space:28960 rcv_ssthresh:28960 notsent:16552 minrtt:201.784\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 3285512,
+          "inflight_payload_bytes_max": 3297096,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 70.06395573333333,
+              "capacity_mbps": 71.9982848,
+              "utilization": 0.9731336785030376,
+              "queue_mean_ms": 136.47697813757145,
+              "queue_p95_ms": 162.0,
+              "queue_p99_ms": 163.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 363693.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 60.631,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 71.99939136,
+              "capacity_mbps": 71.999488,
+              "utilization": 0.999998657768233,
+              "queue_mean_ms": 140.62723834678027,
+              "queue_p95_ms": 162.0,
+              "queue_p99_ms": 163.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 311240.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 60.631,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        },
+        {
+          "mode": "send64",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "67108864"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "net.core.wmem_max": [
+              "67108864"
+            ],
+            "net.core.rmem_max": [
+              "212992"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.04462718963623,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         17197896               10.0.0.1:49731              10.0.0.2:49548     \n\t skmem:(r0,rb374400,t0,tb20428288,f1477560,w17921096,o0,bl0,d0) cubic wscale:7,7 rto:564 rtt:363.122/0.663 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2347 ssthresh:1244 bytes_acked:114770264 bytes_received:38 segs_out:82653 segs_in:27047 data_segs_out:82652 data_segs_in:1 send 74.9Mbps lastrcv:14660 pacing_rate 89.8Mbps delivery_rate 70.9Mbps busy:14660ms rwnd_limited:1776ms(12.1%) unacked:2210 rcv_space:28960 rcv_ssthresh:28960 notsent:14054288 minrtt:201.138\n"
+            },
+            {
+              "elapsed_s": 30.09343695640564,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         16439112               10.0.0.1:49731              10.0.0.2:49548     \n\t skmem:(r0,rb374400,t0,tb20428288,f1223352,w17143112,o0,bl0,d0) cubic wscale:7,7 rto:564 rtt:363.011/0.195 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2347 ssthresh:1244 bytes_acked:245067128 bytes_received:38 segs_out:174538 segs_in:57637 data_segs_out:174537 data_segs_in:1 send 74.9Mbps lastrcv:29708 pacing_rate 89.9Mbps delivery_rate 71.1Mbps busy:29708ms rwnd_limited:4660ms(15.7%) unacked:2211 rcv_space:28960 rcv_ssthresh:28960 notsent:13295472 minrtt:201.138\n"
+            },
+            {
+              "elapsed_s": 45.14261746406555,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         15684704               10.0.0.1:49731              10.0.0.2:49548     \n\t skmem:(r0,rb374400,t0,tb20428288,f1997216,w16373344,o0,bl0,d0) cubic wscale:7,7 rto:564 rtt:363.248/0.484 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2347 ssthresh:1244 bytes_acked:375359616 bytes_received:38 segs_out:266451 segs_in:88435 data_segs_out:266450 data_segs_in:1 send 74.8Mbps lastrcv:44756 pacing_rate 89.8Mbps delivery_rate 71.4Mbps busy:44756ms rwnd_limited:7376ms(16.5%) unacked:2211 rcv_space:28960 rcv_ssthresh:28960 notsent:12539648 minrtt:201.138\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 3227592,
+          "inflight_payload_bytes_max": 3243520,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 70.0665408,
+              "capacity_mbps": 71.9982848,
+              "utilization": 0.9731695830620676,
+              "queue_mean_ms": 156.35857218296013,
+              "queue_p95_ms": 162.0,
+              "queue_p99_ms": 163.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 356988.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 61.743,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 71.99946368,
+              "capacity_mbps": 71.999488,
+              "utilization": 0.9999996622198203,
+              "queue_mean_ms": 161.4982145665164,
+              "queue_p95_ms": 162.0,
+              "queue_p99_ms": 163.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 305242.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 61.743,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        },
+        {
+          "mode": "both64",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "67108864"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "67108864"
+            ],
+            "net.core.wmem_max": [
+              "67108864"
+            ],
+            "net.core.rmem_max": [
+              "67108864"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.044212818145752,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         22349880               10.0.0.1:49731              10.0.0.2:49616     \n\t skmem:(r0,rb374400,t0,tb32300544,f1597384,w23384120,o0,bl0,d0) cubic wscale:11,11 rto:732 rtt:528.876/0.631 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:3245 ssthresh:2653 bytes_acked:114194912 bytes_received:38 segs_out:82332 segs_in:47093 data_segs_out:82331 data_segs_in:1 send 71.1Mbps lastrcv:14584 pacing_rate 85.3Mbps delivery_rate 69.3Mbps busy:14584ms rwnd_limited:116ms(0.8%) unacked:3240 retrans:0/183 rcv_space:43440 rcv_ssthresh:43440 notsent:17658360 minrtt:201.398\n"
+            },
+            {
+              "elapsed_s": 30.09278416633606,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         24878088               10.0.0.1:49731              10.0.0.2:49616     \n\t skmem:(r0,rb374400,t0,tb32300544,f1172472,w25922568,o0,bl0,d0) cubic wscale:11,11 rto:720 rtt:516.704/0.487 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:3096 ssthresh:2551 bytes_acked:244593104 bytes_received:38 segs_out:172282 segs_in:86322 data_segs_out:172281 data_segs_in:1 send 69.4Mbps lastsnd:4 lastrcv:29636 lastack:4 pacing_rate 83.3Mbps delivery_rate 69.3Mbps busy:29636ms rwnd_limited:116ms(0.4%) unacked:3096 retrans:0/223 rcv_space:43440 rcv_ssthresh:43440 notsent:20395080 minrtt:201.398\n"
+            },
+            {
+              "elapsed_s": 45.141865253448486,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         28515464               10.0.0.1:49731              10.0.0.2:49616     \n\t skmem:(r0,rb374400,t0,tb32300544,f1851768,w29408904,o0,bl0,d0) cubic wscale:11,11 rto:508 rtt:307.532/0.44 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:1874 ssthresh:1810 bytes_acked:374989848 bytes_received:38 segs_out:261202 segs_in:124781 data_segs_out:261201 data_segs_in:1 send 70.6Mbps lastrcv:44684 pacing_rate 84.7Mbps delivery_rate 69.4Mbps busy:44684ms rwnd_limited:116ms(0.3%) unacked:1873 retrans:0/313 rcv_space:43440 rcv_ssthresh:43440 notsent:25803360 minrtt:201.398\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 5518328,
+          "inflight_payload_bytes_max": 9008008,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 70.06594506666666,
+              "capacity_mbps": 71.9982848,
+              "utilization": 0.973161308790882,
+              "queue_mean_ms": 256.31222403140924,
+              "queue_p95_ms": 394.0,
+              "queue_p99_ms": 401.0,
+              "dropped_packets": 313.0,
+              "arrival_packets": 350826.0,
+              "drop_fraction": 0.0008921801690866697,
+              "last_log_s": 62.649,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 71.99965759999999,
+              "capacity_mbps": 71.999488,
+              "utilization": 1.0000023555723063,
+              "queue_mean_ms": 267.80060151380974,
+              "queue_p95_ms": 396.0,
+              "queue_p99_ms": 401.0,
+              "dropped_packets": 288.0,
+              "arrival_packets": 298194.0,
+              "drop_fraction": 0.0009658142014929878,
+              "last_log_s": 62.649,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        }
+      ],
+      "failures": {
+        "recv64/server.log": "\n[tcp-buffer-probe.cc-start_server-153] bind error srv_ctr_ip: 000000: Address already in use\n"
+      },
+      "monitor_coverage": {
+        "send64": {
+          "first_us": "1793100948359917",
+          "last_us": "1793101008357593",
+          "rows": 2992
+        },
+        "both64": {
+          "first_us": "1793101010478562",
+          "last_us": "1793101070474201",
+          "rows": 2992
+        },
+        "current": {
+          "first_us": "1793100886288988",
+          "last_us": "1793100946285773",
+          "rows": 2992
+        }
+      }
+    },
+    "environment-r2": {
+      "status": {
+        "status": "COMPLETE",
+        "runs": 1,
+        "epoch": 1793101216.917067
+      },
+      "restored": {
+        "status": "PASS",
+        "values": {
+          "net.ipv4.tcp_wmem": {
+            "expected": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "actual": [
+              "4096",
+              "32768",
+              "4194304"
+            ]
+          },
+          "net.ipv4.tcp_rmem": {
+            "expected": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "actual": [
+              "4096",
+              "87380",
+              "6291456"
+            ]
+          },
+          "net.core.wmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          },
+          "net.core.rmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          }
+        },
+        "epoch": 1793101216.9296837
+      },
+      "original": {
+        "net.ipv4.tcp_wmem": [
+          "4096",
+          "32768",
+          "4194304"
+        ],
+        "net.ipv4.tcp_rmem": [
+          "4096",
+          "87380",
+          "6291456"
+        ],
+        "net.core.wmem_max": [
+          "212992"
+        ],
+        "net.core.rmem_max": [
+          "212992"
+        ]
+      },
+      "result": [
+        {
+          "mode": "recv64",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "67108864"
+            ],
+            "net.core.wmem_max": [
+              "212992"
+            ],
+            "net.core.rmem_max": [
+              "67108864"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.044939517974854,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49803 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3328352               10.0.0.1:49803               10.0.0.2:46548     \n\t skmem:(r0,rb374400,t0,tb4194304,f414624,w3849312,o0,bl0,d0) cubic wscale:11,11 rto:500 rtt:296.008/19.979 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2710 ssthresh:1884 bytes_acked:114595488 bytes_received:38 segs_out:85727 segs_in:43532 data_segs_out:85726 data_segs_in:1 send 106.1Mbps lastsnd:32 lastrcv:14656 pacing_rate 127.3Mbps delivery_rate 73.7Mbps app_limited busy:14656ms unacked:2438 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.816\n"
+            },
+            {
+              "elapsed_s": 30.093838691711426,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49803 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3519664               10.0.0.1:49803               10.0.0.2:46548     \n\t skmem:(r0,rb374400,t0,tb4194304,f193872,w4070064,o0,bl0,d0) cubic wscale:11,11 rto:612 rtt:408.68/1.663 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2710 ssthresh:1884 bytes_acked:244689744 bytes_received:38 segs_out:181151 segs_in:91174 data_segs_out:181150 data_segs_in:1 send 76.8Mbps lastsnd:16 lastrcv:29708 pacing_rate 92.2Mbps delivery_rate 73.7Mbps app_limited busy:29708ms unacked:2578 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.816\n"
+            },
+            {
+              "elapsed_s": 45.14063620567322,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49803 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3252224               10.0.0.1:49803               10.0.0.2:46548     \n\t skmem:(r0,rb374400,t0,tb4194304,f503552,w3760384,o0,bl0,d0) cubic wscale:11,11 rto:588 rtt:384.049/1.896 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2710 ssthresh:1884 bytes_acked:374775808 bytes_received:38 segs_out:276233 segs_in:138813 data_segs_out:276232 data_segs_in:1 send 81.7Mbps lastrcv:44752 pacing_rate 98.1Mbps delivery_rate 73.7Mbps app_limited busy:44752ms unacked:2382 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.816\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 3785072,
+          "inflight_payload_bytes_max": 3854576,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 70.06420159999999,
+              "capacity_mbps": 71.9982848,
+              "utilization": 0.9731370933992027,
+              "queue_mean_ms": 147.0634135372161,
+              "queue_p95_ms": 211.0,
+              "queue_p99_ms": 217.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 370142.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 60.555,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 71.9995328,
+              "capacity_mbps": 71.999488,
+              "utilization": 1.0000006222266469,
+              "queue_mean_ms": 148.60004927290873,
+              "queue_p95_ms": 212.0,
+              "queue_p99_ms": 217.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 316640.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 60.555,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        }
+      ],
+      "failures": {},
+      "monitor_coverage": {
+        "recv64": {
+          "first_us": "1793101155266958",
+          "last_us": "1793101215264794",
+          "rows": 2992
+        }
+      }
+    },
+    "all_results": [
+      {
+        "mode": "current",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "4194304"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "6291456"
+          ],
+          "net.core.wmem_max": [
+            "212992"
+          ],
+          "net.core.rmem_max": [
+            "212992"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.044152975082397,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2942232               10.0.0.1:49731               10.0.0.2:49480     \n\t skmem:(r0,rb374400,t0,tb4194304,f882920,w3364632,o0,bl0,d0) cubic wscale:7,7 rto:532 rtt:331.325/3.177 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2278 ssthresh:1244 bytes_acked:114671616 bytes_received:38 segs_out:83826 segs_in:26417 data_segs_out:83825 data_segs_in:1 send 79.6Mbps lastsnd:24 lastrcv:14656 pacing_rate 95.6Mbps delivery_rate 72.7Mbps app_limited busy:14656ms rwnd_limited:584ms(4.0%) sndbuf_limited:3728ms(25.4%) unacked:2111 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.784\n"
+          },
+          {
+            "elapsed_s": 30.09384560585022,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2983416               10.0.0.1:49731               10.0.0.2:49480     \n\t skmem:(r0,rb374400,t0,tb4194304,f832776,w3414776,o0,bl0,d0) cubic wscale:7,7 rto:532 rtt:328.342/2.985 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2278 ssthresh:1244 bytes_acked:244850688 bytes_received:38 segs_out:177498 segs_in:57070 data_segs_out:177497 data_segs_in:1 send 80.4Mbps lastsnd:20 lastrcv:29704 lastack:4 pacing_rate 96.4Mbps delivery_rate 72.9Mbps app_limited busy:29704ms rwnd_limited:1424ms(4.8%) sndbuf_limited:9628ms(32.4%) unacked:2138 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.784\n"
+          },
+          {
+            "elapsed_s": 45.142154693603516,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3156344               10.0.0.1:49731               10.0.0.2:49480     \n\t skmem:(r0,rb374400,t0,tb4194304,f711560,w3544184,o0,bl0,d0) cubic wscale:7,7 rto:528 rtt:327.338/2.874 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:3460 ssthresh:1244 bytes_acked:375054336 bytes_received:38 segs_out:271289 segs_in:87839 data_segs_out:271288 data_segs_in:1 send 122.4Mbps lastrcv:44752 pacing_rate 146.9Mbps delivery_rate 73.0Mbps app_limited busy:44752ms rwnd_limited:2244ms(5.0%) sndbuf_limited:15296ms(34.2%) unacked:2258 rcv_space:28960 rcv_ssthresh:28960 notsent:16552 minrtt:201.784\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 3285512,
+        "inflight_payload_bytes_max": 3297096,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 70.06395573333333,
+            "capacity_mbps": 71.9982848,
+            "utilization": 0.9731336785030376,
+            "queue_mean_ms": 136.47697813757145,
+            "queue_p95_ms": 162.0,
+            "queue_p99_ms": 163.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 363693.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 60.631,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 71.99939136,
+            "capacity_mbps": 71.999488,
+            "utilization": 0.999998657768233,
+            "queue_mean_ms": 140.62723834678027,
+            "queue_p95_ms": 162.0,
+            "queue_p99_ms": 163.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 311240.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 60.631,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      },
+      {
+        "mode": "send64",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "67108864"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "6291456"
+          ],
+          "net.core.wmem_max": [
+            "67108864"
+          ],
+          "net.core.rmem_max": [
+            "212992"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.04462718963623,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         17197896               10.0.0.1:49731              10.0.0.2:49548     \n\t skmem:(r0,rb374400,t0,tb20428288,f1477560,w17921096,o0,bl0,d0) cubic wscale:7,7 rto:564 rtt:363.122/0.663 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2347 ssthresh:1244 bytes_acked:114770264 bytes_received:38 segs_out:82653 segs_in:27047 data_segs_out:82652 data_segs_in:1 send 74.9Mbps lastrcv:14660 pacing_rate 89.8Mbps delivery_rate 70.9Mbps busy:14660ms rwnd_limited:1776ms(12.1%) unacked:2210 rcv_space:28960 rcv_ssthresh:28960 notsent:14054288 minrtt:201.138\n"
+          },
+          {
+            "elapsed_s": 30.09343695640564,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         16439112               10.0.0.1:49731              10.0.0.2:49548     \n\t skmem:(r0,rb374400,t0,tb20428288,f1223352,w17143112,o0,bl0,d0) cubic wscale:7,7 rto:564 rtt:363.011/0.195 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2347 ssthresh:1244 bytes_acked:245067128 bytes_received:38 segs_out:174538 segs_in:57637 data_segs_out:174537 data_segs_in:1 send 74.9Mbps lastrcv:29708 pacing_rate 89.9Mbps delivery_rate 71.1Mbps busy:29708ms rwnd_limited:4660ms(15.7%) unacked:2211 rcv_space:28960 rcv_ssthresh:28960 notsent:13295472 minrtt:201.138\n"
+          },
+          {
+            "elapsed_s": 45.14261746406555,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         15684704               10.0.0.1:49731              10.0.0.2:49548     \n\t skmem:(r0,rb374400,t0,tb20428288,f1997216,w16373344,o0,bl0,d0) cubic wscale:7,7 rto:564 rtt:363.248/0.484 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2347 ssthresh:1244 bytes_acked:375359616 bytes_received:38 segs_out:266451 segs_in:88435 data_segs_out:266450 data_segs_in:1 send 74.8Mbps lastrcv:44756 pacing_rate 89.8Mbps delivery_rate 71.4Mbps busy:44756ms rwnd_limited:7376ms(16.5%) unacked:2211 rcv_space:28960 rcv_ssthresh:28960 notsent:12539648 minrtt:201.138\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 3227592,
+        "inflight_payload_bytes_max": 3243520,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 70.0665408,
+            "capacity_mbps": 71.9982848,
+            "utilization": 0.9731695830620676,
+            "queue_mean_ms": 156.35857218296013,
+            "queue_p95_ms": 162.0,
+            "queue_p99_ms": 163.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 356988.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 61.743,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 71.99946368,
+            "capacity_mbps": 71.999488,
+            "utilization": 0.9999996622198203,
+            "queue_mean_ms": 161.4982145665164,
+            "queue_p95_ms": 162.0,
+            "queue_p99_ms": 163.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 305242.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 61.743,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      },
+      {
+        "mode": "both64",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "67108864"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "67108864"
+          ],
+          "net.core.wmem_max": [
+            "67108864"
+          ],
+          "net.core.rmem_max": [
+            "67108864"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.044212818145752,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         22349880               10.0.0.1:49731              10.0.0.2:49616     \n\t skmem:(r0,rb374400,t0,tb32300544,f1597384,w23384120,o0,bl0,d0) cubic wscale:11,11 rto:732 rtt:528.876/0.631 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:3245 ssthresh:2653 bytes_acked:114194912 bytes_received:38 segs_out:82332 segs_in:47093 data_segs_out:82331 data_segs_in:1 send 71.1Mbps lastrcv:14584 pacing_rate 85.3Mbps delivery_rate 69.3Mbps busy:14584ms rwnd_limited:116ms(0.8%) unacked:3240 retrans:0/183 rcv_space:43440 rcv_ssthresh:43440 notsent:17658360 minrtt:201.398\n"
+          },
+          {
+            "elapsed_s": 30.09278416633606,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         24878088               10.0.0.1:49731              10.0.0.2:49616     \n\t skmem:(r0,rb374400,t0,tb32300544,f1172472,w25922568,o0,bl0,d0) cubic wscale:11,11 rto:720 rtt:516.704/0.487 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:3096 ssthresh:2551 bytes_acked:244593104 bytes_received:38 segs_out:172282 segs_in:86322 data_segs_out:172281 data_segs_in:1 send 69.4Mbps lastsnd:4 lastrcv:29636 lastack:4 pacing_rate 83.3Mbps delivery_rate 69.3Mbps busy:29636ms rwnd_limited:116ms(0.4%) unacked:3096 retrans:0/223 rcv_space:43440 rcv_ssthresh:43440 notsent:20395080 minrtt:201.398\n"
+          },
+          {
+            "elapsed_s": 45.141865253448486,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         28515464               10.0.0.1:49731              10.0.0.2:49616     \n\t skmem:(r0,rb374400,t0,tb32300544,f1851768,w29408904,o0,bl0,d0) cubic wscale:11,11 rto:508 rtt:307.532/0.44 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:1874 ssthresh:1810 bytes_acked:374989848 bytes_received:38 segs_out:261202 segs_in:124781 data_segs_out:261201 data_segs_in:1 send 70.6Mbps lastrcv:44684 pacing_rate 84.7Mbps delivery_rate 69.4Mbps busy:44684ms rwnd_limited:116ms(0.3%) unacked:1873 retrans:0/313 rcv_space:43440 rcv_ssthresh:43440 notsent:25803360 minrtt:201.398\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 5518328,
+        "inflight_payload_bytes_max": 9008008,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 70.06594506666666,
+            "capacity_mbps": 71.9982848,
+            "utilization": 0.973161308790882,
+            "queue_mean_ms": 256.31222403140924,
+            "queue_p95_ms": 394.0,
+            "queue_p99_ms": 401.0,
+            "dropped_packets": 313.0,
+            "arrival_packets": 350826.0,
+            "drop_fraction": 0.0008921801690866697,
+            "last_log_s": 62.649,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 71.99965759999999,
+            "capacity_mbps": 71.999488,
+            "utilization": 1.0000023555723063,
+            "queue_mean_ms": 267.80060151380974,
+            "queue_p95_ms": 396.0,
+            "queue_p99_ms": 401.0,
+            "dropped_packets": 288.0,
+            "arrival_packets": 298194.0,
+            "drop_fraction": 0.0009658142014929878,
+            "last_log_s": 62.649,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      },
+      {
+        "mode": "recv64",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "4194304"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "67108864"
+          ],
+          "net.core.wmem_max": [
+            "212992"
+          ],
+          "net.core.rmem_max": [
+            "67108864"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.044939517974854,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49803 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3328352               10.0.0.1:49803               10.0.0.2:46548     \n\t skmem:(r0,rb374400,t0,tb4194304,f414624,w3849312,o0,bl0,d0) cubic wscale:11,11 rto:500 rtt:296.008/19.979 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2710 ssthresh:1884 bytes_acked:114595488 bytes_received:38 segs_out:85727 segs_in:43532 data_segs_out:85726 data_segs_in:1 send 106.1Mbps lastsnd:32 lastrcv:14656 pacing_rate 127.3Mbps delivery_rate 73.7Mbps app_limited busy:14656ms unacked:2438 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.816\n"
+          },
+          {
+            "elapsed_s": 30.093838691711426,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49803 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3519664               10.0.0.1:49803               10.0.0.2:46548     \n\t skmem:(r0,rb374400,t0,tb4194304,f193872,w4070064,o0,bl0,d0) cubic wscale:11,11 rto:612 rtt:408.68/1.663 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2710 ssthresh:1884 bytes_acked:244689744 bytes_received:38 segs_out:181151 segs_in:91174 data_segs_out:181150 data_segs_in:1 send 76.8Mbps lastsnd:16 lastrcv:29708 pacing_rate 92.2Mbps delivery_rate 73.7Mbps app_limited busy:29708ms unacked:2578 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.816\n"
+          },
+          {
+            "elapsed_s": 45.14063620567322,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49803 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3252224               10.0.0.1:49803               10.0.0.2:46548     \n\t skmem:(r0,rb374400,t0,tb4194304,f503552,w3760384,o0,bl0,d0) cubic wscale:11,11 rto:588 rtt:384.049/1.896 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2710 ssthresh:1884 bytes_acked:374775808 bytes_received:38 segs_out:276233 segs_in:138813 data_segs_out:276232 data_segs_in:1 send 81.7Mbps lastrcv:44752 pacing_rate 98.1Mbps delivery_rate 73.7Mbps app_limited busy:44752ms unacked:2382 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.816\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 3785072,
+        "inflight_payload_bytes_max": 3854576,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 70.06420159999999,
+            "capacity_mbps": 71.9982848,
+            "utilization": 0.9731370933992027,
+            "queue_mean_ms": 147.0634135372161,
+            "queue_p95_ms": 211.0,
+            "queue_p99_ms": 217.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 370142.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 60.555,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 71.9995328,
+            "capacity_mbps": 71.999488,
+            "utilization": 1.0000006222266469,
+            "queue_mean_ms": 148.60004927290873,
+            "queue_p95_ms": 212.0,
+            "queue_p99_ms": 217.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 316640.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 60.555,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      }
+    ],
+    "current_sysctls": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R200-q2",
+      "nominal_mbps": 72,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 2400,
+      "queue_bytes": 3609600,
+      "queue_bdp": 2,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation"
+    },
+    "host": "actor-b"
+  },
+  {
+    "environment": {
+      "status": {
+        "status": "FAILED",
+        "epoch": 1793100947.689664,
+        "traceback": "Traceback (most recent call last):\n  File \"${EXPERIMENT_ROOT}/environment_probe.py\", line 90, in main\n    rows=list(csv.DictReader((run/'control.csv').open()))\n  File \"/usr/lib/python3.6/pathlib.py\", line 1183, in open\n    opener=self._opener)\n  File \"/usr/lib/python3.6/pathlib.py\", line 1037, in _opener\n    return self._accessor.open(self, flags, mode)\n  File \"/usr/lib/python3.6/pathlib.py\", line 387, in wrapped\n    return strfunc(str(pathobj), *args)\nFileNotFoundError: [Errno 2] No such file or directory: '${EXPERIMENT_ROOT}/environment/both64/control.csv'\n"
+      },
+      "restored": {
+        "status": "PASS",
+        "values": {
+          "net.ipv4.tcp_wmem": {
+            "expected": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "actual": [
+              "4096",
+              "32768",
+              "4194304"
+            ]
+          },
+          "net.ipv4.tcp_rmem": {
+            "expected": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "actual": [
+              "4096",
+              "87380",
+              "6291456"
+            ]
+          },
+          "net.core.wmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          },
+          "net.core.rmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          }
+        },
+        "epoch": 1793100947.7018242
+      },
+      "original": {
+        "net.ipv4.tcp_wmem": [
+          "4096",
+          "32768",
+          "4194304"
+        ],
+        "net.ipv4.tcp_rmem": [
+          "4096",
+          "87380",
+          "6291456"
+        ],
+        "net.core.wmem_max": [
+          "212992"
+        ],
+        "net.core.rmem_max": [
+          "212992"
+        ]
+      },
+      "result": [
+        {
+          "mode": "send64",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "67108864"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "net.core.wmem_max": [
+              "67108864"
+            ],
+            "net.core.rmem_max": [
+              "212992"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.044342279434204,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         14063744               10.0.0.1:49731              10.0.0.2:43438     \n\t skmem:(r0,rb374400,t0,tb20132352,f4736,w15027584,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.057/0.667 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2313 ssthresh:1043 bytes_acked:77137792 bytes_received:38 segs_out:55723 segs_in:16856 data_segs_out:55722 data_segs_in:1 send 49.2Mbps lastrcv:14660 pacing_rate 59.1Mbps delivery_rate 46.3Mbps busy:14660ms rwnd_limited:2060ms(14.1%) unacked:2193 rcv_space:28960 rcv_ssthresh:28960 notsent:10918656 minrtt:201.658\n"
+            },
+            {
+              "elapsed_s": 30.091999292373657,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         14187504               10.0.0.1:49731              10.0.0.2:43438     \n\t skmem:(r0,rb374400,t0,tb20132352,f1893136,w15146224,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.201/0.662 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2313 ssthresh:1043 bytes_acked:164023584 bytes_received:38 segs_out:116291 segs_in:35051 data_segs_out:116290 data_segs_in:1 send 49.2Mbps lastsnd:4 lastrcv:29708 lastack:4 pacing_rate 59.1Mbps delivery_rate 46.7Mbps busy:29708ms rwnd_limited:6396ms(21.5%) unacked:2182 rcv_space:28960 rcv_ssthresh:28960 notsent:11042448 minrtt:201.658\n"
+            },
+            {
+              "elapsed_s": 45.138280153274536,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49731 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         16192952               10.0.0.1:49731              10.0.0.2:43438     \n\t skmem:(r0,rb374400,t0,tb20132352,f1903176,w17196472,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.811/0.755 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2313 ssthresh:1043 bytes_acked:250896376 bytes_received:38 segs_out:176851 segs_in:53199 data_segs_out:176850 data_segs_in:1 send 49.2Mbps lastrcv:44752 pacing_rate 59.0Mbps delivery_rate 46.8Mbps busy:44752ms rwnd_limited:10612ms(23.7%) unacked:2189 rcv_space:28960 rcv_ssthresh:28960 notsent:13050824 minrtt:201.658\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 3194288,
+          "inflight_payload_bytes_max": 3204424,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 46.79050133333334,
+              "capacity_mbps": 47.994845866666665,
+              "utilization": 0.9749067944362382,
+              "queue_mean_ms": 326.02722499734296,
+              "queue_p95_ms": 344.0,
+              "queue_p99_ms": 344.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 236624.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 62.011,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 47.99569536,
+              "capacity_mbps": 47.995648,
+              "utilization": 1.0000009867561326,
+              "queue_mean_ms": 342.989923782457,
+              "queue_p95_ms": 344.0,
+              "queue_p99_ms": 344.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 201288.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 62.011,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        }
+      ],
+      "failures": {
+        "both64/server.log": "\n[tcp-buffer-probe.cc-start_server-153] bind error srv_ctr_ip: 000000: Address already in use\n"
+      },
+      "monitor_coverage": {
+        "send64": {
+          "first_us": "1793100885746063",
+          "last_us": "1793100945741356",
+          "rows": 2992
+        }
+      }
+    },
+    "environment-r2": {
+      "status": {
+        "status": "COMPLETE",
+        "runs": 3,
+        "epoch": 1793101338.4644194
+      },
+      "restored": {
+        "status": "PASS",
+        "values": {
+          "net.ipv4.tcp_wmem": {
+            "expected": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "actual": [
+              "4096",
+              "32768",
+              "4194304"
+            ]
+          },
+          "net.ipv4.tcp_rmem": {
+            "expected": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "actual": [
+              "4096",
+              "87380",
+              "6291456"
+            ]
+          },
+          "net.core.wmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          },
+          "net.core.rmem_max": {
+            "expected": [
+              "212992"
+            ],
+            "actual": [
+              "212992"
+            ]
+          }
+        },
+        "epoch": 1793101338.4758055
+      },
+      "original": {
+        "net.ipv4.tcp_wmem": [
+          "4096",
+          "32768",
+          "4194304"
+        ],
+        "net.ipv4.tcp_rmem": [
+          "4096",
+          "87380",
+          "6291456"
+        ],
+        "net.core.wmem_max": [
+          "212992"
+        ],
+        "net.core.rmem_max": [
+          "212992"
+        ]
+      },
+      "result": [
+        {
+          "mode": "both64",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "67108864"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "67108864"
+            ],
+            "net.core.wmem_max": [
+              "67108864"
+            ],
+            "net.core.rmem_max": [
+              "67108864"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.045103549957275,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49804 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         20358880               10.0.0.1:49804              10.0.0.2:55880     \n\t skmem:(r0,rb374400,t0,tb31778304,f1884960,w21912800,o0,bl0,d0) cubic wscale:11,11 rto:1072 rtt:871.641/0.592 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:3651 ssthresh:1039 bytes_acked:77155072 bytes_received:38 segs_out:56934 segs_in:28358 data_segs_out:56933 data_segs_in:1 send 48.5Mbps lastrcv:14656 pacing_rate 58.2Mbps delivery_rate 46.2Mbps busy:14656ms unacked:3648 rcv_space:43440 rcv_ssthresh:43440 notsent:15076576 minrtt:201.027\n"
+            },
+            {
+              "elapsed_s": 30.092169046401978,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49804 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         28441616               10.0.0.1:49804              10.0.0.2:55880     \n\t skmem:(r0,rb374400,t0,tb43929088,f1464048,w29907216,o0,bl0,d0) cubic wscale:11,11 rto:916 rtt:715.607/0.576 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2896 ssthresh:2473 bytes_acked:164075616 bytes_received:38 segs_out:116517 segs_in:65942 data_segs_out:116516 data_segs_in:1 send 46.9Mbps lastrcv:29704 pacing_rate 56.3Mbps delivery_rate 46.2Mbps busy:29704ms rwnd_limited:300ms(1.0%) unacked:2895 retrans:0/243 rcv_space:43440 rcv_ssthresh:43440 notsent:24249656 minrtt:201.027\n"
+            },
+            {
+              "elapsed_s": 45.13960838317871,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49804 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         29492864               10.0.0.1:49804              10.0.0.2:55880     \n\t skmem:(r0,rb374400,t0,tb43929088,f1317504,w31094144,o0,bl0,d0) cubic wscale:11,11 rto:1004 rtt:800.873/0.495 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:3262 ssthresh:2473 bytes_acked:250990368 bytes_received:38 segs_out:176905 segs_in:95954 data_segs_out:176904 data_segs_in:1 send 47.2Mbps lastsnd:4 lastrcv:44752 lastack:4 pacing_rate 56.6Mbps delivery_rate 46.3Mbps busy:44752ms rwnd_limited:300ms(0.7%) unacked:3259 retrans:0/243 rcv_space:43440 rcv_ssthresh:43440 notsent:24773832 minrtt:201.027\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 9429376,
+          "inflight_payload_bytes_max": 17319528,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 46.792812266666665,
+              "capacity_mbps": 47.994845866666665,
+              "utilization": 0.9749549440508812,
+              "queue_mean_ms": 593.8774634129622,
+              "queue_p95_ms": 990.0,
+              "queue_p99_ms": 1003.0,
+              "dropped_packets": 640.0,
+              "arrival_packets": 236046.0,
+              "drop_fraction": 0.0027113359260483127,
+              "last_log_s": 61.402,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 47.99577408,
+              "capacity_mbps": 47.995648,
+              "utilization": 1.0000026269048394,
+              "queue_mean_ms": 654.7136319894144,
+              "queue_p95_ms": 1001.0,
+              "queue_p99_ms": 1003.0,
+              "dropped_packets": 640.0,
+              "arrival_packets": 200309.0,
+              "drop_fraction": 0.0031950636266967537,
+              "last_log_s": 61.402,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        },
+        {
+          "mode": "recv64",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "67108864"
+            ],
+            "net.core.wmem_max": [
+              "212992"
+            ],
+            "net.core.rmem_max": [
+              "67108864"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.046315908432007,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49803 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2705760               10.0.0.3:49803               10.0.0.4:39906     \n\t skmem:(r0,rb374400,t0,tb4194304,f1098912,w3169120,o0,bl0,d0) cubic wscale:11,11 rto:704 rtt:503.397/3.027 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2683 ssthresh:1047 bytes_acked:77067936 bytes_received:38 segs_out:57067 segs_in:28601 data_segs_out:57066 data_segs_in:1 send 61.7Mbps lastrcv:14660 pacing_rate 74.1Mbps delivery_rate 49.1Mbps app_limited busy:14660ms sndbuf_limited:56ms(0.4%) unacked:1982 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.547\n"
+            },
+            {
+              "elapsed_s": 30.09441828727722,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49803 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3230048               10.0.0.3:49803               10.0.0.4:39906     \n\t skmem:(r0,rb374400,t0,tb4194304,f522144,w3745888,o0,bl0,d0) cubic wscale:11,11 rto:728 rtt:524.272/2.837 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2683 ssthresh:1047 bytes_acked:163796640 bytes_received:38 segs_out:120973 segs_in:60362 data_segs_out:120972 data_segs_in:1 send 59.3Mbps lastrcv:29708 pacing_rate 71.1Mbps delivery_rate 49.1Mbps app_limited busy:29708ms sndbuf_limited:56ms(0.2%) unacked:2366 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.547\n"
+            },
+            {
+              "elapsed_s": 45.141972064971924,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49803 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3552432               10.0.0.3:49803               10.0.0.4:39906     \n\t skmem:(r0,rb374400,t0,tb4194304,f157520,w4110512,o0,bl0,d0) cubic wscale:11,11 rto:736 rtt:535.309/3.01 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2683 ssthresh:1047 bytes_acked:250514256 bytes_received:38 segs_out:184723 segs_in:92119 data_segs_out:184722 data_segs_in:1 send 58.1Mbps lastsnd:16 lastrcv:44756 pacing_rate 69.7Mbps delivery_rate 49.1Mbps app_limited busy:44756ms sndbuf_limited:56ms(0.1%) unacked:2602 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.547\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 3701088,
+          "inflight_payload_bytes_max": 3851680,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 46.79198186666667,
+              "capacity_mbps": 47.994845866666665,
+              "utilization": 0.9749376421930461,
+              "queue_mean_ms": 297.14235169577785,
+              "queue_p95_ms": 405.0,
+              "queue_p99_ms": 419.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 247096.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 60.696,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 47.99552,
+              "capacity_mbps": 47.995648,
+              "utilization": 0.9999973330915336,
+              "queue_mean_ms": 312.8217851338353,
+              "queue_p95_ms": 407.0,
+              "queue_p99_ms": 420.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 211763.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 60.696,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        },
+        {
+          "mode": "current",
+          "sysctls": {
+            "net.ipv4.tcp_wmem": [
+              "4096",
+              "32768",
+              "4194304"
+            ],
+            "net.ipv4.tcp_rmem": [
+              "4096",
+              "87380",
+              "6291456"
+            ],
+            "net.core.wmem_max": [
+              "212992"
+            ],
+            "net.core.rmem_max": [
+              "212992"
+            ]
+          },
+          "snapshots": [
+            {
+              "elapsed_s": 15.044450998306274,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49801 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2457600               10.0.0.1:49801               10.0.0.2:41324     \n\t skmem:(r0,rb374400,t0,tb4194304,f1112576,w3151360,o0,bl0,d0) cubic wscale:7,7 rto:676 rtt:474.029/5.266 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:77045760 bytes_received:38 segs_out:56731 segs_in:17989 data_segs_out:56730 data_segs_in:1 send 56.8Mbps lastrcv:14656 pacing_rate 68.1Mbps delivery_rate 49.0Mbps app_limited busy:14656ms rwnd_limited:188ms(1.3%) sndbuf_limited:4728ms(32.3%) unacked:1787 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.503\n"
+            },
+            {
+              "elapsed_s": 30.092199087142944,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49801 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2969408               10.0.0.1:49801               10.0.0.2:41324     \n\t skmem:(r0,rb374400,t0,tb4194304,f431808,w3832128,o0,bl0,d0) cubic wscale:7,7 rto:744 rtt:540.935/4.873 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:163785552 bytes_received:38 segs_out:120335 segs_in:37535 data_segs_out:120334 data_segs_in:1 send 49.7Mbps lastsnd:28 lastrcv:29704 pacing_rate 59.7Mbps delivery_rate 49.0Mbps app_limited busy:29704ms rwnd_limited:664ms(2.2%) sndbuf_limited:15228ms(51.3%) unacked:2162 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.503\n"
+            },
+            {
+              "elapsed_s": 45.14010262489319,
+              "command": [
+                "ss",
+                "-tmin",
+                "state",
+                "established",
+                "( sport = :49801 )"
+              ],
+              "code": 0,
+              "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2288144               10.0.0.1:49801               10.0.0.2:41324     \n\t skmem:(r0,rb374400,t0,tb4194304,f1311472,w2952464,o0,bl0,d0) cubic wscale:7,7 rto:648 rtt:446.265/5.156 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:250522448 bytes_received:38 segs_out:183070 segs_in:57663 data_segs_out:183069 data_segs_in:1 send 60.3Mbps lastsnd:148 lastrcv:44752 pacing_rate 72.4Mbps delivery_rate 49.0Mbps app_limited busy:44752ms rwnd_limited:1112ms(2.5%) sndbuf_limited:25848ms(57.8%) unacked:1665 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.503\n"
+            }
+          ],
+          "inflight_payload_bytes_p95": 3314472,
+          "inflight_payload_bytes_max": 3327504,
+          "monitor_rows": 2992,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 60,
+              "departure_mbps": 46.7912768,
+              "capacity_mbps": 47.994845866666665,
+              "utilization": 0.9749229517267276,
+              "queue_mean_ms": 260.4227961015813,
+              "queue_p95_ms": 344.0,
+              "queue_p99_ms": 345.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 245942.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 60.691,
+              "complete_window": true
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 60,
+              "departure_mbps": 47.99571072,
+              "capacity_mbps": 47.995648,
+              "utilization": 1.0000013067851485,
+              "queue_mean_ms": 270.32556689450337,
+              "queue_p95_ms": 344.0,
+              "queue_p99_ms": 345.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 210677.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 60.691,
+              "complete_window": true
+            }
+          ],
+          "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+          "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+        }
+      ],
+      "failures": {},
+      "monitor_coverage": {
+        "recv64": {
+          "first_us": "1793101215856361",
+          "last_us": "1793101275852059",
+          "rows": 2992
+        },
+        "both64": {
+          "first_us": "1793101154335739",
+          "last_us": "1793101214331329",
+          "rows": 2992
+        },
+        "current": {
+          "first_us": "1793101277370779",
+          "last_us": "1793101337366614",
+          "rows": 2992
+        }
+      }
+    },
+    "all_results": [
+      {
+        "mode": "send64",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "67108864"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "6291456"
+          ],
+          "net.core.wmem_max": [
+            "67108864"
+          ],
+          "net.core.rmem_max": [
+            "212992"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.044342279434204,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         14063744               10.0.0.1:49731              10.0.0.2:43438     \n\t skmem:(r0,rb374400,t0,tb20132352,f4736,w15027584,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.057/0.667 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2313 ssthresh:1043 bytes_acked:77137792 bytes_received:38 segs_out:55723 segs_in:16856 data_segs_out:55722 data_segs_in:1 send 49.2Mbps lastrcv:14660 pacing_rate 59.1Mbps delivery_rate 46.3Mbps busy:14660ms rwnd_limited:2060ms(14.1%) unacked:2193 rcv_space:28960 rcv_ssthresh:28960 notsent:10918656 minrtt:201.658\n"
+          },
+          {
+            "elapsed_s": 30.091999292373657,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         14187504               10.0.0.1:49731              10.0.0.2:43438     \n\t skmem:(r0,rb374400,t0,tb20132352,f1893136,w15146224,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.201/0.662 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2313 ssthresh:1043 bytes_acked:164023584 bytes_received:38 segs_out:116291 segs_in:35051 data_segs_out:116290 data_segs_in:1 send 49.2Mbps lastsnd:4 lastrcv:29708 lastack:4 pacing_rate 59.1Mbps delivery_rate 46.7Mbps busy:29708ms rwnd_limited:6396ms(21.5%) unacked:2182 rcv_space:28960 rcv_ssthresh:28960 notsent:11042448 minrtt:201.658\n"
+          },
+          {
+            "elapsed_s": 45.138280153274536,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49731 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         16192952               10.0.0.1:49731              10.0.0.2:43438     \n\t skmem:(r0,rb374400,t0,tb20132352,f1903176,w17196472,o0,bl0,d0) cubic wscale:7,7 rto:748 rtt:544.811/0.755 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2313 ssthresh:1043 bytes_acked:250896376 bytes_received:38 segs_out:176851 segs_in:53199 data_segs_out:176850 data_segs_in:1 send 49.2Mbps lastrcv:44752 pacing_rate 59.0Mbps delivery_rate 46.8Mbps busy:44752ms rwnd_limited:10612ms(23.7%) unacked:2189 rcv_space:28960 rcv_ssthresh:28960 notsent:13050824 minrtt:201.658\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 3194288,
+        "inflight_payload_bytes_max": 3204424,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 46.79050133333334,
+            "capacity_mbps": 47.994845866666665,
+            "utilization": 0.9749067944362382,
+            "queue_mean_ms": 326.02722499734296,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 344.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 236624.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 62.011,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 47.99569536,
+            "capacity_mbps": 47.995648,
+            "utilization": 1.0000009867561326,
+            "queue_mean_ms": 342.989923782457,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 344.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 201288.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 62.011,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      },
+      {
+        "mode": "both64",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "67108864"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "67108864"
+          ],
+          "net.core.wmem_max": [
+            "67108864"
+          ],
+          "net.core.rmem_max": [
+            "67108864"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.045103549957275,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49804 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         20358880               10.0.0.1:49804              10.0.0.2:55880     \n\t skmem:(r0,rb374400,t0,tb31778304,f1884960,w21912800,o0,bl0,d0) cubic wscale:11,11 rto:1072 rtt:871.641/0.592 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:3651 ssthresh:1039 bytes_acked:77155072 bytes_received:38 segs_out:56934 segs_in:28358 data_segs_out:56933 data_segs_in:1 send 48.5Mbps lastrcv:14656 pacing_rate 58.2Mbps delivery_rate 46.2Mbps busy:14656ms unacked:3648 rcv_space:43440 rcv_ssthresh:43440 notsent:15076576 minrtt:201.027\n"
+          },
+          {
+            "elapsed_s": 30.092169046401978,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49804 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         28441616               10.0.0.1:49804              10.0.0.2:55880     \n\t skmem:(r0,rb374400,t0,tb43929088,f1464048,w29907216,o0,bl0,d0) cubic wscale:11,11 rto:916 rtt:715.607/0.576 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2896 ssthresh:2473 bytes_acked:164075616 bytes_received:38 segs_out:116517 segs_in:65942 data_segs_out:116516 data_segs_in:1 send 46.9Mbps lastrcv:29704 pacing_rate 56.3Mbps delivery_rate 46.2Mbps busy:29704ms rwnd_limited:300ms(1.0%) unacked:2895 retrans:0/243 rcv_space:43440 rcv_ssthresh:43440 notsent:24249656 minrtt:201.027\n"
+          },
+          {
+            "elapsed_s": 45.13960838317871,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49804 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q            Local Address:Port           Peer Address:Port      \n0         29492864               10.0.0.1:49804              10.0.0.2:55880     \n\t skmem:(r0,rb374400,t0,tb43929088,f1317504,w31094144,o0,bl0,d0) cubic wscale:11,11 rto:1004 rtt:800.873/0.495 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:3262 ssthresh:2473 bytes_acked:250990368 bytes_received:38 segs_out:176905 segs_in:95954 data_segs_out:176904 data_segs_in:1 send 47.2Mbps lastsnd:4 lastrcv:44752 lastack:4 pacing_rate 56.6Mbps delivery_rate 46.3Mbps busy:44752ms rwnd_limited:300ms(0.7%) unacked:3259 retrans:0/243 rcv_space:43440 rcv_ssthresh:43440 notsent:24773832 minrtt:201.027\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 9429376,
+        "inflight_payload_bytes_max": 17319528,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 46.792812266666665,
+            "capacity_mbps": 47.994845866666665,
+            "utilization": 0.9749549440508812,
+            "queue_mean_ms": 593.8774634129622,
+            "queue_p95_ms": 990.0,
+            "queue_p99_ms": 1003.0,
+            "dropped_packets": 640.0,
+            "arrival_packets": 236046.0,
+            "drop_fraction": 0.0027113359260483127,
+            "last_log_s": 61.402,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 47.99577408,
+            "capacity_mbps": 47.995648,
+            "utilization": 1.0000026269048394,
+            "queue_mean_ms": 654.7136319894144,
+            "queue_p95_ms": 1001.0,
+            "queue_p99_ms": 1003.0,
+            "dropped_packets": 640.0,
+            "arrival_packets": 200309.0,
+            "drop_fraction": 0.0031950636266967537,
+            "last_log_s": 61.402,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      },
+      {
+        "mode": "recv64",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "4194304"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "67108864"
+          ],
+          "net.core.wmem_max": [
+            "212992"
+          ],
+          "net.core.rmem_max": [
+            "67108864"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.046315908432007,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49803 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2705760               10.0.0.3:49803               10.0.0.4:39906     \n\t skmem:(r0,rb374400,t0,tb4194304,f1098912,w3169120,o0,bl0,d0) cubic wscale:11,11 rto:704 rtt:503.397/3.027 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2683 ssthresh:1047 bytes_acked:77067936 bytes_received:38 segs_out:57067 segs_in:28601 data_segs_out:57066 data_segs_in:1 send 61.7Mbps lastrcv:14660 pacing_rate 74.1Mbps delivery_rate 49.1Mbps app_limited busy:14660ms sndbuf_limited:56ms(0.4%) unacked:1982 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.547\n"
+          },
+          {
+            "elapsed_s": 30.09441828727722,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49803 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3230048               10.0.0.3:49803               10.0.0.4:39906     \n\t skmem:(r0,rb374400,t0,tb4194304,f522144,w3745888,o0,bl0,d0) cubic wscale:11,11 rto:728 rtt:524.272/2.837 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2683 ssthresh:1047 bytes_acked:163796640 bytes_received:38 segs_out:120973 segs_in:60362 data_segs_out:120972 data_segs_in:1 send 59.3Mbps lastrcv:29708 pacing_rate 71.1Mbps delivery_rate 49.1Mbps app_limited busy:29708ms sndbuf_limited:56ms(0.2%) unacked:2366 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.547\n"
+          },
+          {
+            "elapsed_s": 45.141972064971924,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49803 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         3552432               10.0.0.3:49803               10.0.0.4:39906     \n\t skmem:(r0,rb374400,t0,tb4194304,f157520,w4110512,o0,bl0,d0) cubic wscale:11,11 rto:736 rtt:535.309/3.01 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2683 ssthresh:1047 bytes_acked:250514256 bytes_received:38 segs_out:184723 segs_in:92119 data_segs_out:184722 data_segs_in:1 send 58.1Mbps lastsnd:16 lastrcv:44756 pacing_rate 69.7Mbps delivery_rate 49.1Mbps app_limited busy:44756ms sndbuf_limited:56ms(0.1%) unacked:2602 rcv_space:43440 rcv_ssthresh:43440 minrtt:201.547\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 3701088,
+        "inflight_payload_bytes_max": 3851680,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 46.79198186666667,
+            "capacity_mbps": 47.994845866666665,
+            "utilization": 0.9749376421930461,
+            "queue_mean_ms": 297.14235169577785,
+            "queue_p95_ms": 405.0,
+            "queue_p99_ms": 419.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 247096.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 60.696,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 47.99552,
+            "capacity_mbps": 47.995648,
+            "utilization": 0.9999973330915336,
+            "queue_mean_ms": 312.8217851338353,
+            "queue_p95_ms": 407.0,
+            "queue_p99_ms": 420.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 211763.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 60.696,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      },
+      {
+        "mode": "current",
+        "sysctls": {
+          "net.ipv4.tcp_wmem": [
+            "4096",
+            "32768",
+            "4194304"
+          ],
+          "net.ipv4.tcp_rmem": [
+            "4096",
+            "87380",
+            "6291456"
+          ],
+          "net.core.wmem_max": [
+            "212992"
+          ],
+          "net.core.rmem_max": [
+            "212992"
+          ]
+        },
+        "snapshots": [
+          {
+            "elapsed_s": 15.044450998306274,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49801 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2457600               10.0.0.1:49801               10.0.0.2:41324     \n\t skmem:(r0,rb374400,t0,tb4194304,f1112576,w3151360,o0,bl0,d0) cubic wscale:7,7 rto:676 rtt:474.029/5.266 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:77045760 bytes_received:38 segs_out:56731 segs_in:17989 data_segs_out:56730 data_segs_in:1 send 56.8Mbps lastrcv:14656 pacing_rate 68.1Mbps delivery_rate 49.0Mbps app_limited busy:14656ms rwnd_limited:188ms(1.3%) sndbuf_limited:4728ms(32.3%) unacked:1787 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.503\n"
+          },
+          {
+            "elapsed_s": 30.092199087142944,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49801 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2969408               10.0.0.1:49801               10.0.0.2:41324     \n\t skmem:(r0,rb374400,t0,tb4194304,f431808,w3832128,o0,bl0,d0) cubic wscale:7,7 rto:744 rtt:540.935/4.873 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:163785552 bytes_received:38 segs_out:120335 segs_in:37535 data_segs_out:120334 data_segs_in:1 send 49.7Mbps lastsnd:28 lastrcv:29704 pacing_rate 59.7Mbps delivery_rate 49.0Mbps app_limited busy:29704ms rwnd_limited:664ms(2.2%) sndbuf_limited:15228ms(51.3%) unacked:2162 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.503\n"
+          },
+          {
+            "elapsed_s": 45.14010262489319,
+            "command": [
+              "ss",
+              "-tmin",
+              "state",
+              "established",
+              "( sport = :49801 )"
+            ],
+            "code": 0,
+            "output": "Recv-Q    Send-Q           Local Address:Port            Peer Address:Port      \n0         2288144               10.0.0.1:49801               10.0.0.2:41324     \n\t skmem:(r0,rb374400,t0,tb4194304,f1311472,w2952464,o0,bl0,d0) cubic wscale:7,7 rto:648 rtt:446.265/5.156 ato:40 mss:1448 pmtu:1500 rcvmss:536 advmss:1448 cwnd:2323 ssthresh:1043 bytes_acked:250522448 bytes_received:38 segs_out:183070 segs_in:57663 data_segs_out:183069 data_segs_in:1 send 60.3Mbps lastsnd:148 lastrcv:44752 pacing_rate 72.4Mbps delivery_rate 49.0Mbps app_limited busy:44752ms rwnd_limited:1112ms(2.5%) sndbuf_limited:25848ms(57.8%) unacked:1665 rcv_space:28960 rcv_ssthresh:28960 minrtt:201.503\n"
+          }
+        ],
+        "inflight_payload_bytes_p95": 3314472,
+        "inflight_payload_bytes_max": 3327504,
+        "monitor_rows": 2992,
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 60,
+            "departure_mbps": 46.7912768,
+            "capacity_mbps": 47.994845866666665,
+            "utilization": 0.9749229517267276,
+            "queue_mean_ms": 260.4227961015813,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 245942.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 60.691,
+            "complete_window": true
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 60,
+            "departure_mbps": 47.99571072,
+            "capacity_mbps": 47.995648,
+            "utilization": 1.0000013067851485,
+            "queue_mean_ms": 270.32556689450337,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 210677.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 60.691,
+            "complete_window": true
+          }
+        ],
+        "algorithm": "CUBIC_NO_RL_NO_WINDOW_WRITES",
+        "monitoring": "Same existing20ms TCP_INFO call, appended unacked/mss fields; no RL/NN/IPC"
+      }
+    ],
+    "current_sysctls": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R200-q5",
+      "nominal_mbps": 48,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 4000,
+      "queue_bytes": 6016000,
+      "queue_bdp": 5,
+      "queue_rule": "Upstream Orca shell formula: 2BDP with1500-byte packet approximation"
+    },
+    "host": "actor-c"
+  }
+]

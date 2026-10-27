@@ -1,0 +1,104 @@
+{
+  "status": "PASS_DEPLOYED_NO_NEW_TCP",
+  "native": {
+    "schema": 2,
+    "binary_sha256": "82ceac616039bbc5f997aeccea56aa1f72df106cd9ea6ff74eece2bed59b027d",
+    "source_sha256": {
+      "orca-server-verified-ipc.cc": "e35eea5f29d3b52d7d726a1f094b4b8f78896bfb889247fcbab35e263bc0e77a",
+      "verified_scalar_ipc.h": "12988bf444a9455b0ec0dd22dff0e679a965bdfdde48a4d9acc2a03dfb95032a"
+    }
+  },
+  "tests": [
+    {
+      "pattern": "test_scalar_exploration.py",
+      "output": "........\n----------------------------------------------------------------------\nRan 8 tests in 1.729s\n\nOK\n"
+    },
+    {
+      "pattern": "test_exploration_check.py",
+      "output": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.213s\n\nOK\n"
+    },
+    {
+      "pattern": "test_scalar_verified_ipc.py",
+      "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.000s\n\nOK\n"
+    }
+  ],
+  "protected_files": 51,
+  "busy": [],
+  "host": {
+    "kernel": "4.13.1-0521-learner",
+    "sysctl": {
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.ipv4.tcp_adv_win_scale": [
+        "1"
+      ],
+      "net.ipv4.tcp_moderate_rcvbuf": [
+        "1"
+      ],
+      "net.ipv4.tcp_slow_start_after_idle": [
+        "0"
+      ],
+      "net.ipv4.tcp_congestion_control": [
+        "cubic"
+      ],
+      "net.ipv4.tcp_no_metrics_save": [
+        "1"
+      ],
+      "net.ipv4.tcp_notsent_lowat": [
+        "4294967295"
+      ]
+    }
+  },
+  "source": {
+    "tools/test_scalar_verified_ipc.py": "6e98bee9ef2f6a2708fc5909419235566c9dcdad52af2b0efc61d59396f81f8b",
+    "tools/test_scalar_exploration.py": "73afb15d3dcea163f6b8a907486ed7acb7a53b2cc8979b6938a6ddf1dac4c884",
+    "tools/test_exploration_check.py": "ae9912305320c511c863932dbc179e9c3a2a976ac700a461e16aea4c6c696db9",
+    "tools/scalar_ipc_diagnostic/make_exploration_registration.py": "521e9ae767306f031ed7837bcc97c0a053989093091a6588f1fb02b99bbc74f5",
+    "tools/scalar_ipc_diagnostic/ipc_echo_audit.py": "5c1815e4f6cbc79888bfe643234b1fd0e63aa1edf94ab796a3a614633eaa0e5c",
+    "tools/scalar_ipc_diagnostic/analyze.py": "e2fb51a08e1b1ecea0e0678a490c53070d331b271ee82f29a9297f8c02260bd4",
+    "tools/scalar_ipc_diagnostic/ipc_stress.py": "1a55150615e388fd11b3dd35dc6991a12e2097d9acd7623a718a7cdae842b192",
+    "tools/scalar_ipc_diagnostic/probe_driver.py": "cebbbfae5a2337117f35d18eb65a48d001cf80614dcce11db574a87e9c61f5ad",
+    "tools/scalar_ipc_diagnostic/analyze_exploration.py": "c33301e7aac425059236593d2f897f2519b33281288a5c85e0c7fb82c253acf0",
+    "tools/scalar_ipc_diagnostic/window_binding.py": "d62e8009eaafa6be9559cec80eb1f8dec6ab433ac20f67dae2e75e7e9f3892d3",
+    "frameworks/canopy_single/remote_frozen_evaluate.py": "ae3cd0adfeec03f81b7718b82c2fe1eee6f849e8fc07d331be10656230d4bab4",
+    "frameworks/canopy_single/moving_stats_backend.py": "8134cbf68d0eb2eacbbed5c065817f998a7c7ccac6779c358c72af7fdefff952",
+    "frameworks/canopy_single/orca_backend.py": "7a3e0a1b100f2765ef3eff3f0f1c11a0b947b44b198017592732b51d71144680",
+    "frameworks/canopy_single/distributed.py": "cdfc9f7c56e03a2835e1f1788daffdf5d3e95fb2955585eb9a2b05883b5815ba",
+    "frameworks/canopy_single/verify_canopy.py": "952d27fe5a597510f47ceb575101e2c4a66162f445cc12e1969371d49247f74d",
+    "frameworks/canopy_single/verify_orca.py": "7590a9414659b13a1b928a8f017755929b61cf60d2ec1ce225059dad877eff07",
+    "frameworks/canopy_single/timed_distributed.py": "0b8f196d0890cc6bea86470dc9c2d08564104dfc2c0fa914a3440c8e35b7ffd4",
+    "frameworks/canopy_single/constants.py": "7e292b938d0dfee9bf21da09eb959c5c2de328a7321948b1ed64683d1620b37c",
+    "frameworks/canopy_single/independent_critic_v34.py": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266",
+    "frameworks/canopy_single/frozen_evaluate.py": "927c92be944ae93f8325e0f2424e13d1116e6df69f418b18275a009eef1e943b",
+    "frameworks/canopy_single/repair_evaluate.py": "eeadbcbac1c7dfce152c86ae7af1a8bdfed9fe0d62a2a32f4bec546a2b8b9311",
+    "frameworks/canopy_single/constrained_reward.py": "ef4a18ef50b75653237c35f3ec4275f410576d582e70889840ef4a5d65f3cc09",
+    "frameworks/canopy_single/evaluate.py": "d88e580c418bdb6a4b936f04d489645170a22ef7086cc33bf12d7f9f26138275",
+    "frameworks/canopy_single/cluster_control.py": "339e550df9167b999f4b2f874e4284c66b39d564bb8c9da8950f4373bdc3670c",
+    "frameworks/canopy_single/scalar_window_init.py": "1d0a3424cb441b4f6141dcdb6287a3687725e18fcad3a489735f4d2e2b401de3",
+    "frameworks/canopy_single/node_control.py": "039ccbe7c87e8a1a8688135b2e0dc52f636ab0c5f674bb5549c191134094206c",
+    "frameworks/canopy_single/canopy_feedback.py": "48316ab4f17239dc9e430037ccc3824e5a0beda6e83d2432690c56f79d9e2df9",
+    "frameworks/canopy_single/scalar_exploration.py": "764ad57eda4962c77352c53a566295fa12c5c9fcd6e5ff367b03880519427828",
+    "frameworks/canopy_single/verify_canopy_qc_modes.py": "3fab0f6c4229faf131314fb5bed63162e4cebab797b983e98d7830c028710806",
+    "frameworks/canopy_single/mahimahi_metrics.py": "83dd2ab21b6e99524c8b66edee5f9d24915331a44f87dd3a2df29e71683aac15",
+    "frameworks/canopy_single/symbolic_transitions.py": "468390187ff406f433e3763bb95f87cf1762d8772a25c64b20f141921f75733a",
+    "frameworks/canopy_single/resource_cost.py": "37489568d4bbfaf4ad7b45cb5f7fcdabe17e242f171f96df4e31ed77a10437ae",
+    "frameworks/canopy_single/consistent_target_bn.py": "ac64991d4bb40c10afff580b5c8140ec1e6587c9eb64344e8a37b3b5b00380a5",
+    "frameworks/canopy_single/verified_ipc.py": "79d9152fbaf42e1ca2cab73bdd89f5779b92b22bac8353538babc8f11c69a706",
+    "frameworks/canopy_single/orca_moving_actor_loss.py": "fe886a668a09a05518c37013c768a66ff6c03f328d46a82003a5ba2d6c08e154",
+    "frameworks/canopy_single/canopy_qc_modes.py": "50b4914a10c3b297105bab026a03e82f4b73c6f1a906c701ae6316dea0c91f94"
+  }
+}

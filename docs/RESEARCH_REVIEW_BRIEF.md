@@ -1,3 +1,11 @@
+# 后续实测：累计探索修正通过，基座尚未重训（2026-10-27）
+
+五机32次同日配对零优化检查：zero_sum16/16通过窗口门槛，iid有2次百万窗口/8次持续时间失败；12组配对丢包均下降。独立12次CUBIC缓冲干预支持端主机限制影响评测；4次大缓冲zero_sum也过窗口门槛，但约束比例0.5预测未过，排队仍高。原设置已恢复、五机空闲、51保护文件未变。没有新增合格Orca/Canopy模型、没有双动作/CPU突破、没有长训。
+
+优先读[诊断与实测修正](SCALAR_EXPLORATION_AND_BUFFER_CAP.md)、[完整判定](../evidence/scalar-exploration-20261027/exploration-adjudication.json)、[缓冲结果](../evidence/scalar-exploration-20261027/environment-results.json)、[验证边界](../evidence/scalar-exploration-20261027/validation.json)。下文是前轮历史交接，运行状态不可混用。
+
+---
+
 # 最新补充：IPC修复通过，初始化仍未过关（2026-10-27）
 
 **仍为PARTIAL、NO-GO长训；尚无新的合格Orca/Canopy基座，也没有双动作性能—CPU突破。** 本节是E2之后完成的单动作固定20ms诊断。原baseline、V14、健康149维V31及51个选定模型文件未改，V31的观测/执行真共周期语义未变。

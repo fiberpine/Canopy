@@ -1,0 +1,419 @@
+[
+  {
+    "host": "learner",
+    "status": "PASS_FINAL_CLOSURE",
+    "epoch": 1793102009.9539847,
+    "busy": [],
+    "remaining_ipc": [],
+    "protected_files": 51,
+    "restored_sysctls": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "accounting": [
+      {
+        "run_id": "explorecheck-formal-G72-R200-q2-s3-zero_sum",
+        "generated": 2743,
+        "inserted": 2743
+      },
+      {
+        "run_id": "explorecheck-formal-G72-R20-q2-s4-zero_sum",
+        "generated": 2746,
+        "inserted": 2746
+      },
+      {
+        "run_id": "explorecheck-formal-G72-R200-q2-s3-iid_anchor",
+        "generated": 2627,
+        "inserted": 2627
+      },
+      {
+        "run_id": "explorecheck-formal-G72-R20-q2-s3-iid_anchor",
+        "generated": 2743,
+        "inserted": 2743
+      },
+      {
+        "run_id": "explorecheck-smoke-G24-R20-q2-s3-zero_sum",
+        "generated": 551,
+        "inserted": 551
+      },
+      {
+        "run_id": "explorecheck-smoke-G72-R200-q2-s4-zero_sum",
+        "generated": 543,
+        "inserted": 543
+      },
+      {
+        "run_id": "explorecheck-buffer64-G72-R200-q2-s3-zero_sum",
+        "generated": 2742,
+        "inserted": 2742
+      },
+      {
+        "run_id": "explorecheck-formal-G24-R100-q2-s4-iid_anchor",
+        "generated": 2675,
+        "inserted": 2675
+      },
+      {
+        "run_id": "explorecheck-formal-G72-R20-q2-s4-iid_anchor",
+        "generated": 2744,
+        "inserted": 2744
+      },
+      {
+        "run_id": "explorecheck-formal-G24-R100-q2-s4-zero_sum",
+        "generated": 2745,
+        "inserted": 2745
+      },
+      {
+        "run_id": "explorecheck-formal-G72-R20-q2-s3-zero_sum",
+        "generated": 2753,
+        "inserted": 2753
+      }
+    ],
+    "environment_initial_pairs": [
+      {
+        "run_id": "explorecheck-buffer64-G72-R200-q2-s3-zero_sum",
+        "matched_prior": "explorecheck-formal-G72-R200-q2-s3-zero_sum",
+        "identical96": true
+      }
+    ],
+    "source": {
+      "buffer_zero_probe.py": "d8bcaa1b7801f1afe164384a8150aa329776cf5911c69769a546a472d5ccadea"
+    }
+  },
+  {
+    "host": "actor-a",
+    "status": "PASS_FINAL_CLOSURE",
+    "epoch": 1793102007.8932765,
+    "busy": [],
+    "remaining_ipc": [],
+    "protected_files": 51,
+    "restored_sysctls": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "accounting": [
+      {
+        "run_id": "explorecheck-formal-G24-R20-q2-s3-iid_anchor",
+        "generated": 2750,
+        "inserted": 2750
+      },
+      {
+        "run_id": "explorecheck-formal-G48-R20-q2-s4-zero_sum",
+        "generated": 2753,
+        "inserted": 2753
+      },
+      {
+        "run_id": "explorecheck-smoke-G24-R20-q2-s3-zero_sum",
+        "generated": 554,
+        "inserted": 554
+      },
+      {
+        "run_id": "explorecheck-smoke-G72-R200-q2-s4-zero_sum",
+        "generated": 543,
+        "inserted": 543
+      },
+      {
+        "run_id": "explorecheck-formal-G24-R20-q2-s3-zero_sum",
+        "generated": 2754,
+        "inserted": 2754
+      },
+      {
+        "run_id": "explorecheck-formal-G48-R20-q2-s3-iid_anchor",
+        "generated": 2751,
+        "inserted": 2751
+      },
+      {
+        "run_id": "explorecheck-formal-G48-R20-q2-s3-zero_sum",
+        "generated": 2755,
+        "inserted": 2755
+      },
+      {
+        "run_id": "explorecheck-formal-G48-R20-q2-s4-iid_anchor",
+        "generated": 2750,
+        "inserted": 2750
+      }
+    ],
+    "environment_initial_pairs": [],
+    "source": {
+      "environment_probe.py": "2997b5398cb9cf5e50cf8254e3cdc4395771df2efa67c29ebe44ab832d17ac6e",
+      "environment_probe_r2.py": "75f41a9f4a87bb81ac44b4f8585d06a6b8f2de0c0b72046ef11dc28b432beaca"
+    }
+  },
+  {
+    "host": "actor-b",
+    "status": "PASS_FINAL_CLOSURE",
+    "epoch": 1793102009.937331,
+    "busy": [],
+    "remaining_ipc": [],
+    "protected_files": 51,
+    "restored_sysctls": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "accounting": [
+      {
+        "run_id": "explorecheck-formal-G12-R20-q2-s4-zero_sum",
+        "generated": 2757,
+        "inserted": 2757
+      },
+      {
+        "run_id": "explorecheck-formal-G12-R20-q2-s4-iid_anchor",
+        "generated": 2742,
+        "inserted": 2742
+      },
+      {
+        "run_id": "explorecheck-formal-G12-R200-q2-s3-iid_anchor",
+        "generated": 2585,
+        "inserted": 2585
+      },
+      {
+        "run_id": "explorecheck-formal-G12-R20-q2-s3-iid_anchor",
+        "generated": 2748,
+        "inserted": 2748
+      },
+      {
+        "run_id": "explorecheck-formal-G12-R200-q2-s3-zero_sum",
+        "generated": 2743,
+        "inserted": 2743
+      },
+      {
+        "run_id": "explorecheck-smoke-G24-R20-q2-s3-zero_sum",
+        "generated": 552,
+        "inserted": 552
+      },
+      {
+        "run_id": "explorecheck-smoke-G72-R200-q2-s4-zero_sum",
+        "generated": 544,
+        "inserted": 544
+      },
+      {
+        "run_id": "explorecheck-formal-G12-R20-q2-s3-zero_sum",
+        "generated": 2751,
+        "inserted": 2751
+      }
+    ],
+    "environment_initial_pairs": [],
+    "source": {
+      "environment_probe.py": "2997b5398cb9cf5e50cf8254e3cdc4395771df2efa67c29ebe44ab832d17ac6e",
+      "environment_probe_r2.py": "75f41a9f4a87bb81ac44b4f8585d06a6b8f2de0c0b72046ef11dc28b432beaca"
+    }
+  },
+  {
+    "host": "actor-c",
+    "status": "PASS_FINAL_CLOSURE",
+    "epoch": 1793102008.4269626,
+    "busy": [],
+    "remaining_ipc": [],
+    "protected_files": 51,
+    "restored_sysctls": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "accounting": [
+      {
+        "run_id": "explorecheck-formal-G48-R200-q2-s4-iid_anchor",
+        "generated": 2740,
+        "inserted": 2740
+      },
+      {
+        "run_id": "explorecheck-formal-G48-R200-q2-s3-zero_sum",
+        "generated": 2747,
+        "inserted": 2747
+      },
+      {
+        "run_id": "explorecheck-smoke-G24-R20-q2-s3-zero_sum",
+        "generated": 550,
+        "inserted": 550
+      },
+      {
+        "run_id": "explorecheck-smoke-G72-R200-q2-s4-zero_sum",
+        "generated": 544,
+        "inserted": 544
+      },
+      {
+        "run_id": "explorecheck-buffer64-G48-R200-q2-s3-zero_sum",
+        "generated": 2746,
+        "inserted": 2746
+      },
+      {
+        "run_id": "explorecheck-formal-G24-R20-q2-s4-iid_anchor",
+        "generated": 2753,
+        "inserted": 2753
+      },
+      {
+        "run_id": "explorecheck-formal-G24-R20-q2-s4-zero_sum",
+        "generated": 2758,
+        "inserted": 2758
+      },
+      {
+        "run_id": "explorecheck-formal-G48-R200-q2-s4-zero_sum",
+        "generated": 2745,
+        "inserted": 2745
+      },
+      {
+        "run_id": "explorecheck-buffer64-G48-R200-q2-s4-zero_sum",
+        "generated": 2746,
+        "inserted": 2746
+      },
+      {
+        "run_id": "explorecheck-formal-G48-R200-q2-s3-iid_anchor",
+        "generated": 2713,
+        "inserted": 2713
+      }
+    ],
+    "environment_initial_pairs": [
+      {
+        "run_id": "explorecheck-buffer64-G48-R200-q2-s4-zero_sum",
+        "matched_prior": "explorecheck-formal-G48-R200-q2-s4-zero_sum",
+        "identical96": true
+      },
+      {
+        "run_id": "explorecheck-buffer64-G48-R200-q2-s3-zero_sum",
+        "matched_prior": "explorecheck-formal-G48-R200-q2-s3-zero_sum",
+        "identical96": true
+      }
+    ],
+    "source": {
+      "environment_probe.py": "2997b5398cb9cf5e50cf8254e3cdc4395771df2efa67c29ebe44ab832d17ac6e",
+      "environment_probe_r2.py": "75f41a9f4a87bb81ac44b4f8585d06a6b8f2de0c0b72046ef11dc28b432beaca",
+      "buffer_zero_probe.py": "d8bcaa1b7801f1afe164384a8150aa329776cf5911c69769a546a472d5ccadea"
+    }
+  },
+  {
+    "host": "actor-d",
+    "status": "PASS_FINAL_CLOSURE",
+    "epoch": 1793102008.8638597,
+    "busy": [],
+    "remaining_ipc": [],
+    "protected_files": 51,
+    "restored_sysctls": {
+      "net.ipv4.tcp_wmem": [
+        "4096",
+        "32768",
+        "4194304"
+      ],
+      "net.ipv4.tcp_rmem": [
+        "4096",
+        "87380",
+        "6291456"
+      ],
+      "net.core.wmem_max": [
+        "212992"
+      ],
+      "net.core.rmem_max": [
+        "212992"
+      ]
+    },
+    "accounting": [
+      {
+        "run_id": "explorecheck-formal-G72-R200-q2-s4-zero_sum",
+        "generated": 2752,
+        "inserted": 2752
+      },
+      {
+        "run_id": "explorecheck-smoke-G24-R20-q2-s3-zero_sum",
+        "generated": 549,
+        "inserted": 549
+      },
+      {
+        "run_id": "explorecheck-smoke-G72-R200-q2-s4-zero_sum",
+        "generated": 547,
+        "inserted": 547
+      },
+      {
+        "run_id": "explorecheck-formal-G24-R100-q2-s3-zero_sum",
+        "generated": 2758,
+        "inserted": 2758
+      },
+      {
+        "run_id": "explorecheck-formal-G12-R200-q2-s4-iid_anchor",
+        "generated": 2470,
+        "inserted": 2470
+      },
+      {
+        "run_id": "explorecheck-formal-G72-R200-q2-s4-iid_anchor",
+        "generated": 2743,
+        "inserted": 2743
+      },
+      {
+        "run_id": "explorecheck-buffer64-G72-R200-q2-s4-zero_sum",
+        "generated": 2747,
+        "inserted": 2747
+      },
+      {
+        "run_id": "explorecheck-formal-G24-R100-q2-s3-iid_anchor",
+        "generated": 2672,
+        "inserted": 2672
+      },
+      {
+        "run_id": "explorecheck-formal-G12-R200-q2-s4-zero_sum",
+        "generated": 2748,
+        "inserted": 2748
+      }
+    ],
+    "environment_initial_pairs": [
+      {
+        "run_id": "explorecheck-buffer64-G72-R200-q2-s4-zero_sum",
+        "matched_prior": "explorecheck-formal-G72-R200-q2-s4-zero_sum",
+        "identical96": true
+      }
+    ],
+    "source": {
+      "buffer_zero_probe.py": "d8bcaa1b7801f1afe164384a8150aa329776cf5911c69769a546a472d5ccadea"
+    }
+  }
+]

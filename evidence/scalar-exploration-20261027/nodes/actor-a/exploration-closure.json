@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "epoch": 1793100859.115062,
+  "busy": [],
+  "remaining_ipc": [],
+  "protected_files": 51,
+  "data_accounting": [
+    {
+      "run_id": "explorecheck-formal-G24-R20-q2-s3-iid_anchor",
+      "generated": 2750,
+      "enqueued": 2750,
+      "inserted": 2750
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R20-q2-s4-zero_sum",
+      "generated": 2753,
+      "enqueued": 2753,
+      "inserted": 2753
+    },
+    {
+      "run_id": "explorecheck-smoke-G24-R20-q2-s3-zero_sum",
+      "generated": 554,
+      "enqueued": 554,
+      "inserted": 554
+    },
+    {
+      "run_id": "explorecheck-smoke-G72-R200-q2-s4-zero_sum",
+      "generated": 543,
+      "enqueued": 543,
+      "inserted": 543
+    },
+    {
+      "run_id": "explorecheck-formal-G24-R20-q2-s3-zero_sum",
+      "generated": 2754,
+      "enqueued": 2754,
+      "inserted": 2754
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R20-q2-s3-iid_anchor",
+      "generated": 2751,
+      "enqueued": 2751,
+      "inserted": 2751
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R20-q2-s3-zero_sum",
+      "generated": 2755,
+      "enqueued": 2755,
+      "inserted": 2755
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R20-q2-s4-iid_anchor",
+      "generated": 2750,
+      "enqueued": 2750,
+      "inserted": 2750
+    }
+  ],
+  "paired_initial96": [
+    {
+      "condition": "G24-R20-q2",
+      "seed": 3,
+      "identical_variables": 96
+    },
+    {
+      "condition": "G48-R20-q2",
+      "seed": 3,
+      "identical_variables": 96
+    },
+    {
+      "condition": "G48-R20-q2",
+      "seed": 4,
+      "identical_variables": 96
+    }
+  ],
+  "core_sha": {
+    "distributed.py": "cdfc9f7c56e03a2835e1f1788daffdf5d3e95fb2955585eb9a2b05883b5815ba",
+    "evaluate.py": "d88e580c418bdb6a4b936f04d489645170a22ef7086cc33bf12d7f9f26138275",
+    "scalar_exploration.py": "764ad57eda4962c77352c53a566295fa12c5c9fcd6e5ff367b03880519427828",
+    "scalar_window_init.py": "1d0a3424cb441b4f6141dcdb6287a3687725e18fcad3a489735f4d2e2b401de3",
+    "verified_ipc.py": "79d9152fbaf42e1ca2cab73bdd89f5779b92b22bac8353538babc8f11c69a706"
+  }
+}

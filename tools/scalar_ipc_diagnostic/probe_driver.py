@@ -88,6 +88,15 @@ def measure(cfg):
     # Full packet quality retained even though this is an initialization/exploration diagnostic.
     sys.path.insert(0,str(FRAME));from mahimahi_metrics import mm
     windows,_,_=mm(folder/'down.log',cfg['probe_seconds']);out['packet_windows']=windows
+    # Additive, read-only diagnostics (exploration-process check): arm label, window binding from the
+    # verified state payloads, and the log-window decomposition. A diagnostic failure never hides a gate.
+    out['exploration_process']=cfg.get('exploration_process','iid');out['exploration_offset_rho']=cfg.get('exploration_offset_rho')
+    try:
+        import window_binding
+        out['window_diagnostics']=window_binding.analyze(folder)
+        json.dumps(out['window_diagnostics'],allow_nan=False)   # a NaN must not break the stage's strict put()
+    except Exception as e:
+        out['window_diagnostics']=dict(status='FAILED',reason=repr(e))
     return out
 
 
@@ -107,10 +116,19 @@ def run_one(cfg,deadline):
                     raise RuntimeError('Failed startup '+role+'; inspect exact stdout')
                 time.sleep(.1)
         started=float(marker.read_text());end=started+cfg['probe_seconds']
+        marks=sorted(cfg.get('ss_snapshot_seconds',[]));snaps=[]
         while time.time()<end:
             if any(p.poll() is not None for p in children):raise RuntimeError('Early worker exit')
             assert time.time()<deadline
+            if marks and time.time()>=started+marks[0]:
+                # Optional read-only server socket snapshot: tells receive-window from send-buffer limits.
+                marks.pop(0)
+                try:
+                    import window_binding
+                    snaps.append(dict(at_s=time.time()-started,**window_binding.ss_snapshot(cfg.get('actor_port_base',48200))))
+                except Exception as e:snaps.append(dict(at_s=time.time()-started,status='FAILED',reason=repr(e)))
             time.sleep(.2)
+        if snaps:put(ROOT/'audit'/(rid+'-ss.json'),snaps)
         pathlib.Path(cfg['stop_file']).write_text('FINITE_ZERO_OPTIMIZER_EXPOSURE_COMPLETE')
         for p in children:
             rc=p.wait(timeout=120);assert rc==0,('Worker failed',rc)
@@ -129,6 +147,11 @@ def main():
     args=ap.parse_args();plan=json.loads((ROOT/'registration.json').read_text());jobs=plan[args.stage]
     status=ROOT/(args.stage+'-status.json');assert not status.exists(),'Never repeat a started stage'
     if args.stage=='formal':assert json.loads((ROOT/'smoke-status.json').read_text())['stage']=='COMPLETE'
+    try:
+        import window_binding
+        put(ROOT/(args.stage+'-host-receipt.json'),window_binding.host_receipt())   # TCP buffer sysctls, read-only
+    except Exception as e:
+        put(ROOT/(args.stage+'-host-receipt.json'),dict(status='FAILED',reason=repr(e)))
     results=[]
     try:
         for cfg in jobs:

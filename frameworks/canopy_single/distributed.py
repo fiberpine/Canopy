@@ -203,8 +203,11 @@ def actor(cfg,index):
   from envwrapper import TCP_Env_Wrapper
  else:from envwrapper_v2 import TCP_Env_Wrapper
  original=evaluate.model
+ import scalar_exploration
+ explorer=scalar_exploration.build(cfg)   # None keeps the upstream iid G_Noise path unchanged
  def model_proxy(ecfg):
   nonlocal feedback
+  if explorer is not None:explorer.reset()   # one bounded offset process per TCP connection
   if cfg.get('reward_mode')=='raw-sym':
    from canopy_feedback import Feedback
    feedback=Feedback(a,cfg,R/'logs'/run_id)
@@ -219,6 +222,9 @@ def actor(cfg,index):
    if cfg.get('fixed_action') is not None:
     # Capacity diagnostic only: still execute the real remote inference call.
     x=float(cfg['fixed_action']);no_noise=x
+   elif explorer is not None:
+    # Opt-in zero_sum_offset: bounded window offset instead of a log-cwnd random walk.
+    x=explorer(x);counts['exploration_calls']+=1
    else:
     noise=float(np.asarray(a.actor_noise(np.array([[x]]))).reshape(-1)[0]);counts['exploration_calls']+=1;x=float(np.clip(x+noise,-1,1))
    evaluate.latest_nn=no_noise
@@ -255,7 +261,7 @@ def actor(cfg,index):
   (R/'logs'/run_id/'producer.json').write_text(json.dumps(dict(counts,errors=errors,seed=cfg['seed']+index*1009,initial_policy_hash=initial_policy_hash),indent=2))
   import pickle
   with (R/'logs'/run_id/'actor-state.pkl').open('wb') as out:
-   pickle.dump(dict(counts=counts,numpy_random=np.random.get_state(),python_random=random.getstate(),noise_state=dict(a.actor_noise.__dict__) if a.actor_noise else None),out,protocol=4)
+   pickle.dump(dict(counts=counts,numpy_random=np.random.get_state(),python_random=random.getstate(),noise_state=dict(a.actor_noise.__dict__) if a.actor_noise else None,exploration_state=explorer.state() if explorer is not None else None),out,protocol=4)
  if errors:
   sys.stdout.flush();sys.stderr.flush();os._exit(1)
  deadline=time.monotonic()+cfg.get('shutdown_barrier_s',180)

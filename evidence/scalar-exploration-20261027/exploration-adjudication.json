@@ -1,0 +1,1451 @@
+{
+  "status": "ADJUDICATED",
+  "decision": "ADOPT_CANDIDATE_FOR_REVIEW_ONLY_NO_AUTOMATIC_TRAINING (separate environment decision still required for capped conditions)",
+  "verdict": {
+    "P1_gates": true,
+    "P1b_mechanism": true,
+    "P4_quantizer": true,
+    "P2_loss": {
+      "pass_": true,
+      "lower_drop_pairs": 12,
+      "pairs": 12
+    },
+    "anchors_reproduce": {
+      "pass_": true,
+      "at_least_1e5": 4,
+      "anchors": 4
+    }
+  },
+  "capped_conditions": [
+    "G48-R200-q2",
+    "G72-R200-q2"
+  ],
+  "failures": [],
+  "rows": [
+    {
+      "run_id": "explorecheck-formal-G24-R100-q2-s4-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G24-R100-q2",
+      "seed": 4,
+      "max_cwnd": 1469.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.002357062864633692,
+      "full": {
+        "utilization": 0.9878478045294795,
+        "drop_fraction": 0.01496645020745163,
+        "queue_mean_ms": 127.60103219256314,
+        "queue_p95_ms": 191.0,
+        "queue_p99_ms": 201.0
+      },
+      "trim10": {
+        "utilization": 1.0000010403551078,
+        "drop_fraction": 0.017525560158625508,
+        "queue_mean_ms": 129.01307884416718,
+        "queue_p95_ms": 193.0,
+        "queue_p99_ms": 201.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.5440522404219893,
+        "unanchored_fraction": 0.0012977457704852415,
+        "inflight_bytes_p95": 1261208.0,
+        "cwnd_over_packets_out_p50": 1.0846905537459284
+      },
+      "per_step": {
+        "deterministic": 0.0032675829580467853,
+        "exploration": -3.622007025276766e-05,
+        "percent_truncation": -0.005356574541917174,
+        "integer_rounding": -0.006378505598981385
+      },
+      "max_abs_cumulative_exploration": 0.5962773921196308,
+      "command_drift_per_step": -0.0031109226409345996,
+      "reference": {
+        "run_id": "explorecheck-formal-G24-R100-q2-s4-iid_anchor",
+        "full_drop_fraction": 0.22514873330444032,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G24-R100-q2-s4-iid_anchor",
+      "arm": "iid",
+      "condition": "G24-R100-q2",
+      "seed": 4,
+      "max_cwnd": 9399.0,
+      "fraction_above_bound": 0.023356396300151364,
+      "gates_pass": false,
+      "deterministic_action_mean": -0.00033147233772604177,
+      "full": {
+        "utilization": 0.984249182729603,
+        "drop_fraction": 0.22514873330444032,
+        "queue_mean_ms": 160.21400071310933,
+        "queue_p95_ms": 201.0,
+        "queue_p99_ms": 202.0
+      },
+      "trim10": {
+        "utilization": 0.9960014885080775,
+        "drop_fraction": 0.2342123150122038,
+        "queue_mean_ms": 161.2195453447165,
+        "queue_p95_ms": 201.0,
+        "queue_p99_ms": 202.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.8220253470642519,
+        "unanchored_fraction": 0.02267217240681988,
+        "inflight_bytes_p95": 2788848.0,
+        "cwnd_over_packets_out_p50": 0.7642526964560863
+      },
+      "per_step": {
+        "deterministic": -0.00045951823265683955,
+        "exploration": 0.0038773862266834156,
+        "percent_truncation": -0.0053542656413162314,
+        "integer_rounding": -0.006264567224651979
+      },
+      "max_abs_cumulative_exploration": 13.558955524747036,
+      "command_drift_per_step": -0.006724085457308819,
+      "reference": {
+        "run_id": "initcheck-formal-G24-R100-q2-s4-small_uniform",
+        "max_cwnd": 4228.0,
+        "fraction_above_bound": 0.009086824800642768,
+        "full_drop_fraction": 0.22237680165627102,
+        "trim10_queue_mean_ms": 160.1026787062483,
+        "trim10_utilization": 0.9962442113574767
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G72-R20-q2-s4-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G72-R20-q2",
+      "seed": 4,
+      "max_cwnd": 684,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.0032534648692835125,
+      "full": {
+        "utilization": 0.9886476925257716,
+        "drop_fraction": 0.008011598380919657,
+        "queue_mean_ms": 17.325081908561028,
+        "queue_p95_ms": 34.0,
+        "queue_p99_ms": 40.0
+      },
+      "trim10": {
+        "utilization": 0.9940879135140517,
+        "drop_fraction": 0.008800165273834752,
+        "queue_mean_ms": 17.663010953690566,
+        "queue_p95_ms": 34.0,
+        "queue_p99_ms": 40.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.661860778267781,
+        "unanchored_fraction": 0.0013190072691902954,
+        "inflight_bytes_p95": 537208.0,
+        "cwnd_over_packets_out_p50": 1.0557768924302788
+      },
+      "per_step": {
+        "deterministic": 0.00451026000238939,
+        "exploration": -3.480908098067581e-05,
+        "percent_truncation": -0.0053065937858515575,
+        "integer_rounding": -0.007339995926074905
+      },
+      "max_abs_cumulative_exploration": 0.5962773921196308,
+      "command_drift_per_step": -0.002829735923685515,
+      "reference": {
+        "run_id": "explorecheck-formal-G72-R20-q2-s4-iid_anchor",
+        "full_drop_fraction": 0.13407810226704842,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G72-R20-q2-s4-iid_anchor",
+      "arm": "iid",
+      "condition": "G72-R20-q2",
+      "seed": 4,
+      "max_cwnd": 1822,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.0011165184457275735,
+      "full": {
+        "utilization": 0.9793839459168153,
+        "drop_fraction": 0.13407810226704842,
+        "queue_mean_ms": 24.086604880518024,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "trim10": {
+        "utilization": 0.9847429937279554,
+        "drop_fraction": 0.13220621495547283,
+        "queue_mean_ms": 23.982653289799686,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.7788776735704568,
+        "unanchored_fraction": 0.004785753285653239,
+        "inflight_bytes_p95": 1204736.0,
+        "cwnd_over_packets_out_p50": 1.0110192837465564
+      },
+      "per_step": {
+        "deterministic": 0.0015478232253984827,
+        "exploration": 0.0035900975340251483,
+        "percent_truncation": -0.005176260390514794,
+        "integer_rounding": -0.006902470120693576
+      },
+      "max_abs_cumulative_exploration": 13.558955524747036,
+      "command_drift_per_step": -0.005354646895295093,
+      "reference": {
+        "run_id": "initcheck-formal-G72-R20-q2-s4-small_uniform",
+        "max_cwnd": 1837,
+        "fraction_above_bound": 0.000361316135686387,
+        "full_drop_fraction": 0.13023887627011452,
+        "trim10_queue_mean_ms": 24.596282444765137,
+        "trim10_utilization": 0.9866012824980088
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G72-R20-q2-s3-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G72-R20-q2",
+      "seed": 3,
+      "max_cwnd": 528,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": -0.003622791769658595,
+      "full": {
+        "utilization": 0.9876170531588367,
+        "drop_fraction": 0.0017873176443434914,
+        "queue_mean_ms": 12.569571740393346,
+        "queue_p95_ms": 27.0,
+        "queue_p99_ms": 36.0
+      },
+      "trim10": {
+        "utilization": 0.9929848567812037,
+        "drop_fraction": 0.0011266601421273362,
+        "queue_mean_ms": 12.838786548772648,
+        "queue_p95_ms": 27.0,
+        "queue_p99_ms": 35.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.6245790876397322,
+        "unanchored_fraction": 0.0,
+        "inflight_bytes_p95": 434400.0,
+        "cwnd_over_packets_out_p50": 1.0708661417322836
+      },
+      "per_step": {
+        "deterministic": -0.00502225580178927,
+        "exploration": 5.216463251942236e-05,
+        "percent_truncation": -0.005235575763588873,
+        "integer_rounding": -0.007567238813040194
+      },
+      "max_abs_cumulative_exploration": 0.523606665373371,
+      "command_drift_per_step": -0.012589494614829465,
+      "reference": {
+        "run_id": "explorecheck-formal-G72-R20-q2-s3-iid_anchor",
+        "full_drop_fraction": 0.14438047743023724,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G72-R20-q2-s3-iid_anchor",
+      "arm": "iid",
+      "condition": "G72-R20-q2",
+      "seed": 3,
+      "max_cwnd": 2960.0,
+      "fraction_above_bound": 0.005480659744816634,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.001437719680096871,
+      "full": {
+        "utilization": 0.9745570161138061,
+        "drop_fraction": 0.14438047743023724,
+        "queue_mean_ms": 23.293380199179847,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "trim10": {
+        "utilization": 0.9840815134685402,
+        "drop_fraction": 0.14199632685187885,
+        "queue_mean_ms": 23.333440873726072,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.784567006312047,
+        "unanchored_fraction": 0.006523076517517674,
+        "inflight_bytes_p95": 1448000.0,
+        "cwnd_over_packets_out_p50": 1.0116504854368933
+      },
+      "per_step": {
+        "deterministic": 0.0019931026853893833,
+        "exploration": -0.007156357539991923,
+        "percent_truncation": -0.005199775428629599,
+        "integer_rounding": -0.007054974379280994
+      },
+      "max_abs_cumulative_exploration": 14.259126365209992,
+      "command_drift_per_step": -0.005061871693891611,
+      "reference": {
+        "run_id": "initcheck-formal-G72-R20-q2-s3-small_uniform",
+        "max_cwnd": 1899,
+        "fraction_above_bound": 0.0010838906270625051,
+        "full_drop_fraction": 0.1137072361916062,
+        "trim10_queue_mean_ms": 23.507183365482422,
+        "trim10_utilization": 0.9824233594550006
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G72-R200-q2-s3-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G72-R200-q2",
+      "seed": 3,
+      "max_cwnd": 4285.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": -0.004440839042776066,
+      "full": {
+        "utilization": 0.9586984457348258,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 94.34389701355573,
+        "queue_p95_ms": 125.0,
+        "queue_p99_ms": 137.0
+      },
+      "trim10": {
+        "utilization": 1.0000002400017067,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 95.35929053941187,
+        "queue_p95_ms": 125.0,
+        "queue_p99_ms": 138.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.3780250475746465,
+        "unanchored_fraction": 0.002586660233859379,
+        "inflight_bytes_p95": 2830840.0,
+        "cwnd_over_packets_out_p50": 1.1806526806526807
+      },
+      "per_step": {
+        "deterministic": -0.006156310123641514,
+        "exploration": 3.543467071441873e-05,
+        "percent_truncation": -0.00523934675362409,
+        "integer_rounding": -0.005705983303888864
+      },
+      "max_abs_cumulative_exploration": 0.523606665373371,
+      "command_drift_per_step": -0.011862293427530379,
+      "reference": {
+        "run_id": "explorecheck-formal-G72-R200-q2-s3-iid_anchor",
+        "full_drop_fraction": 0.0,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G72-R200-q2-s3-iid_anchor",
+      "arm": "iid",
+      "condition": "G72-R200-q2",
+      "seed": 3,
+      "max_cwnd": 364956.0,
+      "fraction_above_bound": 0.05934090792021368,
+      "gates_pass": false,
+      "deterministic_action_mean": -0.007053226571143915,
+      "full": {
+        "utilization": 0.728809065555221,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 78.55742552514805,
+        "queue_p95_ms": 162.0,
+        "queue_p99_ms": 163.0
+      },
+      "trim10": {
+        "utilization": 0.7703444646717488,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 77.40348642566065,
+        "queue_p95_ms": 162.0,
+        "queue_p99_ms": 163.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.2980498963205934,
+        "unanchored_fraction": 0.21977275903277957,
+        "inflight_bytes_p95": 3210216.0,
+        "cwnd_over_packets_out_p50": 1.4282828282828284
+      },
+      "per_step": {
+        "deterministic": -0.009777848223277794,
+        "exploration": -0.004929129477765126,
+        "percent_truncation": -0.005323543648060546,
+        "integer_rounding": -0.006175922582513387
+      },
+      "max_abs_cumulative_exploration": 13.605382804189658,
+      "command_drift_per_step": -0.015953770805791183,
+      "reference": {
+        "run_id": "initcheck-formal-G72-R200-q2-s3-small_uniform",
+        "max_cwnd": 405684.0,
+        "fraction_above_bound": 0.06508755509395982,
+        "full_drop_fraction": 0.0,
+        "trim10_queue_mean_ms": 79.2628737815959,
+        "trim10_utilization": 0.8025818494709296
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G24-R20-q2-s3-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G24-R20-q2",
+      "seed": 3,
+      "max_cwnd": 241.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": -0.0033368208488270983,
+      "full": {
+        "utilization": 0.9911992934003393,
+        "drop_fraction": 0.006466744848383314,
+        "queue_mean_ms": 13.76999030313251,
+        "queue_p95_ms": 31.0,
+        "queue_p99_ms": 40.0
+      },
+      "trim10": {
+        "utilization": 0.9947348961778953,
+        "drop_fraction": 0.006104712356779839,
+        "queue_mean_ms": 13.769361848009115,
+        "queue_p95_ms": 30.0,
+        "queue_p99_ms": 40.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.6297186622514577,
+        "unanchored_fraction": 0.0,
+        "inflight_bytes_p95": 165072.0,
+        "cwnd_over_packets_out_p50": 1.0625
+      },
+      "per_step": {
+        "deterministic": -0.004625815926796299,
+        "exploration": 7.951360198578458e-05,
+        "percent_truncation": -0.0052772931636110194,
+        "integer_rounding": -0.011978417932662733
+      },
+      "max_abs_cumulative_exploration": 0.523606665373371,
+      "command_drift_per_step": -0.01660423385945903,
+      "reference": {
+        "run_id": "explorecheck-formal-G24-R20-q2-s3-iid_anchor",
+        "full_drop_fraction": 0.09707590824062223,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G24-R20-q2-s3-iid_anchor",
+      "arm": "iid",
+      "condition": "G24-R20-q2",
+      "seed": 3,
+      "max_cwnd": 589,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": -0.0005417519321066803,
+      "full": {
+        "utilization": 0.9964236750722837,
+        "drop_fraction": 0.09707590824062223,
+        "queue_mean_ms": 26.754112111121362,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "trim10": {
+        "utilization": 0.9973530965236134,
+        "drop_fraction": 0.08994413407821229,
+        "queue_mean_ms": 26.0943191303211,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.74945986150647,
+        "unanchored_fraction": 0.0,
+        "inflight_bytes_p95": 362000.0,
+        "cwnd_over_packets_out_p50": 1.0105263157894737
+      },
+      "per_step": {
+        "deterministic": -0.0007510276486052979,
+        "exploration": -0.007416052794072105,
+        "percent_truncation": -0.005252079383824239,
+        "integer_rounding": -0.010157989574376792
+      },
+      "max_abs_cumulative_exploration": 14.711266059845544,
+      "command_drift_per_step": -0.01090901722298209,
+      "reference": {
+        "run_id": "initcheck-formal-G24-R20-q2-s3-small_uniform",
+        "max_cwnd": 770,
+        "fraction_above_bound": 0.0010853688917558458,
+        "full_drop_fraction": 0.10275094957976848,
+        "trim10_queue_mean_ms": 26.360939456359304,
+        "trim10_utilization": 0.9933206534497109
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R20-q2-s3-iid_anchor",
+      "arm": "iid",
+      "condition": "G48-R20-q2",
+      "seed": 3,
+      "max_cwnd": 1606,
+      "fraction_above_bound": 0.0010835136846079473,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.0004947955506996083,
+      "full": {
+        "utilization": 0.9897721239756233,
+        "drop_fraction": 0.11972636945325911,
+        "queue_mean_ms": 24.16111153323371,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "trim10": {
+        "utilization": 0.9942144354421467,
+        "drop_fraction": 0.1159514646665091,
+        "queue_mean_ms": 24.22947281364411,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.7649400611871144,
+        "unanchored_fraction": 0.00177145895514022,
+        "inflight_bytes_p95": 739928.0,
+        "cwnd_over_packets_out_p50": 1.0122699386503067
+      },
+      "per_step": {
+        "deterministic": 0.0006859322818420789,
+        "exploration": -0.007380324867038091,
+        "percent_truncation": -0.005199833843382167,
+        "integer_rounding": -0.007806587976946522
+      },
+      "max_abs_cumulative_exploration": 14.71126605984554,
+      "command_drift_per_step": -0.007120655695104444,
+      "reference": {
+        "run_id": "initcheck-formal-G48-R20-q2-s3-small_uniform",
+        "max_cwnd": 1349,
+        "fraction_above_bound": 0.0007219221186396639,
+        "full_drop_fraction": 0.10732509418948019,
+        "trim10_queue_mean_ms": 23.37379562486113,
+        "trim10_utilization": 0.9928558722657521
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R20-q2-s3-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G48-R20-q2",
+      "seed": 3,
+      "max_cwnd": 502.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": -0.003385633161561813,
+      "full": {
+        "utilization": 0.98749499057321,
+        "drop_fraction": 0.006151582045621781,
+        "queue_mean_ms": 13.217581329621371,
+        "queue_p95_ms": 30.0,
+        "queue_p99_ms": 39.0
+      },
+      "trim10": {
+        "utilization": 0.9904390531408181,
+        "drop_fraction": 0.0061338888553428735,
+        "queue_mean_ms": 13.505095041636084,
+        "queue_p95_ms": 30.0,
+        "queue_p99_ms": 39.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.642736274385371,
+        "unanchored_fraction": 0.0008646783992643384,
+        "inflight_bytes_p95": 328696.0,
+        "cwnd_over_packets_out_p50": 1.0689655172413792
+      },
+      "per_step": {
+        "deterministic": -0.004693484160693656,
+        "exploration": 5.2846750654404015e-05,
+        "percent_truncation": -0.0052087738352219765,
+        "integer_rounding": -0.008514988622117822
+      },
+      "max_abs_cumulative_exploration": 0.523606665373371,
+      "command_drift_per_step": -0.013208472782811478,
+      "reference": {
+        "run_id": "explorecheck-formal-G48-R20-q2-s3-iid_anchor",
+        "full_drop_fraction": 0.11972636945325911,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R20-q2-s4-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G48-R20-q2",
+      "seed": 4,
+      "max_cwnd": 389.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.003490578315019996,
+      "full": {
+        "utilization": 0.9925382543298872,
+        "drop_fraction": 0.0035812533548040793,
+        "queue_mean_ms": 15.414428294206541,
+        "queue_p95_ms": 31.0,
+        "queue_p99_ms": 39.0
+      },
+      "trim10": {
+        "utilization": 0.9950318562216307,
+        "drop_fraction": 0.0036198413495330856,
+        "queue_mean_ms": 15.128674506958511,
+        "queue_p95_ms": 30.0,
+        "queue_p99_ms": 39.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.6437091414704619,
+        "unanchored_fraction": 0.0,
+        "inflight_bytes_p95": 320008.0,
+        "cwnd_over_packets_out_p50": 1.0616438356164384
+      },
+      "per_step": {
+        "deterministic": 0.00483896903515959,
+        "exploration": 6.620495168790931e-05,
+        "percent_truncation": -0.0052460815855445,
+        "integer_rounding": -0.00839429688135811
+      },
+      "max_abs_cumulative_exploration": 0.5962773921196308,
+      "command_drift_per_step": -0.0035553278461985206,
+      "reference": {
+        "run_id": "explorecheck-formal-G48-R20-q2-s4-iid_anchor",
+        "full_drop_fraction": 0.13900470697620362,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R20-q2-s4-iid_anchor",
+      "arm": "iid",
+      "condition": "G48-R20-q2",
+      "seed": 4,
+      "max_cwnd": 1823,
+      "fraction_above_bound": 0.002162784632440452,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.0009938495036000796,
+      "full": {
+        "utilization": 0.9902485973604988,
+        "drop_fraction": 0.13900470697620362,
+        "queue_mean_ms": 24.831945927016662,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "trim10": {
+        "utilization": 0.9929208781596198,
+        "drop_fraction": 0.12879767718094232,
+        "queue_mean_ms": 24.30957887295496,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.7770240472460004,
+        "unanchored_fraction": 0.0034806474294764946,
+        "inflight_bytes_p95": 815224.0,
+        "cwnd_over_packets_out_p50": 1.0101010101010102
+      },
+      "per_step": {
+        "deterministic": 0.0013777679626425922,
+        "exploration": 0.00330472715823153,
+        "percent_truncation": -0.005112360816860134,
+        "integer_rounding": -0.007592909221380233
+      },
+      "max_abs_cumulative_exploration": 13.558955524747036,
+      "command_drift_per_step": -0.006215141258737641,
+      "reference": {
+        "run_id": "initcheck-formal-G48-R20-q2-s4-small_uniform",
+        "max_cwnd": 1951,
+        "fraction_above_bound": 0.0003787703251263102,
+        "full_drop_fraction": 0.12585455430429876,
+        "trim10_queue_mean_ms": 24.55821807168097,
+        "trim10_utilization": 0.9932217054346261
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G12-R20-q2-s3-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G12-R20-q2",
+      "seed": 3,
+      "max_cwnd": 109.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": -0.0035023443344854,
+      "full": {
+        "utilization": 0.99662483598572,
+        "drop_fraction": 0.007934131736526946,
+        "queue_mean_ms": 16.716386871719187,
+        "queue_p95_ms": 34.0,
+        "queue_p99_ms": 40.0
+      },
+      "trim10": {
+        "utilization": 0.9975941654751489,
+        "drop_fraction": 0.007839773384667558,
+        "queue_mean_ms": 16.528010134319956,
+        "queue_p95_ms": 34.0,
+        "queue_p99_ms": 40.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.6165614475702511,
+        "unanchored_fraction": 0.0,
+        "inflight_bytes_p95": 89776.0,
+        "cwnd_over_packets_out_p50": 1.0681818181818181
+      },
+      "per_step": {
+        "deterministic": -0.004855280201597312,
+        "exploration": 2.3357264928651466e-05,
+        "percent_truncation": -0.005176074706680454,
+        "integer_rounding": -0.017022664335793913
+      },
+      "max_abs_cumulative_exploration": 0.523606665373371,
+      "command_drift_per_step": -0.021877944537391225,
+      "reference": {
+        "run_id": "explorecheck-formal-G12-R20-q2-s3-iid_anchor",
+        "full_drop_fraction": 0.07920591984578552,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G12-R20-q2-s3-iid_anchor",
+      "arm": "iid",
+      "condition": "G12-R20-q2",
+      "seed": 3,
+      "max_cwnd": 260,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": -0.0011448419118596112,
+      "full": {
+        "utilization": 0.9900045545196093,
+        "drop_fraction": 0.07920591984578552,
+        "queue_mean_ms": 24.20381219293951,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "trim10": {
+        "utilization": 0.9943651699780192,
+        "drop_fraction": 0.0750499523818416,
+        "queue_mean_ms": 24.414689744210442,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.7202662320265878,
+        "unanchored_fraction": 0.0,
+        "inflight_bytes_p95": 188240.0,
+        "cwnd_over_packets_out_p50": 1.0
+      },
+      "per_step": {
+        "deterministic": -0.0015870878867846937,
+        "exploration": -0.007365246472593749,
+        "percent_truncation": -0.005303288200130073,
+        "integer_rounding": -0.016062237956500483
+      },
+      "max_abs_cumulative_exploration": 14.660009937473092,
+      "command_drift_per_step": -0.017649325843285178,
+      "reference": {
+        "run_id": "initcheck-formal-G12-R20-q2-s3-small_uniform",
+        "max_cwnd": 310,
+        "fraction_above_bound": 0.0,
+        "full_drop_fraction": 0.088725858081512,
+        "trim10_queue_mean_ms": 26.610257236669824,
+        "trim10_utilization": 0.9958088094069443
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G12-R20-q2-s4-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G12-R20-q2",
+      "seed": 4,
+      "max_cwnd": 128.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.003159833709450832,
+      "full": {
+        "utilization": 0.9974779858957501,
+        "drop_fraction": 0.006722800945185876,
+        "queue_mean_ms": 18.170311164731313,
+        "queue_p95_ms": 34.0,
+        "queue_p99_ms": 40.0
+      },
+      "trim10": {
+        "utilization": 0.9986179282528437,
+        "drop_fraction": 0.0062481285557440865,
+        "queue_mean_ms": 18.14428330387273,
+        "queue_p95_ms": 34.0,
+        "queue_p99_ms": 40.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.6149964095036373,
+        "unanchored_fraction": 0.0,
+        "inflight_bytes_p95": 91224.0,
+        "cwnd_over_packets_out_p50": 1.0625
+      },
+      "per_step": {
+        "deterministic": 0.004380459653488245,
+        "exploration": -0.00015016057783415884,
+        "percent_truncation": -0.005224981058031687,
+        "integer_rounding": -0.01657151681945552
+      },
+      "max_abs_cumulative_exploration": 0.5962773921196308,
+      "command_drift_per_step": -0.012191057165967273,
+      "reference": {
+        "run_id": "explorecheck-formal-G12-R20-q2-s4-iid_anchor",
+        "full_drop_fraction": 0.10258378101816322,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G12-R20-q2-s4-iid_anchor",
+      "arm": "iid",
+      "condition": "G12-R20-q2",
+      "seed": 4,
+      "max_cwnd": 360,
+      "fraction_above_bound": 0.0007225026949803471,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.0016980139539294447,
+      "full": {
+        "utilization": 0.9965579675994214,
+        "drop_fraction": 0.10258378101816322,
+        "queue_mean_ms": 26.766231152407627,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "trim10": {
+        "utilization": 0.9973935636697326,
+        "drop_fraction": 0.10131824017648867,
+        "queue_mean_ms": 26.402719118297735,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.7598389290236243,
+        "unanchored_fraction": 0.0,
+        "inflight_bytes_p95": 199824.0,
+        "cwnd_over_packets_out_p50": 1.0
+      },
+      "per_step": {
+        "deterministic": 0.0023539471694352804,
+        "exploration": 0.003619816650771648,
+        "percent_truncation": -0.005125639555325313,
+        "integer_rounding": -0.014585760606645107
+      },
+      "max_abs_cumulative_exploration": 13.558955524747036,
+      "command_drift_per_step": -0.012231813437209827,
+      "reference": {
+        "run_id": "initcheck-formal-G12-R20-q2-s4-small_uniform",
+        "max_cwnd": 312,
+        "fraction_above_bound": 0.0,
+        "full_drop_fraction": 0.10634951543565854,
+        "trim10_queue_mean_ms": 28.069563119483703,
+        "trim10_utilization": 0.9977345867389402
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G12-R200-q2-s3-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G12-R200-q2",
+      "seed": 3,
+      "max_cwnd": 881.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": -0.0045826347772474005,
+      "full": {
+        "utilization": 0.968172915600359,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 175.63703690915997,
+        "queue_p95_ms": 221.0,
+        "queue_p99_ms": 242.0
+      },
+      "trim10": {
+        "utilization": 1.0000020807102157,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 178.1979820672778,
+        "queue_p95_ms": 221.0,
+        "queue_p99_ms": 244.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.46755666653988043,
+        "unanchored_fraction": 0.0017254954857027318,
+        "inflight_bytes_p95": 611056.0,
+        "cwnd_over_packets_out_p50": 1.129496402877698
+      },
+      "per_step": {
+        "deterministic": -0.0063528807507699835,
+        "exploration": 3.543467071443298e-05,
+        "percent_truncation": -0.00523837573627747,
+        "integer_rounding": -0.006685123062177093
+      },
+      "max_abs_cumulative_exploration": 0.523606665373371,
+      "command_drift_per_step": -0.013038003812947077,
+      "reference": {
+        "run_id": "explorecheck-formal-G12-R200-q2-s3-iid_anchor",
+        "full_drop_fraction": 0.2246064359300845,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G12-R200-q2-s3-iid_anchor",
+      "arm": "iid",
+      "condition": "G12-R200-q2",
+      "seed": 3,
+      "max_cwnd": 9755.0,
+      "fraction_above_bound": 0.031999207275259255,
+      "gates_pass": false,
+      "deterministic_action_mean": -0.0012463105369991264,
+      "full": {
+        "utilization": 0.8908808416026645,
+        "drop_fraction": 0.2246064359300845,
+        "queue_mean_ms": 241.83987926735531,
+        "queue_p95_ms": 402.0,
+        "queue_p99_ms": 403.0
+      },
+      "trim10": {
+        "utilization": 0.9222863270663053,
+        "drop_fraction": 0.22616270287507761,
+        "queue_mean_ms": 244.5803660710404,
+        "queue_p95_ms": 402.0,
+        "queue_p99_ms": 403.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.7539242754029616,
+        "unanchored_fraction": 0.04411300456743994,
+        "inflight_bytes_p95": 2978536.0,
+        "cwnd_over_packets_out_p50": 0.7122507122507122
+      },
+      "per_step": {
+        "deterministic": -0.0017277532696461882,
+        "exploration": -0.004755053837347641,
+        "percent_truncation": -0.005266951013206446,
+        "integer_rounding": -0.0073587418758856585
+      },
+      "max_abs_cumulative_exploration": 13.605382804189658,
+      "command_drift_per_step": -0.009086495145531847,
+      "reference": {
+        "run_id": "initcheck-formal-G12-R200-q2-s3-small_uniform",
+        "max_cwnd": 35955.0,
+        "fraction_above_bound": 0.03611984157399612,
+        "full_drop_fraction": 0.2560864733811496,
+        "trim10_queue_mean_ms": 198.3157858801038,
+        "trim10_utilization": 0.8803841844682985
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R200-q2-s4-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G48-R200-q2",
+      "seed": 4,
+      "max_cwnd": 3258.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.003546137554803863,
+      "full": {
+        "utilization": 0.9654548461737047,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 114.53766260743126,
+        "queue_p95_ms": 164.0,
+        "queue_p99_ms": 197.0
+      },
+      "trim10": {
+        "utilization": 1.0000003466981007,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 117.36135511300965,
+        "queue_p95_ms": 165.0,
+        "queue_p99_ms": 200.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.45260067633811163,
+        "unanchored_fraction": 0.0008605621781381413,
+        "inflight_bytes_p95": 2143040.0,
+        "cwnd_over_packets_out_p50": 1.1358912869704236
+      },
+      "per_step": {
+        "deterministic": 0.004915990495980069,
+        "exploration": -3.622007025275796e-05,
+        "percent_truncation": -0.005218571822649746,
+        "integer_rounding": -0.0057913812249612865
+      },
+      "max_abs_cumulative_exploration": 0.5962773921196308,
+      "command_drift_per_step": -0.0008753907289812176,
+      "reference": {
+        "run_id": "explorecheck-formal-G48-R200-q2-s4-iid_anchor",
+        "full_drop_fraction": 0.0,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R200-q2-s4-iid_anchor",
+      "arm": "iid",
+      "condition": "G48-R200-q2",
+      "seed": 4,
+      "max_cwnd": 37745342.0,
+      "fraction_above_bound": 0.6140900717953358,
+      "gates_pass": false,
+      "deterministic_action_mean": -0.0033773871416354993,
+      "full": {
+        "utilization": 0.9566837043479869,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 295.1101137069134,
+        "queue_p95_ms": 344.0,
+        "queue_p99_ms": 344.0
+      },
+      "trim10": {
+        "utilization": 0.9894039192886822,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 297.34440861169463,
+        "queue_p95_ms": 344.0,
+        "queue_p99_ms": 344.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.04982861908911201,
+        "unanchored_fraction": 0.7922353996803638,
+        "inflight_bytes_p95": 3278272.0,
+        "cwnd_over_packets_out_p50": 8.093606138107416
+      },
+      "per_step": {
+        "deterministic": -0.004682052749768113,
+        "exploration": 0.0036831850769589616,
+        "percent_truncation": -0.005235001451140438,
+        "integer_rounding": -0.005583879418297245
+      },
+      "max_abs_cumulative_exploration": 13.558955524747036,
+      "command_drift_per_step": -0.010265932168065359,
+      "reference": {
+        "run_id": "initcheck-formal-G48-R200-q2-s4-small_uniform",
+        "max_cwnd": 37202245.0,
+        "fraction_above_bound": 0.6167632926734994,
+        "full_drop_fraction": 0.0,
+        "trim10_queue_mean_ms": 298.73174537338787,
+        "trim10_utilization": 0.988828480448894
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G24-R20-q2-s4-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G24-R20-q2",
+      "seed": 4,
+      "max_cwnd": 221.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.0031454206799605066,
+      "full": {
+        "utilization": 0.997284316553518,
+        "drop_fraction": 0.008332848704379107,
+        "queue_mean_ms": 18.420195603529915,
+        "queue_p95_ms": 35.0,
+        "queue_p99_ms": 40.0
+      },
+      "trim10": {
+        "utilization": 0.9990177447235323,
+        "drop_fraction": 0.00872636815920398,
+        "queue_mean_ms": 18.608188426167622,
+        "queue_p95_ms": 35.0,
+        "queue_p99_ms": 40.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.6403895950008346,
+        "unanchored_fraction": 0.0,
+        "inflight_bytes_p95": 185344.0,
+        "cwnd_over_packets_out_p50": 1.0545454545454545
+      },
+      "per_step": {
+        "deterministic": 0.004360478951979135,
+        "exploration": 0.00013134541368467457,
+        "percent_truncation": -0.00520321716695458,
+        "integer_rounding": -0.010897904039857827
+      },
+      "max_abs_cumulative_exploration": 0.5962773921196308,
+      "command_drift_per_step": -0.006537425087878692,
+      "reference": {
+        "run_id": "explorecheck-formal-G24-R20-q2-s4-iid_anchor",
+        "full_drop_fraction": 0.11919582276240487,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G24-R20-q2-s4-iid_anchor",
+      "arm": "iid",
+      "condition": "G24-R20-q2",
+      "seed": 4,
+      "max_cwnd": 693,
+      "fraction_above_bound": 0.00036007746590791055,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.0014804747870927587,
+      "full": {
+        "utilization": 0.9978271775885624,
+        "drop_fraction": 0.11919582276240487,
+        "queue_mean_ms": 28.245169072009514,
+        "queue_p95_ms": 41.0,
+        "queue_p99_ms": 41.0
+      },
+      "trim10": {
+        "utilization": 0.9991982863484069,
+        "drop_fraction": 0.11713890808569453,
+        "queue_mean_ms": 27.725612816446166,
+        "queue_p95_ms": 40.0,
+        "queue_p99_ms": 41.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.7759457048900703,
+        "unanchored_fraction": 0.0,
+        "inflight_bytes_p95": 409784.0,
+        "cwnd_over_packets_out_p50": 1.0
+      },
+      "per_step": {
+        "deterministic": 0.0020523738491268623,
+        "exploration": 0.0034142761954207785,
+        "percent_truncation": -0.005172102093392276,
+        "integer_rounding": -0.00974300357409139
+      },
+      "max_abs_cumulative_exploration": 13.558955524747036,
+      "command_drift_per_step": -0.0076906297249645286,
+      "reference": {
+        "run_id": "initcheck-formal-G24-R20-q2-s4-small_uniform",
+        "max_cwnd": 660,
+        "fraction_above_bound": 0.0,
+        "full_drop_fraction": 0.10758803132659772,
+        "trim10_queue_mean_ms": 28.232167593503444,
+        "trim10_utilization": 0.999188603043172
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R200-q2-s3-iid_anchor",
+      "arm": "iid",
+      "condition": "G48-R200-q2",
+      "seed": 3,
+      "max_cwnd": 419187.0,
+      "fraction_above_bound": 0.09614869774671476,
+      "gates_pass": false,
+      "deterministic_action_mean": -0.008444264896273042,
+      "full": {
+        "utilization": 0.8776104580829657,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 182.34671286164667,
+        "queue_p95_ms": 343.0,
+        "queue_p99_ms": 344.0
+      },
+      "trim10": {
+        "utilization": 0.9242732141047455,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 182.6631161326491,
+        "queue_p95_ms": 343.0,
+        "queue_p99_ms": 344.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.2891678145243342,
+        "unanchored_fraction": 0.26265242169932557,
+        "inflight_bytes_p95": 3204424.0,
+        "cwnd_over_packets_out_p50": 1.4540942928039702
+      },
+      "per_step": {
+        "deterministic": -0.01170623680950597,
+        "exploration": -0.0061393074676740125,
+        "percent_truncation": -0.005247430145366647,
+        "integer_rounding": -0.006108277992545044
+      },
+      "max_abs_cumulative_exploration": 13.605382804189661,
+      "command_drift_per_step": -0.017814514802051012,
+      "reference": {
+        "run_id": "initcheck-formal-G48-R200-q2-s3-small_uniform",
+        "max_cwnd": 489953.0,
+        "fraction_above_bound": 0.1467063861468388,
+        "full_drop_fraction": 0.0,
+        "trim10_queue_mean_ms": 232.593466101393,
+        "trim10_utilization": 0.9766030520100489
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G48-R200-q2-s3-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G48-R200-q2",
+      "seed": 3,
+      "max_cwnd": 3302.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": -0.004570171651289729,
+      "full": {
+        "utilization": 0.9600222850595869,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 152.01856550367523,
+        "queue_p95_ms": 199.0,
+        "queue_p99_ms": 215.0
+      },
+      "trim10": {
+        "utilization": 1.0000043203917155,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 154.0355416733515,
+        "queue_p95_ms": 200.0,
+        "queue_p99_ms": 216.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.4644665536433181,
+        "unanchored_fraction": 0.001294126038208406,
+        "inflight_bytes_p95": 2319696.0,
+        "cwnd_over_packets_out_p50": 1.1306491372226788
+      },
+      "per_step": {
+        "deterministic": -0.006335603189532937,
+        "exploration": -0.00012722456829139815,
+        "percent_truncation": -0.005169894214969915,
+        "integer_rounding": -0.0057252233065307745
+      },
+      "max_abs_cumulative_exploration": 0.523606665373371,
+      "command_drift_per_step": -0.012060826496063711,
+      "reference": {
+        "run_id": "explorecheck-formal-G48-R200-q2-s3-iid_anchor",
+        "full_drop_fraction": 0.0,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G72-R200-q2-s4-iid_anchor",
+      "arm": "iid",
+      "condition": "G72-R200-q2",
+      "seed": 4,
+      "max_cwnd": 62331388.0,
+      "fraction_above_bound": 0.606783146324282,
+      "gates_pass": false,
+      "deterministic_action_mean": -0.0033637557614930452,
+      "full": {
+        "utilization": 0.9590125346986044,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 139.833926269512,
+        "queue_p95_ms": 162.0,
+        "queue_p99_ms": 163.0
+      },
+      "trim10": {
+        "utilization": 0.9910010737854136,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 140.38947464721085,
+        "queue_p95_ms": 162.0,
+        "queue_p99_ms": 163.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.029464129190374194,
+        "unanchored_fraction": 0.8552590922222495,
+        "inflight_bytes_p95": 3273928.0,
+        "cwnd_over_packets_out_p50": 12.059111111111111
+      },
+      "per_step": {
+        "deterministic": -0.004663155644342355,
+        "exploration": 0.0036919192708463958,
+        "percent_truncation": -0.005307475074725031,
+        "integer_rounding": -0.005528152409597328
+      },
+      "max_abs_cumulative_exploration": 13.558955524747036,
+      "command_drift_per_step": -0.010191308053939682,
+      "reference": {
+        "run_id": "initcheck-formal-G72-R200-q2-s4-small_uniform",
+        "max_cwnd": 52372832.0,
+        "fraction_above_bound": 0.5829990574220411,
+        "full_drop_fraction": 0.0,
+        "trim10_queue_mean_ms": 139.16499477294252,
+        "trim10_utilization": 0.989135513852543
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G72-R200-q2-s4-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G72-R200-q2",
+      "seed": 4,
+      "max_cwnd": 5057.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.0038612312716585894,
+      "full": {
+        "utilization": 0.9562885512887478,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 83.43841766457913,
+        "queue_p95_ms": 130.0,
+        "queue_p99_ms": 147.0
+      },
+      "trim10": {
+        "utilization": 0.9999968977557174,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 92.20143793557354,
+        "queue_p95_ms": 132.0,
+        "queue_p99_ms": 148.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.34462732273459007,
+        "unanchored_fraction": 0.0008612333132694624,
+        "inflight_bytes_p95": 2888760.0,
+        "cwnd_over_packets_out_p50": 1.2054574638844302
+      },
+      "per_step": {
+        "deterministic": 0.005352803138880088,
+        "exploration": -3.829391700097448e-05,
+        "percent_truncation": -0.005218086091830737,
+        "integer_rounding": -0.005616676707046273
+      },
+      "max_abs_cumulative_exploration": 0.5962773921196308,
+      "command_drift_per_step": -0.0002638735681661855,
+      "reference": {
+        "run_id": "explorecheck-formal-G72-R200-q2-s4-iid_anchor",
+        "full_drop_fraction": 0.0,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G12-R200-q2-s4-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G12-R200-q2",
+      "seed": 4,
+      "max_cwnd": 1243,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": 0.0024018624958285118,
+      "full": {
+        "utilization": 0.9722513091798557,
+        "drop_fraction": 0.004902044220523906,
+        "queue_mean_ms": 258.25145696161184,
+        "queue_p95_ms": 347.0,
+        "queue_p99_ms": 398.0
+      },
+      "trim10": {
+        "utilization": 1.0000013871401439,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 254.98798443392442,
+        "queue_p95_ms": 317.0,
+        "queue_p99_ms": 337.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.4430187504506732,
+        "unanchored_fraction": 0.0012931420742608374,
+        "inflight_bytes_p95": 751512.0,
+        "cwnd_over_packets_out_p50": 1.1437371663244353
+      },
+      "per_step": {
+        "deterministic": 0.0033296884341524175,
+        "exploration": -0.0001250948277315176,
+        "percent_truncation": -0.005314495876436513,
+        "integer_rounding": -0.00649784825508874
+      },
+      "max_abs_cumulative_exploration": 0.5962773921196308,
+      "command_drift_per_step": -0.003168159820936322,
+      "reference": {
+        "run_id": "explorecheck-formal-G12-R200-q2-s4-iid_anchor",
+        "full_drop_fraction": 0.27063563235313803,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G12-R200-q2-s4-iid_anchor",
+      "arm": "iid",
+      "condition": "G12-R200-q2",
+      "seed": 4,
+      "max_cwnd": 45055.0,
+      "fraction_above_bound": 0.042168741039599625,
+      "gates_pass": false,
+      "deterministic_action_mean": -0.0012933399412978577,
+      "full": {
+        "utilization": 0.9044579694845408,
+        "drop_fraction": 0.27063563235313803,
+        "queue_mean_ms": 301.8065515714918,
+        "queue_p95_ms": 402.0,
+        "queue_p99_ms": 403.0
+      },
+      "trim10": {
+        "utilization": 0.9204848588318146,
+        "drop_fraction": 0.2666336522947651,
+        "queue_mean_ms": 299.38342656886005,
+        "queue_p95_ms": 402.0,
+        "queue_p99_ms": 403.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.7888360503760021,
+        "unanchored_fraction": 0.05643629418941882,
+        "inflight_bytes_p95": 3143608.0,
+        "cwnd_over_packets_out_p50": 0.6311475409836066
+      },
+      "per_step": {
+        "deterministic": -0.0017929498676323558,
+        "exploration": 0.0066356369381796705,
+        "percent_truncation": -0.005239250796969036,
+        "integer_rounding": -0.007090696450272167
+      },
+      "max_abs_cumulative_exploration": 13.558955524747036,
+      "command_drift_per_step": -0.008883646317904522,
+      "reference": {
+        "run_id": "initcheck-formal-G12-R200-q2-s4-small_uniform",
+        "max_cwnd": 8482.0,
+        "fraction_above_bound": 0.022615670943033694,
+        "full_drop_fraction": 0.2360246798911962,
+        "trim10_queue_mean_ms": 307.5049496833432,
+        "trim10_utilization": 0.9784696643120852
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G24-R100-q2-s3-zero_sum",
+      "arm": "zero_sum_offset",
+      "condition": "G24-R100-q2",
+      "seed": 3,
+      "max_cwnd": 784.0,
+      "fraction_above_bound": 0.0,
+      "gates_pass": true,
+      "deterministic_action_mean": -0.004282226035522704,
+      "full": {
+        "utilization": 0.9875131736056252,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 65.21058110601419,
+        "queue_p95_ms": 104.0,
+        "queue_p99_ms": 123.0
+      },
+      "trim10": {
+        "utilization": 1.0000006935700718,
+        "drop_fraction": 0.0,
+        "queue_mean_ms": 65.78740647128443,
+        "queue_p95_ms": 105.0,
+        "queue_p99_ms": 124.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.4851110546709509,
+        "unanchored_fraction": 0.0004321914983203641,
+        "inflight_bytes_p95": 603816.0,
+        "cwnd_over_packets_out_p50": 1.11986301369863
+      },
+      "per_step": {
+        "deterministic": -0.005936425806085909,
+        "exploration": -2.874562436743926e-06,
+        "percent_truncation": -0.0052724812762160525,
+        "integer_rounding": -0.006655738595445027
+      },
+      "max_abs_cumulative_exploration": 0.523606665373371,
+      "command_drift_per_step": -0.012592164401530936,
+      "reference": {
+        "run_id": "explorecheck-formal-G24-R100-q2-s3-iid_anchor",
+        "full_drop_fraction": 0.20805073739501861,
+        "source": "SAME_DAY_SAME_HOST"
+      }
+    },
+    {
+      "run_id": "explorecheck-formal-G24-R100-q2-s3-iid_anchor",
+      "arm": "iid",
+      "condition": "G24-R100-q2",
+      "seed": 3,
+      "max_cwnd": 14359.0,
+      "fraction_above_bound": 0.02646087798034511,
+      "gates_pass": false,
+      "deterministic_action_mean": 0.0007224563768074266,
+      "full": {
+        "utilization": 0.915785113994593,
+        "drop_fraction": 0.20805073739501861,
+        "queue_mean_ms": 139.67532503054284,
+        "queue_p95_ms": 201.0,
+        "queue_p99_ms": 201.0
+      },
+      "trim10": {
+        "utilization": 0.9254131810324591,
+        "drop_fraction": 0.215614079945453,
+        "queue_mean_ms": 142.7688359501895,
+        "queue_p95_ms": 201.0,
+        "queue_p99_ms": 201.0
+      },
+      "binding_trim10": {
+        "binding_fraction": 0.7465858463887733,
+        "unanchored_fraction": 0.03148164874131848,
+        "inflight_bytes_p95": 3142160.0,
+        "cwnd_over_packets_out_p50": 0.8730964467005076
+      },
+      "per_step": {
+        "deterministic": 0.0010015372013232444,
+        "exploration": -0.0058573075614915225,
+        "percent_truncation": -0.005226657803553588,
+        "integer_rounding": -0.006755836392858671
+      },
+      "max_abs_cumulative_exploration": 13.605382804189661,
+      "command_drift_per_step": -0.005754299191535427,
+      "reference": {
+        "run_id": "initcheck-formal-G24-R100-q2-s3-small_uniform",
+        "max_cwnd": 18686.0,
+        "fraction_above_bound": 0.019240907080869424,
+        "full_drop_fraction": 0.18885073722480308,
+        "trim10_queue_mean_ms": 136.4414456509594,
+        "trim10_utilization": 0.9869051302844705
+      }
+    }
+  ],
+  "note": "Utilization/delay are reported for every run; low utilization is never counted as success."
+}
