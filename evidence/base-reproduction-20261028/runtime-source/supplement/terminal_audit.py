@@ -1,0 +1,14 @@
+
+import pathlib,json,sys,os,hashlib,time
+os.environ['TF_CPP_MIN_LOG_LEVEL']='2';R=pathlib.Path(ROOT);F=R/'framework';sys.path.insert(0,str(F/'code/runtime/_deps'));import tensorflow as tf,numpy as np
+cfg=json.loads((R/'registration.json').read_text())['training_config'];D=F/'checkpoints'/cfg['model_id'];steps=sorted(int(p.stem.split('-')[1]) for p in D.glob('step-*.index'));n=steps[-1]
+final=tf.train.NewCheckpointReader(str(D/('step-%d'%n)));stop=tf.train.NewCheckpointReader(str(D/'first-stop'));names=sorted(final.get_variable_to_shape_map());assert names==sorted(stop.get_variable_to_shape_map()) and len(names)==106
+finite={label:all(np.isfinite(reader.get_tensor(k)).all() for k in names) for label,reader in [('first_stop',stop),('final',final)]};assert all(finite.values())
+diff=[k for k in names if not np.array_equal(final.get_tensor(k),stop.get_tensor(k))];policy=[k for k in names if k.startswith('abstract_actor/') and '/Adam' not in k]
+h=lambda reader,keys:hashlib.sha256(b''.join(k.encode()+reader.get_tensor(k).tobytes() for k in keys)).hexdigest()
+counter=json.loads((D/('step-%d.counters.json'%n)).read_text());captured=json.loads((D/'first-stop.capture.json').read_text());credit=int(max(0,n-cfg['warmup'])*cfg['update_ratio'])-counter['critic_iterations'];assert credit==0,credit
+rp=np.load(str(D/'replay.npz'));birth=rp['birth'];assert len(np.unique(birth))==len(birth) and int(birth.min())==n-len(birth) and int(birth.max())==n-1
+result=dict(status='PASS_TERMINAL_TENSOR_ACCOUNTING',epoch=time.time(),final_inserted=n,variable_count=len(names),finite=finite,all_variable_hashes={label:h(reader,names) for label,reader in [('first_stop',stop),('final',final)]},policy_hashes={label:h(reader,policy) for label,reader in [('first_stop',stop),('final',final)]},different_variables=diff,first_stop=captured,final_counters={k:v for k,v in counter.items() if k!='cfg'},actual_drain_updates={k:counter[k]-captured['counters'][k] for k in captured['counters']},remaining_original_update_credit=credit,global_step=int(final.get_tensor('global_step')),replay=dict(rows=len(birth),minimum_birth=int(birth.min()),maximum_birth=int(birth.max()),actor_inserted=rp['actor_inserted'].tolist(),sampled_by_actor=rp['sampled_by_actor'].tolist()),scope='Read-only checkpoint/replay metadata; no Session/TF Server/TCP/optimizer/inference; original final drain retained and quantified, not seamless resume')
+result.update(first_stop_earned_update_credit=int(max(0,captured['inserted']-cfg['warmup'])*cfg['update_ratio'])-captured['counters']['critic_iterations'],uncollected_planned_transitions=cfg['sample_budget']-n,unearned_planned_updates=int(max(0,cfg['sample_budget']-cfg['warmup'])*cfg['update_ratio'])-counter['critic_iterations'])
+result['analysis_source_sha256']=ANALYSIS_SHA
+(R/'results/terminal-tensor-audit.json').write_text(json.dumps(result,indent=2));print(json.dumps(result))

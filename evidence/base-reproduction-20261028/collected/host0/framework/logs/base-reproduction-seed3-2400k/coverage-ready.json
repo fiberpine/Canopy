@@ -1,0 +1,32 @@
+{
+  "epoch": 1793196219.3005867,
+  "all_ready_epoch": 1793196202.7203753,
+  "minimum_enqueued_per_actor": 512,
+  "per_actor_lower_bound": {
+    "0": 1774,
+    "4": 1589,
+    "8": 1300,
+    "12": 1132,
+    "16": 1132,
+    "20": 684,
+    "1": 1762,
+    "5": 1693,
+    "9": 1352,
+    "13": 1071,
+    "17": 1122,
+    "21": 902,
+    "2": 1365,
+    "6": 1517,
+    "10": 1332,
+    "14": 1136,
+    "18": 908,
+    "22": 686,
+    "3": 1511,
+    "7": 1591,
+    "11": 1353,
+    "15": 1321,
+    "19": 909,
+    "23": 685
+  },
+  "definition": "Coordinator confirms all actors active and minimum enqueued. Learner independently gates on its exact per-actor INSERTED counters. Delayed training-log totals must never be compared against newer producer snapshots."
+}

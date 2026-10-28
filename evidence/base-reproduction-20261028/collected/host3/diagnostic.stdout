@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "@REPRODUCTION@/assessment_worker.py", line 36, in <module>
+    folder=F/'logs'/run;result=node.load(folder/'result.json');assert code==0 and result and result['status']=='COMPLETED',(code,result)
+AssertionError: (-15, None)

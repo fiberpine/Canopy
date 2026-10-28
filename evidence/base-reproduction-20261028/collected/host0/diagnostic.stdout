@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "@REPRODUCTION@/diagnostic_after_stop.py", line 29, in <module>
+    try:rows=stage('diagnostic',evaljobs([('stopped',cp),('archived',str(BASE/'checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694'))],M['training_config']['conditions'],1,'stopped-assess'))
+  File "@REPRODUCTION@/pipeline.py::assessment-stage", line 12, in stage
+  File "@REPRODUCTION@/pipeline.py::definitions", line 10, in parallel
+  File "/usr/lib/python3.6/concurrent/futures/_base.py", line 586, in result_iterator
+    yield fs.pop().result()
+  File "/usr/lib/python3.6/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/lib/python3.6/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "@REPRODUCTION@/pipeline.py::assessment-stage", line 11, in start
+  File "@REPRODUCTION@/pipeline.py::definitions", line 8, in execute
+AssertionError: (0, 'Traceback (most recent call last):\n  File "<stdin>", line 7, in <module>\nAssertionError\n', '')

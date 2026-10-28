@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "@REPRODUCTION@/pipeline.py", line 89, in <module>
+    final=result['final'];assert result['status']=='COMPLETED' and final['inserted']>=2400000,'TRAINING_BUDGET_NOT_COMPLETED'
+AssertionError: TRAINING_BUDGET_NOT_COMPLETED

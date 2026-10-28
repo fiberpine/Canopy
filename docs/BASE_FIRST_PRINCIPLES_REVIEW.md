@@ -1,3 +1,65 @@
+# 第1步原配方复现：原后期守卫停止，停点冻结对照完成（2026-10-28）
+
+**没有完成2.4M复现，没有新的健康H0。** 用户明确允许合理长训后，本轮在五台机器执行一次fresh seed3、原native、原配方训练；实际1,675,235条时由原配方后期守卫停止。随后完成实际停点与归档模型24条件各一次60秒冻结评测。完整2.4M终点、候选筛选及所选模型两重复确认均为NOT_RUN，没有自动续训。
+
+## 实际执行与配方核对
+
+- 1learner＋24actor，四台actor机各6条件；70维/1乘性窗口动作、agent_v2/Sonnet-IBP、原20ms执行链，5BDP、150k replay、balanced_actor、warmup12288及每actor512、UTD .1、iid探索.2、原moving-stat actor损失、原共享critic Adam及重叠target赋值组合。不是L1的TF-layers Orca，也不是双动作固定MTP模型。
+- 原native `90ccb86a...`，原门控×1.1辅助与20ms pacing、原4MiB发送/6MiB接收/core212992，不flush缓存，不加启动锚定、重建连接、zero_sum、tau/n-step/reward改动或新critic放行门。
+- 新旧随机step0的**106变量逐项完全相同**，哈希均`7ace55ea...`。去掉首次停止快照保存语句后，实际distributed训练代码与归档现场逐字一致。保存频率由500k改200k，独立路径、超时及评测余量等调度差异完整登记；异步TCP、到达顺序与minibatch不保证历史轨迹逐位相同。
+- 90分钟绝对截止23:27:39。没有用完余额追加实验；所有正式网络和收尾都在本轮范围内。执行以[source manifest](../evidence/base-reproduction-20261028/source-manifest.json)和native SHA识别；`745bb47`是启动后的源码归档，不冒充运行时commit。
+
+| 训练账本 | 实际 |
+|---|---:|
+| 真实generated=enqueued=inserted | 1,675,235 |
+| 完整critic更新 | 166,294 |
+| critic优化器操作 | 332,588 |
+| actor / target更新 | 166,294 / 166,294 |
+| cluster墙钟 | 1855.412s |
+| 2.4M中尚未采集的预算 | 724,765条 |
+| 已获得但最终未使用的原更新额度 | 0 |
+
+触发的是原`PERSISTENT_LOW_WINDOW_LOW_UTIL_ACTOR0`：从150万条之后，G12-R20近期无噪声动作最小边界比例≥.99、平均cwnd≤10、近5秒利用率<.25，连续180.197s，达到原180秒规则。**不是百万窗口早停**。最后近期24条件17负饱和、7正饱和；本轮不能称恢复。原unit的COMPLETED表示干净排空，外层`TRAINING_BUDGET_NOT_COMPLETED`失败表示2.4M未跑满，两者同时保留，不改写状态。
+
+首次观测停止时先保存全部106变量，之后沿用原配方排空；首次停止完整更新166,258、最终166,294，实际另排空36次critic/actor/target。首次停止已获得未使用额度1，其后仍有真实经验排入，所以不能把它与2.4M尚未获得的预算混称。本轮最终与首次停止有53个变量变化，两个快照均保留；终点106变量有限，150k replay birth连续，真实入库和回放采样账本一致。冻结评测使用的是**排空终点step1675235**，首次观测停止step1674884未另做网络评测，不能把终点冒充触发时策略。
+
+另一个原元数据限制：保存的共享global_step为498,801，而分别记录的完整optimizer操作数为498,882，相差−81。原变量清单中“global_step counts optimizer operations”的继承文字原样保留并更正：本轮不能把它当精确更新账本，使用Python在真实sess.run返回后的分离完成计数；未据此额外改原配方或断言唯一原因。
+
+## 停点的完整冻结评测
+
+五机独占一流，每条件停点/归档同host、顺序事先固定随机，均用原native及启动。48次完整60秒、0网络运行失败、0optimizer/探索；12个actor/BN变量加载逐tensor相等且每run前后不变。它是**实际停止点的诊断**，不是2.4M终点或选模后确认；每格仅1次，全部为训练网格。
+
+| trim10、24条件等权 | 利用率 | mean queue | 条件等权P95 | 条件等权P99 | drop |
+|---|---:|---:|---:|---:|---:|
+| 新训练排空终点step1675235 | 44.6637% | 190.5712ms | 229.9583ms | 230.8333ms | 1.97405% |
+| 同日归档step2412694 | 97.9047% | 32.2477ms | 43.5417ms | 46.7917ms | 0.00000% |
+
+停点预登记粗筛（util≥95%、mean queue相对32.32ms±30%）为**FAIL**；同日归档参考为**PASS**。逐场景、full/trim10、P95/P99/drop及控制周期全部公开，不能以总均值掩盖场景失败，也不将P95均值说成全流量联合P95。原资源记录仅Python/native直接进程树，未完整捕捉重挂接Mahimahi，不宣称完整CPU收益。
+
+## 独立IPC短测：卡顿定位与仍未知的地方
+
+训练之前先做G12-R200/G72-R50两臂各4次，共16个60秒冻结run，0optimizer。两臂用同一增加阶段日志的诊断重建native `12a4497f...`，env切换ASCII/framed；**训练用的仍是未改原90binary**。两臂同样记录cadence、样本等待、状态发布、动作执行和Python read/inference；不能冒称短测的重建binary与90逐位相同。
+
+- G12-R200 trim10：legacy平均利用率77.5923%、verified91.8446%。legacy有199个>50ms原生周期，verified65个；**264/264均以等待新RTT样本为主要耗时**。状态发布到动作执行P99各run最高约2.76ms。两种传输都可出现长间隔，本轮不支持“只在verified发生”；空读多也不能独自证明IPC损坏或普通CPU扰动。这只能定位本轮重复，旧未记录阶段时间戳的单次成因不能回溯唯一证明。
+- G72-R50：legacy98.5063%、verified95.9786%，host2 verified仍只有89.2774%、观测峰值/容量约.901；其余多数97–99.6%。没有重复到原58.6%的严重程度，但不足以宣布IPC逐场景等价，或排除启动/传输时间/host交互。
+- verified的8次传输prefix/CRC/状态绑定核验通过，incoming rejected0；策略变量前后不变。没有把少调用、loss下降或符号一致当成新网络质量收益。
+
+## 调度失败与限制
+
+首次停点评测调度的总标记与单机phase同名，host0启动断言失败，四机TF启动阶段被协调停止。五机只读核对显示无native ownership、**0条评测TCP、0成功结果**；失败源代码/标记/traceback原样保留。修正为独立controller、worker、phase、STOP_ENDPOINT后才补齐48项，不重复成功TCP，不重启训练。原2.4M失败和该辅助失败没有被最终48完成覆盖。
+
+原登记六条件checkpoint筛选含G48-R200，其42.016ms上限比历史相同子集65.4671ms还严格；在新checkpoint评测前已记录这一限制。它不是训练放行门，也不是复现的必要条件；本轮因原后期停止，该筛选**全部NOT_RUN**，不事后改阈值挽救结果。
+
+本轮结论只到：**同一106变量起点和原算法/原native下，这次轨迹在原后期守卫前没有恢复，停点冻结表现如上，未得到新H0。** 它不证明若取消原守卫跑到2.4M必失败，不证明唯一根因是启动、BN、探索、异步调度或奖励，也不把一次历史成功升级为普遍可恢复。下一步须与Claude根据这些证据重新定方向，本轮不自动续训、改守卫或追加机制实验。
+
+五机最终归属进程/共享内存、原源码/native、旧模型、51保护文件及sysctl核查均PASS。新完整CP、replay、逐包/state/control日志留云端；仅精确actor12tensor通过VPC供冻结推理、小证据回本机。没有完整TCP/history/RNG/队列无缝resume，不下载大文件替代验证。
+
+[完整分析](../evidence/base-reproduction-20261028/final-analysis.json) · [96个endpoint窗口](../evidence/base-reproduction-20261028/all-network-windows.csv) · [全部登记/运行账本](../evidence/base-reproduction-20261028/run-ledger.csv) · [原守卫证据](../evidence/base-reproduction-20261028/collected/host0/results/guard-trigger-proof.json) · [首次停止/最终快照核对](../evidence/base-reproduction-20261028/terminal-tensor-audit.json) · [IPC阶段时钟](../evidence/base-reproduction-20261028/timing-refined.json)。
+
+---
+
+以下为第0步原复盘与历史讨论；其中“第1步未启动/先申请长训”等状态已由本节覆盖，历史数值与失败保留。
+
 # 回到归档配方：证据核对与第0步实测（2026-10-28）
 
 **第0步已完成并安全收尾，0训练；第1步2.4M未启动。** 先复现已知配方的方向合理，但目前建议先短重复两组有大差异的冻结配对，再决定长训。不能把“历史曾恢复”扩大为所有配方必经且必自愈，也不能由逐场景同号证明critic所有状态正确。

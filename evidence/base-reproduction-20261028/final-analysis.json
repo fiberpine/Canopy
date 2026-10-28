@@ -1,0 +1,3547 @@
+{
+  "status": "LATE_GUARD_STOP_FROZEN_ASSESSMENT_COMPLETE",
+  "pipeline_outcome": null,
+  "pipeline_failure": {
+    "epoch": 1793198021.2820191,
+    "traceback": "Traceback (most recent call last):\n  File \"@REPRODUCTION@/pipeline.py\", line 89, in <module>\n    final=result['final'];assert result['status']=='COMPLETED' and final['inserted']>=2400000,'TRAINING_BUDGET_NOT_COMPLETED'\nAssertionError: TRAINING_BUDGET_NOT_COMPLETED\n"
+  },
+  "diagnostic_outcome": {
+    "status": "STOPPED_MODEL_FROZEN48_COMPLETE",
+    "epoch": 1793198958.5649228,
+    "inserted": 1675235,
+    "training_budget_complete": false,
+    "training_continuations": 0
+  },
+  "training": {
+    "run_id": "base-reproduction-seed3-2400k",
+    "status": "COMPLETED",
+    "reason": null,
+    "stop_reason": "PERSISTENT_LOW_WINDOW_LOW_UTIL_ACTOR0",
+    "wall_s": 1855.4115996360779,
+    "started_epoch": 1793196165.858402,
+    "all_ready_epoch": 1793196202.7203753,
+    "final": {
+      "status": "COMPLETED",
+      "reason": "",
+      "inserted": 1675235,
+      "counters": {
+        "critic_iterations": 166294,
+        "critic_optimizer_ops": 332588,
+        "actor_updates": 166294,
+        "target_updates": 166294
+      },
+      "wall_s": 1834.995506685
+    },
+    "producer_records": {
+      "0": {
+        "generated": 82338,
+        "enqueued": 82338,
+        "exploration_calls": 82339,
+        "errors": [],
+        "seed": 3,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "4": {
+        "generated": 82139,
+        "enqueued": 82139,
+        "exploration_calls": 82140,
+        "errors": [],
+        "seed": 4039,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "8": {
+        "generated": 44135,
+        "enqueued": 44135,
+        "exploration_calls": 44136,
+        "errors": [],
+        "seed": 8075,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "12": {
+        "generated": 70354,
+        "enqueued": 70354,
+        "exploration_calls": 70355,
+        "errors": [],
+        "seed": 12111,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "16": {
+        "generated": 81604,
+        "enqueued": 81604,
+        "exploration_calls": 81605,
+        "errors": [],
+        "seed": 16147,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "20": {
+        "generated": 76635,
+        "enqueued": 76635,
+        "exploration_calls": 76636,
+        "errors": [],
+        "seed": 20183,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "1": {
+        "generated": 69905,
+        "enqueued": 69905,
+        "exploration_calls": 69906,
+        "errors": [],
+        "seed": 1012,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "5": {
+        "generated": 81295,
+        "enqueued": 81295,
+        "exploration_calls": 81296,
+        "errors": [],
+        "seed": 5048,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "9": {
+        "generated": 81746,
+        "enqueued": 81746,
+        "exploration_calls": 81747,
+        "errors": [],
+        "seed": 9084,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "13": {
+        "generated": 40599,
+        "enqueued": 40599,
+        "exploration_calls": 40600,
+        "errors": [],
+        "seed": 13120,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "17": {
+        "generated": 70169,
+        "enqueued": 70169,
+        "exploration_calls": 70170,
+        "errors": [],
+        "seed": 17156,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "21": {
+        "generated": 81335,
+        "enqueued": 81335,
+        "exploration_calls": 81336,
+        "errors": [],
+        "seed": 21192,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "2": {
+        "generated": 46334,
+        "enqueued": 46334,
+        "exploration_calls": 46335,
+        "errors": [],
+        "seed": 2021,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "6": {
+        "generated": 69931,
+        "enqueued": 69931,
+        "exploration_calls": 69932,
+        "errors": [],
+        "seed": 6057,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "10": {
+        "generated": 81670,
+        "enqueued": 81670,
+        "exploration_calls": 81671,
+        "errors": [],
+        "seed": 10093,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "14": {
+        "generated": 77356,
+        "enqueued": 77356,
+        "exploration_calls": 77357,
+        "errors": [],
+        "seed": 14129,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "18": {
+        "generated": 81407,
+        "enqueued": 81407,
+        "exploration_calls": 81408,
+        "errors": [],
+        "seed": 18165,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "22": {
+        "generated": 69971,
+        "enqueued": 69971,
+        "exploration_calls": 69972,
+        "errors": [],
+        "seed": 22201,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "3": {
+        "generated": 28245,
+        "enqueued": 28245,
+        "exploration_calls": 28246,
+        "errors": [],
+        "seed": 3030,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "7": {
+        "generated": 47700,
+        "enqueued": 47700,
+        "exploration_calls": 47701,
+        "errors": [],
+        "seed": 7066,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "11": {
+        "generated": 70448,
+        "enqueued": 70448,
+        "exploration_calls": 70449,
+        "errors": [],
+        "seed": 11102,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "15": {
+        "generated": 81558,
+        "enqueued": 81558,
+        "exploration_calls": 81559,
+        "errors": [],
+        "seed": 15138,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "19": {
+        "generated": 77133,
+        "enqueued": 77133,
+        "exploration_calls": 77134,
+        "errors": [],
+        "seed": 19174,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      },
+      "23": {
+        "generated": 81228,
+        "enqueued": 81228,
+        "exploration_calls": 81229,
+        "errors": [],
+        "seed": 23210,
+        "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+      }
+    }
+  },
+  "training_complete": false,
+  "optimizer_counters": {
+    "critic_iterations": 166294,
+    "critic_optimizer_ops": 332588,
+    "actor_updates": 166294,
+    "target_updates": 166294
+  },
+  "initial_tensor_parity": {
+    "status": "PASS_INITIAL_ALL_VARIABLES_EQUAL",
+    "variable_count": 106,
+    "differing": [],
+    "old_sha256": "7ace55eaa8d1891553ae3f5693e54473b6e67c73e86b417485784b3f17e568a5",
+    "new_sha256": "7ace55eaa8d1891553ae3f5693e54473b6e67c73e86b417485784b3f17e568a5",
+    "optimizer_calls": 0,
+    "scope": "Read-only checkpoint tensors; no graph/Session/TF Server/network experiment"
+  },
+  "source_lineage": {
+    "status": "PASS_ORIGINAL_OPTIMIZER_CODE_EXACT_AFTER_REMOVING_OBSERVER",
+    "historical_distributed_sha256": "d86f4acf0e7b5dbc4ed500fd385582d1a2f220986a30341a65b64a627af2f214",
+    "executed_distributed_sha256": "019cd121528a22aaaf19dc9c4c1516d0282b64775c5147e5b16a93efc0e65932",
+    "only_distributed_insertion": "   if pathlib.Path(cfg['stop_file']).exists() and not (cp/'first-stop.capture.json').exists():\n    save.save(sess,str(cp/'first-stop'),write_meta_graph=False)\n    (cp/'first-stop.capture.json').write_text(json.dumps(dict(epoch=time.time(),inserted=n,counters=dict(counter),meaning='Observed learner first sees coordinator stop, BEFORE subsequent original budget drain; producers may still be draining. Saving only, no extra optimizers or RNG.')))",
+    "configuration_diff": {
+      "run_id": {
+        "original": "formal24-grid24-seed3-balanced-u010",
+        "current": "base-reproduction-seed3-2400k"
+      },
+      "model_id": {
+        "original": "formal24-grid24-seed3-balanced-u010",
+        "current": "base-reproduction-seed3-2400k"
+      },
+      "checkpoint_interval": {
+        "original": 500000,
+        "current": 200000
+      },
+      "stop_file": {
+        "original": "@ARCHIVED_BASELINE@/logs/formal24-grid24-seed3-balanced-u010-stop.json",
+        "current": "@REPRODUCTION@/framework/logs/base-reproduction-seed3-2400k-stop.json"
+      },
+      "absolute_deadline_epoch": {
+        "original": 1791614720.0,
+        "current": 1793201139.3098485
+      },
+      "timeout_s": {
+        "original": 2700,
+        "current": 3300
+      },
+      "code_commit": {
+        "original": "bfe060b27e7608e3ec45b137bf00691c8bcce856",
+        "current": "source-manifest.json"
+      },
+      "evaluation_reserve_s": {
+        "original": 4500,
+        "current": 1800
+      }
+    },
+    "all106_initial_equal": {
+      "status": "PASS_INITIAL_ALL_VARIABLES_EQUAL",
+      "variable_count": 106,
+      "differing": [],
+      "old_sha256": "7ace55eaa8d1891553ae3f5693e54473b6e67c73e86b417485784b3f17e568a5",
+      "new_sha256": "7ace55eaa8d1891553ae3f5693e54473b6e67c73e86b417485784b3f17e568a5",
+      "optimizer_calls": 0,
+      "scope": "Read-only checkpoint tensors; no graph/Session/TF Server/network experiment"
+    },
+    "same5host_cores": [
+      {
+        "index": 0,
+        "hashes": {
+          "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+          "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+          "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+          "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121"
+        }
+      },
+      {
+        "index": 1,
+        "hashes": {
+          "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+          "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+          "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+          "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121"
+        }
+      },
+      {
+        "index": 2,
+        "hashes": {
+          "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+          "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+          "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+          "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121"
+        }
+      },
+      {
+        "index": 3,
+        "hashes": {
+          "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+          "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+          "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+          "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121"
+        }
+      },
+      {
+        "index": 4,
+        "hashes": {
+          "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+          "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+          "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+          "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121"
+        }
+      }
+    ],
+    "training_native": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+    "diagnostic_native": "12a4497f6397e5ef64945be2ac4f8465a5cbc673c8fff93732bbe41a147cec49",
+    "observation_scope": "Extra first-stop Saver call,checkpoint200k cadence,private paths and scheduling deadlines change; RNG and optimizer/action/reward code unchanged. Bit-exact training trajectories are not expected from asynchronous TCP."
+  },
+  "terminal_tensor_audit": {
+    "status": "PASS_TERMINAL_TENSOR_ACCOUNTING",
+    "epoch": 1793199087.4231844,
+    "final_inserted": 1675235,
+    "variable_count": 106,
+    "finite": {
+      "first_stop": true,
+      "final": true
+    },
+    "all_variable_hashes": {
+      "first_stop": "bcefa4dbf62b6aa4e4307db65c3010cd375b0d6a2827a9c3514571bc343c646e",
+      "final": "905266e177413af8464669cc4edd1b4424b6e32e9810835dc1345c61a9db8c09"
+    },
+    "policy_hashes": {
+      "first_stop": "cd7386f53a711ee99d6998b8556428764a57ec2ea941aa3c19ec838ab898b6c3",
+      "final": "baf7e6901a29f0b8926a181d34437d1cd3c639fd1ab62a907b0bccefdcae920b"
+    },
+    "different_variables": [
+      "abstract_actor/abstract_actor/bn1/moving_mean",
+      "abstract_actor/abstract_actor/bn1/moving_variance",
+      "abstract_actor/abstract_actor/bn2/moving_mean",
+      "abstract_actor/abstract_actor/bn2/moving_variance",
+      "critic/dense/bias",
+      "critic/dense/bias/Adam",
+      "critic/dense/bias/Adam_1",
+      "critic/dense/kernel",
+      "critic/dense/kernel/Adam",
+      "critic/dense/kernel/Adam_1",
+      "critic/fc1/bias",
+      "critic/fc1/bias/Adam",
+      "critic/fc1/bias/Adam_1",
+      "critic/fc1/kernel",
+      "critic/fc1/kernel/Adam",
+      "critic/fc1/kernel/Adam_1",
+      "critic/fc2/bias",
+      "critic/fc2/bias/Adam",
+      "critic/fc2/bias/Adam_1",
+      "critic/fc2/kernel",
+      "critic/fc2/kernel/Adam",
+      "critic/fc2/kernel/Adam_1",
+      "critic2/dense/bias",
+      "critic2/dense/bias/Adam",
+      "critic2/dense/bias/Adam_1",
+      "critic2/dense/kernel",
+      "critic2/dense/kernel/Adam",
+      "critic2/dense/kernel/Adam_1",
+      "critic2/fc1/bias",
+      "critic2/fc1/bias/Adam",
+      "critic2/fc1/bias/Adam_1",
+      "critic2/fc1/kernel",
+      "critic2/fc1/kernel/Adam",
+      "critic2/fc1/kernel/Adam_1",
+      "critic2/fc2/bias",
+      "critic2/fc2/bias/Adam",
+      "critic2/fc2/bias/Adam_1",
+      "critic2/fc2/kernel",
+      "critic2/fc2/kernel/Adam",
+      "critic2/fc2/kernel/Adam_1",
+      "global_step",
+      "target_critic/dense/bias",
+      "target_critic/dense/kernel",
+      "target_critic/fc1/bias",
+      "target_critic/fc1/kernel",
+      "target_critic/fc2/bias",
+      "target_critic/fc2/kernel",
+      "target_critic2/dense/bias",
+      "target_critic2/dense/kernel",
+      "target_critic2/fc1/bias",
+      "target_critic2/fc1/kernel",
+      "target_critic2/fc2/bias",
+      "target_critic2/fc2/kernel"
+    ],
+    "first_stop": {
+      "epoch": 1793197994.123659,
+      "inserted": 1674884,
+      "counters": {
+        "critic_iterations": 166258,
+        "critic_optimizer_ops": 332516,
+        "actor_updates": 166258,
+        "target_updates": 166258
+      },
+      "meaning": "Observed learner first sees coordinator stop, BEFORE subsequent original budget drain; producers may still be draining. Saving only, no extra optimizers or RNG."
+    },
+    "final_counters": {
+      "critic_iterations": 166294,
+      "critic_optimizer_ops": 332588,
+      "actor_updates": 166294,
+      "target_updates": 166294,
+      "inserted": 1675235
+    },
+    "actual_drain_updates": {
+      "critic_iterations": 36,
+      "critic_optimizer_ops": 72,
+      "actor_updates": 36,
+      "target_updates": 36
+    },
+    "remaining_original_update_credit": 0,
+    "global_step": 498801,
+    "replay": {
+      "rows": 150000,
+      "minimum_birth": 1525235,
+      "maximum_birth": 1675234,
+      "actor_inserted": [
+        82338,
+        69905,
+        46334,
+        28245,
+        82139,
+        81295,
+        69931,
+        47700,
+        44135,
+        81746,
+        81670,
+        70448,
+        70354,
+        40599,
+        77356,
+        81558,
+        81604,
+        70169,
+        81407,
+        77133,
+        76635,
+        81335,
+        69971,
+        81228
+      ],
+      "sampled_by_actor": [
+        3547606,
+        3547606,
+        3547606,
+        3547606,
+        3547606,
+        3547606,
+        3547606,
+        3547606,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605,
+        3547605
+      ]
+    },
+    "scope": "Read-only checkpoint/replay metadata; no Session/TF Server/TCP/optimizer/inference; original final drain retained and quantified, not seamless resume",
+    "first_stop_earned_update_credit": 1,
+    "uncollected_planned_transitions": 724765,
+    "unearned_planned_updates": 72477,
+    "analysis_source_sha256": "419594dd2554efe8580a81a472eb5108ef0dcf44f7b9038d72cb089de2d30967"
+  },
+  "replay_coverage": {
+    "inserted_by_actor": [
+      82338,
+      69905,
+      46334,
+      28245,
+      82139,
+      81295,
+      69931,
+      47700,
+      44135,
+      81746,
+      81670,
+      70448,
+      70354,
+      40599,
+      77356,
+      81558,
+      81604,
+      70169,
+      81407,
+      77133,
+      76635,
+      81335,
+      69971,
+      81228
+    ],
+    "sampled_by_actor": [
+      3547606,
+      3547606,
+      3547606,
+      3547606,
+      3547606,
+      3547606,
+      3547606,
+      3547606,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605,
+      3547605
+    ],
+    "retained_by_actor": [
+      7530,
+      6201,
+      3201,
+      1627,
+      7516,
+      7510,
+      6317,
+      3231,
+      3231,
+      7500,
+      7525,
+      6319,
+      6318,
+      3230,
+      7514,
+      7515,
+      7512,
+      6316,
+      7514,
+      7518,
+      7515,
+      7508,
+      6318,
+      7514
+    ],
+    "sample_calls": 166294,
+    "definition": "sampled_by_actor counts replay rows used in complete updates; this is not additional real environment experience"
+  },
+  "selection": null,
+  "formal_summary": {
+    "archived": {
+      "full": {
+        "condition_equal": {
+          "utilization": 0.965093890056924,
+          "departure_mbps": 37.80508617777778,
+          "queue_mean_ms": 42.043284126535234,
+          "queue_p95_ms": 152.45833333333334,
+          "queue_p99_ms": 221.75,
+          "drop_fraction": 0.0017278600472994824,
+          "control_p50_ms": 21.618145833333333,
+          "control_p95_ms": 21.668795833333334,
+          "control_p99_ms": 28.39016708333333
+        },
+        "per_condition": [
+          {
+            "condition": "G12-R20",
+            "utilization": 0.8969073549178319,
+            "departure_mbps": 10.759034666666667,
+            "queue_mean_ms": 2.6460810256792517,
+            "queue_p95_ms": 6.0,
+            "queue_p99_ms": 10.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.591,
+            "control_p95_ms": 21.631,
+            "control_p99_ms": 21.658
+          },
+          {
+            "condition": "G12-R50",
+            "utilization": 0.9838362571060999,
+            "departure_mbps": 11.801808,
+            "queue_mean_ms": 19.27204308382318,
+            "queue_p95_ms": 36.0,
+            "queue_p99_ms": 40.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.648,
+            "control_p95_ms": 21.695,
+            "control_p99_ms": 21.73348
+          },
+          {
+            "condition": "G12-R100",
+            "utilization": 0.9916109074431272,
+            "departure_mbps": 11.8950704,
+            "queue_mean_ms": 14.147735508773113,
+            "queue_p95_ms": 22.0,
+            "queue_p99_ms": 30.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.623,
+            "control_p95_ms": 21.688,
+            "control_p99_ms": 21.928120000000003
+          },
+          {
+            "condition": "G12-R200",
+            "utilization": 0.7658495859673135,
+            "departure_mbps": 9.186904533333333,
+            "queue_mean_ms": 80.9722947112039,
+            "queue_p95_ms": 663.0,
+            "queue_p99_ms": 973.0,
+            "drop_fraction": 0.03544999056623551,
+            "control_p50_ms": 21.596,
+            "control_p95_ms": 21.672949999999997,
+            "control_p99_ms": 180.38866
+          },
+          {
+            "condition": "G24-R200",
+            "utilization": 0.966467994051559,
+            "departure_mbps": 23.186926933333332,
+            "queue_mean_ms": 73.85971219920161,
+            "queue_p95_ms": 702.0,
+            "queue_p99_ms": 889.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.6,
+            "control_p95_ms": 21.648,
+            "control_p99_ms": 21.69995
+          },
+          {
+            "condition": "G24-R20",
+            "utilization": 0.9847047013810811,
+            "departure_mbps": 23.6244512,
+            "queue_mean_ms": 5.421217471014616,
+            "queue_p95_ms": 11.0,
+            "queue_p99_ms": 13.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.594,
+            "control_p95_ms": 21.633,
+            "control_p99_ms": 21.654320000000002
+          },
+          {
+            "condition": "G24-R50",
+            "utilization": 0.9955708141546147,
+            "departure_mbps": 23.885144533333335,
+            "queue_mean_ms": 23.108086099497978,
+            "queue_p95_ms": 41.0,
+            "queue_p99_ms": 44.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.652,
+            "control_p95_ms": 21.7,
+            "control_p99_ms": 21.74602
+          },
+          {
+            "condition": "G24-R100",
+            "utilization": 0.9903993625450962,
+            "departure_mbps": 23.761074133333334,
+            "queue_mean_ms": 12.57960289265613,
+            "queue_p95_ms": 20.0,
+            "queue_p99_ms": 27.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.602,
+            "control_p95_ms": 21.66025,
+            "control_p99_ms": 21.81665
+          },
+          {
+            "condition": "G36-R100",
+            "utilization": 0.9759476492417775,
+            "departure_mbps": 35.1332784,
+            "queue_mean_ms": 26.55000427752588,
+            "queue_p95_ms": 36.0,
+            "queue_p99_ms": 464.0,
+            "drop_fraction": 0.004631232441329209,
+            "control_p50_ms": 21.598,
+            "control_p95_ms": 21.646,
+            "control_p99_ms": 21.7664
+          },
+          {
+            "condition": "G36-R200",
+            "utilization": 0.9641859023841635,
+            "departure_mbps": 34.7098656,
+            "queue_mean_ms": 44.21290560514473,
+            "queue_p95_ms": 434.0,
+            "queue_p99_ms": 525.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.687,
+            "control_p95_ms": 21.739,
+            "control_p99_ms": 21.79144
+          },
+          {
+            "condition": "G36-R20",
+            "utilization": 0.9784594275964381,
+            "departure_mbps": 35.22370026666667,
+            "queue_mean_ms": 5.007867471251281,
+            "queue_p95_ms": 11.0,
+            "queue_p99_ms": 13.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.597,
+            "control_p95_ms": 21.636,
+            "control_p99_ms": 21.66
+          },
+          {
+            "condition": "G36-R50",
+            "utilization": 0.9951488473977277,
+            "departure_mbps": 35.82450506666667,
+            "queue_mean_ms": 24.256077287763702,
+            "queue_p95_ms": 42.0,
+            "queue_p99_ms": 45.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.598,
+            "control_p95_ms": 21.651,
+            "control_p99_ms": 21.7482
+          },
+          {
+            "condition": "G42-R50",
+            "utilization": 0.9947902589535129,
+            "departure_mbps": 41.772116266666664,
+            "queue_mean_ms": 24.277853251086096,
+            "queue_p95_ms": 42.0,
+            "queue_p99_ms": 45.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.607,
+            "control_p95_ms": 21.66,
+            "control_p99_ms": 21.74776
+          },
+          {
+            "condition": "G42-R100",
+            "utilization": 0.9718650638736824,
+            "departure_mbps": 40.8094672,
+            "queue_mean_ms": 25.62235554617269,
+            "queue_p95_ms": 34.0,
+            "queue_p99_ms": 460.0,
+            "drop_fraction": 0.0013874181276228577,
+            "control_p50_ms": 21.604,
+            "control_p95_ms": 21.654,
+            "control_p99_ms": 21.702379999999998
+          },
+          {
+            "condition": "G42-R200",
+            "utilization": 0.9447278936621358,
+            "departure_mbps": 39.6699536,
+            "queue_mean_ms": 38.50203476498086,
+            "queue_p95_ms": 351.0,
+            "queue_p99_ms": 421.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.686500000000002,
+            "control_p95_ms": 21.736,
+            "control_p99_ms": 21.79135
+          },
+          {
+            "condition": "G42-R20",
+            "utilization": 0.9956689767895747,
+            "departure_mbps": 41.809014399999995,
+            "queue_mean_ms": 5.942196365450194,
+            "queue_p95_ms": 9.0,
+            "queue_p99_ms": 10.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.632,
+            "control_p95_ms": 21.677,
+            "control_p99_ms": 21.70336
+          },
+          {
+            "condition": "G48-R20",
+            "utilization": 0.9981118639228106,
+            "departure_mbps": 47.90422506666667,
+            "queue_mean_ms": 6.622682026338041,
+            "queue_p95_ms": 9.0,
+            "queue_p99_ms": 10.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.594,
+            "control_p95_ms": 21.6406,
+            "control_p99_ms": 21.686
+          },
+          {
+            "condition": "G48-R50",
+            "utilization": 0.9946021537245955,
+            "departure_mbps": 47.73577706666667,
+            "queue_mean_ms": 24.22290740756299,
+            "queue_p95_ms": 42.0,
+            "queue_p99_ms": 44.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.609,
+            "control_p95_ms": 21.666,
+            "control_p99_ms": 21.80052
+          },
+          {
+            "condition": "G48-R100",
+            "utilization": 0.9836586119647336,
+            "departure_mbps": 47.21054346666667,
+            "queue_mean_ms": 39.69978981982135,
+            "queue_p95_ms": 377.0,
+            "queue_p99_ms": 443.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.603,
+            "control_p95_ms": 21.6523,
+            "control_p99_ms": 21.79454
+          },
+          {
+            "condition": "G48-R200",
+            "utilization": 0.976270029706301,
+            "departure_mbps": 46.8559296,
+            "queue_mean_ms": 317.09082947167593,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.623,
+            "control_p95_ms": 21.667,
+            "control_p99_ms": 21.711399999999998
+          },
+          {
+            "condition": "G72-R200",
+            "utilization": 0.9745506085537564,
+            "departure_mbps": 70.16597226666667,
+            "queue_mean_ms": 146.14115821703572,
+            "queue_p95_ms": 162.0,
+            "queue_p99_ms": 163.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.646,
+            "control_p95_ms": 21.689,
+            "control_p99_ms": 21.721420000000002
+          },
+          {
+            "condition": "G72-R20",
+            "utilization": 0.9939284331395628,
+            "departure_mbps": 71.56114240000001,
+            "queue_mean_ms": 5.83678656294835,
+            "queue_p95_ms": 9.0,
+            "queue_p99_ms": 10.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.596,
+            "control_p95_ms": 21.642,
+            "control_p99_ms": 21.679
+          },
+          {
+            "condition": "G72-R50",
+            "utilization": 0.8626456982856717,
+            "departure_mbps": 62.10901066666666,
+            "queue_mean_ms": 14.104113259936073,
+            "queue_p95_ms": 31.0,
+            "queue_p99_ms": 37.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.618,
+            "control_p95_ms": 21.688,
+            "control_p99_ms": 22.71492
+          },
+          {
+            "condition": "G72-R100",
+            "utilization": 0.9823449646030086,
+            "departure_mbps": 70.72715253333332,
+            "queue_mean_ms": 28.942484710301947,
+            "queue_p95_ms": 225.0,
+            "queue_p99_ms": 261.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.631,
+            "control_p95_ms": 21.679,
+            "control_p99_ms": 21.720119999999998
+          }
+        ],
+        "runs": 24,
+        "conditions": 24,
+        "repeats": 1
+      },
+      "trim10": {
+        "condition_equal": {
+          "utilization": 0.9790472182683205,
+          "departure_mbps": 38.426870453333336,
+          "queue_mean_ms": 32.24766078671295,
+          "queue_p95_ms": 43.541666666666664,
+          "queue_p99_ms": 46.791666666666664,
+          "drop_fraction": 0.0,
+          "control_p50_ms": 21.618208333333335,
+          "control_p95_ms": 21.66709375,
+          "control_p99_ms": 28.374522499999994
+        },
+        "per_condition": [
+          {
+            "condition": "G12-R20",
+            "utilization": 0.8889682878422501,
+            "departure_mbps": 10.66397824,
+            "queue_mean_ms": 2.3305277884333324,
+            "queue_p95_ms": 5.0,
+            "queue_p99_ms": 6.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.591,
+            "control_p95_ms": 21.631,
+            "control_p99_ms": 21.663870000000003
+          },
+          {
+            "condition": "G12-R50",
+            "utilization": 0.9868820290659212,
+            "departure_mbps": 11.83854208,
+            "queue_mean_ms": 19.22734664010732,
+            "queue_p95_ms": 36.0,
+            "queue_p99_ms": 40.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.649,
+            "control_p95_ms": 21.695,
+            "control_p99_ms": 21.733930000000004
+          },
+          {
+            "condition": "G12-R100",
+            "utilization": 0.9997613585437163,
+            "departure_mbps": 11.99304128,
+            "queue_mean_ms": 13.923938123231878,
+            "queue_p95_ms": 22.0,
+            "queue_p99_ms": 26.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.623,
+            "control_p95_ms": 21.688,
+            "control_p99_ms": 22.6384499999999
+          },
+          {
+            "condition": "G12-R200",
+            "utilization": 0.809509912716874,
+            "departure_mbps": 9.710803199999999,
+            "queue_mean_ms": 12.724972742590941,
+            "queue_p95_ms": 24.0,
+            "queue_p99_ms": 26.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.596,
+            "control_p95_ms": 21.65775,
+            "control_p99_ms": 180.20674999999997
+          },
+          {
+            "condition": "G24-R200",
+            "utilization": 0.9999906634798011,
+            "departure_mbps": 23.991584,
+            "queue_mean_ms": 24.044944383707286,
+            "queue_p95_ms": 34.0,
+            "queue_p99_ms": 36.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.6,
+            "control_p95_ms": 21.646,
+            "control_p99_ms": 21.69532
+          },
+          {
+            "condition": "G24-R20",
+            "utilization": 0.9861691990866216,
+            "departure_mbps": 23.65998208,
+            "queue_mean_ms": 5.357474853289668,
+            "queue_p95_ms": 11.0,
+            "queue_p99_ms": 13.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.593,
+            "control_p95_ms": 21.633,
+            "control_p99_ms": 21.65387
+          },
+          {
+            "condition": "G24-R50",
+            "utilization": 0.9999104227576346,
+            "departure_mbps": 23.98965888,
+            "queue_mean_ms": 23.154885498480336,
+            "queue_p95_ms": 41.0,
+            "queue_p99_ms": 44.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.653,
+            "control_p95_ms": 21.701,
+            "control_p99_ms": 21.739939999999997
+          },
+          {
+            "condition": "G24-R100",
+            "utilization": 0.9998602723062805,
+            "departure_mbps": 23.98845568,
+            "queue_mean_ms": 11.891391140357916,
+            "queue_p95_ms": 19.0,
+            "queue_p99_ms": 23.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.601,
+            "control_p95_ms": 21.65645,
+            "control_p99_ms": 21.82056
+          },
+          {
+            "condition": "G36-R100",
+            "utilization": 0.9858162013596541,
+            "departure_mbps": 35.489130880000005,
+            "queue_mean_ms": 14.13135251320509,
+            "queue_p95_ms": 28.0,
+            "queue_p99_ms": 35.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.598,
+            "control_p95_ms": 21.6464,
+            "control_p99_ms": 21.787280000000003
+          },
+          {
+            "condition": "G36-R200",
+            "utilization": 0.9924737242575947,
+            "departure_mbps": 35.7288,
+            "queue_mean_ms": 13.157318354481532,
+            "queue_p95_ms": 23.0,
+            "queue_p99_ms": 26.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.688,
+            "control_p95_ms": 21.739,
+            "control_p99_ms": 21.768
+          },
+          {
+            "condition": "G36-R20",
+            "utilization": 0.979866772385937,
+            "departure_mbps": 35.27495296,
+            "queue_mean_ms": 4.943775155194761,
+            "queue_p95_ms": 11.0,
+            "queue_p99_ms": 13.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.597,
+            "control_p95_ms": 21.637,
+            "control_p99_ms": 21.66
+          },
+          {
+            "condition": "G36-R50",
+            "utilization": 1.0000006933382637,
+            "departure_mbps": 35.999768960000004,
+            "queue_mean_ms": 24.407371509929614,
+            "queue_p95_ms": 42.0,
+            "queue_p99_ms": 45.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.598,
+            "control_p95_ms": 21.647,
+            "control_p99_ms": 21.750400000000003
+          },
+          {
+            "condition": "G42-R50",
+            "utilization": 1.0000003962689752,
+            "departure_mbps": 41.99169664,
+            "queue_mean_ms": 24.532979564704128,
+            "queue_p95_ms": 42.0,
+            "queue_p99_ms": 45.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.607,
+            "control_p95_ms": 21.66,
+            "control_p99_ms": 21.741
+          },
+          {
+            "condition": "G42-R100",
+            "utilization": 0.9839719411083339,
+            "departure_mbps": 41.318634880000005,
+            "queue_mean_ms": 13.4419531058903,
+            "queue_p95_ms": 26.0,
+            "queue_p99_ms": 34.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.604,
+            "control_p95_ms": 21.653,
+            "control_p99_ms": 21.69456
+          },
+          {
+            "condition": "G42-R200",
+            "utilization": 0.9702756660367006,
+            "departure_mbps": 40.74350528,
+            "queue_mean_ms": 13.332520257979164,
+            "queue_p95_ms": 25.0,
+            "queue_p99_ms": 28.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.687,
+            "control_p95_ms": 21.737,
+            "control_p99_ms": 21.8037
+          },
+          {
+            "condition": "G42-R20",
+            "utilization": 0.9978284764982015,
+            "departure_mbps": 41.90049408,
+            "queue_mean_ms": 5.900403737587797,
+            "queue_p95_ms": 9.0,
+            "queue_p99_ms": 10.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.634,
+            "control_p95_ms": 21.678,
+            "control_p99_ms": 21.70392
+          },
+          {
+            "condition": "G48-R20",
+            "utilization": 0.9999502088189329,
+            "departure_mbps": 47.99325824,
+            "queue_mean_ms": 6.587303576979774,
+            "queue_p95_ms": 9.0,
+            "queue_p99_ms": 10.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.595,
+            "control_p95_ms": 21.640349999999998,
+            "control_p99_ms": 21.68061
+          },
+          {
+            "condition": "G48-R50",
+            "utilization": 1.0000003466981007,
+            "departure_mbps": 47.99566464,
+            "queue_mean_ms": 24.634909652447707,
+            "queue_p95_ms": 42.0,
+            "queue_p99_ms": 44.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.609,
+            "control_p95_ms": 21.664,
+            "control_p99_ms": 21.747
+          },
+          {
+            "condition": "G48-R100",
+            "utilization": 0.9983710389742003,
+            "departure_mbps": 47.917464960000004,
+            "queue_mean_ms": 14.193995821782973,
+            "queue_p95_ms": 25.0,
+            "queue_p99_ms": 32.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.603,
+            "control_p95_ms": 21.65,
+            "control_p99_ms": 21.811760000000003
+          },
+          {
+            "condition": "G48-R200",
+            "utilization": 1.000000560050778,
+            "departure_mbps": 47.99567488,
+            "queue_mean_ms": 320.13614804185465,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.622,
+            "control_p95_ms": 21.664,
+            "control_p99_ms": 21.70682
+          },
+          {
+            "condition": "G72-R200",
+            "utilization": 1.0000007466719762,
+            "departure_mbps": 71.99954176,
+            "queue_mean_ms": 147.05731578676546,
+            "queue_p95_ms": 162.0,
+            "queue_p99_ms": 163.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.646,
+            "control_p95_ms": 21.687,
+            "control_p99_ms": 21.707919999999998
+          },
+          {
+            "condition": "G72-R20",
+            "utilization": 0.997844482449653,
+            "departure_mbps": 71.84429184,
+            "queue_mean_ms": 5.860130561333347,
+            "queue_p95_ms": 9.0,
+            "queue_p99_ms": 10.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.596,
+            "control_p95_ms": 21.642,
+            "control_p99_ms": 21.67674
+          },
+          {
+            "condition": "G72-R50",
+            "utilization": 0.9243552931931961,
+            "departure_mbps": 66.55310784000001,
+            "queue_mean_ms": 14.804884839281195,
+            "queue_p95_ms": 32.0,
+            "queue_p99_ms": 37.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.616,
+            "control_p95_ms": 21.67755,
+            "control_p99_ms": 21.876189999999998
+          },
+          {
+            "condition": "G72-R100",
+            "utilization": 0.9953245445300944,
+            "departure_mbps": 71.6628576,
+            "queue_mean_ms": 14.16601523149454,
+            "queue_p95_ms": 24.0,
+            "queue_p99_ms": 32.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.631,
+            "control_p95_ms": 21.67975,
+            "control_p99_ms": 21.71995
+          }
+        ],
+        "runs": 24,
+        "conditions": 24,
+        "repeats": 1
+      },
+      "registered_coarse_pass": true,
+      "scope": "One training seed; coarse recipe-reproduction criterion, not all-scenario health, paper reproduction or dual-action/CPU advantage."
+    },
+    "stopped": {
+      "full": {
+        "condition_equal": {
+          "utilization": 0.44826010054858234,
+          "departure_mbps": 18.577315088888888,
+          "queue_mean_ms": 196.438453031512,
+          "queue_p95_ms": 260.22083333333336,
+          "queue_p99_ms": 284.70750000000004,
+          "drop_fraction": 0.02530285726229024,
+          "control_p50_ms": 24.944583333333334,
+          "control_p95_ms": 28.142970833333333,
+          "control_p99_ms": 34.771930416666684
+        },
+        "per_condition": [
+          {
+            "condition": "G12-R20",
+            "utilization": 0.24663150504020462,
+            "departure_mbps": 2.9585184,
+            "queue_mean_ms": 2.3671700413083228,
+            "queue_p95_ms": 2.0,
+            "queue_p99_ms": 36.0,
+            "drop_fraction": 0.003508535186559611,
+            "control_p50_ms": 21.573,
+            "control_p95_ms": 21.616,
+            "control_p99_ms": 21.644869999999997
+          },
+          {
+            "condition": "G12-R50",
+            "utilization": 0.08213402985531175,
+            "departure_mbps": 0.9852554666666666,
+            "queue_mean_ms": 9.158375634517766,
+            "queue_p95_ms": 66.80000000000018,
+            "queue_p99_ms": 172.76000000000022,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 25.709,
+            "control_p95_ms": 31.8716,
+            "control_p99_ms": 33.895520000000005
+          },
+          {
+            "condition": "G12-R100",
+            "utilization": 0.24506329910833852,
+            "departure_mbps": 2.9397066666666665,
+            "queue_mean_ms": 354.96661034133155,
+            "queue_p95_ms": 502.0,
+            "queue_p99_ms": 503.0,
+            "drop_fraction": 0.2729015136622764,
+            "control_p50_ms": 48.387,
+            "control_p95_ms": 68.902,
+            "control_p99_ms": 71.05935000000001
+          },
+          {
+            "condition": "G12-R200",
+            "utilization": 0.948510008739129,
+            "departure_mbps": 11.378044800000001,
+            "queue_mean_ms": 745.4849378373252,
+            "queue_p95_ms": 995.0,
+            "queue_p99_ms": 1003.0,
+            "drop_fraction": 0.19559521182700795,
+            "control_p50_ms": 21.616,
+            "control_p95_ms": 21.6784,
+            "control_p99_ms": 31.91384000000007
+          },
+          {
+            "condition": "G24-R200",
+            "utilization": 0.9798626121423741,
+            "departure_mbps": 23.508282666666666,
+            "queue_mean_ms": 814.6636457227163,
+            "queue_p95_ms": 891.0,
+            "queue_p99_ms": 891.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.624,
+            "control_p95_ms": 21.68,
+            "control_p99_ms": 21.7524
+          },
+          {
+            "condition": "G24-R20",
+            "utilization": 0.11774771447056777,
+            "departure_mbps": 2.8249333333333335,
+            "queue_mean_ms": 1.80038306022558,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 38.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.573,
+            "control_p95_ms": 21.609,
+            "control_p99_ms": 21.63329
+          },
+          {
+            "condition": "G24-R50",
+            "utilization": 0.044937645229776495,
+            "departure_mbps": 1.0781173333333331,
+            "queue_mean_ms": 12.246382189239332,
+            "queue_p95_ms": 110.0,
+            "queue_p99_ms": 170.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 25.684,
+            "control_p95_ms": 31.8538,
+            "control_p99_ms": 31.978759999999998
+          },
+          {
+            "condition": "G24-R100",
+            "utilization": 0.030806452301321754,
+            "departure_mbps": 0.7390901333333333,
+            "queue_mean_ms": 42.20814235643031,
+            "queue_p95_ms": 227.0,
+            "queue_p99_ms": 275.9200000000001,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 50.437,
+            "control_p95_ms": 68.8899,
+            "control_p99_ms": 70.96112
+          },
+          {
+            "condition": "G36-R100",
+            "utilization": 0.9189868700872162,
+            "departure_mbps": 33.0827392,
+            "queue_mean_ms": 352.2182872569694,
+            "queue_p95_ms": 475.0,
+            "queue_p99_ms": 485.0,
+            "drop_fraction": 0.10168964606034228,
+            "control_p50_ms": 21.64,
+            "control_p95_ms": 21.705,
+            "control_p99_ms": 97.7424
+          },
+          {
+            "condition": "G36-R200",
+            "utilization": 0.9778028045468106,
+            "departure_mbps": 35.2000624,
+            "queue_mean_ms": 484.0547665465001,
+            "queue_p95_ms": 526.0,
+            "queue_p99_ms": 527.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.623,
+            "control_p95_ms": 21.673,
+            "control_p99_ms": 21.712
+          },
+          {
+            "condition": "G36-R20",
+            "utilization": 0.0798370130061765,
+            "departure_mbps": 2.874064,
+            "queue_mean_ms": 1.5286570910612187,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 26.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.573,
+            "control_p95_ms": 21.61,
+            "control_p99_ms": 21.62928
+          },
+          {
+            "condition": "G36-R50",
+            "utilization": 0.03037816071233223,
+            "departure_mbps": 1.0935877333333335,
+            "queue_mean_ms": 5.595869128130141,
+            "queue_p95_ms": 46.5,
+            "queue_p99_ms": 94.30000000000018,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 25.677,
+            "control_p95_ms": 31.852000000000004,
+            "control_p99_ms": 31.89884
+          },
+          {
+            "condition": "G42-R50",
+            "utilization": 0.029105546936822952,
+            "departure_mbps": 1.2221674666666666,
+            "queue_mean_ms": 19.616642144842242,
+            "queue_p95_ms": 146.0,
+            "queue_p99_ms": 192.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 25.692,
+            "control_p95_ms": 31.859,
+            "control_p99_ms": 31.99534
+          },
+          {
+            "condition": "G42-R100",
+            "utilization": 0.9110869743696459,
+            "departure_mbps": 38.257341866666664,
+            "queue_mean_ms": 332.03612205718906,
+            "queue_p95_ms": 480.0,
+            "queue_p99_ms": 487.0,
+            "drop_fraction": 0.03357366755877951,
+            "control_p50_ms": 21.647,
+            "control_p95_ms": 21.7162,
+            "control_p99_ms": 87.1111600000003
+          },
+          {
+            "condition": "G42-R200",
+            "utilization": 0.9768999478947148,
+            "departure_mbps": 41.0208864,
+            "queue_mean_ms": 389.11329339286726,
+            "queue_p95_ms": 422.0,
+            "queue_p99_ms": 423.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.623,
+            "control_p95_ms": 21.669,
+            "control_p99_ms": 21.7564
+          },
+          {
+            "condition": "G42-R20",
+            "utilization": 0.06772400446187067,
+            "departure_mbps": 2.8437904,
+            "queue_mean_ms": 1.4070603156708004,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 20.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.572,
+            "control_p95_ms": 21.613,
+            "control_p99_ms": 21.636
+          },
+          {
+            "condition": "G48-R20",
+            "utilization": 0.061153099817295935,
+            "departure_mbps": 2.9350336,
+            "queue_mean_ms": 2.4880862975353315,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 63.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.564,
+            "control_p95_ms": 21.604,
+            "control_p99_ms": 21.66312
+          },
+          {
+            "condition": "G48-R50",
+            "utilization": 0.024548580416457164,
+            "departure_mbps": 1.1782053333333333,
+            "queue_mean_ms": 11.486082824168363,
+            "queue_p95_ms": 91.0,
+            "queue_p99_ms": 130.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 25.69,
+            "control_p95_ms": 31.8594,
+            "control_p99_ms": 31.974040000000002
+          },
+          {
+            "condition": "G48-R100",
+            "utilization": 0.9892655473583297,
+            "departure_mbps": 47.47964746666667,
+            "queue_mean_ms": 416.2040798092894,
+            "queue_p95_ms": 444.0,
+            "queue_p99_ms": 445.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.624,
+            "control_p95_ms": 21.672,
+            "control_p99_ms": 21.74857
+          },
+          {
+            "condition": "G48-R200",
+            "utilization": 0.9762574950270215,
+            "departure_mbps": 46.855328,
+            "queue_mean_ms": 317.1865115418611,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.623,
+            "control_p95_ms": 21.671,
+            "control_p99_ms": 21.703400000000002
+          },
+          {
+            "condition": "G72-R200",
+            "utilization": 0.9747364796482856,
+            "departure_mbps": 70.17935466666667,
+            "queue_mean_ms": 146.0871482651231,
+            "queue_p95_ms": 162.0,
+            "queue_p99_ms": 163.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.641,
+            "control_p95_ms": 21.686,
+            "control_p99_ms": 21.722
+          },
+          {
+            "condition": "G72-R20",
+            "utilization": 0.03979038493242921,
+            "departure_mbps": 2.864839466666667,
+            "queue_mean_ms": 1.1226916620033576,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 6.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.563,
+            "control_p95_ms": 21.61,
+            "control_p99_ms": 21.723
+          },
+          {
+            "condition": "G72-R50",
+            "utilization": 0.016567372449405905,
+            "departure_mbps": 1.1928223999999998,
+            "queue_mean_ms": 6.073633009057363,
+            "queue_p95_ms": 48.0,
+            "queue_p99_ms": 74.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 25.691,
+            "control_p95_ms": 31.86,
+            "control_p99_ms": 31.959629999999997
+          },
+          {
+            "condition": "G72-R100",
+            "utilization": 0.9884088646141378,
+            "departure_mbps": 71.16374293333334,
+            "queue_mean_ms": 245.40829423092572,
+            "queue_p95_ms": 262.0,
+            "queue_p99_ms": 263.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.624,
+            "control_p95_ms": 21.671,
+            "control_p99_ms": 21.712
+          }
+        ],
+        "runs": 24,
+        "conditions": 24,
+        "repeats": 1
+      },
+      "trim10": {
+        "condition_equal": {
+          "utilization": 0.4466365977709505,
+          "departure_mbps": 18.7239964,
+          "queue_mean_ms": 190.57119558937822,
+          "queue_p95_ms": 229.95833333333334,
+          "queue_p99_ms": 230.83333333333334,
+          "drop_fraction": 0.019740504140047622,
+          "control_p50_ms": 25.114104166666667,
+          "control_p95_ms": 28.141895833333333,
+          "control_p99_ms": 34.955976666666686
+        },
+        "per_condition": [
+          {
+            "condition": "G12-R20",
+            "utilization": 0.24317089566572056,
+            "departure_mbps": 2.9170547200000003,
+            "queue_mean_ms": 1.4921643022104916,
+            "queue_p95_ms": 2.0,
+            "queue_p99_ms": 2.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.573,
+            "control_p95_ms": 21.615,
+            "control_p99_ms": 21.64886
+          },
+          {
+            "condition": "G12-R50",
+            "utilization": 0.07506658272690411,
+            "departure_mbps": 0.90049152,
+            "queue_mean_ms": 1.4943910256410255,
+            "queue_p95_ms": 2.0,
+            "queue_p99_ms": 2.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 27.7175,
+            "control_p95_ms": 31.86955,
+            "control_p99_ms": 31.946999999999996
+          },
+          {
+            "condition": "G12-R100",
+            "utilization": 0.10610715124095692,
+            "departure_mbps": 1.2728511999999998,
+            "queue_mean_ms": 261.22184493491795,
+            "queue_p95_ms": 502.0,
+            "queue_p99_ms": 503.0,
+            "drop_fraction": 0.1448481831757093,
+            "control_p50_ms": 50.403,
+            "control_p95_ms": 68.9048,
+            "control_p99_ms": 70.99486999999999
+          },
+          {
+            "condition": "G12-R200",
+            "utilization": 0.9593198745171685,
+            "departure_mbps": 11.507909119999999,
+            "queue_mean_ms": 762.0321847552361,
+            "queue_p95_ms": 996.0,
+            "queue_p99_ms": 1003.0,
+            "drop_fraction": 0.1933615207910244,
+            "control_p50_ms": 21.615,
+            "control_p95_ms": 21.677,
+            "control_p99_ms": 39.53936000000005
+          },
+          {
+            "condition": "G24-R200",
+            "utilization": 1.00000080027316,
+            "departure_mbps": 23.9918272,
+            "queue_mean_ms": 829.5572996487488,
+            "queue_p95_ms": 891.0,
+            "queue_p99_ms": 891.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.624,
+            "control_p95_ms": 21.673,
+            "control_p99_ms": 21.7494
+          },
+          {
+            "condition": "G24-R20",
+            "utilization": 0.11496558825412408,
+            "departure_mbps": 2.75823232,
+            "queue_mean_ms": 1.0028785764131194,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 1.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.573,
+            "control_p95_ms": 21.609,
+            "control_p99_ms": 21.634
+          },
+          {
+            "condition": "G24-R50",
+            "utilization": 0.03821533750186731,
+            "departure_mbps": 0.9168550400000001,
+            "queue_mean_ms": 1.0031479538300105,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 1.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 25.687,
+            "control_p95_ms": 31.853,
+            "control_p99_ms": 31.92173
+          },
+          {
+            "condition": "G24-R100",
+            "utilization": 0.019539309417614545,
+            "departure_mbps": 0.46878336,
+            "queue_mean_ms": 1.003076923076923,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 1.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 50.46,
+            "control_p95_ms": 68.9,
+            "control_p99_ms": 70.95128
+          },
+          {
+            "condition": "G36-R100",
+            "utilization": 0.9248530478438958,
+            "departure_mbps": 33.29447296,
+            "queue_mean_ms": 355.10015380689305,
+            "queue_p95_ms": 475.0,
+            "queue_p99_ms": 476.0,
+            "drop_fraction": 0.10212943061957237,
+            "control_p50_ms": 21.638,
+            "control_p95_ms": 21.706049999999998,
+            "control_p99_ms": 97.78793999999999
+          },
+          {
+            "condition": "G36-R200",
+            "utilization": 1.0000033955797019,
+            "departure_mbps": 35.99986624,
+            "queue_mean_ms": 490.3100330732592,
+            "queue_p95_ms": 526.0,
+            "queue_p99_ms": 527.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.622,
+            "control_p95_ms": 21.669,
+            "control_p99_ms": 21.71155
+          },
+          {
+            "condition": "G36-R20",
+            "utilization": 0.07721971356240756,
+            "departure_mbps": 2.77988992,
+            "queue_mean_ms": 1.0,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 1.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.573,
+            "control_p95_ms": 21.609,
+            "control_p99_ms": 21.62885
+          },
+          {
+            "condition": "G36-R50",
+            "utilization": 0.025468607776766412,
+            "departure_mbps": 0.91686336,
+            "queue_mean_ms": 1.0,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 1.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 25.686,
+            "control_p95_ms": 31.854,
+            "control_p99_ms": 31.899
+          },
+          {
+            "condition": "G42-R50",
+            "utilization": 0.021834207157227337,
+            "departure_mbps": 0.9168550400000001,
+            "queue_mean_ms": 1.0,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 1.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 25.7,
+            "control_p95_ms": 31.858850000000004,
+            "control_p99_ms": 31.939790000000002
+          },
+          {
+            "condition": "G42-R100",
+            "utilization": 0.919735231360117,
+            "departure_mbps": 38.621227520000005,
+            "queue_mean_ms": 333.7701265336503,
+            "queue_p95_ms": 480.0,
+            "queue_p99_ms": 486.0,
+            "drop_fraction": 0.033432964774836836,
+            "control_p50_ms": 21.647,
+            "control_p95_ms": 21.714,
+            "control_p99_ms": 86.04400000000038
+          },
+          {
+            "condition": "G42-R200",
+            "utilization": 1.0000031091873438,
+            "departure_mbps": 41.991810560000005,
+            "queue_mean_ms": 393.3033724615436,
+            "queue_p95_ms": 422.0,
+            "queue_p99_ms": 423.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.623,
+            "control_p95_ms": 21.667,
+            "control_p99_ms": 21.777700000000003
+          },
+          {
+            "condition": "G42-R20",
+            "utilization": 0.06571979211119917,
+            "departure_mbps": 2.7596844799999998,
+            "queue_mean_ms": 1.0,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 1.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.572,
+            "control_p95_ms": 21.613,
+            "control_p99_ms": 21.635399999999997
+          },
+          {
+            "condition": "G48-R20",
+            "utilization": 0.05790959713680707,
+            "departure_mbps": 2.77940864,
+            "queue_mean_ms": 1.0,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 1.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.564,
+            "control_p95_ms": 21.601,
+            "control_p99_ms": 21.66536
+          },
+          {
+            "condition": "G48-R50",
+            "utilization": 0.019113079585882452,
+            "departure_mbps": 0.91734464,
+            "queue_mean_ms": 1.0,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 1.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 25.693,
+            "control_p95_ms": 31.859,
+            "control_p99_ms": 31.95876
+          },
+          {
+            "condition": "G48-R100",
+            "utilization": 1.0000030269411093,
+            "departure_mbps": 47.99579328,
+            "queue_mean_ms": 420.19785493336417,
+            "queue_p95_ms": 444.0,
+            "queue_p99_ms": 445.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.623,
+            "control_p95_ms": 21.667,
+            "control_p99_ms": 21.72291
+          },
+          {
+            "condition": "G48-R200",
+            "utilization": 1.0000027202466357,
+            "departure_mbps": 47.995778560000005,
+            "queue_mean_ms": 320.20518029945595,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.623,
+            "control_p95_ms": 21.667,
+            "control_p99_ms": 21.701500000000003
+          },
+          {
+            "condition": "G72-R200",
+            "utilization": 1.0000014400102402,
+            "departure_mbps": 71.99959168000001,
+            "queue_mean_ms": 147.01041844247663,
+            "queue_p95_ms": 162.0,
+            "queue_p99_ms": 163.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.641,
+            "control_p95_ms": 21.683,
+            "control_p99_ms": 21.70984
+          },
+          {
+            "condition": "G72-R20",
+            "utilization": 0.03828231667425191,
+            "departure_mbps": 2.7563072,
+            "queue_mean_ms": 1.0,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 1.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.563,
+            "control_p95_ms": 21.60925,
+            "control_p99_ms": 21.71685
+          },
+          {
+            "condition": "G72-R50",
+            "utilization": 0.012740872823984527,
+            "departure_mbps": 0.91733632,
+            "queue_mean_ms": 1.0,
+            "queue_p95_ms": 1.0,
+            "queue_p99_ms": 1.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 25.694,
+            "control_p95_ms": 31.86,
+            "control_p99_ms": 31.945490000000003
+          },
+          {
+            "condition": "G72-R100",
+            "utilization": 1.0000026489077256,
+            "departure_mbps": 71.99967872,
+            "queue_mean_ms": 247.00456647436022,
+            "queue_p95_ms": 262.0,
+            "queue_p99_ms": 263.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.624,
+            "control_p95_ms": 21.667,
+            "control_p99_ms": 21.712
+          }
+        ],
+        "runs": 24,
+        "conditions": 24,
+        "repeats": 1
+      },
+      "registered_coarse_pass": false,
+      "scope": "One training seed; coarse recipe-reproduction criterion, not all-scenario health, paper reproduction or dual-action/CPU advantage."
+    }
+  },
+  "same_day_comparison": {
+    "stopped": {
+      "utilization_difference_pp": -53.241062049736996,
+      "queue_difference_ms": 158.32353480266528,
+      "reference": "Same-day same-host archived-model runs,1repeat; candidate repeats differ as registered."
+    }
+  },
+  "ledger": [
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h1-G72-R50-verified",
+      "condition": "G72-R50",
+      "tag": "verified",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.622440216000086,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h1-G72-R50-legacy",
+      "condition": "G72-R50",
+      "tag": "legacy",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.608352920000016,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h1-G12-R200-legacy",
+      "condition": "G12-R200",
+      "tag": "legacy",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.934578676,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h1-G12-R200-verified",
+      "condition": "G12-R200",
+      "tag": "verified",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.832956024000055,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h2-G12-R200-verified",
+      "condition": "G12-R200",
+      "tag": "verified",
+      "host_index": 2,
+      "repeat": 1,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.893413882999994,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h2-G12-R200-legacy",
+      "condition": "G12-R200",
+      "tag": "legacy",
+      "host_index": 2,
+      "repeat": 1,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.992562679,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h2-G72-R50-legacy",
+      "condition": "G72-R50",
+      "tag": "legacy",
+      "host_index": 2,
+      "repeat": 1,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.68945310799995,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h2-G72-R50-verified",
+      "condition": "G72-R50",
+      "tag": "verified",
+      "host_index": 2,
+      "repeat": 1,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.57781317699994,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h3-G12-R200-verified",
+      "condition": "G12-R200",
+      "tag": "verified",
+      "host_index": 3,
+      "repeat": 2,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.13161070600006,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h3-G12-R200-legacy",
+      "condition": "G12-R200",
+      "tag": "legacy",
+      "host_index": 3,
+      "repeat": 2,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.00231273299994,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h3-G72-R50-legacy",
+      "condition": "G72-R50",
+      "tag": "legacy",
+      "host_index": 3,
+      "repeat": 2,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.51359565400003,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h3-G72-R50-verified",
+      "condition": "G72-R50",
+      "tag": "verified",
+      "host_index": 3,
+      "repeat": 2,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.60649692200002,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h4-G12-R200-legacy",
+      "condition": "G12-R200",
+      "tag": "legacy",
+      "host_index": 4,
+      "repeat": 3,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.931394617000024,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h4-G12-R200-verified",
+      "condition": "G12-R200",
+      "tag": "verified",
+      "host_index": 4,
+      "repeat": 3,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.80305502400006,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h4-G72-R50-legacy",
+      "condition": "G72-R50",
+      "tag": "legacy",
+      "host_index": 4,
+      "repeat": 3,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.60686298799999,
+      "reason": ""
+    },
+    {
+      "phase": "ipc",
+      "run_id": "ipc-short-h4-G72-R50-verified",
+      "condition": "G72-R50",
+      "tag": "verified",
+      "host_index": 4,
+      "repeat": 3,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.494868411000084,
+      "reason": ""
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-00-stopped-r0",
+      "condition": "G12-R20",
+      "tag": "stopped",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-00-archived-r0",
+      "condition": "G12-R20",
+      "tag": "archived",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-01-archived-r0",
+      "condition": "G12-R50",
+      "tag": "archived",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-01-stopped-r0",
+      "condition": "G12-R50",
+      "tag": "stopped",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-02-stopped-r0",
+      "condition": "G12-R100",
+      "tag": "stopped",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-02-archived-r0",
+      "condition": "G12-R100",
+      "tag": "archived",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-03-stopped-r0",
+      "condition": "G12-R200",
+      "tag": "stopped",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-03-archived-r0",
+      "condition": "G12-R200",
+      "tag": "archived",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-04-stopped-r0",
+      "condition": "G24-R200",
+      "tag": "stopped",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-04-archived-r0",
+      "condition": "G24-R200",
+      "tag": "archived",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-05-stopped-r0",
+      "condition": "G24-R20",
+      "tag": "stopped",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-05-archived-r0",
+      "condition": "G24-R20",
+      "tag": "archived",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-06-archived-r0",
+      "condition": "G24-R50",
+      "tag": "archived",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-06-stopped-r0",
+      "condition": "G24-R50",
+      "tag": "stopped",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-07-archived-r0",
+      "condition": "G24-R100",
+      "tag": "archived",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-07-stopped-r0",
+      "condition": "G24-R100",
+      "tag": "stopped",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-08-archived-r0",
+      "condition": "G36-R100",
+      "tag": "archived",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-08-stopped-r0",
+      "condition": "G36-R100",
+      "tag": "stopped",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-09-stopped-r0",
+      "condition": "G36-R200",
+      "tag": "stopped",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-09-archived-r0",
+      "condition": "G36-R200",
+      "tag": "archived",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-10-archived-r0",
+      "condition": "G36-R20",
+      "tag": "archived",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-10-stopped-r0",
+      "condition": "G36-R20",
+      "tag": "stopped",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-11-stopped-r0",
+      "condition": "G36-R50",
+      "tag": "stopped",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-11-archived-r0",
+      "condition": "G36-R50",
+      "tag": "archived",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-12-archived-r0",
+      "condition": "G42-R50",
+      "tag": "archived",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-12-stopped-r0",
+      "condition": "G42-R50",
+      "tag": "stopped",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-13-stopped-r0",
+      "condition": "G42-R100",
+      "tag": "stopped",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-13-archived-r0",
+      "condition": "G42-R100",
+      "tag": "archived",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-14-archived-r0",
+      "condition": "G42-R200",
+      "tag": "archived",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-14-stopped-r0",
+      "condition": "G42-R200",
+      "tag": "stopped",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-15-stopped-r0",
+      "condition": "G42-R20",
+      "tag": "stopped",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-15-archived-r0",
+      "condition": "G42-R20",
+      "tag": "archived",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-16-archived-r0",
+      "condition": "G48-R20",
+      "tag": "archived",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-16-stopped-r0",
+      "condition": "G48-R20",
+      "tag": "stopped",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-17-archived-r0",
+      "condition": "G48-R50",
+      "tag": "archived",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-17-stopped-r0",
+      "condition": "G48-R50",
+      "tag": "stopped",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-18-stopped-r0",
+      "condition": "G48-R100",
+      "tag": "stopped",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-18-archived-r0",
+      "condition": "G48-R100",
+      "tag": "archived",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-19-archived-r0",
+      "condition": "G48-R200",
+      "tag": "archived",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-19-stopped-r0",
+      "condition": "G48-R200",
+      "tag": "stopped",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-20-stopped-r0",
+      "condition": "G72-R200",
+      "tag": "stopped",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-20-archived-r0",
+      "condition": "G72-R200",
+      "tag": "archived",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-21-archived-r0",
+      "condition": "G72-R20",
+      "tag": "archived",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-21-stopped-r0",
+      "condition": "G72-R20",
+      "tag": "stopped",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-22-stopped-r0",
+      "condition": "G72-R50",
+      "tag": "stopped",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-22-archived-r0",
+      "condition": "G72-R50",
+      "tag": "archived",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-23-stopped-r0",
+      "condition": "G72-R100",
+      "tag": "stopped",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "diagnostic",
+      "run_id": "stopped-assess-23-archived-r0",
+      "condition": "G72-R100",
+      "tag": "archived",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "NOT_RUN",
+      "actual_wall_s": null,
+      "reason": null
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-00-stopped-r0",
+      "condition": "G12-R20",
+      "tag": "stopped",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.85938204200011,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-00-archived-r0",
+      "condition": "G12-R20",
+      "tag": "archived",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.6146977909998,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-01-archived-r0",
+      "condition": "G12-R50",
+      "tag": "archived",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.811728614,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-01-stopped-r0",
+      "condition": "G12-R50",
+      "tag": "stopped",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.96994314099993,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-02-stopped-r0",
+      "condition": "G12-R100",
+      "tag": "stopped",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.171041772999615,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-02-archived-r0",
+      "condition": "G12-R100",
+      "tag": "archived",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.132045112000014,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-03-stopped-r0",
+      "condition": "G12-R200",
+      "tag": "stopped",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.79551530599974,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-03-archived-r0",
+      "condition": "G12-R200",
+      "tag": "archived",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.196615417999965,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-04-stopped-r0",
+      "condition": "G24-R200",
+      "tag": "stopped",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.16168171399977,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-04-archived-r0",
+      "condition": "G24-R200",
+      "tag": "archived",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.89782365300016,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-05-stopped-r0",
+      "condition": "G24-R20",
+      "tag": "stopped",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.63502683700017,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-05-archived-r0",
+      "condition": "G24-R20",
+      "tag": "archived",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.61425638399987,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-06-archived-r0",
+      "condition": "G24-R50",
+      "tag": "archived",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.70621327900017,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-06-stopped-r0",
+      "condition": "G24-R50",
+      "tag": "stopped",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.33608442700006,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-07-archived-r0",
+      "condition": "G24-R100",
+      "tag": "archived",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.58692921800002,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-07-stopped-r0",
+      "condition": "G24-R100",
+      "tag": "stopped",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.44342766999989,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-08-archived-r0",
+      "condition": "G36-R100",
+      "tag": "archived",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.80270022400009,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-08-stopped-r0",
+      "condition": "G36-R100",
+      "tag": "stopped",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.753593336999984,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-09-stopped-r0",
+      "condition": "G36-R200",
+      "tag": "stopped",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.72913590100006,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-09-archived-r0",
+      "condition": "G36-R200",
+      "tag": "archived",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.736231452000084,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-10-archived-r0",
+      "condition": "G36-R20",
+      "tag": "archived",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.688336014000015,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-10-stopped-r0",
+      "condition": "G36-R20",
+      "tag": "stopped",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.5588776730001,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-11-stopped-r0",
+      "condition": "G36-R50",
+      "tag": "stopped",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.1050475699999,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-11-archived-r0",
+      "condition": "G36-R50",
+      "tag": "archived",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.70285453900033,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-12-archived-r0",
+      "condition": "G42-R50",
+      "tag": "archived",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.614634643000045,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-12-stopped-r0",
+      "condition": "G42-R50",
+      "tag": "stopped",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.09916934900002,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-13-stopped-r0",
+      "condition": "G42-R100",
+      "tag": "stopped",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.56998534399963,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-13-archived-r0",
+      "condition": "G42-R100",
+      "tag": "archived",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.572911851999834,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-14-archived-r0",
+      "condition": "G42-R200",
+      "tag": "archived",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.817484050000076,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-14-stopped-r0",
+      "condition": "G42-R200",
+      "tag": "stopped",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.8351342750002,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-15-stopped-r0",
+      "condition": "G42-R20",
+      "tag": "stopped",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.5556205769999,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-15-archived-r0",
+      "condition": "G42-R20",
+      "tag": "archived",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.500027215000046,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-16-archived-r0",
+      "condition": "G48-R20",
+      "tag": "archived",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.665507156999865,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-16-stopped-r0",
+      "condition": "G48-R20",
+      "tag": "stopped",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.81746166499988,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-17-archived-r0",
+      "condition": "G48-R50",
+      "tag": "archived",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.67247015399971,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-17-stopped-r0",
+      "condition": "G48-R50",
+      "tag": "stopped",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.019127493999804,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-18-stopped-r0",
+      "condition": "G48-R100",
+      "tag": "stopped",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.57514275099993,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-18-archived-r0",
+      "condition": "G48-R100",
+      "tag": "archived",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.60339578799994,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-19-archived-r0",
+      "condition": "G48-R200",
+      "tag": "archived",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.804694046999884,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-19-stopped-r0",
+      "condition": "G48-R200",
+      "tag": "stopped",
+      "host_index": 4,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.71380041199973,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-20-stopped-r0",
+      "condition": "G72-R200",
+      "tag": "stopped",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.846651804999965,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-20-archived-r0",
+      "condition": "G72-R200",
+      "tag": "archived",
+      "host_index": 0,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.76206058300022,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-21-archived-r0",
+      "condition": "G72-R20",
+      "tag": "archived",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.49661372299988,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-21-stopped-r0",
+      "condition": "G72-R20",
+      "tag": "stopped",
+      "host_index": 1,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.66965417600022,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-22-stopped-r0",
+      "condition": "G72-R50",
+      "tag": "stopped",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 62.026823600999705,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-22-archived-r0",
+      "condition": "G72-R50",
+      "tag": "archived",
+      "host_index": 2,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.56171262800035,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-23-stopped-r0",
+      "condition": "G72-R100",
+      "tag": "stopped",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.56757012900016,
+      "reason": ""
+    },
+    {
+      "phase": "endpoint",
+      "run_id": "endpoint-confirm-23-archived-r0",
+      "condition": "G72-R100",
+      "tag": "archived",
+      "host_index": 3,
+      "repeat": 0,
+      "status": "COMPLETE_FULL60",
+      "actual_wall_s": 61.64370873200005,
+      "reason": ""
+    }
+  ],
+  "not_run": {
+    "full_2400k_endpoint": "NOT_RUN_STOCK_LATE_GUARD",
+    "checkpoint_screen_selection": "NOT_RUN_STOCK_LATE_GUARD",
+    "selected_model_confirmation": "NOT_RUN_STOCK_LATE_GUARD"
+  },
+  "ipc_short": {
+    "status": "16_FROZEN_SHORT_RUNS_COMPLETE",
+    "performance": {
+      "legacy": {
+        "full": {
+          "condition_equal": {
+            "utilization": 0.8644194746549574,
+            "departure_mbps": 39.749907199999996,
+            "queue_mean_ms": 58.70175391534238,
+            "queue_p95_ms": 399.2687500000002,
+            "queue_p99_ms": 510.625,
+            "drop_fraction": 0.016625450582307574,
+            "control_p50_ms": 21.6411875,
+            "control_p95_ms": 38.815687499999996,
+            "control_p99_ms": 79.20005125000002
+          },
+          "per_condition": [
+            {
+              "condition": "G12-R200",
+              "utilization": 0.7495281643952163,
+              "departure_mbps": 8.9911176,
+              "queue_mean_ms": 98.15866099496584,
+              "queue_p95_ms": 761.0375000000004,
+              "queue_p99_ms": 981.0,
+              "drop_fraction": 0.03325090116461515,
+              "control_p50_ms": 21.61,
+              "control_p95_ms": 55.6601875,
+              "control_p99_ms": 136.35536750000003
+            },
+            {
+              "condition": "G72-R50",
+              "utilization": 0.9793107849146985,
+              "departure_mbps": 70.5086968,
+              "queue_mean_ms": 19.244846835718914,
+              "queue_p95_ms": 37.5,
+              "queue_p99_ms": 40.25,
+              "drop_fraction": 0.0,
+              "control_p50_ms": 21.672375000000002,
+              "control_p95_ms": 21.9711875,
+              "control_p99_ms": 22.044735000000003
+            }
+          ],
+          "runs": 8,
+          "conditions": 2,
+          "repeats": 4
+        },
+        "trim10": {
+          "condition_equal": {
+            "utilization": 0.8804928088025347,
+            "departure_mbps": 40.11596112,
+            "queue_mean_ms": 16.58487688434232,
+            "queue_p95_ms": 31.5,
+            "queue_p99_ms": 34.375,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.640875,
+            "control_p95_ms": 38.7033,
+            "control_p99_ms": 78.58261500000002
+          },
+          "per_condition": [
+            {
+              "condition": "G12-R200",
+              "utilization": 0.7759226616018267,
+              "departure_mbps": 9.30789376,
+              "queue_mean_ms": 13.818376042917723,
+              "queue_p95_ms": 25.5,
+              "queue_p99_ms": 28.5,
+              "drop_fraction": 0.0,
+              "control_p50_ms": 21.61,
+              "control_p95_ms": 55.626,
+              "control_p99_ms": 135.13461500000003
+            },
+            {
+              "condition": "G72-R50",
+              "utilization": 0.9850629560032427,
+              "departure_mbps": 70.92402848,
+              "queue_mean_ms": 19.35137772576692,
+              "queue_p95_ms": 37.5,
+              "queue_p99_ms": 40.25,
+              "drop_fraction": 0.0,
+              "control_p50_ms": 21.67175,
+              "control_p95_ms": 21.7806,
+              "control_p99_ms": 22.030615
+            }
+          ],
+          "runs": 8,
+          "conditions": 2,
+          "repeats": 4
+        },
+        "registered_coarse_pass": false,
+        "scope": "One training seed; coarse recipe-reproduction criterion, not all-scenario health, paper reproduction or dual-action/CPU advantage."
+      },
+      "verified": {
+        "full": {
+          "condition_equal": {
+            "utilization": 0.9016060118847165,
+            "departure_mbps": 39.05121913333333,
+            "queue_mean_ms": 47.72551033961672,
+            "queue_p95_ms": 329.375,
+            "queue_p99_ms": 506.375,
+            "drop_fraction": 0.015257810559862174,
+            "control_p50_ms": 21.644750000000002,
+            "control_p95_ms": 21.7235875,
+            "control_p99_ms": 55.40372875000026
+          },
+          "per_condition": [
+            {
+              "condition": "G12-R200",
+              "utilization": 0.8620584885859577,
+              "departure_mbps": 10.340997999999999,
+              "queue_mean_ms": 77.828762136237,
+              "queue_p95_ms": 623.25,
+              "queue_p99_ms": 973.75,
+              "drop_fraction": 0.030515621119724348,
+              "control_p50_ms": 21.62025,
+              "control_p95_ms": 21.702012500000002,
+              "control_p99_ms": 88.74206500000052
+            },
+            {
+              "condition": "G72-R50",
+              "utilization": 0.9411535351834752,
+              "departure_mbps": 67.76144026666667,
+              "queue_mean_ms": 17.62225854299643,
+              "queue_p95_ms": 35.5,
+              "queue_p99_ms": 39.0,
+              "drop_fraction": 0.0,
+              "control_p50_ms": 21.66925,
+              "control_p95_ms": 21.7451625,
+              "control_p99_ms": 22.0653925
+            }
+          ],
+          "runs": 8,
+          "conditions": 2,
+          "repeats": 4
+        },
+        "trim10": {
+          "condition_equal": {
+            "utilization": 0.9391161473423748,
+            "departure_mbps": 40.06085864,
+            "queue_mean_ms": 17.422426908064253,
+            "queue_p95_ms": 31.875,
+            "queue_p99_ms": 35.625,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.644312499999998,
+            "control_p95_ms": 21.71719375,
+            "control_p99_ms": 36.3162675
+          },
+          "per_condition": [
+            {
+              "condition": "G12-R200",
+              "utilization": 0.918445909537122,
+              "departure_mbps": 11.017588960000001,
+              "queue_mean_ms": 16.94496297570086,
+              "queue_p95_ms": 28.0,
+              "queue_p99_ms": 32.25,
+              "drop_fraction": 0.0,
+              "control_p50_ms": 21.62025,
+              "control_p95_ms": 21.6953875,
+              "control_p99_ms": 50.567025
+            },
+            {
+              "condition": "G72-R50",
+              "utilization": 0.9597863851476277,
+              "departure_mbps": 69.10412832,
+              "queue_mean_ms": 17.899890840427645,
+              "queue_p95_ms": 35.75,
+              "queue_p99_ms": 39.0,
+              "drop_fraction": 0.0,
+              "control_p50_ms": 21.668375,
+              "control_p95_ms": 21.739,
+              "control_p99_ms": 22.06551
+            }
+          ],
+          "runs": 8,
+          "conditions": 2,
+          "repeats": 4
+        },
+        "registered_coarse_pass": false,
+        "scope": "One training seed; coarse recipe-reproduction criterion, not all-scenario health, paper reproduction or dual-action/CPU advantage."
+      }
+    },
+    "timing": [
+      {
+        "condition": "G12-R200",
+        "arm": "legacy",
+        "repeats": 4,
+        "cycle_over_50ms": 199,
+        "sample_wait_majority": 199,
+        "missing_rtt_polls": 12919,
+        "max_policy_response_p99_ms": 2.6938915252685547,
+        "sample_wait_p99_ms": [
+          138.14565658569336,
+          135.803484916687,
+          158.56194496154785,
+          21.42603874206513
+        ]
+      },
+      {
+        "condition": "G12-R200",
+        "arm": "verified",
+        "repeats": 4,
+        "cycle_over_50ms": 65,
+        "sample_wait_majority": 65,
+        "missing_rtt_polls": 3527,
+        "max_policy_response_p99_ms": 2.677416801452637,
+        "sample_wait_p99_ms": [
+          0.01153469085693362,
+          115.19548892974854,
+          0.009059906005859375,
+          0.009059906005859375
+        ]
+      },
+      {
+        "condition": "G72-R50",
+        "arm": "legacy",
+        "repeats": 4,
+        "cycle_over_50ms": 0,
+        "sample_wait_majority": 0,
+        "missing_rtt_polls": 0,
+        "max_policy_response_p99_ms": 2.761247158050538,
+        "sample_wait_p99_ms": [
+          0.009059906005859375,
+          0.014066696166992188,
+          0.009059906005859375,
+          0.009043216705322227
+        ]
+      },
+      {
+        "condition": "G72-R50",
+        "arm": "verified",
+        "repeats": 4,
+        "cycle_over_50ms": 0,
+        "sample_wait_majority": 0,
+        "missing_rtt_polls": 0,
+        "max_policy_response_p99_ms": 2.708873748779297,
+        "sample_wait_p99_ms": [
+          0.009059906005859375,
+          0.014066696166992188,
+          0.009059906005859375,
+          0.009047985076904254
+        ]
+      }
+    ],
+    "interpretation": [
+      "In this instrumented repeat, both ASCII/framed G12R200 have long sample waits. Every trim10 native cycle>50ms is majority waiting for RTT samples; it is not demonstrated to be IPC lock or inference delay. This does not retrospectively identify the unique cause of the earlier uninstrumented run.",
+      "Verified G72R50 on host2 remains lower utilization~.893 with max_bw/capacity~.901; others near.97-.996. Four pairs do not establish tight IPC equivalence or exclude startup/timing/host interaction.",
+      "Do not classify high shared-memory empty polling alone as IPC failure or generic CPU disturbance. The producer can be waiting for a real RTT sample.",
+      "Both short arms use same diagnostic rebuilt native with stage observation; original training uses unchanged historical90ccb86a binary. No optimizer/replay/exploration calls in short repeats."
+    ]
+  },
+  "closure": [
+    {
+      "host_index": 0,
+      "status": "PASS",
+      "active": [],
+      "remaining_owned_IPC": [],
+      "recorded_IPC": 20,
+      "protected_count": 51,
+      "protected_changed": [],
+      "original_sources_changed": [],
+      "original_model_changed": [],
+      "sysctl_unchanged": true,
+      "checkpoint_inventory": {
+        "framework/checkpoints/export-stopped1675235/model.data-00000-of-00001": {
+          "sha256": "d2643544248ac280f22c209d747005bf5b76dec74f156bedf1b211e259fabc52",
+          "bytes": 343044
+        },
+        "framework/checkpoints/export-stopped1675235/model.index": {
+          "sha256": "dbb8fa3a10195e3adc82c25bee29932ba3c6c39bc75adf5f937fdd21ce66f9d8",
+          "bytes": 514
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-1200012.data-00000-of-00001": {
+          "sha256": "f1d43a932750d3368cf3f5fc76f91c1ee2d87b6f04d97669673d8ff911580787",
+          "bytes": 4410448
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-600008.data-00000-of-00001": {
+          "sha256": "3f1b981d2c27e919fa4f3844ed99b1a337b428e2870a8452d61e1b3dd9591fc4",
+          "bytes": 4410448
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-1000010.index": {
+          "sha256": "723f5ffb280c963434a2fd96132b797d46f72ee44404111c5e0203e8e707ee89",
+          "bytes": 3692
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-400004.index": {
+          "sha256": "d9ef5be471c3a83e9bcc2f6ea905e7a83728b18ff5963fe4ee6ca50c24f6a1ea",
+          "bytes": 3692
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/first-stop.index": {
+          "sha256": "57d61d4ea3adce1fc5655e0ef246ec679b31469f4faa649580bce6c6c21cf187",
+          "bytes": 3692
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-1600008.index": {
+          "sha256": "238685fc3454b204b9455790128116a2a0f65383a5c7cb64be50698ed871af27",
+          "bytes": 3692
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-0.data-00000-of-00001": {
+          "sha256": "6693a31c484cf56642937950681c7ccee42943d5e79b2a8ced1af78a43d27172",
+          "bytes": 4410448
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-800002.data-00000-of-00001": {
+          "sha256": "d2f7aa118b7dc7c2cff42945918d64f61353fd09a3fb196165387132445beda5",
+          "bytes": 4410448
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-0.index": {
+          "sha256": "4af86537b1161327db45ad26d9e1bdc7cf1b2851b77d3d210a0b782b48904bfb",
+          "bytes": 3692
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-1200012.index": {
+          "sha256": "db61e39f7b7eaa94b0e46882c2880a212f82232100765c6efb47d5b974c70950",
+          "bytes": 3692
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-1675235.index": {
+          "sha256": "963749bfc80c9925f63980d7b8523162475d82b59e267887e0205bf37e8288d6",
+          "bytes": 3692
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-1000010.data-00000-of-00001": {
+          "sha256": "660f2c166e6483bf277e73d9a26aeb69cb6778b20a8c023b7fb07f6933d97ab7",
+          "bytes": 4410448
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-1400002.index": {
+          "sha256": "3f3d5468a8ab33be810b164280d72dd1fd09af8f500d452d797ce318d277b3ca",
+          "bytes": 3692
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-400004.data-00000-of-00001": {
+          "sha256": "b7509481168a930fa3054f682ee05c222bb3988e67c962e6e587b4b9efdcd335",
+          "bytes": 4410448
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-600008.index": {
+          "sha256": "f2a1881c264c1298afe54aee2bda99f15bca8e5f5df0f578751faf7b65d823fb",
+          "bytes": 3692
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-200002.data-00000-of-00001": {
+          "sha256": "3d032721d1e5bc0c5570f38b8593b4ff96c675ba0ea451cdd173ec9cb655f2ff",
+          "bytes": 4410448
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/replay.npz": {
+          "sha256": "e41a3106e24ea0fa842a566f9d75c65e185db7986fc676a9fbd194ae37dba4b6",
+          "bytes": 87603371
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-800002.index": {
+          "sha256": "ffed3904715af31daeace0db7a5374a338ea8e5d0d087173e5462439bb7c9cb0",
+          "bytes": 3692
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-1675235.data-00000-of-00001": {
+          "sha256": "498204c014b608e0c13be0fa57e3e27ddb1ee59e20de32c0c0818a814fd9b2c9",
+          "bytes": 4410448
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-200002.index": {
+          "sha256": "5259e799dd9ebc08f11fcae540839c7dff2d94fc1ff45907dc51489b4dc3c39a",
+          "bytes": 3692
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-1400002.data-00000-of-00001": {
+          "sha256": "5963951962c10094f3d8e7db9d92e002a136249d8e137c04e55babdacb5f8c14",
+          "bytes": 4410448
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/first-stop.data-00000-of-00001": {
+          "sha256": "3671649b8cc621e3795451b3071cc519d0273e7a14d11c795fef812869b4d6fe",
+          "bytes": 4410448
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/python-state.pkl": {
+          "sha256": "1cc47b223f56d891f3bef8ebbbe61d6a07c357a7c1b3a8173efae2c7c762424a",
+          "bytes": 6599
+        },
+        "framework/checkpoints/base-reproduction-seed3-2400k/step-1600008.data-00000-of-00001": {
+          "sha256": "b1bd2a2df672c77375631dcc11b4c0a23219684d2d2d1a4ab3937c2da6d1fc99",
+          "bytes": 4410448
+        }
+      },
+      "epoch": 1793199187.5333095
+    },
+    {
+      "host_index": 1,
+      "status": "PASS",
+      "active": [],
+      "remaining_owned_IPC": [],
+      "recorded_IPC": 40,
+      "protected_count": 51,
+      "protected_changed": [],
+      "original_sources_changed": [],
+      "original_model_changed": [],
+      "sysctl_unchanged": true,
+      "checkpoint_inventory": {
+        "framework/checkpoints/export-stopped1675235/model.data-00000-of-00001": {
+          "sha256": "d2643544248ac280f22c209d747005bf5b76dec74f156bedf1b211e259fabc52",
+          "bytes": 343044
+        },
+        "framework/checkpoints/export-stopped1675235/model.index": {
+          "sha256": "dbb8fa3a10195e3adc82c25bee29932ba3c6c39bc75adf5f937fdd21ce66f9d8",
+          "bytes": 514
+        }
+      },
+      "epoch": 1793199187.7424495
+    },
+    {
+      "host_index": 2,
+      "status": "PASS",
+      "active": [],
+      "remaining_owned_IPC": [],
+      "recorded_IPC": 40,
+      "protected_count": 51,
+      "protected_changed": [],
+      "original_sources_changed": [],
+      "original_model_changed": [],
+      "sysctl_unchanged": true,
+      "checkpoint_inventory": {
+        "framework/checkpoints/export-stopped1675235/model.data-00000-of-00001": {
+          "sha256": "d2643544248ac280f22c209d747005bf5b76dec74f156bedf1b211e259fabc52",
+          "bytes": 343044
+        },
+        "framework/checkpoints/export-stopped1675235/model.index": {
+          "sha256": "dbb8fa3a10195e3adc82c25bee29932ba3c6c39bc75adf5f937fdd21ce66f9d8",
+          "bytes": 514
+        }
+      },
+      "epoch": 1793199187.752015
+    },
+    {
+      "host_index": 3,
+      "status": "PASS",
+      "active": [],
+      "remaining_owned_IPC": [],
+      "recorded_IPC": 40,
+      "protected_count": 51,
+      "protected_changed": [],
+      "original_sources_changed": [],
+      "original_model_changed": [],
+      "sysctl_unchanged": true,
+      "checkpoint_inventory": {
+        "framework/checkpoints/export-stopped1675235/model.data-00000-of-00001": {
+          "sha256": "d2643544248ac280f22c209d747005bf5b76dec74f156bedf1b211e259fabc52",
+          "bytes": 343044
+        },
+        "framework/checkpoints/export-stopped1675235/model.index": {
+          "sha256": "dbb8fa3a10195e3adc82c25bee29932ba3c6c39bc75adf5f937fdd21ce66f9d8",
+          "bytes": 514
+        }
+      },
+      "epoch": 1793199187.749189
+    },
+    {
+      "host_index": 4,
+      "status": "PASS",
+      "active": [],
+      "remaining_owned_IPC": [],
+      "recorded_IPC": 36,
+      "protected_count": 51,
+      "protected_changed": [],
+      "original_sources_changed": [],
+      "original_model_changed": [],
+      "sysctl_unchanged": true,
+      "checkpoint_inventory": {
+        "framework/checkpoints/export-stopped1675235/model.data-00000-of-00001": {
+          "sha256": "d2643544248ac280f22c209d747005bf5b76dec74f156bedf1b211e259fabc52",
+          "bytes": 343044
+        },
+        "framework/checkpoints/export-stopped1675235/model.index": {
+          "sha256": "dbb8fa3a10195e3adc82c25bee29932ba3c6c39bc75adf5f937fdd21ce66f9d8",
+          "bytes": 514
+        }
+      },
+      "epoch": 1793199187.7492192
+    }
+  ],
+  "scope": "Fresh original70state/1action agent_v2 Canopy seed3 grid24,5BDP; not TF-layers Orca L1, not dual-action fixed MTP. One seed cannot establish multi-seed or paper reproduction.",
+  "limitations": [
+    "Original gated\u00d71.1 startup, original4MiB/6MiB buffers/cache handling; no normal-CUBIC immediate handoff, anchor, resets, verified training or new critic gate.",
+    "Initial106variables match bitwise; asynchronous TCP/actor arrival and minibatches need not match historical trajectory.",
+    "Registered six-condition screen includes G48R200 deep-queue case. Applying its42.016ms screen limit is stricter than archived same-subset mean65.4671ms, and is not a necessary test of recipe reproduction. Primary final full-grid endpoint remains separately predeclared. Do not change failed selection retroactively.",
+    "Full-budget route registers selected2repeats/condition; late-stock-guard endpoint assessment instead uses stopped and archived models1repeat each and leaves2.4M endpoint/selection NOT_RUN. All are trained grid; no held-out generalization or new3seed proof.",
+    "Old evaluator resource records cover direct Python/native process tree, not complete reparented Mahimahi; no full CPU advantage claim.",
+    "All new full checkpoints/replay/raw packet-state-control logs remain cloud; actor12tensor exports were exact and copied only overVPC for evaluation. No seamless TCP/history/RNG/queue resume."
+  ],
+  "global_step_counter_note": {
+    "saved_global_step": 498801,
+    "python_completed_optimizer_ops": 498882,
+    "difference": -81,
+    "interpretation": "Stock shared global_step is not an exact optimizer-operation counter in this run. Original variable-metadata wording retained as inherited; use the separately recorded completed critic/actor counters. No unique cause inferred or new change applied."
+  },
+  "evaluated_checkpoint_scope": "Final drained step1675235,after36original additional complete updates; first-stop1674884 preserved but not frozen-evaluated. Do not misidentify endpoint as first-trigger snapshot."
+}

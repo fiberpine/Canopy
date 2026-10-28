@@ -1,8 +1,8 @@
 # Canopy：baseline与两种MTP双动作实现
 
-本仓库保存三个原始交付实现、选定模型、训练/评测框架，以及后续基线与双动作研究的代码和证据。**截至2026-10-28，研究仍为PARTIAL：新的Orca基座未通过多场景验收，Canopy正式训练中途按用户要求暂停，双动作模型尚未证明稳定的性能—CPU优势。**
+本仓库保存三个原始交付实现、选定模型、训练/评测框架，以及后续基线与双动作研究的代码和证据。**截至2026-10-28，研究仍为PARTIAL：新的单动作基座仍未通过完整性能验收，双动作模型尚未证明稳定的性能—CPU优势。**
 
-最新入口：[归档配方复盘与第0步实测](docs/BASE_FIRST_PRINCIPLES_REVIEW.md)。原归档模型在今天环境24条件冻结配对：原native98.69%利用率/33.03ms排队、verified96.34%/31.75ms，均过总体筛查；两场景有大幅单次差异，未证明逐场景等价。历史确有饱和后恢复，但不等于任何新配方必自愈。0训练，第1步2.4M未启动；[失败/补测/辅助恢复及逐场景证据](evidence/base-first-principles-20261028/final-analysis.json)保留。研究仍PARTIAL，尚无新合格基座或双动作性能—CPU优势证明。
+最新入口：[原配方复现、原后期守卫与停点冻结对照](docs/BASE_FIRST_PRINCIPLES_REVIEW.md)。五机fresh seed3训练实际1,675,235条/166,294完整更新，触发原1.5M后180秒持续低窗口低利用守卫，**2.4M未完成、没有新健康H0**。48停点/归档冻结完成：trim10分别44.66%/190.57ms和97.90%/32.25ms。106初始变量逐项相同，原native/原优化算法保留；历史曾恢复不保证本次恢复。独立IPC短测定位到两臂RTT样本等待，未证明全面等价。[原失败、NOT_RUN、停止快照与完整证据](evidence/base-reproduction-20261028/final-analysis.json)保留；没有追加训练。
 
 此前[累计探索/缓冲诊断](docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md)、[双向IPC/初始化诊断](tools/scalar_ipc_diagnostic/README.md)、[E2接管诊断](tools/e2_handover/README.md)保留全部结果。原始快照tag `consolidated-20261018` 和51个选定模型文件未变；归档源码不意味着论文复现或新模型合格。
 
