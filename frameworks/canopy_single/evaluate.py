@@ -93,7 +93,7 @@ def main():
     b=R/'code/runtime';server=None;owned={};shm_r=shm_w=None;stop=threading.Event();errors=[];resources=[];sess=None
     start=time.monotonic();status='RUNNING';reason='';valid=0;before=after=None;vars_used=[];verified_pair=None
     states=(run/'states.csv').open('w',buffering=262144);sw=csv.writer(states)
-    sw.writerow(['time_us','elapsed_s','transition','state_id','action','action_no_noise','percent','reward','throughput_term','loss_term','delay_term','max_bw','cwnd','delta_t','srtt_ms','min_rtt_ms','state'])
+    sw.writerow(['time_us','elapsed_s','transition','state_id','action','action_no_noise','percent','reward','throughput_term','loss_term','delay_term','max_bw','cwnd','delta_t','srtt_ms','min_rtt_ms','state','exploration_offset','exploration_applied','exploration_clipped'])
     try:
         if cfg['method']!='cubic':a,sess,Wrapper,params,act,digest,vars_used=model(cfg);before=digest()
         envv=dict(os.environ,C3_TRACE_DIR=str(R/'configs/traces'),ORCA_CONTROL_LOG=str(run/'control.csv'))
@@ -153,23 +153,23 @@ def main():
                 if cfg.get('legacy_protocol'):
                     issued.append(dict(time_us=time.time()*1e6,state_id=reader.last_id,action_id=aid,percent=pct));wid[0]=(wid[0]+1)%1000
                 return pct
-            action=act(hist);no_noise=globals().get("latest_nn",action);pct=send(action);control_start=time.monotonic();lastflush=control_start
+            action=act(hist);no_noise=globals().get("latest_nn",action);exploration=globals().get('latest_exploration',(None,None,None));pct=send(action);control_start=time.monotonic();lastflush=control_start
             while not stop.is_set():
                 try:info,delay,reward,ok=env.get_state(evaluation=True)
                 except EndOfRun:break
                 s1=state(info);raw=reader.last_raw
                 if not ok or len(s1)!=7 or not np.all(np.isfinite(s1)) or not np.isfinite(reward):raise RuntimeError('invalid feedback; abort without fallback')
-                h1=np.concatenate((hist[7:],s1)).astype(np.float32);next_action=act(h1);next_nn=globals().get("latest_nn",next_action);nextpct=send(next_action)
+                h1=np.concatenate((hist[7:],s1)).astype(np.float32);next_action=act(h1);next_nn=globals().get("latest_nn",next_action);next_exploration=globals().get('latest_exploration',(None,None,None));nextpct=send(next_action)
                 valid+=1
                 if cfg.get('old_eval_handoff') and valid==1:
                     # Outer d5 loop sends a1, then evaluate_TCP computes and sends it again
                     # with a fresh sequence ID before reading another state.
                     duplicate_action=act(h1);send(duplicate_action)
-                sw.writerow([time.time()*1e6,time.monotonic()-control_start,valid,reader.last_id,action,no_noise,pct,reward,raw[1]/env.max_bw,5*raw[7]/env.max_bw,s1[-1],env.max_bw,raw[5],raw[3],raw[8],raw[14],json.dumps(s1.tolist())])
+                sw.writerow([time.time()*1e6,time.monotonic()-control_start,valid,reader.last_id,action,no_noise,pct,reward,raw[1]/env.max_bw,5*raw[7]/env.max_bw,s1[-1],env.max_bw,raw[5],raw[3],raw[8],raw[14],json.dumps(s1.tolist())]+list(exploration))
                 training_reward=reward
                 if globals().get('reward_hook'):training_reward=reward_hook(hist,action,no_noise,reward,h1,raw)
                 if globals().get('transition_hook'):transition_hook(hist,action,training_reward,h1)
-                hist=h1;action=next_action;no_noise=next_nn;pct=nextpct
+                hist=h1;action=next_action;no_noise=next_nn;exploration=next_exploration;pct=nextpct
                 if cfg.get('training_steps') and valid>=cfg['training_steps']:break
                 if cfg.get('stop_file') and pathlib.Path(cfg['stop_file']).exists():break
                 if time.monotonic()-lastflush>5:states.flush();lastflush=time.monotonic()

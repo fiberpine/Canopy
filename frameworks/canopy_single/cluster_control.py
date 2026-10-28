@@ -56,6 +56,8 @@ def execute(cfg,duration=None):
     if entry['result'] and entry['result']['status']!='COMPLETED':raise RuntimeError('actor%d: %s'%(i,entry['result']['reason']))
     if not entry['alive'] and not entry['producer']:raise RuntimeError('actor%d died without producer record'%i)
    training=local['entries'][0]['training'];latest=training[-1] if training else {}
+   if cfg.get('critic_only') and (R/'logs'/run/'critic-stop.json').exists() and not stop_reason:
+    stop_reason=node.load(R/'logs'/run/'critic-stop.json')['reason'];stop(stop_reason)
    if cfg.get('limited_learning_guard'):
     reports=[s.get('learning_monitor') for s in statuses]
     safety=globals().get('limited_learning_guard')

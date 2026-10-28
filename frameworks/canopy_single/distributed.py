@@ -87,6 +87,9 @@ def learner(cfg):
   initial=cfg['cold_init_checkpoint'];assert initial.startswith(str(R/'checkpoints')) and pathlib.Path(initial).name=='step-0','Only an own random step-0 checkpoint can be used for a paired cold initialization'
   save.restore(sess,initial);assert int(sess.run(a.global_step))==0,'Cold initialization must not contain prior optimization';a.init_target()
  counter={'critic_iterations':0,'critic_optimizer_ops':0,'actor_updates':0,'target_updates':0};stop=threading.Event();errors=[]
+ from critic_only_control import enabled,FrozenActor
+ critic_only=enabled(cfg);frozen_actor=FrozenActor(a,sess) if critic_only else None
+ optimizer_paused=False;first_stop_epoch=None;checkpoint_map={}
  def checkpoint(n):
   save.save(sess,str(cp/('step-%d'%n)),write_meta_graph=n==0)
   (cp/('step-%d.counters.json'%n)).write_text(json.dumps(dict(counter,inserted=a.rp_buffer.inserted,cfg=cfg),indent=2))
@@ -95,6 +98,9 @@ def learner(cfg):
   h=hashlib.sha256()
   for v,value in zip(policy,sess.run(policy)):h.update(v.name.encode());h.update(value.tobytes())
   (cp/('step-%d.policy.sha256'%n)).write_text(h.hexdigest())
+  if critic_only:
+   proof=frozen_actor.verify(counter['critic_iterations']);(cp/('step-%d.frozen-actor.json'%n)).write_text(json.dumps(proof,indent=2))
+   checkpoint_map['step-%d'%n]=counter['critic_iterations'];(cp/'critic-update-map.json').write_text(json.dumps(checkpoint_map,indent=2))
  checkpoint(0);(run/'ready').write_text(str(os.getpid()))
  def receive():
   try:
@@ -117,8 +123,22 @@ def learner(cfg):
   while not stop.is_set():
    n=a.rp_buffer.inserted;it=counter['critic_iterations'];limit=int(max(0,n-cfg['warmup'])*cfg['update_ratio'])
    if cfg.get('diagnostic_no_optimizer',False):limit=0
+   if critic_only and not optimizer_paused:
+    cause=None
+    if counter['critic_iterations']>=cfg['critic_update_budget']:cause='CRITIC_UPDATE_BUDGET_COMPLETE'
+    elif pathlib.Path(cfg['stop_file']).exists():cause=json.loads(pathlib.Path(cfg['stop_file']).read_text()).get('reason','EXTERNAL_STOP')
+    elif time.time()>=cfg.get('absolute_deadline_epoch',float('inf')):cause='ABSOLUTE_DEADLINE'
+    if cause:
+     optimizer_paused=True;first_stop_epoch=time.time();proof=frozen_actor.verify(it)
+     save.save(sess,str(cp/'policy-at-first-stop'),write_meta_graph=False)
+     from node_control import dump
+     dump(run/'critic-stop.json',dict(reason=cause,epoch=first_stop_epoch,counters=dict(counter),inserted=n,unused_update_credit=max(0,limit-it),actor_proof=proof))
+     (cp/'first-stop-counters.json').write_text((run/'critic-stop.json').read_text())
+   if critic_only:
+    limit=min(limit,cfg['critic_update_budget'])
+    if optimizer_paused:limit=it
    if time.monotonic()-last>5:
-    w.writerow([time.monotonic()-start,n,a.rp_buffer.length_buf,it,it*2,it,it,it/max(1,n),it/max(1,n-cfg['warmup']),int(sess.run(size)),float(np.mean(a.rp_buffer.ages)) if a.rp_buffer.ages else 0]+diag+[int(a.rp_buffer.actor_inserted.min()),int(np.count_nonzero(a.rp_buffer.actor_inserted)),int(a.rp_buffer.sampled_by_actor.min()),int(a.rp_buffer.sampled_by_actor.max())]);f.flush();last=time.monotonic()
+    w.writerow([time.monotonic()-start,n,a.rp_buffer.length_buf,it,counter['critic_optimizer_ops'],counter['actor_updates'],counter['target_updates'],it/max(1,n),it/max(1,n-cfg['warmup']),int(sess.run(size)),float(np.mean(a.rp_buffer.ages)) if a.rp_buffer.ages else 0]+diag+[int(a.rp_buffer.actor_inserted.min()),int(np.count_nonzero(a.rp_buffer.actor_inserted)),int(a.rp_buffer.sampled_by_actor.min()),int(a.rp_buffer.sampled_by_actor.max())]);f.flush();last=time.monotonic()
    if time.monotonic()-producer_check>=1:
     producer_check=time.monotonic()
     producer_paths=[R/'logs'/(cfg['run_id']+'-actor%d'%i)/'producer.json' for i in range(cfg['num_actors'])]
@@ -126,7 +146,10 @@ def learner(cfg):
     if producers_done:produced=sum(json.loads(p.read_text())['enqueued'] for p in producer_paths)
    received_all=producers_done and n==produced
    if received_all and (cfg.get('capacity_only') or it>=limit):break
-   if n>=next_checkpoint:
+   if critic_only and optimizer_paused and time.time()-first_stop_epoch>75:raise RuntimeError('critic-only producer drain timeout after first-stop snapshot')
+   if critic_only and it and it%cfg.get('critic_checkpoint_interval',2000)==0 and not any(v==it for v in checkpoint_map.values()):
+    with a.rp_buffer.lock:checkpoint(a.rp_buffer.inserted)
+   if not critic_only and n>=next_checkpoint:
     with a.rp_buffer.lock:checkpoint(a.rp_buffer.inserted)
     next_checkpoint=((a.rp_buffer.inserted//cfg.get('checkpoint_interval',50000))+1)*cfg.get('checkpoint_interval',50000)
    if it>=limit:time.sleep(.01);continue
@@ -136,12 +159,12 @@ def learner(cfg):
     (run/'first-update-coverage.json').write_text(json.dumps(dict(epoch=time.time(),inserted=n,per_actor_inserted=a.rp_buffer.actor_inserted.tolist(),minimum_required=cfg.get('minimum_enqueued_per_actor',512),definition='Exact actor-ID metadata carried with each successfully inserted FIFO transition. No actor action is blocked.')))
    batch=a.rp_buffer.sample();fd={a.s0:batch[0],a.action:batch[1],a.reward:batch[2],a.s1:batch[3],a.terminal:batch[4],a.is_training:True,a.is_concrete:True,a.s0_delta:np.zeros_like(batch[0])}
    t0=time.perf_counter();sess.run(a.critic_train_op,fd);t1=time.perf_counter()
-   sess.run([a.actor_train_op,bn],fd);t2=time.perf_counter()
+   sess.run(bn if critic_only else [a.actor_train_op,bn],fd);t2=time.perf_counter()
    if cfg.get('target_no_fetch'):sess.run(target_no_fetch)
    else:a.target_update()
    t3=time.perf_counter()
    if cfg.get('profile_stages'):stage_rows.append((time.time(),n,it,(t1-t0)*1000,(t2-t1)*1000,(t3-t2)*1000))
-   for k,v in [('critic_iterations',1),('critic_optimizer_ops',2),('actor_updates',1),('target_updates',1)]:counter[k]+=v
+   for k,v in [('critic_iterations',1),('critic_optimizer_ops',2),('actor_updates',0 if critic_only else 1),('target_updates',1)]:counter[k]+=v
    if counter['critic_iterations']%100==0:
     diag=list(map(float,sess.run([a.c_loss,a.c_loss2,a.a_loss,qmean]+grads,fd)))
     if not np.all(np.isfinite(diag)):raise RuntimeError('nonfinite losses/gradients')
@@ -149,6 +172,8 @@ def learner(cfg):
   if errors:raise RuntimeError(errors[0])
   stop.set();t.join(10);checkpoint(a.rp_buffer.inserted)
   rp=a.rp_buffer
+  if critic_only:
+   (cp/'critic-only-final.json').write_text(json.dumps(dict(actor_proof=frozen_actor.verify(counter['critic_iterations']),unused_update_credit=max(0,int(max(0,rp.inserted-cfg['warmup'])*cfg['update_ratio'])-counter['critic_iterations']),first_stop_epoch=first_stop_epoch),indent=2))
   with rp.lock:np.savez(str(cp/'replay.npz'),s0=rp.s0_buf[:rp.length_buf],a=rp.a_buf[:rp.length_buf],reward=rp.reward_buf[:rp.length_buf],s1=rp.s1_buf[:rp.length_buf],terminal=rp.terminal_buf[:rp.length_buf],birth=rp.birth[:rp.length_buf],actor_ids=rp.actor_ids[:rp.length_buf],actor_inserted=rp.actor_inserted,sampled_by_actor=rp.sampled_by_actor,sample_calls=rp.sample_calls,ptr=rp.ptr,full=rp.full)
   (cp/'sample-coverage.json').write_text(json.dumps(dict(inserted_by_actor=rp.actor_inserted.tolist(),sampled_by_actor=rp.sampled_by_actor.tolist(),retained_by_actor=[len(x) for x in rp.actor_slots],sample_calls=rp.sample_calls,definition='sampled_by_actor counts replay rows used in complete updates; this is not additional real environment experience'),indent=2))
   import pickle
@@ -224,7 +249,8 @@ def actor(cfg,index):
     x=float(cfg['fixed_action']);no_noise=x
    elif explorer is not None:
     # Opt-in zero_sum_offset: bounded window offset instead of a log-cwnd random walk.
-    x=explorer(x);counts['exploration_calls']+=1
+    before=explorer.clipped;x=explorer(x);counts['exploration_calls']+=1
+    evaluate.latest_exploration=(explorer.offset,explorer.applied,int(explorer.clipped!=before))
    else:
     noise=float(np.asarray(a.actor_noise(np.array([[x]]))).reshape(-1)[0]);counts['exploration_calls']+=1;x=float(np.clip(x+noise,-1,1))
    evaluate.latest_nn=no_noise

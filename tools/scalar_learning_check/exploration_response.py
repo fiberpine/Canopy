@@ -187,7 +187,12 @@ def read(path):
     if rows and 'delay_term' in rows[0]:
         d = np.asarray([float(r['delay_term']) for r in rows])
         cls[1:] = np.where(d[:-1] < .999, PENALIZED, FREE)   # state before action t = state after row t-1
-    return offsets(a, p), rew, cls
+    latent=[r.get('exploration_offset','') for r in rows]
+    if latent and all(v!='' for v in latent):
+        o=np.asarray(latent,float)
+        if not np.all(np.isfinite(o)):raise ValueError('Nonfinite logged exploration innovation')
+    else:o=offsets(a,p)
+    return o, rew, cls
 
 
 def analyze(root, run, config, max_lag=40):
