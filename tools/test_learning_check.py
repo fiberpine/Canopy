@@ -293,5 +293,43 @@ class SnapshotMetadataTest(unittest.TestCase):
                 f('/tmp/step-1', {'step-1': value})
 
 
+class RttSeparabilityTest(unittest.TestCase):
+    def test_empty_or_single_class_is_not_classification_success(self):
+        import numpy as np
+        import rtt_separability as rs
+        self.assertIsNone(rs.cv_accuracy(np.zeros((0,7)),np.array([],int),np.array([],int)))
+        self.assertIsNone(rs.cv_accuracy(np.zeros((4,7)),np.full(4,20),np.arange(4)))
+
+    def test_knn_never_pads_with_same_actor_when_candidates_are_few(self):
+        import numpy as np
+        import rtt_separability as rs
+        X=np.array([[0.],[.1],[10.]])
+        y=np.array([20,20,200]);actor=np.array([0,0,1])
+        q,share=rs.knn_same_group(X,y,actor,k=10)
+        np.testing.assert_array_equal(share,np.zeros(3))
+
+    def test_actor_metadata_cannot_mix_rtt_conditions(self):
+        import numpy as np
+        import rtt_separability as rs
+        with self.assertRaises(ValueError):
+            rs.folds_by_actor(np.array([0,0]),np.array([20,200]))
+
+    """Is cross-RTT transfer forced by observation aliasing? (leave-actors-out linear readout)"""
+    def test_self_test(self):
+        import rtt_separability as rs
+        r = rs.self_test()
+        self.assertGreater(r['informative']['r20_r200'], .99)
+        self.assertLess(r['uninformative'], .4)
+
+    def test_published_probes_separate_r20_from_r200(self):
+        import rtt_separability as rs
+        X, rtt, actor, delay, newest = rs.from_s_json(str(EVIDENCE / 'results' / 'S-R5-s3.json'))
+        out = rs.analyze(X, rtt, actor, delay, newest)
+        self.assertEqual(out['rows'], 360)                       # 24 zero-padded connection starts removed
+        self.assertGreater(out['pairs']['20-200'], .98)
+        self.assertGreater(out['single_feature_four_way']['samples/cwnd'], .7)
+        self.assertLess(out['single_feature_four_way']['pacing/max_bw'], .35)
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -1,0 +1,36 @@
+{
+  "status": "REGISTERED_ZERO_TCP_READONLY_CHECK",
+  "base_commit": "49714b203267a5479f4cb06961eb8b2b7e2a1453",
+  "host_count": 1,
+  "max_wall_seconds": 180,
+  "TF_sessions": 0,
+  "TCP_runs": 0,
+  "dataset": "All27,436 factual pre-update rows; drop zero-padded older frames; never use post-explosion rows",
+  "jobs": [
+    {
+      "id": "full70",
+      "newest_only": false,
+      "max_seconds": 125
+    },
+    {
+      "id": "newest7",
+      "newest_only": true,
+      "max_seconds": 55
+    }
+  ],
+  "method": "LDA shrink.001, held-out one actor per RTT per fold, train-fold-only standardization; kNN descriptive with other actors only",
+  "planned_gate": {
+    "statistic": "full70 pairs20-200 balanced accuracy",
+    "threshold": 0.9,
+    "if_below": "Stop L2-A planning and discuss observation/readout; not proof no information exists",
+    "if_above": "Necessary study precheck only; no automatic network experiment or actor release"
+  },
+  "limits": [
+    "One source policy/dataset/connection per actor. High average accuracy does not exclude local ambiguity.",
+    "No prediction of unseen dynamic networks, representation quality or safe critic gradients."
+  ],
+  "attachments": {
+    "canopy-next-step-49714b2.patch": "141535a1de17bbd735e470336a5b9b1787ddb4e8bc172a841e26a67423dab641",
+    "next-step-decision-2026-10-28.md": "c64a500860a4c1b838b31f229e92b92c80d5d73ec2ffce559a112e5f5f99cb0a"
+  }
+}
