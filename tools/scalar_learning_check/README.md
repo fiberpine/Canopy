@@ -1,4 +1,25 @@
-# 最新：真实TF首批更新重放与速度对照
+# 最新（Claude提案，未执行）：critic视野与无模型方向检查
+
+分析见[离健康基座还有多远](../../docs/SCALAR_BASE_ROADMAP.md)。下面三个是离线工具，均不启动TCP，不写checkpoint。
+
+| 文件 | 作用 | 依赖 |
+|---|---|---|
+| `value_horizon.py` | 理想固定策略传播模型：以Pr[Poisson(τt)≥m]加权；不作为神经critic视野定理；拟合已发布R3/R5记录的Q斜率与R20翻号时间 | NumPy；读已发布证据 |
+| `exploration_response.py` | 核查zero_sum偏移重建，按RTT×动作前延迟类报告创新响应及HAC误差；不直接识别持续动作效应 | NumPy；states.csv或E1R的npz |
+| `runtime/critic_horizon_replay.py` | H1（τ=0.001，4万次critic-only）、H2（τ=0.005，1万次）记录Q与模型、λ、按RTT×延迟类的dQ/da翻号；E1R导出replay的偏移序列 | TF1，与`first_updates_replay.py`相同的输入和环境变量；单文件可独立复制运行 |
+| `runtime/first_updates_replay.py` v3 | 训练过程不变；放行点与终点额外记录逐状态Δπ、dQ1/da和按延迟类的拆分 | 同v2 |
+
+```sh
+python3 tools/scalar_learning_check/value_horizon.py --evidence evidence/scalar-first-updates-20261027 --reward-mean 0.706
+CANOPY_FIRST_SOURCE=... CANOPY_FIRST_CHECKPOINT_DIR=... CANOPY_FIRST_FRAMEWORK=... \
+python3 tools/scalar_learning_check/runtime/critic_horizon_replay.py --job H1 --output /new/output/H1.json   # 同样运行H2、E1R
+python3 tools/scalar_learning_check/exploration_response.py --series-npz /new/output/E1R.npz
+CANOPY_FIRST_SOURCE=... python3 tools/scalar_learning_check/runtime/first_updates_replay.py --arm R5 --seed 3 --output /new/output/R5-v3-s3.json
+```
+
+---
+
+# 真实TF首批更新重放与速度对照
 
 已完成16个离线case，结果见[交接](../../docs/RESEARCH_REVIEW_BRIEF.md)与[实测修正](../../docs/SCALAR_FIRST_UPDATES_DIAGNOSIS.md)。`actor_speed_sim.py`只是同结构/合成输入的数量级演示，不是与真实TF逐值相同的证明。
 

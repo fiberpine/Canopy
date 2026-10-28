@@ -1,0 +1,51 @@
+{
+  "status": "LOCAL_REVIEW_COMPLETE_REAL_TF_NOT_RUN",
+  "base_commit": "ec9bdf65fc008e8637af5f4a4fa9b936fbb2ffbc",
+  "attachment_sha256": {
+    "base-health-roadmap-2026-10-27.md": "d616a8741f86a67565b8b3b86ec09f41435aa3642866d13005af64c2a340be81",
+    "canopy-critic-horizon-ec9bdf6.patch": "f3ed59d9829b5293050cff00be4fb97a21df8a143f4659c071408fd0803c98a8"
+  },
+  "local_tests": {
+    "tools": 79,
+    "e2_handover": 5,
+    "scalar_audit": 7,
+    "total": 91
+  },
+  "python36_syntax": [
+    "tools/scalar_learning_check/value_horizon.py",
+    "tools/scalar_learning_check/exploration_response.py",
+    "tools/scalar_learning_check/runtime/critic_horizon_replay.py",
+    "tools/scalar_learning_check/runtime/first_updates_replay.py",
+    "tools/test_learning_check.py"
+  ],
+  "TF_jobs": {
+    "pilot-H1": "NOT_RUN",
+    "E1R": "NOT_RUN",
+    "H1": "NOT_RUN",
+    "H2": "NOT_RUN",
+    "S-R5-s3": "NOT_RUN",
+    "S-R5-s4": "NOT_RUN",
+    "S-R5-s5": "NOT_RUN"
+  },
+  "cloud_connections": 0,
+  "new_TCP_experiments": 0,
+  "new_candidate_models": 0,
+  "review_changes": [
+    "Connection-intercept Bartlett HAC standard errors preserve class time gaps and separate connections",
+    "Exact s1/s0 continuity and terminal handling",
+    "All initial TF tensors checked against source checkpoint before diagnostics",
+    "Frozen initial-query-action gradient distinguishes BN drift from critic changes",
+    "Per-state absolute policy and probe birth stored at release/final",
+    "No clipping/gaps and rho=0 required for randomized innovation interpretation",
+    "Ideal propagation model and scalar lambda fit explicitly distinguished from neural Q reliability"
+  ],
+  "hypotheses_retained": "Claude H1/H2/E1R/S predictions retained, not results; online L2 remains NOT_RUN",
+  "source_sha256": {
+    "tools/scalar_learning_check/value_horizon.py": "03df797dae8fe2024bb0bcb1ce3b3021946091cd6f7fd26bb1fd0633f9733e3d",
+    "tools/scalar_learning_check/exploration_response.py": "061134d6c059c57b48315479816f59e411d232d7816297549f280779445d8b48",
+    "tools/scalar_learning_check/runtime/critic_horizon_replay.py": "62c17adf068cea6489124a89c3ee42a95de56a815279510f1fdd19192bd3666a",
+    "tools/scalar_learning_check/runtime/first_updates_replay.py": "551b98920ac3eb1d1b4f7fb76612da64e1e089eb1751b97758240069e995e4ad",
+    "tools/test_learning_check.py": "162b33468cde4e0fd3da4ea5d4905995cbd9e646371d3b1b4d5a4ba993ef6da2"
+  },
+  "private_controller": "Kept outside public repository; strict existing known_hosts and no job retries; pending current learner identity"
+}

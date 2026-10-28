@@ -5,6 +5,9 @@ target ops; lr ablations feed the existing actor optimizer learning-rate tensor.
 Diagnostics use deterministic unsmoothed targets and NEVER fetch random smoothing
 ops. Static replay/sampling/graph RNG differ from historical asynchronous training;
 R0 is a mechanism test, not a bit-exact reconstruction of the online trajectory.
+v3 (after the executed v2): the release record (R3/R5) and the final record also carry per-state policy changes
+and dQ1/da with newest-frame features, within-RTT correlations and a split by the reward's delay factor
+(penalized = queued vs free), to tell a state-dependent correction from a uniform bias. Training is unchanged.
 """
 import argparse,os,pathlib,sys,json,random,time,hashlib
 os.environ.update(TF_CPP_MIN_LOG_LEVEL='3',OMP_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',CUDA_VISIBLE_DEVICES='')
@@ -91,7 +94,25 @@ def record(it,fd):
   diagnostic_unsmoothed_TD_MSE1=float(m1),diagnostic_unsmoothed_TD_MSE2=float(m2),actor_grad=float(ag),
   target_total_dpacing=float(ss[:,64].mean()),target_total_dsamples=float(ss[:,66].mean()),
   pi_by_rtt={str(r):float(pi[RTT==r].mean()) for r in [20,50,100,200]},
-  dq1_by_rtt={str(r):float(d1.ravel()[RTT==r].mean()) for r in [20,50,100,200]})
+  dq1_by_rtt={str(r):float(d1.ravel()[RTT==r].mean()) for r in [20,50,100,200]},
+  **(per_state(delta,d1.ravel()) if it==count or (cal and it==cal) else {}))
+def per_state(delta,d1):
+ # Is the learned change a state-dependent correction (stabilizing) or a uniform bias? Newest-frame features:
+ # 63 thr/max_bw, 64 pacing/max_bw, 65 5*loss/max_bw, 66 samples/cwnd, 67 dt, 68 minRTT/sRTT, 69 delay factor of the reward.
+ # 'penalized': delay factor < 1 (sRTT > 1.25 minRTT, queue costs reward); 'free': no delay cost. Recorded at release and at the end.
+ f=P0[:,63:70];pen=f[:,6]<.999;out={}
+ def corr(d,x):
+  c=np.corrcoef(d,x)[0,1] if np.std(x)>0 and np.std(d)>0 else float('nan')
+  return float(c) if np.isfinite(c) else None
+ def stats(sel):
+  return dict(n=int(sel.sum()),delta_mean=float(delta[sel].mean()),dq1_mean=float(d1[sel].mean()),dq1_positive=float(np.mean(d1[sel]>0))) if sel.any() else None
+ for r in [20,50,100,200]:
+  m=RTT==r;d=delta[m]
+  out[str(r)]=dict(mean=float(d.mean()),sd=float(d.std()),corr_minrtt_over_srtt=corr(d,f[m,5]),corr_thr_over_maxbw=corr(d,f[m,0]),
+   corr_pacing_over_maxbw=corr(d,f[m,1]),corr_delay_metric=corr(d,f[m,6]),dq1_corr_delay_metric=corr(d1[m],f[m,6]),
+   penalized=stats(m&pen),free=stats(m&~pen))
+ return dict(per_state_structure=out,per_state=dict(delta=[float(x) for x in delta],policy=sess.run(a.actor_out,{a.s0:P0,a.is_training:False}).ravel().tolist(),probe_birth=replay['birth'][keep][probe].tolist(),dq1=[float(x) for x in d1],rtt=[int(x) for x in RTT],
+  actor=[int(x) for x in PID],features=f.tolist()))
 for it in range(count+1):
  fd=batch()
  if it==cal and cal:
