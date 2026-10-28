@@ -331,5 +331,28 @@ class RttSeparabilityTest(unittest.TestCase):
         self.assertLess(out['single_feature_four_way']['pacing/max_bw'], .35)
 
 
+class ScenarioAlignmentTest(unittest.TestCase):
+    """L2-A: compare E1 and critic per scenario (same weights), not pooled RTT means."""
+    def test_published_l2a_scenarios_agree(self):
+        import scenario_alignment as sa
+        out = sa.analyze(ROOT / 'evidence/scalar-critic-only-L2A-20261028', '10', 3.0)
+        self.assertEqual((out['scored'], out['agree'], out['disagree']), (14, 14, 0))
+
+    def test_zero_gradient_is_not_negative_agreement(self):
+        import scenario_alignment as sa
+        import tempfile,json
+        with tempfile.TemporaryDirectory() as directory:
+            root=pathlib.Path(directory);(root/'results').mkdir()
+            actor=dict(actor=0,rtt=200,classes={'penalized':dict(full=dict(beta={'10':-1.},se={'10':.1},n=100)), 'free':dict(full=None)})
+            rec=dict(update=50000,dq1_by_actor_class={'0':{'penalized':dict(mean=0.,n=8),'free':None}},dq2_by_actor_class={'0':{'penalized':dict(mean=0.,n=8),'free':None}})
+            (root/'results/response-alignment.json').write_text(json.dumps(dict(actors=[actor])))
+            (root/'results/snapshot-probe-by-actor.json').write_text(json.dumps(dict(result=dict(records=[rec]))))
+            out=sa.analyze(root);self.assertEqual((out['scored'],out['agree'],out['disagree']),(1,0,1))
+            rec['dq1_by_actor_class']['0']['penalized']['mean']=float('nan')
+            (root/'results/snapshot-probe-by-actor.json').write_text(json.dumps(dict(result=dict(records=[rec]))))
+            out=sa.analyze(root);self.assertEqual(out['scored'],0);self.assertEqual(len(out['excluded']),2)
+            with self.assertRaises(ValueError):sa.analyze(root,z_thr=float('nan'))
+
+
 if __name__ == '__main__':
     unittest.main()
