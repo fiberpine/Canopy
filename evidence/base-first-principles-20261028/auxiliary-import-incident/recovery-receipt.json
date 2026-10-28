@@ -1,0 +1,11 @@
+{
+  "status": "RECOVERED_HISTORICAL_DEPLOYMENT_MATERIAL",
+  "incident": "sys.path from legacy SSH helper caused bare import deploy to load an old eager CLI. Two attempts interpreted argv deploy/launch as undefined hostnames, failed SCP before any mutation script. Local old deployment bundle/manifest were regenerated from current old worktree; no model or result files were written.",
+  "resolution": "Use explicit importlib file path for current controller. Preserve post-incident copies; restore deployment bundle from authenticated cloud original with published historical SHA; reconstruct source manifest in archive member order using original serialization.",
+  "restored_archive_sha256": "4b66b0104dd5a9ee195c8e6669bbb0bca32623accd5b130f2855a7d4da51b002",
+  "restored_manifest_sha256": "557a360581f9e0f17643c711257157bcdb7dadb159e43cd5e0c2393a777e4cc8",
+  "cloud_original_bytes": 97744,
+  "known_old_source_code_and_model_files_overwritten": 0,
+  "network_or_optimizer_runs_from_wrong_import": 0,
+  "raw_attempt_outputs": "Functions command transcripts/session failures; retained deployment/readback receipts in current experiment"
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "@STEP0_V1@/framework/evaluate.py", line 152, in main
+    action=act(hist);no_noise=globals().get("latest_nn",action);pct=send(action);control_start=time.monotonic();lastflush=control_start
+  File "@STEP0_V1@/framework/evaluate.py", line 148, in send
+    shm_w.write(('%d %d\0'%(aid,pct)).encode())
+  File "@STEP0_V1@/framework/verified_ipc.py", line 128, in write
+    frame=pair.outgoing.write(ACTION,action_payload(rid,pct,pair.last_state[1],pair.last_state[2]))
+  File "@STEP0_V1@/framework/verified_ipc.py", line 52, in action_payload
+    raise ProtocolError('action range/state binding')
+verified_ipc.ProtocolError: action range/state binding

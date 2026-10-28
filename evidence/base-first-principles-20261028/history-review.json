@@ -1,0 +1,1291 @@
+{
+  "status": "READ_ONLY_ARCHIVED_HISTORY_REVIEW",
+  "trajectory329992": {
+    "negative_mean_le_minus95": 16,
+    "positive_mean_ge_plus95": 7,
+    "positive_mean": 8,
+    "mean_cwnd_ge_million": 8,
+    "mean_cwnd_intmax": 7,
+    "negative_cwnd_mean_range": [
+      4.51,
+      8.78
+    ],
+    "positive_unsaturated": [
+      {
+        "actor": 2,
+        "condition": "G12-R100",
+        "recent": {
+          "step": 11700,
+          "min_saturation": 0.065,
+          "cwnd_mean": 4234298.88,
+          "action_mean": 0.41748211873695257,
+          "reward_mean": -0.2358141041500803
+        },
+        "network": {
+          "utilization": 0.9999039864812965,
+          "window_ms": 5000.0
+        }
+      }
+    ],
+    "scope": "Exploratory training policy; recent <=5sec packet-log window, not frozen evaluation or checkpoint selection."
+  },
+  "diagnosis500010": {
+    "checkpoint_sample_step": 500010,
+    "probe_states": 1704,
+    "probe_mean_exact_minus_one": 0,
+    "probe_mean_near_minus_one": 5,
+    "classes_with_any_probe_saturation": 17,
+    "critic_Q_class_mean_range": [
+      -0.5181233882904053,
+      26.75882339477539
+    ],
+    "recent_5s_training_utilization_equal_condition": 0.6222724672183748,
+    "scope": "Read-only NumPy forward and analytic dQ/da on recent real histories, frozen checkpoint. Histories observed after checkpoint are diagnostic inputs, not its training batch. Not a causal intervention or a calibrated Q-return test. Target local statistics depend on the collected batch. No policy/reward/environment changes.",
+    "rows": [
+      {
+        "condition": "G12-R20",
+        "observed_network": {
+          "utilization": 0.9817488969113518,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 28087,
+          "min_saturation": 0.345,
+          "cwnd_mean": 62.3,
+          "action_mean": -0.13427259181626142,
+          "reward_mean": 0.4361513037131069
+        },
+        "states": 71,
+        "predicted_action_mean": -0.6753293871879578,
+        "min_saturation": 0.4225352112676056,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 2.0172007083892822,
+        "tanh_derivative_median": 0.06834477186203003,
+        "critic_Q_mean": 2.0339701175689697,
+        "critic_dQ_da_mean": 0.024580160352911964,
+        "critic_argmax_grid_mean": -0.16549295774647887,
+        "target_local_vs_online_mae": 0.6016690135002136,
+        "target_local_vs_target_moving_mae": 1.2099745273590088
+      },
+      {
+        "condition": "G24-R200",
+        "observed_network": {
+          "utilization": 1.0000298708724855,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 27850,
+          "min_saturation": 0.0,
+          "cwnd_mean": 2140504325.145,
+          "action_mean": 0.9322468383610248,
+          "reward_mean": 0.23636676501462137
+        },
+        "states": 71,
+        "predicted_action_mean": 0.8720417022705078,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 1.56221342086792,
+        "tanh_derivative_median": 0.16135001182556152,
+        "critic_Q_mean": 4.957033157348633,
+        "critic_dQ_da_mean": 0.007826326095680498,
+        "critic_argmax_grid_mean": 0.8169014084507042,
+        "target_local_vs_online_mae": 1.860690712928772,
+        "target_local_vs_target_moving_mae": 1.9886493682861328
+      },
+      {
+        "condition": "G36-R100",
+        "observed_network": {
+          "utilization": 0.25148700126979884,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 16012,
+          "min_saturation": 0.12,
+          "cwnd_mean": 98.135,
+          "action_mean": -0.5493651846339344,
+          "reward_mean": 0.16448325769866734
+        },
+        "states": 71,
+        "predicted_action_mean": -0.29297181963920593,
+        "min_saturation": 0.4084507042253521,
+        "max_saturation": 0.08450704225352113,
+        "pre_tanh_abs_median": 2.472362756729126,
+        "tanh_derivative_median": 0.028082072734832764,
+        "critic_Q_mean": 6.735568046569824,
+        "critic_dQ_da_mean": -0.01624638326715778,
+        "critic_argmax_grid_mean": -0.24647887323943662,
+        "target_local_vs_online_mae": 0.6604107022285461,
+        "target_local_vs_target_moving_mae": 0.7176434993743896
+      },
+      {
+        "condition": "G42-R50",
+        "observed_network": {
+          "utilization": 0.46857273821119577,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 24377,
+          "min_saturation": 0.31,
+          "cwnd_mean": 161.145,
+          "action_mean": -0.35165821803268044,
+          "reward_mean": 0.3501711188539119
+        },
+        "states": 71,
+        "predicted_action_mean": -0.7026958465576172,
+        "min_saturation": 0.7746478873239436,
+        "max_saturation": 0.04225352112676056,
+        "pre_tanh_abs_median": 4.779599189758301,
+        "tanh_derivative_median": 0.0002821683883666992,
+        "critic_Q_mean": 3.987445592880249,
+        "critic_dQ_da_mean": -0.09996302760532325,
+        "critic_argmax_grid_mean": -0.5845070422535211,
+        "target_local_vs_online_mae": 0.5591700673103333,
+        "target_local_vs_target_moving_mae": 1.2141982316970825
+      },
+      {
+        "condition": "G48-R20",
+        "observed_network": {
+          "utilization": 0.7027419920798035,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 27468,
+          "min_saturation": 0.405,
+          "cwnd_mean": 178.185,
+          "action_mean": -0.13447136491537093,
+          "reward_mean": 0.475646761875044
+        },
+        "states": 71,
+        "predicted_action_mean": -0.6530840396881104,
+        "min_saturation": 0.6056338028169014,
+        "max_saturation": 0.014084507042253521,
+        "pre_tanh_abs_median": 4.726895809173584,
+        "tanh_derivative_median": 0.0003135204315185547,
+        "critic_Q_mean": 2.145270347595215,
+        "critic_dQ_da_mean": -0.34398500913494273,
+        "critic_argmax_grid_mean": -0.5774647887323944,
+        "target_local_vs_online_mae": 0.3026972711086273,
+        "target_local_vs_target_moving_mae": 1.4509552717208862
+      },
+      {
+        "condition": "G72-R200",
+        "observed_network": {
+          "utilization": 1.0000364600829983,
+          "window_ms": 3535.0
+        },
+        "recent_training": {
+          "step": 27163,
+          "min_saturation": 0.0,
+          "cwnd_mean": 2147483647.0,
+          "action_mean": 0.9928348967432976,
+          "reward_mean": 0.6911122022469692
+        },
+        "states": 71,
+        "predicted_action_mean": 0.8459624648094177,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 1.2229136228561401,
+        "tanh_derivative_median": 0.2935402989387512,
+        "critic_Q_mean": 26.75882339477539,
+        "critic_dQ_da_mean": -0.06395269291669677,
+        "critic_argmax_grid_mean": 0.6302816901408451,
+        "target_local_vs_online_mae": 0.9317930936813354,
+        "target_local_vs_target_moving_mae": 1.0791279077529907
+      },
+      {
+        "condition": "G12-R50",
+        "observed_network": {
+          "utilization": 0.5834336141195346,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 24232,
+          "min_saturation": 0.1,
+          "cwnd_mean": 29.06,
+          "action_mean": -0.6654499841108918,
+          "reward_mean": 0.195272993600827
+        },
+        "states": 71,
+        "predicted_action_mean": -0.4895879328250885,
+        "min_saturation": 0.5633802816901409,
+        "max_saturation": 0.04225352112676056,
+        "pre_tanh_abs_median": 4.5749592781066895,
+        "tanh_derivative_median": 0.000424802303314209,
+        "critic_Q_mean": 4.9175872802734375,
+        "critic_dQ_da_mean": 0.03128426758623816,
+        "critic_argmax_grid_mean": -0.25704225352112675,
+        "target_local_vs_online_mae": 0.24954518675804138,
+        "target_local_vs_target_moving_mae": 1.2598239183425903
+      },
+      {
+        "condition": "G24-R20",
+        "observed_network": {
+          "utilization": 0.8186923385479342,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 27961,
+          "min_saturation": 0.455,
+          "cwnd_mean": 85.555,
+          "action_mean": -0.20239805959165097,
+          "reward_mean": 0.4563514133461723
+        },
+        "states": 71,
+        "predicted_action_mean": -0.7737022638320923,
+        "min_saturation": 0.5211267605633803,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 3.0475423336029053,
+        "tanh_derivative_median": 0.008975207805633545,
+        "critic_Q_mean": 2.351553201675415,
+        "critic_dQ_da_mean": -0.08053332923967149,
+        "critic_argmax_grid_mean": -0.3345070422535211,
+        "target_local_vs_online_mae": 0.5962951183319092,
+        "target_local_vs_target_moving_mae": 1.219396948814392
+      },
+      {
+        "condition": "G36-R200",
+        "observed_network": {
+          "utilization": 0.9999744049506514,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 27599,
+          "min_saturation": 0.0,
+          "cwnd_mean": 2137058687.625,
+          "action_mean": 0.7687461702339351,
+          "reward_mean": 0.35101376418230673
+        },
+        "states": 71,
+        "predicted_action_mean": 0.6562331914901733,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.8338360786437988,
+        "tanh_derivative_median": 0.5341521501541138,
+        "critic_Q_mean": 13.454523086547852,
+        "critic_dQ_da_mean": 0.012622059100231441,
+        "critic_argmax_grid_mean": 0.7746478873239436,
+        "target_local_vs_online_mae": 0.7879243493080139,
+        "target_local_vs_target_moving_mae": 1.1139601469039917
+      },
+      {
+        "condition": "G42-R100",
+        "observed_network": {
+          "utilization": 0.29861349833848977,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 15964,
+          "min_saturation": 0.16,
+          "cwnd_mean": 147.545,
+          "action_mean": -0.5517879951465875,
+          "reward_mean": 0.1984063426153449
+        },
+        "states": 71,
+        "predicted_action_mean": -0.09753188490867615,
+        "min_saturation": 0.14084507042253522,
+        "max_saturation": 0.1267605633802817,
+        "pre_tanh_abs_median": 1.8217285871505737,
+        "tanh_derivative_median": 0.09937906265258789,
+        "critic_Q_mean": 8.728161811828613,
+        "critic_dQ_da_mean": 0.051018940983727036,
+        "critic_argmax_grid_mean": 0.045774647887323945,
+        "target_local_vs_online_mae": 0.7808635234832764,
+        "target_local_vs_target_moving_mae": 0.5056163668632507
+      },
+      {
+        "condition": "G48-R50",
+        "observed_network": {
+          "utilization": 0.38122211639681186,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 24112,
+          "min_saturation": 0.255,
+          "cwnd_mean": 126.425,
+          "action_mean": -0.4943304446525872,
+          "reward_mean": 0.24700786165209565
+        },
+        "states": 71,
+        "predicted_action_mean": -0.835512101650238,
+        "min_saturation": 0.8591549295774648,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 5.87798547744751,
+        "tanh_derivative_median": 3.135204315185547e-05,
+        "critic_Q_mean": 1.991219162940979,
+        "critic_dQ_da_mean": -0.188505590816292,
+        "critic_argmax_grid_mean": -0.8556338028169014,
+        "target_local_vs_online_mae": 0.2688184678554535,
+        "target_local_vs_target_moving_mae": 1.5667413473129272
+      },
+      {
+        "condition": "G72-R20",
+        "observed_network": {
+          "utilization": 0.4582971329278888,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 27234,
+          "min_saturation": 0.55,
+          "cwnd_mean": 32.785,
+          "action_mean": -0.8586986137740314,
+          "reward_mean": 0.0755575056390161
+        },
+        "states": 71,
+        "predicted_action_mean": -0.9369813203811646,
+        "min_saturation": 0.9014084507042254,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 10.832254409790039,
+        "tanh_derivative_median": 0.0,
+        "critic_Q_mean": 0.3790605664253235,
+        "critic_dQ_da_mean": -0.2562289571448465,
+        "critic_argmax_grid_mean": -0.897887323943662,
+        "target_local_vs_online_mae": 0.08039634674787521,
+        "target_local_vs_target_moving_mae": 1.8964951038360596
+      },
+      {
+        "condition": "G12-R100",
+        "observed_network": {
+          "utilization": 0.2715603690332932,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 18862,
+          "min_saturation": 0.035,
+          "cwnd_mean": 6.01,
+          "action_mean": -0.869329985678196,
+          "reward_mean": 0.036215294907858714
+        },
+        "states": 71,
+        "predicted_action_mean": -0.9999702572822571,
+        "min_saturation": 1.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 5.590056419372559,
+        "tanh_derivative_median": 5.5789947509765625e-05,
+        "critic_Q_mean": -0.05270891264081001,
+        "critic_dQ_da_mean": -0.22216521206014692,
+        "critic_argmax_grid_mean": -1.0,
+        "target_local_vs_online_mae": 0.05432213097810745,
+        "target_local_vs_target_moving_mae": 1.945648193359375
+      },
+      {
+        "condition": "G24-R50",
+        "observed_network": {
+          "utilization": 0.48455675892498995,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 24352,
+          "min_saturation": 0.075,
+          "cwnd_mean": 6.0,
+          "action_mean": -0.9116209360957146,
+          "reward_mean": 0.03518359283065303
+        },
+        "states": 71,
+        "predicted_action_mean": -0.9999815225601196,
+        "min_saturation": 1.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 5.791916847229004,
+        "tanh_derivative_median": 3.731250762939453e-05,
+        "critic_Q_mean": 0.0018607100937515497,
+        "critic_dQ_da_mean": -0.22228275297844724,
+        "critic_argmax_grid_mean": -1.0,
+        "target_local_vs_online_mae": 0.0023851043079048395,
+        "target_local_vs_target_moving_mae": 1.997596025466919
+      },
+      {
+        "condition": "G36-R20",
+        "observed_network": {
+          "utilization": 0.08541067967653546,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 27842,
+          "min_saturation": 0.58,
+          "cwnd_mean": 8.885,
+          "action_mean": -0.6896236685314215,
+          "reward_mean": 0.06950239637213512
+        },
+        "states": 71,
+        "predicted_action_mean": -0.9999936819076538,
+        "min_saturation": 1.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 15.249239921569824,
+        "tanh_derivative_median": 0.0,
+        "critic_Q_mean": -0.5181233882904053,
+        "critic_dQ_da_mean": -0.252460680372062,
+        "critic_argmax_grid_mean": -1.0,
+        "target_local_vs_online_mae": 0.030711140483617783,
+        "target_local_vs_target_moving_mae": 1.877583622932434
+      },
+      {
+        "condition": "G42-R200",
+        "observed_network": {
+          "utilization": 0.9999798863395332,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 27556,
+          "min_saturation": 0.0,
+          "cwnd_mean": 2146624653.54,
+          "action_mean": 0.9532076851278544,
+          "reward_mean": 0.40256970221130234
+        },
+        "states": 71,
+        "predicted_action_mean": 0.5316135883331299,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.5810154676437378,
+        "tanh_derivative_median": 0.7260491251945496,
+        "critic_Q_mean": 15.791118621826172,
+        "critic_dQ_da_mean": 0.009138450473329429,
+        "critic_argmax_grid_mean": 0.6443661971830986,
+        "target_local_vs_online_mae": 0.8670310378074646,
+        "target_local_vs_target_moving_mae": 1.3143210411071777
+      },
+      {
+        "condition": "G48-R100",
+        "observed_network": {
+          "utilization": 0.9999824019334409,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 27347,
+          "min_saturation": 0.0,
+          "cwnd_mean": 2147483647.0,
+          "action_mean": 0.9220534400641918,
+          "reward_mean": 0.23096175498470534
+        },
+        "states": 71,
+        "predicted_action_mean": 0.8421726822853088,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 1.1721432209014893,
+        "tanh_derivative_median": 0.3194442391395569,
+        "critic_Q_mean": 4.468864917755127,
+        "critic_dQ_da_mean": 0.007722132330957343,
+        "critic_argmax_grid_mean": 0.8345070422535211,
+        "target_local_vs_online_mae": 1.8371418714523315,
+        "target_local_vs_target_moving_mae": 1.994969129562378
+      },
+      {
+        "condition": "G72-R50",
+        "observed_network": {
+          "utilization": 0.5456459266189935,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 24019,
+          "min_saturation": 0.23,
+          "cwnd_mean": 30.32,
+          "action_mean": -0.8227706081792712,
+          "reward_mean": 0.03900339730120873
+        },
+        "states": 71,
+        "predicted_action_mean": -0.9375738501548767,
+        "min_saturation": 0.9295774647887324,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 5.92726993560791,
+        "tanh_derivative_median": 2.8371810913085938e-05,
+        "critic_Q_mean": 0.6963149309158325,
+        "critic_dQ_da_mean": -0.18763384431323696,
+        "critic_argmax_grid_mean": -0.8697183098591549,
+        "target_local_vs_online_mae": 0.054083794355392456,
+        "target_local_vs_target_moving_mae": 1.8836504220962524
+      },
+      {
+        "condition": "G12-R200",
+        "observed_network": {
+          "utilization": 0.441837144003209,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 19566,
+          "min_saturation": 0.17,
+          "cwnd_mean": 225.13,
+          "action_mean": -0.08208085681544616,
+          "reward_mean": 0.6638618781539308
+        },
+        "states": 71,
+        "predicted_action_mean": 0.12911997735500336,
+        "min_saturation": 0.028169014084507043,
+        "max_saturation": 0.18309859154929578,
+        "pre_tanh_abs_median": 1.8800171613693237,
+        "tanh_derivative_median": 0.08894187211990356,
+        "critic_Q_mean": 10.755425453186035,
+        "critic_dQ_da_mean": 0.04898490186260949,
+        "critic_argmax_grid_mean": 0.3204225352112676,
+        "target_local_vs_online_mae": 0.7713065147399902,
+        "target_local_vs_target_moving_mae": 0.1004284918308258
+      },
+      {
+        "condition": "G24-R100",
+        "observed_network": {
+          "utilization": 0.31979542719614923,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 19263,
+          "min_saturation": 0.175,
+          "cwnd_mean": 104.06,
+          "action_mean": -0.45549198078690095,
+          "reward_mean": 0.2241056267522951
+        },
+        "states": 71,
+        "predicted_action_mean": -0.591917097568512,
+        "min_saturation": 0.5633802816901409,
+        "max_saturation": 0.04225352112676056,
+        "pre_tanh_abs_median": 3.5108108520507812,
+        "tanh_derivative_median": 0.003563225269317627,
+        "critic_Q_mean": 5.74557638168335,
+        "critic_dQ_da_mean": -0.07664010021911663,
+        "critic_argmax_grid_mean": -0.6232394366197183,
+        "target_local_vs_online_mae": 0.892240583896637,
+        "target_local_vs_target_moving_mae": 0.6997745037078857
+      },
+      {
+        "condition": "G36-R50",
+        "observed_network": {
+          "utilization": 0.5275011695515606,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 24386,
+          "min_saturation": 0.165,
+          "cwnd_mean": 10.83,
+          "action_mean": -0.8515589780453593,
+          "reward_mean": 0.031195592865216296
+        },
+        "states": 71,
+        "predicted_action_mean": -0.9984489679336548,
+        "min_saturation": 0.9859154929577465,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 5.8637590408325195,
+        "tanh_derivative_median": 3.230571746826172e-05,
+        "critic_Q_mean": 0.1759035438299179,
+        "critic_dQ_da_mean": -0.18778677628565787,
+        "critic_argmax_grid_mean": -0.9507042253521126,
+        "target_local_vs_online_mae": 0.02518284134566784,
+        "target_local_vs_target_moving_mae": 1.9733070135116577
+      },
+      {
+        "condition": "G42-R20",
+        "observed_network": {
+          "utilization": 0.31345250372407474,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 27628,
+          "min_saturation": 0.475,
+          "cwnd_mean": 32.86,
+          "action_mean": -0.3899141229316592,
+          "reward_mean": 0.22830951040670688
+        },
+        "states": 71,
+        "predicted_action_mean": -0.9999997615814209,
+        "min_saturation": 1.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 11.25249195098877,
+        "tanh_derivative_median": 0.0,
+        "critic_Q_mean": 0.9879865050315857,
+        "critic_dQ_da_mean": -0.23453938951990028,
+        "critic_argmax_grid_mean": -1.0,
+        "target_local_vs_online_mae": 2.2985566374700284e-06,
+        "target_local_vs_target_moving_mae": 1.999997615814209
+      },
+      {
+        "condition": "G48-R200",
+        "observed_network": {
+          "utilization": 0.9999746694496497,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 27163,
+          "min_saturation": 0.0,
+          "cwnd_mean": 2145014040.8,
+          "action_mean": 0.8582091654089163,
+          "reward_mean": 0.4592185889881876
+        },
+        "states": 71,
+        "predicted_action_mean": 0.5800716280937195,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.573986828327179,
+        "tanh_derivative_median": 0.7313846349716187,
+        "critic_Q_mean": 18.107698440551758,
+        "critic_dQ_da_mean": 0.0037891030673721025,
+        "critic_argmax_grid_mean": 0.6232394366197183,
+        "target_local_vs_online_mae": 1.0774328708648682,
+        "target_local_vs_target_moving_mae": 1.489861249923706
+      },
+      {
+        "condition": "G72-R100",
+        "observed_network": {
+          "utilization": 0.9999922120806205,
+          "window_ms": 3538.0
+        },
+        "recent_training": {
+          "step": 26968,
+          "min_saturation": 0.0,
+          "cwnd_mean": 2144155047.34,
+          "action_mean": 0.8008774917927803,
+          "reward_mean": 0.3449217110013263
+        },
+        "states": 71,
+        "predicted_action_mean": 0.6360090970993042,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.7235376834869385,
+        "tanh_derivative_median": 0.6167203783988953,
+        "critic_Q_mean": 13.39831256866455,
+        "critic_dQ_da_mean": 0.010832147055798899,
+        "critic_argmax_grid_mean": 0.7288732394366197,
+        "target_local_vs_online_mae": 0.9568260908126831,
+        "target_local_vs_target_moving_mae": 1.320816993713379
+      }
+    ]
+  },
+  "diagnosis2412694": {
+    "checkpoint_sample_step": 2412694,
+    "probe_states": 1704,
+    "probe_mean_exact_minus_one": 0,
+    "probe_mean_near_minus_one": 0,
+    "classes_with_any_probe_saturation": 0,
+    "critic_Q_class_mean_range": [
+      82.52057647705078,
+      100.38516235351562
+    ],
+    "recent_5s_training_utilization_equal_condition": 0.972087904508586,
+    "scope": "Read-only NumPy forward and analytic dQ/da on recent real histories, frozen checkpoint. Histories observed after checkpoint are diagnostic inputs, not its training batch. Not a causal intervention or a calibrated Q-return test. Target local statistics depend on the collected batch. No policy/reward/environment changes.",
+    "rows": [
+      {
+        "condition": "G12-R20",
+        "observed_network": {
+          "utilization": 0.968311271560369,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 104125,
+          "min_saturation": 0.0,
+          "cwnd_mean": 37.315,
+          "action_mean": -0.4719898041174747,
+          "reward_mean": 0.8108690877895662
+        },
+        "states": 71,
+        "predicted_action_mean": -0.5140313506126404,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.6233716011047363,
+        "tanh_derivative_median": 0.6936696171760559,
+        "critic_Q_mean": 90.26168823242188,
+        "critic_dQ_da_mean": 0.28752329646676444,
+        "critic_argmax_grid_mean": -0.4823943661971831,
+        "target_local_vs_online_mae": 0.05973677709698677,
+        "target_local_vs_target_moving_mae": 1.5404902696609497
+      },
+      {
+        "condition": "G24-R200",
+        "observed_network": {
+          "utilization": 0.9865623746490172,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 103762,
+          "min_saturation": 0.0,
+          "cwnd_mean": 602.135,
+          "action_mean": -0.030430674087256193,
+          "reward_mean": 0.9010000524300213
+        },
+        "states": 71,
+        "predicted_action_mean": -0.008601576089859009,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.5057485103607178,
+        "tanh_derivative_median": 0.7822601795196533,
+        "critic_Q_mean": 99.11842346191406,
+        "critic_dQ_da_mean": -0.05774047196639362,
+        "critic_argmax_grid_mean": 0.02112676056338028,
+        "target_local_vs_online_mae": 0.23659826815128326,
+        "target_local_vs_target_moving_mae": 0.9872559309005737
+      },
+      {
+        "condition": "G36-R100",
+        "observed_network": {
+          "utilization": 0.9599185082067682,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 91822,
+          "min_saturation": 0.0,
+          "cwnd_mean": 472.1,
+          "action_mean": 0.011777557639870793,
+          "reward_mean": 0.8437605356565832
+        },
+        "states": 71,
+        "predicted_action_mean": 0.029301898553967476,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.5868010520935059,
+        "tanh_derivative_median": 0.7216476798057556,
+        "critic_Q_mean": 91.8753662109375,
+        "critic_dQ_da_mean": -0.09476575313017707,
+        "critic_argmax_grid_mean": 0.017605633802816902,
+        "target_local_vs_online_mae": 0.23102465271949768,
+        "target_local_vs_target_moving_mae": 0.9264309406280518
+      },
+      {
+        "condition": "G42-R50",
+        "observed_network": {
+          "utilization": 0.9944998281196288,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 100247,
+          "min_saturation": 0.0,
+          "cwnd_mean": 312.29,
+          "action_mean": -0.030786747271195056,
+          "reward_mean": 0.799892745985913
+        },
+        "states": 71,
+        "predicted_action_mean": -0.015644365921616554,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.5769016146659851,
+        "tanh_derivative_median": 0.7291736602783203,
+        "critic_Q_mean": 85.23914337158203,
+        "critic_dQ_da_mean": 0.02179643402160456,
+        "critic_argmax_grid_mean": -0.02112676056338028,
+        "target_local_vs_online_mae": 0.20020584762096405,
+        "target_local_vs_target_moving_mae": 1.0893279314041138
+      },
+      {
+        "condition": "G48-R20",
+        "observed_network": {
+          "utilization": 0.9941851721890822,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 103479,
+          "min_saturation": 0.0,
+          "cwnd_mean": 138.13,
+          "action_mean": -0.09661052459705388,
+          "reward_mean": 0.7653906920503217
+        },
+        "states": 71,
+        "predicted_action_mean": -0.09450846165418625,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.14884716272354126,
+        "tanh_derivative_median": 0.978167712688446,
+        "critic_Q_mean": 83.67047119140625,
+        "critic_dQ_da_mean": 0.3481548666702607,
+        "critic_argmax_grid_mean": -0.10915492957746478,
+        "target_local_vs_online_mae": 0.21603254973888397,
+        "target_local_vs_target_moving_mae": 1.2974188327789307
+      },
+      {
+        "condition": "G72-R200",
+        "observed_network": {
+          "utilization": 0.9036938139741878,
+          "window_ms": 3754.0
+        },
+        "recent_training": {
+          "step": 102987,
+          "min_saturation": 0.0,
+          "cwnd_mean": 1628.115,
+          "action_mean": -0.05127034176839516,
+          "reward_mean": 0.8172287370769298
+        },
+        "states": 71,
+        "predicted_action_mean": -0.002339255530387163,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.9996193051338196,
+        "tanh_derivative_median": 0.4202180504798889,
+        "critic_Q_mean": 100.22686767578125,
+        "critic_dQ_da_mean": -0.1201400184829417,
+        "critic_argmax_grid_mean": -0.16901408450704225,
+        "target_local_vs_online_mae": 0.1384529173374176,
+        "target_local_vs_target_moving_mae": 0.9667636752128601
+      },
+      {
+        "condition": "G12-R50",
+        "observed_network": {
+          "utilization": 0.9979943842759728,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 99971,
+          "min_saturation": 0.0,
+          "cwnd_mean": 97.795,
+          "action_mean": -0.1378306327830069,
+          "reward_mean": 0.7789409886093438
+        },
+        "states": 71,
+        "predicted_action_mean": -0.12416036427021027,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.7329921722412109,
+        "tanh_derivative_median": 0.6095094084739685,
+        "critic_Q_mean": 84.3544692993164,
+        "critic_dQ_da_mean": 0.029401385368297322,
+        "critic_argmax_grid_mean": -0.1267605633802817,
+        "target_local_vs_online_mae": 0.20240552723407745,
+        "target_local_vs_target_moving_mae": 1.3018522262573242
+      },
+      {
+        "condition": "G24-R20",
+        "observed_network": {
+          "utilization": 0.9665062174087445,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 103614,
+          "min_saturation": 0.0,
+          "cwnd_mean": 66.905,
+          "action_mean": -0.03100583071820438,
+          "reward_mean": 0.7453627929279185
+        },
+        "states": 71,
+        "predicted_action_mean": -0.10300374031066895,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.2283744513988495,
+        "tanh_derivative_median": 0.9496063590049744,
+        "critic_Q_mean": 84.76189422607422,
+        "critic_dQ_da_mean": 0.4085784880332821,
+        "critic_argmax_grid_mean": -0.1267605633802817,
+        "target_local_vs_online_mae": 0.08781901001930237,
+        "target_local_vs_target_moving_mae": 1.0352232456207275
+      },
+      {
+        "condition": "G36-R200",
+        "observed_network": {
+          "utilization": 0.9335694713626946,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 103273,
+          "min_saturation": 0.0,
+          "cwnd_mean": 836.455,
+          "action_mean": -0.06893284761172254,
+          "reward_mean": 0.8507282827404901
+        },
+        "states": 71,
+        "predicted_action_mean": -0.0593978650867939,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.8468313217163086,
+        "tanh_derivative_median": 0.5247132778167725,
+        "critic_Q_mean": 100.09587860107422,
+        "critic_dQ_da_mean": -0.10947919436261934,
+        "critic_argmax_grid_mean": -0.13380281690140844,
+        "target_local_vs_online_mae": 0.1622724086046219,
+        "target_local_vs_target_moving_mae": 1.0471584796905518
+      },
+      {
+        "condition": "G42-R100",
+        "observed_network": {
+          "utilization": 0.9761072594969347,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 91568,
+          "min_saturation": 0.0,
+          "cwnd_mean": 545.27,
+          "action_mean": -0.014599524374934844,
+          "reward_mean": 0.8452523163677371
+        },
+        "states": 71,
+        "predicted_action_mean": 0.004304274916648865,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.4835728704929352,
+        "tanh_derivative_median": 0.798308789730072,
+        "critic_Q_mean": 90.67147064208984,
+        "critic_dQ_da_mean": -0.12855353374790163,
+        "critic_argmax_grid_mean": -0.017605633802816902,
+        "target_local_vs_online_mae": 0.2266533225774765,
+        "target_local_vs_target_moving_mae": 0.9890832901000977
+      },
+      {
+        "condition": "G48-R50",
+        "observed_network": {
+          "utilization": 0.9909765390014037,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 99753,
+          "min_saturation": 0.0,
+          "cwnd_mean": 374.22,
+          "action_mean": -0.045194071176083525,
+          "reward_mean": 0.7561920197362031
+        },
+        "states": 71,
+        "predicted_action_mean": -0.026316016912460327,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.6666489243507385,
+        "tanh_derivative_median": 0.6603777408599854,
+        "critic_Q_mean": 84.43428039550781,
+        "critic_dQ_da_mean": -0.0712276570942788,
+        "critic_argmax_grid_mean": -0.03873239436619718,
+        "target_local_vs_online_mae": 0.1853056252002716,
+        "target_local_vs_target_moving_mae": 1.1281142234802246
+      },
+      {
+        "condition": "G72-R20",
+        "observed_network": {
+          "utilization": 0.9949145359514056,
+          "window_ms": 3549.0
+        },
+        "recent_training": {
+          "step": 102983,
+          "min_saturation": 0.0,
+          "cwnd_mean": 200.56,
+          "action_mean": -0.14322499626068746,
+          "reward_mean": 0.788255682249948
+        },
+        "states": 71,
+        "predicted_action_mean": -0.19820646941661835,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.14981648325920105,
+        "tanh_derivative_median": 0.9778866767883301,
+        "critic_Q_mean": 85.36683654785156,
+        "critic_dQ_da_mean": 0.06878547010172259,
+        "critic_argmax_grid_mean": -0.2887323943661972,
+        "target_local_vs_online_mae": 0.2878236472606659,
+        "target_local_vs_target_moving_mae": 1.4860299825668335
+      },
+      {
+        "condition": "G12-R100",
+        "observed_network": {
+          "utilization": 0.9835539510629764,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 94563,
+          "min_saturation": 0.0,
+          "cwnd_mean": 162.525,
+          "action_mean": 0.0005298566212877631,
+          "reward_mean": 0.8373411145733509
+        },
+        "states": 71,
+        "predicted_action_mean": 0.018324173986911774,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.5057086944580078,
+        "tanh_derivative_median": 0.7822892665863037,
+        "critic_Q_mean": 89.26191711425781,
+        "critic_dQ_da_mean": 0.11328212508885967,
+        "critic_argmax_grid_mean": 0.07746478873239436,
+        "target_local_vs_online_mae": 0.2408595234155655,
+        "target_local_vs_target_moving_mae": 0.9524560570716858
+      },
+      {
+        "condition": "G24-R50",
+        "observed_network": {
+          "utilization": 0.9860609707180105,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 100165,
+          "min_saturation": 0.0,
+          "cwnd_mean": 184.885,
+          "action_mean": -0.016794756026938557,
+          "reward_mean": 0.7686697251040008
+        },
+        "states": 71,
+        "predicted_action_mean": -0.02313114143908024,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.8883751630783081,
+        "tanh_derivative_median": 0.4950615167617798,
+        "critic_Q_mean": 83.8069076538086,
+        "critic_dQ_da_mean": 0.16329139321659092,
+        "critic_argmax_grid_mean": -0.01056338028169014,
+        "target_local_vs_online_mae": 0.1392010599374771,
+        "target_local_vs_target_moving_mae": 1.1310516595840454
+      },
+      {
+        "condition": "G36-R20",
+        "observed_network": {
+          "utilization": 0.9688860181355144,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 103604,
+          "min_saturation": 0.0,
+          "cwnd_mean": 103.43,
+          "action_mean": -0.04191820378182456,
+          "reward_mean": 0.7138236241704745
+        },
+        "states": 71,
+        "predicted_action_mean": -0.10714799910783768,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.22905316948890686,
+        "tanh_derivative_median": 0.9493166208267212,
+        "critic_Q_mean": 84.0979995727539,
+        "critic_dQ_da_mean": 0.760509488165641,
+        "critic_argmax_grid_mean": -0.09859154929577464,
+        "target_local_vs_online_mae": 0.07839734852313995,
+        "target_local_vs_target_moving_mae": 1.0521368980407715
+      },
+      {
+        "condition": "G42-R200",
+        "observed_network": {
+          "utilization": 0.9337076720334613,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 103136,
+          "min_saturation": 0.0,
+          "cwnd_mean": 980.4,
+          "action_mean": -0.05612386362394318,
+          "reward_mean": 0.8574123194874262
+        },
+        "states": 71,
+        "predicted_action_mean": -0.0051394058391451836,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.9920606017112732,
+        "tanh_derivative_median": 0.4250728487968445,
+        "critic_Q_mean": 100.38516235351562,
+        "critic_dQ_da_mean": -0.17580989322510213,
+        "critic_argmax_grid_mean": -0.07394366197183098,
+        "target_local_vs_online_mae": 0.1595803201198578,
+        "target_local_vs_target_moving_mae": 1.0018672943115234
+      },
+      {
+        "condition": "G48-R100",
+        "observed_network": {
+          "utilization": 0.981653215700035,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 103027,
+          "min_saturation": 0.0,
+          "cwnd_mean": 639.155,
+          "action_mean": -0.09939456724736374,
+          "reward_mean": 0.864869741738681
+        },
+        "states": 71,
+        "predicted_action_mean": -0.09473129361867905,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.3018624782562256,
+        "tanh_derivative_median": 0.9141415357589722,
+        "critic_Q_mean": 90.6237564086914,
+        "critic_dQ_da_mean": 0.022203037950506366,
+        "critic_argmax_grid_mean": -0.09507042253521127,
+        "target_local_vs_online_mae": 0.26281479001045227,
+        "target_local_vs_target_moving_mae": 1.108712911605835
+      },
+      {
+        "condition": "G72-R50",
+        "observed_network": {
+          "utilization": 0.9675182651589185,
+          "window_ms": 3591.0
+        },
+        "recent_training": {
+          "step": 99755,
+          "min_saturation": 0.0,
+          "cwnd_mean": 500.52,
+          "action_mean": 0.0012445718981325626,
+          "reward_mean": 0.7865364019936658
+        },
+        "states": 71,
+        "predicted_action_mean": 0.016527066007256508,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.717269241809845,
+        "tanh_derivative_median": 0.6215105056762695,
+        "critic_Q_mean": 84.84635162353516,
+        "critic_dQ_da_mean": 0.008988247907213896,
+        "critic_argmax_grid_mean": 0.01056338028169014,
+        "target_local_vs_online_mae": 0.19195210933685303,
+        "target_local_vs_target_moving_mae": 1.1019595861434937
+      },
+      {
+        "condition": "G12-R200",
+        "observed_network": {
+          "utilization": 0.9847573204973927,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 95555,
+          "min_saturation": 0.0,
+          "cwnd_mean": 301.625,
+          "action_mean": -0.05260603335598717,
+          "reward_mean": 0.8883112225297976
+        },
+        "states": 71,
+        "predicted_action_mean": -0.011666531674563885,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.5749952793121338,
+        "tanh_derivative_median": 0.7306199073791504,
+        "critic_Q_mean": 98.76872253417969,
+        "critic_dQ_da_mean": -0.08911541060270632,
+        "critic_argmax_grid_mean": 0.007042253521126761,
+        "target_local_vs_online_mae": 0.2226959615945816,
+        "target_local_vs_target_moving_mae": 0.9942860007286072
+      },
+      {
+        "condition": "G24-R100",
+        "observed_network": {
+          "utilization": 0.9972924187725631,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 95124,
+          "min_saturation": 0.0,
+          "cwnd_mean": 332.6,
+          "action_mean": -0.09415928130154498,
+          "reward_mean": 0.8635579867658784
+        },
+        "states": 71,
+        "predicted_action_mean": -0.09226048737764359,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.31346395611763,
+        "tanh_derivative_median": 0.9078360795974731,
+        "critic_Q_mean": 89.819580078125,
+        "critic_dQ_da_mean": -0.17822765548629188,
+        "critic_argmax_grid_mean": -0.10915492957746478,
+        "target_local_vs_online_mae": 0.2561742663383484,
+        "target_local_vs_target_moving_mae": 1.1132806539535522
+      },
+      {
+        "condition": "G36-R50",
+        "observed_network": {
+          "utilization": 0.9685223551426853,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 100427,
+          "min_saturation": 0.0,
+          "cwnd_mean": 270.99,
+          "action_mean": -0.06459379783365876,
+          "reward_mean": 0.7826592492547875
+        },
+        "states": 71,
+        "predicted_action_mean": -0.04644700512290001,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.4932742416858673,
+        "tanh_derivative_median": 0.7913234233856201,
+        "critic_Q_mean": 85.38744354248047,
+        "critic_dQ_da_mean": 0.03346190299917882,
+        "critic_argmax_grid_mean": -0.08450704225352113,
+        "target_local_vs_online_mae": 0.21157729625701904,
+        "target_local_vs_target_moving_mae": 1.1640667915344238
+      },
+      {
+        "condition": "G42-R20",
+        "observed_network": {
+          "utilization": 0.949540467955884,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 103631,
+          "min_saturation": 0.0,
+          "cwnd_mean": 111.465,
+          "action_mean": -0.03530499883519951,
+          "reward_mean": 0.7363771120426214
+        },
+        "states": 71,
+        "predicted_action_mean": -0.06809141486883163,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.18269148468971252,
+        "tanh_derivative_median": 0.9673526883125305,
+        "critic_Q_mean": 82.52057647705078,
+        "critic_dQ_da_mean": 0.45329358479007764,
+        "critic_argmax_grid_mean": -0.07746478873239436,
+        "target_local_vs_online_mae": 0.1425309181213379,
+        "target_local_vs_target_moving_mae": 1.133060336112976
+      },
+      {
+        "condition": "G48-R200",
+        "observed_network": {
+          "utilization": 0.9603488896686551,
+          "window_ms": 5000.0
+        },
+        "recent_training": {
+          "step": 103160,
+          "min_saturation": 0.0,
+          "cwnd_mean": 1163.82,
+          "action_mean": -0.0629069476321456,
+          "reward_mean": 0.8820600911999213
+        },
+        "states": 71,
+        "predicted_action_mean": -0.019482282921671867,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.8166084885597229,
+        "tanh_derivative_median": 0.546775221824646,
+        "critic_Q_mean": 100.23434448242188,
+        "critic_dQ_da_mean": -0.11072136523770242,
+        "critic_argmax_grid_mean": -0.0528169014084507,
+        "target_local_vs_online_mae": 0.1818421185016632,
+        "target_local_vs_target_moving_mae": 0.9965954422950745
+      },
+      {
+        "condition": "G72-R100",
+        "observed_network": {
+          "utilization": 0.9810287871637565,
+          "window_ms": 3541.0
+        },
+        "recent_training": {
+          "step": 102939,
+          "min_saturation": 0.0,
+          "cwnd_mean": 969.1,
+          "action_mean": -0.11320006830152124,
+          "reward_mean": 0.8550931285757131
+        },
+        "states": 71,
+        "predicted_action_mean": -0.08012086898088455,
+        "min_saturation": 0.0,
+        "max_saturation": 0.0,
+        "pre_tanh_abs_median": 0.35697224736213684,
+        "tanh_derivative_median": 0.882663369178772,
+        "critic_Q_mean": 92.84574127197266,
+        "critic_dQ_da_mean": 0.061510227496468,
+        "critic_argmax_grid_mean": -0.09507042253521127,
+        "target_local_vs_online_mae": 0.277358740568161,
+        "target_local_vs_target_moving_mae": 1.121817946434021
+      }
+    ]
+  },
+  "historical_complete": {
+    "inserted": 2412694,
+    "wall_s": 2326.638517141342,
+    "counters": {
+      "critic_iterations": 240040,
+      "critic_optimizer_ops": 480080,
+      "actor_updates": 240040,
+      "target_updates": 240040
+    }
+  },
+  "L1_budget_fraction": 0.02376083333333333,
+  "L1_relative_to_baseline_budget": 0.011880416666666666,
+  "moving_actor_loss_already_in_baseline": true,
+  "code_evidence": [
+    "frameworks/baseline/distributed.py: backend moving_stats installs moving_stats_backend",
+    "frameworks/baseline/moving_stats_backend.py: build_actor_train_op uses _moving_action"
+  ],
+  "sources": {
+    "evidence\\baseline\\audit\\balanced-trajectory-329992.json": "7472715acf22b7fbb4c3bb9a7468bc545cd65ceae54fad212661ddd44fe2aa93",
+    "evidence\\baseline\\audit\\formal24-grid24-seed3-balanced-u010-policy-diagnosis-500010.json": "6a07c9058e9a66898fcd57a316ed11a2092eef4b16fda507cefe715eb4b05e12",
+    "evidence\\baseline\\audit\\formal24-grid24-seed3-balanced-u010-policy-diagnosis-2412694.json": "a2f48dc224337f1a9a925f4eedae3fde0499c5b7af02ddd63d34a12ab1109d37"
+  },
+  "limitations": [
+    "One selected successful run demonstrates possible recovery, not universal/necessary recovery or that L1 would recover.",
+    "Intermediate live5s windows and fixed-state checkpoint probes are not frozen performance evaluations.",
+    "Archived base is the Canopy agent_v2 engineering recipe, not full official Orca paper reproduction.",
+    "Saturation can generate experience; its necessity, benefit and cause of recovery are not established by this trajectory.",
+    "Shared host buffer influence does not establish the unique bottleneck or bound all network harm."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema": 2,
+  "incoming": {
+    "writes": 0,
+    "received": 2773,
+    "duplicates": 103837,
+    "empty": 401,
+    "rejected": 0
+  },
+  "outgoing": {
+    "writes": 2774,
+    "received": 0,
+    "duplicates": 0,
+    "empty": 0,
+    "rejected": 0
+  },
+  "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+}

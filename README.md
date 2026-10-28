@@ -2,7 +2,7 @@
 
 本仓库保存三个原始交付实现、选定模型、训练/评测框架，以及后续基线与双动作研究的代码和证据。**截至2026-10-28，研究仍为PARTIAL：新的Orca基座未通过多场景验收，Canopy正式训练中途按用户要求暂停，双动作模型尚未证明稳定的性能—CPU优势。**
 
-最新入口：[L2-A执行结果与研究交接](docs/RESEARCH_REVIEW_BRIEF.md)。24条件critic-only收集完成：514,075条真实经验、50,000完整critic更新、actor更新0；终点replay三臂×两个采样重复也已完成。原登记门未通过，L2-B及冻结性能评测NOT_RUN。事后逐场景查询发现E1与critic探针的actor权重错配：贡献最多正E1的G72-R100/R200，其critic实际为正，不能由负RTT组均值直接判有害迁移。研究仍PARTIAL，尚无新合格基座或网络/CPU收益证明。[原始曲线与反证](evidence/scalar-critic-only-L2A-20261028/final-analysis.json)完整保留；此前所有失败及预测见研究交接。
+最新入口：[归档配方复盘与第0步实测](docs/BASE_FIRST_PRINCIPLES_REVIEW.md)。原归档模型在今天环境24条件冻结配对：原native98.69%利用率/33.03ms排队、verified96.34%/31.75ms，均过总体筛查；两场景有大幅单次差异，未证明逐场景等价。历史确有饱和后恢复，但不等于任何新配方必自愈。0训练，第1步2.4M未启动；[失败/补测/辅助恢复及逐场景证据](evidence/base-first-principles-20261028/final-analysis.json)保留。研究仍PARTIAL，尚无新合格基座或双动作性能—CPU优势证明。
 
 此前[累计探索/缓冲诊断](docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md)、[双向IPC/初始化诊断](tools/scalar_ipc_diagnostic/README.md)、[E2接管诊断](tools/e2_handover/README.md)保留全部结果。原始快照tag `consolidated-20261018` 和51个选定模型文件未变；归档源码不意味着论文复现或新模型合格。
 

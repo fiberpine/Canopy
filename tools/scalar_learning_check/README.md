@@ -1,3 +1,13 @@
+# 最新：归档基线历史与逐场景复算（2026-10-28）
+
+`baseline_history_review.py`只读归档33万/50万/241万证据，区分live片段、固定输入查询与冻结性能；历史恢复不保证L1继续恢复。`scenario_alignment.py`按actor×动作前延迟类复算L2-A符号，J10名义z≥3为14/14、z≥2.5为17/17；后验阈值未校正多重比较，场景一致仍不等于相同因果效应或在线安全。缺失、非有限、零导数不伪称负方向通过。
+
+`frameworks/baseline_ipc_audit`只用于归档模型冻结审核。保留原门控辅助，兼容原浮点映射24%，全局scalar协议和原baseline未改。它不是已验证的第1步训练实现，不能启动原配方长训。
+
+[第0步完整结果及限制](../../docs/BASE_FIRST_PRINCIPLES_REVIEW.md)。下面是此前阶段；不会因历史“下一步”文字自动开训练或设计新门。
+
+---
+
 # L2-A有限critic-only工具（2026-10-28）
 
 `frameworks/canopy_single/critic_only_control.py`是显式opt-in的冻结/账本断言：仅Orca、必须有完整critic更新上限；actor权重及Adam状态逐位不变，BN允许演化。分开记录critic优化器操作/actor/target更新，每2k完整critic更新保存快照；首次停止先保存`policy-at-first-stop`、停止优化，再排空入库并报告未使用额度。它不实现actor放行或完整resume，原默认训练路径不变。

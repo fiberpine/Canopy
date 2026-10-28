@@ -1,0 +1,2354 @@
+[
+  {
+    "run_id": "base-step0-06-verified",
+    "host_index": 0,
+    "queue_p99_ms": {
+      "0": 45.0,
+      "10": 44.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.04448366165161,
+      "cpu_monitor_end_s": 50.08716630935669,
+      "cpu_interval_s": 25.042682647705078,
+      "python_cpu_percent_one_core": 4.352568833514681,
+      "all_owned_cpu_percent_one_core": 7.187728348923326,
+      "native_children_cpu_percent_one_core": 2.8351595154086446,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.4,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2753,
+      "controlled_exposure_s": 59.62601299999979,
+      "policy_calls_per_exposure_s": 46.171123331690985
+    },
+    "transport_domain": {
+      "actions": 2753,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 371
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2754,
+          "sent": 2754,
+          "received": 2754
+        },
+        {
+          "compared": 2753,
+          "sent": 2753,
+          "received": 2753
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2753,
+          "duplicates": 103502,
+          "empty": 882,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2754,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-06-legacy",
+    "host_index": 0,
+    "queue_p99_ms": {
+      "0": 45.0,
+      "10": 44.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.042431831359863,
+      "cpu_monitor_end_s": 50.08461666107178,
+      "cpu_interval_s": 25.042184829711914,
+      "python_cpu_percent_one_core": 6.109690549782596,
+      "all_owned_cpu_percent_one_core": 8.9449064258255,
+      "native_children_cpu_percent_one_core": 2.8352158760429047,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.6,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2755,
+      "controlled_exposure_s": 59.66173899999984,
+      "policy_calls_per_exposure_s": 46.17699795844046
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-00-verified",
+    "host_index": 0,
+    "queue_p99_ms": {
+      "0": 10.0,
+      "10": 10.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.041674375534058,
+      "cpu_monitor_end_s": 50.08141040802002,
+      "cpu_interval_s": 25.039736032485962,
+      "python_cpu_percent_one_core": 4.353081033225989,
+      "all_owned_cpu_percent_one_core": 6.7892089509029185,
+      "native_children_cpu_percent_one_core": 2.436127917676929,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.2999999999999998,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2773,
+      "controlled_exposure_s": 59.86547399999992,
+      "policy_calls_per_exposure_s": 46.320521908838536
+    },
+    "transport_domain": {
+      "actions": 2773,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 310
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2774,
+          "sent": 2774,
+          "received": 2774
+        },
+        {
+          "compared": 2773,
+          "sent": 2773,
+          "received": 2773
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2773,
+          "duplicates": 103837,
+          "empty": 401,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2774,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-00-legacy",
+    "host_index": 0,
+    "queue_p99_ms": {
+      "0": 9.0,
+      "10": 8.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.041404485702515,
+      "cpu_monitor_end_s": 50.081465005874634,
+      "cpu_interval_s": 25.04006052017212,
+      "python_cpu_percent_one_core": 6.070272868452126,
+      "all_owned_cpu_percent_one_core": 8.426497205548676,
+      "native_children_cpu_percent_one_core": 2.356224337096548,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.5,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2774,
+      "controlled_exposure_s": 59.87662199999991,
+      "policy_calls_per_exposure_s": 46.328598831109815
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-23-legacy",
+    "host_index": 0,
+    "queue_p99_ms": {
+      "0": 261.0,
+      "10": 31.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.043394804000854,
+      "cpu_monitor_end_s": 50.08537149429321,
+      "cpu_interval_s": 25.04197669029236,
+      "python_cpu_percent_one_core": 6.109741331214927,
+      "all_owned_cpu_percent_one_core": 9.304377321392666,
+      "native_children_cpu_percent_one_core": 3.1946359901777397,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.0,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2601,
+      "controlled_exposure_s": 56.277079999999934,
+      "policy_calls_per_exposure_s": 46.21774974821016
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-23-verified-r2",
+    "host_index": 0,
+    "queue_p99_ms": {
+      "0": 261.0,
+      "10": 34.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.045358419418335,
+      "cpu_monitor_end_s": 50.093778133392334,
+      "cpu_interval_s": 25.048419713974,
+      "python_cpu_percent_one_core": 4.31164924706803,
+      "all_owned_cpu_percent_one_core": 7.545386182369053,
+      "native_children_cpu_percent_one_core": 3.233736935301023,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.0,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2597,
+      "controlled_exposure_s": 56.261013999999946,
+      "policy_calls_per_exposure_s": 46.1598505849895
+    },
+    "transport_domain": {
+      "actions": 2597,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 378
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2598,
+          "sent": 2598,
+          "received": 2598
+        },
+        {
+          "compared": 2597,
+          "sent": 2597,
+          "received": 2597
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2597,
+          "duplicates": 97619,
+          "empty": 7040,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2598,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-01-legacy-r2",
+    "host_index": 0,
+    "queue_p99_ms": {
+      "0": 40.0,
+      "10": 40.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.0472674369812,
+      "cpu_monitor_end_s": 50.09334468841553,
+      "cpu_interval_s": 25.046077251434326,
+      "python_cpu_percent_one_core": 6.148667452152845,
+      "all_owned_cpu_percent_one_core": 8.783810645932634,
+      "native_children_cpu_percent_one_core": 2.6351431937797902,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.5,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2758,
+      "controlled_exposure_s": 59.71161599999985,
+      "policy_calls_per_exposure_s": 46.188667879965045
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-01-verified-r2",
+    "host_index": 0,
+    "queue_p99_ms": {
+      "0": 41.0,
+      "10": 40.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.044737815856934,
+      "cpu_monitor_end_s": 50.089844942092896,
+      "cpu_interval_s": 25.045107126235962,
+      "python_cpu_percent_one_core": 4.392075443940492,
+      "all_owned_cpu_percent_one_core": 7.107176627467341,
+      "native_children_cpu_percent_one_core": 2.71510118352685,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.1,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2756,
+      "controlled_exposure_s": 59.6851439999999,
+      "policy_calls_per_exposure_s": 46.1756446461787
+    },
+    "transport_domain": {
+      "actions": 2756,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 378
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2757,
+          "sent": 2757,
+          "received": 2757
+        },
+        {
+          "compared": 2756,
+          "sent": 2756,
+          "received": 2756
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2756,
+          "duplicates": 104082,
+          "empty": 776,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2757,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-17-verified-r2",
+    "host_index": 0,
+    "queue_p99_ms": {
+      "0": 44.0,
+      "10": 44.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.045446157455444,
+      "cpu_monitor_end_s": 50.09151864051819,
+      "cpu_interval_s": 25.046072483062744,
+      "python_cpu_percent_one_core": 4.391906159114842,
+      "all_owned_cpu_percent_one_core": 7.306534791981964,
+      "native_children_cpu_percent_one_core": 2.914628632867122,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.8,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2760,
+      "controlled_exposure_s": 59.64089000000014,
+      "policy_calls_per_exposure_s": 46.27697541066194
+    },
+    "transport_domain": {
+      "actions": 2760,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 345
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2761,
+          "sent": 2761,
+          "received": 2761
+        },
+        {
+          "compared": 2760,
+          "sent": 2760,
+          "received": 2760
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2760,
+          "duplicates": 103469,
+          "empty": 973,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2761,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-17-legacy-r2",
+    "host_index": 0,
+    "queue_p99_ms": {
+      "0": 44.0,
+      "10": 44.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.047759294509888,
+      "cpu_monitor_end_s": 50.10905718803406,
+      "cpu_interval_s": 25.06129789352417,
+      "python_cpu_percent_one_core": 6.30454179473391,
+      "all_owned_cpu_percent_one_core": 9.137595386038386,
+      "native_children_cpu_percent_one_core": 2.8330535913044774,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.9,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2760,
+      "controlled_exposure_s": 59.64865300000007,
+      "policy_calls_per_exposure_s": 46.27095267348278
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-05-legacy",
+    "host_index": 1,
+    "queue_p99_ms": {
+      "0": 13.0,
+      "10": 13.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.046541929244995,
+      "cpu_monitor_end_s": 50.09109902381897,
+      "cpu_interval_s": 25.044557094573975,
+      "python_cpu_percent_one_core": 6.228898335510919,
+      "all_owned_cpu_percent_one_core": 8.744414971005712,
+      "native_children_cpu_percent_one_core": 2.515516635494794,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.1,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2772,
+      "controlled_exposure_s": 59.85348299999995,
+      "policy_calls_per_exposure_s": 46.31309426052954
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-05-verified",
+    "host_index": 1,
+    "queue_p99_ms": {
+      "0": 13.0,
+      "10": 13.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.046912670135498,
+      "cpu_monitor_end_s": 50.094237089157104,
+      "cpu_interval_s": 25.047324419021606,
+      "python_cpu_percent_one_core": 4.511459911230471,
+      "all_owned_cpu_percent_one_core": 7.106547470787821,
+      "native_children_cpu_percent_one_core": 2.59508755955735,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.8,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2771,
+      "controlled_exposure_s": 59.846091,
+      "policy_calls_per_exposure_s": 46.30210517843179
+    },
+    "transport_domain": {
+      "actions": 2771,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 248
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2772,
+          "sent": 2772,
+          "received": 2772
+        },
+        {
+          "compared": 2771,
+          "sent": 2771,
+          "received": 2771
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2771,
+          "duplicates": 103994,
+          "empty": 433,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2772,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-04-legacy",
+    "host_index": 1,
+    "queue_p99_ms": {
+      "0": 889.0,
+      "10": 36.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.04739260673523,
+      "cpu_monitor_end_s": 50.09644556045532,
+      "cpu_interval_s": 25.049052953720093,
+      "python_cpu_percent_one_core": 6.108015352224231,
+      "all_owned_cpu_percent_one_core": 8.702923835195309,
+      "native_children_cpu_percent_one_core": 2.5949084829710776,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.1,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2575,
+      "controlled_exposure_s": 55.714982,
+      "policy_calls_per_exposure_s": 46.21737111931581
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-04-verified",
+    "host_index": 1,
+    "queue_p99_ms": {
+      "0": 889.0,
+      "10": 36.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.04764413833618,
+      "cpu_monitor_end_s": 50.096439599990845,
+      "cpu_interval_s": 25.048795461654663,
+      "python_cpu_percent_one_core": 4.3515066489668115,
+      "all_owned_cpu_percent_one_core": 7.066208044652529,
+      "native_children_cpu_percent_one_core": 2.714701395685718,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.8,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2573,
+      "controlled_exposure_s": 55.6975020000002,
+      "policy_calls_per_exposure_s": 46.195967639625756
+    },
+    "transport_domain": {
+      "actions": 2573,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 355
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2574,
+          "sent": 2574,
+          "received": 2574
+        },
+        {
+          "compared": 2573,
+          "sent": 2573,
+          "received": 2573
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2573,
+          "duplicates": 97053,
+          "empty": 8316,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2574,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-07-legacy",
+    "host_index": 1,
+    "queue_p99_ms": {
+      "0": 30.0,
+      "10": 27.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.048850297927856,
+      "cpu_monitor_end_s": 50.09616231918335,
+      "cpu_interval_s": 25.047312021255493,
+      "python_cpu_percent_one_core": 6.30806211324868,
+      "all_owned_cpu_percent_one_core": 8.903150957306682,
+      "native_children_cpu_percent_one_core": 2.5950888440580013,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.1,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2745,
+      "controlled_exposure_s": 59.30934600000006,
+      "policy_calls_per_exposure_s": 46.28275617809033
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-07-verified-r2",
+    "host_index": 1,
+    "queue_p99_ms": {
+      "0": 26.0,
+      "10": 23.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.04582452774048,
+      "cpu_monitor_end_s": 50.090595960617065,
+      "cpu_interval_s": 25.044771432876587,
+      "python_cpu_percent_one_core": 4.432062807899651,
+      "all_owned_cpu_percent_one_core": 7.107271890145387,
+      "native_children_cpu_percent_one_core": 2.675209082245736,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.7,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2743,
+      "controlled_exposure_s": 59.285263000000164,
+      "policy_calls_per_exposure_s": 46.26782207240933
+    },
+    "transport_domain": {
+      "actions": 2743,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 306
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2744,
+          "sent": 2744,
+          "received": 2744
+        },
+        {
+          "compared": 2743,
+          "sent": 2743,
+          "received": 2743
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2743,
+          "duplicates": 102805,
+          "empty": 1634,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2744,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-14-verified-r2",
+    "host_index": 1,
+    "queue_p99_ms": {
+      "0": 421.0,
+      "10": 28.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.047210216522217,
+      "cpu_monitor_end_s": 50.09490633010864,
+      "cpu_interval_s": 25.047696113586426,
+      "python_cpu_percent_one_core": 4.391621468943547,
+      "all_owned_cpu_percent_one_core": 7.665375654883283,
+      "native_children_cpu_percent_one_core": 3.2737541859397354,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.9,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2566,
+      "controlled_exposure_s": 55.690674999999935,
+      "policy_calls_per_exposure_s": 46.075936411257416
+    },
+    "transport_domain": {
+      "actions": 2566,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 360
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2567,
+          "sent": 2567,
+          "received": 2567
+        },
+        {
+          "compared": 2566,
+          "sent": 2566,
+          "received": 2566
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2566,
+          "duplicates": 97080,
+          "empty": 8304,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2567,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-14-legacy-r2",
+    "host_index": 1,
+    "queue_p99_ms": {
+      "0": 421.0,
+      "10": 28.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.047802925109863,
+      "cpu_monitor_end_s": 50.09570074081421,
+      "cpu_interval_s": 25.047897815704346,
+      "python_cpu_percent_one_core": 6.228067566699841,
+      "all_owned_cpu_percent_one_core": 9.421948370135656,
+      "native_children_cpu_percent_one_core": 3.1938808034358153,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.1,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2567,
+      "controlled_exposure_s": 55.701518000000135,
+      "policy_calls_per_exposure_s": 46.084919983688664
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-11-legacy-r2",
+    "host_index": 1,
+    "queue_p99_ms": {
+      "0": 45.0,
+      "10": 45.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.047398328781128,
+      "cpu_monitor_end_s": 50.09429860115051,
+      "cpu_interval_s": 25.046900272369385,
+      "python_cpu_percent_one_core": 6.148465411901126,
+      "all_owned_cpu_percent_one_core": 8.903297317233449,
+      "native_children_cpu_percent_one_core": 2.754831905332322,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.2,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2761,
+      "controlled_exposure_s": 59.666702000000036,
+      "policy_calls_per_exposure_s": 46.27371561444771
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-11-verified-r2",
+    "host_index": 1,
+    "queue_p99_ms": {
+      "0": 42.0,
+      "10": 42.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.0473849773407,
+      "cpu_monitor_end_s": 50.09210205078125,
+      "cpu_interval_s": 25.04471707344055,
+      "python_cpu_percent_one_core": 4.392143847240858,
+      "all_owned_cpu_percent_one_core": 7.306930218591609,
+      "native_children_cpu_percent_one_core": 2.9147863713507514,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.9,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2758,
+      "controlled_exposure_s": 59.68358799999999,
+      "policy_calls_per_exposure_s": 46.21035853273433
+    },
+    "transport_domain": {
+      "actions": 2758,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 394
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2759,
+          "sent": 2759,
+          "received": 2759
+        },
+        {
+          "compared": 2758,
+          "sent": 2758,
+          "received": 2758
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2758,
+          "duplicates": 103558,
+          "empty": 771,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2759,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-09-legacy",
+    "host_index": 2,
+    "queue_p99_ms": {
+      "0": 525.0,
+      "10": 26.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.0493323802948,
+      "cpu_monitor_end_s": 50.09800934791565,
+      "cpu_interval_s": 25.04867696762085,
+      "python_cpu_percent_one_core": 6.34764064407598,
+      "all_owned_cpu_percent_one_core": 9.461577563811367,
+      "native_children_cpu_percent_one_core": 3.1139369197353868,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.2,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2567,
+      "controlled_exposure_s": 55.71639600000008,
+      "policy_calls_per_exposure_s": 46.07261388550681
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-09-verified",
+    "host_index": 2,
+    "queue_p99_ms": {
+      "0": 525.0,
+      "10": 26.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.049202919006348,
+      "cpu_monitor_end_s": 50.100244998931885,
+      "cpu_interval_s": 25.051042079925537,
+      "python_cpu_percent_one_core": 4.4309533969027575,
+      "all_owned_cpu_percent_one_core": 7.62443332259844,
+      "native_children_cpu_percent_one_core": 3.193479925695682,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.1,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2565,
+      "controlled_exposure_s": 55.695560000000015,
+      "policy_calls_per_exposure_s": 46.053940385912256
+    },
+    "transport_domain": {
+      "actions": 2565,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 350
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2566,
+          "sent": 2566,
+          "received": 2566
+        },
+        {
+          "compared": 2565,
+          "sent": 2565,
+          "received": 2565
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2565,
+          "duplicates": 96531,
+          "empty": 8303,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2566,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-20-verified",
+    "host_index": 2,
+    "queue_p99_ms": {
+      "0": 163.0,
+      "10": 163.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.050678253173828,
+      "cpu_monitor_end_s": 50.10211896896362,
+      "cpu_interval_s": 25.051440715789795,
+      "python_cpu_percent_one_core": 4.670390071667835,
+      "all_owned_cpu_percent_one_core": 8.18316209138381,
+      "native_children_cpu_percent_one_core": 3.5127720197159773,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.3,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2573,
+      "controlled_exposure_s": 55.70087999999999,
+      "policy_calls_per_exposure_s": 46.193166068471456
+    },
+    "transport_domain": {
+      "actions": 2573,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 296
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2574,
+          "sent": 2574,
+          "received": 2574
+        },
+        {
+          "compared": 2573,
+          "sent": 2573,
+          "received": 2573
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2573,
+          "duplicates": 96478,
+          "empty": 8306,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2574,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-20-legacy",
+    "host_index": 2,
+    "queue_p99_ms": {
+      "0": 163.0,
+      "10": 163.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.05042815208435,
+      "cpu_monitor_end_s": 50.102280616760254,
+      "cpu_interval_s": 25.051852464675903,
+      "python_cpu_percent_one_core": 6.187167205241851,
+      "all_owned_cpu_percent_one_core": 9.620047073956684,
+      "native_children_cpu_percent_one_core": 3.4328798687148336,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.5,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2575,
+      "controlled_exposure_s": 55.71859200000005,
+      "policy_calls_per_exposure_s": 46.21437670212481
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-22-verified",
+    "host_index": 2,
+    "queue_p99_ms": {
+      "0": 17.0,
+      "10": 17.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.05073070526123,
+      "cpu_monitor_end_s": 50.10027456283569,
+      "cpu_interval_s": 25.049543857574463,
+      "python_cpu_percent_one_core": 4.471139300452113,
+      "all_owned_cpu_percent_one_core": 7.305522249845863,
+      "native_children_cpu_percent_one_core": 2.83438294939375,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.8,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2760,
+      "controlled_exposure_s": 59.68699299999998,
+      "policy_calls_per_exposure_s": 46.24123048048342
+    },
+    "transport_domain": {
+      "actions": 2760,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 399
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2761,
+          "sent": 2761,
+          "received": 2761
+        },
+        {
+          "compared": 2760,
+          "sent": 2760,
+          "received": 2760
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2760,
+          "duplicates": 103895,
+          "empty": 772,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2761,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-22-legacy-r2",
+    "host_index": 2,
+    "queue_p99_ms": {
+      "0": 41.0,
+      "10": 41.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.050176858901978,
+      "cpu_monitor_end_s": 50.10096716880798,
+      "cpu_interval_s": 25.050790309906006,
+      "python_cpu_percent_one_core": 6.46686184331435,
+      "all_owned_cpu_percent_one_core": 9.820049465773643,
+      "native_children_cpu_percent_one_core": 3.3531876224592922,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.7,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2752,
+      "controlled_exposure_s": 59.64291599999992,
+      "policy_calls_per_exposure_s": 46.14127183184678
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-03-legacy-r2",
+    "host_index": 2,
+    "queue_p99_ms": {
+      "0": 997.0,
+      "10": 518.3199999999997
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.048992395401,
+      "cpu_monitor_end_s": 50.09807467460632,
+      "cpu_interval_s": 25.049082279205322,
+      "python_cpu_percent_one_core": 6.147929823674386,
+      "all_owned_cpu_percent_one_core": 8.623070402036802,
+      "native_children_cpu_percent_one_core": 2.475140578362416,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.8,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2531,
+      "controlled_exposure_s": 54.694288999999955,
+      "policy_calls_per_exposure_s": 46.275398149887316
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-03-verified-r2",
+    "host_index": 2,
+    "queue_p99_ms": {
+      "0": 972.0,
+      "10": 28.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.045397996902466,
+      "cpu_monitor_end_s": 50.09452509880066,
+      "cpu_interval_s": 25.049127101898193,
+      "python_cpu_percent_one_core": 4.271605935198105,
+      "all_owned_cpu_percent_one_core": 6.746742084565231,
+      "native_children_cpu_percent_one_core": 2.475136149367126,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.7,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2078,
+      "controlled_exposure_s": 55.14363500000002,
+      "policy_calls_per_exposure_s": 37.68340625350504
+    },
+    "transport_domain": {
+      "actions": 2078,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 399
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2079,
+          "sent": 2079,
+          "received": 2079
+        },
+        {
+          "compared": 2078,
+          "sent": 2078,
+          "received": 2078
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2078,
+          "duplicates": 96116,
+          "empty": 9293,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2079,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-02-verified-r2",
+    "host_index": 2,
+    "queue_p99_ms": {
+      "0": 28.010000000002037,
+      "10": 25.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.049167156219482,
+      "cpu_monitor_end_s": 50.097699880599976,
+      "cpu_interval_s": 25.048532724380493,
+      "python_cpu_percent_one_core": 4.471319786766872,
+      "all_owned_cpu_percent_one_core": 7.026359664919371,
+      "native_children_cpu_percent_one_core": 2.555039878152498,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.7,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2745,
+      "controlled_exposure_s": 59.379775000000095,
+      "policy_calls_per_exposure_s": 46.227861254105385
+    },
+    "transport_domain": {
+      "actions": 2745,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 300
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2746,
+          "sent": 2746,
+          "received": 2746
+        },
+        {
+          "compared": 2745,
+          "sent": 2745,
+          "received": 2745
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2745,
+          "duplicates": 103491,
+          "empty": 1458,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2746,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-02-legacy-r2",
+    "host_index": 2,
+    "queue_p99_ms": {
+      "0": 502.0,
+      "10": 26.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.049611568450928,
+      "cpu_monitor_end_s": 50.099807024002075,
+      "cpu_interval_s": 25.050195455551147,
+      "python_cpu_percent_one_core": 6.307336015814883,
+      "all_owned_cpu_percent_one_core": 8.782366604299202,
+      "native_children_cpu_percent_one_core": 2.4750305884843202,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.9,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2554,
+      "controlled_exposure_s": 56.498053000000105,
+      "policy_calls_per_exposure_s": 45.20509759867292
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-08-verified",
+    "host_index": 3,
+    "queue_p99_ms": {
+      "0": 463.0,
+      "10": 34.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.048285484313965,
+      "cpu_monitor_end_s": 50.097328662872314,
+      "cpu_interval_s": 25.04904317855835,
+      "python_cpu_percent_one_core": 4.511150353907589,
+      "all_owned_cpu_percent_one_core": 7.265746587709568,
+      "native_children_cpu_percent_one_core": 2.75459623380198,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.0,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2670,
+      "controlled_exposure_s": 57.72277699999997,
+      "policy_calls_per_exposure_s": 46.2555708295185
+    },
+    "transport_domain": {
+      "actions": 2670,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 400
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2671,
+          "sent": 2671,
+          "received": 2671
+        },
+        {
+          "compared": 2670,
+          "sent": 2670,
+          "received": 2670
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2670,
+          "duplicates": 100621,
+          "empty": 4403,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2671,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-08-legacy",
+    "host_index": 3,
+    "queue_p99_ms": {
+      "0": 465.0,
+      "10": 33.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.050912380218506,
+      "cpu_monitor_end_s": 50.101088762283325,
+      "cpu_interval_s": 25.05017638206482,
+      "python_cpu_percent_one_core": 6.387180575485099,
+      "all_owned_cpu_percent_one_core": 9.101732320066267,
+      "native_children_cpu_percent_one_core": 2.714551744581167,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.1,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2672,
+      "controlled_exposure_s": 57.76568799999999,
+      "policy_calls_per_exposure_s": 46.25583270123954
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-21-verified",
+    "host_index": 3,
+    "queue_p99_ms": {
+      "0": 10.0,
+      "10": 10.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.05043053627014,
+      "cpu_monitor_end_s": 50.10022282600403,
+      "cpu_interval_s": 25.049792289733887,
+      "python_cpu_percent_one_core": 4.550935939166267,
+      "all_owned_cpu_percent_one_core": 7.664734213332661,
+      "native_children_cpu_percent_one_core": 3.113798274166393,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.4,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2768,
+      "controlled_exposure_s": 59.823294999999995,
+      "policy_calls_per_exposure_s": 46.26960116456307
+    },
+    "transport_domain": {
+      "actions": 2768,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 385
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2769,
+          "sent": 2769,
+          "received": 2769
+        },
+        {
+          "compared": 2768,
+          "sent": 2768,
+          "received": 2768
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2768,
+          "duplicates": 103654,
+          "empty": 443,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2769,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-21-legacy",
+    "host_index": 3,
+    "queue_p99_ms": {
+      "0": 10.0,
+      "10": 10.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.05119490623474,
+      "cpu_monitor_end_s": 50.10186266899109,
+      "cpu_interval_s": 25.050667762756348,
+      "python_cpu_percent_one_core": 6.426974383467893,
+      "all_owned_cpu_percent_one_core": 9.460825645229134,
+      "native_children_cpu_percent_one_core": 3.0338512617612414,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.5,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2771,
+      "controlled_exposure_s": 59.874102000000036,
+      "policy_calls_per_exposure_s": 46.280443588114245
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-13-legacy",
+    "host_index": 3,
+    "queue_p99_ms": {
+      "0": 445.0,
+      "10": 32.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.049821615219116,
+      "cpu_monitor_end_s": 50.098737716674805,
+      "cpu_interval_s": 25.04891610145569,
+      "python_cpu_percent_one_core": 6.387501932297254,
+      "all_owned_cpu_percent_one_core": 9.1820340276773,
+      "native_children_cpu_percent_one_core": 2.7945320953800485,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.3,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2671,
+      "controlled_exposure_s": 57.73680800000005,
+      "policy_calls_per_exposure_s": 46.26164993395543
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-13-verified-r2",
+    "host_index": 3,
+    "queue_p99_ms": {
+      "0": 459.0,
+      "10": 36.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.049179315567017,
+      "cpu_monitor_end_s": 50.098339319229126,
+      "cpu_interval_s": 25.04916000366211,
+      "python_cpu_percent_one_core": 4.551050813014631,
+      "all_owned_cpu_percent_one_core": 7.3854771965588295,
+      "native_children_cpu_percent_one_core": 2.8344263835442,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.1,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2668,
+      "controlled_exposure_s": 57.692080000000125,
+      "policy_calls_per_exposure_s": 46.24551584896912
+    },
+    "transport_domain": {
+      "actions": 2668,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 394
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2669,
+          "sent": 2669,
+          "received": 2669
+        },
+        {
+          "compared": 2668,
+          "sent": 2668,
+          "received": 2668
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2668,
+          "duplicates": 100413,
+          "empty": 4458,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2669,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-16-verified-r2",
+    "host_index": 3,
+    "queue_p99_ms": {
+      "0": 10.0,
+      "10": 10.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.04795241355896,
+      "cpu_monitor_end_s": 50.0964572429657,
+      "cpu_interval_s": 25.04850482940674,
+      "python_cpu_percent_one_core": 4.51124730875509,
+      "all_owned_cpu_percent_one_core": 7.385670372740632,
+      "native_children_cpu_percent_one_core": 2.8744230639855437,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.1,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2768,
+      "controlled_exposure_s": 59.846068999999936,
+      "policy_calls_per_exposure_s": 46.251993593764745
+    },
+    "transport_domain": {
+      "actions": 2768,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 377
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2769,
+          "sent": 2769,
+          "received": 2769
+        },
+        {
+          "compared": 2768,
+          "sent": 2768,
+          "received": 2768
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2768,
+          "duplicates": 103914,
+          "empty": 413,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2769,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-16-legacy-r2",
+    "host_index": 3,
+    "queue_p99_ms": {
+      "0": 10.0,
+      "10": 10.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.048598766326904,
+      "cpu_monitor_end_s": 50.09908056259155,
+      "cpu_interval_s": 25.05048179626465,
+      "python_cpu_percent_one_core": 6.26734452761746,
+      "all_owned_cpu_percent_one_core": 9.101621352208793,
+      "native_children_cpu_percent_one_core": 2.834276824591335,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.3,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2771,
+      "controlled_exposure_s": 59.875947999999966,
+      "policy_calls_per_exposure_s": 46.279016743083574
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-10-legacy-r2",
+    "host_index": 3,
+    "queue_p99_ms": {
+      "0": 10.0,
+      "10": 10.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.04962944984436,
+      "cpu_monitor_end_s": 50.09944486618042,
+      "cpu_interval_s": 25.04981541633606,
+      "python_cpu_percent_one_core": 6.2275907988633605,
+      "all_owned_cpu_percent_one_core": 8.86234075222863,
+      "native_children_cpu_percent_one_core": 2.634749953365268,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.1,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2772,
+      "controlled_exposure_s": 59.87167600000009,
+      "policy_calls_per_exposure_s": 46.299021260069544
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-10-verified-r2",
+    "host_index": 3,
+    "queue_p99_ms": {
+      "0": 13.0,
+      "10": 13.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.04993486404419,
+      "cpu_monitor_end_s": 50.10058283805847,
+      "cpu_interval_s": 25.050647974014282,
+      "python_cpu_percent_one_core": 4.630618741692028,
+      "all_owned_cpu_percent_one_core": 7.3451193833735635,
+      "native_children_cpu_percent_one_core": 2.7145006416815343,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.0,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2770,
+      "controlled_exposure_s": 59.843777,
+      "policy_calls_per_exposure_s": 46.28718538270069
+    },
+    "transport_domain": {
+      "actions": 2770,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 378
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2771,
+          "sent": 2771,
+          "received": 2771
+        },
+        {
+          "compared": 2770,
+          "sent": 2770,
+          "received": 2770
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2770,
+          "duplicates": 103653,
+          "empty": 434,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2771,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-18-verified",
+    "host_index": 4,
+    "queue_p99_ms": {
+      "0": 443.0,
+      "10": 32.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.047340869903564,
+      "cpu_monitor_end_s": 50.09918284416199,
+      "cpu_interval_s": 25.051841974258423,
+      "python_cpu_percent_one_core": 5.508576979760589,
+      "all_owned_cpu_percent_one_core": 8.66203771455107,
+      "native_children_cpu_percent_one_core": 3.1534607347904817,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.5,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2582,
+      "controlled_exposure_s": 56.19741599999999,
+      "policy_calls_per_exposure_s": 45.945172995142705
+    },
+    "transport_domain": {
+      "actions": 2582,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 381
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2583,
+          "sent": 2583,
+          "received": 2583
+        },
+        {
+          "compared": 2582,
+          "sent": 2582,
+          "received": 2582
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2582,
+          "duplicates": 96958,
+          "empty": 7109,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2583,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-18-legacy",
+    "host_index": 4,
+    "queue_p99_ms": {
+      "0": 443.0,
+      "10": 32.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.055683851242065,
+      "cpu_monitor_end_s": 50.10565519332886,
+      "cpu_interval_s": 25.049971342086792,
+      "python_cpu_percent_one_core": 6.78643490958334,
+      "all_owned_cpu_percent_one_core": 9.700609900169127,
+      "native_children_cpu_percent_one_core": 2.9141749905857868,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.3,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2580,
+      "controlled_exposure_s": 56.22844800000009,
+      "policy_calls_per_exposure_s": 45.88424706298128
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-15-verified",
+    "host_index": 4,
+    "queue_p99_ms": {
+      "0": 10.0,
+      "10": 10.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.044936656951904,
+      "cpu_monitor_end_s": 50.08921694755554,
+      "cpu_interval_s": 25.044280290603638,
+      "python_cpu_percent_one_core": 4.39222044808654,
+      "all_owned_cpu_percent_one_core": 7.227199100942399,
+      "native_children_cpu_percent_one_core": 2.834978652855858,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.8,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2770,
+      "controlled_exposure_s": 59.86634999999988,
+      "policy_calls_per_exposure_s": 46.26973249580115
+    },
+    "transport_domain": {
+      "actions": 2770,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 392
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2771,
+          "sent": 2771,
+          "received": 2771
+        },
+        {
+          "compared": 2770,
+          "sent": 2770,
+          "received": 2770
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2770,
+          "duplicates": 104041,
+          "empty": 469,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2771,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-15-legacy",
+    "host_index": 4,
+    "queue_p99_ms": {
+      "0": 11.0,
+      "10": 11.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.045466899871826,
+      "cpu_monitor_end_s": 50.091094732284546,
+      "cpu_interval_s": 25.04562783241272,
+      "python_cpu_percent_one_core": 6.228632040843196,
+      "all_owned_cpu_percent_one_core": 8.903749648128416,
+      "native_children_cpu_percent_one_core": 2.675117607285219,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.2,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2774,
+      "controlled_exposure_s": 59.85891899999984,
+      "policy_calls_per_exposure_s": 46.34230030114656
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-12-legacy",
+    "host_index": 4,
+    "queue_p99_ms": {
+      "0": 44.0,
+      "10": 44.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.048131227493286,
+      "cpu_monitor_end_s": 50.095314741134644,
+      "cpu_interval_s": 25.047183513641357,
+      "python_cpu_percent_one_core": 6.268169828934803,
+      "all_owned_cpu_percent_one_core": 9.022970581778761,
+      "native_children_cpu_percent_one_core": 2.7548007528439586,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.2,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2763,
+      "controlled_exposure_s": 59.67347600000002,
+      "policy_calls_per_exposure_s": 46.30197845354272
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-12-verified-r2",
+    "host_index": 4,
+    "queue_p99_ms": {
+      "0": 44.0,
+      "10": 44.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.044881343841553,
+      "cpu_monitor_end_s": 50.0895471572876,
+      "cpu_interval_s": 25.044665813446045,
+      "python_cpu_percent_one_core": 4.43208149898355,
+      "all_owned_cpu_percent_one_core": 7.227087849693896,
+      "native_children_cpu_percent_one_core": 2.7950063507103464,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 1.9000000000000001,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2761,
+      "controlled_exposure_s": 59.63718400000006,
+      "policy_calls_per_exposure_s": 46.29661923674996
+    },
+    "transport_domain": {
+      "actions": 2761,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 352
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2762,
+          "sent": 2762,
+          "received": 2762
+        },
+        {
+          "compared": 2761,
+          "sent": 2761,
+          "received": 2761
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2761,
+          "duplicates": 103464,
+          "empty": 880,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2762,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  },
+  {
+    "run_id": "base-step0-19-legacy-r2",
+    "host_index": 4,
+    "queue_p99_ms": {
+      "0": 345.0,
+      "10": 345.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.046715259552002,
+      "cpu_monitor_end_s": 50.093732595443726,
+      "cpu_interval_s": 25.047017335891724,
+      "python_cpu_percent_one_core": 5.948812108118234,
+      "all_owned_cpu_percent_one_core": 9.023030445870608,
+      "native_children_cpu_percent_one_core": 3.074218337752376,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.4,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2577,
+      "controlled_exposure_s": 55.71828400000013,
+      "policy_calls_per_exposure_s": 46.250527026280885
+    },
+    "transport_domain": null,
+    "IPC_verified": null
+  },
+  {
+    "run_id": "base-step0-19-verified-r2",
+    "host_index": 4,
+    "queue_p99_ms": {
+      "0": 345.0,
+      "10": 345.0
+    },
+    "resource_cost": {
+      "cpu_measurement_available": true,
+      "resource_inventory": "legacy Python/native direct tree; orphaned Mahimahi not captured",
+      "cpu_monitor_start_s": 25.045548915863037,
+      "cpu_monitor_end_s": 50.09325623512268,
+      "cpu_interval_s": 25.047707319259644,
+      "python_cpu_percent_one_core": 4.391619504249756,
+      "all_owned_cpu_percent_one_core": 7.505676970899581,
+      "native_children_cpu_percent_one_core": 3.114057466649826,
+      "common_processes": 2,
+      "unmatched_processes": 0,
+      "definition": "User+system only, summed over persistent inventoried run-owned PIDs; children_user/system excluded to avoid double counting. One core=100%. Inventory field states whether orphaned Mahimahi was captured; not CPU attributable solely to inference.",
+      "host_cpu_busy_percent_all_cores": 2.1,
+      "host_cpu_steal_percent": 0.0,
+      "host_cpu_scope": "Whole host average across cores for final monitoring interval; includes asynchronous kernel/network and controller overhead. Excludes idle, iowait, steal and duplicate guest.",
+      "policy_calls_source": "Initial action plus valid feedback actions; no exploration or implicit fallback",
+      "policy_inferences": 2575,
+      "controlled_exposure_s": 55.691547000000064,
+      "policy_calls_per_exposure_s": 46.23681938661171
+    },
+    "transport_domain": {
+      "actions": 2575,
+      "percent24": 0,
+      "minimum_percent": 25,
+      "maximum_percent": 367
+    },
+    "IPC_verified": {
+      "status": "PASS_FRAME_PREFIX",
+      "directions": [
+        {
+          "compared": 2576,
+          "sent": 2576,
+          "received": 2576
+        },
+        {
+          "compared": 2575,
+          "sent": 2575,
+          "received": 2575
+        }
+      ],
+      "python": {
+        "schema": 2,
+        "incoming": {
+          "writes": 0,
+          "received": 2575,
+          "duplicates": 96845,
+          "empty": 8299,
+          "rejected": 0
+        },
+        "outgoing": {
+          "writes": 2576,
+          "received": 0,
+          "duplicates": 0,
+          "empty": 0,
+          "rejected": 0
+        },
+        "mechanism": "Per-channel exclusive flock + CRC32 header/payload + monotonic sequence + state-bound action"
+      },
+      "pending_tail_at_most_one_each": true
+    }
+  }
+]
