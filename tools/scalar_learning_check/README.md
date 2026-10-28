@@ -1,3 +1,24 @@
+# L2-A有限critic-only工具（2026-10-28）
+
+`frameworks/canopy_single/critic_only_control.py`是显式opt-in的冻结/账本断言：仅Orca、必须有完整critic更新上限；actor权重及Adam状态逐位不变，BN允许演化。分开记录critic优化器操作/actor/target更新，每2k完整critic更新保存快照；首次停止先保存`policy-at-first-stop`、停止优化，再排空入库并报告未使用额度。它不实现actor放行或完整resume，原默认训练路径不变。
+
+`evaluate.py`在原states列末尾追加latent exploration offset、applied及clip；`exploration_response.py`优先使用已记录latent，旧日志仍可重建累计残差。PRE-action延迟类别不变。随机创新响应与持续动作Q梯度不是自动等价的效应。
+
+| 工具 | 用途与限制 |
+|---|---|
+| `runtime/snapshot_probe.py` | 只读恢复真实L2-A每2k快照，检查96变量恢复、actor/Adam冻结和critic计数。终点replay上的分层探针是回顾性查询；输出中执行前的“仍需真实TF验证”措辞由本轮证据补充，本轮26快照已真实运行通过 |
+| `runtime/l2a_own_credit_replay.py --mode l2a` | TF1内存拟合：全量/R100-only/R200-only匹配损失臂，各40k。保留全batch、512分母和共同BN；配对外部平滑噪声，旧重复target共同固定组合。不同于在线原算子；无TCP/候选checkpoint |
+| `runtime/l2a_response_alignment.py` | 事后NumPy支持核对：全连接/终点replay区间、逐actor效应与critic探针权重。近似SE假定actor独立，不能替换登记门 |
+| `analyze_l2a.py` | 只读公开JSON，复算J10/J40的Holm16、近5快照字面门、本组损失匹配与支持差异；没有actor放行副作用，缺数据不通过 |
+
+```sh
+python3 tools/scalar_learning_check/analyze_l2a.py --evidence evidence/scalar-critic-only-L2A-20261028 --output /new/path/l2a-analysis.json
+```
+
+[真实结果与限制](../../docs/RESEARCH_REVIEW_BRIEF.md)。下面保留此前阶段与原提案，旧“等待预算/未执行”不是本轮状态。
+
+---
+
 # 最新：完整70维可分辨性前置完成（2026-10-28）
 
 `rtt_separability.py`已在单learner读取完整首次更新前replay核查，0TF/0TCP；完整70维R20/R200=.999403、四组=.903451，通过提案.9门。`--newest-only`支持同数据7维对照。输出增加逐actor/fold与混淆表，空类别不伪称通过，近邻严格来自其他actor。高读出分数不等于排除局部混淆或critic可靠。

@@ -149,13 +149,43 @@ def analyze(root):
                          prediction_pass=first is not None and abs(first-first_old)<=tolerance and abs(peak-peak_old)<=tolerance,
                          significance='Nominal pointwise |z|>1.96 for registered descriptive lag prediction; not gate references or proof of first causal effect.'))
     final=online['result']['records'][-1]
-    return dict(status='L2A_COMPLETE_NO_ACTOR_RELEASE' if len(own)==2 else 'L2A_COLLECTION_COMPLETE_OFFLINE_PARTIAL',
+    ledger={}
+    for name in ('training-result','admission-result'):
+        path=root/'collected/node0/audit'/(name+'.json')
+        if path.exists():
+            item=json.loads(path.read_text());assert item['final']['counters']['actor_updates']==0
+            ledger[name]=dict(inserted=item['final']['inserted'],counters=item['final']['counters'],
+                              wall_s=item['wall_s'],stop_reason=item['stop_reason'])
+    closure_path=root/'results/final-learner-closure.json'
+    closure=json.loads(closure_path.read_text()) if closure_path.exists() else None
+    support=None
+    if (root/'results/response-alignment.json').exists() and (root/'results/snapshot-probe-by-actor.json').exists():
+        aligned=read('results/response-alignment.json');actor_query=read('results/snapshot-probe-by-actor.json')['result']
+        assert actor_query['probe_birth']==matched['result']['probe_birth']
+        actor_last=actor_query['records'][-1];dominant=[]
+        for rtt in (100,200):
+            members=[a for a in aligned['actors'] if a['rtt']==rtt]
+            dominant_actor=max(members,key=lambda a:(a['classes']['free']['full'] or {}).get('n',0))
+            actor=dominant_actor['actor'];cl=dominant_actor['classes']['free']
+            n=sum((a['classes']['free']['full'] or {}).get('n',0) for a in members)
+            probe_total=sum(a['classes']['free']['probe_weight'] for a in members)
+            dominant.append(dict(rtt=rtt,actor=actor,E1_free_rows=cl['full']['n'],
+                                 E1_free_fraction=cl['full']['n']/n,probe_free_rows=cl['probe_weight'],
+                                 probe_free_fraction=cl['probe_weight']/probe_total,E1=cl,
+                                 matched_endpoint_online_Q1=actor_last['dq1_by_actor_class'][str(actor)]['free'],
+                                 matched_endpoint_online_Q2=actor_last['dq2_by_actor_class'][str(actor)]['free']))
+        support=dict(status='POST_HOC_DIAGNOSTIC_NOT_GATE_REPLACEMENT',dominant_free_actors=dominant,
+                     probe_weighted_E1_sensitivity=aligned['probe_weighted_sensitivity'],
+                     interpretation='Original pooled E1 is observation/innovation-variance weighted, whereas retrospective critic probes approximately balance actors within class. The dominant positive-E1 actors have positive critic gradients despite negative pooled critic means. This identifies a composition problem in the proposed comparison, without proving all states correct or allowing post-hoc actor release. The innovation-versus-persistent-action estimand difference also remains.')
+    complete=len(own)==2 and closure is not None and closure['status']=='PASS_FINAL_LEARNER_CLOSURE'
+    return dict(status='L2A_COMPLETE_NO_ACTOR_RELEASE' if complete else 'L2A_COLLECTION_COMPLETE_OFFLINE_PARTIAL',
                 decision='WITHHOLD_L2B_DIRECTION_REVIEW',automatic_actor_release=False,
+                online_ledger=ledger,final_learner_closure_status=closure['status'] if closure else 'NOT_YET_CHECKED',
                 E1_fixed_references=refs,online_gate_a_c=ga,matched_probe_robustness_gate_a_c=gm,own_group_gate_b=gb,
                 literal_gate_pass=ga['a_last_five_pass'] and ga['c_last_five_pass'] and gb['pass_condition'],
                 P1=lags,P2_R200_free_J10_positive=next(r for r in refs if r['rtt']==200 and r['cls']=='free' and r['J']==10),
                 P3_terminal_R200=dict(lambda_fit=final['fitted_lambda'],dq1=final['dq1_by_rtt_class']['200'],dq2=final['dq2_by_rtt_class']['200']),
-                completed_sampler_repeats=sorted(own),one_online_training_seed=True,
+                completed_sampler_repeats=sorted(own),one_online_training_seed=True,post_hoc_support_alignment=support,
                 limitations=[
                     'No actor learning or frozen performance/CPU evaluation in L2A; no new accepted base, M1 remains unmet.',
                     'J10 innovation response and persistent-action Q derivative are different estimands. Their disagreement rejects the registered operational gate, not uniquely critic correctness.',

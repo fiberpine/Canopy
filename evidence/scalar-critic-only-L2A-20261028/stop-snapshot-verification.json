@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "models": [
+    {
+      "model": "L2A-orca-s3-critic50k-admission",
+      "variables": 96,
+      "first_stop_equals_final_all_variables": true,
+      "final_snapshot": "step-47008",
+      "final_critic_updates": 3427,
+      "first_stop": {
+        "reason": "CAPACITY_WINDOW_COMPLETE",
+        "epoch": 1793184468.6757007,
+        "counters": {
+          "critic_iterations": 3427,
+          "critic_optimizer_ops": 6854,
+          "actor_updates": 0,
+          "target_updates": 3427
+        },
+        "inserted": 46570,
+        "unused_update_credit": 1,
+        "actor_proof": {
+          "actor_trainables_and_Adam_unchanged": true,
+          "actor_optimizer_updates": 0,
+          "global_step": 6854,
+          "critic_complete_updates": 3427,
+          "sha256": "2066a561d3739faf4760efc2cf224cd86296788404af288ea254569cf3065f02",
+          "BN_allowed_to_evolve": true
+        }
+      },
+      "final_frozen_proof": {
+        "actor_proof": {
+          "actor_trainables_and_Adam_unchanged": true,
+          "actor_optimizer_updates": 0,
+          "global_step": 6854,
+          "critic_complete_updates": 3427,
+          "sha256": "2066a561d3739faf4760efc2cf224cd86296788404af288ea254569cf3065f02",
+          "BN_allowed_to_evolve": true
+        },
+        "unused_update_credit": 45,
+        "first_stop_epoch": 1793184468.6757007
+      },
+      "replay_rows": 47008,
+      "oldest_retained_birth": 0,
+      "newest_retained_birth": 47007,
+      "checkpoint_map": {
+        "step-0": 0,
+        "step-38425": 2000,
+        "step-47008": 3427
+      }
+    },
+    {
+      "model": "L2A-orca-s3-critic50k",
+      "variables": 96,
+      "first_stop_equals_final_all_variables": true,
+      "final_snapshot": "step-514075",
+      "final_critic_updates": 50000,
+      "first_stop": {
+        "reason": "CRITIC_UPDATE_BUDGET_COMPLETE",
+        "epoch": 1793184968.3528936,
+        "counters": {
+          "critic_iterations": 50000,
+          "critic_optimizer_ops": 100000,
+          "actor_updates": 0,
+          "target_updates": 50000
+        },
+        "inserted": 512298,
+        "unused_update_credit": 1,
+        "actor_proof": {
+          "actor_trainables_and_Adam_unchanged": true,
+          "actor_optimizer_updates": 0,
+          "global_step": 100000,
+          "critic_complete_updates": 50000,
+          "sha256": "2066a561d3739faf4760efc2cf224cd86296788404af288ea254569cf3065f02",
+          "BN_allowed_to_evolve": true
+        }
+      },
+      "final_frozen_proof": {
+        "actor_proof": {
+          "actor_trainables_and_Adam_unchanged": true,
+          "actor_optimizer_updates": 0,
+          "global_step": 100000,
+          "critic_complete_updates": 50000,
+          "sha256": "2066a561d3739faf4760efc2cf224cd86296788404af288ea254569cf3065f02",
+          "BN_allowed_to_evolve": true
+        },
+        "unused_update_credit": 178,
+        "first_stop_epoch": 1793184968.3528936
+      },
+      "replay_rows": 300000,
+      "oldest_retained_birth": 214075,
+      "newest_retained_birth": 514074,
+      "checkpoint_map": {
+        "step-0": 0,
+        "step-36762": 2000,
+        "step-52317": 4000,
+        "step-72301": 6000,
+        "step-92295": 8000,
+        "step-112301": 10000,
+        "step-132297": 12000,
+        "step-152303": 14000,
+        "step-172307": 16000,
+        "step-192309": 18000,
+        "step-212294": 20000,
+        "step-232308": 22000,
+        "step-252309": 24000,
+        "step-272293": 26000,
+        "step-292300": 28000,
+        "step-312303": 30000,
+        "step-332306": 32000,
+        "step-352298": 34000,
+        "step-372298": 36000,
+        "step-392295": 38000,
+        "step-412296": 40000,
+        "step-432302": 42000,
+        "step-452292": 44000,
+        "step-472288": 46000,
+        "step-492302": 48000,
+        "step-512313": 50000,
+        "step-514075": 50000
+      }
+    }
+  ],
+  "new_TCP_runs": 0,
+  "source_checkpoints_written": 0
+}

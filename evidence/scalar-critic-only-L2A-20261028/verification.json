@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "local_tests": {
+    "tools": 104,
+    "e2_handover": 5,
+    "scalar_audit": 7,
+    "total": 116
+  },
+  "python36_AST": "PASS for all changed/new Python scientific sources",
+  "credential_and_private_endpoint_scan": "PASS",
+  "original_model_files": 51,
+  "symlinks": 3,
+  "source_framework_LF_hashes_matching_execution": 27,
+  "consolidated_tag_object_unchanged": "51b5ba5144c69690fa8fc30410ec628b822dd3dd",
+  "real_TF_proofs": [
+    "96 initial variables exactly equal L1;10critic updates,actor/Adam unchanged",
+    "Both online stages actor0;global_step=2*critic",
+    "First-stop vs final96 tensors bit-equal",
+    "26snapshot restores/ledger/actor invariants",
+    "Two paired offline trios,40000 eacharm;all pairing checks"
+  ],
+  "scope": "No actor-release token, complete resume or performance/CPU validation claimed"
+}

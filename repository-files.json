@@ -1,5 +1,5 @@
 {
-  "scope": "Completed70-dimensional held-actor RTT readout precheck; no new TF/TCP; onlineL2 budget pending; original51 preserved",
+  "scope": "L2-A critic-only collection and matched terminal-replay diagnostics complete; original51 preserved; registered gate failed; no actor release",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11548,
-      "sha256": "6d17130bd36b5b17ba70c24823c18644fee470563bbec84655771ab5d094e0f6"
+      "bytes": 9766,
+      "sha256": "aebfecbac78f1c46952c8fea0a38aa078fec0dbef4817806518d7b3a732498f4"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -69,8 +69,18 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 42062,
-      "sha256": "1f8b88b195ccd0d8e1c4017920505ed0eea4225b69a7065d624c3ad391c9d369"
+      "bytes": 50635,
+      "sha256": "f3f7936da5c687e0f57e1fa32e0a5caf08b79248fe399d4d236aa6c3c1621977"
+    },
+    {
+      "path": "docs/SCALAR_BASE_ROADMAP.md",
+      "bytes": 21943,
+      "sha256": "47db2f808cfe786e3f6fd24e2a71a8c5f4bd2f2b9e2b44362e671f9c265c7bd9"
+    },
+    {
+      "path": "docs/SCALAR_BORROWED_SIGNS_AND_STARTUP.md",
+      "bytes": 21683,
+      "sha256": "a960f05966601b6e54c9acda69ee849ff14c4f94114edf6f9f140e12dd633714"
     },
     {
       "path": "docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md",
@@ -86,6 +96,11 @@
       "path": "docs/SCALAR_LIMITED_LEARNING_PLAN.md",
       "bytes": 12885,
       "sha256": "c6f9eccb839658dd9194df7734a91fab72f6b12f97e29f06f3325b68a52228ea"
+    },
+    {
+      "path": "docs/SCALAR_NEXT_STEP_DECISION.md",
+      "bytes": 23220,
+      "sha256": "4f7829f0da845d8fa97eca437d637c7f8ee6a39ad97cd9dcf6b9b2b64157a239"
     },
     {
       "path": "docs/THIRD_PARTY.md",
@@ -1408,6 +1423,51 @@
       "sha256": "3ae37e0796aafebe09ee4f5d618ca2e7756c245e2e424b143edf0d4ad7eff8fa"
     },
     {
+      "path": "evidence/borrowed-signs-review-20261028/input-receipt.json",
+      "bytes": 488,
+      "sha256": "8443f9338c9ef071aef53d932a48181219ca0fc5e6807d7ecb267d25538e0a2e"
+    },
+    {
+      "path": "evidence/borrowed-signs-review-20261028/proposal-H1.json",
+      "bytes": 181907,
+      "sha256": "3c63eae9b6ec0e897e23a6726fd008a52abde0e30329a17a61345c1b0da348f5"
+    },
+    {
+      "path": "evidence/borrowed-signs-review-20261028/proposal-H2.json",
+      "bytes": 60615,
+      "sha256": "2300b16d6e4ce31a837ada6dbd9413143ca0b52f8438684c3ae4b6f0182dc716"
+    },
+    {
+      "path": "evidence/borrowed-signs-review-20261028/proposal-startup.json",
+      "bytes": 9986,
+      "sha256": "aaf82b9178ef0983fd3b9865b0cef778212bbe191690a002dfb033d14df46945"
+    },
+    {
+      "path": "evidence/borrowed-signs-review-20261028/publication-validation.json",
+      "bytes": 1507,
+      "sha256": "8263e734796a477f3fa610bc704f4579b9e7d50eb43ba09ffa0ba947ede2dc08"
+    },
+    {
+      "path": "evidence/borrowed-signs-review-20261028/review-results.json",
+      "bytes": 4620,
+      "sha256": "b855966a5101666d479f541d83551242ad3009dd0f914cd184853ee117e255a5"
+    },
+    {
+      "path": "evidence/borrowed-signs-review-20261028/reviewed-H1.json",
+      "bytes": 198197,
+      "sha256": "83a101083c3a4b248985099541052021f5b8636d9426c179477e41976c346f7d"
+    },
+    {
+      "path": "evidence/borrowed-signs-review-20261028/reviewed-H2.json",
+      "bytes": 65752,
+      "sha256": "f275266f23dfa7c289aec2ae5b3ca3095b861512b36935f45cebea48bedd5122"
+    },
+    {
+      "path": "evidence/borrowed-signs-review-20261028/reviewed-startup.json",
+      "bytes": 11030,
+      "sha256": "ba1a9f4eeab0aa2804940f486f146e946e09267691792823c8a32d1ee438ed28"
+    },
+    {
       "path": "evidence/causal/audit/analysis-columns-v36.json",
       "bytes": 791,
       "sha256": "11b4802cf264d75ee0c3514ade3a4f273699ccc1f151f14be294735b628458d8"
@@ -1511,6 +1571,176 @@
       "path": "evidence/causal/report/v36-causal-final2/joint-evaluation-manifest.json",
       "bytes": 1246906,
       "sha256": "4d64bedd4ed367127d59df302d772eb9d7cb3f9634819be3371fb846cb1f9b31"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/E1R-input-audit.json",
+      "bytes": 591,
+      "sha256": "280299358cb639b5e897929cac28fa73dbf057fb8db08fa0fe45ef5befb2cdc3"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/S-state-origin-audit.json",
+      "bytes": 22198,
+      "sha256": "8087c03b9237b3f0e945d9ab56fce9c0830fd64626384a667269009cf3133c13"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/closure.json",
+      "bytes": 264,
+      "sha256": "c83b52164326abf249fe74231868b48b3f6fe6d9226053f748b749840a3b739e"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/final-analysis.json",
+      "bytes": 118387,
+      "sha256": "2569020f33164cd71a0eef9ed48fe91bc345bd0505a62b33623559f8152a9327"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/local-validation.json",
+      "bytes": 2559,
+      "sha256": "9031a2d06deeaf07e065bcb97317ce203d866ac3e4eb20a9918689379af430a2"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/publication-provenance.json",
+      "bytes": 3426,
+      "sha256": "25825d9b9e917fe2ca3499eb4412c5b976168754ae3e614d87438001db84d5c5"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/publication-validation.json",
+      "bytes": 1140,
+      "sha256": "bb699e4c5cd1997d31d4bfe9159251a1b31a4f9480db45b6ca17d7b52929ae38"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/published-record-recomputation.json",
+      "bytes": 6033,
+      "sha256": "6471e53f03c4f4b536c79073c08d15c5475c41d2a7d3eb5c5a140408878b9999"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/registration.json",
+      "bytes": 1930,
+      "sha256": "6230c984e31ca01461172e14f839db1882e36c97d53e57cf4c9842201dc496ab"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/E1R-response.json",
+      "bytes": 50028,
+      "sha256": "a7a60a840a4dbcde1d118b504e2cf74c328d6f09144552facb5e68b9cd3d626c"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/E1R.json",
+      "bytes": 1481,
+      "sha256": "688c5e73c07d97624fa173b47d1a83b2c63b4865a8bf97b9f0b0d83e7005e629"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/H1.json",
+      "bytes": 271035,
+      "sha256": "7b181979105e149eece5323d9d955a2f439ba7b6081da18ae072127d363adcbb"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/H2.json",
+      "bytes": 82818,
+      "sha256": "f621428dc6fc7fd8dc45c4278ffd6934281b6ed1f0d308f9b7dd5149a86a0422"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/S-R5-s3.json",
+      "bytes": 1067855,
+      "sha256": "50401c7117461d9f03e3b22adb025f52dffc96075c93d4ed83c576765e3f6620"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/S-R5-s4.json",
+      "bytes": 1068935,
+      "sha256": "1ea30f77cfb6a36bb28f1fbed604a3e986950032df7fd3b64b470b8d7464b45b"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/S-R5-s5.json",
+      "bytes": 1067954,
+      "sha256": "a06574ae09d00d9c6076524208afe6b821531519183d7f30971e72bb3a55e713"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/pilot-H1.json",
+      "bytes": 15052,
+      "sha256": "0e22f154436e528fdac146f288c6c8130c1688210fe354b227ce7760b9072119"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/source-manifest.json",
+      "bytes": 474,
+      "sha256": "13275dd075f6300ab0b3e95865848479696746208d35c9c0ad4d204979b31484"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/status.json",
+      "bytes": 648,
+      "sha256": "015d24b3a4416c43cfef6923364aef940ff91e035c8cfce2ead15228bc3c54a6"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/amendment-source-manifest.json",
+      "bytes": 285,
+      "sha256": "80b53428402b9e169e5c734c7b126faf5fa2a51d4b264feeec882b14d9f40974"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/amendment.json",
+      "bytes": 1018,
+      "sha256": "2dd3738033ced9b09e35f91a2e0711e8f792ec2191a3ee3d0d79ffb003a4e589"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/closure.json",
+      "bytes": 265,
+      "sha256": "1c979a3cc7fede09de7d5f778225af391be0feb89c3b87fd4b82ef62ab80264a"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/final-analysis.json",
+      "bytes": 34423,
+      "sha256": "5d8ee5bc7735e903c3b12fd946b060d6904c552c86d8a463334ed1c242a0543d"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/publication-provenance.json",
+      "bytes": 3342,
+      "sha256": "d9b7ed6bd6f53e959ae047b3a0048e9418ec7c7cf6324c613a30943753291b8a"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/publication-validation.json",
+      "bytes": 880,
+      "sha256": "a4ff9ac338da60624c6dac9cad6fd0364c0cf565fb3a8647d4673f097563050e"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/registration.json",
+      "bytes": 2006,
+      "sha256": "94f286da8306e917e755a76718e1cb1834af2847c7a335175d68c4729a4e0245"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/results/own-s3.json",
+      "bytes": 89268,
+      "sha256": "b9547491554b7147c2e07c134f98666a1ddc9cade7900740dff0dbaa418c5c68"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/results/own-s4.json",
+      "bytes": 89405,
+      "sha256": "178224267d6f81da0c2e2fe3b8867fbf393c6e57a6ec0e169e47a7bc9f90192a"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/results/paired-s3.json",
+      "bytes": 271052,
+      "sha256": "d00fd56630b64f1b5f4688ebf70dc36f015d59032f24b11947f14a228fedee51"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/results/paired-s4.json",
+      "bytes": 271775,
+      "sha256": "a0da95cedafdc18a787364f7beb9cd2fb999ee8c23b73a02ae91e5ded423a978"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/results/pilot.json",
+      "bytes": 44181,
+      "sha256": "c42a02c3ce93a93139bb9fe389f14320ead61c8dbee0009bce93df35c9c4da4b"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/source-manifest.json",
+      "bytes": 280,
+      "sha256": "b71bca6adcced85a2fcbd1e1ddc32624bfefef379fd0da6734ceb229b80f1317"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/status.json",
+      "bytes": 385,
+      "sha256": "6001acb8420da24986ebce6ed42cef40fcee9ab32d85e0610e30fe89a494539f"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/supplement-status.json",
+      "bytes": 307,
+      "sha256": "e7d2e76675ed1a83654de5cbe52d6952fbf05f5b116ed865d1e53f351eb7cd27"
     },
     {
       "path": "evidence/e2-handover-20261027/audit-notes.json",
@@ -2278,6 +2508,61 @@
       "sha256": "2376b9181392a823f651b587327633980bfea0baef7863caf16dc23221f60aa3"
     },
     {
+      "path": "evidence/rtt-separability-20261028/L2-A-budget-plan.json",
+      "bytes": 2457,
+      "sha256": "0d8c0dda897c33b0876a971200a535f7df32fd1803adc436a592001d034c3b2d"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/closure.json",
+      "bytes": 274,
+      "sha256": "e024ab9532b506db486a3c385e6f9802361791cec2b831dcb9156de51d44965e"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/probe-seven.json",
+      "bytes": 6501,
+      "sha256": "959b92bf4ede565897c11048f42bacd9cad0943c23bbcc7a56586feb22a5f44e"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/publication-provenance.json",
+      "bytes": 1418,
+      "sha256": "b703f70cc11749e54f7d159801bbd119b984c45b650ea42d760a4167a6ec875d"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/publication-validation.json",
+      "bytes": 542,
+      "sha256": "a84c3b062a1d7a67de4d7b8de82281801f5746daf3359ae64cfe116e7e385e5d"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/registration.json",
+      "bytes": 1409,
+      "sha256": "975925e942607a41304a6fa4115d864e96fe9c03140972bcfd3d9cca65ce701e"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/results/full70.json",
+      "bytes": 6753,
+      "sha256": "4bc5b9df3e0eb15ea449955b377e893c868190f5e7dc1a097e0179838225b082"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/results/newest7.json",
+      "bytes": 7060,
+      "sha256": "49fd1a1f900c2e01e265d24e34f79cf20e5c74911ba08fd55978b688c94ef6fc"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/review-results.json",
+      "bytes": 2125,
+      "sha256": "4a916d2d806e29da0020fd13d42542a849cf03b2a506c3081ea762c47f5fa80c"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/source-manifest.json",
+      "bytes": 278,
+      "sha256": "0646d2e6aededf4b1d781b7cb7a4b4e0d137aae324edd444cf090492d3053291"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/status.json",
+      "bytes": 591,
+      "sha256": "8bbfd3585e230e1617818f86f38cc33b0027d2616a86966739cd223264440b2c"
+    },
+    {
       "path": "evidence/scalar-20261025/audit/canopy-qc-modes.json",
       "bytes": 103545,
       "sha256": "595a49364b534a7d6a10a60ed7bf24b9a8eee1fecf43005b5cdf181b580ab034"
@@ -2346,6 +2631,1576 @@
       "path": "evidence/scalar-20261025/sparse-bias-snapshots.json",
       "bytes": 5876,
       "sha256": "9cea4981f6fc79a0be2a6595e9eb74dc99bc15ffc9f933cc29cbeec578b24310"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/authorization-window.json",
+      "bytes": 352,
+      "sha256": "f7c8e0de79d8b6042634d7ed002d8c6b60e3a85e20d8e6c7c0960f40cbebd01f"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/active-training-config.json",
+      "bytes": 14621,
+      "sha256": "0f28f1e9af6d51ffca6603241adc52fccf797dfab8cdc470e731ea9bf7879dc2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/admission-result.json",
+      "bytes": 6233,
+      "sha256": "f2f1ebfe52ad50b184aab40d91cb60eb96713c3d0574aaaf2db8a9686e12a4bf"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/deployment.json",
+      "bytes": 7990,
+      "sha256": "fd526a4732c31e2e7827995e84795bffa12d0d2a817151d488c8120894ca45d6"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/guard-launch.json",
+      "bytes": 77,
+      "sha256": "279247bb95f7a7e4064d612256bda614105d78fafc211d4bc69de3d700119d43"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/guards-launch.json",
+      "bytes": 754,
+      "sha256": "ed90f34831ab135b1d61ae74632c449ba71bdaa4190bee6a340e55324cfe347c"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/launch-requested.json",
+      "bytes": 34,
+      "sha256": "f73db923917c0c9a5710a05394e880188ceff69ad18f2266f763043d632a7ba8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/lease-active.json",
+      "bytes": 314,
+      "sha256": "0a5d371a867fdaa11b372d7211905a9dd5168dc88190ba39bf27abdb37f8e3c9"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/lease-before.json",
+      "bytes": 324,
+      "sha256": "5885d7be2eecc364a18c4d94e8d3b2b04fbeb5b608edb8e4ff624fdb487a0d86"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/lease-restored.json",
+      "bytes": 327,
+      "sha256": "50fd489d5e86702d74844d0ce12ba1f6e3dbb3fc96f5bf647a5737f697f335b7"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/monitor-L2A-orca-s3-critic50k-admission.json",
+      "bytes": 19967,
+      "sha256": "bdb52abecae71cd8520a4a1c810cc8de2cbbe97582377389ad6835529f583fda"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/monitor-L2A-orca-s3-critic50k.json",
+      "bytes": 300791,
+      "sha256": "47cc4ccfc0ef38ca5d76e759ba36635e13c087a2d10f514b726ceba0f6a4fbb7"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/network-closure.json",
+      "bytes": 228,
+      "sha256": "12e46e18a4303642544f57579b7c85f00ba1651ade20a83e982bd71a8c1e3b05"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/outcome.json",
+      "bytes": 6897,
+      "sha256": "4af92a396a6634ef610272d921659df0943e7916938fafb710bd6fc6d78a5544"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/pipeline-launch.json",
+      "bytes": 907,
+      "sha256": "445bbea223f014bcdb6d547704fe786a21041e2aad0dd6b9820ef7dff3a7bfe8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/pipeline-started.json",
+      "bytes": 50,
+      "sha256": "327ddce71974c4f0debd1d38b1453b031811274feb3ce83f679a3ff999ef8305"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/pipeline-status.json",
+      "bytes": 125,
+      "sha256": "b02e484d3e1f2ba26a0b98dffbc8a68f59cf12859dacf5803edc4c52ce7e674d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/real-TF-admission.json",
+      "bytes": 404,
+      "sha256": "9faa4b4578e3a0c0ef704147f8c82112de2c69a49245c818889d376a82529d72"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/audit/training-result.json",
+      "bytes": 6307,
+      "sha256": "61dcd6b60b49d42a149e9e99e89b9e9e6ffee596abdcbeed2d33197089606cfb"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/audit/L2A-orca-s3-critic50k-admission-cleanup.json",
+      "bytes": 64,
+      "sha256": "1284ddc48a3ef82f93422de35c014f06003ee849db6191eea4e7ef77df6be6aa"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/audit/L2A-orca-s3-critic50k-admission-online-monitor.json",
+      "bytes": 88,
+      "sha256": "c0f3948e6e3b2e479e402040448ebef9d54c76088ce32066fcc7a9f742eb160d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/audit/L2A-orca-s3-critic50k-cleanup.json",
+      "bytes": 64,
+      "sha256": "09944dac5aaabaab4f7f40d3c112ec2c18168f87340d58b9e2ef112c9748dee0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/audit/L2A-orca-s3-critic50k-online-monitor.json",
+      "bytes": 88,
+      "sha256": "71a8ed2043f0ab695b04339f603ffe8de8c50c926c9b21fa88701ef13827212f"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/critic-only-final.json",
+      "bytes": 359,
+      "sha256": "0a669ff6e77f8bc620ed2915ae5fc78ea1f67f8776e5cb9ea8e2caeece3cd77e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/critic-update-map.json",
+      "bytes": 62,
+      "sha256": "169d51ad05785b2c18b841ddcea1c4af1024fa9504f808fc2e48b6c84bcb1503"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/first-stop-counters.json",
+      "bytes": 545,
+      "sha256": "a47373c8e92aeaaa67d5d7a34fb5340993b31da9698f5b5f465ce87613a3c4c5"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/sample-coverage.json",
+      "bytes": 989,
+      "sha256": "8364adfed6fc8861443c429a194fc0701634142ea8f781db7c9307c72b66bbe5"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-0.counters.json",
+      "bytes": 15691,
+      "sha256": "92630998b688d7538905b21e79ce2959cf41f2a550cec230412296b5ad4aa46d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-0.frozen-actor.json",
+      "bytes": 246,
+      "sha256": "3ef7ecb21c61bbd5c81dec6f4657536440663f8683d4800c4eb6dc9bbd83ef4b"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-0.variables.json",
+      "bytes": 3707,
+      "sha256": "476ca0031ee9505540d72888483683f5651cd572627cdf88060e07fd29fe5e0d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-38425.counters.json",
+      "bytes": 15704,
+      "sha256": "97faa6924a5d3f0824a336b3e917a01584df124a56bd528a07d2b4164c0dea36"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-38425.frozen-actor.json",
+      "bytes": 252,
+      "sha256": "fa1eb7b5488d3f24c10a6ebb36f83019d6b031b89c2ae87b7ce27c333eed3753"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-38425.variables.json",
+      "bytes": 3710,
+      "sha256": "d56d40e81ce2a8e44b5b0daee935fdc1d2bcfc2b128fd3d84d25490124cd7c25"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-47008.counters.json",
+      "bytes": 15704,
+      "sha256": "023e66fff571e9ee9bf9870f22238006c1c06c9b3bae728ac8a30f5365c293ad"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-47008.frozen-actor.json",
+      "bytes": 252,
+      "sha256": "23f2094bf5e19e782c19c9d5ac921b0feeb42dcc34be4762249bc445da9a22ce"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-47008.variables.json",
+      "bytes": 3710,
+      "sha256": "9d3385947dd2b2ec6209a65067b9c804d25434727df23159699a9018e2b4c390"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/critic-only-final.json",
+      "bytes": 363,
+      "sha256": "7f3c4467f383081957a7580183cc61088985a1da1ae160f5c54f649269b011bd"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/critic-update-map.json",
+      "bytes": 634,
+      "sha256": "89ae75d8ce541706880c4aa5ac1580d9d32535791760c975d72f3b8534edb5ac"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/first-stop-counters.json",
+      "bytes": 558,
+      "sha256": "806de4d56aeb44f5f826d6a8c50520947c4c36ac6df6be1896e4577787753c96"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/sample-coverage.json",
+      "bytes": 1086,
+      "sha256": "fa462c784e3f256c0ab78a62a98d9020fb82604c1c42f0f79c8ea272a4bb02a2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-0.counters.json",
+      "bytes": 15661,
+      "sha256": "c56bbaf6d7cda691eed38e18ae6fd73df7b67bdde3d69d36e3fc5cd6886c4d38"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-0.frozen-actor.json",
+      "bytes": 246,
+      "sha256": "3ef7ecb21c61bbd5c81dec6f4657536440663f8683d4800c4eb6dc9bbd83ef4b"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-0.variables.json",
+      "bytes": 3707,
+      "sha256": "476ca0031ee9505540d72888483683f5651cd572627cdf88060e07fd29fe5e0d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-112301.counters.json",
+      "bytes": 15678,
+      "sha256": "897ace9648b2116516e8d94a9ffd690f5a401aec2b7ff4442fc3cc39abd98ab9"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-112301.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "6d33fa1510c93ec92017a90dbc439f7e8a5fcca695fd524ae4d8386fe9d69f9d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-112301.variables.json",
+      "bytes": 3711,
+      "sha256": "f5aabb85b41bbff983b3ab29641bd40fe702a2c7d7963c00fc206dba4cc69902"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-132297.counters.json",
+      "bytes": 15678,
+      "sha256": "e6f64e524c66caaccdc7802a94a10800e5a2285982537282f85f38ea6f712727"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-132297.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "28be22808b158cd09638672e81b0b45b9c6b4048b3468202cc75675385f63ffc"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-132297.variables.json",
+      "bytes": 3711,
+      "sha256": "bc46402185ef7bb6678ea0b221d240ac095159a30dbd1005f7947de0aecccc80"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-152303.counters.json",
+      "bytes": 15678,
+      "sha256": "76dbcfcc0e226b457922b4d342e8c7b12f507a74b9a326cb7e71433cfc3f0a4e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-152303.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "f0f4871a29451f8414d019017dbf343336bc5004e144fe662d5bca96ced1c63e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-152303.variables.json",
+      "bytes": 3711,
+      "sha256": "067aaa08f27017cfa498c870dfe6acb5d1dec9585d12a7b9e3b75dd32fe57380"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-172307.counters.json",
+      "bytes": 15678,
+      "sha256": "565dab7330c463af5c3c1aeacb5b2c633aad67c8eb34e6424ace3590edecef22"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-172307.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "65d29ea2e50d52d9a6fa658d547086eb9da63b8900c17026e15364fcd1464220"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-172307.variables.json",
+      "bytes": 3711,
+      "sha256": "bfe5a0e2c1a7ba06b9e6029edcf52da9881ffaca9b1e2a6cda064d4e17b458c2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-192309.counters.json",
+      "bytes": 15678,
+      "sha256": "d9881060b1ac6fc25e384704379bb15fb645a3f9a215d04433ca39ce1bcd4cc1"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-192309.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "31384231bdf90e31dee0597e5b9d528c5275dec7f41cd66bff0b39e77360c018"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-192309.variables.json",
+      "bytes": 3711,
+      "sha256": "8fd0196f58e179e0f5d14b8b2127b6f7acefaf0c28b81c9236fdec812c7f63ed"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-212294.counters.json",
+      "bytes": 15678,
+      "sha256": "fb37bf92326106da5b1135cb2a4fb4eaadc0c44d252647829f2ebb3e7626670e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-212294.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "005ca2c97af722be3bd6db3b1a1739564647f125843665dbe188c092a292d8f7"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-212294.variables.json",
+      "bytes": 3711,
+      "sha256": "2808ace3d0dbeeb4b7549eaefaaf3b62f6b3d883e049f88fe2e4c5258648437a"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-232308.counters.json",
+      "bytes": 15678,
+      "sha256": "12e417fd78445fe6ad091659b1f38334597fd86c7d4dbf3649a72e75350d262a"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-232308.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "9f04c7c1ff0b640b7341934b5d82a34a36d7ca38732fc85886a3782dc562dba5"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-232308.variables.json",
+      "bytes": 3711,
+      "sha256": "02afeaed0a1540dde1170a4bce73238ac999096199764c3f855378273fee6e0d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-252309.counters.json",
+      "bytes": 15678,
+      "sha256": "a7b4c1557a15c5ed05bde432ebef9827884a2a96d8d7a034ee809b028f25cef6"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-252309.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "bfd5103f3681b9687e3ec80bdba76355fb76e2642d25ca789c966e5fc36a03d8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-252309.variables.json",
+      "bytes": 3711,
+      "sha256": "aec9b5eee43e0e35f9ba594c9ca5487717ca2861bc9fdc99105e7becbb50906a"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-272293.counters.json",
+      "bytes": 15678,
+      "sha256": "d82c99184bb937c82b2f30baa7544bb3822e76da6d33e9058f1736bc274e1bff"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-272293.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "66edcceded464c0247c7a7b140a811ff0414ab77e9c0abceb831a503f6cffcc8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-272293.variables.json",
+      "bytes": 3711,
+      "sha256": "e42b4f7733dec4f0d3347f7ddaf9f48dfd2f7ec16909e0f9800c3e3dae64777a"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-292300.counters.json",
+      "bytes": 15678,
+      "sha256": "0d45f2fc9a69700fc11d742ec48e00b450b9a3205427bb8c845e89918c0c77dc"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-292300.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "27351d3fafcdd1d7ae92c23403e08cf8aaa3a01763ef245e2a54cf086077afe5"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-292300.variables.json",
+      "bytes": 3711,
+      "sha256": "4c107bf159fbdece6602f1011b31a158dd15259ad3f41cd88b3a6cab5ab7de00"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-312303.counters.json",
+      "bytes": 15678,
+      "sha256": "79d7895205dea255f2e105e7c17a9408681c0f60fbd5abab89fd56e55aad00cb"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-312303.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "47515c89f305002b9201c321c7155a4801075015b08d489f22b0f7594d6631f8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-312303.variables.json",
+      "bytes": 3711,
+      "sha256": "c18189d452a0d0bf2240d38caeb7f9b56e144d96f01df9161235522e31758e26"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-332306.counters.json",
+      "bytes": 15678,
+      "sha256": "74645b2bc36e82e4de8b36bdac5ae94cbe38e98485cfedf7a64d2b9fe74cd4ec"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-332306.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "9ac9ecc558772a1c803c0197bc48c3e66dcd26f994078050f78f46d872a403f1"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-332306.variables.json",
+      "bytes": 3711,
+      "sha256": "9aabd4f65b0f2c9a63afa19e32e289b5bf6bae1874a2fdf4d4649eac3ea92499"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-352298.counters.json",
+      "bytes": 15678,
+      "sha256": "7260c51a44bdc10b940ea0664140de2b5a7f8bc954ca9cfc14f8aff657c398c9"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-352298.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "e8d46e17b7ea553757c3b456c562d87b291e6ae218ef948a4d7191cb9533b484"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-352298.variables.json",
+      "bytes": 3711,
+      "sha256": "10739a11fb963ce3eed2daef87e50cbb7203c5a6ca53b21afb513c22773ccb34"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-36762.counters.json",
+      "bytes": 15674,
+      "sha256": "b8576ba6a7be6f00636a1c9e37e96b05bb4e9f3ad1e92a828a096877b7263450"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-36762.frozen-actor.json",
+      "bytes": 252,
+      "sha256": "fa1eb7b5488d3f24c10a6ebb36f83019d6b031b89c2ae87b7ce27c333eed3753"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-36762.variables.json",
+      "bytes": 3710,
+      "sha256": "d56d40e81ce2a8e44b5b0daee935fdc1d2bcfc2b128fd3d84d25490124cd7c25"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-372298.counters.json",
+      "bytes": 15678,
+      "sha256": "30b03ed35ef56e4bee36a82508aac85f143f1311fcb62046301e4a8aa45d4e17"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-372298.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "4cca4b1e5525bd9e756ab2c28ea1f47f8accd809d375567a7f7882e5568c052a"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-372298.variables.json",
+      "bytes": 3711,
+      "sha256": "a0d7dc86875477b5679384248999d40acd9632f94316972d796b257a43e1e4b4"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-392295.counters.json",
+      "bytes": 15678,
+      "sha256": "aa87dbad3eedce3af51eda6d7af0802397c6fc6c8dbdca5188bdfcae7fa56d64"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-392295.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "8d1bb9d885a004f66e9d19432744238ea4f02645847c0eb0b3bf76f3a79c79d5"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-392295.variables.json",
+      "bytes": 3711,
+      "sha256": "2dad581eb0b431e5e9224177162ad8244a0a91ce62e9aa52f33c7a9d87a90233"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-412296.counters.json",
+      "bytes": 15678,
+      "sha256": "feff4f6eb4012ae26a462485fa598fe6a5f23aeb9e8472d3aecc46f9e576020b"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-412296.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "34cf8f4b76b6b29d7a1c0e1676df1725f121826674e7ba47b83588404a157a29"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-412296.variables.json",
+      "bytes": 3711,
+      "sha256": "b15af971c6188d4c86345001de522e8e57c832ff1a62520f00f00f3e77863aec"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-432302.counters.json",
+      "bytes": 15678,
+      "sha256": "5b965cd4cfa5757ea609b346f6a5aba7f96978d7542634919aaf5461f615e858"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-432302.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "6a3d17e7f4cfaf03befdecdefb8465ab85588214a7574798dd11d3d5f20bda47"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-432302.variables.json",
+      "bytes": 3711,
+      "sha256": "1d8e18503906e4d14ff45200286ab35199ce88fbc8a2b0483eb2b1dd5f47c38a"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-452292.counters.json",
+      "bytes": 15678,
+      "sha256": "849c084fde2d8975dca194eb5bc47524a25a89fc3db12ea46f13bdaa99bf462e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-452292.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "dc4e5c917aea4871717fe15f270921e4991561f94cf963fb1f85f13e82eed0e1"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-452292.variables.json",
+      "bytes": 3711,
+      "sha256": "b6b076a876df856e0fb991f37a8ebdb10dcda2df17f2ecf822da49041328d82c"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-472288.counters.json",
+      "bytes": 15678,
+      "sha256": "36ba05fe58a558335dea543e7a995d3e1f9e435a050c3d7deda1adc14ef26209"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-472288.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "e83101b4b30c6959a249d58d1459ce782bc51a8e0de7b19494aa297229ecef2d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-472288.variables.json",
+      "bytes": 3711,
+      "sha256": "1e16c0e064fe0810986ef8681d345deaebeb2085fd7ff32e888eb0b4bcc1e6cd"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-492302.counters.json",
+      "bytes": 15678,
+      "sha256": "e673add1339404c2f5ec97d1ff0453436f72f4024bf2943f182da9fc59951d32"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-492302.frozen-actor.json",
+      "bytes": 254,
+      "sha256": "94fc601afa00bd41538af619237b7ab619bd7ecaeec5904b533c35ab47776cd2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-492302.variables.json",
+      "bytes": 3711,
+      "sha256": "d0c5ae01290f0db3fafa78f3cee5fa864b8b245f8078a12d583820849dab9098"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-512313.counters.json",
+      "bytes": 15679,
+      "sha256": "484f0dcb2435ae2242a7979ec5d5122ea84b924ca1cda577b893164fb4fd799c"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-512313.frozen-actor.json",
+      "bytes": 255,
+      "sha256": "b4af671cb27b1b1711925890168c8ac48d520d13f82d0d3a2c934d020836fa00"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-512313.variables.json",
+      "bytes": 3712,
+      "sha256": "03b5b82bd2b824086a464583f09c845d8424fe2971ef467311854bec7aa2ee74"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-514075.counters.json",
+      "bytes": 15679,
+      "sha256": "3673b2dd251cdd6da7895e9f82425a260310c23a50d3425d4ce1bc1a479e804b"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-514075.frozen-actor.json",
+      "bytes": 255,
+      "sha256": "b4af671cb27b1b1711925890168c8ac48d520d13f82d0d3a2c934d020836fa00"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-514075.variables.json",
+      "bytes": 3712,
+      "sha256": "03b5b82bd2b824086a464583f09c845d8424fe2971ef467311854bec7aa2ee74"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-52317.counters.json",
+      "bytes": 15674,
+      "sha256": "163d172c9a5b0112437a9fd629a038d8d3dbb040bb06517d8f82a7b8b2591dff"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-52317.frozen-actor.json",
+      "bytes": 252,
+      "sha256": "b5c9aecfe07a5ee2a70b7093380ef4ecf535e55d46553c4ffe9d57e0af749885"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-52317.variables.json",
+      "bytes": 3710,
+      "sha256": "33f2d85be664db62384469b8484b6e8ca32dea6dba8818de57203670a75f7484"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-72301.counters.json",
+      "bytes": 15675,
+      "sha256": "94dc9fcb97b1fd21c069e72e77a95f430659dd6c0d630a8f8564fda3303a3e7e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-72301.frozen-actor.json",
+      "bytes": 253,
+      "sha256": "2300a0d09971f0b1962dd5761a4f9cc16abb35e02415067c360954ac4bf27d5c"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-72301.variables.json",
+      "bytes": 3711,
+      "sha256": "06cc2e85147cca161d99824bd532fab6ce79c2f7c7739649d81364764932a5ee"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-92295.counters.json",
+      "bytes": 15675,
+      "sha256": "ceeeed8eed78aa0a36ed7b151de6dcf35ce49d637da1869be221a4fe84847239"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-92295.frozen-actor.json",
+      "bytes": 253,
+      "sha256": "deb7a40868eeb738453af30dcf30870007c8cbbf85c8c1711a33696f250bfe44"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-92295.variables.json",
+      "bytes": 3711,
+      "sha256": "9df0adf99ac2df3116dac395590a0980aefe65db2a1c522cb1bd2c57b2ae0695"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/logs/L2A-orca-s3-critic50k-admission/critic-stop.json",
+      "bytes": 545,
+      "sha256": "a47373c8e92aeaaa67d5d7a34fb5340993b31da9698f5b5f465ce87613a3c4c5"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/logs/L2A-orca-s3-critic50k-admission/first-update-coverage.json",
+      "bytes": 475,
+      "sha256": "c4f6e11b8aae1ad4f052b39f6f2b509879147ad9f651cdc2cce2e459a891f49c"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/logs/L2A-orca-s3-critic50k-admission/result.json",
+      "bytes": 234,
+      "sha256": "b22dd2510aa7300b75c42a3116fe4ed8707cc6ff78d9f02a894543959f0432d0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/logs/L2A-orca-s3-critic50k/critic-stop.json",
+      "bytes": 558,
+      "sha256": "806de4d56aeb44f5f826d6a8c50520947c4c36ac6df6be1896e4577787753c96"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/logs/L2A-orca-s3-critic50k/first-update-coverage.json",
+      "bytes": 473,
+      "sha256": "28be18a90b5ebdebb0c8be3268785972a29b5e102c449eb325ba3aa226edb5a3"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/logs/L2A-orca-s3-critic50k/result.json",
+      "bytes": 239,
+      "sha256": "baa97f5fb23721f0e97303fe96c28c13c02e5c2a6e4c215bf30250c26c2ea8a1"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/metrics/L2A-orca-s3-critic50k-actors.json",
+      "bytes": 61149,
+      "sha256": "01645e9e2b8ef8ab4639cf8ced9bbb7fe751a42735ba0d90a43c09fb7bc332d4"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/metrics/L2A-orca-s3-critic50k-admission-actors.json",
+      "bytes": 61626,
+      "sha256": "e907d60ae88b28732d3c549283d49e36292ea8f76418e5d10b156e04fe05c9f8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/metrics/L2A-orca-s3-critic50k-admission-cluster-result.json",
+      "bytes": 6233,
+      "sha256": "f2f1ebfe52ad50b184aab40d91cb60eb96713c3d0574aaaf2db8a9686e12a4bf"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/framework/metrics/L2A-orca-s3-critic50k-cluster-result.json",
+      "bytes": 6307,
+      "sha256": "61dcd6b60b49d42a149e9e99e89b9e9e6ffee596abdcbeed2d33197089606cfb"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/guard.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/pipeline.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node0/registration.json",
+      "bytes": 20402,
+      "sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/audit/active-training-config.json",
+      "bytes": 14621,
+      "sha256": "0f28f1e9af6d51ffca6603241adc52fccf797dfab8cdc470e731ea9bf7879dc2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/audit/deployment.json",
+      "bytes": 7396,
+      "sha256": "dfad235ffa1b896ca171427494465522018df97ae12d6dbf771ef58738b2de9e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/audit/guard-launch.json",
+      "bytes": 77,
+      "sha256": "028549aeed1c6a77a0427e3b4954db93113d6e850d1955a76e9eab85410383f2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/audit/lease-active.json",
+      "bytes": 313,
+      "sha256": "e666f7e321631df600b46f8dcf626b1195df750a55d6929f7db135c9cdd73dc7"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/audit/lease-before.json",
+      "bytes": 322,
+      "sha256": "dbc0d2c7e3aa6ef849f20373bffb54d1a343e4e9825b58ec12e287ca315803e4"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/audit/lease-restored.json",
+      "bytes": 328,
+      "sha256": "e2ff6a5aaddc71fc40e368ddce2b84f4950e50d97c6405254ffee4bfd8b4d8a0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/audit/network-closure.json",
+      "bytes": 229,
+      "sha256": "bc0211b84d9bfd9999104056aadfe30163967401e21b7afa58a95bbd2d278605"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/audit/L2A-orca-s3-critic50k-admission-cleanup.json",
+      "bytes": 64,
+      "sha256": "8b8822b1dda9cee77a2250fba4781c364f0c8fbc35f2256da1c4272829ac1e78"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/audit/L2A-orca-s3-critic50k-admission-online-monitor.json",
+      "bytes": 5504,
+      "sha256": "fbe8feca6496c26a984c3801ccb8ff774d9c9e73f4db2ee7bbf60a9a25e0a0a8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/audit/L2A-orca-s3-critic50k-cleanup.json",
+      "bytes": 64,
+      "sha256": "22bdea5d5605d20f461c779ca4051f54337d1367e3f79469114dd34ca5f265ce"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/audit/L2A-orca-s3-critic50k-online-monitor.json",
+      "bytes": 76057,
+      "sha256": "99cf3e2bbcf785f1ba7b4d30a455bcaf34025257cdba6193390cb92afc9ff87b"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor0/ownership.json",
+      "bytes": 553,
+      "sha256": "b78e19bfa7fd21d6eda4e8b9acd3340b1fa41e52e38f8e338cd5e859e5496699"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor0/result.json",
+      "bytes": 1724,
+      "sha256": "ca4449205f4f085926b734b8effb731683305567c5c72e080684e9ab09c6294e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor1/ownership.json",
+      "bytes": 554,
+      "sha256": "18739fb2896f29bf29f751c483c3c0435ad305d32c87e4237d17936ee3f4927d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor1/result.json",
+      "bytes": 1728,
+      "sha256": "c6b1792f67ca0bb8448688cda2b68d311aa9b1a0aebd5b84f9225057895c0003"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor2/ownership.json",
+      "bytes": 555,
+      "sha256": "78fab1f447ce65f4d684064d21ccd926a9e0d73b09a4c106c2a11a98110b65bf"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor2/result.json",
+      "bytes": 1730,
+      "sha256": "4c4d28d328656c07b942c32ec34de78db84391849bcb1075cf60bf3a149a64a3"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor3/ownership.json",
+      "bytes": 554,
+      "sha256": "2a070fae7cfb92e6da528d15212ff6ac109336d3a77e1284d78b66cca3d73df2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor3/result.json",
+      "bytes": 1732,
+      "sha256": "74ec7eac6ee46e5daf9181fbbfccf62f2b7b64682d34ca2a3c66d9ebf58e6545"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor4/ownership.json",
+      "bytes": 556,
+      "sha256": "919e263ba5b38a33c72f3bbf8e1403b29277a38d7bdbefae443e342a73d992ad"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor4/result.json",
+      "bytes": 1728,
+      "sha256": "f3b653bed8c98cf3929a50ff2032a9125b3c403a77150ae20c2055e1848c29db"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor5/ownership.json",
+      "bytes": 552,
+      "sha256": "0e48bec971a7d1e49ef1d66ec42aa466d899308e2e636259cb97b187c537d0fc"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-actor5/result.json",
+      "bytes": 1812,
+      "sha256": "078108e253cb236c428d159f5097a37d3016c8e316e729fdebf9e95cbfb6c837"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor0/ownership.json",
+      "bytes": 563,
+      "sha256": "72abd8e88a3759362fa07f0963e65fffaeff99db897228129dc18aa1e2c1fc9d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor0/result.json",
+      "bytes": 1737,
+      "sha256": "ac831c8b75425dcc74057574515e837c8012e29a9b898c9eb3d3e6c863013285"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor1/ownership.json",
+      "bytes": 564,
+      "sha256": "3cfb39fae1dd417a3fae69bbe8697489dde17312421929282974ec5586a9bec4"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor1/result.json",
+      "bytes": 1747,
+      "sha256": "2ae588cefcd5f3e3975ebd86cf92a56daeeb61d3dc9c85900eb2dc5096b0d0b8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor2/ownership.json",
+      "bytes": 564,
+      "sha256": "ebc66b177768f5171755062c752afd4089b6285f971191486739dd0ed324ab09"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor2/result.json",
+      "bytes": 1750,
+      "sha256": "01b660adaea3fef366cbeb8bd36dfde2a19d97325820e0f921069f3906adf423"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor3/ownership.json",
+      "bytes": 564,
+      "sha256": "d524f0b4497845a103c0449ec175699e25fadb0be67a64b86117df63101d291a"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor3/result.json",
+      "bytes": 1751,
+      "sha256": "8154b2927941678e47a1bace6c8f56a1aed8023e8396b706aae76c2b2ef6d1a3"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor4/ownership.json",
+      "bytes": 562,
+      "sha256": "2933adde4f6326d5ef4f5e72980d6f731defbf496f08a518113d425d02ae4298"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor4/result.json",
+      "bytes": 1751,
+      "sha256": "269e8d44bf6b53dd8c51837bb91a29c32a75afeaa65317ea07e05c78ed1792ab"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor5/ownership.json",
+      "bytes": 563,
+      "sha256": "ca85bd42a740f666e4850da63c660294e9423863d832a54703d26a30ad4df139"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor5/result.json",
+      "bytes": 1831,
+      "sha256": "99b1aaa32321bf570819128898ac2980266604d85d03fede2f5e0a31b53abaec"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/metrics/L2A-orca-s3-critic50k-actor-summary.json",
+      "bytes": 15296,
+      "sha256": "5eeefbe96b04dcd882a8e50f5160172df70350e1083446e0259d857a2b8f2d84"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/framework/metrics/L2A-orca-s3-critic50k-admission-actor-summary.json",
+      "bytes": 15419,
+      "sha256": "e6a0537ad8fb9268e0f425795c1a5bb1cdf485cf166ef971b6ffa9110e1d1794"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/guard.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node1/registration.json",
+      "bytes": 20402,
+      "sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/audit/active-training-config.json",
+      "bytes": 14621,
+      "sha256": "0f28f1e9af6d51ffca6603241adc52fccf797dfab8cdc470e731ea9bf7879dc2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/audit/deployment.json",
+      "bytes": 7394,
+      "sha256": "b0c77c642733443696a53146703d9312e178c283007d6172d026ba5fe9ffba86"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/audit/guard-launch.json",
+      "bytes": 77,
+      "sha256": "10802f4d5b322fb5653cebe3dfe3eea2f582f70e8af60d610afd4e77e10133a2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/audit/lease-active.json",
+      "bytes": 314,
+      "sha256": "96b1a4e0086025dc2255f19d395c5c0f50096aa447f0eb3e1f4818eb8e4533a8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/audit/lease-before.json",
+      "bytes": 323,
+      "sha256": "20e02e8bb18f39d2adf898eaa6c17882d0bb6377fcf0c74b7e871dd10eca5555"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/audit/lease-restored.json",
+      "bytes": 328,
+      "sha256": "35008a0e4ba439cac021c9f344ad0e98836ce0b77942ee24072b3af6c67330df"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/audit/network-closure.json",
+      "bytes": 229,
+      "sha256": "4008195a33a6f919088af16e85dfbf56023767ff0fb498057234d8345969e6df"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/audit/L2A-orca-s3-critic50k-admission-cleanup.json",
+      "bytes": 63,
+      "sha256": "80165e2e29beaf5217f191bfd5cd65e85590966500f745d1479b6f975a51b4bc"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/audit/L2A-orca-s3-critic50k-admission-online-monitor.json",
+      "bytes": 5431,
+      "sha256": "a57f8d22ce7d5035fdf70c1d4d7327a094518f106e0c208f0707b1ef9fa84fc8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/audit/L2A-orca-s3-critic50k-cleanup.json",
+      "bytes": 64,
+      "sha256": "f3bd86140c985cc49003382d24c5ea7754d092de0f4d740d7d10342f7aff112e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/audit/L2A-orca-s3-critic50k-online-monitor.json",
+      "bytes": 75240,
+      "sha256": "ee6019c685c0a329eea0ec5474b59fb7707aa2729db09191a47d1f0cf27aa1d3"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor10/ownership.json",
+      "bytes": 556,
+      "sha256": "5cf9a044669df3ef62dd4d6f42e1318df9190b4b3e4476799e0cec8d8e481bf7"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor10/result.json",
+      "bytes": 1732,
+      "sha256": "389f1aa12d76c496944bfa6e8d5921e92652feb16889a4515ee4462dc27a723c"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor11/ownership.json",
+      "bytes": 555,
+      "sha256": "2450dc782b4e2afb2c858a530480fda9a357e120568874ec5e2a42b8d44c6c8e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor11/result.json",
+      "bytes": 1731,
+      "sha256": "536088d43e05bff81d3363519ab4b3bc6df27af0051b7db38780e388de413128"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor6/ownership.json",
+      "bytes": 554,
+      "sha256": "ce0cbd6861eb6942e1b41be587b73da7f9fc16b027ac06f4d026c1b201e90159"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor6/result.json",
+      "bytes": 1728,
+      "sha256": "0d50106d5af2b8a3111c39b89431257b69500b69f2f63a43a19751e32601a155"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor7/ownership.json",
+      "bytes": 555,
+      "sha256": "a9f82145eaeba7b4e8c48748bc102b0e56ecd72d232c4a2ba172edb957f9886b"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor7/result.json",
+      "bytes": 1731,
+      "sha256": "0e477bfa2b125aacc2b71b14ae4574073d3d9b3bf0f7ec6d7c806be599ae88db"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor8/ownership.json",
+      "bytes": 554,
+      "sha256": "b8d99495e033339f84671286efeaeb48cabb26c78a8f812195faa0fe0c2403f8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor8/result.json",
+      "bytes": 1726,
+      "sha256": "dfe15c9bf5a4932aa24bc2a46ac97e05f1c39172d6ef9596bc46872f37f5feea"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor9/ownership.json",
+      "bytes": 556,
+      "sha256": "3df28417cdbcf657b0e00696cc3c3b87c2e892b40d2712d9b0327c386c649bcf"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-actor9/result.json",
+      "bytes": 1729,
+      "sha256": "a450171ad8833103bb9bef2abf59459eaf652adbac1ac3b6460a935fd7892c07"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor10/ownership.json",
+      "bytes": 564,
+      "sha256": "f02c2bca1392b468aad816c0c29b96dea6ff1dc724585a366075ac18f7c83c85"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor10/result.json",
+      "bytes": 1750,
+      "sha256": "c4f88088b926da7e8bf912179c47bcdd5bcbf88edb6f7a3824458ada641f3d28"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor11/ownership.json",
+      "bytes": 564,
+      "sha256": "5d2b04d4c3e563cba5738bfa55c5c0aa385a03467067430b49f91378b5837dba"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor11/result.json",
+      "bytes": 1751,
+      "sha256": "2182a18ec3c83d5d5638c249265d86512a1de19b32a2be5ec3a483831f0d06e8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor6/ownership.json",
+      "bytes": 564,
+      "sha256": "ca2125fe4bdb2a90afd2814e05918421c38e7187999159744364a5f102f1c368"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor6/result.json",
+      "bytes": 1747,
+      "sha256": "564b4f982776a901c4e9aafd7a007ed040104c83b3d52009fb69b74999acb75e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor7/ownership.json",
+      "bytes": 563,
+      "sha256": "9fc62d3def72799a063a3b1681841a59e021bfc4ed2552f97a634ddbaa127bb5"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor7/result.json",
+      "bytes": 1749,
+      "sha256": "4e3bfd30752c84084659d731fde995c12def2eef5ec608484f1fc2c781c53dc0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor8/ownership.json",
+      "bytes": 563,
+      "sha256": "80e34a9bc356bc6284694c6dbb22d1cdb54345f757e22895cade16c492b31875"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor8/result.json",
+      "bytes": 1749,
+      "sha256": "87a270e4871637245e4fcd09408abbb5bc0e4b755ddc9fa8025ba90cf2db8937"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor9/ownership.json",
+      "bytes": 566,
+      "sha256": "78c98539185a4d94fc3027fb8a16d5e668d4027c25613c875a68ff309df4f1bb"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor9/result.json",
+      "bytes": 1752,
+      "sha256": "7e2b02d1c96292123df45644de079301e9b9d14df9d9a1d4721f363f16532f74"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/metrics/L2A-orca-s3-critic50k-actor-summary.json",
+      "bytes": 15232,
+      "sha256": "831c3fc63b031fb4d3c318e55aa17faaa03ca01a536c074c485b643e1698eb14"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/framework/metrics/L2A-orca-s3-critic50k-admission-actor-summary.json",
+      "bytes": 15375,
+      "sha256": "da0a71ecc86323da80f341d979b10da42eaa21e8907db78533efcd3f5cf7726a"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/guard.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node2/registration.json",
+      "bytes": 20402,
+      "sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/audit/active-training-config.json",
+      "bytes": 14621,
+      "sha256": "0f28f1e9af6d51ffca6603241adc52fccf797dfab8cdc470e731ea9bf7879dc2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/audit/deployment.json",
+      "bytes": 7396,
+      "sha256": "a286b232b9b1a793c7639f2c9a1b7104481a9dc5b737d59977141d3762f2a590"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/audit/guard-launch.json",
+      "bytes": 77,
+      "sha256": "f6b76db4d86aa3e3b62a207399fdfb8650ba9de91bdca28c9a7b2f0b781c05be"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/audit/lease-active.json",
+      "bytes": 314,
+      "sha256": "ae4f7539ac4d208547f748daec952f0be4fc679fd014560ba5acad5ce9d88272"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/audit/lease-before.json",
+      "bytes": 323,
+      "sha256": "f85407742a3622ae786f3c06a1b807f5cee3bfc317174924ae85de1dafa258aa"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/audit/lease-restored.json",
+      "bytes": 328,
+      "sha256": "28abe56e4255f46b8f61e63db102ed29d4625e0c3221330a2b7141c61e77ec59"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/audit/network-closure.json",
+      "bytes": 229,
+      "sha256": "4e16d555c107449a32b1bbded2af1283208bc779151810c0bcde09140e2e75cd"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/audit/L2A-orca-s3-critic50k-admission-cleanup.json",
+      "bytes": 64,
+      "sha256": "aa2de9293f95eaf52eb4356153d41911413ebde587baad023fac2dd1a0d1e852"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/audit/L2A-orca-s3-critic50k-admission-online-monitor.json",
+      "bytes": 5439,
+      "sha256": "6ebe53aab51602bdb44b1631c335f4d19db6dcd3789c96422f58615a8bacdcef"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/audit/L2A-orca-s3-critic50k-cleanup.json",
+      "bytes": 63,
+      "sha256": "c3f14849dcc67abad3219fa8385817628dca6cbdb13816809d285f5bb1ac3bd6"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/audit/L2A-orca-s3-critic50k-online-monitor.json",
+      "bytes": 75203,
+      "sha256": "0b22fba385975b0b22dd16b0fbc3083c501e4e146cefd19456b436c61c2bb380"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor12/ownership.json",
+      "bytes": 555,
+      "sha256": "59d6bafa4857b7f0dcedee7d9f98524d369a62a6ec4797a865d1ddbe8e871d36"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor12/result.json",
+      "bytes": 1731,
+      "sha256": "ccbcc84b5757e3e78330d8a37e5b6072898e47970f1d12e5349f99c206444a37"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor13/ownership.json",
+      "bytes": 556,
+      "sha256": "b91730b279ae34b0fd793eb6f81e01cdc03d74c5d86acdfebcfc99b384ee1bef"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor13/result.json",
+      "bytes": 1734,
+      "sha256": "16db7ebed65c9dd5d6363286b89821893d3a030bb8e36d1b8d91831127a2ba52"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor14/ownership.json",
+      "bytes": 557,
+      "sha256": "8f553f1642829e0fbf195f383132de905043fdaf3865a820816add70a0bfd309"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor14/result.json",
+      "bytes": 1735,
+      "sha256": "6106426a49712147cea951b3dfd5f53ec7eb1052d5ec528b2966c417db29e416"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor15/ownership.json",
+      "bytes": 554,
+      "sha256": "654051a281942cd93df8e425a39b312f4e481dfdc3220d2e9d10417abe81bdda"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor15/result.json",
+      "bytes": 1731,
+      "sha256": "08690d1542fa15545823f04e69044f57147d186df61226d19284ed17a9f641e2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor16/ownership.json",
+      "bytes": 555,
+      "sha256": "04bfb6aca4736a5a5f5f88b823da599f3ce7fb881e7a6c63949176e0b5cd086b"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor16/result.json",
+      "bytes": 1811,
+      "sha256": "8011cbfb21fa3c33ee20dd56f171ecf84f3ad403b3c42ca2144ac3e7f268abc2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor17/ownership.json",
+      "bytes": 556,
+      "sha256": "b75b63fc302baf2ea578766a43fbdec678203c5641d1246ea2110b5842843f52"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-actor17/result.json",
+      "bytes": 1732,
+      "sha256": "6167cc321ffd5d5d53f1671e4e62329384f819e0ae67fbc030403f07eab8291a"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor12/ownership.json",
+      "bytes": 565,
+      "sha256": "98a8d454ebe2fbcba57cf8247666280f537732e7aac518718c8f0080c7ad88ac"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor12/result.json",
+      "bytes": 1750,
+      "sha256": "f20749ea98ffacc5d263c4050beb20daa678ad2fc7c776eb2075c9f177475988"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor13/ownership.json",
+      "bytes": 565,
+      "sha256": "7bca9c5b25c1955961506196babdbde68bceed7d4ad854a5b9ea8d42d7e650e2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor13/result.json",
+      "bytes": 1752,
+      "sha256": "10215e17b2cc0a2097bb8838c58601407e2fdd8bd54849d33f499b6bc25ab156"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor14/ownership.json",
+      "bytes": 567,
+      "sha256": "1073493e56bd6f22c1270a27599b83ac2352e4fa61e62ce0e1705c2d343b72ec"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor14/result.json",
+      "bytes": 1754,
+      "sha256": "9fa718f04ee81f7589463a819aac4aaa937263190e42a390719a6c01af51aa47"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor15/ownership.json",
+      "bytes": 565,
+      "sha256": "91b15270857fa59ce393523f92422ad8d0698fa62f76d685517cd5ce72c756ba"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor15/result.json",
+      "bytes": 1749,
+      "sha256": "26663941387c375368d0842efd8f57641fabc14982b889266d4851538946e243"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor16/ownership.json",
+      "bytes": 563,
+      "sha256": "601f3563d064fa13f10c6731555ff00356c7f86ad4668fc36992bf10de4c1990"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor16/result.json",
+      "bytes": 1834,
+      "sha256": "b439ef0f0efe16d50a0f4e30765f6d0e04b6545c07c86d861768afcbf17f5a2b"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor17/ownership.json",
+      "bytes": 563,
+      "sha256": "5a8dda5fc18a01875b894a52474a4f24440d8a8e90645bb3134fe247d427c1d0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor17/result.json",
+      "bytes": 1750,
+      "sha256": "03a6c5a4f3350fa815e1df70383ee7c512dcb728150206ae7d2d5c2c4349088c"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/metrics/L2A-orca-s3-critic50k-actor-summary.json",
+      "bytes": 15350,
+      "sha256": "7f010d7cb2ae9397e1d82d3ab4a3af63a605b041c900ee5515aab19e8b9ad18e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/framework/metrics/L2A-orca-s3-critic50k-admission-actor-summary.json",
+      "bytes": 15476,
+      "sha256": "8741325749d8367aa18c1eba407621d2a3a68bffc125e663a25caa234877e7f4"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/guard.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node3/registration.json",
+      "bytes": 20402,
+      "sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/audit/active-training-config.json",
+      "bytes": 14621,
+      "sha256": "0f28f1e9af6d51ffca6603241adc52fccf797dfab8cdc470e731ea9bf7879dc2"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/audit/deployment.json",
+      "bytes": 7395,
+      "sha256": "a3716f0e88fc2ae9dfa4dba78c5626c5f5764591ed494e7e7e2c9be2ee3ac902"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/audit/guard-launch.json",
+      "bytes": 77,
+      "sha256": "6b1d5818b4c6a78afd576c2d10ebbdb2cd40df70baeafd1e13f0fef83698e2e3"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/audit/lease-active.json",
+      "bytes": 313,
+      "sha256": "7c8181fb359f766befd44916c4de33f255ae398e1521ec97c0dbc164419d1d54"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/audit/lease-before.json",
+      "bytes": 323,
+      "sha256": "f962c10a97395c72bf9ffac54358d0f6ba33afa0ee0d0806c1a22a076b65df98"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/audit/lease-restored.json",
+      "bytes": 328,
+      "sha256": "f36140668a41d0cee480f5d763a96add7ed36e15c244e44481de9d881aea844e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/audit/network-closure.json",
+      "bytes": 228,
+      "sha256": "ab5d2d9da1ffaef1561668c66b67c5a36f087c8227ebc5fd1d6ec5bdee924d3d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/audit/L2A-orca-s3-critic50k-admission-cleanup.json",
+      "bytes": 64,
+      "sha256": "1324823eb6c63ee1202991ae92922d991c9a9b0e539e04986dd5a11c3b09fc58"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/audit/L2A-orca-s3-critic50k-admission-online-monitor.json",
+      "bytes": 5405,
+      "sha256": "93889869246e3a4dcb6fb05524270a74ca63a463d16013588b51f36e74667db4"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/audit/L2A-orca-s3-critic50k-cleanup.json",
+      "bytes": 64,
+      "sha256": "e704f4aa497554c2f7d16134f56f740788747d83cffeb2bff84361e29876277e"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/audit/L2A-orca-s3-critic50k-online-monitor.json",
+      "bytes": 74863,
+      "sha256": "a2d01cd7cc728bd46c1086a4cc6cca69bd0ec00bc99f13cfff5b0380417d0e09"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor18/ownership.json",
+      "bytes": 555,
+      "sha256": "0a29d771bd3052fa8c8515deccfa19442e4d4267f7c309aff0cbbf0ad42ce0c6"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor18/result.json",
+      "bytes": 1735,
+      "sha256": "7d19d09eef61b7020f5d431aa9bce8e1a6a513af10b8ddff462bb7a1857ef109"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor19/ownership.json",
+      "bytes": 558,
+      "sha256": "30e75a7e9c16f00d4f94efadc0a8147f58db6be557adeea5a02cd73630bd70e8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor19/result.json",
+      "bytes": 1732,
+      "sha256": "246e515545cc9f358475647410939cb1872c44f4897291ca0efc97a3ffc94642"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor20/ownership.json",
+      "bytes": 558,
+      "sha256": "c6986429bcac718048ca51694e4a25fd642d62b60e164abc3c57b33f041f0200"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor20/result.json",
+      "bytes": 1737,
+      "sha256": "b9ed200818945ecfa56720bd0e185eb11f6ef46964e103f8398135834c52e981"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor21/ownership.json",
+      "bytes": 555,
+      "sha256": "f02baaf4b6112e95695ebac67b96427c41bf59bebd790e7a0acb56bd4a7aa00a"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor21/result.json",
+      "bytes": 1731,
+      "sha256": "39d2c27f3fa9f3966e6f4a23b6038f8fcf656567efbe8f379bc5e2019f05ff51"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor22/ownership.json",
+      "bytes": 555,
+      "sha256": "49a5da39f6417396affb0e2109db4d3b2a59f3f8a33a5605d2bad0bdd904a46b"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor22/result.json",
+      "bytes": 1732,
+      "sha256": "e5eb0e7156e8b9e61ab8e74a858672800f7b1b919fcb8db1e248101e4beb2813"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor23/ownership.json",
+      "bytes": 555,
+      "sha256": "930951ce4aa8f759a3484bb488cacd2b614c0c3e4cd7dfe2d19bb95dca6594cb"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-actor23/result.json",
+      "bytes": 1735,
+      "sha256": "c21d4aba2355b4a4959535d6499530b0850ce9ba140843a33e4bb137f2f6849d"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor18/ownership.json",
+      "bytes": 565,
+      "sha256": "156b2b660fc4a6687f177dedc5fb85b18d2709cfedd36154da11de169c716f6f"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor18/result.json",
+      "bytes": 1753,
+      "sha256": "0152cd793a6a01c869d95baedd8570629ffc505beb897c0366e2b2c7c96db4a9"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor19/ownership.json",
+      "bytes": 566,
+      "sha256": "0b2cc52f89cfcf5a578349fc46de164154c0a18eb8b7f88fdc2a0b45a0b496aa"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor19/result.json",
+      "bytes": 1749,
+      "sha256": "9cbec4ec6ef94c257a38385b1001f61a7f7c466d512a084686735feaa8a93fc1"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor20/ownership.json",
+      "bytes": 567,
+      "sha256": "1f3652bed3868be8100d7929564ff8a54b4896e4a717b35253769ae523efaa07"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor20/result.json",
+      "bytes": 1755,
+      "sha256": "f8315cf2572ed3666f426c8c99bff89e7c56a1cf13962cbbfed34efbd9ae370b"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor21/ownership.json",
+      "bytes": 565,
+      "sha256": "2072240b9136614984cfecb2bfb57127d028b34c2900dc51c0856b3127df67c3"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor21/result.json",
+      "bytes": 1750,
+      "sha256": "8c4be0aeb2ada5f35e4e50ffa7647e7321f3c6d2950a455e95e40a68566f0b29"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor22/ownership.json",
+      "bytes": 564,
+      "sha256": "6c32567a96590deebc30d13a18270b88804035eb3722a881f36260f3111fe958"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor22/result.json",
+      "bytes": 1750,
+      "sha256": "03f221c343a3e78af98d467a66bdf700b0ed60db10c5c7f372ce1a861a642e61"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor23/ownership.json",
+      "bytes": 566,
+      "sha256": "d27e9d5b18d50d1f103f37d8ed2297132639b5983c05733427a4fe9a92816ff3"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor23/result.json",
+      "bytes": 1754,
+      "sha256": "4beee44492e24348bc7f0b5854e40d380182e73a54e25252b5247d7862e5f5b1"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/metrics/L2A-orca-s3-critic50k-actor-summary.json",
+      "bytes": 15280,
+      "sha256": "5306d03138df60bfa08777fda08318f73bf00e6a766c1d653beb43d0ecd9ee0c"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/framework/metrics/L2A-orca-s3-critic50k-admission-actor-summary.json",
+      "bytes": 15365,
+      "sha256": "169f5bbd2f2208f2b4c3f9d27aca240da123024934201db7b48347f2eedbbbaf"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/guard.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/collected/node4/registration.json",
+      "bytes": 20402,
+      "sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/final-analysis.json",
+      "bytes": 101701,
+      "sha256": "cc55aec5b03ddf56d9f85e70320d276441ec5934df62dcd72d082f40b708c7a5"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/publication-provenance.json",
+      "bytes": 117707,
+      "sha256": "0caba34d24eaba569962ae20c7a67939e81297aeef65162585c2714840faea9c"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/registration-interpretation.json",
+      "bytes": 1332,
+      "sha256": "1f966a6020886f1953219f40c937bd2553d8ac78f15198cebd287cb161572046"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/registration.json",
+      "bytes": 20402,
+      "sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/by-actor-query-provenance.json",
+      "bytes": 662,
+      "sha256": "7aef4e567d6921bc919db822bd12700c4c4ab2507c297592d328689457f641ab"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/e1-fixed-reference.json",
+      "bytes": 96858,
+      "sha256": "81631626e839965551a88c5b3709746959a4615b49ad5ac3033cdaf187bbcc81"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/final-learner-closure.json",
+      "bytes": 15408,
+      "sha256": "3500cc2964046c9dec0a6a0419ff4816ca9976aba202cebc39b0fb7d477be904"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/matched-grid-query-provenance.json",
+      "bytes": 659,
+      "sha256": "51d02e31ea7358fb2f1a8c0dc07c7b6be215b2ae33a8448e177b98cacb9ed1ad"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/own-credit-10update-pilot.json",
+      "bytes": 35856,
+      "sha256": "490264b24c82ef0332e16273d73ba2e8f8c47f7f16751bee2d1d0e937898ae2b"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/own-seed3.json",
+      "bytes": 341149,
+      "sha256": "f4b9d4c4f30e6f87bd384c86359e1fab1efb0cc2a1ea3470b52d36258233b3e5"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/own-seed4.json",
+      "bytes": 341843,
+      "sha256": "4844757a453df3a586e65fac0f98db56d98478bb410478153b4369d2cc3463f7"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/response-alignment-provenance.json",
+      "bytes": 247,
+      "sha256": "f84157a013abb42243de39ca38aaf71d0b1041adb142de9aee34f614a32c05c8"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/response-alignment.json",
+      "bytes": 135633,
+      "sha256": "b09b5e6742dfd818c2cc8fc6890045a2faa48b9a1ac7ec767842bc2d312b6d92"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/series-receipts.json",
+      "bytes": 4973,
+      "sha256": "489cae91689ba80ea79b84fed63ffe03215ecea2819cb50d80433544a1633687"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/snapshot-probe-by-actor.json",
+      "bytes": 512716,
+      "sha256": "7ec59970e5a3b332b643d1c5c54c2460f1d4353be063b2c7d6ac08efbece335c"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/snapshot-probe-matched-own-grid.json",
+      "bytes": 153934,
+      "sha256": "74d9de20a7f5b6fb75d3e4bf84f3111862665032e111aa0088dde992f0e325af"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/snapshot-probe.json",
+      "bytes": 153761,
+      "sha256": "1c675d4576af8ab65587b601f1dbbb0c490b7a68334da0e889ad70954d9a0b29"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/results/source-manifest.json",
+      "bytes": 332,
+      "sha256": "593becce5d1c358e40672bb5b24437c4126ec0e529962bb6b8dce876c8caeb34"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/runtime-source/snapshot_probe_by_actor.py",
+      "bytes": 12332,
+      "sha256": "3414cec94628a6dc6548ecaa860c41edd7a418ea374247b704dc23d1f0acb220"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/runtime-source/snapshot_probe_matched_endpoint.py",
+      "bytes": 12025,
+      "sha256": "d43a1f788ec05df5b6d97bfa2c18af90521bc36ed49313fcd8e7fff1b4a67f48"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/source-manifest.json",
+      "bytes": 7222,
+      "sha256": "54bff9a207292aaed2dd8e54e70ee1b861e64bb8e0cffc4dbe5580bdb8589d98"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/stop-snapshot-verification.json",
+      "bytes": 3943,
+      "sha256": "8ca52b71dff087c652bd20f06b037c588d9dcb45e45043b45b26910c1c81cc78"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/transfer-accounting.json",
+      "bytes": 413,
+      "sha256": "8dd19c1f2ff2084e3f133f021e8ce2996fc6ad53b9c9184e34ddd606d4c3bfc0"
+    },
+    {
+      "path": "evidence/scalar-critic-only-L2A-20261028/verification.json",
+      "bytes": 852,
+      "sha256": "e425c66086ab4d1fef04d9fe21470872d058e6987c14bfcac3edcdc5612909e2"
     },
     {
       "path": "evidence/scalar-direction-20261026/learner-outcome.json",
@@ -5448,8 +7303,8 @@
     },
     {
       "path": "frameworks/canopy_single/cluster_control.py",
-      "bytes": 9296,
-      "sha256": "6b111ed12a7f141883adeb546fea6c376fefe42f7a3700054f9b15bbc2799048"
+      "bytes": 9480,
+      "sha256": "89a6537ff4d114a66f1b75d769bc00e6385eed7b1f3f63b0418ac831cea20108"
     },
     {
       "path": "frameworks/canopy_single/consistent_target_bn.py",
@@ -5467,14 +7322,19 @@
       "sha256": "ef4a18ef50b75653237c35f3ec4275f410576d582e70889840ef4a5d65f3cc09"
     },
     {
+      "path": "frameworks/canopy_single/critic_only_control.py",
+      "bytes": 1454,
+      "sha256": "8e9fe1181537e38a402500e44be7705b66690e2498f3d67ac73e39d90544761f"
+    },
+    {
       "path": "frameworks/canopy_single/distributed.py",
-      "bytes": 20559,
-      "sha256": "cdfc9f7c56e03a2835e1f1788daffdf5d3e95fb2955585eb9a2b05883b5815ba"
+      "bytes": 22918,
+      "sha256": "189ed365f2c022ac5375cd5e649ee2a1ccc63ca3c952559b51438df11fd7480c"
     },
     {
       "path": "frameworks/canopy_single/evaluate.py",
-      "bytes": 15701,
-      "sha256": "d88e580c418bdb6a4b936f04d489645170a22ef7086cc33bf12d7f9f26138275"
+      "bytes": 15948,
+      "sha256": "c4c3ac453fa60ef56a89687c77880ad933fb5f16b4ed2a8ef93e5905f5374c14"
     },
     {
       "path": "frameworks/canopy_single/frozen_evaluate.py",
@@ -9826,8 +11686,8 @@
     },
     {
       "path": "tools/scalar_learning_check/README.md",
-      "bytes": 13153,
-      "sha256": "549b6461821817b0f63f8461349c3760db095501b42b779533fa9446e64a7808"
+      "bytes": 15219,
+      "sha256": "9a1881ad8b45642e586320b73be81bbd2bede2307b436977f271d11f04afad53"
     },
     {
       "path": "tools/scalar_learning_check/actor_speed_sim.py",
@@ -9840,9 +11700,34 @@
       "sha256": "84b5f7d8c7008d97bd8f3f84a443cfcca2d564c6bb106cac71ebae278fb0d003"
     },
     {
+      "path": "tools/scalar_learning_check/analyze_critic_horizon.py",
+      "bytes": 8427,
+      "sha256": "d4734bd57261cbdf683ddc41414bc152a0c76885464aaba40a91510e39b4b39f"
+    },
+    {
+      "path": "tools/scalar_learning_check/analyze_cross_rtt_mask.py",
+      "bytes": 4709,
+      "sha256": "70803460c20b29e9c38c3879bf8e9f72e95323e61cd14ebb5950fbd1444f028d"
+    },
+    {
       "path": "tools/scalar_learning_check/analyze_first_updates.py",
       "bytes": 4445,
       "sha256": "1375cb5b9e89119ebda6ef42207a6469b146404c19b754e26e6f83a0d0891f49"
+    },
+    {
+      "path": "tools/scalar_learning_check/analyze_l2a.py",
+      "bytes": 15089,
+      "sha256": "cf69f244ac832ef3b2f33a18b3f40723dacc6c2169a02fd748dde3096537ff94"
+    },
+    {
+      "path": "tools/scalar_learning_check/borrowed_signs.py",
+      "bytes": 12499,
+      "sha256": "3f1cfd2444fa7a0831e97e1dcdb062538d6ad8eff96b52dda2862a7f540a9bb9"
+    },
+    {
+      "path": "tools/scalar_learning_check/exploration_response.py",
+      "bytes": 14403,
+      "sha256": "bd7d817ce3997ccd59a8f2daff6a4daa11342d870f0df96b11b0cb9aa6ad31d8"
     },
     {
       "path": "tools/scalar_learning_check/learning_monitor.py",
@@ -9853,6 +11738,21 @@
       "path": "tools/scalar_learning_check/make_learning_registration.py",
       "bytes": 8849,
       "sha256": "19abc2a9a2893e8f4b033524c51a85d952ed9ee502bad56d7f7075f528409dba"
+    },
+    {
+      "path": "tools/scalar_learning_check/rtt_separability.py",
+      "bytes": 9926,
+      "sha256": "c0996a1f15a7d23474c9fdef5bded6c994864d805b6740c067729660c318458b"
+    },
+    {
+      "path": "tools/scalar_learning_check/runtime/critic_horizon_replay.py",
+      "bytes": 16574,
+      "sha256": "62c17adf068cea6489124a89c3ee42a95de56a815279510f1fdd19192bd3666a"
+    },
+    {
+      "path": "tools/scalar_learning_check/runtime/cross_rtt_mask_replay.py",
+      "bytes": 13438,
+      "sha256": "153e2b3f21063476463114d45662ead0d35bd94755f3f1086b4f71e06bcc391a"
     },
     {
       "path": "tools/scalar_learning_check/runtime/eval_worker.py",
@@ -9875,6 +11775,16 @@
       "sha256": "10d951062f1233393c335b50040c9d8ec4f45e35ec8b10d6239f264837be09eb"
     },
     {
+      "path": "tools/scalar_learning_check/runtime/l2a_own_credit_replay.py",
+      "bytes": 16318,
+      "sha256": "c92d1f78fe03f3b5b6ec8015745cbbe957668a0ded693541f3cf3ff95ee56bfa"
+    },
+    {
+      "path": "tools/scalar_learning_check/runtime/l2a_response_alignment.py",
+      "bytes": 4441,
+      "sha256": "494d15262e42567614a4e3d21a31104a074ac7d36815d468aec7e7bd28330aaf"
+    },
+    {
       "path": "tools/scalar_learning_check/runtime/limited_evaluate.py",
       "bytes": 1463,
       "sha256": "9829e0a9d1991592606770c8b4d88f407eceeb266c3f47c6671754ca0d5e30fc"
@@ -9885,14 +11795,39 @@
       "sha256": "c2b0a5f4d25befe6a62b9407e5eae66059efae6a3446c4bf6d08d75015941636"
     },
     {
+      "path": "tools/scalar_learning_check/runtime/snapshot_probe.py",
+      "bytes": 12026,
+      "sha256": "31ec9ccfd0703be262228058b595bc1e4722a4e0030cf52ced888aaea5e2aebe"
+    },
+    {
       "path": "tools/scalar_learning_check/runtime/tf_postmortem.py",
       "bytes": 4860,
       "sha256": "7a874b0cd14cba211194735f44ee99b9280dc4c9be0b4718cdf8eb2911530a05"
     },
     {
+      "path": "tools/scalar_learning_check/startup_extrapolation.py",
+      "bytes": 8486,
+      "sha256": "a833626c9fece94c747af4bfc64aa004a80758af06da4c38cd6ff7bf1e582619"
+    },
+    {
+      "path": "tools/scalar_learning_check/value_horizon.py",
+      "bytes": 8974,
+      "sha256": "03df797dae8fe2024bb0bcb1ce3b3021946091cd6f7fd26bb1fd0633f9733e3d"
+    },
+    {
       "path": "tools/scalar_research.py",
       "bytes": 7174,
       "sha256": "aecc1f7fe0718c38caeb9af4af91ba085b41e86c46f4e28cc7d15dcba3816e02"
+    },
+    {
+      "path": "tools/test_critic_only.py",
+      "bytes": 5193,
+      "sha256": "314a694694a6ee92ca0d4ca04678c2d4fa5e1ba815e648c9c0a6918a45872d73"
+    },
+    {
+      "path": "tools/test_cross_rtt_mask.py",
+      "bytes": 1760,
+      "sha256": "18f42cf0ee260eb070fdfb79c85a185e74f74da439dd882a9b029dc785e060a1"
     },
     {
       "path": "tools/test_exploration_check.py",
@@ -10318,346 +12253,6 @@
       "path": "traces/v14-mixed_timescale48-validation-241480",
       "bytes": 5325904,
       "sha256": "aa554f4084c87b6591001e591f5f62616a20a1faafaa29827dbd8870a245795c"
-    },
-    {
-      "path": "docs/SCALAR_BASE_ROADMAP.md",
-      "bytes": 21943,
-      "sha256": "47db2f808cfe786e3f6fd24e2a71a8c5f4bd2f2b9e2b44362e671f9c265c7bd9"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/local-validation.json",
-      "bytes": 2559,
-      "sha256": "9031a2d06deeaf07e065bcb97317ce203d866ac3e4eb20a9918689379af430a2"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/published-record-recomputation.json",
-      "bytes": 6033,
-      "sha256": "6471e53f03c4f4b536c79073c08d15c5475c41d2a7d3eb5c5a140408878b9999"
-    },
-    {
-      "path": "tools/scalar_learning_check/exploration_response.py",
-      "bytes": 14154,
-      "sha256": "d51b9ffcef113bdd076454c34cbad5f24421f69c4e8f913c6ddf0f5087569129"
-    },
-    {
-      "path": "tools/scalar_learning_check/runtime/critic_horizon_replay.py",
-      "bytes": 16574,
-      "sha256": "62c17adf068cea6489124a89c3ee42a95de56a815279510f1fdd19192bd3666a"
-    },
-    {
-      "path": "tools/scalar_learning_check/value_horizon.py",
-      "bytes": 8974,
-      "sha256": "03df797dae8fe2024bb0bcb1ce3b3021946091cd6f7fd26bb1fd0633f9733e3d"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/E1R-input-audit.json",
-      "bytes": 591,
-      "sha256": "280299358cb639b5e897929cac28fa73dbf057fb8db08fa0fe45ef5befb2cdc3"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/S-state-origin-audit.json",
-      "bytes": 22198,
-      "sha256": "8087c03b9237b3f0e945d9ab56fce9c0830fd64626384a667269009cf3133c13"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/closure.json",
-      "bytes": 264,
-      "sha256": "c83b52164326abf249fe74231868b48b3f6fe6d9226053f748b749840a3b739e"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/final-analysis.json",
-      "bytes": 118387,
-      "sha256": "2569020f33164cd71a0eef9ed48fe91bc345bd0505a62b33623559f8152a9327"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/publication-provenance.json",
-      "bytes": 3426,
-      "sha256": "25825d9b9e917fe2ca3499eb4412c5b976168754ae3e614d87438001db84d5c5"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/publication-validation.json",
-      "bytes": 1140,
-      "sha256": "bb699e4c5cd1997d31d4bfe9159251a1b31a4f9480db45b6ca17d7b52929ae38"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/registration.json",
-      "bytes": 1930,
-      "sha256": "6230c984e31ca01461172e14f839db1882e36c97d53e57cf4c9842201dc496ab"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/results/E1R-response.json",
-      "bytes": 50028,
-      "sha256": "a7a60a840a4dbcde1d118b504e2cf74c328d6f09144552facb5e68b9cd3d626c"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/results/E1R.json",
-      "bytes": 1481,
-      "sha256": "688c5e73c07d97624fa173b47d1a83b2c63b4865a8bf97b9f0b0d83e7005e629"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/results/H1.json",
-      "bytes": 271035,
-      "sha256": "7b181979105e149eece5323d9d955a2f439ba7b6081da18ae072127d363adcbb"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/results/H2.json",
-      "bytes": 82818,
-      "sha256": "f621428dc6fc7fd8dc45c4278ffd6934281b6ed1f0d308f9b7dd5149a86a0422"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/results/S-R5-s3.json",
-      "bytes": 1067855,
-      "sha256": "50401c7117461d9f03e3b22adb025f52dffc96075c93d4ed83c576765e3f6620"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/results/S-R5-s4.json",
-      "bytes": 1068935,
-      "sha256": "1ea30f77cfb6a36bb28f1fbed604a3e986950032df7fd3b64b470b8d7464b45b"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/results/S-R5-s5.json",
-      "bytes": 1067954,
-      "sha256": "a06574ae09d00d9c6076524208afe6b821531519183d7f30971e72bb3a55e713"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/results/pilot-H1.json",
-      "bytes": 15052,
-      "sha256": "0e22f154436e528fdac146f288c6c8130c1688210fe354b227ce7760b9072119"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/source-manifest.json",
-      "bytes": 474,
-      "sha256": "13275dd075f6300ab0b3e95865848479696746208d35c9c0ad4d204979b31484"
-    },
-    {
-      "path": "evidence/critic-horizon-20261028/status.json",
-      "bytes": 648,
-      "sha256": "015d24b3a4416c43cfef6923364aef940ff91e035c8cfce2ead15228bc3c54a6"
-    },
-    {
-      "path": "tools/scalar_learning_check/analyze_critic_horizon.py",
-      "bytes": 8427,
-      "sha256": "d4734bd57261cbdf683ddc41414bc152a0c76885464aaba40a91510e39b4b39f"
-    },
-    {
-      "path": "docs/SCALAR_BORROWED_SIGNS_AND_STARTUP.md",
-      "bytes": 21683,
-      "sha256": "a960f05966601b6e54c9acda69ee849ff14c4f94114edf6f9f140e12dd633714"
-    },
-    {
-      "path": "evidence/borrowed-signs-review-20261028/input-receipt.json",
-      "bytes": 488,
-      "sha256": "8443f9338c9ef071aef53d932a48181219ca0fc5e6807d7ecb267d25538e0a2e"
-    },
-    {
-      "path": "evidence/borrowed-signs-review-20261028/proposal-H1.json",
-      "bytes": 181907,
-      "sha256": "3c63eae9b6ec0e897e23a6726fd008a52abde0e30329a17a61345c1b0da348f5"
-    },
-    {
-      "path": "evidence/borrowed-signs-review-20261028/proposal-H2.json",
-      "bytes": 60615,
-      "sha256": "2300b16d6e4ce31a837ada6dbd9413143ca0b52f8438684c3ae4b6f0182dc716"
-    },
-    {
-      "path": "evidence/borrowed-signs-review-20261028/proposal-startup.json",
-      "bytes": 9986,
-      "sha256": "aaf82b9178ef0983fd3b9865b0cef778212bbe191690a002dfb033d14df46945"
-    },
-    {
-      "path": "evidence/borrowed-signs-review-20261028/publication-validation.json",
-      "bytes": 1507,
-      "sha256": "8263e734796a477f3fa610bc704f4579b9e7d50eb43ba09ffa0ba947ede2dc08"
-    },
-    {
-      "path": "evidence/borrowed-signs-review-20261028/review-results.json",
-      "bytes": 4620,
-      "sha256": "b855966a5101666d479f541d83551242ad3009dd0f914cd184853ee117e255a5"
-    },
-    {
-      "path": "evidence/borrowed-signs-review-20261028/reviewed-H1.json",
-      "bytes": 198197,
-      "sha256": "83a101083c3a4b248985099541052021f5b8636d9426c179477e41976c346f7d"
-    },
-    {
-      "path": "evidence/borrowed-signs-review-20261028/reviewed-H2.json",
-      "bytes": 65752,
-      "sha256": "f275266f23dfa7c289aec2ae5b3ca3095b861512b36935f45cebea48bedd5122"
-    },
-    {
-      "path": "evidence/borrowed-signs-review-20261028/reviewed-startup.json",
-      "bytes": 11030,
-      "sha256": "ba1a9f4eeab0aa2804940f486f146e946e09267691792823c8a32d1ee438ed28"
-    },
-    {
-      "path": "tools/scalar_learning_check/borrowed_signs.py",
-      "bytes": 12499,
-      "sha256": "3f1cfd2444fa7a0831e97e1dcdb062538d6ad8eff96b52dda2862a7f540a9bb9"
-    },
-    {
-      "path": "tools/scalar_learning_check/runtime/snapshot_probe.py",
-      "bytes": 12026,
-      "sha256": "31ec9ccfd0703be262228058b595bc1e4722a4e0030cf52ced888aaea5e2aebe"
-    },
-    {
-      "path": "tools/scalar_learning_check/startup_extrapolation.py",
-      "bytes": 8486,
-      "sha256": "a833626c9fece94c747af4bfc64aa004a80758af06da4c38cd6ff7bf1e582619"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/registration.json",
-      "bytes": 2006,
-      "sha256": "94f286da8306e917e755a76718e1cb1834af2847c7a335175d68c4729a4e0245"
-    },
-    {
-      "path": "tools/scalar_learning_check/runtime/cross_rtt_mask_replay.py",
-      "bytes": 13438,
-      "sha256": "153e2b3f21063476463114d45662ead0d35bd94755f3f1086b4f71e06bcc391a"
-    },
-    {
-      "path": "tools/test_cross_rtt_mask.py",
-      "bytes": 1760,
-      "sha256": "18f42cf0ee260eb070fdfb79c85a185e74f74da439dd882a9b029dc785e060a1"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/amendment-source-manifest.json",
-      "bytes": 285,
-      "sha256": "80b53428402b9e169e5c734c7b126faf5fa2a51d4b264feeec882b14d9f40974"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/amendment.json",
-      "bytes": 1018,
-      "sha256": "2dd3738033ced9b09e35f91a2e0711e8f792ec2191a3ee3d0d79ffb003a4e589"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/closure.json",
-      "bytes": 265,
-      "sha256": "1c979a3cc7fede09de7d5f778225af391be0feb89c3b87fd4b82ef62ab80264a"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/final-analysis.json",
-      "bytes": 34423,
-      "sha256": "5d8ee5bc7735e903c3b12fd946b060d6904c552c86d8a463334ed1c242a0543d"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/publication-provenance.json",
-      "bytes": 3342,
-      "sha256": "d9b7ed6bd6f53e959ae047b3a0048e9418ec7c7cf6324c613a30943753291b8a"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/publication-validation.json",
-      "bytes": 880,
-      "sha256": "a4ff9ac338da60624c6dac9cad6fd0364c0cf565fb3a8647d4673f097563050e"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/results/own-s3.json",
-      "bytes": 89268,
-      "sha256": "b9547491554b7147c2e07c134f98666a1ddc9cade7900740dff0dbaa418c5c68"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/results/own-s4.json",
-      "bytes": 89405,
-      "sha256": "178224267d6f81da0c2e2fe3b8867fbf393c6e57a6ec0e169e47a7bc9f90192a"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/results/paired-s3.json",
-      "bytes": 271052,
-      "sha256": "d00fd56630b64f1b5f4688ebf70dc36f015d59032f24b11947f14a228fedee51"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/results/paired-s4.json",
-      "bytes": 271775,
-      "sha256": "a0da95cedafdc18a787364f7beb9cd2fb999ee8c23b73a02ae91e5ded423a978"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/results/pilot.json",
-      "bytes": 44181,
-      "sha256": "c42a02c3ce93a93139bb9fe389f14320ead61c8dbee0009bce93df35c9c4da4b"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/source-manifest.json",
-      "bytes": 280,
-      "sha256": "b71bca6adcced85a2fcbd1e1ddc32624bfefef379fd0da6734ceb229b80f1317"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/status.json",
-      "bytes": 385,
-      "sha256": "6001acb8420da24986ebce6ed42cef40fcee9ab32d85e0610e30fe89a494539f"
-    },
-    {
-      "path": "evidence/cross-rtt-loss-mask-20261028/supplement-status.json",
-      "bytes": 307,
-      "sha256": "e7d2e76675ed1a83654de5cbe52d6952fbf05f5b116ed865d1e53f351eb7cd27"
-    },
-    {
-      "path": "tools/scalar_learning_check/analyze_cross_rtt_mask.py",
-      "bytes": 4709,
-      "sha256": "70803460c20b29e9c38c3879bf8e9f72e95323e61cd14ebb5950fbd1444f028d"
-    },
-    {
-      "path": "docs/SCALAR_NEXT_STEP_DECISION.md",
-      "bytes": 14647,
-      "sha256": "1ac5196e6016f506b60df1e9147d9e0a58e911d09ddcf0f3ae786c41fa394769"
-    },
-    {
-      "path": "evidence/rtt-separability-20261028/L2-A-budget-plan.json",
-      "bytes": 2457,
-      "sha256": "0d8c0dda897c33b0876a971200a535f7df32fd1803adc436a592001d034c3b2d"
-    },
-    {
-      "path": "evidence/rtt-separability-20261028/closure.json",
-      "bytes": 274,
-      "sha256": "e024ab9532b506db486a3c385e6f9802361791cec2b831dcb9156de51d44965e"
-    },
-    {
-      "path": "evidence/rtt-separability-20261028/probe-seven.json",
-      "bytes": 6501,
-      "sha256": "959b92bf4ede565897c11048f42bacd9cad0943c23bbcc7a56586feb22a5f44e"
-    },
-    {
-      "path": "evidence/rtt-separability-20261028/publication-provenance.json",
-      "bytes": 1418,
-      "sha256": "b703f70cc11749e54f7d159801bbd119b984c45b650ea42d760a4167a6ec875d"
-    },
-    {
-      "path": "evidence/rtt-separability-20261028/publication-validation.json",
-      "bytes": 542,
-      "sha256": "a84c3b062a1d7a67de4d7b8de82281801f5746daf3359ae64cfe116e7e385e5d"
-    },
-    {
-      "path": "evidence/rtt-separability-20261028/registration.json",
-      "bytes": 1409,
-      "sha256": "975925e942607a41304a6fa4115d864e96fe9c03140972bcfd3d9cca65ce701e"
-    },
-    {
-      "path": "evidence/rtt-separability-20261028/results/full70.json",
-      "bytes": 6753,
-      "sha256": "4bc5b9df3e0eb15ea449955b377e893c868190f5e7dc1a097e0179838225b082"
-    },
-    {
-      "path": "evidence/rtt-separability-20261028/results/newest7.json",
-      "bytes": 7060,
-      "sha256": "49fd1a1f900c2e01e265d24e34f79cf20e5c74911ba08fd55978b688c94ef6fc"
-    },
-    {
-      "path": "evidence/rtt-separability-20261028/review-results.json",
-      "bytes": 2125,
-      "sha256": "4a916d2d806e29da0020fd13d42542a849cf03b2a506c3081ea762c47f5fa80c"
-    },
-    {
-      "path": "evidence/rtt-separability-20261028/source-manifest.json",
-      "bytes": 278,
-      "sha256": "0646d2e6aededf4b1d781b7cb7a4b4e0d137aae324edd444cf090492d3053291"
-    },
-    {
-      "path": "evidence/rtt-separability-20261028/status.json",
-      "bytes": 591,
-      "sha256": "8bbfd3585e230e1617818f86f38cc33b0027d2616a86966739cd223264440b2c"
-    },
-    {
-      "path": "tools/scalar_learning_check/rtt_separability.py",
-      "bytes": 9926,
-      "sha256": "c0996a1f15a7d23474c9fdef5bded6c994864d805b6740c067729660c318458b"
     }
   ]
 }

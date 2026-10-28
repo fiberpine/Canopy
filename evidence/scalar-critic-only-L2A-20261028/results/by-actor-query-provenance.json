@@ -1,0 +1,9 @@
+{
+  "status": "POST_HOC_READONLY_COMPLETE",
+  "source_sha256": "3414cec94628a6dc6548ecaa860c41edd7a418ea374247b704dc23d1f0acb220",
+  "reason": "Disaggregate original probes by actor to align pooled E1 and critic class weights. No primary gate modification.",
+  "added_function": "def by_actor(d):\n    return {str(i): {c: (dict(mean=float(d[sel].mean()), positive=float(np.mean(d[sel]>0)), n=int(sel.sum())) if np.any(sel) else None) for c,m in CLASSES.items() for sel in [(aid[steady]==i)&m]} for i in range(n_actors)}\n\n\n",
+  "record_field_added": "dq1_by_actor_class=by_actor(d1), dq2_by_actor_class=by_actor(d2),",
+  "new_TCP_runs": 0,
+  "TF_updates": 0
+}

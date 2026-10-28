@@ -1,0 +1,24 @@
+{
+  "status": "REGISTRATION_METADATA_CLARIFICATION_RAW_PRESERVED",
+  "operative_fields": [
+    "identity",
+    "deadline_epoch",
+    "training_config",
+    "environment",
+    "monitor",
+    "evaluation",
+    "E1_registration",
+    "offline_registration",
+    "predictions_document"
+  ],
+  "inherited_nonoperative_L1_fields": [
+    "budget",
+    "predictions",
+    "decision_rules",
+    "differences_from_historical_moving_template",
+    "differences_from_validated_zero_update_job"
+  ],
+  "note": "Registration was built from L1 template. These inherited prose fields were not cleaned before execution and remain raw; they do not authorize1.2M samples, actor updates or110 evaluations. Actual pipeline uses training_config critic_only=True,50000 complete critic updates,0actor; evaluation is explicitly NOT_RUN. L2A predictions are the pre-existing SCALAR_NEXT_STEP_DECISION section4.3 referenced by predictions_document.",
+  "primary_E1": "J10,J40 fixed before formal; HAC120; Holm16. Post-hoc support alignment and matched-endpoint queries never replace the registered full-run result.",
+  "offline_gate_b": "Own-group fitted lambda is recomputed from that group behavior-Q/future rewards. If40k does not reach lambda>=30/35, mark not reached; do not extend updates or call failure to learn atlambda35."
+}

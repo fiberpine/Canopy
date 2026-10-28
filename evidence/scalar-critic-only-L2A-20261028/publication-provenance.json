@@ -1,0 +1,1858 @@
+{
+  "source_archive_commit": "f4764b0431de65cd174c40548bdda2eba8ec1d56",
+  "source_archive_note": "Archival commit after deployment. Actual execution bytes are identified by source manifests; 27 core framework modules match normalized LF bytes.",
+  "base_public_commit": "c6a38847d34eb07dfc159133677fb79b1e353b39",
+  "files": {
+    "registration.json": {
+      "execution_bytes_sha256": "2ca55221c9c3e5445d92346859236e299cf9ff2a584fce5516f7e7b13756d09e",
+      "public_bytes_sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "authorization-window.json": {
+      "execution_bytes_sha256": "f7c8e0de79d8b6042634d7ed002d8c6b60e3a85e20d8e6c7c0960f40cbebd01f",
+      "public_bytes_sha256": "f7c8e0de79d8b6042634d7ed002d8c6b60e3a85e20d8e6c7c0960f40cbebd01f",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "source-manifest.json": {
+      "execution_bytes_sha256": "47815f7e8150a54fac62c823aeae436ee603b07803ef3bdbfd7c0bac581a7d31",
+      "public_bytes_sha256": "54bff9a207292aaed2dd8e54e70ee1b861e64bb8e0cffc4dbe5580bdb8589d98",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/guard.stdout": {
+      "execution_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/pipeline.stdout": {
+      "execution_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/registration.json": {
+      "execution_bytes_sha256": "1022848f8b8ddce4983d00e132e11fc80f2e8bb7a499852e9a91bc41b1dde6f1",
+      "public_bytes_sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/guard.stdout": {
+      "execution_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/registration.json": {
+      "execution_bytes_sha256": "1022848f8b8ddce4983d00e132e11fc80f2e8bb7a499852e9a91bc41b1dde6f1",
+      "public_bytes_sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/guard.stdout": {
+      "execution_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/registration.json": {
+      "execution_bytes_sha256": "1022848f8b8ddce4983d00e132e11fc80f2e8bb7a499852e9a91bc41b1dde6f1",
+      "public_bytes_sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/guard.stdout": {
+      "execution_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/registration.json": {
+      "execution_bytes_sha256": "1022848f8b8ddce4983d00e132e11fc80f2e8bb7a499852e9a91bc41b1dde6f1",
+      "public_bytes_sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/guard.stdout": {
+      "execution_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_bytes_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/registration.json": {
+      "execution_bytes_sha256": "1022848f8b8ddce4983d00e132e11fc80f2e8bb7a499852e9a91bc41b1dde6f1",
+      "public_bytes_sha256": "ae48fdac7f31eb5725729a131d896af2554425a43831c331ddc0defc1bb7b2d0",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/audit/active-training-config.json": {
+      "execution_bytes_sha256": "fc7cd7acb4e308ce4ef3ab9079a1b70e78b9726eec398bb43b838d03f2dec4f5",
+      "public_bytes_sha256": "0f28f1e9af6d51ffca6603241adc52fccf797dfab8cdc470e731ea9bf7879dc2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/audit/deployment.json": {
+      "execution_bytes_sha256": "b78559d3164a9ef7defb50bb81df481c73e99846a5a1acaad28042b2564a725a",
+      "public_bytes_sha256": "a3716f0e88fc2ae9dfa4dba78c5626c5f5764591ed494e7e7e2c9be2ee3ac902",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/audit/guard-launch.json": {
+      "execution_bytes_sha256": "f369a52be68e29a33c0809788eb49dfc903a8b6298c8fadca8364e1f8294a6fc",
+      "public_bytes_sha256": "6b1d5818b4c6a78afd576c2d10ebbdb2cd40df70baeafd1e13f0fef83698e2e3",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/audit/lease-active.json": {
+      "execution_bytes_sha256": "af5d331417627f1957afe16be55edd64fd8333082ad664b05e5b50d0f3ca6529",
+      "public_bytes_sha256": "7c8181fb359f766befd44916c4de33f255ae398e1521ec97c0dbc164419d1d54",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/audit/lease-before.json": {
+      "execution_bytes_sha256": "7980ff1ad472d8d53a18fe7f436ed4f7cf1037ac33415d720a31aa7a362f39dd",
+      "public_bytes_sha256": "f962c10a97395c72bf9ffac54358d0f6ba33afa0ee0d0806c1a22a076b65df98",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/audit/lease-restored.json": {
+      "execution_bytes_sha256": "7013deb932bf94e1fd9b415574ff2bbfbd4124a6d147c72e74784375d9456741",
+      "public_bytes_sha256": "f36140668a41d0cee480f5d763a96add7ed36e15c244e44481de9d881aea844e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/audit/network-closure.json": {
+      "execution_bytes_sha256": "7ac2783a72a43454e5f83418d557d3d3126361c0db76852637cd2d799fefb943",
+      "public_bytes_sha256": "ab5d2d9da1ffaef1561668c66b67c5a36f087c8227ebc5fd1d6ec5bdee924d3d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/audit/L2A-orca-s3-critic50k-admission-cleanup.json": {
+      "execution_bytes_sha256": "1417c02494399fa91335c0568b933c39b8f47f7dcb5c2b556acac85143f071a7",
+      "public_bytes_sha256": "1324823eb6c63ee1202991ae92922d991c9a9b0e539e04986dd5a11c3b09fc58",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/audit/L2A-orca-s3-critic50k-admission-online-monitor.json": {
+      "execution_bytes_sha256": "146c2c20e9d13980aeebeeb7607fdfdfd03abfab3687771bff2786d29a285900",
+      "public_bytes_sha256": "93889869246e3a4dcb6fb05524270a74ca63a463d16013588b51f36e74667db4",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/audit/L2A-orca-s3-critic50k-cleanup.json": {
+      "execution_bytes_sha256": "3de92ae355b22b1a36cc07b07e812e1b7b2265b9976f5536a46aac8f18a25994",
+      "public_bytes_sha256": "e704f4aa497554c2f7d16134f56f740788747d83cffeb2bff84361e29876277e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/audit/L2A-orca-s3-critic50k-online-monitor.json": {
+      "execution_bytes_sha256": "689b46ea992460255c32faebc076a2ae6f332b2554a89834c5c4451f74ccb38f",
+      "public_bytes_sha256": "a2d01cd7cc728bd46c1086a4cc6cca69bd0ec00bc99f13cfff5b0380417d0e09",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/metrics/L2A-orca-s3-critic50k-actor-summary.json": {
+      "execution_bytes_sha256": "5f00bbf14c099a78fe6c08d63d8c85031312b303dd4de82345624410a84f924e",
+      "public_bytes_sha256": "5306d03138df60bfa08777fda08318f73bf00e6a766c1d653beb43d0ecd9ee0c",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/metrics/L2A-orca-s3-critic50k-admission-actor-summary.json": {
+      "execution_bytes_sha256": "e393f84ac569409014a26221cc452615c2eeb4fb49b780dcba99dafaf5df0012",
+      "public_bytes_sha256": "169f5bbd2f2208f2b4c3f9d27aca240da123024934201db7b48347f2eedbbbaf",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor18/ownership.json": {
+      "execution_bytes_sha256": "a50020934e2357a025f75c1ac64eb9193a525f14a607fb6a381740fecbed89a0",
+      "public_bytes_sha256": "0a29d771bd3052fa8c8515deccfa19442e4d4267f7c309aff0cbbf0ad42ce0c6",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor18/result.json": {
+      "execution_bytes_sha256": "264718c37d64bafb46eee2f3c248ae20405e39bb0360a7368bbdeece77f8e717",
+      "public_bytes_sha256": "7d19d09eef61b7020f5d431aa9bce8e1a6a513af10b8ddff462bb7a1857ef109",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor19/ownership.json": {
+      "execution_bytes_sha256": "40af3bed895347412ac78ac50e1fb1c95751b700b61f3c808af18a7997b8a2d7",
+      "public_bytes_sha256": "30e75a7e9c16f00d4f94efadc0a8147f58db6be557adeea5a02cd73630bd70e8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor19/result.json": {
+      "execution_bytes_sha256": "0cd2b11a8601eea8a8797349fd5bc5b69c86a04c508dc3293931fd20ec205bfc",
+      "public_bytes_sha256": "246e515545cc9f358475647410939cb1872c44f4897291ca0efc97a3ffc94642",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor20/ownership.json": {
+      "execution_bytes_sha256": "7e041d6d9f86d6685916cb04ca8d0b0cbaeffcddb1b2692e4f85fbb49a357430",
+      "public_bytes_sha256": "c6986429bcac718048ca51694e4a25fd642d62b60e164abc3c57b33f041f0200",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor20/result.json": {
+      "execution_bytes_sha256": "08d6f9d885f518f46ddad628122b7d5f9e7ef8a4c1339c83867ca8e7526fe030",
+      "public_bytes_sha256": "b9ed200818945ecfa56720bd0e185eb11f6ef46964e103f8398135834c52e981",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor21/ownership.json": {
+      "execution_bytes_sha256": "d5e42e1f09d8bca4f5577b978051362cebf40ff9a98703cb9cce5fb4debbe25c",
+      "public_bytes_sha256": "f02baaf4b6112e95695ebac67b96427c41bf59bebd790e7a0acb56bd4a7aa00a",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor21/result.json": {
+      "execution_bytes_sha256": "522f45af3dc17ce5d1cd1597480e4957b33dbec02484513f1897d378664fe4bd",
+      "public_bytes_sha256": "39d2c27f3fa9f3966e6f4a23b6038f8fcf656567efbe8f379bc5e2019f05ff51",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor22/ownership.json": {
+      "execution_bytes_sha256": "049dee564ea4fd389b211d3eec1bf1213be835ee696587832ba33c6ad17dd49d",
+      "public_bytes_sha256": "49a5da39f6417396affb0e2109db4d3b2a59f3f8a33a5605d2bad0bdd904a46b",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor22/result.json": {
+      "execution_bytes_sha256": "97f7c3bbaf92291867d89703690217a0b8e696f07976ec56f96b2ca4a5483cd5",
+      "public_bytes_sha256": "e5eb0e7156e8b9e61ab8e74a858672800f7b1b919fcb8db1e248101e4beb2813",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor23/ownership.json": {
+      "execution_bytes_sha256": "fab146c9e3c49c3aa911df8f99ac1f8a22b687b0cb6b44522aaf4e74ea5ea346",
+      "public_bytes_sha256": "930951ce4aa8f759a3484bb488cacd2b614c0c3e4cd7dfe2d19bb95dca6594cb",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-actor23/result.json": {
+      "execution_bytes_sha256": "056040dc4568f6a88ee171d0b34efa92b30cbc5bd5c2a886af02d11e72c4862e",
+      "public_bytes_sha256": "c21d4aba2355b4a4959535d6499530b0850ce9ba140843a33e4bb137f2f6849d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor18/ownership.json": {
+      "execution_bytes_sha256": "9e5c0f5c4aad2bc25d128c0a0cd9b778b2b1fef84132b88323dee473ef3a79e6",
+      "public_bytes_sha256": "156b2b660fc4a6687f177dedc5fb85b18d2709cfedd36154da11de169c716f6f",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor18/result.json": {
+      "execution_bytes_sha256": "b45a8359e5a0d65d350bd64c181188b2266efe0f674c4dffc1a346722dcda928",
+      "public_bytes_sha256": "0152cd793a6a01c869d95baedd8570629ffc505beb897c0366e2b2c7c96db4a9",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor19/ownership.json": {
+      "execution_bytes_sha256": "c8b0f17c60d19e7b06922d1c6c8b1dc7f59fbb0c997f0b76ad2f39e20db2c581",
+      "public_bytes_sha256": "0b2cc52f89cfcf5a578349fc46de164154c0a18eb8b7f88fdc2a0b45a0b496aa",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor19/result.json": {
+      "execution_bytes_sha256": "c24399dcf7a8ad92a1bb4ba34b08cebd9f5acde4d21c65709b348980e6b2e078",
+      "public_bytes_sha256": "9cbec4ec6ef94c257a38385b1001f61a7f7c466d512a084686735feaa8a93fc1",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor20/ownership.json": {
+      "execution_bytes_sha256": "b61b284cdfdf0a1609d9b9a2cdaafcae49698a1fe27213a85cb5ab47a6bacfc1",
+      "public_bytes_sha256": "1f3652bed3868be8100d7929564ff8a54b4896e4a717b35253769ae523efaa07",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor20/result.json": {
+      "execution_bytes_sha256": "773dc86b1be3c37f9494363ac8e1662a599a0eeb0e0c50a827ef3e0e15ea9f8d",
+      "public_bytes_sha256": "f8315cf2572ed3666f426c8c99bff89e7c56a1cf13962cbbfed34efbd9ae370b",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor21/ownership.json": {
+      "execution_bytes_sha256": "e67618df30d7e0e2bbd1204cde066b642ed1a8fb241aa434308dd5044343f7c2",
+      "public_bytes_sha256": "2072240b9136614984cfecb2bfb57127d028b34c2900dc51c0856b3127df67c3",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor21/result.json": {
+      "execution_bytes_sha256": "2f813e7957813e7cdf100fb74f1a6acd7e9f225766bd8629a854da96a8c648ba",
+      "public_bytes_sha256": "8c4be0aeb2ada5f35e4e50ffa7647e7321f3c6d2950a455e95e40a68566f0b29",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor22/ownership.json": {
+      "execution_bytes_sha256": "dfe9ccbdb00d490371409ceabd904e37eea1089df4165efcc817501518b86241",
+      "public_bytes_sha256": "6c32567a96590deebc30d13a18270b88804035eb3722a881f36260f3111fe958",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor22/result.json": {
+      "execution_bytes_sha256": "0f1c622dbe5cfc3cc95468de77a0550ed921bf268f4dd5d0505903d06851b91f",
+      "public_bytes_sha256": "03f221c343a3e78af98d467a66bdf700b0ed60db10c5c7f372ce1a861a642e61",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor23/ownership.json": {
+      "execution_bytes_sha256": "07b4abf42798b7bd684b7693fcbff7b0bc92df819f54abc3b31a2c6da936734f",
+      "public_bytes_sha256": "d27e9d5b18d50d1f103f37d8ed2297132639b5983c05733427a4fe9a92816ff3",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node4/framework/logs/L2A-orca-s3-critic50k-admission-actor23/result.json": {
+      "execution_bytes_sha256": "14a7e2e3bc538a3e3ee8c4d0506c244ece5532f5b9c7584f86e9767c62a31836",
+      "public_bytes_sha256": "4beee44492e24348bc7f0b5854e40d380182e73a54e25252b5247d7862e5f5b1",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/audit/active-training-config.json": {
+      "execution_bytes_sha256": "fc7cd7acb4e308ce4ef3ab9079a1b70e78b9726eec398bb43b838d03f2dec4f5",
+      "public_bytes_sha256": "0f28f1e9af6d51ffca6603241adc52fccf797dfab8cdc470e731ea9bf7879dc2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/audit/deployment.json": {
+      "execution_bytes_sha256": "b524b9de64cc5838becf71c2fe8e7e62a6d1cf21e666a067421f212960578c03",
+      "public_bytes_sha256": "a286b232b9b1a793c7639f2c9a1b7104481a9dc5b737d59977141d3762f2a590",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/audit/guard-launch.json": {
+      "execution_bytes_sha256": "bb571408ab885b92d996da95522a45e7174b55aca32b9b46604abc32a5c18ace",
+      "public_bytes_sha256": "f6b76db4d86aa3e3b62a207399fdfb8650ba9de91bdca28c9a7b2f0b781c05be",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/audit/lease-active.json": {
+      "execution_bytes_sha256": "c8fdc3b9e8d170ff40a304424920a2929cb4de4291c33d387b6d4f5f7c3c45a3",
+      "public_bytes_sha256": "ae4f7539ac4d208547f748daec952f0be4fc679fd014560ba5acad5ce9d88272",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/audit/lease-before.json": {
+      "execution_bytes_sha256": "be07c1ae6d3f2a4370cc0194e7c19b433d00d2b5dd6d34320bd0523d9f23f097",
+      "public_bytes_sha256": "f85407742a3622ae786f3c06a1b807f5cee3bfc317174924ae85de1dafa258aa",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/audit/lease-restored.json": {
+      "execution_bytes_sha256": "bcfbd41923625a794fabe91d630ce894a3595216cb77ec90faf911e6565afb5d",
+      "public_bytes_sha256": "28abe56e4255f46b8f61e63db102ed29d4625e0c3221330a2b7141c61e77ec59",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/audit/network-closure.json": {
+      "execution_bytes_sha256": "e3f7a7b536851d8afc44b0691424d9ce681ff7e012f0e046a55becdccaf57592",
+      "public_bytes_sha256": "4e16d555c107449a32b1bbded2af1283208bc779151810c0bcde09140e2e75cd",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/audit/L2A-orca-s3-critic50k-admission-cleanup.json": {
+      "execution_bytes_sha256": "a797b486ee212ff1d327edea90b810ce72a3d1eeda2d362860a3bf3c0725be30",
+      "public_bytes_sha256": "aa2de9293f95eaf52eb4356153d41911413ebde587baad023fac2dd1a0d1e852",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/audit/L2A-orca-s3-critic50k-admission-online-monitor.json": {
+      "execution_bytes_sha256": "42db52e033b6711dbc7840ecf5fff7095e403200358b0a0a6a8e2b1eaf2f36bd",
+      "public_bytes_sha256": "6ebe53aab51602bdb44b1631c335f4d19db6dcd3789c96422f58615a8bacdcef",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/audit/L2A-orca-s3-critic50k-cleanup.json": {
+      "execution_bytes_sha256": "54ba6eb23a01da534534dc798b119a959a62802553ee37f9f75280ed8b9458b7",
+      "public_bytes_sha256": "c3f14849dcc67abad3219fa8385817628dca6cbdb13816809d285f5bb1ac3bd6",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/audit/L2A-orca-s3-critic50k-online-monitor.json": {
+      "execution_bytes_sha256": "1c0885f52939550ba935f6c5f8b63c03c576ebfc09f97833d12d83fc2aa4cb21",
+      "public_bytes_sha256": "0b22fba385975b0b22dd16b0fbc3083c501e4e146cefd19456b436c61c2bb380",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/metrics/L2A-orca-s3-critic50k-actor-summary.json": {
+      "execution_bytes_sha256": "73348ad87443279cbf7532e310789d0b1340fc9484fdfcc86e6cea3c5b5b2ded",
+      "public_bytes_sha256": "7f010d7cb2ae9397e1d82d3ab4a3af63a605b041c900ee5515aab19e8b9ad18e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/metrics/L2A-orca-s3-critic50k-admission-actor-summary.json": {
+      "execution_bytes_sha256": "e581e7a743ce2d71f3e06aeec52e9eb08b9470fea3356b41479d7883fb94207e",
+      "public_bytes_sha256": "8741325749d8367aa18c1eba407621d2a3a68bffc125e663a25caa234877e7f4",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor12/ownership.json": {
+      "execution_bytes_sha256": "3024071a020baed3e5941a8d2f36b3ab1b8191fed475d22fc18ae01e5327d301",
+      "public_bytes_sha256": "59d6bafa4857b7f0dcedee7d9f98524d369a62a6ec4797a865d1ddbe8e871d36",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor12/result.json": {
+      "execution_bytes_sha256": "ea988afd884171dbf1485be5ec033ad29b4f1d7fb41d2afb795a88c3bd05b1c7",
+      "public_bytes_sha256": "ccbcc84b5757e3e78330d8a37e5b6072898e47970f1d12e5349f99c206444a37",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor13/ownership.json": {
+      "execution_bytes_sha256": "b76588fe7bd21d9aaf927bc168f38379002a559b9ddf2e7f5374580eb589ff62",
+      "public_bytes_sha256": "b91730b279ae34b0fd793eb6f81e01cdc03d74c5d86acdfebcfc99b384ee1bef",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor13/result.json": {
+      "execution_bytes_sha256": "b019465a93afec215c595d9684475d714891a9fc82b722852d87d0b76c865700",
+      "public_bytes_sha256": "16db7ebed65c9dd5d6363286b89821893d3a030bb8e36d1b8d91831127a2ba52",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor14/ownership.json": {
+      "execution_bytes_sha256": "31e101c208945ff2a20136d5acf071dbfa1dedb2bd6148b32345aa5f6cc75301",
+      "public_bytes_sha256": "8f553f1642829e0fbf195f383132de905043fdaf3865a820816add70a0bfd309",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor14/result.json": {
+      "execution_bytes_sha256": "89800419d8b84ff22bb9796db95c4283f17b7c615a132e4f79fc9355a468abcb",
+      "public_bytes_sha256": "6106426a49712147cea951b3dfd5f53ec7eb1052d5ec528b2966c417db29e416",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor15/ownership.json": {
+      "execution_bytes_sha256": "340df58a53b31f981535276d221b8ade80479892aadb01a38caed6ddf28ded18",
+      "public_bytes_sha256": "654051a281942cd93df8e425a39b312f4e481dfdc3220d2e9d10417abe81bdda",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor15/result.json": {
+      "execution_bytes_sha256": "f2dd88d78e5c4118ee1b2137c5d90ada41b278b9ded9c94a9a2e5a16d11f3dfd",
+      "public_bytes_sha256": "08690d1542fa15545823f04e69044f57147d186df61226d19284ed17a9f641e2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor16/ownership.json": {
+      "execution_bytes_sha256": "f70679052dd6fa6f0152240503ec1a5082569ec740296625911e46058c80702f",
+      "public_bytes_sha256": "04bfb6aca4736a5a5f5f88b823da599f3ce7fb881e7a6c63949176e0b5cd086b",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor16/result.json": {
+      "execution_bytes_sha256": "4f7bcc3754e7da1e903d603584540f6a2b94b25965764cccfa7c70048fe9ff43",
+      "public_bytes_sha256": "8011cbfb21fa3c33ee20dd56f171ecf84f3ad403b3c42ca2144ac3e7f268abc2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor17/ownership.json": {
+      "execution_bytes_sha256": "237d231dc43ca7bb8dbe5fce29016bf079ef640b41ee15a919e595c444242cfd",
+      "public_bytes_sha256": "b75b63fc302baf2ea578766a43fbdec678203c5641d1246ea2110b5842843f52",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-actor17/result.json": {
+      "execution_bytes_sha256": "02f6bfe17fcd40ffb619a83f98b22305be55783a4a3055bb5d7d780c561c3ddb",
+      "public_bytes_sha256": "6167cc321ffd5d5d53f1671e4e62329384f819e0ae67fbc030403f07eab8291a",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor12/ownership.json": {
+      "execution_bytes_sha256": "eef3bcb3e15377038b29d41f649c0454d0b232700a21a86526674015b0465869",
+      "public_bytes_sha256": "98a8d454ebe2fbcba57cf8247666280f537732e7aac518718c8f0080c7ad88ac",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor12/result.json": {
+      "execution_bytes_sha256": "60b033cce87fcca5f6546e2a6c0060f0df9cdf8d4f3d77c67856b8b7c82d7674",
+      "public_bytes_sha256": "f20749ea98ffacc5d263c4050beb20daa678ad2fc7c776eb2075c9f177475988",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor13/ownership.json": {
+      "execution_bytes_sha256": "2d67ec9221797fabedc6ab804065af4afbeef8190dcffdfa9154ba3c33ac1f9a",
+      "public_bytes_sha256": "7bca9c5b25c1955961506196babdbde68bceed7d4ad854a5b9ea8d42d7e650e2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor13/result.json": {
+      "execution_bytes_sha256": "b5ad0b41b46e5fcab7b50b231fc6298198ec7136f28930d0047b914e2082a2b4",
+      "public_bytes_sha256": "10215e17b2cc0a2097bb8838c58601407e2fdd8bd54849d33f499b6bc25ab156",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor14/ownership.json": {
+      "execution_bytes_sha256": "05a3c1494b8e6e2a0b59b0885bff69d0c2347e8351f4af761774c58d9a1871f7",
+      "public_bytes_sha256": "1073493e56bd6f22c1270a27599b83ac2352e4fa61e62ce0e1705c2d343b72ec",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor14/result.json": {
+      "execution_bytes_sha256": "ac3ecb7a1f0856291b835692cdfd2d13cb853c2a0463dba2c25d9a073974f26b",
+      "public_bytes_sha256": "9fa718f04ee81f7589463a819aac4aaa937263190e42a390719a6c01af51aa47",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor15/ownership.json": {
+      "execution_bytes_sha256": "b9ae9515a78b2d85e5c4ff59d84fd64dd2078378f876578ed5cadea82d3f700e",
+      "public_bytes_sha256": "91b15270857fa59ce393523f92422ad8d0698fa62f76d685517cd5ce72c756ba",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor15/result.json": {
+      "execution_bytes_sha256": "08a6fb85d5bb5a12a6e6fef3074a18ea32564311112fff1540d8b6ab3470ab51",
+      "public_bytes_sha256": "26663941387c375368d0842efd8f57641fabc14982b889266d4851538946e243",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor16/ownership.json": {
+      "execution_bytes_sha256": "dc8c9a6b85754b70eed82a90053a9ab930aa17d95dabd4e3443b73e6a42f41c2",
+      "public_bytes_sha256": "601f3563d064fa13f10c6731555ff00356c7f86ad4668fc36992bf10de4c1990",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor16/result.json": {
+      "execution_bytes_sha256": "07f6ee021b3df9b45eae8067ada2e7d5e67379dcd0d1faf1f62178916bcc3b6e",
+      "public_bytes_sha256": "b439ef0f0efe16d50a0f4e30765f6d0e04b6545c07c86d861768afcbf17f5a2b",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor17/ownership.json": {
+      "execution_bytes_sha256": "88ad723bda1743cafbcf8f142bc62409c585cf7695dd6f76825053819e287d4b",
+      "public_bytes_sha256": "5a8dda5fc18a01875b894a52474a4f24440d8a8e90645bb3134fe247d427c1d0",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node3/framework/logs/L2A-orca-s3-critic50k-admission-actor17/result.json": {
+      "execution_bytes_sha256": "66f9ed1b1fb8ed36f88bd9a15c4f4110adc70beda3db7c986c75a180ede7602c",
+      "public_bytes_sha256": "03a6c5a4f3350fa815e1df70383ee7c512dcb728150206ae7d2d5c2c4349088c",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/audit/active-training-config.json": {
+      "execution_bytes_sha256": "fc7cd7acb4e308ce4ef3ab9079a1b70e78b9726eec398bb43b838d03f2dec4f5",
+      "public_bytes_sha256": "0f28f1e9af6d51ffca6603241adc52fccf797dfab8cdc470e731ea9bf7879dc2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/audit/deployment.json": {
+      "execution_bytes_sha256": "c434469e72f07ae0e54d9b8b8c6721c1fdb924db8587518adb6e2bab0b5ada3a",
+      "public_bytes_sha256": "b0c77c642733443696a53146703d9312e178c283007d6172d026ba5fe9ffba86",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/audit/guard-launch.json": {
+      "execution_bytes_sha256": "e8cb817e3af5b431058649fec8d8abf4c18cb38260570d6cb65588588fcd917f",
+      "public_bytes_sha256": "10802f4d5b322fb5653cebe3dfe3eea2f582f70e8af60d610afd4e77e10133a2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/audit/lease-active.json": {
+      "execution_bytes_sha256": "1f55a7af305c013f0820449a55ed62cdc051cc40abd5cf95425c36e78b5fae61",
+      "public_bytes_sha256": "96b1a4e0086025dc2255f19d395c5c0f50096aa447f0eb3e1f4818eb8e4533a8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/audit/lease-before.json": {
+      "execution_bytes_sha256": "75c2793b0405c8fbf3561d23c39880e3ede3efce38e09224289aaa125c93972f",
+      "public_bytes_sha256": "20e02e8bb18f39d2adf898eaa6c17882d0bb6377fcf0c74b7e871dd10eca5555",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/audit/lease-restored.json": {
+      "execution_bytes_sha256": "8b974426d73508bf374991fa37e6510e3a86363c40ff172575edacaaa8664fb2",
+      "public_bytes_sha256": "35008a0e4ba439cac021c9f344ad0e98836ce0b77942ee24072b3af6c67330df",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/audit/network-closure.json": {
+      "execution_bytes_sha256": "c04186a609bd108e5063cce2c82fd62cee51dd9948e36d72a1f264c536a4284e",
+      "public_bytes_sha256": "4008195a33a6f919088af16e85dfbf56023767ff0fb498057234d8345969e6df",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/audit/L2A-orca-s3-critic50k-admission-cleanup.json": {
+      "execution_bytes_sha256": "5946bae152303593865c227431f695ab5dfd55803e1398ae9f1f2276b122bd0d",
+      "public_bytes_sha256": "80165e2e29beaf5217f191bfd5cd65e85590966500f745d1479b6f975a51b4bc",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/audit/L2A-orca-s3-critic50k-admission-online-monitor.json": {
+      "execution_bytes_sha256": "883a167230b7148ccaaf43e5543eedf3710fe822844bae98d688c9599b10707c",
+      "public_bytes_sha256": "a57f8d22ce7d5035fdf70c1d4d7327a094518f106e0c208f0707b1ef9fa84fc8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/audit/L2A-orca-s3-critic50k-cleanup.json": {
+      "execution_bytes_sha256": "a2d9d16946584f1bbfca67a0c0efc645ab27031ff9e07b4038674dcc1a61177b",
+      "public_bytes_sha256": "f3bd86140c985cc49003382d24c5ea7754d092de0f4d740d7d10342f7aff112e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/audit/L2A-orca-s3-critic50k-online-monitor.json": {
+      "execution_bytes_sha256": "3be277650f5fa885f44f02862c5b757740f45919a7dfc31941ceab2df34531b3",
+      "public_bytes_sha256": "ee6019c685c0a329eea0ec5474b59fb7707aa2729db09191a47d1f0cf27aa1d3",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/metrics/L2A-orca-s3-critic50k-actor-summary.json": {
+      "execution_bytes_sha256": "66b4f3e6521325e45c2563cd0a9db5bd74daee79fd883c13b3e6a386a1039f60",
+      "public_bytes_sha256": "831c3fc63b031fb4d3c318e55aa17faaa03ca01a536c074c485b643e1698eb14",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/metrics/L2A-orca-s3-critic50k-admission-actor-summary.json": {
+      "execution_bytes_sha256": "349fbe0b92980c95fdf7fc0f5fe469967c7d40dd6b023f1cf9e8eb148f2283fb",
+      "public_bytes_sha256": "da0a71ecc86323da80f341d979b10da42eaa21e8907db78533efcd3f5cf7726a",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor10/ownership.json": {
+      "execution_bytes_sha256": "b1fd39e289212b128aae012e2d6341d8a5bde36be8f07d74ddcfc634955cc44b",
+      "public_bytes_sha256": "5cf9a044669df3ef62dd4d6f42e1318df9190b4b3e4476799e0cec8d8e481bf7",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor10/result.json": {
+      "execution_bytes_sha256": "1335e2402715648de578a9f51ebc6bca9d928af54f51c528923929045fb25176",
+      "public_bytes_sha256": "389f1aa12d76c496944bfa6e8d5921e92652feb16889a4515ee4462dc27a723c",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor11/ownership.json": {
+      "execution_bytes_sha256": "fbef367074eb6eea50158a46c1d8c05f25572a98e1b33619e48082ef437cacd2",
+      "public_bytes_sha256": "2450dc782b4e2afb2c858a530480fda9a357e120568874ec5e2a42b8d44c6c8e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor11/result.json": {
+      "execution_bytes_sha256": "a493634b3048ddf7aeeeb5b93efe573c0c3cbdbfaec3a11f8899d70927d03b65",
+      "public_bytes_sha256": "536088d43e05bff81d3363519ab4b3bc6df27af0051b7db38780e388de413128",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor6/ownership.json": {
+      "execution_bytes_sha256": "c9980bbbaf532631503d0959045a557226ff1e89c662c8f8ef9c080651dffa96",
+      "public_bytes_sha256": "ce0cbd6861eb6942e1b41be587b73da7f9fc16b027ac06f4d026c1b201e90159",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor6/result.json": {
+      "execution_bytes_sha256": "3aea2cc95fc7b266902de01dbc801713262fac4855ed76e7e3ae3e7369e87cbf",
+      "public_bytes_sha256": "0d50106d5af2b8a3111c39b89431257b69500b69f2f63a43a19751e32601a155",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor7/ownership.json": {
+      "execution_bytes_sha256": "fb750ad30a951c858c4b235b3c5bc7783e25ef669c99d5727242a5749b817ff6",
+      "public_bytes_sha256": "a9f82145eaeba7b4e8c48748bc102b0e56ecd72d232c4a2ba172edb957f9886b",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor7/result.json": {
+      "execution_bytes_sha256": "4ea1bbf0648314798cd1acdcd76aa7a708376fd539c3c62d77def049248417d5",
+      "public_bytes_sha256": "0e477bfa2b125aacc2b71b14ae4574073d3d9b3bf0f7ec6d7c806be599ae88db",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor8/ownership.json": {
+      "execution_bytes_sha256": "822446e046dffdae2e83f78fb65fe995abeaeeaca8608f9746e31620d5927d57",
+      "public_bytes_sha256": "b8d99495e033339f84671286efeaeb48cabb26c78a8f812195faa0fe0c2403f8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor8/result.json": {
+      "execution_bytes_sha256": "e857d555bf78bd0f9ded340f183df9f71283f1adb121691d68f06be985bea723",
+      "public_bytes_sha256": "dfe15c9bf5a4932aa24bc2a46ac97e05f1c39172d6ef9596bc46872f37f5feea",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor9/ownership.json": {
+      "execution_bytes_sha256": "6cf297873cccff39d9724db6227fa855d3717659b976038f84cecfce50e562f2",
+      "public_bytes_sha256": "3df28417cdbcf657b0e00696cc3c3b87c2e892b40d2712d9b0327c386c649bcf",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-actor9/result.json": {
+      "execution_bytes_sha256": "16906707285745d0f93e5b349055c67b7a64c841067b70f5bd370bafc9e4f360",
+      "public_bytes_sha256": "a450171ad8833103bb9bef2abf59459eaf652adbac1ac3b6460a935fd7892c07",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor10/ownership.json": {
+      "execution_bytes_sha256": "06a60b516d13761dd0c30c1aff65e0720b8373ad38d1b8c00d4e3d71814e9aeb",
+      "public_bytes_sha256": "f02c2bca1392b468aad816c0c29b96dea6ff1dc724585a366075ac18f7c83c85",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor10/result.json": {
+      "execution_bytes_sha256": "4855d391c8f29e6b42c780230a268808c099afdb74fb768af5396c95308c8cdb",
+      "public_bytes_sha256": "c4f88088b926da7e8bf912179c47bcdd5bcbf88edb6f7a3824458ada641f3d28",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor11/ownership.json": {
+      "execution_bytes_sha256": "1b37698f8f9a7bfc28f9c36894db958bd0b5e7b2acc1a222b12baf08a374744c",
+      "public_bytes_sha256": "5d2b04d4c3e563cba5738bfa55c5c0aa385a03467067430b49f91378b5837dba",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor11/result.json": {
+      "execution_bytes_sha256": "b0896a1bdd8003397cccfb4facdb17ad14df5494a9f2594320560e0e0ade9c40",
+      "public_bytes_sha256": "2182a18ec3c83d5d5638c249265d86512a1de19b32a2be5ec3a483831f0d06e8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor6/ownership.json": {
+      "execution_bytes_sha256": "19c548e9158dd6ee533bdadc1cfbf1cbede23945e04c979bf306e98419825c3a",
+      "public_bytes_sha256": "ca2125fe4bdb2a90afd2814e05918421c38e7187999159744364a5f102f1c368",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor6/result.json": {
+      "execution_bytes_sha256": "9ed0905ea1c327375f76944478606b4919d541c3dd8c55f1c5251ea0cec861f1",
+      "public_bytes_sha256": "564b4f982776a901c4e9aafd7a007ed040104c83b3d52009fb69b74999acb75e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor7/ownership.json": {
+      "execution_bytes_sha256": "0e0381e908bf803b93f3fba37620db10c38697a10f3d29145a9ce5495dc17cab",
+      "public_bytes_sha256": "9fc62d3def72799a063a3b1681841a59e021bfc4ed2552f97a634ddbaa127bb5",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor7/result.json": {
+      "execution_bytes_sha256": "2bc2e6a34b87ca52edb559b9cebd3f6879cf6c55cbc92aa51dfe474cb7b1fb3e",
+      "public_bytes_sha256": "4e3bfd30752c84084659d731fde995c12def2eef5ec608484f1fc2c781c53dc0",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor8/ownership.json": {
+      "execution_bytes_sha256": "3874e0cc2560576e455c69aff50804e9a7b90429a7ff58988cc12fe926f874d5",
+      "public_bytes_sha256": "80e34a9bc356bc6284694c6dbb22d1cdb54345f757e22895cade16c492b31875",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor8/result.json": {
+      "execution_bytes_sha256": "fed4a54868cb1581f0fc49b890d51784084680337206d16681cb51441091f527",
+      "public_bytes_sha256": "87a270e4871637245e4fcd09408abbb5bc0e4b755ddc9fa8025ba90cf2db8937",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor9/ownership.json": {
+      "execution_bytes_sha256": "63149fbe1fcb91c7bab085c3d17faaf4455e94f133d57fc334ec0e53bab2bf71",
+      "public_bytes_sha256": "78c98539185a4d94fc3027fb8a16d5e668d4027c25613c875a68ff309df4f1bb",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node2/framework/logs/L2A-orca-s3-critic50k-admission-actor9/result.json": {
+      "execution_bytes_sha256": "65c1777da1151aaaaff0cd6bf47b9107121cb7849a7d2249f8bf513bcde1bd27",
+      "public_bytes_sha256": "7e2b02d1c96292123df45644de079301e9b9d14df9d9a1d4721f363f16532f74",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/audit/active-training-config.json": {
+      "execution_bytes_sha256": "fc7cd7acb4e308ce4ef3ab9079a1b70e78b9726eec398bb43b838d03f2dec4f5",
+      "public_bytes_sha256": "0f28f1e9af6d51ffca6603241adc52fccf797dfab8cdc470e731ea9bf7879dc2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/audit/deployment.json": {
+      "execution_bytes_sha256": "fb8aa2cfb00595db5e01b8f2f47d0853e6adbac32c3b548fc199b070f07eae58",
+      "public_bytes_sha256": "dfad235ffa1b896ca171427494465522018df97ae12d6dbf771ef58738b2de9e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/audit/guard-launch.json": {
+      "execution_bytes_sha256": "59ae27bf7f2c78c46eb4cc534f7697243084a149c0c3815475bde254c3efb072",
+      "public_bytes_sha256": "028549aeed1c6a77a0427e3b4954db93113d6e850d1955a76e9eab85410383f2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/audit/lease-active.json": {
+      "execution_bytes_sha256": "a320c9ed27cd8ee66f0821c41e717d4a91463eadc4915aec0434df77f3f172cb",
+      "public_bytes_sha256": "e666f7e321631df600b46f8dcf626b1195df750a55d6929f7db135c9cdd73dc7",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/audit/lease-before.json": {
+      "execution_bytes_sha256": "f3256d1318cf0d8a289645422e12f4e266fd655e6fc96e9151e351802e1e98d1",
+      "public_bytes_sha256": "dbc0d2c7e3aa6ef849f20373bffb54d1a343e4e9825b58ec12e287ca315803e4",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/audit/lease-restored.json": {
+      "execution_bytes_sha256": "9c8fbfa5f8218d2923cb127db10487f3c1babee9ab9dee85050a0eaacc4b480f",
+      "public_bytes_sha256": "e2ff6a5aaddc71fc40e368ddce2b84f4950e50d97c6405254ffee4bfd8b4d8a0",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/audit/network-closure.json": {
+      "execution_bytes_sha256": "518c91709ebd1f887d5e60107833ca2fe267036ea00e5bb9ec349d46040a8440",
+      "public_bytes_sha256": "bc0211b84d9bfd9999104056aadfe30163967401e21b7afa58a95bbd2d278605",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/audit/L2A-orca-s3-critic50k-admission-cleanup.json": {
+      "execution_bytes_sha256": "03790dc6ced8106dddec74f05c41d5993638e6db8c1fcd7c04662f2e8047538b",
+      "public_bytes_sha256": "8b8822b1dda9cee77a2250fba4781c364f0c8fbc35f2256da1c4272829ac1e78",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/audit/L2A-orca-s3-critic50k-admission-online-monitor.json": {
+      "execution_bytes_sha256": "0f6d340647fdd2103d277db01359069f9326c9afe35f1b9f04b0c72ea1df0161",
+      "public_bytes_sha256": "fbe8feca6496c26a984c3801ccb8ff774d9c9e73f4db2ee7bbf60a9a25e0a0a8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/audit/L2A-orca-s3-critic50k-cleanup.json": {
+      "execution_bytes_sha256": "edf7c7e6e158407723486e9ff1cd4f3a4a99eec0f5405780b55e284b0b94aef9",
+      "public_bytes_sha256": "22bdea5d5605d20f461c779ca4051f54337d1367e3f79469114dd34ca5f265ce",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/audit/L2A-orca-s3-critic50k-online-monitor.json": {
+      "execution_bytes_sha256": "e24099d362e5ef0b55a00c6104108367210f6ebdf6c13f413c262c929cced65b",
+      "public_bytes_sha256": "99cf3e2bbcf785f1ba7b4d30a455bcaf34025257cdba6193390cb92afc9ff87b",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/metrics/L2A-orca-s3-critic50k-actor-summary.json": {
+      "execution_bytes_sha256": "37f4c10fc69f660c44b95f02aa4b5c2496d1a3e0ff2e1d869c89b6827644c7b2",
+      "public_bytes_sha256": "5eeefbe96b04dcd882a8e50f5160172df70350e1083446e0259d857a2b8f2d84",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/metrics/L2A-orca-s3-critic50k-admission-actor-summary.json": {
+      "execution_bytes_sha256": "03a6851334616795c80e5292589f06d35c66d7ab8e33ab7130cbd4ccc5cc6aba",
+      "public_bytes_sha256": "e6a0537ad8fb9268e0f425795c1a5bb1cdf485cf166ef971b6ffa9110e1d1794",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor0/ownership.json": {
+      "execution_bytes_sha256": "5ff69c22f79092d8b0de0734cb944b4a111fb9ef69d647ed002755a75c6009e4",
+      "public_bytes_sha256": "b78e19bfa7fd21d6eda4e8b9acd3340b1fa41e52e38f8e338cd5e859e5496699",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor0/result.json": {
+      "execution_bytes_sha256": "23d23b05fcdcb17167148206feb02162d089c10a732a096f1ba9b29b2defddc5",
+      "public_bytes_sha256": "ca4449205f4f085926b734b8effb731683305567c5c72e080684e9ab09c6294e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor1/ownership.json": {
+      "execution_bytes_sha256": "7d35702b203290f04fde3ce12479a8889fa1c1eae118154c6a15f624be48805b",
+      "public_bytes_sha256": "18739fb2896f29bf29f751c483c3c0435ad305d32c87e4237d17936ee3f4927d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor1/result.json": {
+      "execution_bytes_sha256": "043a3b24f77a53b62a62f89e1b89de8503f6da0a9a203537fb05715e77bc6ebe",
+      "public_bytes_sha256": "c6b1792f67ca0bb8448688cda2b68d311aa9b1a0aebd5b84f9225057895c0003",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor2/ownership.json": {
+      "execution_bytes_sha256": "c5b5fc4e5504c18a892d6cd35e7307835f81c2da603e9d9a77128446dcabd164",
+      "public_bytes_sha256": "78fab1f447ce65f4d684064d21ccd926a9e0d73b09a4c106c2a11a98110b65bf",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor2/result.json": {
+      "execution_bytes_sha256": "e193d48bc11b62cd72a15bdd960ca57f767afe567662b43f07774a477188a2db",
+      "public_bytes_sha256": "4c4d28d328656c07b942c32ec34de78db84391849bcb1075cf60bf3a149a64a3",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor3/ownership.json": {
+      "execution_bytes_sha256": "df5ec88dcbf4b46b9d8d8e4ecfd5842f97296b7afe113dfafe066f8754a5668e",
+      "public_bytes_sha256": "2a070fae7cfb92e6da528d15212ff6ac109336d3a77e1284d78b66cca3d73df2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor3/result.json": {
+      "execution_bytes_sha256": "2a9fd0deec3f234735b9c8c5cd37c1df13f3f7e6c7b46b5259a12f803858a04c",
+      "public_bytes_sha256": "74ec7eac6ee46e5daf9181fbbfccf62f2b7b64682d34ca2a3c66d9ebf58e6545",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor4/ownership.json": {
+      "execution_bytes_sha256": "695a5ee22af320979bf3645be33192274cfe61dd0a8a2372e014b22976f4bb11",
+      "public_bytes_sha256": "919e263ba5b38a33c72f3bbf8e1403b29277a38d7bdbefae443e342a73d992ad",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor4/result.json": {
+      "execution_bytes_sha256": "82b5efb4011f9c8ead1b3d42ed26b41f83ae65ae877ce762a4baea8acd21a131",
+      "public_bytes_sha256": "f3b653bed8c98cf3929a50ff2032a9125b3c403a77150ae20c2055e1848c29db",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor5/ownership.json": {
+      "execution_bytes_sha256": "0ac7d0a8158c584b7db96381584830d17141f710d2fac48eb787988b612007ea",
+      "public_bytes_sha256": "0e48bec971a7d1e49ef1d66ec42aa466d899308e2e636259cb97b187c537d0fc",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-actor5/result.json": {
+      "execution_bytes_sha256": "c7c4f23de365097451ffd4e7cf53ef189cb098daf973bcc55fd3c559344e599d",
+      "public_bytes_sha256": "078108e253cb236c428d159f5097a37d3016c8e316e729fdebf9e95cbfb6c837",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor0/ownership.json": {
+      "execution_bytes_sha256": "756cd89bd212f75288239d455529233ab4df5b5c465609a99e23dd4c74a31811",
+      "public_bytes_sha256": "72abd8e88a3759362fa07f0963e65fffaeff99db897228129dc18aa1e2c1fc9d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor0/result.json": {
+      "execution_bytes_sha256": "66bba814b05d1565dd33898e527dc0b9a6b5cefce724a0c12566616e08eb4726",
+      "public_bytes_sha256": "ac831c8b75425dcc74057574515e837c8012e29a9b898c9eb3d3e6c863013285",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor1/ownership.json": {
+      "execution_bytes_sha256": "f1bec4283377f42b30579f9fa014f381eaf2695dccc2328349168c165510edf4",
+      "public_bytes_sha256": "3cfb39fae1dd417a3fae69bbe8697489dde17312421929282974ec5586a9bec4",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor1/result.json": {
+      "execution_bytes_sha256": "2150697df817c6cfdf89613ad2137f4f0dbb0570acbf914c304aa610ba4b10f6",
+      "public_bytes_sha256": "2ae588cefcd5f3e3975ebd86cf92a56daeeb61d3dc9c85900eb2dc5096b0d0b8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor2/ownership.json": {
+      "execution_bytes_sha256": "8bb5dd82754a95ffe46477dec007e677bf01fbda8f93588f1583c61158cb8de9",
+      "public_bytes_sha256": "ebc66b177768f5171755062c752afd4089b6285f971191486739dd0ed324ab09",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor2/result.json": {
+      "execution_bytes_sha256": "1c7482d613c82225039cfb286e0ca3474bf6c75900bb0ed650436d0d990e1d73",
+      "public_bytes_sha256": "01b660adaea3fef366cbeb8bd36dfde2a19d97325820e0f921069f3906adf423",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor3/ownership.json": {
+      "execution_bytes_sha256": "5e6e3aa5befd0d792481188848d786629052ab719cc19634044e9612fcbdefa7",
+      "public_bytes_sha256": "d524f0b4497845a103c0449ec175699e25fadb0be67a64b86117df63101d291a",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor3/result.json": {
+      "execution_bytes_sha256": "a68ed7d29a7f888ca9d2855681ad7c26fc610bc922ad3dbd2feaa0e63771a19e",
+      "public_bytes_sha256": "8154b2927941678e47a1bace6c8f56a1aed8023e8396b706aae76c2b2ef6d1a3",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor4/ownership.json": {
+      "execution_bytes_sha256": "2ce44bc2bf172dc5bb6869a448c9c58785977ca261e7dfcd16c20ebe919324ac",
+      "public_bytes_sha256": "2933adde4f6326d5ef4f5e72980d6f731defbf496f08a518113d425d02ae4298",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor4/result.json": {
+      "execution_bytes_sha256": "5d3e1ea49f2310e92491623beb86b8ba0bdb6e5a6a8b80f608c95436a70e56de",
+      "public_bytes_sha256": "269e8d44bf6b53dd8c51837bb91a29c32a75afeaa65317ea07e05c78ed1792ab",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor5/ownership.json": {
+      "execution_bytes_sha256": "3ce7ff15055d7b58d97d771d0234a97abcefbc14a7fe05e583976b1c0509b3b1",
+      "public_bytes_sha256": "ca85bd42a740f666e4850da63c660294e9423863d832a54703d26a30ad4df139",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node1/framework/logs/L2A-orca-s3-critic50k-admission-actor5/result.json": {
+      "execution_bytes_sha256": "abc0d85d13610911bbfea29602de447d007b770597353c55204479832997cdbf",
+      "public_bytes_sha256": "99b1aaa32321bf570819128898ac2980266604d85d03fede2f5e0a31b53abaec",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/active-training-config.json": {
+      "execution_bytes_sha256": "fc7cd7acb4e308ce4ef3ab9079a1b70e78b9726eec398bb43b838d03f2dec4f5",
+      "public_bytes_sha256": "0f28f1e9af6d51ffca6603241adc52fccf797dfab8cdc470e731ea9bf7879dc2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/admission-result.json": {
+      "execution_bytes_sha256": "8ef0811331425c4ac60c8db47bffb1ebb1c2368bb4fef5db45cd686a3f26cff8",
+      "public_bytes_sha256": "f2f1ebfe52ad50b184aab40d91cb60eb96713c3d0574aaaf2db8a9686e12a4bf",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/deployment.json": {
+      "execution_bytes_sha256": "eea75134864a0f15be48a4a9b7e7163ba5c39267711a39b3dc7f1a31ab242a57",
+      "public_bytes_sha256": "fd526a4732c31e2e7827995e84795bffa12d0d2a817151d488c8120894ca45d6",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/guard-launch.json": {
+      "execution_bytes_sha256": "540ead17dfa16008d896ef9d2500f41f241b8aa32bb18ab0fe9ff4f15bf441fe",
+      "public_bytes_sha256": "279247bb95f7a7e4064d612256bda614105d78fafc211d4bc69de3d700119d43",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/guards-launch.json": {
+      "execution_bytes_sha256": "8eaa183992f870029c51226578176e1898ce6ed0be1024ecf2c19ed8fe196873",
+      "public_bytes_sha256": "ed90f34831ab135b1d61ae74632c449ba71bdaa4190bee6a340e55324cfe347c",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/launch-requested.json": {
+      "execution_bytes_sha256": "f44886943c575dcaef3433798cf66febd474e4ea25dad9acc7f48547c41f646c",
+      "public_bytes_sha256": "f73db923917c0c9a5710a05394e880188ceff69ad18f2266f763043d632a7ba8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/lease-active.json": {
+      "execution_bytes_sha256": "06a51f7245a413b2add9f8e29f7aee4b7c62015ba87db269c3ae548c736628da",
+      "public_bytes_sha256": "0a5d371a867fdaa11b372d7211905a9dd5168dc88190ba39bf27abdb37f8e3c9",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/lease-before.json": {
+      "execution_bytes_sha256": "4715ef77c2f27d45d3c5b8c8a73742e9fed7f55574d9a78e9479fa60d077f9dc",
+      "public_bytes_sha256": "5885d7be2eecc364a18c4d94e8d3b2b04fbeb5b608edb8e4ff624fdb487a0d86",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/lease-restored.json": {
+      "execution_bytes_sha256": "173b895b94f43a699f1b9431bbcb1a80e512693190ef1e95093ebaf4d8f4f4a4",
+      "public_bytes_sha256": "50fd489d5e86702d74844d0ce12ba1f6e3dbb3fc96f5bf647a5737f697f335b7",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/monitor-L2A-orca-s3-critic50k-admission.json": {
+      "execution_bytes_sha256": "1a85dddde757d0840066a86dc90ca1c1cebec3940e8e5ec8ae70085cadc1d605",
+      "public_bytes_sha256": "bdb52abecae71cd8520a4a1c810cc8de2cbbe97582377389ad6835529f583fda",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/monitor-L2A-orca-s3-critic50k.json": {
+      "execution_bytes_sha256": "9441fcdddabce3648ebd5dd0b62b760438df605ee2381d9e43431d70e5ef338b",
+      "public_bytes_sha256": "47cc4ccfc0ef38ca5d76e759ba36635e13c087a2d10f514b726ceba0f6a4fbb7",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/network-closure.json": {
+      "execution_bytes_sha256": "595c5b784807fc886e4bf8c35bef44f8917d7fe3a991eeab35092cf5a0e0cfa8",
+      "public_bytes_sha256": "12e46e18a4303642544f57579b7c85f00ba1651ade20a83e982bd71a8c1e3b05",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/outcome.json": {
+      "execution_bytes_sha256": "62f7d5aea7364498f8d5b5b4599213f73f7797da8ad10ba0ae2752a2905a9b65",
+      "public_bytes_sha256": "4af92a396a6634ef610272d921659df0943e7916938fafb710bd6fc6d78a5544",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/pipeline-launch.json": {
+      "execution_bytes_sha256": "36259e389a01970f272416a6402343c02609f4d04dab040f8309ce76889fb538",
+      "public_bytes_sha256": "445bbea223f014bcdb6d547704fe786a21041e2aad0dd6b9820ef7dff3a7bfe8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/pipeline-started.json": {
+      "execution_bytes_sha256": "fd265b76aabf74fd0ad79c0ac185702ea1d11a19997ce746ac40553740d1718d",
+      "public_bytes_sha256": "327ddce71974c4f0debd1d38b1453b031811274feb3ce83f679a3ff999ef8305",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/pipeline-status.json": {
+      "execution_bytes_sha256": "a1d66869d1998ad6f340db7846ae7a53bba8b8af88c55306f46e46cb9707bdbb",
+      "public_bytes_sha256": "b02e484d3e1f2ba26a0b98dffbc8a68f59cf12859dacf5803edc4c52ce7e674d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/real-TF-admission.json": {
+      "execution_bytes_sha256": "6d3105176d343bc6b5f5c9a3b9071519905bae794302bd5a1ebb5a9ba5828f31",
+      "public_bytes_sha256": "9faa4b4578e3a0c0ef704147f8c82112de2c69a49245c818889d376a82529d72",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/audit/training-result.json": {
+      "execution_bytes_sha256": "434caa98ba35ec18f2820ad5d9bec7a22c6cff082e6b34480ec3b12d84475a80",
+      "public_bytes_sha256": "61dcd6b60b49d42a149e9e99e89b9e9e6ffee596abdcbeed2d33197089606cfb",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/audit/L2A-orca-s3-critic50k-admission-cleanup.json": {
+      "execution_bytes_sha256": "fb128528321ffd52caaa836ab38099755ddd6e70f124249364e144150cd3a675",
+      "public_bytes_sha256": "1284ddc48a3ef82f93422de35c014f06003ee849db6191eea4e7ef77df6be6aa",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/audit/L2A-orca-s3-critic50k-admission-online-monitor.json": {
+      "execution_bytes_sha256": "0be2698ec0fc1073d653c2a226729f49f19943286402a3bb9ec3d5ca853a9390",
+      "public_bytes_sha256": "c0f3948e6e3b2e479e402040448ebef9d54c76088ce32066fcc7a9f742eb160d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/audit/L2A-orca-s3-critic50k-cleanup.json": {
+      "execution_bytes_sha256": "e7ffa3a8f2e069b3c76199e14cff91260b045ec65cd0f73c9da72762aada7728",
+      "public_bytes_sha256": "09944dac5aaabaab4f7f40d3c112ec2c18168f87340d58b9e2ef112c9748dee0",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/audit/L2A-orca-s3-critic50k-online-monitor.json": {
+      "execution_bytes_sha256": "708edde9b9da51605e565a51a82a24c722870643ec3a5320b8395cdb4dcb115e",
+      "public_bytes_sha256": "71a8ed2043f0ab695b04339f603ffe8de8c50c926c9b21fa88701ef13827212f",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/metrics/L2A-orca-s3-critic50k-actors.json": {
+      "execution_bytes_sha256": "a4b94ad97dff734e8ce957bbfe12f4bc56e2c080c9b6f02bc83e561a2ffcad7e",
+      "public_bytes_sha256": "01645e9e2b8ef8ab4639cf8ced9bbb7fe751a42735ba0d90a43c09fb7bc332d4",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/metrics/L2A-orca-s3-critic50k-admission-actors.json": {
+      "execution_bytes_sha256": "57e0f5c34158e3360afef57011804f74e4eeba35e9b60a2bced8512bbba54a75",
+      "public_bytes_sha256": "e907d60ae88b28732d3c549283d49e36292ea8f76418e5d10b156e04fe05c9f8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/metrics/L2A-orca-s3-critic50k-admission-cluster-result.json": {
+      "execution_bytes_sha256": "8ef0811331425c4ac60c8db47bffb1ebb1c2368bb4fef5db45cd686a3f26cff8",
+      "public_bytes_sha256": "f2f1ebfe52ad50b184aab40d91cb60eb96713c3d0574aaaf2db8a9686e12a4bf",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/metrics/L2A-orca-s3-critic50k-cluster-result.json": {
+      "execution_bytes_sha256": "434caa98ba35ec18f2820ad5d9bec7a22c6cff082e6b34480ec3b12d84475a80",
+      "public_bytes_sha256": "61dcd6b60b49d42a149e9e99e89b9e9e6ffee596abdcbeed2d33197089606cfb",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/logs/L2A-orca-s3-critic50k/critic-stop.json": {
+      "execution_bytes_sha256": "b2d7ba592348723bce642c439153f8d55b1abdab2938dce16757bc3b07b06848",
+      "public_bytes_sha256": "806de4d56aeb44f5f826d6a8c50520947c4c36ac6df6be1896e4577787753c96",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/logs/L2A-orca-s3-critic50k/first-update-coverage.json": {
+      "execution_bytes_sha256": "9161019e31c9db4d32658b2de5bd5fd930e1883e18cafca9c6451681e365221c",
+      "public_bytes_sha256": "28be18a90b5ebdebb0c8be3268785972a29b5e102c449eb325ba3aa226edb5a3",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/logs/L2A-orca-s3-critic50k/result.json": {
+      "execution_bytes_sha256": "d713322e21d448b36b2c2d64cb39243b8b97263086381750bea2c4dd8f8f6d4b",
+      "public_bytes_sha256": "baa97f5fb23721f0e97303fe96c28c13c02e5c2a6e4c215bf30250c26c2ea8a1",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/logs/L2A-orca-s3-critic50k-admission/critic-stop.json": {
+      "execution_bytes_sha256": "05edcb64d00c9eebe5eca2360135bf7d5833bc827adee6dbe9baf63fb5deea25",
+      "public_bytes_sha256": "a47373c8e92aeaaa67d5d7a34fb5340993b31da9698f5b5f465ce87613a3c4c5",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/logs/L2A-orca-s3-critic50k-admission/first-update-coverage.json": {
+      "execution_bytes_sha256": "9f852873549dbc63ad5c05a04bc8de3450cac3a5770b7f4a0b24098c1e9767c5",
+      "public_bytes_sha256": "c4f6e11b8aae1ad4f052b39f6f2b509879147ad9f651cdc2cce2e459a891f49c",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/logs/L2A-orca-s3-critic50k-admission/result.json": {
+      "execution_bytes_sha256": "39eba0a909ea9a2da586efc0a1284d3c7c219db539f0c13bceaf7aed9e023b41",
+      "public_bytes_sha256": "b22dd2510aa7300b75c42a3116fe4ed8707cc6ff78d9f02a894543959f0432d0",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/critic-only-final.json": {
+      "execution_bytes_sha256": "5beb49102a3a4fd93caa50251a97c45a690ae661db24362bc4c9a5f405f37990",
+      "public_bytes_sha256": "7f3c4467f383081957a7580183cc61088985a1da1ae160f5c54f649269b011bd",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/critic-update-map.json": {
+      "execution_bytes_sha256": "a70e240b770651d901b9784f32ee3d8bae05ff4cb3f1e76a37d99b20198218af",
+      "public_bytes_sha256": "89ae75d8ce541706880c4aa5ac1580d9d32535791760c975d72f3b8534edb5ac",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/first-stop-counters.json": {
+      "execution_bytes_sha256": "b2d7ba592348723bce642c439153f8d55b1abdab2938dce16757bc3b07b06848",
+      "public_bytes_sha256": "806de4d56aeb44f5f826d6a8c50520947c4c36ac6df6be1896e4577787753c96",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/sample-coverage.json": {
+      "execution_bytes_sha256": "5b1ec41640f43ac019718b7a2651bf8165aeea22da3bec8602b3e3cf2f2fc833",
+      "public_bytes_sha256": "fa462c784e3f256c0ab78a62a98d9020fb82604c1c42f0f79c8ea272a4bb02a2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-0.counters.json": {
+      "execution_bytes_sha256": "573c6f181e33e349cc0597c2995e5214881e5908bf75ff963ad72ee90b94eda5",
+      "public_bytes_sha256": "c56bbaf6d7cda691eed38e18ae6fd73df7b67bdde3d69d36e3fc5cd6886c4d38",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-0.frozen-actor.json": {
+      "execution_bytes_sha256": "f9a3d2c6594f31f539ae661061598adad4eb757135e91be7ea7ab03ffbafddf0",
+      "public_bytes_sha256": "3ef7ecb21c61bbd5c81dec6f4657536440663f8683d4800c4eb6dc9bbd83ef4b",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-0.variables.json": {
+      "execution_bytes_sha256": "9024dcae2378f874eacead3e4dda3d52f4a5859a706cf4a643153ce79348e479",
+      "public_bytes_sha256": "476ca0031ee9505540d72888483683f5651cd572627cdf88060e07fd29fe5e0d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-112301.counters.json": {
+      "execution_bytes_sha256": "5d9f4494fbd281e79e6e069451abad799cecbc361f7231e2108552ad9d8dc2d6",
+      "public_bytes_sha256": "897ace9648b2116516e8d94a9ffd690f5a401aec2b7ff4442fc3cc39abd98ab9",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-112301.frozen-actor.json": {
+      "execution_bytes_sha256": "272feb3081a584bf819431414f5535a99c5e568ca0d0585baba2619d6643e17e",
+      "public_bytes_sha256": "6d33fa1510c93ec92017a90dbc439f7e8a5fcca695fd524ae4d8386fe9d69f9d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-112301.variables.json": {
+      "execution_bytes_sha256": "47bafcd017dfc00bd0124adb95858ab522a1585b2dc9d9f6d30bef883f7c481f",
+      "public_bytes_sha256": "f5aabb85b41bbff983b3ab29641bd40fe702a2c7d7963c00fc206dba4cc69902",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-132297.counters.json": {
+      "execution_bytes_sha256": "dc9471772286daffcf8fdc64404afd8148d2b0cd859ee30f60fc6a7bfba04ebd",
+      "public_bytes_sha256": "e6f64e524c66caaccdc7802a94a10800e5a2285982537282f85f38ea6f712727",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-132297.frozen-actor.json": {
+      "execution_bytes_sha256": "34a3bba82dd1466830ac4c79ca2c46235a2631b990a531205186d576c976a2a7",
+      "public_bytes_sha256": "28be22808b158cd09638672e81b0b45b9c6b4048b3468202cc75675385f63ffc",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-132297.variables.json": {
+      "execution_bytes_sha256": "71cec663c738c7a708148e91c7dece30870448bb16d89d6978176564b8e68472",
+      "public_bytes_sha256": "bc46402185ef7bb6678ea0b221d240ac095159a30dbd1005f7947de0aecccc80",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-152303.counters.json": {
+      "execution_bytes_sha256": "d651b240a6826157fc128fa60be0b2dd4f7d2dd7f9a9716d61113326a8f91e35",
+      "public_bytes_sha256": "76dbcfcc0e226b457922b4d342e8c7b12f507a74b9a326cb7e71433cfc3f0a4e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-152303.frozen-actor.json": {
+      "execution_bytes_sha256": "67d70c7d36b63f6cdf9b3bb6c8f3ee0a7c8f6c54e28ad5508248a7d8354a26cd",
+      "public_bytes_sha256": "f0f4871a29451f8414d019017dbf343336bc5004e144fe662d5bca96ced1c63e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-152303.variables.json": {
+      "execution_bytes_sha256": "3026f1ad76d3c320f4027f9b93feeac5ec122b872a937d1dbe5cea393766994a",
+      "public_bytes_sha256": "067aaa08f27017cfa498c870dfe6acb5d1dec9585d12a7b9e3b75dd32fe57380",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-172307.counters.json": {
+      "execution_bytes_sha256": "06920430316d393b1bb118640074c0b9081471168db022bce757e56d056c5e8d",
+      "public_bytes_sha256": "565dab7330c463af5c3c1aeacb5b2c633aad67c8eb34e6424ace3590edecef22",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-172307.frozen-actor.json": {
+      "execution_bytes_sha256": "0a518da94963faa471e8733abd359fbd9c5ec4697b950b4280648b2e870d5e45",
+      "public_bytes_sha256": "65d29ea2e50d52d9a6fa658d547086eb9da63b8900c17026e15364fcd1464220",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-172307.variables.json": {
+      "execution_bytes_sha256": "5b00b78fb8dc7088824e01ac94b34f68ab9e7e4d16b3fb8d58231b09a13828e4",
+      "public_bytes_sha256": "bfe5a0e2c1a7ba06b9e6029edcf52da9881ffaca9b1e2a6cda064d4e17b458c2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-192309.counters.json": {
+      "execution_bytes_sha256": "c9c0f29dc7c1e7354c9bd50fd16b24b3ff159e894faf55b4b45d68011a98f926",
+      "public_bytes_sha256": "d9881060b1ac6fc25e384704379bb15fb645a3f9a215d04433ca39ce1bcd4cc1",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-192309.frozen-actor.json": {
+      "execution_bytes_sha256": "10c907e30750638740f4b9680d8b1bcdb6c388f1aa40de6e07168bf762857355",
+      "public_bytes_sha256": "31384231bdf90e31dee0597e5b9d528c5275dec7f41cd66bff0b39e77360c018",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-192309.variables.json": {
+      "execution_bytes_sha256": "bb79417f06c2c6ecc612e33886209c9e87f15dad371d2aa308c02dd6cc159992",
+      "public_bytes_sha256": "8fd0196f58e179e0f5d14b8b2127b6f7acefaf0c28b81c9236fdec812c7f63ed",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-212294.counters.json": {
+      "execution_bytes_sha256": "2b9ef2abea803454f44d3916b65342122572be9d000867372ec24002d4540456",
+      "public_bytes_sha256": "fb37bf92326106da5b1135cb2a4fb4eaadc0c44d252647829f2ebb3e7626670e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-212294.frozen-actor.json": {
+      "execution_bytes_sha256": "8739672d2d7e74307c03afd24fb63ea3b8284a227be6242ac342c0926df1e74d",
+      "public_bytes_sha256": "005ca2c97af722be3bd6db3b1a1739564647f125843665dbe188c092a292d8f7",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-212294.variables.json": {
+      "execution_bytes_sha256": "efa23db8249a3976c7ca2bca190060a4db739f3c92a8646bb5c6011d8a2256d2",
+      "public_bytes_sha256": "2808ace3d0dbeeb4b7549eaefaaf3b62f6b3d883e049f88fe2e4c5258648437a",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-232308.counters.json": {
+      "execution_bytes_sha256": "cba0a80d73cdcbed3d4682e4b793393a8f93d04d80cb7c423f2ea944210a1ef3",
+      "public_bytes_sha256": "12e417fd78445fe6ad091659b1f38334597fd86c7d4dbf3649a72e75350d262a",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-232308.frozen-actor.json": {
+      "execution_bytes_sha256": "fe2a6044f58088caaf0c022eea9e7c1225760243434843558af9e2a73c07ff83",
+      "public_bytes_sha256": "9f04c7c1ff0b640b7341934b5d82a34a36d7ca38732fc85886a3782dc562dba5",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-232308.variables.json": {
+      "execution_bytes_sha256": "570528653aaa3d536c8cb205a86242efdff3b84c45bb0e647fde09b4ff099d37",
+      "public_bytes_sha256": "02afeaed0a1540dde1170a4bce73238ac999096199764c3f855378273fee6e0d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-252309.counters.json": {
+      "execution_bytes_sha256": "91af63806a94359d1eb9918712da36a7a2f537af05ebf78cd731dd02112d8a4a",
+      "public_bytes_sha256": "a7b4c1557a15c5ed05bde432ebef9827884a2a96d8d7a034ee809b028f25cef6",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-252309.frozen-actor.json": {
+      "execution_bytes_sha256": "af878a3bbb63a3f4bb3f836af282dbd1986752dd3543fee63ff7f72b6f7d2981",
+      "public_bytes_sha256": "bfd5103f3681b9687e3ec80bdba76355fb76e2642d25ca789c966e5fc36a03d8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-252309.variables.json": {
+      "execution_bytes_sha256": "2726d29727bbdf09875cc078e858eca8e6e62cf3bca72ba44bbd0ef7402b9b0c",
+      "public_bytes_sha256": "aec9b5eee43e0e35f9ba594c9ca5487717ca2861bc9fdc99105e7becbb50906a",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-272293.counters.json": {
+      "execution_bytes_sha256": "bd6d6fb9403aac288527389b6ab70e0eb5d5551b7b6c2de9c614956882134bfd",
+      "public_bytes_sha256": "d82c99184bb937c82b2f30baa7544bb3822e76da6d33e9058f1736bc274e1bff",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-272293.frozen-actor.json": {
+      "execution_bytes_sha256": "0717427224e22c389e8e48a3baa314f80aa1d37b0cfa5609d4a5d43e219c6f89",
+      "public_bytes_sha256": "66edcceded464c0247c7a7b140a811ff0414ab77e9c0abceb831a503f6cffcc8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-272293.variables.json": {
+      "execution_bytes_sha256": "4d632d0c42a59d62132fd7b3d6147635d6a7f1545bc7ca61977b460ef4d1795d",
+      "public_bytes_sha256": "e42b4f7733dec4f0d3347f7ddaf9f48dfd2f7ec16909e0f9800c3e3dae64777a",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-292300.counters.json": {
+      "execution_bytes_sha256": "b818cbbf78aac561941c1423116ef5f9e11ff54b651c44ee59578f107127e5d8",
+      "public_bytes_sha256": "0d45f2fc9a69700fc11d742ec48e00b450b9a3205427bb8c845e89918c0c77dc",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-292300.frozen-actor.json": {
+      "execution_bytes_sha256": "8d06064a719a67a29f8615166b08817fe119965743f3eeb3c42f204eaefa44ab",
+      "public_bytes_sha256": "27351d3fafcdd1d7ae92c23403e08cf8aaa3a01763ef245e2a54cf086077afe5",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-292300.variables.json": {
+      "execution_bytes_sha256": "997de956384dd757066c0e34460483f050305fd17c64e6f0b81ab935933130df",
+      "public_bytes_sha256": "4c107bf159fbdece6602f1011b31a158dd15259ad3f41cd88b3a6cab5ab7de00",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-312303.counters.json": {
+      "execution_bytes_sha256": "5c089a543888f8dcc048d8ce8120f7e461083b2a31234114cee69d7749987772",
+      "public_bytes_sha256": "79d7895205dea255f2e105e7c17a9408681c0f60fbd5abab89fd56e55aad00cb",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-312303.frozen-actor.json": {
+      "execution_bytes_sha256": "e7c3636d6c4ce134312895651af79b5e46877bfe16364150a68b807576ce41d3",
+      "public_bytes_sha256": "47515c89f305002b9201c321c7155a4801075015b08d489f22b0f7594d6631f8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-312303.variables.json": {
+      "execution_bytes_sha256": "1ded39c52f1de7c71cb577949f57b2191a3a380d6dd5527df5bf2f4d9009e826",
+      "public_bytes_sha256": "c18189d452a0d0bf2240d38caeb7f9b56e144d96f01df9161235522e31758e26",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-332306.counters.json": {
+      "execution_bytes_sha256": "42d1a0eff1ec289ee5252448fc9a27e774af9b98e271de698cbfd9122ec68079",
+      "public_bytes_sha256": "74645b2bc36e82e4de8b36bdac5ae94cbe38e98485cfedf7a64d2b9fe74cd4ec",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-332306.frozen-actor.json": {
+      "execution_bytes_sha256": "071e09fa3bbb2ffa73c982cd9aba7418280455582eda27f974cf142cc7e1085d",
+      "public_bytes_sha256": "9ac9ecc558772a1c803c0197bc48c3e66dcd26f994078050f78f46d872a403f1",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-332306.variables.json": {
+      "execution_bytes_sha256": "8d8a2d453bbcbba1a5bb10aa2f387ed5df1a3c85ee177f6d3915ba2bcb70e979",
+      "public_bytes_sha256": "9aabd4f65b0f2c9a63afa19e32e289b5bf6bae1874a2fdf4d4649eac3ea92499",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-352298.counters.json": {
+      "execution_bytes_sha256": "e762c998d9c7fe07b5f23c9c8ac70d63c9fdd5e900695e74a02546a085acf8a4",
+      "public_bytes_sha256": "7260c51a44bdc10b940ea0664140de2b5a7f8bc954ca9cfc14f8aff657c398c9",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-352298.frozen-actor.json": {
+      "execution_bytes_sha256": "a823fb698af66357d1594dcb456df4a458cb696ba49958ecacf0ff32d193cd5a",
+      "public_bytes_sha256": "e8d46e17b7ea553757c3b456c562d87b291e6ae218ef948a4d7191cb9533b484",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-352298.variables.json": {
+      "execution_bytes_sha256": "25178558b6fc03b8f6b836abbcbe7aac7dfe79c3368bdcaf02146a1316482e28",
+      "public_bytes_sha256": "10739a11fb963ce3eed2daef87e50cbb7203c5a6ca53b21afb513c22773ccb34",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-36762.counters.json": {
+      "execution_bytes_sha256": "78aef78cd646fe2cee2382842ee0474d05921116d2e4621873fa76a431e7af13",
+      "public_bytes_sha256": "b8576ba6a7be6f00636a1c9e37e96b05bb4e9f3ad1e92a828a096877b7263450",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-36762.frozen-actor.json": {
+      "execution_bytes_sha256": "7db7bd5584ba374b4cd5bb8be6ce863f28a7cc5c03f4e76c75a804f10a85c7f7",
+      "public_bytes_sha256": "fa1eb7b5488d3f24c10a6ebb36f83019d6b031b89c2ae87b7ce27c333eed3753",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-36762.variables.json": {
+      "execution_bytes_sha256": "815b0a54e10447b92cbfdeed80aed6b564d5ad91caced02f7e5b63c7a126f200",
+      "public_bytes_sha256": "d56d40e81ce2a8e44b5b0daee935fdc1d2bcfc2b128fd3d84d25490124cd7c25",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-372298.counters.json": {
+      "execution_bytes_sha256": "a2d8c043db53a9ecc9ffa28421f71b717bc27d0f9acf9620efe3324c85ce7e26",
+      "public_bytes_sha256": "30b03ed35ef56e4bee36a82508aac85f143f1311fcb62046301e4a8aa45d4e17",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-372298.frozen-actor.json": {
+      "execution_bytes_sha256": "a74a2f7609543e8aff06c9da8b8e0b995c067c0aeebf97ee2e38df9a9cba3423",
+      "public_bytes_sha256": "4cca4b1e5525bd9e756ab2c28ea1f47f8accd809d375567a7f7882e5568c052a",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-372298.variables.json": {
+      "execution_bytes_sha256": "857fa17684d967cf7b91bbb69bbc38f4ba3423b8dd84976b62c268665830093b",
+      "public_bytes_sha256": "a0d7dc86875477b5679384248999d40acd9632f94316972d796b257a43e1e4b4",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-392295.counters.json": {
+      "execution_bytes_sha256": "4f1404a68783a33f13f88755ac9547ca8b864735990019ffb6651cd37b33b7d2",
+      "public_bytes_sha256": "aa87dbad3eedce3af51eda6d7af0802397c6fc6c8dbdca5188bdfcae7fa56d64",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-392295.frozen-actor.json": {
+      "execution_bytes_sha256": "ff4c3e524bdce07d136c1a40e7b37f00a36c02f14e3eafdcd72a99768c1d2c59",
+      "public_bytes_sha256": "8d1bb9d885a004f66e9d19432744238ea4f02645847c0eb0b3bf76f3a79c79d5",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-392295.variables.json": {
+      "execution_bytes_sha256": "8ad262c36fc6e88398b133ce2d15e9a4896fe6c888735bd3f99786dff2456ccf",
+      "public_bytes_sha256": "2dad581eb0b431e5e9224177162ad8244a0a91ce62e9aa52f33c7a9d87a90233",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-412296.counters.json": {
+      "execution_bytes_sha256": "5e8409213b20885a2bf7b673b48091e1e865d30b5dbcb04dd4833932327f19d9",
+      "public_bytes_sha256": "feff4f6eb4012ae26a462485fa598fe6a5f23aeb9e8472d3aecc46f9e576020b",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-412296.frozen-actor.json": {
+      "execution_bytes_sha256": "2cb6aa57a651e431493ce4364d37d90edd8e9eee55f0edd7610b767545671761",
+      "public_bytes_sha256": "34cf8f4b76b6b29d7a1c0e1676df1725f121826674e7ba47b83588404a157a29",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-412296.variables.json": {
+      "execution_bytes_sha256": "23be3574a96e78d2fd0e288b7358f0005f66d9dd0e2e5cee5fe614715a70f225",
+      "public_bytes_sha256": "b15af971c6188d4c86345001de522e8e57c832ff1a62520f00f00f3e77863aec",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-432302.counters.json": {
+      "execution_bytes_sha256": "ca814f9ad54291dc18bffcc7c12e15f1f32036f8722650631c60430176964093",
+      "public_bytes_sha256": "5b965cd4cfa5757ea609b346f6a5aba7f96978d7542634919aaf5461f615e858",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-432302.frozen-actor.json": {
+      "execution_bytes_sha256": "8ff340c34edf6bd0b9ac4d2eb648a1efa424a037cc8aad65d03e488f8eeac4cc",
+      "public_bytes_sha256": "6a3d17e7f4cfaf03befdecdefb8465ab85588214a7574798dd11d3d5f20bda47",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-432302.variables.json": {
+      "execution_bytes_sha256": "1405613056ac0e2ff2194b34b672f4185caa8d3e3bbef3f75eb365353f9d297c",
+      "public_bytes_sha256": "1d8e18503906e4d14ff45200286ab35199ce88fbc8a2b0483eb2b1dd5f47c38a",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-452292.counters.json": {
+      "execution_bytes_sha256": "b7d3ef777cb146d82f25b00a36c5d0dbf012310e7a69f4a4d698080a418939cc",
+      "public_bytes_sha256": "849c084fde2d8975dca194eb5bc47524a25a89fc3db12ea46f13bdaa99bf462e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-452292.frozen-actor.json": {
+      "execution_bytes_sha256": "2e63862227b62598d1446a311a785e47d32d678ff3a77ca260c45de3184ce5f9",
+      "public_bytes_sha256": "dc4e5c917aea4871717fe15f270921e4991561f94cf963fb1f85f13e82eed0e1",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-452292.variables.json": {
+      "execution_bytes_sha256": "e8bb9f86ca7c3b4ab48e3c165156543ee0130ca4efb1e4f64457ba61053e615a",
+      "public_bytes_sha256": "b6b076a876df856e0fb991f37a8ebdb10dcda2df17f2ecf822da49041328d82c",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-472288.counters.json": {
+      "execution_bytes_sha256": "ca9301cf8b12388d40d2c63be3ddb64f9a4424b8293095bf23a0b6558301ad2e",
+      "public_bytes_sha256": "36ba05fe58a558335dea543e7a995d3e1f9e435a050c3d7deda1adc14ef26209",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-472288.frozen-actor.json": {
+      "execution_bytes_sha256": "cc9ac37da3b63a2f5c3a0a77edbd8826ec2ffd78a653bc09031a3597c12f52db",
+      "public_bytes_sha256": "e83101b4b30c6959a249d58d1459ce782bc51a8e0de7b19494aa297229ecef2d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-472288.variables.json": {
+      "execution_bytes_sha256": "7e68a3f2e049aee246a064deed1ae38f4f7a9383c3749b0efda16f780b650d36",
+      "public_bytes_sha256": "1e16c0e064fe0810986ef8681d345deaebeb2085fd7ff32e888eb0b4bcc1e6cd",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-492302.counters.json": {
+      "execution_bytes_sha256": "f968af15f87375b8a44e4922aacba86ddb7f9ce44c78cfffaf36c97bc053515f",
+      "public_bytes_sha256": "e673add1339404c2f5ec97d1ff0453436f72f4024bf2943f182da9fc59951d32",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-492302.frozen-actor.json": {
+      "execution_bytes_sha256": "91048e37c10a0842701e9b35277acbdf5edf3082bbcfaa3cdb6ee5e17a94705c",
+      "public_bytes_sha256": "94fc601afa00bd41538af619237b7ab619bd7ecaeec5904b533c35ab47776cd2",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-492302.variables.json": {
+      "execution_bytes_sha256": "5e3012d7c4549b0bac6e18cf5d49d40e583f44b398218da80a2bd3ca76ea493d",
+      "public_bytes_sha256": "d0c5ae01290f0db3fafa78f3cee5fa864b8b245f8078a12d583820849dab9098",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-512313.counters.json": {
+      "execution_bytes_sha256": "f4d2ac3e217c9c217c0e9b9c649c7320a191456a60bd2deeaf7195db7fa498af",
+      "public_bytes_sha256": "484f0dcb2435ae2242a7979ec5d5122ea84b924ca1cda577b893164fb4fd799c",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-512313.frozen-actor.json": {
+      "execution_bytes_sha256": "55a0346c79db73137e04a499288e6a83aa5ad2c39f4bb89e8549aa6c94e5f8f6",
+      "public_bytes_sha256": "b4af671cb27b1b1711925890168c8ac48d520d13f82d0d3a2c934d020836fa00",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-512313.variables.json": {
+      "execution_bytes_sha256": "6fda6a03b895640fe97b42a32d3bca7f22f08de5707b21c76c5213549ae87d48",
+      "public_bytes_sha256": "03b5b82bd2b824086a464583f09c845d8424fe2971ef467311854bec7aa2ee74",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-514075.counters.json": {
+      "execution_bytes_sha256": "c0e255945c44de50bf7bc06caf06c8a1250044b161e023e169be81b0dc233ecb",
+      "public_bytes_sha256": "3673b2dd251cdd6da7895e9f82425a260310c23a50d3425d4ce1bc1a479e804b",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-514075.frozen-actor.json": {
+      "execution_bytes_sha256": "55a0346c79db73137e04a499288e6a83aa5ad2c39f4bb89e8549aa6c94e5f8f6",
+      "public_bytes_sha256": "b4af671cb27b1b1711925890168c8ac48d520d13f82d0d3a2c934d020836fa00",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-514075.variables.json": {
+      "execution_bytes_sha256": "6fda6a03b895640fe97b42a32d3bca7f22f08de5707b21c76c5213549ae87d48",
+      "public_bytes_sha256": "03b5b82bd2b824086a464583f09c845d8424fe2971ef467311854bec7aa2ee74",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-52317.counters.json": {
+      "execution_bytes_sha256": "c7032d83f1e59dfbfeb4eba686396ec29ab2a41fd2b34292faa64d3ee4b51d46",
+      "public_bytes_sha256": "163d172c9a5b0112437a9fd629a038d8d3dbb040bb06517d8f82a7b8b2591dff",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-52317.frozen-actor.json": {
+      "execution_bytes_sha256": "0f1808a7da784d07b4912b53c74456bd5075a187ba1632866868af4b77a766f5",
+      "public_bytes_sha256": "b5c9aecfe07a5ee2a70b7093380ef4ecf535e55d46553c4ffe9d57e0af749885",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-52317.variables.json": {
+      "execution_bytes_sha256": "9d32d1ec6c293dc8712b63e97ead93ca65b10e85b8ac08234dd7ed1af286a534",
+      "public_bytes_sha256": "33f2d85be664db62384469b8484b6e8ca32dea6dba8818de57203670a75f7484",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-72301.counters.json": {
+      "execution_bytes_sha256": "fee6084aa1494a62d5f452616b524ce8b575d9f65301102e3d43560397135aff",
+      "public_bytes_sha256": "94dc9fcb97b1fd21c069e72e77a95f430659dd6c0d630a8f8564fda3303a3e7e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-72301.frozen-actor.json": {
+      "execution_bytes_sha256": "6e702cbc7cb0fbe4c6e2faa7983e06dd70bce63cb25bfdc9e3b6d9f24d1fa557",
+      "public_bytes_sha256": "2300a0d09971f0b1962dd5761a4f9cc16abb35e02415067c360954ac4bf27d5c",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-72301.variables.json": {
+      "execution_bytes_sha256": "96559fc502721aa219ef0c448b802ca9ed768f4e227968c7857b1913501c1ca2",
+      "public_bytes_sha256": "06cc2e85147cca161d99824bd532fab6ce79c2f7c7739649d81364764932a5ee",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-92295.counters.json": {
+      "execution_bytes_sha256": "2d6894c544c8b713f2466ac86d439929a93594489cf8f3066984d3011b355c91",
+      "public_bytes_sha256": "ceeeed8eed78aa0a36ed7b151de6dcf35ce49d637da1869be221a4fe84847239",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-92295.frozen-actor.json": {
+      "execution_bytes_sha256": "8c560818bcd6b3f9406c6cb9f1e901495aa3cd448c0bc484e24f6b24e8ef469d",
+      "public_bytes_sha256": "deb7a40868eeb738453af30dcf30870007c8cbbf85c8c1711a33696f250bfe44",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k/step-92295.variables.json": {
+      "execution_bytes_sha256": "9e8074c9edc4fb3fc598413a23ee4764bea454f8dc506a4e3d232e2912085867",
+      "public_bytes_sha256": "9df0adf99ac2df3116dac395590a0980aefe65db2a1c522cb1bd2c57b2ae0695",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/critic-only-final.json": {
+      "execution_bytes_sha256": "d882fdcfbb91e1307873595f9704129273a7d6d01e8e7cc0cc9bfd368f18f0a7",
+      "public_bytes_sha256": "0a669ff6e77f8bc620ed2915ae5fc78ea1f67f8776e5cb9ea8e2caeece3cd77e",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/critic-update-map.json": {
+      "execution_bytes_sha256": "e33e331a3a21bee2db583df2a66d3f481aa1c6020ed6aa98181d8023294c76bd",
+      "public_bytes_sha256": "169d51ad05785b2c18b841ddcea1c4af1024fa9504f808fc2e48b6c84bcb1503",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/first-stop-counters.json": {
+      "execution_bytes_sha256": "05edcb64d00c9eebe5eca2360135bf7d5833bc827adee6dbe9baf63fb5deea25",
+      "public_bytes_sha256": "a47373c8e92aeaaa67d5d7a34fb5340993b31da9698f5b5f465ce87613a3c4c5",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/sample-coverage.json": {
+      "execution_bytes_sha256": "19fb76b02bd9918dd841465acdcb559d724383613577b97ec44c3baba78d2924",
+      "public_bytes_sha256": "8364adfed6fc8861443c429a194fc0701634142ea8f781db7c9307c72b66bbe5",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-0.counters.json": {
+      "execution_bytes_sha256": "2bc206d433c9828de442759e651a01535f723d2c378ee1e585a6334aaf50c88e",
+      "public_bytes_sha256": "92630998b688d7538905b21e79ce2959cf41f2a550cec230412296b5ad4aa46d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-0.frozen-actor.json": {
+      "execution_bytes_sha256": "f9a3d2c6594f31f539ae661061598adad4eb757135e91be7ea7ab03ffbafddf0",
+      "public_bytes_sha256": "3ef7ecb21c61bbd5c81dec6f4657536440663f8683d4800c4eb6dc9bbd83ef4b",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-0.variables.json": {
+      "execution_bytes_sha256": "9024dcae2378f874eacead3e4dda3d52f4a5859a706cf4a643153ce79348e479",
+      "public_bytes_sha256": "476ca0031ee9505540d72888483683f5651cd572627cdf88060e07fd29fe5e0d",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-38425.counters.json": {
+      "execution_bytes_sha256": "799af186fb732b149cca0ffb54bfd61039f662ad3414e4f79c97fec9c81f1e89",
+      "public_bytes_sha256": "97faa6924a5d3f0824a336b3e917a01584df124a56bd528a07d2b4164c0dea36",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-38425.frozen-actor.json": {
+      "execution_bytes_sha256": "7db7bd5584ba374b4cd5bb8be6ce863f28a7cc5c03f4e76c75a804f10a85c7f7",
+      "public_bytes_sha256": "fa1eb7b5488d3f24c10a6ebb36f83019d6b031b89c2ae87b7ce27c333eed3753",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-38425.variables.json": {
+      "execution_bytes_sha256": "815b0a54e10447b92cbfdeed80aed6b564d5ad91caced02f7e5b63c7a126f200",
+      "public_bytes_sha256": "d56d40e81ce2a8e44b5b0daee935fdc1d2bcfc2b128fd3d84d25490124cd7c25",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-47008.counters.json": {
+      "execution_bytes_sha256": "fa4365be1a9dfd6e6498e43d3440719a5b0fc736a4f035994aacf0bcb506b29d",
+      "public_bytes_sha256": "023e66fff571e9ee9bf9870f22238006c1c06c9b3bae728ac8a30f5365c293ad",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-47008.frozen-actor.json": {
+      "execution_bytes_sha256": "1312e490e407a61edeb163ac762d7d4ace27e7e304b9147eea323fd3eaefba73",
+      "public_bytes_sha256": "23f2094bf5e19e782c19c9d5ac921b0feeb42dcc34be4762249bc445da9a22ce",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "collected/node0/framework/checkpoints/L2A-orca-s3-critic50k-admission/step-47008.variables.json": {
+      "execution_bytes_sha256": "092e5e11bde428dfc56376b018aa85cb9f2beb8ee91e477d0a6493ded53f74d9",
+      "public_bytes_sha256": "9d3385947dd2b2ec6209a65067b9c804d25434727df23159699a9018e2b4c390",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/e1-fixed-reference.json": {
+      "execution_bytes_sha256": "8bb71921724d17ee1b4159c7105ee3d1cc43fd4525018d46cd10e987ba73d970",
+      "public_bytes_sha256": "81631626e839965551a88c5b3709746959a4615b49ad5ac3033cdaf187bbcc81",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/matched-grid-query-provenance.json": {
+      "execution_bytes_sha256": "de527ef9c7fa379572e85a37f8674156bdbc18bbfb1d96e183fd60c0a35f9626",
+      "public_bytes_sha256": "51d02e31ea7358fb2f1a8c0dc07c7b6be215b2ae33a8448e177b98cacb9ed1ad",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/own-credit-10update-pilot.json": {
+      "execution_bytes_sha256": "cca0f3f9304c918dac0ba45d5f1777ee94e5e3ba93c71288a0d048a359c8fe81",
+      "public_bytes_sha256": "490264b24c82ef0332e16273d73ba2e8f8c47f7f16751bee2d1d0e937898ae2b",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/series-receipts.json": {
+      "execution_bytes_sha256": "50952ae645b03ad187b371fc73719ca9110b6585777d118c16b9ade8137bd82a",
+      "public_bytes_sha256": "489cae91689ba80ea79b84fed63ffe03215ecea2819cb50d80433544a1633687",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/snapshot-probe-matched-own-grid.json": {
+      "execution_bytes_sha256": "0f6d3a3f1e2f46a746d35b1cb50b0462a6e6fa81a108e4ab2e7eb69abf3d319f",
+      "public_bytes_sha256": "74d9de20a7f5b6fb75d3e4bf84f3111862665032e111aa0088dde992f0e325af",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/snapshot-probe.json": {
+      "execution_bytes_sha256": "a301ca43d16b60dfed3168dbb655a1bcf689430cfdec8acc901b25715a0b65e4",
+      "public_bytes_sha256": "1c675d4576af8ab65587b601f1dbbb0c490b7a68334da0e889ad70954d9a0b29",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/source-manifest.json": {
+      "execution_bytes_sha256": "2bdee49e7fc0ae930ae7c409e45b47eeb64a8a778c251a737d4c7d6c5cc874b1",
+      "public_bytes_sha256": "593becce5d1c358e40672bb5b24437c4126ec0e529962bb6b8dce876c8caeb34",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "stop-snapshot-verification.json": {
+      "execution_bytes_sha256": "64f894eaaa082a3ad16f47a80f2b764a1a4b7d29c9e746da1b5637d6f3ec889e",
+      "public_bytes_sha256": "8ca52b71dff087c652bd20f06b037c588d9dcb45e45043b45b26910c1c81cc78",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/by-actor-query-provenance.json": {
+      "execution_bytes_sha256": "19e37f02f514b47b92613bbd512f53791fa650e76710fc61c67937eefce853a0",
+      "public_bytes_sha256": "7aef4e567d6921bc919db822bd12700c4c4ab2507c297592d328689457f641ab",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/own-seed3.json": {
+      "execution_bytes_sha256": "e3796354f72b04af28fe9c0b8a72e2eaff83a0daa2f6be0793e900c1fb787279",
+      "public_bytes_sha256": "f4b9d4c4f30e6f87bd384c86359e1fab1efb0cc2a1ea3470b52d36258233b3e5",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/response-alignment-provenance.json": {
+      "execution_bytes_sha256": "1b44c19b027559bb93bcbd6db4e7d597570ded717bf6fe08e0428adb8e485a8b",
+      "public_bytes_sha256": "f84157a013abb42243de39ca38aaf71d0b1041adb142de9aee34f614a32c05c8",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/response-alignment.json": {
+      "execution_bytes_sha256": "66830ce8b4ea47b7d6fb4df0a8914a2633b62b613560f189918286ba887dbf11",
+      "public_bytes_sha256": "b09b5e6742dfd818c2cc8fc6890045a2faa48b9a1ac7ec767842bc2d312b6d92",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/snapshot-probe-by-actor.json": {
+      "execution_bytes_sha256": "23e6b2c1c19a980c3843ce0ca4c196af9ce98f4a3981956e3ecb13f65e62997c",
+      "public_bytes_sha256": "7ec59970e5a3b332b643d1c5c54c2460f1d4353be063b2c7d6ac08efbece335c",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/final-learner-closure.json": {
+      "execution_bytes_sha256": "9e0df8299151a958cfd219095bc01afd733beae9e5650ef4546ef7e256f0ddf9",
+      "public_bytes_sha256": "3500cc2964046c9dec0a6a0419ff4816ca9976aba202cebc39b0fb7d477be904",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    },
+    "results/own-seed4.json": {
+      "execution_bytes_sha256": "ada6ebd5745f28dd75a8d0901c80764a31e6731d85fbc0f39a08b866fb301c34",
+      "public_bytes_sha256": "4844757a453df3a586e65fac0f98db56d98478bb410478153b4369d2cc3463f7",
+      "numeric_and_boolean_leaves_preserved": true,
+      "string_redaction_only": true
+    }
+  },
+  "redaction": "String keys and values only: private VPC addresses and personal cloud source roots replaced consistently. Numeric, boolean, null and array order retained.",
+  "original_models_unchanged": 51,
+  "large_files": "All new checkpoint tensors, replay and packet/state/control logs remain cloud-only. Public evidence contains metadata and small diagnostic JSON, not model delivery.",
+  "controller": "Private SSH/lease/deployment orchestration not published; public framework and scientific tools plus registration/source hashes identify execution.",
+  "supplementary_scientific_sources": {
+    "tools/scalar_learning_check/runtime/l2a_response_alignment.py": "494d15262e42567614a4e3d21a31104a074ac7d36815d468aec7e7bd28330aaf",
+    "tools/scalar_learning_check/analyze_l2a.py": "cf69f244ac832ef3b2f33a18b3f40723dacc6c2169a02fd748dde3096537ff94"
+  },
+  "actual_target_operator": "Online preserves L1 target implementation. Offline matching composes duplicate critic target updates (critic1 once, critic2 twice), identical across arms; not historical bit-exact."
+}

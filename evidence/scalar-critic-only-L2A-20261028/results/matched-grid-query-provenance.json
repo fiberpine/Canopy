@@ -1,0 +1,12 @@
+{
+  "reason": "Own-loss helper excludes last complete future endpoint whereas primary snapshot tool includes it. Preserve primary result and perform same-grid read-only robustness query, no optimizers.",
+  "source_sha256": "31ec9ccfd0703be262228058b595bc1e4722a4e0030cf52ced888aaea5e2aebe",
+  "new_sha256": "d43a1f788ec05df5b6d97bfa2c18af90521bc36ed49313fcd8e7fff1b4a67f48",
+  "literal_transform": [
+    "(ok + FUTURE <= len(seg))",
+    "(ok + FUTURE < len(seg))"
+  ],
+  "stdout": "{\n \"output\": \"@L2A@/analysis/snapshot-probe-matched-own-grid.json\",\n \"snapshots\": 26,\n \"wall_s\": 0.6772282123565674\n}\n",
+  "new_TCP": 0,
+  "optimizer_updates": 0
+}
