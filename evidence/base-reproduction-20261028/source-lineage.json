@@ -1,0 +1,99 @@
+{
+  "status": "PASS_ORIGINAL_OPTIMIZER_CODE_EXACT_AFTER_REMOVING_OBSERVER",
+  "historical_distributed_sha256": "d86f4acf0e7b5dbc4ed500fd385582d1a2f220986a30341a65b64a627af2f214",
+  "executed_distributed_sha256": "019cd121528a22aaaf19dc9c4c1516d0282b64775c5147e5b16a93efc0e65932",
+  "only_distributed_insertion": "   if pathlib.Path(cfg['stop_file']).exists() and not (cp/'first-stop.capture.json').exists():\n    save.save(sess,str(cp/'first-stop'),write_meta_graph=False)\n    (cp/'first-stop.capture.json').write_text(json.dumps(dict(epoch=time.time(),inserted=n,counters=dict(counter),meaning='Observed learner first sees coordinator stop, BEFORE subsequent original budget drain; producers may still be draining. Saving only, no extra optimizers or RNG.')))",
+  "configuration_diff": {
+    "run_id": {
+      "original": "formal24-grid24-seed3-balanced-u010",
+      "current": "base-reproduction-seed3-2400k"
+    },
+    "model_id": {
+      "original": "formal24-grid24-seed3-balanced-u010",
+      "current": "base-reproduction-seed3-2400k"
+    },
+    "checkpoint_interval": {
+      "original": 500000,
+      "current": 200000
+    },
+    "stop_file": {
+      "original": "@ARCHIVED_BASELINE@/logs/formal24-grid24-seed3-balanced-u010-stop.json",
+      "current": "@REPRODUCTION@/framework/logs/base-reproduction-seed3-2400k-stop.json"
+    },
+    "absolute_deadline_epoch": {
+      "original": 1791614720.0,
+      "current": 1793201139.3098485
+    },
+    "timeout_s": {
+      "original": 2700,
+      "current": 3300
+    },
+    "code_commit": {
+      "original": "bfe060b27e7608e3ec45b137bf00691c8bcce856",
+      "current": "source-manifest.json"
+    },
+    "evaluation_reserve_s": {
+      "original": 4500,
+      "current": 1800
+    }
+  },
+  "all106_initial_equal": {
+    "status": "PASS_INITIAL_ALL_VARIABLES_EQUAL",
+    "variable_count": 106,
+    "differing": [],
+    "old_sha256": "7ace55eaa8d1891553ae3f5693e54473b6e67c73e86b417485784b3f17e568a5",
+    "new_sha256": "7ace55eaa8d1891553ae3f5693e54473b6e67c73e86b417485784b3f17e568a5",
+    "optimizer_calls": 0,
+    "scope": "Read-only checkpoint tensors; no graph/Session/TF Server/network experiment"
+  },
+  "same5host_cores": [
+    {
+      "index": 0,
+      "hashes": {
+        "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+        "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+        "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+        "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121"
+      }
+    },
+    {
+      "index": 1,
+      "hashes": {
+        "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+        "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+        "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+        "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121"
+      }
+    },
+    {
+      "index": 2,
+      "hashes": {
+        "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+        "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+        "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+        "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121"
+      }
+    },
+    {
+      "index": 3,
+      "hashes": {
+        "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+        "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+        "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+        "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121"
+      }
+    },
+    {
+      "index": 4,
+      "hashes": {
+        "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+        "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+        "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+        "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121"
+      }
+    }
+  ],
+  "training_native": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+  "diagnostic_native": "12a4497f6397e5ef64945be2ac4f8465a5cbc673c8fff93732bbe41a147cec49",
+  "observation_scope": "Extra first-stop Saver call,checkpoint200k cadence,private paths and scheduling deadlines change; RNG and optimizer/action/reward code unchanged. Bit-exact training trajectories are not expected from asynchronous TCP."
+}

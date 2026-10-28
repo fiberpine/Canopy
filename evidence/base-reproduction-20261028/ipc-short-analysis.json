@@ -1,0 +1,249 @@
+{
+  "status": "16_FROZEN_SHORT_RUNS_COMPLETE",
+  "performance": {
+    "legacy": {
+      "full": {
+        "condition_equal": {
+          "utilization": 0.8644194746549574,
+          "departure_mbps": 39.749907199999996,
+          "queue_mean_ms": 58.70175391534238,
+          "queue_p95_ms": 399.2687500000002,
+          "queue_p99_ms": 510.625,
+          "drop_fraction": 0.016625450582307574,
+          "control_p50_ms": 21.6411875,
+          "control_p95_ms": 38.815687499999996,
+          "control_p99_ms": 79.20005125000002
+        },
+        "per_condition": [
+          {
+            "condition": "G12-R200",
+            "utilization": 0.7495281643952163,
+            "departure_mbps": 8.9911176,
+            "queue_mean_ms": 98.15866099496584,
+            "queue_p95_ms": 761.0375000000004,
+            "queue_p99_ms": 981.0,
+            "drop_fraction": 0.03325090116461515,
+            "control_p50_ms": 21.61,
+            "control_p95_ms": 55.6601875,
+            "control_p99_ms": 136.35536750000003
+          },
+          {
+            "condition": "G72-R50",
+            "utilization": 0.9793107849146985,
+            "departure_mbps": 70.5086968,
+            "queue_mean_ms": 19.244846835718914,
+            "queue_p95_ms": 37.5,
+            "queue_p99_ms": 40.25,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.672375000000002,
+            "control_p95_ms": 21.9711875,
+            "control_p99_ms": 22.044735000000003
+          }
+        ],
+        "runs": 8,
+        "conditions": 2,
+        "repeats": 4
+      },
+      "trim10": {
+        "condition_equal": {
+          "utilization": 0.8804928088025347,
+          "departure_mbps": 40.11596112,
+          "queue_mean_ms": 16.58487688434232,
+          "queue_p95_ms": 31.5,
+          "queue_p99_ms": 34.375,
+          "drop_fraction": 0.0,
+          "control_p50_ms": 21.640875,
+          "control_p95_ms": 38.7033,
+          "control_p99_ms": 78.58261500000002
+        },
+        "per_condition": [
+          {
+            "condition": "G12-R200",
+            "utilization": 0.7759226616018267,
+            "departure_mbps": 9.30789376,
+            "queue_mean_ms": 13.818376042917723,
+            "queue_p95_ms": 25.5,
+            "queue_p99_ms": 28.5,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.61,
+            "control_p95_ms": 55.626,
+            "control_p99_ms": 135.13461500000003
+          },
+          {
+            "condition": "G72-R50",
+            "utilization": 0.9850629560032427,
+            "departure_mbps": 70.92402848,
+            "queue_mean_ms": 19.35137772576692,
+            "queue_p95_ms": 37.5,
+            "queue_p99_ms": 40.25,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.67175,
+            "control_p95_ms": 21.7806,
+            "control_p99_ms": 22.030615
+          }
+        ],
+        "runs": 8,
+        "conditions": 2,
+        "repeats": 4
+      },
+      "registered_coarse_pass": false,
+      "scope": "One training seed; coarse recipe-reproduction criterion, not all-scenario health, paper reproduction or dual-action/CPU advantage."
+    },
+    "verified": {
+      "full": {
+        "condition_equal": {
+          "utilization": 0.9016060118847165,
+          "departure_mbps": 39.05121913333333,
+          "queue_mean_ms": 47.72551033961672,
+          "queue_p95_ms": 329.375,
+          "queue_p99_ms": 506.375,
+          "drop_fraction": 0.015257810559862174,
+          "control_p50_ms": 21.644750000000002,
+          "control_p95_ms": 21.7235875,
+          "control_p99_ms": 55.40372875000026
+        },
+        "per_condition": [
+          {
+            "condition": "G12-R200",
+            "utilization": 0.8620584885859577,
+            "departure_mbps": 10.340997999999999,
+            "queue_mean_ms": 77.828762136237,
+            "queue_p95_ms": 623.25,
+            "queue_p99_ms": 973.75,
+            "drop_fraction": 0.030515621119724348,
+            "control_p50_ms": 21.62025,
+            "control_p95_ms": 21.702012500000002,
+            "control_p99_ms": 88.74206500000052
+          },
+          {
+            "condition": "G72-R50",
+            "utilization": 0.9411535351834752,
+            "departure_mbps": 67.76144026666667,
+            "queue_mean_ms": 17.62225854299643,
+            "queue_p95_ms": 35.5,
+            "queue_p99_ms": 39.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.66925,
+            "control_p95_ms": 21.7451625,
+            "control_p99_ms": 22.0653925
+          }
+        ],
+        "runs": 8,
+        "conditions": 2,
+        "repeats": 4
+      },
+      "trim10": {
+        "condition_equal": {
+          "utilization": 0.9391161473423748,
+          "departure_mbps": 40.06085864,
+          "queue_mean_ms": 17.422426908064253,
+          "queue_p95_ms": 31.875,
+          "queue_p99_ms": 35.625,
+          "drop_fraction": 0.0,
+          "control_p50_ms": 21.644312499999998,
+          "control_p95_ms": 21.71719375,
+          "control_p99_ms": 36.3162675
+        },
+        "per_condition": [
+          {
+            "condition": "G12-R200",
+            "utilization": 0.918445909537122,
+            "departure_mbps": 11.017588960000001,
+            "queue_mean_ms": 16.94496297570086,
+            "queue_p95_ms": 28.0,
+            "queue_p99_ms": 32.25,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.62025,
+            "control_p95_ms": 21.6953875,
+            "control_p99_ms": 50.567025
+          },
+          {
+            "condition": "G72-R50",
+            "utilization": 0.9597863851476277,
+            "departure_mbps": 69.10412832,
+            "queue_mean_ms": 17.899890840427645,
+            "queue_p95_ms": 35.75,
+            "queue_p99_ms": 39.0,
+            "drop_fraction": 0.0,
+            "control_p50_ms": 21.668375,
+            "control_p95_ms": 21.739,
+            "control_p99_ms": 22.06551
+          }
+        ],
+        "runs": 8,
+        "conditions": 2,
+        "repeats": 4
+      },
+      "registered_coarse_pass": false,
+      "scope": "One training seed; coarse recipe-reproduction criterion, not all-scenario health, paper reproduction or dual-action/CPU advantage."
+    }
+  },
+  "timing": [
+    {
+      "condition": "G12-R200",
+      "arm": "legacy",
+      "repeats": 4,
+      "cycle_over_50ms": 199,
+      "sample_wait_majority": 199,
+      "missing_rtt_polls": 12919,
+      "max_policy_response_p99_ms": 2.6938915252685547,
+      "sample_wait_p99_ms": [
+        138.14565658569336,
+        135.803484916687,
+        158.56194496154785,
+        21.42603874206513
+      ]
+    },
+    {
+      "condition": "G12-R200",
+      "arm": "verified",
+      "repeats": 4,
+      "cycle_over_50ms": 65,
+      "sample_wait_majority": 65,
+      "missing_rtt_polls": 3527,
+      "max_policy_response_p99_ms": 2.677416801452637,
+      "sample_wait_p99_ms": [
+        0.01153469085693362,
+        115.19548892974854,
+        0.009059906005859375,
+        0.009059906005859375
+      ]
+    },
+    {
+      "condition": "G72-R50",
+      "arm": "legacy",
+      "repeats": 4,
+      "cycle_over_50ms": 0,
+      "sample_wait_majority": 0,
+      "missing_rtt_polls": 0,
+      "max_policy_response_p99_ms": 2.761247158050538,
+      "sample_wait_p99_ms": [
+        0.009059906005859375,
+        0.014066696166992188,
+        0.009059906005859375,
+        0.009043216705322227
+      ]
+    },
+    {
+      "condition": "G72-R50",
+      "arm": "verified",
+      "repeats": 4,
+      "cycle_over_50ms": 0,
+      "sample_wait_majority": 0,
+      "missing_rtt_polls": 0,
+      "max_policy_response_p99_ms": 2.708873748779297,
+      "sample_wait_p99_ms": [
+        0.009059906005859375,
+        0.014066696166992188,
+        0.009059906005859375,
+        0.009047985076904254
+      ]
+    }
+  ],
+  "interpretation": [
+    "In this instrumented repeat, both ASCII/framed G12R200 have long sample waits. Every trim10 native cycle>50ms is majority waiting for RTT samples; it is not demonstrated to be IPC lock or inference delay. This does not retrospectively identify the unique cause of the earlier uninstrumented run.",
+    "Verified G72R50 on host2 remains lower utilization~.893 with max_bw/capacity~.901; others near.97-.996. Four pairs do not establish tight IPC equivalence or exclude startup/timing/host interaction.",
+    "Do not classify high shared-memory empty polling alone as IPC failure or generic CPU disturbance. The producer can be waiting for a real RTT sample.",
+    "Both short arms use same diagnostic rebuilt native with stage observation; original training uses unchanged historical90ccb86a binary. No optimizer/replay/exploration calls in short repeats."
+  ]
+}

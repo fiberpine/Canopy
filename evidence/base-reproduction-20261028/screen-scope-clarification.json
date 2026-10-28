@@ -1,0 +1,16 @@
+{
+  "epoch": 1793197177.786473,
+  "status": "CLARIFICATION_BEFORE_NEW_CHECKPOINT_EVALUATIONS_NO_RULE_CHANGE",
+  "screen_subset": [
+    "G12-R20",
+    "G24-R50",
+    "G36-R100",
+    "G42-R200",
+    "G48-R200",
+    "G72-R50"
+  ],
+  "archived_step0_same_subset_queue_mean_ms": 65.46711019794927,
+  "registered_screen_queue_max_ms": 42.016000000000005,
+  "meaning": "The six-condition screening threshold includes one extremely deep-queue case and is stricter than historical same-subset behavior. Screening ineligibility is not a necessary failure of training reproduction. Preserve its outcome unchanged. The separately predeclared final24-condition endpoint is always tested; no training gate or new selection rule is added.",
+  "all_sources": "Existing archived frozen Step0 data only; no new model screen has yet run."
+}
