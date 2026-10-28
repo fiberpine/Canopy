@@ -1,0 +1,37 @@
+{
+  "status": "DRAFT_AWAITING_NEW_NETWORK_BUDGET_AND_ACTOR_POWER",
+  "scope": "L2-A only; no automatic L2-B, online release, n-step, tau/reward/architecture change or periodic connection resets",
+  "machines": {
+    "learner": 1,
+    "additional_actor_servers": 4,
+    "actors": 24,
+    "actors_per_server": 6
+  },
+  "suggested_total_budget_seconds": 3600,
+  "online_stage_max_seconds": 900,
+  "critic_complete_update_stop": 50000,
+  "actor_optimizer_updates": 0,
+  "estimated_inserted_transitions": 512288,
+  "update_ratio": 0.1,
+  "warmup": 12288,
+  "checkpoint_every_critic_updates": 2000,
+  "keep_step0": true,
+  "BN": "Evolves as historical H1; not described as a completely frozen policy",
+  "required_implementation_checks": [
+    "Frozen actor trainable/Adam variables verified; actual separate update counters in CSV",
+    "Stop optimizer exactly at50k or first S1-S3; preserve first-stop model, then drain data without more optimization and log unused credit",
+    "Snapshot update-map from actual counters; not checkpoint experience number",
+    "Record latent random offset and clipping flags for E1; cumulative executed action alone cannot guarantee innovation identification after clipping",
+    "Use isolated framework/native paths; source and51 model integrity, IPC ownership, sysctl restoration and deadlines verified"
+  ],
+  "statistics": {
+    "primary": "Pre-fixed J10 andJ40 cumulative innovation responses for all RTT x pre-action delay classes, report raw and multiplicity-aware uncertainty; no maximum-z selection",
+    "secondary": "Poisson-weighted persistent summaries are exploratory, not identified Q labels",
+    "critic": "Snapshot queries and paired terminal-replay full/R100-only/R200-only critic diagnostics; label finite off-policy reuse and sampler repeats",
+    "actor_release": "NOT_AUTHORIZED_BY_PASSING_DIAGNOSTICS"
+  },
+  "safety": "Historical S1-S3 plus finite wall/update caps and policy-at-first-stop. BN evolution requires a short admission check. No silent retry after unsafe stop.",
+  "analysis_budget": "Three40k-update offline critic arms x two sampler repeats is about30min learner compute at observed throughput, not a few minutes. Retain NOT_RUN for work exceeding budget.",
+  "resume": "No continuous TCP/RNG/queue resume. L2-B would require a separately validated restart or explicit staged controller and separate authorization.",
+  "implementation_status": "DRAFT_NOT_DEPLOYED_OR_REAL_TF_VALIDATED"
+}

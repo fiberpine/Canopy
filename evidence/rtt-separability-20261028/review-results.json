@@ -1,0 +1,47 @@
+{
+  "status": "READOUT_CHECK_COMPLETE_ONLINE_BUDGET_PENDING",
+  "rows": 27220,
+  "removed_zero_padding_rows": 216,
+  "full70": {
+    "r20_r200": 0.9994033412887828,
+    "four_way": 0.9034508162210549,
+    "pairs": {
+      "20-200": 0.9994033412887828,
+      "20-50": 0.9972932358251918,
+      "50-100": 0.9941137346418886,
+      "100-200": 0.9837817742488725
+    },
+    "worst_pair_actor": 0.9936858721389108,
+    "worst_four_way_actor": 0.09322709163346614
+  },
+  "newest7": {
+    "r20_r200": 0.9955506681381258,
+    "four_way": 0.7642015828136296
+  },
+  "proposed_point9_precheck": "PASS",
+  "safe_online_or_critic_gate": "NOT_ESTABLISHED",
+  "next": "Budget confirmation and four additional actor hosts required for unchanged24-condition L2-A; no automatic L2-B",
+  "notes": [
+    "Diagnostic classifiers can decode RTT on this dataset; this does not rule out local/state aliasing or prove the deployed critic uses that information.",
+    "Class-average positive gradients do not prove absence of state structure or an additive bias-plus-transfer decomposition.",
+    "Fixed E1 statistics must be selected before collection; proposal still offers two alternatives. Budget plan fixes J10/J40 and treats visible_persistent as secondary.",
+    "The actor BN trajectory can change policy despite zero actor optimizer steps. A short new admission test and first-stop capture are required.",
+    "Existing sampled-label/response sign consistency is not an identified persistent-action gradient or a guarantee of beneficial network action.",
+    "Three40k offline arms times two sampler repeats is roughly30min learner compute at measured throughput.",
+    "Sampling/replay restart is not complete TCP/RNG/queue resume."
+  ],
+  "runtime": {
+    "source_commit": "e3e5ca25e804dca8c77f49fbb47e3e4f6da98daf",
+    "elapsed_wall_seconds": 7.439934492111206,
+    "source_rows": 27436,
+    "max_wall_seconds": 180,
+    "TF_sessions": 0,
+    "TCP_runs": 0,
+    "host_count": 1,
+    "checkpoint_writes": 0
+  },
+  "download": {
+    "bytes": 6588,
+    "gzip_sha256": "357a531c4cc36b7d2d444a618e12bac1b86e9742fa3825541435b2324895f0bd"
+  }
+}

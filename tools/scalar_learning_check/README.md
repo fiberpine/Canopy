@@ -1,4 +1,23 @@
-# 最新：跨RTT损失屏蔽对照已完成（2026-10-28）
+# 最新：完整70维可分辨性前置完成（2026-10-28）
+
+`rtt_separability.py`已在单learner读取完整首次更新前replay核查，0TF/0TCP；完整70维R20/R200=.999403、四组=.903451，通过提案.9门。`--newest-only`支持同数据7维对照。输出增加逐actor/fold与混淆表，空类别不伪称通过，近邻严格来自其他actor。高读出分数不等于排除局部混淆或critic可靠。
+
+[真实结果与预算状态](../../docs/RESEARCH_REVIEW_BRIEF.md)、[原提案及逐条修正](../../docs/SCALAR_NEXT_STEP_DECISION.md)。L2-A仍等待新的网络预算与四台actor，L2-B不自动启动。
+
+---
+
+# 最新（Claude提案，未执行）：方向决定与状态可分辨性检查
+
+决定与理由见[下一步方向](../../docs/SCALAR_NEXT_STEP_DECISION.md)：先做有预算的在线critic-only收集（L2-A），并在其replay上用"仅本组损失"的critic检验延迟信用。`rtt_separability.py`（NumPy）检查观测能否区分RTT组：收缩LDA、按actor留出交叉验证，并计算跨actor近邻中同RTT的比例。
+
+```sh
+python3 tools/scalar_learning_check/rtt_separability.py --s-json evidence/critic-horizon-20261028/results/S-R5-s3.json   # 已发布探针，最新一帧
+python3 tools/scalar_learning_check/rtt_separability.py --replay <replay.npz> --config <registration.json>            # 完整70维历史，GPT端复核
+```
+
+---
+
+# 跨RTT损失屏蔽对照已完成（2026-10-28）
 
 `runtime/cross_rtt_mask_replay.py`是独立历史数据诊断，不启动TCP、不写checkpoint。完整/屏蔽R20-R50/屏蔽R50-R100/仅R200四种损失，保留全batch、R200抽样和512分母；actor不优化，BN共同演化。固定旧target重复赋值组合和配对外部平滑噪声，不能冒充历史逐位重放或训练算法已验收。真实TF A/A及全1路径全部变量逐位一致；正式两采样重复均通过配对检查。
 

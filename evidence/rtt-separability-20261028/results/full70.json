@@ -1,0 +1,322 @@
+{
+  "rows": 27220,
+  "features": 70,
+  "four_way": 0.9034508162210549,
+  "by_class": {
+    "penalized": {
+      "rows": 22384,
+      "four_way": 0.9136810638537657
+    },
+    "free": {
+      "rows": 4836,
+      "four_way": 0.9626598467092206
+    }
+  },
+  "pairs": {
+    "20-200": 0.9994033412887828,
+    "20-50": 0.9972932358251918,
+    "50-100": 0.9941137346418886,
+    "100-200": 0.9837817742488725
+  },
+  "cross_validation": {
+    "status": "COMPLETE",
+    "balanced_accuracy": 0.9034508162210549,
+    "confusion": {
+      "20": {
+        "20": 6384,
+        "50": 0,
+        "100": 0,
+        "200": 0
+      },
+      "50": {
+        "20": 21,
+        "50": 6807,
+        "100": 3,
+        "200": 23
+      },
+      "100": {
+        "20": 0,
+        "50": 83,
+        "100": 5466,
+        "200": 1729
+      },
+      "200": {
+        "20": 0,
+        "50": 33,
+        "100": 841,
+        "200": 5830
+      }
+    },
+    "per_actor": {
+      "0": {
+        "rows": 1442,
+        "rtt": 20,
+        "accuracy": 1.0
+      },
+      "1": {
+        "rows": 1356,
+        "rtt": 50,
+        "accuracy": 0.9948377581120944
+      },
+      "2": {
+        "rows": 1255,
+        "rtt": 100,
+        "accuracy": 0.09322709163346614
+      },
+      "3": {
+        "rows": 1105,
+        "rtt": 200,
+        "accuracy": 0.9773755656108597
+      },
+      "4": {
+        "rows": 977,
+        "rtt": 200,
+        "accuracy": 0.7563971340839304
+      },
+      "5": {
+        "rows": 879,
+        "rtt": 20,
+        "accuracy": 1.0
+      },
+      "6": {
+        "rows": 1432,
+        "rtt": 50,
+        "accuracy": 0.9762569832402235
+      },
+      "7": {
+        "rows": 1298,
+        "rtt": 100,
+        "accuracy": 0.8420647149460708
+      },
+      "8": {
+        "rows": 1168,
+        "rtt": 100,
+        "accuracy": 0.934931506849315
+      },
+      "9": {
+        "rows": 1020,
+        "rtt": 200,
+        "accuracy": 0.9823529411764705
+      },
+      "10": {
+        "rows": 915,
+        "rtt": 20,
+        "accuracy": 1.0
+      },
+      "11": {
+        "rows": 779,
+        "rtt": 50,
+        "accuracy": 1.0
+      },
+      "12": {
+        "rows": 1439,
+        "rtt": 50,
+        "accuracy": 0.9979152189020153
+      },
+      "13": {
+        "rows": 1344,
+        "rtt": 100,
+        "accuracy": 0.8110119047619048
+      },
+      "14": {
+        "rows": 1194,
+        "rtt": 200,
+        "accuracy": 0.9857621440536013
+      },
+      "15": {
+        "rows": 1101,
+        "rtt": 20,
+        "accuracy": 1.0
+      },
+      "16": {
+        "rows": 1010,
+        "rtt": 20,
+        "accuracy": 1.0
+      },
+      "17": {
+        "rows": 909,
+        "rtt": 50,
+        "accuracy": 0.9966996699669967
+      },
+      "18": {
+        "rows": 1411,
+        "rtt": 100,
+        "accuracy": 0.92487597448618
+      },
+      "19": {
+        "rows": 1267,
+        "rtt": 200,
+        "accuracy": 0.9242304656669298
+      },
+      "20": {
+        "rows": 1141,
+        "rtt": 200,
+        "accuracy": 0.5793163891323401
+      },
+      "21": {
+        "rows": 1037,
+        "rtt": 20,
+        "accuracy": 1.0
+      },
+      "22": {
+        "rows": 939,
+        "rtt": 50,
+        "accuracy": 1.0
+      },
+      "23": {
+        "rows": 802,
+        "rtt": 100,
+        "accuracy": 0.9588528678304239
+      }
+    },
+    "per_fold": {
+      "0": {
+        "rows": 5158,
+        "balanced_accuracy": 0.7663601038391051
+      },
+      "1": {
+        "rows": 4586,
+        "balanced_accuracy": 0.8936797080675561
+      },
+      "2": {
+        "rows": 3882,
+        "balanced_accuracy": 0.9793211120064464
+      },
+      "3": {
+        "rows": 5078,
+        "balanced_accuracy": 0.9486723169293804
+      },
+      "4": {
+        "rows": 4597,
+        "balanced_accuracy": 0.9614515275300266
+      },
+      "5": {
+        "rows": 3919,
+        "balanced_accuracy": 0.884542314240691
+      }
+    }
+  },
+  "r20_r200_cross_validation": {
+    "status": "COMPLETE",
+    "balanced_accuracy": 0.9994033412887828,
+    "confusion": {
+      "20": {
+        "20": 6384,
+        "200": 0
+      },
+      "200": {
+        "20": 8,
+        "200": 6696
+      }
+    },
+    "per_actor": {
+      "0": {
+        "rows": 1442,
+        "rtt": 20,
+        "accuracy": 1.0
+      },
+      "3": {
+        "rows": 1105,
+        "rtt": 200,
+        "accuracy": 1.0
+      },
+      "4": {
+        "rows": 977,
+        "rtt": 200,
+        "accuracy": 1.0
+      },
+      "5": {
+        "rows": 879,
+        "rtt": 20,
+        "accuracy": 1.0
+      },
+      "9": {
+        "rows": 1020,
+        "rtt": 200,
+        "accuracy": 1.0
+      },
+      "10": {
+        "rows": 915,
+        "rtt": 20,
+        "accuracy": 1.0
+      },
+      "14": {
+        "rows": 1194,
+        "rtt": 200,
+        "accuracy": 1.0
+      },
+      "15": {
+        "rows": 1101,
+        "rtt": 20,
+        "accuracy": 1.0
+      },
+      "16": {
+        "rows": 1010,
+        "rtt": 20,
+        "accuracy": 1.0
+      },
+      "19": {
+        "rows": 1267,
+        "rtt": 200,
+        "accuracy": 0.9936858721389108
+      },
+      "20": {
+        "rows": 1141,
+        "rtt": 200,
+        "accuracy": 1.0
+      },
+      "21": {
+        "rows": 1037,
+        "rtt": 20,
+        "accuracy": 1.0
+      }
+    },
+    "per_fold": {
+      "0": {
+        "rows": 2547,
+        "balanced_accuracy": 1.0
+      },
+      "1": {
+        "rows": 1856,
+        "balanced_accuracy": 1.0
+      },
+      "2": {
+        "rows": 1935,
+        "balanced_accuracy": 1.0
+      },
+      "3": {
+        "rows": 2295,
+        "balanced_accuracy": 1.0
+      },
+      "4": {
+        "rows": 2277,
+        "balanced_accuracy": 0.9968429360694554
+      },
+      "5": {
+        "rows": 2178,
+        "balanced_accuracy": 1.0
+      }
+    }
+  },
+  "single_feature_four_way": {
+    "thr/max_bw": 0.30268695623899455,
+    "pacing/max_bw": 0.2785091691416698,
+    "5loss/max_bw": 0.23878669389104665,
+    "samples/cwnd": 0.8061011955518997,
+    "dt": 0.22380922277934615,
+    "minRTT/sRTT": 0.34534019333106325,
+    "delay": 0.3585330943781472
+  },
+  "newest_frame_four_way": 0.7642015828136296,
+  "knn_same_rtt_share": {
+    "20-penalized": 0.98,
+    "20-free": 0.9941176470588234,
+    "50-penalized": 0.7454068241469817,
+    "50-free": 0.8977777777777777,
+    "100-penalized": 0.6588235294117649,
+    "100-free": 0.6020618556701031,
+    "200-penalized": 0.8153498871331829,
+    "200-free": 0.8655172413793104
+  },
+  "note": "Retrospective linear readout with train-fold-only scaling and held-out actors. High aggregate RTT accuracy does not exclude local aliasing, hidden state or critic representation failures; low accuracy does not prove absent information. kNN is descriptive and metric-dependent. No Q reliability, network performance or online-release decision is identified."
+}

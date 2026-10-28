@@ -1,5 +1,5 @@
 {
-  "scope": "Completed controlled cross-RTT loss-mask real TF diagnostics; actor frozen; no new TCP/candidate; original51 preserved; direction discussion required",
+  "scope": "Completed70-dimensional held-actor RTT readout precheck; no new TF/TCP; onlineL2 budget pending; original51 preserved",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11251,
-      "sha256": "5b5f6b585006052a1efef3f4c498c8967de12c481ec13442bb045e30d81931ab"
+      "bytes": 11548,
+      "sha256": "6d17130bd36b5b17ba70c24823c18644fee470563bbec84655771ab5d094e0f6"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -69,8 +69,8 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 40548,
-      "sha256": "ba22fdec46d29306046174d7608f6125bd8f694017ca4972ff2db3a8017d9f88"
+      "bytes": 42062,
+      "sha256": "1f8b88b195ccd0d8e1c4017920505ed0eea4225b69a7065d624c3ad391c9d369"
     },
     {
       "path": "docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md",
@@ -9826,8 +9826,8 @@
     },
     {
       "path": "tools/scalar_learning_check/README.md",
-      "bytes": 11763,
-      "sha256": "2422832cf25f9c1aad49f2ade0ac4aad85c205f2dcf5bec3028cd33469eac73b"
+      "bytes": 13153,
+      "sha256": "549b6461821817b0f63f8461349c3760db095501b42b779533fa9446e64a7808"
     },
     {
       "path": "tools/scalar_learning_check/actor_speed_sim.py",
@@ -9901,8 +9901,8 @@
     },
     {
       "path": "tools/test_learning_check.py",
-      "bytes": 14874,
-      "sha256": "88224b4b7de8d23a4ee45aa2813318e57a811bef98e4fb8d5a83db98cfef31b8"
+      "bytes": 16694,
+      "sha256": "69d57d07aef922ae0f19c742d05bf9eec48ba5b76761122541c2963ae30a544e"
     },
     {
       "path": "tools/test_scalar_exploration.py",
@@ -10593,6 +10593,71 @@
       "path": "tools/scalar_learning_check/analyze_cross_rtt_mask.py",
       "bytes": 4709,
       "sha256": "70803460c20b29e9c38c3879bf8e9f72e95323e61cd14ebb5950fbd1444f028d"
+    },
+    {
+      "path": "docs/SCALAR_NEXT_STEP_DECISION.md",
+      "bytes": 14647,
+      "sha256": "1ac5196e6016f506b60df1e9147d9e0a58e911d09ddcf0f3ae786c41fa394769"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/L2-A-budget-plan.json",
+      "bytes": 2457,
+      "sha256": "0d8c0dda897c33b0876a971200a535f7df32fd1803adc436a592001d034c3b2d"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/closure.json",
+      "bytes": 274,
+      "sha256": "e024ab9532b506db486a3c385e6f9802361791cec2b831dcb9156de51d44965e"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/probe-seven.json",
+      "bytes": 6501,
+      "sha256": "959b92bf4ede565897c11048f42bacd9cad0943c23bbcc7a56586feb22a5f44e"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/publication-provenance.json",
+      "bytes": 1418,
+      "sha256": "b703f70cc11749e54f7d159801bbd119b984c45b650ea42d760a4167a6ec875d"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/publication-validation.json",
+      "bytes": 542,
+      "sha256": "a84c3b062a1d7a67de4d7b8de82281801f5746daf3359ae64cfe116e7e385e5d"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/registration.json",
+      "bytes": 1409,
+      "sha256": "975925e942607a41304a6fa4115d864e96fe9c03140972bcfd3d9cca65ce701e"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/results/full70.json",
+      "bytes": 6753,
+      "sha256": "4bc5b9df3e0eb15ea449955b377e893c868190f5e7dc1a097e0179838225b082"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/results/newest7.json",
+      "bytes": 7060,
+      "sha256": "49fd1a1f900c2e01e265d24e34f79cf20e5c74911ba08fd55978b688c94ef6fc"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/review-results.json",
+      "bytes": 2125,
+      "sha256": "4a916d2d806e29da0020fd13d42542a849cf03b2a506c3081ea762c47f5fa80c"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/source-manifest.json",
+      "bytes": 278,
+      "sha256": "0646d2e6aededf4b1d781b7cb7a4b4e0d137aae324edd444cf090492d3053291"
+    },
+    {
+      "path": "evidence/rtt-separability-20261028/status.json",
+      "bytes": 591,
+      "sha256": "8bbfd3585e230e1617818f86f38cc33b0027d2616a86966739cd223264440b2c"
+    },
+    {
+      "path": "tools/scalar_learning_check/rtt_separability.py",
+      "bytes": 9926,
+      "sha256": "c0996a1f15a7d23474c9fdef5bded6c994864d805b6740c067729660c318458b"
     }
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "base_commit": "49714b203267a5479f4cb06961eb8b2b7e2a1453",
+  "executed_source_commit": "e3e5ca25e804dca8c77f49fbb47e3e4f6da98daf",
+  "executed_source_sha256": "c0996a1f15a7d23474c9fdef5bded6c994864d805b6740c067729660c318458b",
+  "source_identity": "Git source blob and deployed script SHA256 exactly equal",
+  "source_dataset": "Existing27,436-row pre-update factual replay, no new data or model file copied",
+  "jobs_completed": 2,
+  "TF_sessions": 0,
+  "TCP_runs": 0,
+  "candidate_checkpoints": 0,
+  "actor_servers_used": 0,
+  "learner_closure": "PASS",
+  "download": {
+    "bytes": 6588,
+    "sha256": "357a531c4cc36b7d2d444a618e12bac1b86e9742fa3825541435b2324895f0bd"
+  },
+  "online_L2_A": "NOT_RUN_AWAITING_BUDGET_AND_ACTOR_HOSTS",
+  "online_L2_B": "NOT_AUTHORIZED_OR_RUN",
+  "budget_plan": "DRAFT_NOT_DEPLOYED",
+  "attachment_sha256": {
+    "canopy-next-step-49714b2.patch": "141535a1de17bbd735e470336a5b9b1787ddb4e8bc172a841e26a67423dab641",
+    "next-step-decision-2026-10-28.md": "c64a500860a4c1b838b31f229e92b92c80d5d73ec2ffce559a112e5f5f99cb0a"
+  },
+  "limits": [
+    "Six actor-held-out folds, one source dataset; rows are temporally correlated, not independent network trials.",
+    "High RTT readout accuracy does not exclude local aliasing, hidden state or unused information in the learned critic.",
+    "Low LDA accuracy does not prove no information; worst-actor four-way result retained."
+  ]
+}

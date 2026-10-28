@@ -1,0 +1,322 @@
+{
+  "rows": 27220,
+  "features": 7,
+  "four_way": 0.7642015828136296,
+  "by_class": {
+    "penalized": {
+      "rows": 22384,
+      "four_way": 0.8116543694213914
+    },
+    "free": {
+      "rows": 4836,
+      "four_way": 0.68084179080413
+    }
+  },
+  "pairs": {
+    "20-200": 0.9955506681381258,
+    "20-50": 0.9851414445802279,
+    "50-100": 0.9575693218418981,
+    "100-200": 0.9125191589915926
+  },
+  "cross_validation": {
+    "status": "COMPLETE",
+    "balanced_accuracy": 0.7642015828136296,
+    "confusion": {
+      "20": {
+        "20": 6286,
+        "50": 86,
+        "100": 0,
+        "200": 12
+      },
+      "50": {
+        "20": 141,
+        "50": 4248,
+        "100": 1468,
+        "200": 997
+      },
+      "100": {
+        "20": 1,
+        "50": 581,
+        "100": 4619,
+        "200": 2077
+      },
+      "200": {
+        "20": 0,
+        "50": 44,
+        "100": 1178,
+        "200": 5482
+      }
+    },
+    "per_actor": {
+      "0": {
+        "rows": 1442,
+        "rtt": 20,
+        "accuracy": 0.9902912621359223
+      },
+      "1": {
+        "rows": 1356,
+        "rtt": 50,
+        "accuracy": 0.5589970501474927
+      },
+      "2": {
+        "rows": 1255,
+        "rtt": 100,
+        "accuracy": 0.08286852589641434
+      },
+      "3": {
+        "rows": 1105,
+        "rtt": 200,
+        "accuracy": 0.9565610859728507
+      },
+      "4": {
+        "rows": 977,
+        "rtt": 200,
+        "accuracy": 0.6591606960081884
+      },
+      "5": {
+        "rows": 879,
+        "rtt": 20,
+        "accuracy": 0.9920364050056882
+      },
+      "6": {
+        "rows": 1432,
+        "rtt": 50,
+        "accuracy": 0.4860335195530726
+      },
+      "7": {
+        "rows": 1298,
+        "rtt": 100,
+        "accuracy": 0.6910631741140215
+      },
+      "8": {
+        "rows": 1168,
+        "rtt": 100,
+        "accuracy": 0.7996575342465754
+      },
+      "9": {
+        "rows": 1020,
+        "rtt": 200,
+        "accuracy": 0.9676470588235294
+      },
+      "10": {
+        "rows": 915,
+        "rtt": 20,
+        "accuracy": 0.9693989071038251
+      },
+      "11": {
+        "rows": 779,
+        "rtt": 50,
+        "accuracy": 0.7406931964056482
+      },
+      "12": {
+        "rows": 1439,
+        "rtt": 50,
+        "accuracy": 0.5184155663655317
+      },
+      "13": {
+        "rows": 1344,
+        "rtt": 100,
+        "accuracy": 0.5751488095238095
+      },
+      "14": {
+        "rows": 1194,
+        "rtt": 200,
+        "accuracy": 0.9782244556113903
+      },
+      "15": {
+        "rows": 1101,
+        "rtt": 20,
+        "accuracy": 0.9772933696639419
+      },
+      "16": {
+        "rows": 1010,
+        "rtt": 20,
+        "accuracy": 0.9841584158415841
+      },
+      "17": {
+        "rows": 909,
+        "rtt": 50,
+        "accuracy": 0.8536853685368537
+      },
+      "18": {
+        "rows": 1411,
+        "rtt": 100,
+        "accuracy": 0.8072289156626506
+      },
+      "19": {
+        "rows": 1267,
+        "rtt": 200,
+        "accuracy": 0.9281767955801105
+      },
+      "20": {
+        "rows": 1141,
+        "rtt": 200,
+        "accuracy": 0.3943908851884312
+      },
+      "21": {
+        "rows": 1037,
+        "rtt": 20,
+        "accuracy": 0.9922854387656702
+      },
+      "22": {
+        "rows": 939,
+        "rtt": 50,
+        "accuracy": 0.7401490947816827
+      },
+      "23": {
+        "rows": 802,
+        "rtt": 100,
+        "accuracy": 0.9625935162094763
+      }
+    },
+    "per_fold": {
+      "0": {
+        "rows": 5158,
+        "balanced_accuracy": 0.64717948103817
+      },
+      "1": {
+        "rows": 4586,
+        "balanced_accuracy": 0.7070734486702427
+      },
+      "2": {
+        "rows": 3882,
+        "balanced_accuracy": 0.8693491741448945
+      },
+      "3": {
+        "rows": 5078,
+        "balanced_accuracy": 0.7622705502911684
+      },
+      "4": {
+        "rows": 4597,
+        "balanced_accuracy": 0.8933123739052997
+      },
+      "5": {
+        "rows": 3919,
+        "balanced_accuracy": 0.7723547337363151
+      }
+    }
+  },
+  "r20_r200_cross_validation": {
+    "status": "COMPLETE",
+    "balanced_accuracy": 0.9955506681381258,
+    "confusion": {
+      "20": {
+        "20": 6331,
+        "200": 53
+      },
+      "200": {
+        "20": 4,
+        "200": 6700
+      }
+    },
+    "per_actor": {
+      "0": {
+        "rows": 1442,
+        "rtt": 20,
+        "accuracy": 0.9895977808599168
+      },
+      "3": {
+        "rows": 1105,
+        "rtt": 200,
+        "accuracy": 1.0
+      },
+      "4": {
+        "rows": 977,
+        "rtt": 200,
+        "accuracy": 1.0
+      },
+      "5": {
+        "rows": 879,
+        "rtt": 20,
+        "accuracy": 0.9920364050056882
+      },
+      "9": {
+        "rows": 1020,
+        "rtt": 200,
+        "accuracy": 1.0
+      },
+      "10": {
+        "rows": 915,
+        "rtt": 20,
+        "accuracy": 0.9912568306010929
+      },
+      "14": {
+        "rows": 1194,
+        "rtt": 200,
+        "accuracy": 1.0
+      },
+      "15": {
+        "rows": 1101,
+        "rtt": 20,
+        "accuracy": 0.9854677565849228
+      },
+      "16": {
+        "rows": 1010,
+        "rtt": 20,
+        "accuracy": 0.995049504950495
+      },
+      "19": {
+        "rows": 1267,
+        "rtt": 200,
+        "accuracy": 0.9968429360694554
+      },
+      "20": {
+        "rows": 1141,
+        "rtt": 200,
+        "accuracy": 1.0
+      },
+      "21": {
+        "rows": 1037,
+        "rtt": 20,
+        "accuracy": 0.9980713596914176
+      }
+    },
+    "per_fold": {
+      "0": {
+        "rows": 2547,
+        "balanced_accuracy": 0.9947988904299584
+      },
+      "1": {
+        "rows": 1856,
+        "balanced_accuracy": 0.9960182025028441
+      },
+      "2": {
+        "rows": 1935,
+        "balanced_accuracy": 0.9956284153005465
+      },
+      "3": {
+        "rows": 2295,
+        "balanced_accuracy": 0.9927338782924614
+      },
+      "4": {
+        "rows": 2277,
+        "balanced_accuracy": 0.9959462205099752
+      },
+      "5": {
+        "rows": 2178,
+        "balanced_accuracy": 0.9990356798457087
+      }
+    }
+  },
+  "single_feature_four_way": {
+    "thr/max_bw": 0.30268695623899455,
+    "pacing/max_bw": 0.2785091691416698,
+    "5loss/max_bw": 0.23878669389104665,
+    "samples/cwnd": 0.8061011955518997,
+    "dt": 0.22380922277934615,
+    "minRTT/sRTT": 0.34534019333106325,
+    "delay": 0.3585330943781472
+  },
+  "newest_frame_four_way": 0.7642015828136296,
+  "knn_same_rtt_share": {
+    "20-penalized": 0.9853658536585367,
+    "20-free": 0.9529411764705884,
+    "50-penalized": 0.8414698162729659,
+    "50-free": 0.8029629629629629,
+    "100-penalized": 0.7764705882352941,
+    "100-free": 0.3536082474226804,
+    "200-penalized": 0.8261851015801355,
+    "200-free": 0.7672413793103449
+  },
+  "note": "Retrospective linear readout with train-fold-only scaling and held-out actors. High aggregate RTT accuracy does not exclude local aliasing, hidden state or critic representation failures; low accuracy does not prove absent information. kNN is descriptive and metric-dependent. No Q reliability, network performance or online-release decision is identified."
+}

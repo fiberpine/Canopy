@@ -1,3 +1,20 @@
+# 最新：完整70维RTT可分辨性前置已通过（2026-10-28）
+
+单learner只读NumPy检查完成：27,436条原首次更新前经验去除216条零填充历史，27,220条全部参与；没有TF、TCP、actor部署或新checkpoint。原输入/51保护模型/系统参数/原有IPC不变。
+
+| 观测 | R20对R200平衡准确率 | 四组平衡准确率 |
+|---|---:|---:|
+| 完整70维历史 | .999403 | .903451 |
+| 同数据最新7维 | .995551 | .764202 |
+
+原360探针结果也复现为.994444/.811111。使用按actor留出、训练fold标准化；保留逐actor/fold报告。70维四分类G12-R100 actor2仅.093227，故高均值不能排除局部混淆；R20/R200二分类最差actor为.993686，仍通过提案.9前置门。该分数不是critic可靠性或TCP性能证明。
+
+可以继续准备L2-A，**在线尚未启动，正在等待新的明确网络预算和四台actor开机**。建议60分钟总范围：仅L2-A，5万完整critic更新/0 actor更新，每2k快照，含准备/收尾和learner离线分析，不自动L2-B。另有30分钟只收集/收尾的范围可选；尚未取得任何一个新窗口的确认。
+
+[完整前置证据](../evidence/rtt-separability-20261028/review-results.json) · [70维逐actor结果](../evidence/rtt-separability-20261028/results/full70.json) · [原提案与审阅修正](SCALAR_NEXT_STEP_DECISION.md) · [明确标为未执行的预算草案](../evidence/rtt-separability-20261028/L2-A-budget-plan.json)。下方跨RTT损失等为历史阶段。
+
+---
+
 # 最新：跨RTT损失屏蔽真实TF对照完成（2026-10-28）
 
 **已到需要与Claude定下一步方向的节点；不自动启动L2-A/B。** 本轮单learner、900秒上限内完成：3个100-update pilot子臂，两个sampler seed各3个8000-update主臂，及两个8000-update R200-only补充臂；共11次内存拟合、64,300完整critic迭代/128,600优化器操作、actor优化0。总约487.45秒，0新TCP/TF Server/候选checkpoint。仍为PARTIAL，没有新健康基座或网络/CPU收益。
