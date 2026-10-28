@@ -33,5 +33,8 @@ class MaskInputsTest(unittest.TestCase):
     def test_unknown_arm_cannot_silently_become_full(self):
         with self.assertRaises(KeyError):mask.loss_weights([200],'unknown')
 
+    def test_own_only_has_no_other_rtt_critic_loss(self):
+        np.testing.assert_array_equal(mask.loss_weights([20,50,100,200],'own_only').ravel(),[0,0,0,1])
+
 
 if __name__=='__main__':unittest.main()

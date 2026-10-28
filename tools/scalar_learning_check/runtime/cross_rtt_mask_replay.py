@@ -21,6 +21,8 @@ def loss_weights(rtts, arm):
     rtts = np.asarray(rtts)
     if arm in ('full', 'full_repeat', 'stock_full'):
         return np.ones((len(rtts), 1), np.float32)
+    if arm == 'own_only':
+        return (rtts == 200).astype(np.float32).reshape(-1,1)
     removed = {'mask_short': (20, 50), 'mask_mid': (50, 100)}[arm]
     return (~np.isin(rtts, removed)).astype(np.float32).reshape(-1, 1)
 
@@ -34,7 +36,8 @@ def balanced_indices(pools, call, rng):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--mode', choices=('pilot', 'formal'), required=True)
+    ap.add_argument('--mode', choices=('pilot', 'formal', 'own'), required=True)
+    ap.add_argument('--paired-reference')
     ap.add_argument('--seed', type=int, default=3)
     ap.add_argument('--updates', type=int, default=8000)
     ap.add_argument('--output', required=True)
@@ -131,7 +134,8 @@ def main():
                 for r in (20,50,100,200)}
     results = {}
     started = time.time()
-    arms = ('full','full_repeat','stock_full') if args.mode == 'pilot' else ('full','mask_short','mask_mid')
+    arms = (('full','full_repeat','stock_full') if args.mode == 'pilot' else
+            ('own_only',) if args.mode == 'own' else ('full','mask_short','mask_mid'))
     for arm in arms:
         saver.restore(sess,str(checkpoint))
         assert all(np.array_equal(x,y) for x,y in zip(initial,sess.run(original)))
@@ -192,6 +196,14 @@ def main():
                            retained_rows=retained_rows,retained_rows_by_RTT=rtt_rows,
                            maximum_allone_stock_gradient_error=max_grad_error)
     first = results[arms[0]]
+    if args.mode == 'own':
+        assert args.paired_reference, 'Own-only intervention requires completed matched full arm'
+        reference = json.loads(pathlib.Path(args.paired_reference).read_text())
+        assert reference['sampler_seed'] == args.seed and reference['updates'] == args.updates
+        baseline = reference['arms']['full']
+        assert first['paired_hashes'] == baseline['paired_hashes']
+        assert [r['BN_sha256'] for r in first['records']] == [r['BN_sha256'] for r in baseline['records']]
+        assert [r['actor_policy_sha256'] for r in first['records']] == [r['actor_policy_sha256'] for r in baseline['records']]
     for arm in arms[1:]:
         other = results[arm]
         assert first['paired_hashes'] == other['paired_hashes'], 'Unpaired inputs or target-policy path'

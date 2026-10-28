@@ -1,0 +1,23 @@
+{
+  "status": "DESIGN_AMENDMENT_BEFORE_FINAL_COMPARISON_REVIEW",
+  "reason": "Both primary masks retain another RTT group; add R200-only critic-loss arm to test necessity of all other-RTT critic-loss terms",
+  "selection": "Chosen from design logic, not a favorable observed final outcome; primary3-arm results retained",
+  "max_wall_budget_seconds_unchanged": 900,
+  "jobs": [
+    {
+      "id": "own-s3",
+      "seed": 3,
+      "updates": 8000,
+      "max_seconds": 130
+    },
+    {
+      "id": "own-s4",
+      "seed": 4,
+      "updates": 8000,
+      "max_seconds": 130
+    }
+  ],
+  "eligibility": "After primary COMPLETE and at least270 seconds remain before the original absolute deadline",
+  "controls": "Same frozen initial tensors, batch/noise/R200/BN/actor-policy hashes must match completed full reference; no renormalization; non-R200 critic loss weights zero",
+  "limits": "All-RTT actor BN path still exists. This tests necessity of other-RTT critic-loss terms, not absence of all other-RTT information."
+}
