@@ -1,0 +1,51 @@
+{
+  "status": "REGISTERED_FINITE_OFFLINE",
+  "base_commit": "3b522bdade5400f2a92ab5e55451160180dc6af5",
+  "max_wall_seconds": 900,
+  "mode": "one learner, historical27,436-row replay, no TCP/TF Server/checkpoint writes",
+  "jobs": [
+    {
+      "id": "pilot",
+      "mode": "pilot",
+      "seed": 3,
+      "updates": 100,
+      "max_seconds": 90
+    },
+    {
+      "id": "paired-s3",
+      "mode": "formal",
+      "seed": 3,
+      "updates": 8000,
+      "max_seconds": 360
+    },
+    {
+      "id": "paired-s4",
+      "mode": "formal",
+      "seed": 4,
+      "updates": 8000,
+      "max_seconds": 360
+    }
+  ],
+  "arms": {
+    "full": "all losses",
+    "mask_short": "zeroR20/R50 loss only",
+    "mask_mid": "zeroR50/R100 loss only; equal actor-group count control"
+  },
+  "common_controls": [
+    "all original96 tensors restored per arm",
+    "full balanced512 batches; R200 draws and denominator unchanged",
+    "same external Gaussian smoothing draw stream per seed",
+    "same evolving actor BN; actor weights/Adam never optimized",
+    "fixed composition of historical target duplicates; critic2 twice; targetactorBN follows001"
+  ],
+  "acceptance": {
+    "pilot": "A/A bit-exact; all-one weighted vs stock complete tensors bit-exact; gradient maxdelta<=1e-6",
+    "formal": "batch/R200/noise/targetaction hashes and BN path match across arms; ledger2*updates; finite values; immutable source checks"
+  },
+  "hypotheses": {
+    "primary": "If short-RTT loss contributes to earlyR200 sign, masking it changes fixed-input R200 dQ/da relative to paired full arm; no direction presumed",
+    "scope": "Matched-mass group control tests specificity imperfectly; masking affects optimizer/targets. No unique source attribution or Q safety claim",
+    "stop": "No automatic online L2; stop on failed checks or after all jobs. Data-dependent additional jobs require a separate decision"
+  },
+  "retry": "No automatic failed-job retry"
+}
