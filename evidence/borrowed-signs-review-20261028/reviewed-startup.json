@@ -1,0 +1,352 @@
+{
+  "runs": {
+    "S-R5-s3": {
+      "final_update": 4000,
+      "release_update": 3000,
+      "probes": 384,
+      "first_transition": {
+        "n": 24,
+        "mean_shift": -0.23840447763601938,
+        "pacing_range": [
+          3.7928738594055176,
+          10.0
+        ],
+        "shift_on_pacing_slope": -0.025813513968081916,
+        "shift_on_pacing_intercept": -0.07372121980612874,
+        "shift_pacing_corr": -0.9992365455535323,
+        "mean_shift_by_rtt": {
+          "20": -0.23766477406024933,
+          "50": -0.25081093112627667,
+          "100": -0.22490471849838892,
+          "200": -0.24023748685916266
+        },
+        "release_dq1_mean": 0.05455060427387556,
+        "release_dq1_positive": 1.0,
+        "share_of_total_abs_shift": 0.3092530300590657
+      },
+      "remaining": {
+        "20": {
+          "penalized": {
+            "n": 73,
+            "mean_shift": -0.08574279938658623,
+            "release_dq1": -0.352877519004149,
+            "final_dq1": -0.8423331937153046
+          },
+          "free": {
+            "n": 17,
+            "mean_shift": -0.11529945100055021,
+            "release_dq1": -0.33395961146144304,
+            "final_dq1": -0.602529698434998
+          },
+          "shift_pacing_corr": -0.3244546165983389
+        },
+        "50": {
+          "penalized": {
+            "n": 65,
+            "mean_shift": -0.02100600216609354,
+            "release_dq1": 0.05791598169240528,
+            "final_dq1": -0.008222336579973882
+          },
+          "free": {
+            "n": 25,
+            "mean_shift": -0.03075863901525736,
+            "release_dq1": 0.0830379879847169,
+            "final_dq1": 0.17171795040369034
+          },
+          "shift_pacing_corr": -0.04962934655853082
+        },
+        "100": {
+          "penalized": {
+            "n": 77,
+            "mean_shift": 0.003697595794914992,
+            "release_dq1": 0.1427360764378077,
+            "final_dq1": 0.16590192214912408
+          },
+          "free": {
+            "n": 13,
+            "mean_shift": 0.004221958824648307,
+            "release_dq1": 0.171829329087184,
+            "final_dq1": 0.29299955184643084
+          },
+          "shift_pacing_corr": 0.023740643364149827
+        },
+        "200": {
+          "penalized": {
+            "n": 84,
+            "mean_shift": 0.008930521512714526,
+            "release_dq1": 0.14978698565669002,
+            "final_dq1": 0.14711784564756922
+          },
+          "free": {
+            "n": 6,
+            "mean_shift": 0.03482582109669844,
+            "release_dq1": 0.23140802482763925,
+            "final_dq1": 0.30706511437892914
+          },
+          "shift_pacing_corr": 0.487969071956416
+        }
+      },
+      "in_distribution_startup": {
+        "n": 10,
+        "mean_shift": -0.0032969072461128237,
+        "ordinals": [
+          65,
+          74,
+          76,
+          80,
+          85,
+          419,
+          577,
+          678,
+          868,
+          1447
+        ]
+      },
+      "top5pct": {
+        "n": 20,
+        "first_transitions": 19,
+        "negative_R20_R50_penalized": 1
+      },
+      "top5pct_without_first": {
+        "n": 18,
+        "negative_R20_R50_penalized": 10,
+        "negative_R20_any_class": 17
+      },
+      "interpretation": "Descriptive associations on legacy first_updates_replay probes; first probe per actor is a first transition only for that original full-start probe design. Correlation and a release-time gradient do not identify the cause of later policy changes. Neither helpful startup compensation nor harmful extrapolation is proved."
+    },
+    "S-R5-s4": {
+      "final_update": 4000,
+      "release_update": 3000,
+      "probes": 384,
+      "first_transition": {
+        "n": 24,
+        "mean_shift": -0.31593279105921585,
+        "pacing_range": [
+          3.7928738594055176,
+          10.0
+        ],
+        "shift_on_pacing_slope": -0.034761906542759166,
+        "shift_on_pacing_intercept": -0.09416120177004379,
+        "shift_pacing_corr": -0.9997297701084863,
+        "mean_shift_by_rtt": {
+          "20": -0.31431501110394794,
+          "50": -0.3331533223390579,
+          "100": -0.29753773659467697,
+          "200": -0.3187250941991806
+        },
+        "release_dq1_mean": -0.015617483448295388,
+        "release_dq1_positive": 0.2916666666666667,
+        "share_of_total_abs_shift": 0.3428238940391631
+      },
+      "remaining": {
+        "20": {
+          "penalized": {
+            "n": 73,
+            "mean_shift": -0.09691668230376832,
+            "release_dq1": -0.3984179729468202,
+            "final_dq1": -0.8165516728815967
+          },
+          "free": {
+            "n": 17,
+            "mean_shift": -0.11949501098955378,
+            "release_dq1": -0.3960713866878958,
+            "final_dq1": -0.5277783914523966
+          },
+          "shift_pacing_corr": -0.3785415091636832
+        },
+        "50": {
+          "penalized": {
+            "n": 65,
+            "mean_shift": -0.034085156453343535,
+            "release_dq1": 0.03252680123254182,
+            "final_dq1": -0.035296932937434085
+          },
+          "free": {
+            "n": 25,
+            "mean_shift": -0.035962740983814,
+            "release_dq1": 0.09087563440203666,
+            "final_dq1": 0.2603191564977169
+          },
+          "shift_pacing_corr": -0.27302133959805946
+        },
+        "100": {
+          "penalized": {
+            "n": 77,
+            "mean_shift": -0.011445064318378443,
+            "release_dq1": 0.10742426387868918,
+            "final_dq1": 0.12927240129656992
+          },
+          "free": {
+            "n": 13,
+            "mean_shift": -0.007464718736278323,
+            "release_dq1": 0.14860716748696107,
+            "final_dq1": 0.2693694434486903
+          },
+          "shift_pacing_corr": -0.13420870205346608
+        },
+        "200": {
+          "penalized": {
+            "n": 84,
+            "mean_shift": -0.00876282426040797,
+            "release_dq1": 0.1143824424417246,
+            "final_dq1": 0.10637690090308231
+          },
+          "free": {
+            "n": 6,
+            "mean_shift": -0.01610566070303321,
+            "release_dq1": 0.21514175335566202,
+            "final_dq1": 0.2785121997197469
+          },
+          "shift_pacing_corr": -0.3083957256031271
+        }
+      },
+      "in_distribution_startup": {
+        "n": 10,
+        "mean_shift": -0.0388376840390265,
+        "ordinals": [
+          65,
+          74,
+          76,
+          80,
+          85,
+          419,
+          577,
+          678,
+          868,
+          1447
+        ]
+      },
+      "top5pct": {
+        "n": 20,
+        "first_transitions": 19,
+        "negative_R20_R50_penalized": 1
+      },
+      "top5pct_without_first": {
+        "n": 18,
+        "negative_R20_R50_penalized": 12,
+        "negative_R20_any_class": 17
+      },
+      "interpretation": "Descriptive associations on legacy first_updates_replay probes; first probe per actor is a first transition only for that original full-start probe design. Correlation and a release-time gradient do not identify the cause of later policy changes. Neither helpful startup compensation nor harmful extrapolation is proved."
+    },
+    "S-R5-s5": {
+      "final_update": 4000,
+      "release_update": 3000,
+      "probes": 384,
+      "first_transition": {
+        "n": 24,
+        "mean_shift": -0.24293324227134386,
+        "pacing_range": [
+          3.7928738594055176,
+          10.0
+        ],
+        "shift_on_pacing_slope": -0.027343885777731926,
+        "shift_on_pacing_intercept": -0.0684866250005102,
+        "shift_pacing_corr": -0.9993268546693949,
+        "mean_shift_by_rtt": {
+          "20": -0.24220884342988333,
+          "50": -0.25630969057480496,
+          "100": -0.22855699559052786,
+          "200": -0.24465743949015936
+        },
+        "release_dq1_mean": -0.005002099943036835,
+        "release_dq1_positive": 0.5,
+        "share_of_total_abs_shift": 0.30974451157843325
+      },
+      "remaining": {
+        "20": {
+          "penalized": {
+            "n": 73,
+            "mean_shift": -0.08309851229599077,
+            "release_dq1": -0.3366825971752405,
+            "final_dq1": -0.7820947514209029
+          },
+          "free": {
+            "n": 17,
+            "mean_shift": -0.11399696153752945,
+            "release_dq1": -0.3589448622044395,
+            "final_dq1": -0.5771278958110249
+          },
+          "shift_pacing_corr": -0.3629854055150335
+        },
+        "50": {
+          "penalized": {
+            "n": 65,
+            "mean_shift": -0.01600770686681454,
+            "release_dq1": 0.07618406685069204,
+            "final_dq1": 0.079467384034517
+          },
+          "free": {
+            "n": 25,
+            "mean_shift": -0.027129039261490108,
+            "release_dq1": 0.06936206448823214,
+            "final_dq1": 0.2868444353342056
+          },
+          "shift_pacing_corr": -0.09884618357702486
+        },
+        "100": {
+          "penalized": {
+            "n": 77,
+            "mean_shift": 0.009160997793562227,
+            "release_dq1": 0.14985683676484343,
+            "final_dq1": 0.21683784651678878
+          },
+          "free": {
+            "n": 13,
+            "mean_shift": 0.009052719508942503,
+            "release_dq1": 0.1715693766107926,
+            "final_dq1": 0.36262682997263396
+          },
+          "shift_pacing_corr": -0.018011704147949018
+        },
+        "200": {
+          "penalized": {
+            "n": 84,
+            "mean_shift": 0.015159351191306044,
+            "release_dq1": 0.1575510956879173,
+            "final_dq1": 0.2035298165643499
+          },
+          "free": {
+            "n": 6,
+            "mean_shift": 0.04078329664965471,
+            "release_dq1": 0.22798808167378107,
+            "final_dq1": 0.31540916363398236
+          },
+          "shift_pacing_corr": 0.4668289472414874
+        }
+      },
+      "in_distribution_startup": {
+        "n": 10,
+        "mean_shift": 8.684881031513214e-05,
+        "ordinals": [
+          65,
+          74,
+          76,
+          80,
+          85,
+          419,
+          577,
+          678,
+          868,
+          1447
+        ]
+      },
+      "top5pct": {
+        "n": 20,
+        "first_transitions": 19,
+        "negative_R20_R50_penalized": 1
+      },
+      "top5pct_without_first": {
+        "n": 18,
+        "negative_R20_R50_penalized": 10,
+        "negative_R20_any_class": 17
+      },
+      "interpretation": "Descriptive associations on legacy first_updates_replay probes; first probe per actor is a first transition only for that original full-start probe design. Correlation and a release-time gradient do not identify the cause of later policy changes. Neither helpful startup compensation nor harmful extrapolation is proved."
+    }
+  },
+  "first_transition_shift_pacing_corr": [
+    -0.9992365455535323,
+    -0.9997297701084863,
+    -0.9993268546693949
+  ],
+  "note": "Fixed historical probes; associations, not proof of beneficial or harmful network behavior."
+}

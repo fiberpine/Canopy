@@ -33,6 +33,7 @@ Python 3.6+.
 import argparse
 import csv
 import json
+import math
 import pathlib
 import sys
 
@@ -100,7 +101,34 @@ def _ols(x, Y, segments=None, hac_lags=0):
     return b, se
 
 
-def response(series, max_lag=40, gamma=GAMMA, cls_value=None):
+VISIBLE_LAMBDAS = (2, 4, 6, 8, 10, 15, 20, 25, 30, 40)
+
+
+def survival(lam, m_max):
+    """Pr[N >= m], N ~ Poisson(lam), m = 0..m_max (same as value_horizon.survival; inlined so this file runs alone)."""
+    m = np.arange(m_max + 1)
+    if lam <= 0:
+        return (m == 0).astype(float)
+    pmf = np.exp(-lam + m * np.log(lam) - np.array([math.lgamma(k + 1) for k in m]))
+    return np.clip(1.0 - np.concatenate([[0.0], np.cumsum(pmf)[:-1]]), 0.0, 1.0)
+
+
+def visible_weights(lam, max_lag, gamma=GAMMA):
+    """Exploratory Poisson weighting of measured innovation responses; not a neural-visibility bound.
+
+    one-step:   sum_k beta_k S(k)                       (S = Pr[Poisson(lam) >= k])
+    persistent: sum_j gamma^j S(j) cum_j = sum_k beta_k sum_{j>=k} gamma^j S(j)   (linear-superposition heuristic)
+    Rewards beyond max_lag are dropped. S(max_lag + 1) is Poisson tail mass,
+    not a bound on omitted reward/response error without an additional magnitude bound.
+    """
+    S = survival(lam, max_lag + 1)
+    one = S[:max_lag + 1]
+    disc = gamma ** np.arange(max_lag + 1) * one
+    per = np.cumsum(disc[::-1])[::-1]
+    return one, per, float(S[max_lag + 1])
+
+
+def response(series, max_lag=40, gamma=GAMMA, cls_value=None, lambdas=VISIBLE_LAMBDAS):
     """series: (o, r) or (o, r, cls) arrays per connection segment. Returns None if no rows qualify."""
     x, Y, segments = _stack(series, max_lag, cls_value)
     if x is None or len(x) < 10:
@@ -114,14 +142,26 @@ def response(series, max_lag=40, gamma=GAMMA, cls_value=None):
         for k in range(J + 1):
             W[k, c] = sum(gamma ** j for j in range(k, J + 1))   # r_{t+k} counts in every cum_j with k <= j <= J
     per_b, per_se = _ols(x, Y @ W, segments, hac_lags)
+    vis = [visible_weights(lam, max_lag, gamma) for lam in lambdas]
+    v1_b, v1_se = _ols(x, Y @ np.stack([v[0] for v in vis], axis=1), segments, hac_lags)
+    vp_b, vp_se = _ols(x, Y @ np.stack([v[1] for v in vis], axis=1), segments, hac_lags)
+    key = lambda lam: ('%g' % lam)
     return dict(samples=int(len(x)), offset_sd=float(np.std(x)), beta=[float(v) for v in beta], se=[float(v) for v in se],
                 cumulative={str(J): float(v) for J, v in zip(lags, cum_b)},
                 cumulative_se={str(J): float(v) for J, v in zip(lags, cum_se)},
                 discounted_persistent={str(J): float(v) for J, v in zip(lags, per_b)},
                 discounted_persistent_se={str(J): float(v) for J, v in zip(lags, per_se)},
+                visible_onestep={key(l): float(v) for l, v in zip(lambdas, v1_b)},
+                visible_onestep_se={key(l): float(v) for l, v in zip(lambdas, v1_se)},
+                visible_persistent={key(l): float(v) for l, v in zip(lambdas, vp_b)},
+                visible_persistent_se={key(l): float(v) for l, v in zip(lambdas, vp_se)},
+                visible_truncated_mass={key(l): v[2] for l, v in zip(lambdas, vis)},
                 standard_errors='Bartlett HAC with connection/segment fixed intercepts', hac_lags=hac_lags,
                 interpretation='Exploration-innovation response under the observed feedback/compensation policy. '
-                               'Persistent-action extrapolation is heuristic, not an identified Q gradient.')
+                               'Persistent-action extrapolation is heuristic, not an identified Q gradient. '
+                               'visible_* are Poisson-weighted descriptive response summaries. Fitted lambda does '
+                               'not identify a neural critic horizon or exclude within-class gradient learning. '
+                               'The truncated Poisson mass is not a response-error bound.')
 
 
 def split_response(series, max_lag=40):
@@ -205,8 +245,17 @@ def self_test():
     assert abs(res['cumulative']['40'] - sum(res['beta'])) < 1e-9          # sum of betas == beta of the sum
     sr = split_response(split, 10)
     assert abs(sr['free']['beta'][1] - .05) < .01 and abs(sr['penalized']['beta'][1] + .05) < .01, (sr['free']['beta'][1], sr['penalized']['beta'][1])
+    # visible responses are exact linear functionals of the betas (same regression, summed outcomes)
+    beta, cum = np.array(res['beta']), np.cumsum(res['beta'])
+    for lam in (2, 15):
+        S = survival(lam, 40)
+        assert abs(res['visible_onestep']['%g' % lam] - float(beta @ S)) < 1e-9
+        assert abs(res['visible_persistent']['%g' % lam] - float((GAMMA ** np.arange(41) * S) @ cum)) < 1e-9
+    # a short horizon sees the gain at lag 1 but not the cost at lags 10-19; a long one sees both
+    assert res['visible_onestep']['2'] > 0 and res['visible_onestep']['20'] < 0, res['visible_onestep']
     return dict(beta1=res['beta'][1], beta15=res['beta'][15], cumulative=res['cumulative'],
-                split_beta1=dict(free=sr['free']['beta'][1], penalized=sr['penalized']['beta'][1]))
+                split_beta1=dict(free=sr['free']['beta'][1], penalized=sr['penalized']['beta'][1]),
+                visible_onestep={k: res['visible_onestep'][k] for k in ('2', '20')})
 
 
 def main():

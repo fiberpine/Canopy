@@ -1,0 +1,34 @@
+{
+  "status": "PASS_LOCAL_REVIEW",
+  "tests": {
+    "tools": 89,
+    "e2_handover": 5,
+    "scalar_audit": 7,
+    "total": 101
+  },
+  "python36_syntax": [
+    "tools/scalar_learning_check/borrowed_signs.py",
+    "tools/scalar_learning_check/exploration_response.py",
+    "tools/scalar_learning_check/runtime/snapshot_probe.py",
+    "tools/scalar_learning_check/startup_extrapolation.py",
+    "tools/test_learning_check.py"
+  ],
+  "recomputation": "EXACT_REVIEWED_JSON",
+  "source_sha256": {
+    "tools/scalar_learning_check/borrowed_signs.py": "3f1cfd2444fa7a0831e97e1dcdb062538d6ad8eff96b52dda2862a7f540a9bb9",
+    "tools/scalar_learning_check/exploration_response.py": "d51b9ffcef113bdd076454c34cbad5f24421f69c4e8f913c6ddf0f5087569129",
+    "tools/scalar_learning_check/runtime/snapshot_probe.py": "31ec9ccfd0703be262228058b595bc1e4722a4e0030cf52ced888aaea5e2aebe",
+    "tools/scalar_learning_check/startup_extrapolation.py": "a833626c9fece94c747af4bfc64aa004a80758af06da4c38cd6ff7bf1e582619",
+    "tools/test_learning_check.py": "88224b4b7de8d23a4ee45aa2813318e57a811bef98e4fb8d5a83db98cfef31b8"
+  },
+  "scope": "Existing public JSON and local NumPy/stdlib only",
+  "experiment_server_connections": 0,
+  "new_TF_sessions": 0,
+  "new_TCP_runs": 0,
+  "new_models": 0,
+  "snapshot_probe_TF_status": "NOT_RUN",
+  "online_L2_A": "NOT_RUN",
+  "online_L2_B": "NOT_RUN",
+  "release_token_controller": "NOT_IMPLEMENTED",
+  "sample_replay": "Algorithmic reconstruction in local Python, not a historical capture"
+}

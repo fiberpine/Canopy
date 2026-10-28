@@ -1,3 +1,5 @@
+> **最新：2026-10-28借来符号与启动假说已本机审阅。** 新门33k和-.999相关可复算，但不是已证梯度归因或在线安全条件。首转移状态在replay内，不能据稀少和相关性排除启动补偿。原始新提案与修正见[SCALAR_BORROWED_SIGNS_AND_STARTUP.md](SCALAR_BORROWED_SIGNS_AND_STARTUP.md)；L2-A/B均未启动。
+
 > **2026-10-28真实TF执行结果（最新优先）。** H1/H2/E1R/S和10-update pilot已在单learner完成，0新TCP/候选checkpoint。完整数字与边界见[最新研究交接](RESEARCH_REVIEW_BRIEF.md)及[分析JSON](../evidence/critic-horizon-20261028/final-analysis.json)。H1的R200排队态在6k—7k已转负，早于原12k—35k预测带；S三重复只有1/20最大偏移状态符合原≥80%预测，其余19个为连接首条自由态。原预测失败保留；启动补偿是待验证解释，不能据负号判错。H1原静态门9k即能通过，不构成在线安全证明。L2、BC、分组放行均NOT_RUN。
 >
 > 下方“真实TF尚未执行”是执行前审阅记录；随后原提案仅作预测来源，不是当前状态或执行指令。

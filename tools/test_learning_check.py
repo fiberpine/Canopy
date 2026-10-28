@@ -178,6 +178,120 @@ class ExplorationResponseTest(unittest.TestCase):
                 self.assertGreater(out['by_rtt'][r]['free']['beta'][1], 0)
                 self.assertLess(out['by_rtt'][r]['penalized']['beta'][1], 0)
 
+    def test_visible_response_is_a_linear_functional_of_the_betas(self):
+        import numpy as np
+        import exploration_response as er
+        rng = np.random.RandomState(5)
+        series = []
+        for _ in range(4):
+            o = .14 * rng.randn(1500)
+            r = .7 + .02 * rng.randn(1500)
+            r[3:] -= .1 * o[:-3]
+            r[25:] += .05 * o[:-25]
+            series.append((o, r))
+        out = er.response(series, max_lag=40)
+        beta = np.array(out['beta'])
+        for lam in ('2', '20'):
+            S = er.survival(float(lam), 40)
+            self.assertAlmostEqual(out['visible_onestep'][lam], float(beta @ S), places=9)
+        self.assertLess(out['visible_onestep']['2'], 0)          # short horizon: only the lag-3 cost
+        self.assertGreater(out['visible_onestep']['30'], out['visible_onestep']['4'])   # long horizon also sees the lag-25 gain
+        self.assertLess(out['visible_truncated_mass']['20'], .01)
+
+
+EVIDENCE = ROOT / 'evidence/critic-horizon-20261028'
+
+
+class BorrowedSignsTest(unittest.TestCase):
+    def test_missing_twin_or_lambda_cannot_pass_literal_gate(self):
+        import copy
+        import json
+        import borrowed_signs as bs
+        e1 = json.loads((EVIDENCE / 'results/E1R-response.json').read_text())
+        h1 = json.loads((EVIDENCE / 'results/H1.json').read_text())
+        missing_twin = copy.deepcopy(h1)
+        for rec in missing_twin['result']['records']:
+            rec.pop('twin_agree_by_rtt_class')
+        out = bs.analyze(missing_twin, e1)
+        self.assertIsNone(out['proposed_gate_first_pass'])
+        self.assertFalse(out['deployment_ready'])
+        missing_lambda = copy.deepcopy(h1)
+        for rec in missing_lambda['result']['records']:
+            rec['fitted_lambda'] = None
+        self.assertIsNone(bs.analyze(missing_lambda, e1)['proposed_gate_first_pass'])
+
+    def test_duplicate_records_are_not_five_consecutive_checks(self):
+        import json
+        import borrowed_signs as bs
+        e1 = json.loads((EVIDENCE / 'results/E1R-response.json').read_text())
+        h1 = json.loads((EVIDENCE / 'results/H1.json').read_text())
+        h1['result']['records'] = [h1['result']['records'][-1]] * 5
+        with self.assertRaises(ValueError):
+            bs.analyze(h1, e1)
+
+    def test_self_test(self):
+        import borrowed_signs as bs
+        self.assertEqual(bs.self_test()['gate'], 25000)
+
+    def test_published_r200_penalized_sign_precedes_its_own_visible_cost(self):
+        import json
+        import borrowed_signs as bs
+        e1 = json.loads((EVIDENCE / 'results/E1R-response.json').read_text())
+        h1 = bs.analyze(json.loads((EVIDENCE / 'results/H1.json').read_text()), e1)
+        cell = h1['cells']['200-penalized']
+        self.assertEqual((cell['lag_structure']['onset'], cell['lag_structure']['strongest_lag']), (23, 24))
+        runs = {r['status']: r for r in cell['status_runs']}
+        self.assertEqual(runs['not_visible_agree']['first_update'], 7000)   # negative while lag 23 is invisible
+        self.assertEqual(runs['grounded_agree']['first_update'], 27000)
+        self.assertEqual(h1['required_lambda'], 24)
+        self.assertEqual(h1['proposed_gate_first_pass'], 33000)
+        h2 = bs.analyze(json.loads((EVIDENCE / 'results/H2.json').read_text()), e1)
+        self.assertEqual({r['status']: r for r in h2['cells']['200-penalized']['status_runs']}['grounded_agree']['first_update'], 6000)
+
+
+class StartupExtrapolationTest(unittest.TestCase):
+    def test_top_five_percent_uses_original_ceiling_rule(self):
+        import startup_extrapolation as se
+        self.assertEqual(se.self_test()['top5pct']['n'], 20)
+
+    def test_self_test(self):
+        import startup_extrapolation as se
+        self.assertLess(se.self_test()['first_transition']['shift_pacing_corr'], -.95)
+
+    def test_published_first_transition_shift_is_one_linear_direction(self):
+        import json
+        import startup_extrapolation as se
+        per = json.loads((ROOT / 'evidence/scalar-first-updates-20261027/collected/learner/audit/input-proof.json').read_text())['per_actor']
+        out = se.analyze([str(EVIDENCE / 'results' / ('S-R5-s%d.json' % s)) for s in (3, 4, 5)], per)
+        self.assertTrue(all(c < -.99 for c in out['first_transition_shift_pacing_corr']), out['first_transition_shift_pacing_corr'])
+        for run in out['runs'].values():
+            self.assertGreaterEqual(run['top5pct']['first_transitions'], 18)
+            self.assertGreaterEqual(run['top5pct_without_first']['negative_R20_any_class'], 15)
+
+
+class SnapshotMetadataTest(unittest.TestCase):
+    """Pure metadata checks extracted from the prototype; these do not validate TF execution."""
+    def load_counter_function(self):
+        import ast
+        tree = ast.parse((ROOT / 'tools/scalar_learning_check/runtime/snapshot_probe.py').read_text())
+        module = ast.parse('')
+        module.body = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == 'updates_of']
+        scope = dict(pathlib=pathlib)
+        exec(compile(module, 'snapshot_counter_check', 'exec'), scope)
+        return scope['updates_of']
+
+    def test_checkpoint_experience_number_is_not_update_number(self):
+        f = self.load_counter_function()
+        with self.assertRaises(ValueError):
+            f('/tmp/step-412288', None)
+        self.assertEqual(f('/tmp/step-412288', {'step-412288': 40000})[0], 40000)
+
+    def test_bad_counter_metadata_is_rejected(self):
+        f = self.load_counter_function()
+        for value in (-1, 1.5, True):
+            with self.assertRaises(ValueError):
+                f('/tmp/step-1', {'step-1': value})
+
 
 if __name__ == '__main__':
     unittest.main()

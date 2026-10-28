@@ -1,4 +1,33 @@
-# 最新：critic视野与逐状态检查已完成（2026-10-28）
+# 最新：借来符号与启动假说的本机审阅（2026-10-28）
+
+已在本机复算，未连接云端、运行TF或启动L2-A/B。模型标签和33k字面门可复现，但没有识别跨组梯度来源或排除启动补偿。审阅修正见[第二轮检查解读](../../docs/SCALAR_BORROWED_SIGNS_AND_STARTUP.md)。下面的复算只读已发布证据，不需要TF、不启动TCP、不写checkpoint：
+
+```sh
+python3 tools/scalar_learning_check/borrowed_signs.py --critic evidence/critic-horizon-20261028/results/H1.json \
+  --e1 evidence/critic-horizon-20261028/results/E1R-response.json          # 同样可读H2.json
+python3 tools/scalar_learning_check/startup_extrapolation.py \
+  --s-json evidence/critic-horizon-20261028/results/S-R5-s3.json evidence/critic-horizon-20261028/results/S-R5-s4.json \
+           evidence/critic-horizon-20261028/results/S-R5-s5.json \
+  --per-actor evidence/scalar-first-updates-20261027/collected/learner/audit/input-proof.json
+```
+
+| 文件 | 作用 | 依赖 |
+|---|---|---|
+| `borrowed_signs.py` | 逐RTT×延迟类比较critic梯度符号与该类自身的探索响应：显著滞后、自身后果在当前λ下的覆盖率、借来/部分/落地状态，以及提议门（λ≥最远显著滞后、显著格子连续K次同号、双critic同号≥0.9）的审计。门审计不是放行授权 | NumPy；critic逐次JSON＋E1 JSON |
+| `startup_extrapolation.py` | 把first_updates_replay v3的逐状态偏移分成连接首条（零填充历史）与其余；给出首条偏移对pacing/max_bw的线性拟合、放行点critic查询和前5%构成；不证明梯度来源或补偿无效 | NumPy |
+| `exploration_response.py` | 新增visible_onestep/visible_persistent：Poisson权重下的描述性创新响应，不是神经critic的可见范围，附HAC误差与截断质量 | NumPy |
+| `runtime/snapshot_probe.py` | 供L2-A（在线critic-only）离线使用：逐个恢复learner快照，在终点replay的分层探针（每actor 8排队＋8自由；启动态按全零帧识别、单列）上记录与H1同格式的逐格量，可直接交给`borrowed_signs.py` | TF1；只读；单文件可独立复制运行 |
+
+```sh
+CANOPY_PROBE_SOURCE=... CANOPY_PROBE_FRAMEWORK=... python3 tools/scalar_learning_check/runtime/snapshot_probe.py \
+  --replay <L2-A-final-replay.npz> --snapshots <ckpt>/step-0 <ckpt>/step-N --update-map updates.json --output probe.json
+python3 tools/scalar_learning_check/exploration_response.py --config <registration.json> --root <framework> --run <run_id> --max-lag 60 > e1.json
+python3 tools/scalar_learning_check/borrowed_signs.py --critic probe.json --e1 e1.json
+```
+
+---
+
+# critic视野与逐状态检查已完成（2026-10-28）
 
 真实TF的H1/H2/E1R、三个R5采样重复及pilot已完成；L2未运行。预测与反证见[最新交接](../../docs/RESEARCH_REVIEW_BRIEF.md)及[完整分析](../../evidence/critic-horizon-20261028/final-analysis.json)。原提案保留在[路线文档](../../docs/SCALAR_BASE_ROADMAP.md)。下面是离线工具，均不启动TCP，不写checkpoint。
 

@@ -1,0 +1,182 @@
+{
+  "status": "LOCAL_REVIEW_NO_TF_NO_TCP",
+  "literal_gate_recomputation": {
+    "H1": {
+      "literal_gate": 33000,
+      "deployment_ready": false,
+      "unverified": [
+        "100-free",
+        "200-free"
+      ]
+    },
+    "H2": {
+      "literal_gate": null,
+      "deployment_ready": false,
+      "unverified": [
+        "100-free",
+        "200-free"
+      ]
+    }
+  },
+  "first_transition_sampling": {
+    "3": {
+      "total_first_transition_actor_draws": 456,
+      "per_actor_draws": [
+        14,
+        19,
+        23,
+        15,
+        18,
+        23,
+        15,
+        19,
+        17,
+        20,
+        22,
+        26,
+        22,
+        15,
+        19,
+        17,
+        13,
+        26,
+        12,
+        13,
+        25,
+        22,
+        14,
+        27
+      ],
+      "min_draws": 12,
+      "max_draws": 27
+    },
+    "4": {
+      "total_first_transition_actor_draws": 491,
+      "per_actor_draws": [
+        21,
+        15,
+        21,
+        18,
+        23,
+        31,
+        22,
+        18,
+        21,
+        15,
+        26,
+        30,
+        12,
+        15,
+        26,
+        18,
+        21,
+        23,
+        20,
+        16,
+        14,
+        15,
+        20,
+        30
+      ],
+      "min_draws": 12,
+      "max_draws": 31
+    },
+    "5": {
+      "total_first_transition_actor_draws": 430,
+      "per_actor_draws": [
+        17,
+        16,
+        20,
+        16,
+        18,
+        20,
+        17,
+        18,
+        18,
+        19,
+        20,
+        24,
+        14,
+        8,
+        19,
+        13,
+        13,
+        22,
+        17,
+        14,
+        19,
+        24,
+        18,
+        26
+      ],
+      "min_draws": 8,
+      "max_draws": 26
+    }
+  },
+  "mean_Q_does_not_identify_gradient_witness": {
+    "-10.0": {
+      "meanQ": 2.5,
+      "dQda": -10.0
+    },
+    "10.0": {
+      "meanQ": 2.5,
+      "dQda": 10.0
+    }
+  },
+  "not_proven": [
+    "Class-exclusion or gradient-source attribution",
+    "Whether startup action changes help or hurt TCP",
+    "An empirical necessity or safety theorem for lambda>=24",
+    "Continuous resume or a release-token controller"
+  ],
+  "prototype_defects_fixed": [
+    "Missing twin agreement passed a literal gate",
+    "Missing fitted lambda silently used tau*t for gate",
+    "Duplicate check records counted as consecutive evidence",
+    "Top5% used round rather than the original ceiling",
+    "Checkpoint experience IDs were treated as critic update counts",
+    "Missing step0 Q anchor; no actor Adam/counter identity check",
+    "Relative-tolerance continuity crossed near states and ignored terminals"
+  ],
+  "scope": "Only existing public JSON and NumPy/stdlib. No server connections, TensorFlow sessions, TCP, model edits, or online release",
+  "balanced_expected_first_state_draws_by_actor": [
+    14.702963473466575,
+    15.629304029304029,
+    16.878164556962027,
+    19.1508078994614,
+    21.636916835699797,
+    24.024774774774773,
+    14.80499653018737,
+    16.322876817138486,
+    18.124893797790993,
+    20.73177842565598,
+    23.087662337662337,
+    27.07233502538071,
+    14.732734806629834,
+    15.767184035476719,
+    17.733167082294266,
+    19.21891891891892,
+    20.93523061825319,
+    23.23856209150327,
+    15.023239436619718,
+    16.718652037617556,
+    18.550434782608697,
+    20.394837476099426,
+    22.503164556962027,
+    26.304562268803945
+  ],
+  "balanced_expected_aggregate_first_state_draws": 463.28816261527203,
+  "recommended_next_validation": {
+    "status": "PROPOSAL_ONLY_NOT_REGISTERED_OR_LAUNCHED",
+    "location": "One learner; in-memory historical-data TF; no TCP",
+    "question": "Do other-RTT critic-loss terms causally affect the early R200 query gradient?",
+    "minimum_design": "Paired processes with identical initial tensors, full actor-balanced batch sequence, actor/BN path and target RNG. Zero only short-RTT loss contributions in one arm; keep R200 draws, reduction denominator, tau and update counters fixed.",
+    "candidate_update_cap_per_arm": 8000,
+    "limitations": "Tests contribution of masked-group optimization, not unique gradient provenance or online quality. Requires a bounded new execution decision and real TF verification of masked losses; no code deployed this round."
+  },
+  "sampler_reconstruction_basis": {
+    "python_version": "3.13.15",
+    "method": "Replay the published Python random.Random seed and balanced batch algorithm; not captured historical minibatches or a bitwise TF replay",
+    "balanced_expectation": "463.288 aggregate first-state draws over1000 actor updates; each first-state expectation14.70..27.07"
+  }
+}
