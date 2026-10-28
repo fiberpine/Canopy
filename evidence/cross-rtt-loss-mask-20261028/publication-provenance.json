@@ -1,0 +1,63 @@
+{
+  "base_commit": "3b522bdade5400f2a92ab5e55451160180dc6af5",
+  "primary_source_commit": "2c899d802982ee73d0fcea6100c2d50e4e729bb9",
+  "supplement_source_commit": "145621501c80273f424fd09692ed241d018a6325",
+  "source_delivery": "Plain scripts on learner; commits identify local source snapshots, byte hashes identify executed copies",
+  "jobs_completed": 5,
+  "subarms": {
+    "pilot": 3,
+    "formal_primary": 6,
+    "formal_own_only": 2
+  },
+  "formal_updates_per_arm": 8000,
+  "total_complete_critic_updates": 64300,
+  "total_critic_optimizer_operations": 128600,
+  "actor_updates": 0,
+  "actual_batch_wall_seconds": 487.44631028175354,
+  "max_wall_seconds": 900,
+  "new_TCP_runs": 0,
+  "candidate_checkpoints_written": 0,
+  "source_dataset_rows": 27436,
+  "source_model_seed": 3,
+  "sampler_repeats": [
+    3,
+    4
+  ],
+  "independent_new_training_seeds": 0,
+  "transfer": {
+    "download_bytes": 80696,
+    "compressed_sha256": "2882907f053e3053c62e34d17d85426803ec2d6608e83a6200acd3265a362187",
+    "model_replay_packet_logs_downloaded": false
+  },
+  "closure": "LEARNER_PASS; four actor servers not used or contacted",
+  "files": {
+    "evidence/cross-rtt-loss-mask-20261028/results/own-s3.json": {
+      "raw_sha256": "3cea6a4c19fb824a4120d33fe1a75dff68cef388cb45b4044654a18647f7350c",
+      "public_sha256": "b9547491554b7147c2e07c134f98666a1ddc9cade7900740dff0dbaa418c5c68"
+    },
+    "evidence/cross-rtt-loss-mask-20261028/results/own-s4.json": {
+      "raw_sha256": "859b9b78ad9c72319ee9a099d0fb6849958de427bd98134b1f5e6ffe6a9225e0",
+      "public_sha256": "178224267d6f81da0c2e2fe3b8867fbf393c6e57a6ec0e169e47a7bc9f90192a"
+    },
+    "evidence/cross-rtt-loss-mask-20261028/results/paired-s3.json": {
+      "raw_sha256": "a51a7e2313ac74cccea57da8756a969d9d6ae5cf3f198e95141586e103286bb6",
+      "public_sha256": "d00fd56630b64f1b5f4688ebf70dc36f015d59032f24b11947f14a228fedee51"
+    },
+    "evidence/cross-rtt-loss-mask-20261028/results/paired-s4.json": {
+      "raw_sha256": "32aeecb0bf1d6ce38bf36e6ddc7e37d2e46d18ffa96d06ecf460f0edb96c7893",
+      "public_sha256": "a0da95cedafdc18a787364f7beb9cd2fb999ee8c23b73a02ae91e5ded423a978"
+    },
+    "evidence/cross-rtt-loss-mask-20261028/results/pilot.json": {
+      "raw_sha256": "520d1a18a0bafd3009eaae8bb9ee7132916d88792336a1dc7efb83fb60f7dc38",
+      "public_sha256": "c42a02c3ce93a93139bb9fe389f14320ead61c8dbee0009bce93df35c9c4da4b"
+    }
+  },
+  "common_operator": "Historical duplicate target writes composed deterministically: critic1 tau=.001 once; critic2 twice, effective .001999; actor/BN target .001. External paired Gaussian smoothing, not historical TF RNG.",
+  "amendment": "R200-only added within unchanged absolute budget before final comparison review; both original masked arms retain another shorter RTT, so primary design alone cannot test necessity of all other-RTT critic losses.",
+  "limits": [
+    "Controlled group-loss contribution is identified within this design; exact historical H1 attribution and unique mechanism are not.",
+    "Actor BN still uses all batches, even own-only. This removes other-RTT critic-loss terms, not all information from other RTT groups.",
+    "8000 updates is right censoring; no claim R200-only can never learn negative gradients.",
+    "No online critic gate, L2-A/B, CPU benefit or network quality was evaluated."
+  ]
+}

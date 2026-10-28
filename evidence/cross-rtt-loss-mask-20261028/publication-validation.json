@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "local_tests": {
+    "tools": 93,
+    "e2_handover": 5,
+    "scalar_audit": 7,
+    "total": 105
+  },
+  "python36_syntax": [
+    "tools/scalar_learning_check/analyze_cross_rtt_mask.py"
+  ],
+  "numeric_recomputation": "EXACT_JSON",
+  "pairing": "All full batch/R200/noise/targetaction/BN/actor-policy hashes match per sampler seed including own-only",
+  "real_TF_pilot": "All96 variables A/A bit-exact and all-one weighted vs stock bit-exact; gradient error0",
+  "source_bytes": "Primary and amendment Git source blobs exactly match executed SHA256",
+  "source_model_seed": 3,
+  "sampler_seeds": [
+    3,
+    4
+  ],
+  "new_independent_training_seeds": 0,
+  "formal_subarms": 8,
+  "pilot_subarms": 3,
+  "critic_updates": 64300,
+  "actor_updates": 0,
+  "learner_closure": "PASS",
+  "new_TCP_runs": 0,
+  "new_candidate_models": 0,
+  "old_tag_unchanged": true
+}

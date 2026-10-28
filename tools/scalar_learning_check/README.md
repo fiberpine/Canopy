@@ -1,3 +1,17 @@
+# 最新：跨RTT损失屏蔽对照已完成（2026-10-28）
+
+`runtime/cross_rtt_mask_replay.py`是独立历史数据诊断，不启动TCP、不写checkpoint。完整/屏蔽R20-R50/屏蔽R50-R100/仅R200四种损失，保留全batch、R200抽样和512分母；actor不优化，BN共同演化。固定旧target重复赋值组合和配对外部平滑噪声，不能冒充历史逐位重放或训练算法已验收。真实TF A/A及全1路径全部变量逐位一致；正式两采样重复均通过配对检查。
+
+复算公开小证据无需TF：
+
+```sh
+python3 tools/scalar_learning_check/analyze_cross_rtt_mask.py --results evidence/cross-rtt-loss-mask-20261028/results --output /new/output/cross-rtt.json
+```
+
+[完整结果与下一步需要讨论的方向](../../docs/RESEARCH_REVIEW_BRIEF.md)。8000次R200-only未转负不证明永远无法学到；这些不是独立训练seed，没有新TCP/CPU收益，L2-A/B仍未运行。
+
+---
+
 # 最新：借来符号与启动假说的本机审阅（2026-10-28）
 
 已在本机复算，未连接云端、运行TF或启动L2-A/B。模型标签和33k字面门可复现，但没有识别跨组梯度来源或排除启动补偿。审阅修正见[第二轮检查解读](../../docs/SCALAR_BORROWED_SIGNS_AND_STARTUP.md)。下面的复算只读已发布证据，不需要TF、不启动TCP、不写checkpoint：

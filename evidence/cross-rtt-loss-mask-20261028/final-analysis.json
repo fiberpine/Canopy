@@ -1,0 +1,1112 @@
+{
+  "status": "CONTROLLED_OFFLINE_DIAGNOSIS",
+  "seeds": {
+    "3": {
+      "status": "PASS_CONTROLLED_OFFLINE",
+      "wall_s": 168.39240908622742,
+      "arms": {
+        "full": {
+          "critic_updates": 8000,
+          "actor_updates": 0,
+          "retained_rows": 4096000,
+          "retained_rows_by_RTT": {
+            "20": 1024000,
+            "50": 1024000,
+            "100": 1024000,
+            "200": 1024000
+          },
+          "final_q1": 5.746791839599609,
+          "final_dq1": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": -3.0573630332946777,
+                "positive": 0.025974025974025976
+              },
+              "free": {
+                "n": 19,
+                "mean": -2.169128179550171,
+                "positive": 0.10526315789473684
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": -0.7214611172676086,
+                "positive": 0.08333333333333333
+              },
+              "free": {
+                "n": 36,
+                "mean": 0.6594754457473755,
+                "positive": 0.6388888888888888
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": -0.3368605375289917,
+                "positive": 0.06944444444444445
+              },
+              "free": {
+                "n": 24,
+                "mean": -0.27300402522087097,
+                "positive": 0.4583333333333333
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": -0.20821943879127502,
+                "positive": 0.08333333333333333
+              },
+              "free": {
+                "n": 12,
+                "mean": -0.5208737254142761,
+                "positive": 0.5
+              }
+            }
+          },
+          "final_dq2": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": -3.0334043502807617,
+                "positive": 0.025974025974025976
+              },
+              "free": {
+                "n": 19,
+                "mean": -2.1544742584228516,
+                "positive": 0.10526315789473684
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": -0.7134872078895569,
+                "positive": 0.08333333333333333
+              },
+              "free": {
+                "n": 36,
+                "mean": 0.6352437138557434,
+                "positive": 0.6388888888888888
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": -0.4029327630996704,
+                "positive": 0.041666666666666664
+              },
+              "free": {
+                "n": 24,
+                "mean": -0.1842566281557083,
+                "positive": 0.5
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": -0.2736927568912506,
+                "positive": 0.05952380952380952
+              },
+              "free": {
+                "n": 12,
+                "mean": -0.4711677134037018,
+                "positive": 0.5
+              }
+            }
+          },
+          "first_nonpositive_R200_penalized": {
+            "previous_recorded_update": 5000,
+            "first_recorded_nonpositive": 5500
+          },
+          "first_nonpositive_R200_penalized_Q2": {
+            "previous_recorded_update": 5000,
+            "first_recorded_nonpositive": 5500
+          },
+          "final_R200_penalized_delta_vs_full": 0.0,
+          "final_fixed_action_R200_penalized": {
+            "n": 84,
+            "mean": -0.18570679426193237,
+            "positive": 0.09523809523809523
+          },
+          "actor_weights_and_optimizer_unchanged": true,
+          "last_three_R200_penalized_q1": [
+            -0.09725254029035568,
+            -0.18058240413665771,
+            -0.20821943879127502
+          ],
+          "last_three_R200_penalized_q2": [
+            -0.15953290462493896,
+            -0.19353839755058289,
+            -0.2736927568912506
+          ]
+        },
+        "mask_short": {
+          "critic_updates": 8000,
+          "actor_updates": 0,
+          "retained_rows": 2048000,
+          "retained_rows_by_RTT": {
+            "20": 0,
+            "50": 0,
+            "100": 1024000,
+            "200": 1024000
+          },
+          "final_q1": 6.072456359863281,
+          "final_dq1": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": 0.059573229402303696,
+                "positive": 0.7792207792207793
+              },
+              "free": {
+                "n": 19,
+                "mean": 0.018857624381780624,
+                "positive": 0.6842105263157895
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": 0.0673309937119484,
+                "positive": 0.85
+              },
+              "free": {
+                "n": 36,
+                "mean": 0.03886900842189789,
+                "positive": 0.8333333333333334
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": 0.0759834572672844,
+                "positive": 0.9305555555555556
+              },
+              "free": {
+                "n": 24,
+                "mean": 0.07617370039224625,
+                "positive": 0.9166666666666666
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": 0.08781547099351883,
+                "positive": 0.9642857142857143
+              },
+              "free": {
+                "n": 12,
+                "mean": 0.16977526247501373,
+                "positive": 0.75
+              }
+            }
+          },
+          "final_dq2": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": 0.04477447271347046,
+                "positive": 0.7272727272727273
+              },
+              "free": {
+                "n": 19,
+                "mean": 0.027168000116944313,
+                "positive": 0.631578947368421
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": 0.06306131184101105,
+                "positive": 0.85
+              },
+              "free": {
+                "n": 36,
+                "mean": 0.020672747865319252,
+                "positive": 0.75
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": 0.06219532713294029,
+                "positive": 0.8888888888888888
+              },
+              "free": {
+                "n": 24,
+                "mean": 0.05738997831940651,
+                "positive": 0.875
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": 0.0550810769200325,
+                "positive": 0.9404761904761905
+              },
+              "free": {
+                "n": 12,
+                "mean": 0.1593482494354248,
+                "positive": 0.75
+              }
+            }
+          },
+          "first_nonpositive_R200_penalized": null,
+          "first_nonpositive_R200_penalized_Q2": null,
+          "final_R200_penalized_delta_vs_full": 0.29603490978479385,
+          "final_fixed_action_R200_penalized": {
+            "n": 84,
+            "mean": 0.08799711614847183,
+            "positive": 0.9642857142857143
+          },
+          "actor_weights_and_optimizer_unchanged": true,
+          "last_three_R200_penalized_q1": [
+            0.12183035910129547,
+            0.0945165753364563,
+            0.08781547099351883
+          ],
+          "last_three_R200_penalized_q2": [
+            0.12033553421497345,
+            0.09741973876953125,
+            0.0550810769200325
+          ]
+        },
+        "mask_mid": {
+          "critic_updates": 8000,
+          "actor_updates": 0,
+          "retained_rows": 2048000,
+          "retained_rows_by_RTT": {
+            "20": 1024000,
+            "50": 0,
+            "100": 0,
+            "200": 1024000
+          },
+          "final_q1": 5.706996917724609,
+          "final_dq1": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": -2.8207509517669678,
+                "positive": 0.025974025974025976
+              },
+              "free": {
+                "n": 19,
+                "mean": -2.7922627925872803,
+                "positive": 0.0
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": -0.8910807371139526,
+                "positive": 0.0
+              },
+              "free": {
+                "n": 36,
+                "mean": -1.3417946100234985,
+                "positive": 0.0
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": -0.5201439261436462,
+                "positive": 0.0
+              },
+              "free": {
+                "n": 24,
+                "mean": -0.9236997961997986,
+                "positive": 0.0
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": -0.3885892629623413,
+                "positive": 0.023809523809523808
+              },
+              "free": {
+                "n": 12,
+                "mean": -1.2512694597244263,
+                "positive": 0.0
+              }
+            }
+          },
+          "final_dq2": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": -2.7924375534057617,
+                "positive": 0.012987012987012988
+              },
+              "free": {
+                "n": 19,
+                "mean": -2.692958116531372,
+                "positive": 0.0
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": -0.9327254891395569,
+                "positive": 0.0
+              },
+              "free": {
+                "n": 36,
+                "mean": -1.0978682041168213,
+                "positive": 0.0
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": -0.44692304730415344,
+                "positive": 0.0
+              },
+              "free": {
+                "n": 24,
+                "mean": -0.908802330493927,
+                "positive": 0.041666666666666664
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": -0.328189879655838,
+                "positive": 0.011904761904761904
+              },
+              "free": {
+                "n": 12,
+                "mean": -1.3224983215332031,
+                "positive": 0.0
+              }
+            }
+          },
+          "first_nonpositive_R200_penalized": {
+            "previous_recorded_update": 1500,
+            "first_recorded_nonpositive": 2000
+          },
+          "first_nonpositive_R200_penalized_Q2": {
+            "previous_recorded_update": 1500,
+            "first_recorded_nonpositive": 2000
+          },
+          "final_R200_penalized_delta_vs_full": -0.18036982417106628,
+          "final_fixed_action_R200_penalized": {
+            "n": 84,
+            "mean": -0.38254833221435547,
+            "positive": 0.023809523809523808
+          },
+          "actor_weights_and_optimizer_unchanged": true,
+          "last_three_R200_penalized_q1": [
+            -0.3457481861114502,
+            -0.3439818322658539,
+            -0.3885892629623413
+          ],
+          "last_three_R200_penalized_q2": [
+            -0.33015114068984985,
+            -0.38414713740348816,
+            -0.328189879655838
+          ]
+        },
+        "own_only": {
+          "critic_updates": 8000,
+          "actor_updates": 0,
+          "retained_rows": 1024000,
+          "retained_rows_by_RTT": {
+            "20": 0,
+            "50": 0,
+            "100": 0,
+            "200": 1024000
+          },
+          "final_q1": 6.0944061279296875,
+          "final_dq1": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": 0.06097760796546936,
+                "positive": 0.987012987012987
+              },
+              "free": {
+                "n": 19,
+                "mean": 0.13092823326587677,
+                "positive": 1.0
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": 0.07700006663799286,
+                "positive": 0.9833333333333333
+              },
+              "free": {
+                "n": 36,
+                "mean": 0.11254037916660309,
+                "positive": 1.0
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": 0.08019877225160599,
+                "positive": 0.9861111111111112
+              },
+              "free": {
+                "n": 24,
+                "mean": 0.11495012044906616,
+                "positive": 1.0
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": 0.06684195250272751,
+                "positive": 0.9642857142857143
+              },
+              "free": {
+                "n": 12,
+                "mean": 0.13592387735843658,
+                "positive": 1.0
+              }
+            }
+          },
+          "final_dq2": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": 0.10276346653699875,
+                "positive": 1.0
+              },
+              "free": {
+                "n": 19,
+                "mean": 0.12995557487010956,
+                "positive": 1.0
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": 0.08713922649621964,
+                "positive": 1.0
+              },
+              "free": {
+                "n": 36,
+                "mean": 0.09836917370557785,
+                "positive": 1.0
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": 0.0839288979768753,
+                "positive": 1.0
+              },
+              "free": {
+                "n": 24,
+                "mean": 0.09483858197927475,
+                "positive": 1.0
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": 0.080472931265831,
+                "positive": 1.0
+              },
+              "free": {
+                "n": 12,
+                "mean": 0.10492045432329178,
+                "positive": 1.0
+              }
+            }
+          },
+          "first_nonpositive_R200_penalized": null,
+          "first_nonpositive_R200_penalized_Q2": null,
+          "final_R200_penalized_delta_vs_full": 0.27506139129400253,
+          "final_fixed_action_R200_penalized": {
+            "n": 84,
+            "mean": 0.06436354666948318,
+            "positive": 0.9642857142857143
+          },
+          "actor_weights_and_optimizer_unchanged": true,
+          "last_three_R200_penalized_q1": [
+            0.1347535252571106,
+            0.12283947318792343,
+            0.06684195250272751
+          ],
+          "last_three_R200_penalized_q2": [
+            0.14469453692436218,
+            0.12991099059581757,
+            0.080472931265831
+          ]
+        }
+      },
+      "matched_inputs_and_actor_BN_policy": true,
+      "target_order": "Fixed composition of historical duplicate assignments; critic2 twice per set",
+      "smoothing": "Same externally generated Gaussian(.1), clip.2; not historical TF RNG sequence"
+    },
+    "4": {
+      "status": "PASS_CONTROLLED_OFFLINE",
+      "wall_s": 180.20105719566345,
+      "arms": {
+        "full": {
+          "critic_updates": 8000,
+          "actor_updates": 0,
+          "retained_rows": 4096000,
+          "retained_rows_by_RTT": {
+            "20": 1024000,
+            "50": 1024000,
+            "100": 1024000,
+            "200": 1024000
+          },
+          "final_q1": 5.777472972869873,
+          "final_dq1": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": -3.1347148418426514,
+                "positive": 0.012987012987012988
+              },
+              "free": {
+                "n": 19,
+                "mean": -2.434943914413452,
+                "positive": 0.15789473684210525
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": -0.9265705347061157,
+                "positive": 0.06666666666666667
+              },
+              "free": {
+                "n": 36,
+                "mean": 0.5303797721862793,
+                "positive": 0.6388888888888888
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": -0.49285444617271423,
+                "positive": 0.041666666666666664
+              },
+              "free": {
+                "n": 24,
+                "mean": -0.5045403838157654,
+                "positive": 0.375
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": -0.3471603989601135,
+                "positive": 0.03571428571428571
+              },
+              "free": {
+                "n": 12,
+                "mean": -0.776448667049408,
+                "positive": 0.5
+              }
+            }
+          },
+          "final_dq2": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": -3.0751793384552,
+                "positive": 0.05194805194805195
+              },
+              "free": {
+                "n": 19,
+                "mean": -2.4164884090423584,
+                "positive": 0.10526315789473684
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": -0.8937091827392578,
+                "positive": 0.06666666666666667
+              },
+              "free": {
+                "n": 36,
+                "mean": 0.5950081944465637,
+                "positive": 0.6388888888888888
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": -0.4704504609107971,
+                "positive": 0.013888888888888888
+              },
+              "free": {
+                "n": 24,
+                "mean": -0.3911401927471161,
+                "positive": 0.375
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": -0.30207809805870056,
+                "positive": 0.03571428571428571
+              },
+              "free": {
+                "n": 12,
+                "mean": -0.7874617576599121,
+                "positive": 0.5
+              }
+            }
+          },
+          "first_nonpositive_R200_penalized": {
+            "previous_recorded_update": 5000,
+            "first_recorded_nonpositive": 5500
+          },
+          "first_nonpositive_R200_penalized_Q2": {
+            "previous_recorded_update": 4500,
+            "first_recorded_nonpositive": 5000
+          },
+          "final_R200_penalized_delta_vs_full": 0.0,
+          "final_fixed_action_R200_penalized": {
+            "n": 84,
+            "mean": -0.32571861147880554,
+            "positive": 0.05952380952380952
+          },
+          "actor_weights_and_optimizer_unchanged": true,
+          "last_three_R200_penalized_q1": [
+            -0.20233844220638275,
+            -0.29871854186058044,
+            -0.3471603989601135
+          ],
+          "last_three_R200_penalized_q2": [
+            -0.2097868174314499,
+            -0.3143288195133209,
+            -0.30207809805870056
+          ]
+        },
+        "mask_short": {
+          "critic_updates": 8000,
+          "actor_updates": 0,
+          "retained_rows": 2048000,
+          "retained_rows_by_RTT": {
+            "20": 0,
+            "50": 0,
+            "100": 1024000,
+            "200": 1024000
+          },
+          "final_q1": 6.238998889923096,
+          "final_dq1": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": -0.00927333440631628,
+                "positive": 0.36363636363636365
+              },
+              "free": {
+                "n": 19,
+                "mean": -0.07108406722545624,
+                "positive": 0.10526315789473684
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": 0.03639146313071251,
+                "positive": 0.6
+              },
+              "free": {
+                "n": 36,
+                "mean": -0.0634245052933693,
+                "positive": 0.027777777777777776
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": 0.037309397011995316,
+                "positive": 0.6527777777777778
+              },
+              "free": {
+                "n": 24,
+                "mean": 0.023376794531941414,
+                "positive": 0.5
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": 0.07174328714609146,
+                "positive": 0.9523809523809523
+              },
+              "free": {
+                "n": 12,
+                "mean": 0.14241956174373627,
+                "positive": 0.75
+              }
+            }
+          },
+          "final_dq2": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": 0.021716663613915443,
+                "positive": 0.6233766233766234
+              },
+              "free": {
+                "n": 19,
+                "mean": -0.07799774408340454,
+                "positive": 0.21052631578947367
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": 0.046357691287994385,
+                "positive": 0.7166666666666667
+              },
+              "free": {
+                "n": 36,
+                "mean": -0.05752654746174812,
+                "positive": 0.05555555555555555
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": 0.048221588134765625,
+                "positive": 0.6805555555555556
+              },
+              "free": {
+                "n": 24,
+                "mean": 0.02541247569024563,
+                "positive": 0.5
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": 0.07457569241523743,
+                "positive": 1.0
+              },
+              "free": {
+                "n": 12,
+                "mean": 0.12221390008926392,
+                "positive": 0.75
+              }
+            }
+          },
+          "first_nonpositive_R200_penalized": null,
+          "first_nonpositive_R200_penalized_Q2": null,
+          "final_R200_penalized_delta_vs_full": 0.418903686106205,
+          "final_fixed_action_R200_penalized": {
+            "n": 84,
+            "mean": 0.06884518265724182,
+            "positive": 0.9404761904761905
+          },
+          "actor_weights_and_optimizer_unchanged": true,
+          "last_three_R200_penalized_q1": [
+            0.1177840381860733,
+            0.07771903276443481,
+            0.07174328714609146
+          ],
+          "last_three_R200_penalized_q2": [
+            0.12390697747468948,
+            0.08613798767328262,
+            0.07457569241523743
+          ]
+        },
+        "mask_mid": {
+          "critic_updates": 8000,
+          "actor_updates": 0,
+          "retained_rows": 2048000,
+          "retained_rows_by_RTT": {
+            "20": 1024000,
+            "50": 0,
+            "100": 0,
+            "200": 1024000
+          },
+          "final_q1": 5.743386745452881,
+          "final_dq1": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": -3.256852626800537,
+                "positive": 0.025974025974025976
+              },
+              "free": {
+                "n": 19,
+                "mean": -2.914797782897949,
+                "positive": 0.0
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": -1.0192989110946655,
+                "positive": 0.0
+              },
+              "free": {
+                "n": 36,
+                "mean": -1.3293328285217285,
+                "positive": 0.0
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": -0.5281683206558228,
+                "positive": 0.0
+              },
+              "free": {
+                "n": 24,
+                "mean": -0.9815884232521057,
+                "positive": 0.0
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": -0.39399197697639465,
+                "positive": 0.0
+              },
+              "free": {
+                "n": 12,
+                "mean": -1.3996943235397339,
+                "positive": 0.08333333333333333
+              }
+            }
+          },
+          "final_dq2": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": -3.065791368484497,
+                "positive": 0.025974025974025976
+              },
+              "free": {
+                "n": 19,
+                "mean": -2.580409526824951,
+                "positive": 0.0
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": -0.9262661337852478,
+                "positive": 0.016666666666666666
+              },
+              "free": {
+                "n": 36,
+                "mean": -0.9460780620574951,
+                "positive": 0.0
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": -0.424752801656723,
+                "positive": 0.013888888888888888
+              },
+              "free": {
+                "n": 24,
+                "mean": -0.58469557762146,
+                "positive": 0.16666666666666666
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": -0.3807487487792969,
+                "positive": 0.0
+              },
+              "free": {
+                "n": 12,
+                "mean": -0.9344668984413147,
+                "positive": 0.08333333333333333
+              }
+            }
+          },
+          "first_nonpositive_R200_penalized": {
+            "previous_recorded_update": 1500,
+            "first_recorded_nonpositive": 2000
+          },
+          "first_nonpositive_R200_penalized_Q2": {
+            "previous_recorded_update": 1500,
+            "first_recorded_nonpositive": 2000
+          },
+          "final_R200_penalized_delta_vs_full": -0.04683157801628113,
+          "final_fixed_action_R200_penalized": {
+            "n": 84,
+            "mean": -0.3824130594730377,
+            "positive": 0.0
+          },
+          "actor_weights_and_optimizer_unchanged": true,
+          "last_three_R200_penalized_q1": [
+            -0.2785061299800873,
+            -0.3470253646373749,
+            -0.39399197697639465
+          ],
+          "last_three_R200_penalized_q2": [
+            -0.29209819436073303,
+            -0.38038063049316406,
+            -0.3807487487792969
+          ]
+        },
+        "own_only": {
+          "critic_updates": 8000,
+          "actor_updates": 0,
+          "retained_rows": 1024000,
+          "retained_rows_by_RTT": {
+            "20": 0,
+            "50": 0,
+            "100": 0,
+            "200": 1024000
+          },
+          "final_q1": 6.08485746383667,
+          "final_dq1": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": 0.06261356174945831,
+                "positive": 0.987012987012987
+              },
+              "free": {
+                "n": 19,
+                "mean": 0.11187010258436203,
+                "positive": 1.0
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": 0.07122749835252762,
+                "positive": 0.9833333333333333
+              },
+              "free": {
+                "n": 36,
+                "mean": 0.08526691794395447,
+                "positive": 1.0
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": 0.0839710608124733,
+                "positive": 1.0
+              },
+              "free": {
+                "n": 24,
+                "mean": 0.09085794538259506,
+                "positive": 1.0
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": 0.081578828394413,
+                "positive": 0.9880952380952381
+              },
+              "free": {
+                "n": 12,
+                "mean": 0.09333357959985733,
+                "positive": 1.0
+              }
+            }
+          },
+          "final_dq2": {
+            "20": {
+              "penalized": {
+                "n": 77,
+                "mean": 0.0904238149523735,
+                "positive": 1.0
+              },
+              "free": {
+                "n": 19,
+                "mean": 0.12936539947986603,
+                "positive": 1.0
+              }
+            },
+            "50": {
+              "penalized": {
+                "n": 60,
+                "mean": 0.07778424769639969,
+                "positive": 1.0
+              },
+              "free": {
+                "n": 36,
+                "mean": 0.10099205374717712,
+                "positive": 1.0
+              }
+            },
+            "100": {
+              "penalized": {
+                "n": 72,
+                "mean": 0.07697680592536926,
+                "positive": 1.0
+              },
+              "free": {
+                "n": 24,
+                "mean": 0.09820764511823654,
+                "positive": 1.0
+              }
+            },
+            "200": {
+              "penalized": {
+                "n": 84,
+                "mean": 0.07311426848173141,
+                "positive": 0.9880952380952381
+              },
+              "free": {
+                "n": 12,
+                "mean": 0.10314138978719711,
+                "positive": 1.0
+              }
+            }
+          },
+          "first_nonpositive_R200_penalized": null,
+          "first_nonpositive_R200_penalized_Q2": null,
+          "final_R200_penalized_delta_vs_full": 0.4287392273545265,
+          "final_fixed_action_R200_penalized": {
+            "n": 84,
+            "mean": 0.0815543606877327,
+            "positive": 0.9880952380952381
+          },
+          "actor_weights_and_optimizer_unchanged": true,
+          "last_three_R200_penalized_q1": [
+            0.13595430552959442,
+            0.10586779564619064,
+            0.081578828394413
+          ],
+          "last_three_R200_penalized_q2": [
+            0.12665048241615295,
+            0.10789646208286285,
+            0.07311426848173141
+          ]
+        }
+      },
+      "matched_inputs_and_actor_BN_policy": true,
+      "target_order": "Fixed composition of historical duplicate assignments; critic2 twice per set",
+      "smoothing": "Same externally generated Gaussian(.1), clip.2; not historical TF RNG sequence"
+    }
+  },
+  "new_TCP_runs": 0,
+  "new_models": 0,
+  "online_L2": "NOT_RUN",
+  "model_or_gate_accepted": false,
+  "pilot": {
+    "A_A_all_variables_bit_exact": true,
+    "weighted_allone_vs_stock_bit_exact": true,
+    "maximum_gradient_error": 0.0
+  },
+  "limits": [
+    "Two sampler seeds from one source model/data seed are not independent online training seeds.",
+    "Same controlled duplicate-target composition and external smoothing distribution are used in every arm; this is not historical H1 bitwise replay.",
+    "Masks retain equal actor-group counts; actual row totals are reported and may differ slightly with balanced remainder rotation.",
+    "Group-loss masking changes optimization and future bootstrap labels. It identifies controlled group-loss contribution, not unique gradient provenance.",
+    "Unchanged R200 samples are not removed. A retained negative sign without short-RTT losses disproves necessity of those losses in this setting.",
+    "No throughput, delay, CPU advantage or online-release rule is tested."
+  ]
+}

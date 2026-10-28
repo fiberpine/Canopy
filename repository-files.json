@@ -1,5 +1,5 @@
 {
-  "scope": "Local borrowed-sign/startup hypothesis review; exploratory model labels and prototype limitations preserved; zero new TF or TCP; original51 models unchanged",
+  "scope": "Completed controlled cross-RTT loss-mask real TF diagnostics; actor frozen; no new TCP/candidate; original51 preserved; direction discussion required",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10891,
-      "sha256": "d666f09037e38acf1227221f78b8c3f6697d7b3c6d6b644802e084dd674d44ea"
+      "bytes": 11251,
+      "sha256": "5b5f6b585006052a1efef3f4c498c8967de12c481ec13442bb045e30d81931ab"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -69,8 +69,8 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 36983,
-      "sha256": "48b8f4dc4891c136b3ef178fcb4b2937a6a02b87c94e37842924e4d9c2846619"
+      "bytes": 40548,
+      "sha256": "ba22fdec46d29306046174d7608f6125bd8f694017ca4972ff2db3a8017d9f88"
     },
     {
       "path": "docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md",
@@ -9826,8 +9826,8 @@
     },
     {
       "path": "tools/scalar_learning_check/README.md",
-      "bytes": 10825,
-      "sha256": "28779b41328b6026d28eb98c0efd04f94a51d8e6ef238ea512849e7601fa6f10"
+      "bytes": 11763,
+      "sha256": "2422832cf25f9c1aad49f2ade0ac4aad85c205f2dcf5bec3028cd33469eac73b"
     },
     {
       "path": "tools/scalar_learning_check/actor_speed_sim.py",
@@ -10441,8 +10441,8 @@
     },
     {
       "path": "docs/SCALAR_BORROWED_SIGNS_AND_STARTUP.md",
-      "bytes": 21030,
-      "sha256": "3e36e951769e20a7d27e9c829ead1b687094f3e49a4f2d8aaae7a1770204ed22"
+      "bytes": 21683,
+      "sha256": "a960f05966601b6e54c9acda69ee849ff14c4f94114edf6f9f140e12dd633714"
     },
     {
       "path": "evidence/borrowed-signs-review-20261028/input-receipt.json",
@@ -10506,18 +10506,93 @@
     },
     {
       "path": "evidence/cross-rtt-loss-mask-20261028/registration.json",
-      "bytes": 1934,
-      "sha256": "e1b6e5836257d603651dae0acbbc3c4f6b2f26bcd9be9097751f132ef4381d2c"
+      "bytes": 2006,
+      "sha256": "94f286da8306e917e755a76718e1cb1834af2847c7a335175d68c4729a4e0245"
     },
     {
       "path": "tools/scalar_learning_check/runtime/cross_rtt_mask_replay.py",
-      "bytes": 12600,
-      "sha256": "7cb5845e50454da2df1a1a0c84d1a7563755afb4ce6cc278bd46fd7702b0ebb0"
+      "bytes": 13438,
+      "sha256": "153e2b3f21063476463114d45662ead0d35bd94755f3f1086b4f71e06bcc391a"
     },
     {
       "path": "tools/test_cross_rtt_mask.py",
-      "bytes": 1598,
-      "sha256": "3fae119117580c2caac098aeb34d07f424da71f8fd76a3a6742d51825d0d3368"
+      "bytes": 1760,
+      "sha256": "18f42cf0ee260eb070fdfb79c85a185e74f74da439dd882a9b029dc785e060a1"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/amendment-source-manifest.json",
+      "bytes": 285,
+      "sha256": "80b53428402b9e169e5c734c7b126faf5fa2a51d4b264feeec882b14d9f40974"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/amendment.json",
+      "bytes": 1018,
+      "sha256": "2dd3738033ced9b09e35f91a2e0711e8f792ec2191a3ee3d0d79ffb003a4e589"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/closure.json",
+      "bytes": 265,
+      "sha256": "1c979a3cc7fede09de7d5f778225af391be0feb89c3b87fd4b82ef62ab80264a"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/final-analysis.json",
+      "bytes": 34423,
+      "sha256": "5d8ee5bc7735e903c3b12fd946b060d6904c552c86d8a463334ed1c242a0543d"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/publication-provenance.json",
+      "bytes": 3342,
+      "sha256": "d9b7ed6bd6f53e959ae047b3a0048e9418ec7c7cf6324c613a30943753291b8a"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/publication-validation.json",
+      "bytes": 880,
+      "sha256": "a4ff9ac338da60624c6dac9cad6fd0364c0cf565fb3a8647d4673f097563050e"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/results/own-s3.json",
+      "bytes": 89268,
+      "sha256": "b9547491554b7147c2e07c134f98666a1ddc9cade7900740dff0dbaa418c5c68"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/results/own-s4.json",
+      "bytes": 89405,
+      "sha256": "178224267d6f81da0c2e2fe3b8867fbf393c6e57a6ec0e169e47a7bc9f90192a"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/results/paired-s3.json",
+      "bytes": 271052,
+      "sha256": "d00fd56630b64f1b5f4688ebf70dc36f015d59032f24b11947f14a228fedee51"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/results/paired-s4.json",
+      "bytes": 271775,
+      "sha256": "a0da95cedafdc18a787364f7beb9cd2fb999ee8c23b73a02ae91e5ded423a978"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/results/pilot.json",
+      "bytes": 44181,
+      "sha256": "c42a02c3ce93a93139bb9fe389f14320ead61c8dbee0009bce93df35c9c4da4b"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/source-manifest.json",
+      "bytes": 280,
+      "sha256": "b71bca6adcced85a2fcbd1e1ddc32624bfefef379fd0da6734ceb229b80f1317"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/status.json",
+      "bytes": 385,
+      "sha256": "6001acb8420da24986ebce6ed42cef40fcee9ab32d85e0610e30fe89a494539f"
+    },
+    {
+      "path": "evidence/cross-rtt-loss-mask-20261028/supplement-status.json",
+      "bytes": 307,
+      "sha256": "e7d2e76675ed1a83654de5cbe52d6952fbf05f5b116ed865d1e53f351eb7cd27"
+    },
+    {
+      "path": "tools/scalar_learning_check/analyze_cross_rtt_mask.py",
+      "bytes": 4709,
+      "sha256": "70803460c20b29e9c38c3879bf8e9f72e95323e61cd14ebb5950fbd1444f028d"
     }
   ]
 }
