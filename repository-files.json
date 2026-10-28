@@ -1,5 +1,5 @@
 {
-  "scope": "Audited critic-horizon offline tools; real TF pending current learner identity; no new model or TCP result; original51 models preserved",
+  "scope": "Completed single-learner real TF critic-horizon diagnostics; failed predictions and startup-state origin retained; no new TCP or model; original51 preserved",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10210,
-      "sha256": "468d377cfb0a401cb5dbeed8bfd8d53973146d17053a4b3f311d6f51f7c69f2a"
+      "bytes": 10581,
+      "sha256": "7f0dea66d711611f6326d8f09e301bd9ef914d9c4d2a693fd7fd7cd77d0b0d2f"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -69,8 +69,8 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 31645,
-      "sha256": "79562f1f545bcb737e1c94c22b41198a657100e37506ea7de9564bf85449c1af"
+      "bytes": 35077,
+      "sha256": "bf35f5cb45925436d677e3723f0e7e94ef0d0e7cd4db111ee83038e0d61c2872"
     },
     {
       "path": "docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md",
@@ -9826,8 +9826,8 @@
     },
     {
       "path": "tools/scalar_learning_check/README.md",
-      "bytes": 7337,
-      "sha256": "e68f4a0ec2f0d96c635a0ab5db27e38603b80ef2159cb5f11fad78f58204a801"
+      "bytes": 8184,
+      "sha256": "33fbbae075b76701edd6aa6752f02781e64d646d6f3f4e3867123ade3bfb4847"
     },
     {
       "path": "tools/scalar_learning_check/actor_speed_sim.py",
@@ -10321,8 +10321,8 @@
     },
     {
       "path": "docs/SCALAR_BASE_ROADMAP.md",
-      "bytes": 20810,
-      "sha256": "ebb1c35eaa1dcc10806d84314ec98fd0683ed337690d16f7091ebe7b82a8afad"
+      "bytes": 21579,
+      "sha256": "80eb811d4b45db19c8bdbb6923e986025faee70f5cc0ff206ce231da95ccdfbd"
     },
     {
       "path": "evidence/critic-horizon-20261028/local-validation.json",
@@ -10348,6 +10348,96 @@
       "path": "tools/scalar_learning_check/value_horizon.py",
       "bytes": 8974,
       "sha256": "03df797dae8fe2024bb0bcb1ce3b3021946091cd6f7fd26bb1fd0633f9733e3d"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/E1R-input-audit.json",
+      "bytes": 591,
+      "sha256": "280299358cb639b5e897929cac28fa73dbf057fb8db08fa0fe45ef5befb2cdc3"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/S-state-origin-audit.json",
+      "bytes": 22198,
+      "sha256": "8087c03b9237b3f0e945d9ab56fce9c0830fd64626384a667269009cf3133c13"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/closure.json",
+      "bytes": 264,
+      "sha256": "c83b52164326abf249fe74231868b48b3f6fe6d9226053f748b749840a3b739e"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/final-analysis.json",
+      "bytes": 118387,
+      "sha256": "2569020f33164cd71a0eef9ed48fe91bc345bd0505a62b33623559f8152a9327"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/publication-provenance.json",
+      "bytes": 3426,
+      "sha256": "25825d9b9e917fe2ca3499eb4412c5b976168754ae3e614d87438001db84d5c5"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/publication-validation.json",
+      "bytes": 1140,
+      "sha256": "bb699e4c5cd1997d31d4bfe9159251a1b31a4f9480db45b6ca17d7b52929ae38"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/registration.json",
+      "bytes": 1930,
+      "sha256": "6230c984e31ca01461172e14f839db1882e36c97d53e57cf4c9842201dc496ab"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/E1R-response.json",
+      "bytes": 50028,
+      "sha256": "a7a60a840a4dbcde1d118b504e2cf74c328d6f09144552facb5e68b9cd3d626c"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/E1R.json",
+      "bytes": 1481,
+      "sha256": "688c5e73c07d97624fa173b47d1a83b2c63b4865a8bf97b9f0b0d83e7005e629"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/H1.json",
+      "bytes": 271035,
+      "sha256": "7b181979105e149eece5323d9d955a2f439ba7b6081da18ae072127d363adcbb"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/H2.json",
+      "bytes": 82818,
+      "sha256": "f621428dc6fc7fd8dc45c4278ffd6934281b6ed1f0d308f9b7dd5149a86a0422"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/S-R5-s3.json",
+      "bytes": 1067855,
+      "sha256": "50401c7117461d9f03e3b22adb025f52dffc96075c93d4ed83c576765e3f6620"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/S-R5-s4.json",
+      "bytes": 1068935,
+      "sha256": "1ea30f77cfb6a36bb28f1fbed604a3e986950032df7fd3b64b470b8d7464b45b"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/S-R5-s5.json",
+      "bytes": 1067954,
+      "sha256": "a06574ae09d00d9c6076524208afe6b821531519183d7f30971e72bb3a55e713"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/results/pilot-H1.json",
+      "bytes": 15052,
+      "sha256": "0e22f154436e528fdac146f288c6c8130c1688210fe354b227ce7760b9072119"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/source-manifest.json",
+      "bytes": 474,
+      "sha256": "13275dd075f6300ab0b3e95865848479696746208d35c9c0ad4d204979b31484"
+    },
+    {
+      "path": "evidence/critic-horizon-20261028/status.json",
+      "bytes": 648,
+      "sha256": "015d24b3a4416c43cfef6923364aef940ff91e035c8cfce2ead15228bc3c54a6"
+    },
+    {
+      "path": "tools/scalar_learning_check/analyze_critic_horizon.py",
+      "bytes": 8427,
+      "sha256": "d4734bd57261cbdf683ddc41414bc152a0c76885464aaba40a91510e39b4b39f"
     }
   ]
 }

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "tests": 91,
+  "checks": [
+    {
+      "folder": "tools",
+      "output": "...............................................................................\n----------------------------------------------------------------------\nRan 79 tests in 7.785s\n\nOK\n"
+    },
+    {
+      "folder": "tools/e2_handover",
+      "output": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.092s\n\nOK\n"
+    },
+    {
+      "folder": "tools/scalar_audit",
+      "output": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.044s\n\nOK\n"
+    }
+  ],
+  "python36_syntax": [
+    "tools/scalar_learning_check/analyze_critic_horizon.py"
+  ],
+  "recomputation": "EXACT_JSON",
+  "source_vs_execution": "3_RUNTIME_FILES_BYTE_IDENTICAL",
+  "independent_state_origin_check": "PASS_19_OF20_FIRST_TRANSITION_IN_ALL3",
+  "credential_private_endpoint_scan": "PASS",
+  "source_seed_count": 1,
+  "independent_new_training_seeds": 0,
+  "new_TCP_runs": 0,
+  "candidate_checkpoints_written": 0,
+  "closure": "LEARNER_PASS",
+  "original_tag": "UNCHANGED"
+}

@@ -1,6 +1,14 @@
-# 最新（Claude提案，未执行）：critic视野与无模型方向检查
+# 最新：critic视野与逐状态检查已完成（2026-10-28）
 
-分析见[离健康基座还有多远](../../docs/SCALAR_BASE_ROADMAP.md)。下面三个是离线工具，均不启动TCP，不写checkpoint。
+真实TF的H1/H2/E1R、三个R5采样重复及pilot已完成；L2未运行。预测与反证见[最新交接](../../docs/RESEARCH_REVIEW_BRIEF.md)及[完整分析](../../evidence/critic-horizon-20261028/final-analysis.json)。原提案保留在[路线文档](../../docs/SCALAR_BASE_ROADMAP.md)。下面是离线工具，均不启动TCP，不写checkpoint。
+
+无需TF复算本轮证据：
+
+```sh
+python3 tools/scalar_learning_check/analyze_critic_horizon.py --results evidence/critic-horizon-20261028/results --output /new/output/analysis.json
+```
+
+`exploration_response.py`使用分连接截距与保留类别时间缺口的Bartlett HAC，误差结果不能直接证明持续加窗效应。运行版额外核对初始全部96变量、精确连续性、固定初始动作梯度及逐状态策略。H2只改变critic target系数；actor/BN目标仍.001，历史重叠target scope保留。S变化中最大20个有19个来自连接首条状态，不能把原预测失败改写为健康纠正已证实。
 
 | 文件 | 作用 | 依赖 |
 |---|---|---|

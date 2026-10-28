@@ -1,0 +1,33 @@
+{
+  "status": "OFFLINE_COMPLETE",
+  "job": "E1R",
+  "seed": 3,
+  "replay_rows": 27436,
+  "contiguity_breaks": 0,
+  "probe_states": 384,
+  "wall_s": 0.07158493995666504,
+  "result": {
+    "npz": "${EXPERIMENT_ROOT}/results/E1R.npz",
+    "rows": 27436,
+    "segments": 24,
+    "contiguity_breaks": 0,
+    "max_abs_offset": 0.5747518539428711,
+    "offset_sd": 0.14195480942726135,
+    "expected_offset_sd": 0.1414213562373095,
+    "clipped_fraction": 0.0,
+    "penalized_fraction_by_rtt": {
+      "20": 0.83690587138863,
+      "50": 0.7117834394904459,
+      "100": 0.8145117294053464,
+      "200": 0.9055933708197692
+    },
+    "first_offset_sd": 0.14094132652163072,
+    "randomized_offset_identified": true,
+    "note": "Without clipping or gaps this is the randomized innovation offset, not an actual cwnd counterfactual. With clipping/gaps reconstruction alone does not identify innovations. Randomized response includes compensation, CUBIC and future feedback; it is not dQ/da."
+  },
+  "new_TCP_runs": 0,
+  "source_init_verified_all_tensors": true,
+  "model_variables": 96,
+  "source_checkpoints_written": 0,
+  "limitations": "Static 27,436-row replay reused many times (about 750 draws per row after 40k updates; overfitting possible beyond ~10k). H-step and Poisson-weighted returns follow the behavior policy; the critic estimates the deterministic policy. Sign changes are compared per RTT x delay class; the 2-BDP scaling of the predicted times is approximate (+-50%)."
+}

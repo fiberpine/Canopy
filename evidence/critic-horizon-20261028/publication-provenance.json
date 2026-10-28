@@ -1,0 +1,62 @@
+{
+  "base_commit": "ec9bdf65fc008e8637af5f4a4fa9b936fbb2ffbc",
+  "executed_source_commit": "7d97c0da245cf33f930c971ca581efe48306d259",
+  "execution_kind": "Local TF1 sessions on one learner using historical data; actor servers not used",
+  "jobs_completed": 7,
+  "case_counts": {
+    "H1_full": 1,
+    "H2_full": 1,
+    "E1R": 1,
+    "S_R5_sampler_repeats": 3,
+    "pilot_10updates": 1
+  },
+  "max_wall_budget_seconds": 900,
+  "actual_batch_wall_seconds": 493.4678452014923,
+  "new_TCP_runs": 0,
+  "new_candidate_checkpoints": 0,
+  "closure": "PASS_LEARNER_ONLY; other four servers not connected",
+  "compressed_evidence_bytes": 781035,
+  "compressed_evidence_sha256": "4bd54a194baeae2712dc24a82ac5a5b746d1d4d075192dfb928c945f7894fa79",
+  "redaction": "Only output location strings replaced; JSON numeric objects preserved exactly",
+  "files": {
+    "evidence/critic-horizon-20261028/results/E1R-response.json": {
+      "source_sha256": "0ceddb7fab634eeeb53e167eedf20d617799cbb2cbb76551ec69671eb041a6b4",
+      "public_sha256": "a7a60a840a4dbcde1d118b504e2cf74c328d6f09144552facb5e68b9cd3d626c"
+    },
+    "evidence/critic-horizon-20261028/results/E1R.json": {
+      "source_sha256": "e03dd99598a4da4f62bcaeac64a26cdc3ef7f93da9d1bf48328acc224c3bf81d",
+      "public_sha256": "688c5e73c07d97624fa173b47d1a83b2c63b4865a8bf97b9f0b0d83e7005e629"
+    },
+    "evidence/critic-horizon-20261028/results/H1.json": {
+      "source_sha256": "de9b620512517189c6a3d7d2d557af0101211db24b7d9d0b2dd6f08ef0f7412c",
+      "public_sha256": "7b181979105e149eece5323d9d955a2f439ba7b6081da18ae072127d363adcbb"
+    },
+    "evidence/critic-horizon-20261028/results/H2.json": {
+      "source_sha256": "1683179dc1c35bc81ee087dbaf73dc24a361dd6e2c0bd721ef0d7592df0a9ed4",
+      "public_sha256": "f621428dc6fc7fd8dc45c4278ffd6934281b6ed1f0d308f9b7dd5149a86a0422"
+    },
+    "evidence/critic-horizon-20261028/results/pilot-H1.json": {
+      "source_sha256": "7de14c71612e594ad110ad07dd8450177998a8d0e6b8a44f35da7159e01eadd7",
+      "public_sha256": "0e22f154436e528fdac146f288c6c8130c1688210fe354b227ce7760b9072119"
+    },
+    "evidence/critic-horizon-20261028/results/S-R5-s3.json": {
+      "source_sha256": "bde41eb6f89de8813e4b5a5221c62297c6b9fc4bdaa90d9a1d4fc6ef7eddd7db",
+      "public_sha256": "50401c7117461d9f03e3b22adb025f52dffc96075c93d4ed83c576765e3f6620"
+    },
+    "evidence/critic-horizon-20261028/results/S-R5-s4.json": {
+      "source_sha256": "4206f108ab6a7177d2b221411b8e6f6d283e051f91254594ab82daa5ff60d6bb",
+      "public_sha256": "1ea30f77cfb6a36bb28f1fbed604a3e986950032df7fd3b64b470b8d7464b45b"
+    },
+    "evidence/critic-horizon-20261028/results/S-R5-s5.json": {
+      "source_sha256": "ae27748dac77d977a56a722d2a2c9634a6185be54269c7e9fb23b2ac748c06b2",
+      "public_sha256": "a06574ae09d00d9c6076524208afe6b821531519183d7f30971e72bb3a55e713"
+    }
+  },
+  "limits": [
+    "One source dataset and source policy seed. Sampler repeats are not independent training seeds.",
+    "Historical actor BN evolves in critic-only; target critic scopes overlap as in the source.",
+    "No online gate or policy-at-stop implementation was deployed. The earlier safe-learning draft remains isolated.",
+    "No model tensors, replay or packet logs were downloaded. E1R NPZ remains on the learner."
+  ],
+  "historical_local_validation": "local-validation.json records the earlier pre-launch tool review; actual runs supersede its NOT_RUN state"
+}

@@ -1,0 +1,74 @@
+{
+  "status": "REGISTERED_FINITE_OFFLINE",
+  "base_commit": "ec9bdf65fc008e8637af5f4a4fa9b936fbb2ffbc",
+  "scope": "One learner; historical data; local TF Session only; no TCP, TF Server, candidate checkpoint, sysctl or actor deployment",
+  "max_wall_seconds": 900,
+  "jobs": [
+    {
+      "id": "pilot-H1",
+      "job": "H1",
+      "updates": 10,
+      "max_seconds": 90
+    },
+    {
+      "id": "E1R",
+      "job": "E1R",
+      "max_seconds": 90
+    },
+    {
+      "id": "H1",
+      "job": "H1",
+      "updates": 40000,
+      "max_seconds": 420
+    },
+    {
+      "id": "H2",
+      "job": "H2",
+      "updates": 10000,
+      "max_seconds": 150
+    },
+    {
+      "id": "S-R5-s3",
+      "arm": "R5",
+      "seed": 3,
+      "max_seconds": 90
+    },
+    {
+      "id": "S-R5-s4",
+      "arm": "R5",
+      "seed": 4,
+      "max_seconds": 90
+    },
+    {
+      "id": "S-R5-s5",
+      "arm": "R5",
+      "seed": 5,
+      "max_seconds": 90
+    }
+  ],
+  "retry_policy": "No job retries; no online experiment automatically follows",
+  "predictions": {
+    "H1_penalized_first_nonpositive": {
+      "50": [
+        3000,
+        9000
+      ],
+      "100": [
+        6000,
+        18000
+      ],
+      "200": [
+        12000,
+        35000
+      ]
+    },
+    "H2": "Compare recorded sign intervals against H1 divided by five; not a Q reliability criterion",
+    "S": "Top5% state shifts predominantly negative R20/R50 penalized; correlation descriptive",
+    "E1R": "Require no clipping/gaps and input policy identity before randomized-innovation interpretation; HAC intervals; no persistent-action causal claim"
+  },
+  "input_attachments": {
+    "base-health-roadmap-2026-10-27.md": "d616a8741f86a67565b8b3b86ec09f41435aa3642866d13005af64c2a340be81",
+    "canopy-critic-horizon-ec9bdf6.patch": "f3ed59d9829b5293050cff00be4fb97a21df8a143f4659c071408fd0803c98a8"
+  },
+  "verified_source_commit": "7d97c0da245cf33f930c971ca581efe48306d259"
+}

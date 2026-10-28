@@ -1,8 +1,8 @@
 # Canopy：baseline与两种MTP双动作实现
 
-本仓库保存三个原始交付实现、选定模型、训练/评测框架，以及后续基线与双动作研究的代码和证据。**截至2026-10-27，研究仍为PARTIAL：新的Orca基座未通过多场景验收，Canopy正式训练中途按用户要求暂停，双动作模型尚未证明稳定的性能—CPU优势。**
+本仓库保存三个原始交付实现、选定模型、训练/评测框架，以及后续基线与双动作研究的代码和证据。**截至2026-10-28，研究仍为PARTIAL：新的Orca基座未通过多场景验收，Canopy正式训练中途按用户要求暂停，双动作模型尚未证明稳定的性能—CPU优势。**
 
-最新审阅入口是[研究交接](docs/RESEARCH_REVIEW_BRIEF.md)。 最新完成[真实TF首批更新取证](docs/SCALAR_FIRST_UPDATES_DIAGNOSIS.md)：16个离线case复现快速失稳，冻结BN/仅校准都不足；校准＋低学习率更稳定，但局部状态仍有较大偏移。[完整结果](evidence/scalar-first-updates-20261027/final-analysis.json)保留严格逐位等值失败及未通过预测；没有新TCP实验或合格基座。以下L1为此前历史。最新[Orca单动作有限学习L1](docs/SCALAR_LIMITED_LEARNING_PLAN.md)在24 actor零优化检查通过后，28,513条真实经验时因百万窗口安全停止；14 actor触发，原计划110次冻结评测全部NOT_RUN。没有新增合格基座或双动作性能—CPU收益。[48条actor连接结果](evidence/scalar-limited-learning-20261027/actor-outcomes.csv)、[机器可读结论](evidence/scalar-limited-learning-20261027/final-results.json)及[TF/BN同输入诊断](evidence/scalar-limited-learning-20261027/tf-postmortem.json)完整保留失败。最终checkpoint在排空更新后偏负，不能代替在线正饱和时的策略快照。
+最新审阅入口是[研究交接](docs/RESEARCH_REVIEW_BRIEF.md)。 最新完成[critic视野与逐状态离线检查](docs/SCALAR_BASE_ROADMAP.md)：H1/H2、E1R和三个R5重跑全部完成，R200翻号早于预测，最大偏移主要来自连接首条自由态；[原始记录及反证](evidence/critic-horizon-20261028/final-analysis.json)已保留。没有新TCP、候选模型或性能收益，L2未启动。以下为历史阶段。 最新完成[真实TF首批更新取证](docs/SCALAR_FIRST_UPDATES_DIAGNOSIS.md)：16个离线case复现快速失稳，冻结BN/仅校准都不足；校准＋低学习率更稳定，但局部状态仍有较大偏移。[完整结果](evidence/scalar-first-updates-20261027/final-analysis.json)保留严格逐位等值失败及未通过预测；没有新TCP实验或合格基座。以下L1为此前历史。最新[Orca单动作有限学习L1](docs/SCALAR_LIMITED_LEARNING_PLAN.md)在24 actor零优化检查通过后，28,513条真实经验时因百万窗口安全停止；14 actor触发，原计划110次冻结评测全部NOT_RUN。没有新增合格基座或双动作性能—CPU收益。[48条actor连接结果](evidence/scalar-limited-learning-20261027/actor-outcomes.csv)、[机器可读结论](evidence/scalar-limited-learning-20261027/final-results.json)及[TF/BN同输入诊断](evidence/scalar-limited-learning-20261027/tf-postmortem.json)完整保留失败。最终checkpoint在排空更新后偏负，不能代替在线正饱和时的策略快照。
 
 此前[累计探索/缓冲诊断](docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md)、[双向IPC/初始化诊断](tools/scalar_ipc_diagnostic/README.md)、[E2接管诊断](tools/e2_handover/README.md)保留全部结果。原始快照tag `consolidated-20261018` 和51个选定模型文件未变；归档源码不意味着论文复现或新模型合格。
 
