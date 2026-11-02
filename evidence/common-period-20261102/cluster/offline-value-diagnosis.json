@@ -1,0 +1,143 @@
+{
+  "status": "READ_ONLY_DIAGNOSIS",
+  "sample_states": 3840,
+  "sampling": "32 retained real rows per training actor and executed period, independent of observed outputs; not development network-policy evaluation",
+  "periods": [
+    {
+      "period_ms": 20,
+      "policy_action_mean": -0.0074542006477713585,
+      "saturation": 0.0421875,
+      "Q_mean": -60.17225646972656,
+      "Q_std": 34.45315170288086,
+      "Q1_Q2_abs_difference": 2.9500041007995605,
+      "N_mean": 180.41041564941406,
+      "N_min": 178.98568725585938,
+      "N_max": 181.4397430419922
+    },
+    {
+      "period_ms": 40,
+      "policy_action_mean": -0.048603739589452744,
+      "saturation": 0.043229166666666666,
+      "Q_mean": -42.63832092285156,
+      "Q_std": 32.85481262207031,
+      "Q1_Q2_abs_difference": 2.741610527038574,
+      "N_mean": 94.73616027832031,
+      "N_min": 94.1962890625,
+      "N_max": 95.24724578857422
+    },
+    {
+      "period_ms": 80,
+      "policy_action_mean": -0.08984579890966415,
+      "saturation": 0.04401041666666667,
+      "Q_mean": -28.33415985107422,
+      "Q_std": 31.9642333984375,
+      "Q1_Q2_abs_difference": 2.7302842140197754,
+      "N_mean": 48.74031448364258,
+      "N_min": 48.38419723510742,
+      "N_max": 49.037696838378906
+    },
+    {
+      "period_ms": 120,
+      "policy_action_mean": -0.1139453798532486,
+      "saturation": 0.04401041666666667,
+      "Q_mean": -21.707914352416992,
+      "Q_std": 32.17432403564453,
+      "Q1_Q2_abs_difference": 2.981579303741455,
+      "N_mean": 32.95085906982422,
+      "N_min": 32.679988861083984,
+      "N_max": 33.165218353271484
+    },
+    {
+      "period_ms": 160,
+      "policy_action_mean": -0.1310136765241623,
+      "saturation": 0.04505208333333333,
+      "Q_mean": -17.70807647705078,
+      "Q_std": 32.661434173583984,
+      "Q1_Q2_abs_difference": 3.394707679748535,
+      "N_mean": 24.962535858154297,
+      "N_min": 24.71495246887207,
+      "N_max": 25.15572738647461
+    }
+  ],
+  "preferences": [
+    {
+      "penalty": 0,
+      "proportion_by_period": {
+        "20": 0.030729166666666665,
+        "40": 0.07395833333333333,
+        "80": 0.09505208333333333,
+        "120": 0.04401041666666667,
+        "160": 0.75625
+      }
+    },
+    {
+      "penalty": 0.005,
+      "proportion_by_period": {
+        "20": 0.02890625,
+        "40": 0.07265625,
+        "80": 0.0953125,
+        "120": 0.04505208333333333,
+        "160": 0.7580729166666667
+      }
+    },
+    {
+      "penalty": 0.01,
+      "proportion_by_period": {
+        "20": 0.026302083333333334,
+        "40": 0.07057291666666667,
+        "80": 0.0984375,
+        "120": 0.045572916666666664,
+        "160": 0.7591145833333334
+      }
+    },
+    {
+      "penalty": 0.02,
+      "proportion_by_period": {
+        "20": 0.022395833333333334,
+        "40": 0.06953125,
+        "80": 0.1,
+        "120": 0.04635416666666667,
+        "160": 0.76171875
+      }
+    },
+    {
+      "penalty": 0.05,
+      "proportion_by_period": {
+        "20": 0.0125,
+        "40": 0.06171875,
+        "80": 0.103125,
+        "120": 0.05260416666666667,
+        "160": 0.7700520833333333
+      }
+    },
+    {
+      "penalty": 0.1,
+      "proportion_by_period": {
+        "20": 0.0,
+        "40": 0.05651041666666667,
+        "80": 0.09661458333333334,
+        "120": 0.06015625,
+        "160": 0.78671875
+      }
+    }
+  ],
+  "conditional_action_range_mean": 0.12355947494506836,
+  "deterministic_online_Bellman_residuals": [
+    {
+      "mean": 0.9036101698875427,
+      "rms": 4.991424083709717
+    },
+    {
+      "mean": 0.7837773561477661,
+      "rms": 4.901223659515381
+    }
+  ],
+  "N_online_Bellman_residual": {
+    "mean": -0.0013207937590777874,
+    "rms": 0.04333390295505524
+  },
+  "variables_unchanged": true,
+  "optimizer_operations_executed": 0,
+  "new_TCP_connections": 0,
+  "limitation": "Off-policy retained states and one-step residuals cannot identify true value bias, switching accuracy or selector performance; no fit correction and no B0 evaluation updates performed"
+}

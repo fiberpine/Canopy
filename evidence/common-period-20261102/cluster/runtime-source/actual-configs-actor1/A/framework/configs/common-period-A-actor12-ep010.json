@@ -1,0 +1,4382 @@
+{
+  "seed": 141240,
+  "num_actors": 24,
+  "steps_per_actor": 1000000,
+  "memsize": 150000,
+  "sampler": "balanced_actor",
+  "warmup": 12288,
+  "update_ratio": 0.1,
+  "reward_mode": "raw",
+  "LOSS_TYPE": "MSE",
+  "control_period_ms": 20,
+  "actor_hosts": [
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3,
+    0,
+    1,
+    2,
+    3
+  ],
+  "direct_actor_session": true,
+  "tf_threads": 4,
+  "optimizer_sleep_ms": 0,
+  "target_no_fetch": false,
+  "serialized_start": true,
+  "instrument_timing": true,
+  "profile_stages": true,
+  "checkpoint_interval": 25000,
+  "exploration_std": 0.2,
+  "capacity_only": false,
+  "timeout_s": 3600,
+  "shutdown_barrier_s": 240,
+  "model_source": "Fine-tune same86 true observation/action-clock prior /home/experiment/orca-interval-accounting-20261015-205000/checkpoints/v28-acked900/step-283381; time columns preserved; freshAdam/replay/counters/TCP, not continuousresume or old20ms migration; V27 explicit96 state extension, zero new input weights from healthy86 prior; freshAdam/replay; features rates; no runtime teacher/fallback",
+  "backend": "moving_stats",
+  "bn_relevant_only": true,
+  "require_coverage_gate": true,
+  "minimum_enqueued_per_actor": 512,
+  "collapse_guard_after_samples": 1500000,
+  "collapse_guard_seconds": 90,
+  "evaluation_reserve_s": 90,
+  "capacity_settle_s": 65,
+  "target_bn_consistent": true,
+  "joint_control": true,
+  "mtp_min_ms": 20,
+  "mtp_max_ms": 160,
+  "gamma": 0.995,
+  "decision_cost": 0,
+  "fixed_mtp_ms": null,
+  "configuration_notes": "Same86 observed-interval reward/SMDP and10frame ages; window/critics/BN copied from declared sameclock prior; online/target time reset only when reset_matching_time_head is true. FreshAdam/replay/counters, realperiod+critic calibration gate; privateIID probes only during training, purepolicy recorded; static diagnosticgraph. V27 preserves original86 prefix and appends per-frame RTT sample rates normalized by actual elapsed time/cwnd; same original reward; new state schema, not blind oldweights deployment.",
+  "update_credit_basis": "physical_exposure",
+  "updates_per_base20ms": 0.08,
+  "startup_probe_seconds": 0,
+  "warmup_min_physical_seconds": 3600,
+  "health_guard_after_critic_updates": 15000,
+  "health_guard_seconds": 90,
+  "window_policy_mode": "staged_joint",
+  "frozen_teacher_schema": "joint72",
+  "timing_policy_mode": "learned",
+  "timing_init_ms": 80,
+  "timing_calibration_periods_ms": [
+    20,
+    40,
+    80,
+    120,
+    160
+  ],
+  "timing_critic_calibration_updates": 5000,
+  "timing_min_retained_per_period": 128,
+  "timing_action_health_guard": false,
+  "timing_health_after_actor_updates": 10000,
+  "timing_health_flat_seconds": 90,
+  "period_bank_enabled": true,
+  "period_bank_fraction": 0.25,
+  "period_bank_rows_per_bin": 128,
+  "period_bank_retention": "reservoir",
+  "native_clock_mode": "sample",
+  "reader_parse_mode": "fast",
+  "time_head_nonlinearity": "softsign",
+  "timing_context_features": true,
+  "timing_context_tau_s": 2.0,
+  "joint_state_dim": 149,
+  "decision_observation_clock": true,
+  "initialize_joint_from_scratch": false,
+  "reward_sampling_semantics": "observed_interval_orca_density",
+  "pretrained_window_health_guard": true,
+  "matching_clock_prior_checkpoint": "@PACKAGE@/models/prior-v28/model",
+  "wide_period_probe_probability": 0.1,
+  "reset_matching_time_head": false,
+  "stop_file": "/home/experiment/orca-common-period-cluster-20261102/A/host/STOP",
+  "server_binary": "/home/experiment/orca-common-period-cluster-20261102/A/framework/native-v28/orca-server-joint-mtp",
+  "absolute_deadline_epoch": 1793640178.6540716,
+  "fixed_action": null,
+  "fixed_period_train_window": false,
+  "utility_normalization": "observed_peak",
+  "time_statistics_v27": true,
+  "time_statistics_mode": "rates",
+  "interval_rate_v28": "acked_bytes",
+  "scheduled_observation_v30": true,
+  "feedback_context_v31": true,
+  "feedback_context_mode": "feedback",
+  "code_commit": "774577a9c44d07c62b9d6e6c408d4220b7248e9b",
+  "learner_endpoint": "127.0.0.1:45000",
+  "actor_port_base": 22500,
+  "connection_reset_seconds": 0,
+  "connection_reset_stagger_seconds": 0.5,
+  "framework": "mtpjoint",
+  "checkpoint": "/home/experiment/orca-release-current/models/mtpjoint/model",
+  "method": "canopy",
+  "evaluation_entry": "repair_evaluate.py",
+  "no_training": false,
+  "baseline_native_startup": null,
+  "trace": "v14-mixed_timescale24-train-141240",
+  "family": "mixed_timescale",
+  "kind": "synthetic",
+  "peak_mbps": 24,
+  "nominal_mbps": 24,
+  "packet_bytes": 1504,
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 10000,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 10000,
+      "end_ms": 17200,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 17200,
+      "end_ms": 17440,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 17440,
+      "end_ms": 17680,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 17680,
+      "end_ms": 17800,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 17800,
+      "end_ms": 17960,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 17960,
+      "end_ms": 18020,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 18020,
+      "end_ms": 18420,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 18420,
+      "end_ms": 18500,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 18500,
+      "end_ms": 18900,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 18900,
+      "end_ms": 19900,
+      "start_ratio": 10000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 19900,
+      "end_ms": 21900,
+      "start_ratio": 4000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 21900,
+      "end_ms": 27960,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 27960,
+      "end_ms": 28080,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 28080,
+      "end_ms": 28320,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 28320,
+      "end_ms": 28560,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 28560,
+      "end_ms": 28720,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 28720,
+      "end_ms": 32720,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 32720,
+      "end_ms": 34720,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 34720,
+      "end_ms": 39100,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 39100,
+      "end_ms": 39220,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 39220,
+      "end_ms": 39380,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 39380,
+      "end_ms": 39500,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 39500,
+      "end_ms": 39900,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 39900,
+      "end_ms": 43900,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 43900,
+      "end_ms": 45900,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 45900,
+      "end_ms": 49360,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 49360,
+      "end_ms": 49420,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 49420,
+      "end_ms": 49580,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 49580,
+      "end_ms": 49640,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 49640,
+      "end_ms": 49880,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 49880,
+      "end_ms": 51880,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 51880,
+      "end_ms": 53880,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 53880,
+      "end_ms": 58360,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 58360,
+      "end_ms": 58480,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 58480,
+      "end_ms": 58880,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 58880,
+      "end_ms": 59000,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 59000,
+      "end_ms": 59160,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 59160,
+      "end_ms": 59400,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 59400,
+      "end_ms": 59560,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 59560,
+      "end_ms": 60560,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 60560,
+      "end_ms": 61160,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 61160,
+      "end_ms": 66940,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 66940,
+      "end_ms": 67180,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 67180,
+      "end_ms": 67340,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 67340,
+      "end_ms": 67400,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 67400,
+      "end_ms": 67800,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 67800,
+      "end_ms": 67920,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 67920,
+      "end_ms": 68320,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 68320,
+      "end_ms": 68560,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 68560,
+      "end_ms": 68720,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 68720,
+      "end_ms": 72720,
+      "start_ratio": 10000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 72720,
+      "end_ms": 74720,
+      "start_ratio": 4000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 74720,
+      "end_ms": 78240,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 78240,
+      "end_ms": 78480,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 78480,
+      "end_ms": 78880,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 78880,
+      "end_ms": 79120,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 79120,
+      "end_ms": 79280,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 79280,
+      "end_ms": 79340,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 79340,
+      "end_ms": 79580,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 79580,
+      "end_ms": 81580,
+      "start_ratio": 10000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 81580,
+      "end_ms": 85580,
+      "start_ratio": 4000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 85580,
+      "end_ms": 94180,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 94180,
+      "end_ms": 94300,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 94300,
+      "end_ms": 94460,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 94460,
+      "end_ms": 94580,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 94580,
+      "end_ms": 94740,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 94740,
+      "end_ms": 94860,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 94860,
+      "end_ms": 95260,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 95260,
+      "end_ms": 95340,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 95340,
+      "end_ms": 95500,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 95500,
+      "end_ms": 96500,
+      "start_ratio": 10000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 96500,
+      "end_ms": 98500,
+      "start_ratio": 4000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 98500,
+      "end_ms": 105360,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 105360,
+      "end_ms": 105600,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 105600,
+      "end_ms": 106000,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 106000,
+      "end_ms": 106060,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 106060,
+      "end_ms": 106220,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 106220,
+      "end_ms": 106280,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 106280,
+      "end_ms": 106680,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 106680,
+      "end_ms": 110680,
+      "start_ratio": 10000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 110680,
+      "end_ms": 114680,
+      "start_ratio": 4000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 114680,
+      "end_ms": 118600,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 118600,
+      "end_ms": 118680,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 118680,
+      "end_ms": 118840,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 118840,
+      "end_ms": 119080,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 119080,
+      "end_ms": 119320,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 119320,
+      "end_ms": 123320,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 123320,
+      "end_ms": 125320,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 125320,
+      "end_ms": 131080,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 131080,
+      "end_ms": 131160,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 131160,
+      "end_ms": 131320,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 131320,
+      "end_ms": 131440,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 131440,
+      "end_ms": 131600,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 131600,
+      "end_ms": 131680,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 131680,
+      "end_ms": 131920,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 131920,
+      "end_ms": 132000,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 132000,
+      "end_ms": 132160,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 132160,
+      "end_ms": 136160,
+      "start_ratio": 10000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 136160,
+      "end_ms": 140160,
+      "start_ratio": 4000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 140160,
+      "end_ms": 144700,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 144700,
+      "end_ms": 144940,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 144940,
+      "end_ms": 145180,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 145180,
+      "end_ms": 145260,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 145260,
+      "end_ms": 145420,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 145420,
+      "end_ms": 145500,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 145500,
+      "end_ms": 145660,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 145660,
+      "end_ms": 149660,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 149660,
+      "end_ms": 151660,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 151660,
+      "end_ms": 160500,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 160500,
+      "end_ms": 160560,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 160560,
+      "end_ms": 160720,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 160720,
+      "end_ms": 160960,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 160960,
+      "end_ms": 161120,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 161120,
+      "end_ms": 161200,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 161200,
+      "end_ms": 161360,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 161360,
+      "end_ms": 162360,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 162360,
+      "end_ms": 166360,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 166360,
+      "end_ms": 170260,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 170260,
+      "end_ms": 170320,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 170320,
+      "end_ms": 170480,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 170480,
+      "end_ms": 170540,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 170540,
+      "end_ms": 170940,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 170940,
+      "end_ms": 174940,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 174940,
+      "end_ms": 175540,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 175540,
+      "end_ms": 183780,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 183780,
+      "end_ms": 183900,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 183900,
+      "end_ms": 184060,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 184060,
+      "end_ms": 184140,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 184140,
+      "end_ms": 184300,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 184300,
+      "end_ms": 184380,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 184380,
+      "end_ms": 184620,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 184620,
+      "end_ms": 184700,
+      "start_ratio": 4000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 184700,
+      "end_ms": 185100,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 185100,
+      "end_ms": 186100,
+      "start_ratio": 10000,
+      "end_ratio": 4000
+    },
+    {
+      "start_ms": 186100,
+      "end_ms": 190100,
+      "start_ratio": 4000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 190100,
+      "end_ms": 193460,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 193460,
+      "end_ms": 193580,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 193580,
+      "end_ms": 193980,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 193980,
+      "end_ms": 194100,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 194100,
+      "end_ms": 194500,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 194500,
+      "end_ms": 195500,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 195500,
+      "end_ms": 199500,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 199500,
+      "end_ms": 208340,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 208340,
+      "end_ms": 208580,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 208580,
+      "end_ms": 208820,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 208820,
+      "end_ms": 208900,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 208900,
+      "end_ms": 209060,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 209060,
+      "end_ms": 211060,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 211060,
+      "end_ms": 211660,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 211660,
+      "end_ms": 220460,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 220460,
+      "end_ms": 220520,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 220520,
+      "end_ms": 220680,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 220680,
+      "end_ms": 220800,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 220800,
+      "end_ms": 221200,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 221200,
+      "end_ms": 221280,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 221280,
+      "end_ms": 221520,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 221520,
+      "end_ms": 221760,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 221760,
+      "end_ms": 221920,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 221920,
+      "end_ms": 225920,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 225920,
+      "end_ms": 226520,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 226520,
+      "end_ms": 232720,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 232720,
+      "end_ms": 232840,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 232840,
+      "end_ms": 233000,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 233000,
+      "end_ms": 233120,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 233120,
+      "end_ms": 233280,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 233280,
+      "end_ms": 233520,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 233520,
+      "end_ms": 233760,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 233760,
+      "end_ms": 233880,
+      "start_ratio": 2500,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 233880,
+      "end_ms": 234120,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 234120,
+      "end_ms": 236120,
+      "start_ratio": 10000,
+      "end_ratio": 2500
+    },
+    {
+      "start_ms": 236120,
+      "end_ms": 239000,
+      "start_ratio": 2500,
+      "end_ratio": 10000
+    },
+    {
+      "start_ms": 239000,
+      "end_ms": 240000,
+      "start_ratio": 10000,
+      "end_ratio": 10000
+    }
+  ],
+  "split": "train",
+  "source": "Deterministic integer1ms service; independent event sequences, not phase rotation",
+  "event_fingerprint": "de06b83863ebfcf72f6ec73553507ee03b2e46a1e3941859cddcb0aac4f85381",
+  "trace_sha256": "c1a915d23f397a0a485b70bf62e30c8dac5a6bdbf6af7eb870914dd1bc0c9fc1",
+  "packets": 403330,
+  "capacity_mbps": 20.220277333333332,
+  "trace_period_ms": 240000,
+  "nominal_period_ms": 240000,
+  "nominal_integrated_capacity_mbps": 20.2203,
+  "residual_bit_milliseconds": 5440000,
+  "quantization": "integer1ms, no invented tail packets; no wrap during900s run",
+  "condition": "V17-mixed_timescale24-R20",
+  "base_rtt_ms": 20,
+  "delay_ms": 10.0,
+  "queue_packets": 20,
+  "queue_bdp": 0.5,
+  "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+  "policy_inverse_rtt_noise": 0,
+  "observation_noise_seed": 142141,
+  "episode_environments": [
+    {
+      "trace": "v14-mixed_timescale24-train-141240",
+      "family": "mixed_timescale",
+      "kind": "synthetic",
+      "seed": 141240,
+      "peak_mbps": 24,
+      "nominal_mbps": 24,
+      "packet_bytes": 1504,
+      "segments": [
+        {
+          "start_ms": 0,
+          "end_ms": 10000,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 10000,
+          "end_ms": 17200,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 17200,
+          "end_ms": 17440,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 17440,
+          "end_ms": 17680,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 17680,
+          "end_ms": 17800,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 17800,
+          "end_ms": 17960,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 17960,
+          "end_ms": 18020,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 18020,
+          "end_ms": 18420,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 18420,
+          "end_ms": 18500,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 18500,
+          "end_ms": 18900,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 18900,
+          "end_ms": 19900,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 19900,
+          "end_ms": 21900,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 21900,
+          "end_ms": 27960,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 27960,
+          "end_ms": 28080,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 28080,
+          "end_ms": 28320,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 28320,
+          "end_ms": 28560,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 28560,
+          "end_ms": 28720,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 28720,
+          "end_ms": 32720,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 32720,
+          "end_ms": 34720,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 34720,
+          "end_ms": 39100,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 39100,
+          "end_ms": 39220,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 39220,
+          "end_ms": 39380,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 39380,
+          "end_ms": 39500,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 39500,
+          "end_ms": 39900,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 39900,
+          "end_ms": 43900,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 43900,
+          "end_ms": 45900,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 45900,
+          "end_ms": 49360,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 49360,
+          "end_ms": 49420,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 49420,
+          "end_ms": 49580,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 49580,
+          "end_ms": 49640,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 49640,
+          "end_ms": 49880,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 49880,
+          "end_ms": 51880,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 51880,
+          "end_ms": 53880,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 53880,
+          "end_ms": 58360,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 58360,
+          "end_ms": 58480,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 58480,
+          "end_ms": 58880,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 58880,
+          "end_ms": 59000,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 59000,
+          "end_ms": 59160,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 59160,
+          "end_ms": 59400,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 59400,
+          "end_ms": 59560,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 59560,
+          "end_ms": 60560,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 60560,
+          "end_ms": 61160,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 61160,
+          "end_ms": 66940,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 66940,
+          "end_ms": 67180,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 67180,
+          "end_ms": 67340,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 67340,
+          "end_ms": 67400,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 67400,
+          "end_ms": 67800,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 67800,
+          "end_ms": 67920,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 67920,
+          "end_ms": 68320,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 68320,
+          "end_ms": 68560,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 68560,
+          "end_ms": 68720,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 68720,
+          "end_ms": 72720,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 72720,
+          "end_ms": 74720,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 74720,
+          "end_ms": 78240,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 78240,
+          "end_ms": 78480,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 78480,
+          "end_ms": 78880,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 78880,
+          "end_ms": 79120,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 79120,
+          "end_ms": 79280,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 79280,
+          "end_ms": 79340,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 79340,
+          "end_ms": 79580,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 79580,
+          "end_ms": 81580,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 81580,
+          "end_ms": 85580,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 85580,
+          "end_ms": 94180,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 94180,
+          "end_ms": 94300,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 94300,
+          "end_ms": 94460,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 94460,
+          "end_ms": 94580,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 94580,
+          "end_ms": 94740,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 94740,
+          "end_ms": 94860,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 94860,
+          "end_ms": 95260,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 95260,
+          "end_ms": 95340,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 95340,
+          "end_ms": 95500,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 95500,
+          "end_ms": 96500,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 96500,
+          "end_ms": 98500,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 98500,
+          "end_ms": 105360,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 105360,
+          "end_ms": 105600,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 105600,
+          "end_ms": 106000,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 106000,
+          "end_ms": 106060,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 106060,
+          "end_ms": 106220,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 106220,
+          "end_ms": 106280,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 106280,
+          "end_ms": 106680,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 106680,
+          "end_ms": 110680,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 110680,
+          "end_ms": 114680,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 114680,
+          "end_ms": 118600,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 118600,
+          "end_ms": 118680,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 118680,
+          "end_ms": 118840,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 118840,
+          "end_ms": 119080,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 119080,
+          "end_ms": 119320,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 119320,
+          "end_ms": 123320,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 123320,
+          "end_ms": 125320,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 125320,
+          "end_ms": 131080,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 131080,
+          "end_ms": 131160,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 131160,
+          "end_ms": 131320,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 131320,
+          "end_ms": 131440,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 131440,
+          "end_ms": 131600,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 131600,
+          "end_ms": 131680,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 131680,
+          "end_ms": 131920,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 131920,
+          "end_ms": 132000,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 132000,
+          "end_ms": 132160,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 132160,
+          "end_ms": 136160,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 136160,
+          "end_ms": 140160,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 140160,
+          "end_ms": 144700,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 144700,
+          "end_ms": 144940,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 144940,
+          "end_ms": 145180,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 145180,
+          "end_ms": 145260,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 145260,
+          "end_ms": 145420,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 145420,
+          "end_ms": 145500,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 145500,
+          "end_ms": 145660,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 145660,
+          "end_ms": 149660,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 149660,
+          "end_ms": 151660,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 151660,
+          "end_ms": 160500,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 160500,
+          "end_ms": 160560,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 160560,
+          "end_ms": 160720,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 160720,
+          "end_ms": 160960,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 160960,
+          "end_ms": 161120,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 161120,
+          "end_ms": 161200,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 161200,
+          "end_ms": 161360,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 161360,
+          "end_ms": 162360,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 162360,
+          "end_ms": 166360,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 166360,
+          "end_ms": 170260,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 170260,
+          "end_ms": 170320,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 170320,
+          "end_ms": 170480,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 170480,
+          "end_ms": 170540,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 170540,
+          "end_ms": 170940,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 170940,
+          "end_ms": 174940,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 174940,
+          "end_ms": 175540,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 175540,
+          "end_ms": 183780,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 183780,
+          "end_ms": 183900,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 183900,
+          "end_ms": 184060,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 184060,
+          "end_ms": 184140,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 184140,
+          "end_ms": 184300,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 184300,
+          "end_ms": 184380,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 184380,
+          "end_ms": 184620,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 184620,
+          "end_ms": 184700,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 184700,
+          "end_ms": 185100,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 185100,
+          "end_ms": 186100,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 186100,
+          "end_ms": 190100,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 190100,
+          "end_ms": 193460,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 193460,
+          "end_ms": 193580,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 193580,
+          "end_ms": 193980,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 193980,
+          "end_ms": 194100,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 194100,
+          "end_ms": 194500,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 194500,
+          "end_ms": 195500,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 195500,
+          "end_ms": 199500,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 199500,
+          "end_ms": 208340,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 208340,
+          "end_ms": 208580,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 208580,
+          "end_ms": 208820,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 208820,
+          "end_ms": 208900,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 208900,
+          "end_ms": 209060,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 209060,
+          "end_ms": 211060,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 211060,
+          "end_ms": 211660,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 211660,
+          "end_ms": 220460,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 220460,
+          "end_ms": 220520,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 220520,
+          "end_ms": 220680,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 220680,
+          "end_ms": 220800,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 220800,
+          "end_ms": 221200,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 221200,
+          "end_ms": 221280,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 221280,
+          "end_ms": 221520,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 221520,
+          "end_ms": 221760,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 221760,
+          "end_ms": 221920,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 221920,
+          "end_ms": 225920,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 225920,
+          "end_ms": 226520,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 226520,
+          "end_ms": 232720,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 232720,
+          "end_ms": 232840,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 232840,
+          "end_ms": 233000,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 233000,
+          "end_ms": 233120,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 233120,
+          "end_ms": 233280,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 233280,
+          "end_ms": 233520,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 233520,
+          "end_ms": 233760,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 233760,
+          "end_ms": 233880,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 233880,
+          "end_ms": 234120,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 234120,
+          "end_ms": 236120,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 236120,
+          "end_ms": 239000,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 239000,
+          "end_ms": 240000,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        }
+      ],
+      "split": "train",
+      "source": "Deterministic integer1ms service; independent event sequences, not phase rotation",
+      "event_fingerprint": "de06b83863ebfcf72f6ec73553507ee03b2e46a1e3941859cddcb0aac4f85381",
+      "trace_sha256": "c1a915d23f397a0a485b70bf62e30c8dac5a6bdbf6af7eb870914dd1bc0c9fc1",
+      "packets": 403330,
+      "capacity_mbps": 20.220277333333332,
+      "trace_period_ms": 240000,
+      "nominal_period_ms": 240000,
+      "nominal_integrated_capacity_mbps": 20.2203,
+      "residual_bit_milliseconds": 5440000,
+      "quantization": "integer1ms, no invented tail packets; no wrap during900s run",
+      "condition": "V17-mixed_timescale24-R20",
+      "base_rtt_ms": 20,
+      "delay_ms": 10.0,
+      "queue_packets": 20,
+      "queue_bdp": 0.5,
+      "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+      "policy_inverse_rtt_noise": 0,
+      "observation_noise_seed": 142141
+    },
+    {
+      "trace": "v14-mixed_timescale24-train-141241",
+      "family": "mixed_timescale",
+      "kind": "synthetic",
+      "seed": 141241,
+      "peak_mbps": 24,
+      "nominal_mbps": 24,
+      "packet_bytes": 1504,
+      "segments": [
+        {
+          "start_ms": 0,
+          "end_ms": 10000,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 10000,
+          "end_ms": 15720,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 15720,
+          "end_ms": 15780,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 15780,
+          "end_ms": 16020,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 16020,
+          "end_ms": 16260,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 16260,
+          "end_ms": 16660,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 16660,
+          "end_ms": 16720,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 16720,
+          "end_ms": 16960,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 16960,
+          "end_ms": 17200,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 17200,
+          "end_ms": 17360,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 17360,
+          "end_ms": 19360,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 19360,
+          "end_ms": 19960,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 19960,
+          "end_ms": 26880,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 26880,
+          "end_ms": 27000,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 27000,
+          "end_ms": 27160,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 27160,
+          "end_ms": 27400,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 27400,
+          "end_ms": 27640,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 27640,
+          "end_ms": 27720,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 27720,
+          "end_ms": 27880,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 27880,
+          "end_ms": 28120,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 28120,
+          "end_ms": 28520,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 28520,
+          "end_ms": 30520,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 30520,
+          "end_ms": 32520,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 32520,
+          "end_ms": 38640,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 38640,
+          "end_ms": 38880,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 38880,
+          "end_ms": 39120,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 39120,
+          "end_ms": 39200,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 39200,
+          "end_ms": 39360,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 39360,
+          "end_ms": 41360,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 41360,
+          "end_ms": 43360,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 43360,
+          "end_ms": 50260,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 50260,
+          "end_ms": 50500,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 50500,
+          "end_ms": 50740,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 50740,
+          "end_ms": 50980,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 50980,
+          "end_ms": 51140,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 51140,
+          "end_ms": 51380,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 51380,
+          "end_ms": 51780,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 51780,
+          "end_ms": 51900,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 51900,
+          "end_ms": 52140,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 52140,
+          "end_ms": 56140,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 56140,
+          "end_ms": 56740,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 56740,
+          "end_ms": 60020,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 60020,
+          "end_ms": 60080,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 60080,
+          "end_ms": 60320,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 60320,
+          "end_ms": 60400,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 60400,
+          "end_ms": 60800,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 60800,
+          "end_ms": 60880,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 60880,
+          "end_ms": 61040,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 61040,
+          "end_ms": 61120,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 61120,
+          "end_ms": 61280,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 61280,
+          "end_ms": 63280,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 63280,
+          "end_ms": 67280,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 67280,
+          "end_ms": 73620,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 73620,
+          "end_ms": 73680,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 73680,
+          "end_ms": 74080,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 74080,
+          "end_ms": 74200,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 74200,
+          "end_ms": 74360,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 74360,
+          "end_ms": 78360,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 78360,
+          "end_ms": 82360,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 82360,
+          "end_ms": 89480,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 89480,
+          "end_ms": 89540,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 89540,
+          "end_ms": 89700,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 89700,
+          "end_ms": 89940,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 89940,
+          "end_ms": 90180,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 90180,
+          "end_ms": 90260,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 90260,
+          "end_ms": 90420,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 90420,
+          "end_ms": 90540,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 90540,
+          "end_ms": 90700,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 90700,
+          "end_ms": 91700,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 91700,
+          "end_ms": 95700,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 95700,
+          "end_ms": 104060,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 104060,
+          "end_ms": 104180,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 104180,
+          "end_ms": 104420,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 104420,
+          "end_ms": 104540,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 104540,
+          "end_ms": 104700,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 104700,
+          "end_ms": 104940,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 104940,
+          "end_ms": 105100,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 105100,
+          "end_ms": 107100,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 107100,
+          "end_ms": 107700,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 107700,
+          "end_ms": 115600,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 115600,
+          "end_ms": 115680,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 115680,
+          "end_ms": 116080,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 116080,
+          "end_ms": 116200,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 116200,
+          "end_ms": 116440,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 116440,
+          "end_ms": 116520,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 116520,
+          "end_ms": 116680,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 116680,
+          "end_ms": 118680,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 118680,
+          "end_ms": 122680,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 122680,
+          "end_ms": 130640,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 130640,
+          "end_ms": 130880,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 130880,
+          "end_ms": 131040,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 131040,
+          "end_ms": 131160,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 131160,
+          "end_ms": 131320,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 131320,
+          "end_ms": 131400,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 131400,
+          "end_ms": 131640,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 131640,
+          "end_ms": 131720,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 131720,
+          "end_ms": 131880,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 131880,
+          "end_ms": 133880,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 133880,
+          "end_ms": 135880,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 135880,
+          "end_ms": 143080,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 143080,
+          "end_ms": 143160,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 143160,
+          "end_ms": 143400,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 143400,
+          "end_ms": 143520,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 143520,
+          "end_ms": 143760,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 143760,
+          "end_ms": 143820,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 143820,
+          "end_ms": 144220,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 144220,
+          "end_ms": 148220,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 148220,
+          "end_ms": 152220,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 152220,
+          "end_ms": 160360,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 160360,
+          "end_ms": 160420,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 160420,
+          "end_ms": 160580,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 160580,
+          "end_ms": 160700,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 160700,
+          "end_ms": 160940,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 160940,
+          "end_ms": 161000,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 161000,
+          "end_ms": 161400,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 161400,
+          "end_ms": 161460,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 161460,
+          "end_ms": 161860,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 161860,
+          "end_ms": 163860,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 163860,
+          "end_ms": 164460,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 164460,
+          "end_ms": 172740,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 172740,
+          "end_ms": 172860,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 172860,
+          "end_ms": 173100,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 173100,
+          "end_ms": 173180,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 173180,
+          "end_ms": 173340,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 173340,
+          "end_ms": 173420,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 173420,
+          "end_ms": 173820,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 173820,
+          "end_ms": 174820,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 174820,
+          "end_ms": 178820,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 178820,
+          "end_ms": 187600,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 187600,
+          "end_ms": 187660,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 187660,
+          "end_ms": 187820,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 187820,
+          "end_ms": 187880,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 187880,
+          "end_ms": 188040,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 188040,
+          "end_ms": 192040,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 192040,
+          "end_ms": 196040,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 196040,
+          "end_ms": 200180,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 200180,
+          "end_ms": 200420,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 200420,
+          "end_ms": 200580,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 200580,
+          "end_ms": 200820,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 200820,
+          "end_ms": 200980,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 200980,
+          "end_ms": 201100,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 201100,
+          "end_ms": 201260,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 201260,
+          "end_ms": 201380,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 201380,
+          "end_ms": 201620,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 201620,
+          "end_ms": 203620,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 203620,
+          "end_ms": 204220,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 204220,
+          "end_ms": 211000,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 211000,
+          "end_ms": 211240,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 211240,
+          "end_ms": 211480,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 211480,
+          "end_ms": 211600,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 211600,
+          "end_ms": 211840,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 211840,
+          "end_ms": 211920,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 211920,
+          "end_ms": 212320,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 212320,
+          "end_ms": 212380,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 212380,
+          "end_ms": 212620,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 212620,
+          "end_ms": 214620,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 214620,
+          "end_ms": 216620,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 216620,
+          "end_ms": 221060,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 221060,
+          "end_ms": 221300,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 221300,
+          "end_ms": 221540,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 221540,
+          "end_ms": 221600,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 221600,
+          "end_ms": 221840,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 221840,
+          "end_ms": 221920,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 221920,
+          "end_ms": 222320,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 222320,
+          "end_ms": 226320,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 226320,
+          "end_ms": 230320,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 230320,
+          "end_ms": 237220,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 237220,
+          "end_ms": 237300,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 237300,
+          "end_ms": 237700,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 237700,
+          "end_ms": 237760,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 237760,
+          "end_ms": 238160,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 238160,
+          "end_ms": 238400,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 238400,
+          "end_ms": 238640,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 238640,
+          "end_ms": 239000,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 239000,
+          "end_ms": 240000,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        }
+      ],
+      "split": "train",
+      "source": "Deterministic integer1ms service; independent event sequences, not phase rotation",
+      "event_fingerprint": "95980082a96848d0547db2a4d0adb4eff5aa8c2d87edb8ce3d0669344ddaff84",
+      "trace_sha256": "3d4d111c97c217ad771bdbb132b9cf97dcb349585eaaf7d3d5a8942ceb040d42",
+      "packets": 413676,
+      "capacity_mbps": 20.7389568,
+      "trace_period_ms": 240000,
+      "nominal_period_ms": 240000,
+      "nominal_integrated_capacity_mbps": 20.739,
+      "residual_bit_milliseconds": 10368000,
+      "quantization": "integer1ms, no invented tail packets; no wrap during900s run",
+      "condition": "V17-mixed_timescale24-R20",
+      "base_rtt_ms": 20,
+      "delay_ms": 10.0,
+      "queue_packets": 40,
+      "queue_bdp": 1.0,
+      "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+      "policy_inverse_rtt_noise": 0,
+      "observation_noise_seed": 142141
+    },
+    {
+      "trace": "v14-mixed_timescale24-train-141242",
+      "family": "mixed_timescale",
+      "kind": "synthetic",
+      "seed": 141242,
+      "peak_mbps": 24,
+      "nominal_mbps": 24,
+      "packet_bytes": 1504,
+      "segments": [
+        {
+          "start_ms": 0,
+          "end_ms": 10000,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 10000,
+          "end_ms": 14660,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 14660,
+          "end_ms": 14740,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 14740,
+          "end_ms": 15140,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 15140,
+          "end_ms": 15380,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 15380,
+          "end_ms": 15540,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 15540,
+          "end_ms": 17540,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 17540,
+          "end_ms": 19540,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 19540,
+          "end_ms": 24240,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 24240,
+          "end_ms": 24320,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 24320,
+          "end_ms": 24480,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 24480,
+          "end_ms": 24720,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 24720,
+          "end_ms": 25120,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 25120,
+          "end_ms": 25240,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 25240,
+          "end_ms": 25400,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 25400,
+          "end_ms": 26400,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 26400,
+          "end_ms": 27000,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 27000,
+          "end_ms": 31560,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 31560,
+          "end_ms": 31640,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 31640,
+          "end_ms": 31800,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 31800,
+          "end_ms": 31920,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 31920,
+          "end_ms": 32080,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 32080,
+          "end_ms": 32140,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 32140,
+          "end_ms": 32300,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 32300,
+          "end_ms": 34300,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 34300,
+          "end_ms": 36300,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 36300,
+          "end_ms": 39800,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 39800,
+          "end_ms": 39920,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 39920,
+          "end_ms": 40080,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 40080,
+          "end_ms": 40140,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 40140,
+          "end_ms": 40380,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 40380,
+          "end_ms": 40440,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 40440,
+          "end_ms": 40600,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 40600,
+          "end_ms": 44600,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 44600,
+          "end_ms": 46600,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 46600,
+          "end_ms": 51560,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 51560,
+          "end_ms": 51640,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 51640,
+          "end_ms": 51880,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 51880,
+          "end_ms": 51960,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 51960,
+          "end_ms": 52360,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 52360,
+          "end_ms": 52600,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 52600,
+          "end_ms": 52760,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 52760,
+          "end_ms": 56760,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 56760,
+          "end_ms": 58760,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 58760,
+          "end_ms": 65420,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 65420,
+          "end_ms": 65660,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 65660,
+          "end_ms": 65900,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 65900,
+          "end_ms": 66020,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 66020,
+          "end_ms": 66260,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 66260,
+          "end_ms": 66340,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 66340,
+          "end_ms": 66500,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 66500,
+          "end_ms": 70500,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 70500,
+          "end_ms": 74500,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 74500,
+          "end_ms": 80760,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 80760,
+          "end_ms": 80880,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 80880,
+          "end_ms": 81040,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 81040,
+          "end_ms": 81280,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 81280,
+          "end_ms": 81440,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 81440,
+          "end_ms": 81680,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 81680,
+          "end_ms": 82080,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 82080,
+          "end_ms": 86080,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 86080,
+          "end_ms": 86680,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 86680,
+          "end_ms": 91120,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 91120,
+          "end_ms": 91180,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 91180,
+          "end_ms": 91420,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 91420,
+          "end_ms": 91660,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 91660,
+          "end_ms": 91900,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 91900,
+          "end_ms": 95900,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 95900,
+          "end_ms": 99900,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 99900,
+          "end_ms": 108640,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 108640,
+          "end_ms": 108700,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 108700,
+          "end_ms": 108940,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 108940,
+          "end_ms": 109060,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 109060,
+          "end_ms": 109220,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 109220,
+          "end_ms": 109300,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 109300,
+          "end_ms": 109540,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 109540,
+          "end_ms": 109780,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 109780,
+          "end_ms": 110180,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 110180,
+          "end_ms": 112180,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 112180,
+          "end_ms": 114180,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 114180,
+          "end_ms": 120560,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 120560,
+          "end_ms": 120620,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 120620,
+          "end_ms": 120780,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 120780,
+          "end_ms": 120860,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 120860,
+          "end_ms": 121100,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 121100,
+          "end_ms": 123100,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 123100,
+          "end_ms": 125100,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 125100,
+          "end_ms": 132780,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 132780,
+          "end_ms": 132900,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 132900,
+          "end_ms": 133060,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 133060,
+          "end_ms": 133180,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 133180,
+          "end_ms": 133580,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 133580,
+          "end_ms": 133640,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 133640,
+          "end_ms": 133800,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 133800,
+          "end_ms": 133920,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 133920,
+          "end_ms": 134160,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 134160,
+          "end_ms": 136160,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 136160,
+          "end_ms": 140160,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 140160,
+          "end_ms": 144900,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 144900,
+          "end_ms": 144980,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 144980,
+          "end_ms": 145380,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 145380,
+          "end_ms": 145620,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 145620,
+          "end_ms": 146020,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 146020,
+          "end_ms": 150020,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 150020,
+          "end_ms": 154020,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 154020,
+          "end_ms": 162120,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 162120,
+          "end_ms": 162200,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 162200,
+          "end_ms": 162440,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 162440,
+          "end_ms": 162560,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 162560,
+          "end_ms": 162960,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 162960,
+          "end_ms": 164960,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 164960,
+          "end_ms": 165560,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 165560,
+          "end_ms": 172540,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 172540,
+          "end_ms": 172780,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 172780,
+          "end_ms": 173180,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 173180,
+          "end_ms": 173240,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 173240,
+          "end_ms": 173480,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 173480,
+          "end_ms": 173600,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 173600,
+          "end_ms": 173760,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 173760,
+          "end_ms": 174760,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 174760,
+          "end_ms": 176760,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 176760,
+          "end_ms": 184980,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 184980,
+          "end_ms": 185040,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 185040,
+          "end_ms": 185440,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 185440,
+          "end_ms": 185500,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 185500,
+          "end_ms": 185660,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 185660,
+          "end_ms": 185720,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 185720,
+          "end_ms": 185880,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 185880,
+          "end_ms": 186000,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 186000,
+          "end_ms": 186160,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 186160,
+          "end_ms": 190160,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 190160,
+          "end_ms": 194160,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 194160,
+          "end_ms": 201400,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 201400,
+          "end_ms": 201520,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 201520,
+          "end_ms": 201760,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 201760,
+          "end_ms": 201880,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 201880,
+          "end_ms": 202040,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 202040,
+          "end_ms": 202160,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 202160,
+          "end_ms": 202560,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 202560,
+          "end_ms": 202640,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 202640,
+          "end_ms": 203040,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 203040,
+          "end_ms": 204040,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 204040,
+          "end_ms": 204640,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 204640,
+          "end_ms": 209320,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 209320,
+          "end_ms": 209440,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 209440,
+          "end_ms": 209600,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 209600,
+          "end_ms": 209660,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 209660,
+          "end_ms": 210060,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 210060,
+          "end_ms": 210140,
+          "start_ratio": 2500,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 210140,
+          "end_ms": 210380,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 210380,
+          "end_ms": 214380,
+          "start_ratio": 10000,
+          "end_ratio": 2500
+        },
+        {
+          "start_ms": 214380,
+          "end_ms": 218380,
+          "start_ratio": 2500,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 218380,
+          "end_ms": 227380,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 227380,
+          "end_ms": 227620,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 227620,
+          "end_ms": 227860,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 227860,
+          "end_ms": 227980,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 227980,
+          "end_ms": 228380,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 228380,
+          "end_ms": 228440,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 228440,
+          "end_ms": 228600,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 228600,
+          "end_ms": 228660,
+          "start_ratio": 4000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 228660,
+          "end_ms": 228900,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 228900,
+          "end_ms": 230900,
+          "start_ratio": 10000,
+          "end_ratio": 4000
+        },
+        {
+          "start_ms": 230900,
+          "end_ms": 231500,
+          "start_ratio": 4000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 231500,
+          "end_ms": 239000,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        },
+        {
+          "start_ms": 239000,
+          "end_ms": 240000,
+          "start_ratio": 10000,
+          "end_ratio": 10000
+        }
+      ],
+      "split": "train",
+      "source": "Deterministic integer1ms service; independent event sequences, not phase rotation",
+      "event_fingerprint": "02a81c30dacde5a0e8267feeb858cb5c27e2aed71e6a0e99ec1afb835d7c656b",
+      "trace_sha256": "a7c9049d0dc23e7e00da3d1245355b8716d7b0316825d68d0f8493942bd94d17",
+      "packets": 409847,
+      "capacity_mbps": 20.546996266666667,
+      "trace_period_ms": 240000,
+      "nominal_period_ms": 240000,
+      "nominal_integrated_capacity_mbps": 20.547,
+      "residual_bit_milliseconds": 896000,
+      "quantization": "integer1ms, no invented tail packets; no wrap during900s run",
+      "condition": "V17-mixed_timescale24-R20",
+      "base_rtt_ms": 20,
+      "delay_ms": 10.0,
+      "queue_packets": 200,
+      "queue_bdp": 5.0,
+      "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+      "policy_inverse_rtt_noise": 0,
+      "observation_noise_seed": 142141
+    }
+  ],
+  "run_id": "common-period-A-actor12-ep010",
+  "seconds": 0,
+  "training_steps": 1000000000,
+  "physical_seconds_per_actor": 133.33964199999286,
+  "episode_control_seconds": 0,
+  "port": 26779,
+  "common_reward_config": {
+    "version": "throughput-times-delay-minus-loss-v1",
+    "denominator": "global",
+    "scale_bps": 6000000,
+    "delay_margin": 1.25,
+    "loss_coefficient": 5,
+    "fallback": "boundary_srtt"
+  },
+  "training_mode": true,
+  "interval_audit_v38": true,
+  "minimum_valid_feedback_samples": 5,
+  "feedback_completion_rule": "At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure"
+}

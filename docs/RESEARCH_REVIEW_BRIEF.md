@@ -1,3 +1,9 @@
+# 最新：共周期执行与 A 门槛（2026-11-02）
+
+[完整入口](COMMON_PERIOD_20261102.md)。A0/短准入通过，A 264次冻结0运行失败，门槛 FAIL_A；单seed，不称创新成功。按原门槛推进/停止，详见报告；旧研究及失败保留如下。
+
+---
+
 # 最新：环境、数据、目标与双动作控制的全面离线审计（2026-11-02）
 
 已完成[全面复盘与实施顺序](BASE_FIRST_PRINCIPLES_REVIEW.md)，基于公开1fa2c75、有效调用链和历史证据；本轮0云连接、0TCP、0TF模型查询/优化。研究仍PARTIAL，没有新合格基座。新增[可复算结果](../evidence/comprehensive-audit-20261102/results-v2.json)及[只读工具](../tools/comprehensive_audit.py)。

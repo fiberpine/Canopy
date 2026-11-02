@@ -1,0 +1,111 @@
+{
+  "status": "PASS_A0_CONTRACT_VERIFICATION",
+  "scope": "A0 contract/measurement/parameter verification only; not24-actor capacity or a ready formal training deployment",
+  "checks": [
+    {
+      "name": "centering and terminal potential",
+      "status": "PASS",
+      "method": "19 local numerical/runtime contracts",
+      "required": true
+    },
+    {
+      "name": "independent critic output shift and action derivative",
+      "status": "PASS",
+      "method": "TF Q error7.63e-6; derivative bitwise",
+      "required": true
+    },
+    {
+      "name": "zero-period input and moving BN query invariance",
+      "status": "PASS",
+      "method": "TF online/target bitwise; period gradient nonzero",
+      "required": true
+    },
+    {
+      "name": "same executed-period target",
+      "status": "PASS",
+      "method": "both target calls share action[:,1:2]; external noise shapeN,1 applied only to window",
+      "required": true
+    },
+    {
+      "name": "N fixed/random-duration and action dependence; no Q gradient leakage",
+      "status": "PASS",
+      "method": "numerical Bellman convergence/Jensen/action counterexample plus real TF no-Q-gradients",
+      "required": true
+    },
+    {
+      "name": "ending types and reset boundary rejection",
+      "status": "PASS",
+      "method": "local typed-transition tests and real bridge final truncation",
+      "required": true
+    },
+    {
+      "name": "raw replay/schema/snapshots/calibration credit",
+      "status": "PASS",
+      "method": "real TF checkpoint/npz and194 v3 boundary rows, formal credit0",
+      "required": true
+    },
+    {
+      "name": "reward-v1 properties and old0.02 cost rejection",
+      "status": "PASS",
+      "method": "synthetic old/new fixtures; v3 actual reward error<9e-12",
+      "required": true
+    },
+    {
+      "name": "three denominator shadow selection",
+      "status": "PASS",
+      "method": "120 complete runs, global6MB/s frozen, finite-scope limitations explicit",
+      "required": true
+    },
+    {
+      "name": "zero-RTT sample fallback",
+      "status": "PASS",
+      "method": "5621 empty RTT intervals;2 with delivered bytes; all conditions/periods represented",
+      "required": true
+    },
+    {
+      "name": "near-neutral requested-window multiplier",
+      "status": "PASS",
+      "method": "98 exacta=0 native applications: requested/before ratio min=max1",
+      "required": true
+    },
+    {
+      "name": "A/A reproducibility",
+      "status": "PASS",
+      "method": "483 real historical states, two12-update sessions,124 variables bitwise",
+      "required": true
+    },
+    {
+      "name": "test trace identity/exposure review",
+      "status": "PASS",
+      "method": "heldout36-long same SHA as exposedconstant36; ATT known exposed; unverifiable other candidates excluded; C disabled",
+      "required": true
+    },
+    {
+      "name": "temporary checkpoint full variable roundtrip and mismatch rejection",
+      "status": "PASS",
+      "method": "TF all variables bitwise; wrong reward checksum rejected",
+      "required": true
+    },
+    {
+      "name": "real native boundary/new-network/reward/replay integration",
+      "status": "PASS",
+      "method": "two v3 frozen8s runs,97 valid boundaries each, fixed source policy; no optimizer or calibration credit",
+      "required": true
+    },
+    {
+      "name": "optional revival",
+      "status": "NOT_RUN",
+      "method": "Optional, not needed or executed",
+      "required": false
+    }
+  ],
+  "implementation_next_gate": "Cluster transport launcher still needs integration and the separate registered24-actor capacity test before formal A; do not treat this audit as training-ready certification",
+  "new_TCP_runs": 128,
+  "network_failures_this_continuation": 0,
+  "negative_evidence": {
+    "previous_four_startup_failures": "Preserved; exact historical socket timing not uniquely identified",
+    "bridge_v2_cost_leak": "Two network-completed runs failed scientific reward audit by0.02; fixed in v3; original records retained"
+  },
+  "source_state_rows": 483,
+  "preliminary_original_report_correction": "Earlier text512 was the query upper bound, not actual number; actual483"
+}

@@ -1,0 +1,206 @@
+{
+  "status": "PASS_FINITE_SHADOW_SELECTION",
+  "selected": "single_global_6000000_bytes_s",
+  "reward_checksum": "4dfd78dec9590fedf790d1be879e1e0d7ea4a2c1bd5affc8d930e82e6af75cef",
+  "runs": 120,
+  "intervals": 92282,
+  "zero_intervals": 5621,
+  "zero_with_positive_bytes": 2,
+  "per_period": {
+    "20": {
+      "runs": 24,
+      "intervals": 44010,
+      "zero": 4361,
+      "zero_with_bytes": 0
+    },
+    "40": {
+      "runs": 24,
+      "intervals": 22864,
+      "zero": 1260,
+      "zero_with_bytes": 2
+    },
+    "80": {
+      "runs": 24,
+      "intervals": 11679,
+      "zero": 0,
+      "zero_with_bytes": 0
+    },
+    "120": {
+      "runs": 24,
+      "intervals": 7835,
+      "zero": 0,
+      "zero_with_bytes": 0
+    },
+    "160": {
+      "runs": 24,
+      "intervals": 5894,
+      "zero": 0,
+      "zero_with_bytes": 0
+    }
+  },
+  "fallback_counterfactual": "srtt fallback vs last fresh ACK-mean RTT; affects throughput term only; last-fresh is a descriptive alternative, not ground truth",
+  "max_run_time_mean_fallback_density_delta": 0.0,
+  "fixture": {
+    "capacity_bps": 3000000,
+    "low_rate_bps": 100000,
+    "high_rate_bps": 2500000,
+    "low_utilization": 0.03333333333333333,
+    "high_utilization": 0.8333333333333334,
+    "observed_peak": [
+      1.0,
+      1.0
+    ],
+    "causal_decay_peak_equilibrium": [
+      1.0,
+      1.0
+    ],
+    "global_scale": [
+      0.016666666666666666,
+      0.4166666666666667
+    ],
+    "old_negative_utility_rewards": [
+      -0.125,
+      -0.0625
+    ],
+    "new_negative_utility_rewards": [
+      -0.35,
+      -0.475
+    ],
+    "scope": "Synthetic actual-formula properties, not TCP counterfactuals"
+  },
+  "descriptive_same_condition_util_gap10pp_signal_near_alias_counts": {
+    "observed_peak": 24,
+    "causal_decay_tau10": 19,
+    "global6MBps": 1
+  },
+  "descriptive_examples": {
+    "observed_peak": [
+      {
+        "condition": "V17-NYC-bus-R100",
+        "low_period": 120,
+        "high_period": 80,
+        "low_util": 0.6214728025807996,
+        "high_util": 0.9354960560298353
+      },
+      {
+        "condition": "V17-NYC-bus-R100",
+        "low_period": 120,
+        "high_period": 160,
+        "low_util": 0.6214728025807996,
+        "high_util": 0.9255302921574242
+      },
+      {
+        "condition": "V17-NYC-bus-R100",
+        "low_period": 40,
+        "high_period": 80,
+        "low_util": 0.0483735856051039,
+        "high_util": 0.9354960560298353
+      },
+      {
+        "condition": "V17-NYC-bus-R100",
+        "low_period": 40,
+        "high_period": 160,
+        "low_util": 0.0483735856051039,
+        "high_util": 0.9255302921574242
+      },
+      {
+        "condition": "V17-NYC-bus-R100",
+        "low_period": 40,
+        "high_period": 20,
+        "low_util": 0.0483735856051039,
+        "high_util": 0.31897458218149116
+      },
+      {
+        "condition": "V17-anchor-Tconstant24-R100",
+        "low_period": 120,
+        "high_period": 80,
+        "low_util": 0.8127716640586917,
+        "high_util": 0.9999844445937763
+      },
+      {
+        "condition": "V17-anchor-Tconstant24-R100",
+        "low_period": 120,
+        "high_period": 160,
+        "low_util": 0.8127716640586917,
+        "high_util": 0.9999844445937763
+      },
+      {
+        "condition": "V17-anchor-Tconstant48-R100",
+        "low_period": 120,
+        "high_period": 80,
+        "low_util": 0.7560938590831976,
+        "high_util": 0.998605201735749
+      }
+    ],
+    "causal_decay_tau10": [
+      {
+        "condition": "V17-NYC-bus-R100",
+        "low_period": 120,
+        "high_period": 80,
+        "low_util": 0.6214728025807996,
+        "high_util": 0.9354960560298353
+      },
+      {
+        "condition": "V17-NYC-bus-R100",
+        "low_period": 120,
+        "high_period": 160,
+        "low_util": 0.6214728025807996,
+        "high_util": 0.9255302921574242
+      },
+      {
+        "condition": "V17-NYC-bus-R100",
+        "low_period": 40,
+        "high_period": 20,
+        "low_util": 0.0483735856051039,
+        "high_util": 0.31897458218149116
+      },
+      {
+        "condition": "V17-anchor-Tconstant24-R100",
+        "low_period": 120,
+        "high_period": 80,
+        "low_util": 0.8127716640586917,
+        "high_util": 0.9999844445937763
+      },
+      {
+        "condition": "V17-anchor-Tconstant24-R100",
+        "low_period": 120,
+        "high_period": 160,
+        "low_util": 0.8127716640586917,
+        "high_util": 0.9999844445937763
+      },
+      {
+        "condition": "V17-anchor-Tconstant48-R100",
+        "low_period": 120,
+        "high_period": 80,
+        "low_util": 0.7560938590831976,
+        "high_util": 0.998605201735749
+      },
+      {
+        "condition": "V17-anchor-Tconstant48-R100",
+        "low_period": 120,
+        "high_period": 160,
+        "low_util": 0.7560938590831976,
+        "high_util": 0.9999922222319012
+      },
+      {
+        "condition": "V17-anchor-Tramp24-R100",
+        "low_period": 120,
+        "high_period": 80,
+        "low_util": 0.7929374889418479,
+        "high_util": 0.9966060362292085
+      }
+    ],
+    "global6MBps": [
+      {
+        "condition": "V17-NYC-bus-R20",
+        "low_period": 20,
+        "high_period": 40,
+        "low_util": 0.6595393088009278,
+        "high_util": 0.7625188688158425
+      }
+    ]
+  },
+  "invariance": "At fixed causal delivered rate/loss/RTT, the fixed denominator is independent of period; the SMDP integral handles actual dt. Different TCP histories and ACK RTT proxies can still differ.",
+  "monotonicity": "Derivative of instantaneous utility w.r.t delivered rate at fixed RTT/loss is positive delay_factor/6000000.",
+  "limitation": "Does not encode true capacity or guarantee cross-capacity utilization invariance; remaining149-state observed_peak aliases are unchanged. No universal Markov or no-alias certificate."
+}

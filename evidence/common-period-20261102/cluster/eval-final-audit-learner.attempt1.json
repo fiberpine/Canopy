@@ -1,0 +1,6 @@
+{
+  "host": "learner",
+  "code": 1,
+  "output": "",
+  "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 22, in <module>\n  File \"<stdin>\", line 22, in <genexpr>\n  File \"/home/experiment/orca-common-period-cluster-20261102/evaluation/joint/control_mapping.py\", line 5, in mapping_error\n    if row['state_id']!=row['action_id'] or int(row['return_code'])!=0:return True\nKeyError: 'state_id'\n"
+}
