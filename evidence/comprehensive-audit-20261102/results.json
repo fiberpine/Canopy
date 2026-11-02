@@ -1,0 +1,447 @@
+{
+  "status": "COMPLETE_LOCAL_AUDIT_NO_NEW_NETWORK_OR_TF",
+  "source_commit": "1fa2c756762df42cc45326b072811ab61122057a",
+  "input_sha256": {
+    "evidence/base-reproduction-20261028/all-network-windows.csv": "1f15068efdc4426af1ab7b8846015058c8de931254fdfe40b4a3ec077d7efa11",
+    "evidence/base-reproduction-20261028/final-analysis.json": "318b885b1b30a237ee0ecbba1a1e1dea8213c6af562b2bf16e2e7d058d4a395b",
+    "evidence/base-reproduction-20261028/timing-refined.json": "d8b1f629bb0510a680ac83e6030551e892b404cb2ba60b9022c37f9c1dc6cc88",
+    "templates/baseline-train.json": "0cf6293d02fce5f59a01322adcd8fcad8291c8e02714d43874857e04bda800de",
+    "templates/mtpjoint-train.json": "391b64278adfbe520c4378e2595c5e0c010072f855d73ef8dd483fdcaf85cbd9",
+    "frameworks/mtpjoint/joint_mtp.py": "acc31517a6eedcc8f3b2d6737cffbd558a49d528c319ee395bf23691204c9246",
+    "frameworks/baseline/distributed.py": "98231517544471e941c67bdc0567de6cf67adea43777c8124280b5473be63090",
+    "frameworks/baseline/code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+    "frameworks/baseline/moving_stats_backend.py": "8134cbf68d0eb2eacbbed5c065817f998a7c7ccac6779c358c72af7fdefff952",
+    "frameworks/mtpjoint/distributed.py": "0c0b60c63744064fa596fc6b16dd2e9bceb71de88c662046ea9e85e86fa5b2a9",
+    "frameworks/mtpjoint/decision_clock_v21.py": "11dfd6a0b13c261c717bc260266dde01f2b38be34f48a91a9d9f78e16fe2cd02",
+    "frameworks/mtpjoint/independent_critic_v34.py": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266",
+    "frameworks/baseline/code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e"
+  },
+  "endpoint": {
+    "condition_equal": {
+      "archived_full": {
+        "utilization": 0.965093890056924,
+        "queue_mean_ms": 42.043284126535234,
+        "queue_p95_ms": 152.45833333333334,
+        "queue_p99_ms": 221.75,
+        "drop_fraction": 0.0017278600472994824,
+        "reward_mean": 0.871227073082254,
+        "conditions": 24,
+        "utilization_below_80": 1,
+        "min_saturation_ge_99": 0,
+        "max_saturation_ge_99": 0
+      },
+      "archived_trim10": {
+        "utilization": 0.9790472182683205,
+        "queue_mean_ms": 32.24766078671295,
+        "queue_p95_ms": 43.541666666666664,
+        "queue_p99_ms": 46.791666666666664,
+        "drop_fraction": 0.0,
+        "reward_mean": 0.8777578004114136,
+        "conditions": 24,
+        "utilization_below_80": 0,
+        "min_saturation_ge_99": 0,
+        "max_saturation_ge_99": 0
+      },
+      "stopped_full": {
+        "utilization": 0.44826010054858234,
+        "queue_mean_ms": 196.438453031512,
+        "queue_p95_ms": 260.22083333333336,
+        "queue_p99_ms": 284.70750000000004,
+        "drop_fraction": 0.02530285726229024,
+        "reward_mean": 0.14820131590974805,
+        "conditions": 24,
+        "utilization_below_80": 14,
+        "min_saturation_ge_99": 13,
+        "max_saturation_ge_99": 7
+      },
+      "stopped_trim10": {
+        "utilization": 0.4466365977709505,
+        "queue_mean_ms": 190.57119558937822,
+        "queue_p95_ms": 229.95833333333334,
+        "queue_p99_ms": 230.83333333333334,
+        "drop_fraction": 0.019740504140047622,
+        "reward_mean": 0.15113709386639432,
+        "conditions": 24,
+        "utilization_below_80": 14,
+        "min_saturation_ge_99": 13,
+        "max_saturation_ge_99": 7
+      }
+    },
+    "observed_pareto_reward_inversions": [
+      {
+        "condition": "G72-R200",
+        "window": "full",
+        "lower_quality": "archived",
+        "higher_quality": "stopped"
+      },
+      {
+        "condition": "G72-R200",
+        "window": "trim10",
+        "lower_quality": "archived",
+        "higher_quality": "stopped"
+      }
+    ],
+    "scope": "One training seed, one frozen repeat per condition/arm; no causal inference. Reward is the existing decision-weighted mean; averaged condition P95 is not pooled P95."
+  },
+  "replay": {
+    "inserted_min": 28245,
+    "inserted_max": 82338,
+    "inserted_max_min_ratio": 2.9151354221986194,
+    "retained_min": 1627,
+    "retained_max": 7530,
+    "sampled_contribution_spread": 1,
+    "rows": [
+      {
+        "actor": 0,
+        "inserted": 82338,
+        "sampled": 3547606,
+        "retained": 7530,
+        "sampled_rows_per_inserted": 43.08588986859044
+      },
+      {
+        "actor": 1,
+        "inserted": 69905,
+        "sampled": 3547606,
+        "retained": 6201,
+        "sampled_rows_per_inserted": 50.748959301909736
+      },
+      {
+        "actor": 2,
+        "inserted": 46334,
+        "sampled": 3547606,
+        "retained": 3201,
+        "sampled_rows_per_inserted": 76.56593430310355
+      },
+      {
+        "actor": 3,
+        "inserted": 28245,
+        "sampled": 3547606,
+        "retained": 1627,
+        "sampled_rows_per_inserted": 125.60120375287661
+      },
+      {
+        "actor": 4,
+        "inserted": 82139,
+        "sampled": 3547606,
+        "retained": 7516,
+        "sampled_rows_per_inserted": 43.19027502160971
+      },
+      {
+        "actor": 5,
+        "inserted": 81295,
+        "sampled": 3547606,
+        "retained": 7510,
+        "sampled_rows_per_inserted": 43.63867396518851
+      },
+      {
+        "actor": 6,
+        "inserted": 69931,
+        "sampled": 3547606,
+        "retained": 6317,
+        "sampled_rows_per_inserted": 50.73009108978851
+      },
+      {
+        "actor": 7,
+        "inserted": 47700,
+        "sampled": 3547606,
+        "retained": 3231,
+        "sampled_rows_per_inserted": 74.37329140461216
+      },
+      {
+        "actor": 8,
+        "inserted": 44135,
+        "sampled": 3547605,
+        "retained": 3231,
+        "sampled_rows_per_inserted": 80.38076356633057
+      },
+      {
+        "actor": 9,
+        "inserted": 81746,
+        "sampled": 3547605,
+        "retained": 7500,
+        "sampled_rows_per_inserted": 43.39790326132165
+      },
+      {
+        "actor": 10,
+        "inserted": 81670,
+        "sampled": 3547605,
+        "retained": 7525,
+        "sampled_rows_per_inserted": 43.43828823313334
+      },
+      {
+        "actor": 11,
+        "inserted": 70448,
+        "sampled": 3547605,
+        "retained": 6319,
+        "sampled_rows_per_inserted": 50.35778162616398
+      },
+      {
+        "actor": 12,
+        "inserted": 70354,
+        "sampled": 3547605,
+        "retained": 6318,
+        "sampled_rows_per_inserted": 50.425064672939705
+      },
+      {
+        "actor": 13,
+        "inserted": 40599,
+        "sampled": 3547605,
+        "retained": 3230,
+        "sampled_rows_per_inserted": 87.38158575334369
+      },
+      {
+        "actor": 14,
+        "inserted": 77356,
+        "sampled": 3547605,
+        "retained": 7514,
+        "sampled_rows_per_inserted": 45.860760639123015
+      },
+      {
+        "actor": 15,
+        "inserted": 81558,
+        "sampled": 3547605,
+        "retained": 7515,
+        "sampled_rows_per_inserted": 43.4979401162363
+      },
+      {
+        "actor": 16,
+        "inserted": 81604,
+        "sampled": 3547605,
+        "retained": 7512,
+        "sampled_rows_per_inserted": 43.47342042056762
+      },
+      {
+        "actor": 17,
+        "inserted": 70169,
+        "sampled": 3547605,
+        "retained": 6316,
+        "sampled_rows_per_inserted": 50.55800994741268
+      },
+      {
+        "actor": 18,
+        "inserted": 81407,
+        "sampled": 3547605,
+        "retained": 7514,
+        "sampled_rows_per_inserted": 43.57862345989903
+      },
+      {
+        "actor": 19,
+        "inserted": 77133,
+        "sampled": 3547605,
+        "retained": 7518,
+        "sampled_rows_per_inserted": 45.99334915016919
+      },
+      {
+        "actor": 20,
+        "inserted": 76635,
+        "sampled": 3547605,
+        "retained": 7515,
+        "sampled_rows_per_inserted": 46.292229399099625
+      },
+      {
+        "actor": 21,
+        "inserted": 81335,
+        "sampled": 3547605,
+        "retained": 7508,
+        "sampled_rows_per_inserted": 43.61720046720354
+      },
+      {
+        "actor": 22,
+        "inserted": 69971,
+        "sampled": 3547605,
+        "retained": 6318,
+        "sampled_rows_per_inserted": 50.70107616012348
+      },
+      {
+        "actor": 23,
+        "inserted": 81228,
+        "sampled": 3547605,
+        "retained": 7514,
+        "sampled_rows_per_inserted": 43.67465652238145
+      }
+    ],
+    "caveat": "Aggregate reuse ratios, not each transition replay count, independent sample counts, or proof that balanced sampling is wrong."
+  },
+  "timing": {
+    "runs": 16,
+    "G12_R200_slow_cycles": 264,
+    "G12_R200_sample_wait_dominant": 264
+  },
+  "current_template_flags": {
+    "baseline": {
+      "backend": "moving_stats",
+      "target_bn_consistent": false,
+      "independent_critic_adam_v34": false,
+      "update_ratio": 0.1,
+      "update_credit_basis": null,
+      "updates_per_base20ms": null,
+      "decision_cost": null,
+      "connection_reset_seconds": null,
+      "time_head_nonlinearity": null
+    },
+    "mtpjoint": {
+      "backend": "moving_stats",
+      "target_bn_consistent": true,
+      "independent_critic_adam_v34": false,
+      "update_ratio": 0.1,
+      "update_credit_basis": "physical_exposure",
+      "updates_per_base20ms": 0.08,
+      "decision_cost": 0.02,
+      "connection_reset_seconds": 180.0,
+      "time_head_nonlinearity": "softsign"
+    }
+  },
+  "numerics": {
+    "status": "PASS_NUMERICAL_IDENTITIES_NOT_TCP",
+    "constant_utility": 0.7,
+    "calibrated_constant_value": 139.99999999999986,
+    "constant_utility_split_error": 8.881784197001252e-16,
+    "time_targets": [
+      {
+        "dt_ms": 20.0,
+        "reward": 0.6999999999999998,
+        "discount": 0.995,
+        "cold_Q0_target": 0.6999999999999998,
+        "calibrated_constant_Q_target": 139.99999999999986,
+        "nominal_updates_per_decision": 0.08
+      },
+      {
+        "dt_ms": 40.0,
+        "reward": 1.3964999999999999,
+        "discount": 0.990025,
+        "cold_Q0_target": 1.3964999999999999,
+        "calibrated_constant_Q_target": 139.99999999999986,
+        "nominal_updates_per_decision": 0.16
+      },
+      {
+        "dt_ms": 80.0,
+        "reward": 2.7790699124999994,
+        "discount": 0.980149500625,
+        "cold_Q0_target": 2.7790699124999994,
+        "calibrated_constant_Q_target": 139.99999999999986,
+        "nominal_updates_per_decision": 0.32
+      },
+      {
+        "dt_ms": 120.0,
+        "reward": 4.147848690122811,
+        "discount": 0.9703725093562656,
+        "cold_Q0_target": 4.147848690122811,
+        "calibrated_constant_Q_target": 139.99999999999986,
+        "nominal_updates_per_decision": 0.4799999999999999
+      },
+      {
+        "dt_ms": 160.0,
+        "reward": 5.502973899438837,
+        "discount": 0.9606930435754368,
+        "cold_Q0_target": 5.502973899438837,
+        "calibrated_constant_Q_target": 139.99999999999986,
+        "nominal_updates_per_decision": 0.64
+      }
+    ],
+    "window_impulses": [
+      {
+        "action": -0.05,
+        "period_ms": 20.0,
+        "percent": 93,
+        "ideal_continuous_multiplier_per_s": 0.03125,
+        "percent_quantized_multiplier_per_s": 0.02655506860137289
+      },
+      {
+        "action": -0.05,
+        "period_ms": 160.0,
+        "percent": 93,
+        "ideal_continuous_multiplier_per_s": 0.6484197773255048,
+        "percent_quantized_multiplier_per_s": 0.6353578914860324
+      },
+      {
+        "action": -1e-06,
+        "period_ms": 20.0,
+        "percent": 99,
+        "ideal_continuous_multiplier_per_s": 0.9999306876841536,
+        "percent_quantized_multiplier_per_s": 0.6050060671375364
+      },
+      {
+        "action": -1e-06,
+        "period_ms": 160.0,
+        "percent": 99,
+        "ideal_continuous_multiplier_per_s": 0.9999913356977783,
+        "percent_quantized_multiplier_per_s": 0.9391175708072507
+      },
+      {
+        "action": 0.0,
+        "period_ms": 20.0,
+        "percent": 100,
+        "ideal_continuous_multiplier_per_s": 1.0,
+        "percent_quantized_multiplier_per_s": 1.0
+      },
+      {
+        "action": 0.0,
+        "period_ms": 160.0,
+        "percent": 100,
+        "ideal_continuous_multiplier_per_s": 1.0,
+        "percent_quantized_multiplier_per_s": 1.0
+      },
+      {
+        "action": 1e-06,
+        "period_ms": 20.0,
+        "percent": 100,
+        "ideal_continuous_multiplier_per_s": 1.0000693171203765,
+        "percent_quantized_multiplier_per_s": 1.0
+      },
+      {
+        "action": 1e-06,
+        "period_ms": 160.0,
+        "percent": 100,
+        "ideal_continuous_multiplier_per_s": 1.0000086643772925,
+        "percent_quantized_multiplier_per_s": 1.0
+      },
+      {
+        "action": 0.05,
+        "period_ms": 20.0,
+        "percent": 107,
+        "ideal_continuous_multiplier_per_s": 32.0,
+        "percent_quantized_multiplier_per_s": 29.457025063071406
+      },
+      {
+        "action": 0.05,
+        "period_ms": 160.0,
+        "percent": 107,
+        "ideal_continuous_multiplier_per_s": 1.5422108254079407,
+        "percent_quantized_multiplier_per_s": 1.526330598076994
+      }
+    ],
+    "discount_e_folding_seconds": [
+      {
+        "interval_ms": 20.0,
+        "fixed_gamma": 3.9899916457671227,
+        "physical_gamma": 3.9899916457671227
+      },
+      {
+        "interval_ms": 50.0,
+        "fixed_gamma": 9.974979114417806,
+        "physical_gamma": 3.9899916457671227
+      },
+      {
+        "interval_ms": 100.0,
+        "fixed_gamma": 19.949958228835612,
+        "physical_gamma": 3.9899916457671227
+      },
+      {
+        "interval_ms": 160.0,
+        "fixed_gamma": 31.919933166136982,
+        "physical_gamma": 3.9899916457671227
+      }
+    ],
+    "caveats": [
+      "Impulse products omit CUBIC/ACK dynamics, integer window floor and bounds.",
+      "Constant utility and fixed continuation Q isolate a mathematical bias; they do not prove a particular trained critic caused collapse.",
+      "A cost is charged once per real decision; splitting a decision must not add costs.",
+      "Nominal physical credit per decision is not actual UTD with dispatch/warmup effects."
+    ]
+  },
+  "limitations": [
+    "No new checkpoint queries or TF graph execution.",
+    "No proof of a unique historical root cause.",
+    "No new policy training or performance certification."
+  ]
+}
