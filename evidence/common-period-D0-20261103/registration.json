@@ -1,0 +1,2256 @@
+{
+  "status": "FROZEN_D0_ONLY",
+  "authorization": "Latest user: first D0 frozen diagnosis; five servers already started. Bounded execution only; historical NOT_APPROVED document header superseded by this user request, not by document contents.",
+  "plan_sha256": "4836bd28a48037825c317efe09545b9c371f6cb32629a93b125b399a4b431b47",
+  "start_epoch": 1793693480.730864,
+  "deadline_epoch": 1793697080.730864,
+  "cap_seconds": 3600,
+  "cumulative_task_machine_hours_cap": 4,
+  "cleanup_reserve_seconds": 600,
+  "actor_reserved_max_seconds": 1500,
+  "cloud_root": "/home/experiment/orca-common-period-D0-20261103-161120",
+  "seed": 20261103,
+  "model_files": {
+    ".index": {
+      "sha256": "cfea440fb95b920dacbfff3a6217db054c4880f8040c8580643f77bb96f4af35",
+      "bytes": 4404
+    },
+    ".data-00000-of-00001": {
+      "sha256": "7d6003803bde1961ca301bb164b8f7cc2cc3fd0b8b64e5785ad3af1049bf1f91",
+      "bytes": 5211454
+    },
+    ".meta": {
+      "sha256": "3650964223d7d48a9ca7148e137b1d70e8a4f3c94dd4a0a4b972240fc501feea",
+      "bytes": 3081224
+    },
+    ".metadata.json": {
+      "sha256": "82a10cfc0e5b51d94b7900fbfe4e4998483e186a5d469525b8d73e87f4bc97a0",
+      "bytes": 15261
+    }
+  },
+  "K": 88.87822112214135,
+  "expected_A_sources": {
+    "common_period.py": "b0bfe93f042bb493a2b5e9474653b203de9fd6089685d5d2378af0b54e028231",
+    "common_period_actor.py": "a2fd8f4456cf0c27a9dccad10d2e1bdd36029f9f5ced440240b16d0cb4480fcc",
+    "common_period_calibration.py": "7abc6abc93ec82a8031958387124b75f9381b400036206844ae669c0b96b2026",
+    "common_period_client.py": "9295bd548bf14f251cf62741f9c012e0299978efe4a15c532b41c3dd02d9d387",
+    "common_period_deployment.py": "005b7585e88b1253fb07e210720e502b957489cfa2bcd1b3de81bccbb1d003e8",
+    "common_period_entry.py": "132d1a09a83b6b636ddc73ed0254f3150a8a2c192f69c8529b9329bd7911d433",
+    "common_period_frozen.py": "21ecba29f13016efe285b2c954fc425c0dfa5c64e687b2ac22a118820119f62e",
+    "common_period_host.py": "5a01b4ab3206cde4a2f41e6d88fba614474814c5d5d770b8f63ee53b38d2bd8b",
+    "common_period_runtime.py": "fa7f0883bbde281a18f5b9381aeb4b2d5342eeaa111d1987d58a25e9ac710ca8",
+    "common_period_service.py": "de6428f928c2aadcb5ad46447471d2a084f4a64de308dd72037335997aeb94d4",
+    "common_period_tf.py": "aae1a28fb8873629474b2be16dc07a0edd5cba309813ec3613c4bab8738a249a",
+    "common_period_transport.py": "f92f3dacb4f83d7f1c6d66e62f345bc60a0d55719dd0abe4cd6b6830168948bf"
+  },
+  "jobs": [
+    {
+      "run": "formalA-000-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-005-A20-r1",
+      "group": "A20",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-010-A80-r1",
+      "group": "A80",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-015-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-020-A160-r0",
+      "group": "A160",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-025-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-030-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-035-A160-r1",
+      "group": "A160",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-040-H0-r0",
+      "group": "H0",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-045-A160-r1",
+      "group": "A160",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-050-A120-r0",
+      "group": "A120",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-055-A160-r0",
+      "group": "A160",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-060-A80-r1",
+      "group": "A80",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-065-A20-r1",
+      "group": "A20",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-070-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-075-A160-r0",
+      "group": "A160",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-080-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-085-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-090-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-095-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-100-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-105-H0-r0",
+      "group": "H0",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-110-A120-r0",
+      "group": "A120",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-115-A120-r1",
+      "group": "A120",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-120-A20-r0",
+      "group": "A20",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-125-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-130-H0-r1",
+      "group": "H0",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-135-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-140-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-145-A20-r1",
+      "group": "A20",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-150-A120-r1",
+      "group": "A120",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-155-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-160-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-165-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-170-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-175-A80-r0",
+      "group": "A80",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-180-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-185-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-190-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-195-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-200-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-205-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-210-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-215-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-220-A120-r1",
+      "group": "A120",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-225-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-230-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-235-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-240-A120-r0",
+      "group": "A120",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-245-A160-r0",
+      "group": "A160",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-250-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-255-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "host": 0,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-260-A80-r0",
+      "group": "A80",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 0,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-001-A80-r0",
+      "group": "A80",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-006-A120-r0",
+      "group": "A120",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-011-A120-r0",
+      "group": "A120",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-016-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-021-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-026-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-031-A120-r1",
+      "group": "A120",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-036-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-041-A40-r1",
+      "group": "A40",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-046-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-051-A160-r0",
+      "group": "A160",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-056-H0-r0",
+      "group": "H0",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-061-A80-r0",
+      "group": "A80",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-066-A40-r0",
+      "group": "A40",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-071-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-076-H0-r1",
+      "group": "H0",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-081-A80-r1",
+      "group": "A80",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-086-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-091-A120-r0",
+      "group": "A120",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-096-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-101-A20-r0",
+      "group": "A20",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-106-A120-r0",
+      "group": "A120",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-111-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-116-A80-r0",
+      "group": "A80",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-121-A120-r0",
+      "group": "A120",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-126-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-131-A160-r0",
+      "group": "A160",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-136-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-141-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-146-A160-r1",
+      "group": "A160",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-151-A40-r1",
+      "group": "A40",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-156-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-161-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-166-H0-r0",
+      "group": "H0",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-171-A80-r1",
+      "group": "A80",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-176-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-181-A120-r1",
+      "group": "A120",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-186-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-191-A80-r1",
+      "group": "A80",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-196-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-201-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-206-H0-r0",
+      "group": "H0",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-211-A40-r0",
+      "group": "A40",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-216-A160-r0",
+      "group": "A160",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-221-A160-r0",
+      "group": "A160",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-226-H0-r1",
+      "group": "H0",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-231-A40-r0",
+      "group": "A40",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-236-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-241-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-246-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-251-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 0,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-256-H0-r1",
+      "group": "H0",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-261-A120-r1",
+      "group": "A120",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "host": 1,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-002-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-007-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-012-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-017-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-022-A160-r0",
+      "group": "A160",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-027-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-032-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-037-A80-r1",
+      "group": "A80",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-042-H0-r0",
+      "group": "H0",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-047-A20-r1",
+      "group": "A20",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-052-H0-r0",
+      "group": "H0",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-057-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-062-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-067-A20-r1",
+      "group": "A20",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-072-A80-r0",
+      "group": "A80",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-077-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-082-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-087-A40-r0",
+      "group": "A40",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-092-A120-r0",
+      "group": "A120",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-097-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-102-A20-r1",
+      "group": "A20",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-107-A160-r1",
+      "group": "A160",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-112-A40-r1",
+      "group": "A40",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-117-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-122-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-127-H0-r0",
+      "group": "H0",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-132-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-137-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-142-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-147-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-152-A40-r0",
+      "group": "A40",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-157-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-162-A160-r1",
+      "group": "A160",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-167-A20-r1",
+      "group": "A20",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-172-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-177-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-182-A120-r1",
+      "group": "A120",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-187-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-192-H0-r0",
+      "group": "H0",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-197-A120-r1",
+      "group": "A120",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-202-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-207-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-212-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-217-A20-r1",
+      "group": "A20",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-222-A20-r1",
+      "group": "A20",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-227-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-232-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-237-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-242-A160-r1",
+      "group": "A160",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-247-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-252-H0-r1",
+      "group": "H0",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-257-A160-r1",
+      "group": "A160",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-262-H0-r1",
+      "group": "H0",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "host": 2,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-003-fixed80-r1",
+      "group": "fixed80",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-008-A80-r0",
+      "group": "A80",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-013-A80-r0",
+      "group": "A80",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-018-A80-r1",
+      "group": "A80",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-023-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-028-A40-r0",
+      "group": "A40",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-033-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-038-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-043-A20-r0",
+      "group": "A20",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-048-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-053-A80-r0",
+      "group": "A80",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-058-A20-r0",
+      "group": "A20",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-063-A40-r1",
+      "group": "A40",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-068-A40-r0",
+      "group": "A40",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-073-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-078-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-083-A160-r0",
+      "group": "A160",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-088-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-093-A40-r0",
+      "group": "A40",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-098-official-orca-r0",
+      "group": "official-orca",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-103-A40-r0",
+      "group": "A40",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-108-A20-r1",
+      "group": "A20",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-113-A40-r1",
+      "group": "A40",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-118-A160-r0",
+      "group": "A160",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-123-A20-r0",
+      "group": "A20",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-128-A20-r0",
+      "group": "A20",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-133-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-138-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-143-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-148-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-153-H0-r1",
+      "group": "H0",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-158-A20-r0",
+      "group": "A20",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-163-A80-r1",
+      "group": "A80",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-168-A120-r0",
+      "group": "A120",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-173-A160-r1",
+      "group": "A160",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-178-A40-r1",
+      "group": "A40",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-183-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-188-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-193-A40-r0",
+      "group": "A40",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-198-A40-r1",
+      "group": "A40",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-203-A120-r1",
+      "group": "A120",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-208-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-213-H0-r1",
+      "group": "H0",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-218-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-223-A20-r0",
+      "group": "A20",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-228-A20-r0",
+      "group": "A20",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-233-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-238-A80-r1",
+      "group": "A80",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-243-H0-r0",
+      "group": "H0",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-248-A40-r1",
+      "group": "A40",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-253-A80-r1",
+      "group": "A80",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-258-A20-r0",
+      "group": "A20",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 0,
+      "host": 3,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-263-A40-r1",
+      "group": "A40",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "host": 3,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-004-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-009-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-014-A20-r1",
+      "group": "A20",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-019-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-024-A160-r1",
+      "group": "A160",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-029-A80-r0",
+      "group": "A80",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-034-A40-r0",
+      "group": "A40",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-039-A20-r0",
+      "group": "A20",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-044-H0-r0",
+      "group": "H0",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-049-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-054-fixed160-r1",
+      "group": "fixed160",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-059-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-064-A40-r0",
+      "group": "A40",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-069-A120-r1",
+      "group": "A120",
+      "condition": "V17-NYC-bus-R100-q1p0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-074-A120-r0",
+      "group": "A120",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-079-A80-r1",
+      "group": "A80",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-084-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-089-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-094-A120-r1",
+      "group": "A120",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-099-A160-r1",
+      "group": "A160",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-104-A120-r0",
+      "group": "A120",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-109-A80-r0",
+      "group": "A80",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-114-CUBIC-r1",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-119-A160-r1",
+      "group": "A160",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-124-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-129-A20-r1",
+      "group": "A20",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-134-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-139-A160-r0",
+      "group": "A160",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-144-A120-r1",
+      "group": "A120",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-149-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-154-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-159-H0-r1",
+      "group": "H0",
+      "condition": "V34-development-mixed_ramp24-R50-q1p0-i0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-164-A40-r1",
+      "group": "A40",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-169-A80-r0",
+      "group": "A80",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-174-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-179-H0-r1",
+      "group": "H0",
+      "condition": "V17-compound_drop24-R100-q5p0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-184-A40-r1",
+      "group": "A40",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-189-H0-r1",
+      "group": "H0",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-194-official-orca-r1",
+      "group": "official-orca",
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-199-A160-r1",
+      "group": "A160",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-204-A40-r1",
+      "group": "A40",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-209-A80-r1",
+      "group": "A80",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-214-fixed160-r0",
+      "group": "fixed160",
+      "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-219-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-224-fixed80-r0",
+      "group": "fixed80",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-229-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V34-development-mixed_pulse48-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-234-A20-r0",
+      "group": "A20",
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": true
+    },
+    {
+      "run": "formalA-239-H0-r1",
+      "group": "H0",
+      "condition": "V34-development-constant24-R20-q0p5-i0",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-244-fixed120-r0",
+      "group": "fixed120",
+      "condition": "V17-NYC-bus-R20-q0p5",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-249-fixed120-r1",
+      "group": "fixed120",
+      "condition": "V17-anchor-Tconstant24-R20",
+      "repeat": 1,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-254-CUBIC-r0",
+      "group": "CUBIC",
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    },
+    {
+      "run": "formalA-259-H0-r0",
+      "group": "H0",
+      "condition": "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "repeat": 0,
+      "host": 4,
+      "diagnostic_stratum": false
+    }
+  ],
+  "failed_cells": [
+    [
+      "A120",
+      "V17-NYC-bus-R20-q5p0"
+    ],
+    [
+      "A120",
+      "V17-anchor-Tconstant24-R20"
+    ],
+    [
+      "A120",
+      "V17-mixed_timescale48-R20-q5p0"
+    ],
+    [
+      "A160",
+      "V17-NYC-bus-R20-q5p0"
+    ],
+    [
+      "A160",
+      "V17-anchor-Tconstant24-R20"
+    ],
+    [
+      "A160",
+      "V17-mixed_timescale48-R20-q5p0"
+    ],
+    [
+      "A40",
+      "V17-mixed_timescale48-R20-q5p0"
+    ],
+    [
+      "A80",
+      "V17-NYC-bus-R20-q5p0"
+    ]
+  ],
+  "deep_conditions": [
+    "V34-development-constant24-R100-q5p0-i0",
+    "V17-compound_drop24-R100-q5p0",
+    "V34-development-mixed_pulse48-R100-q5p0-i0",
+    "V17-anchor-Tconstant24-R20",
+    "V17-mixed_timescale48-R20-q5p0"
+  ],
+  "replay_samples_per_actor_period": 16,
+  "gradient_batches": 8,
+  "gradient_batch_size": 64,
+  "critic_samples_per_period": 256,
+  "forward_parity_states": 64,
+  "cpu_state_pool": 128,
+  "cpu_warmup": 128,
+  "cpu_blocks": 6,
+  "cpu_repetitions": 512,
+  "observed_calls_per_s": {
+    "120": 8.222216236264751,
+    "160": 6.190028915818117,
+    "20": 46.219153099787,
+    "40": 24.00985110633293,
+    "80": 12.246734578810829
+  },
+  "tolerances": {
+    "actor_abs": 1e-06,
+    "reward_abs": 1e-07,
+    "gradient_float32_abs": 1e-05
+  },
+  "sampling": "Before new model outputs:16 peractor/executedperiod from final replay;8 fixed64-state batches for shared support gradients;first/last training episode startup components;first8+32uniform native points for predefined deployment strata;no adaptive sample enlargement",
+  "statistics": "Independent frozen TCP run is unit; 2 percondition/period, report repeat differences not precision claims; minibatch/CPU block variation is descriptive only",
+  "S4": {
+    "horizon_s": 20,
+    "start_grid_s": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35
+    ],
+    "same_connection": true,
+    "requires_actual_reward_and_149_state": true,
+    "no_proxy_substitution": true
+  },
+  "forbidden": [
+    "new_TCP",
+    "optimizers",
+    "B0_value_updates",
+    "lambda_scan",
+    "production_edits",
+    "checkpoint_save",
+    "new_training",
+    "shutdown_instances"
+  ],
+  "source_sha256": {
+    "d0_core.py": "1b1d604c31e16b0f501b12612500054bc44e01b90fbcb3fee83967856a26e6f5",
+    "learner_probe.py": "a23eeac427680fb6bb475d480f3c26b137d0e358595eca7a423f82ad229bdb9d",
+    "node_scan.py": "99547cfa2fc49cdda8c5c129008ce5e9cd63a064349edbc4f4162641519a6abd",
+    "test_d0.py": "6f8398cbec69881725bff984088b03b43b08b4ce6378378438eff1ce19bf7b96"
+  }
+}

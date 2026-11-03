@@ -1,0 +1,464 @@
+{
+  "status": "PARTIAL_D0_MISSING_DEPLOYMENT_FIELDS",
+  "A_status": "FAIL_A_UNCHANGED",
+  "B0": "NOT_RUN",
+  "C": "NOT_RUN",
+  "scope": {
+    "new_congestion_control_TCP": 0,
+    "optimizer_operations": 0,
+    "lambda_scan": false,
+    "original_model_files_unchanged": true,
+    "model_variables_unchanged": true,
+    "actor_transport_unchanged": true
+  },
+  "S1": {
+    "status": "PARTIAL",
+    "cumulative_inserted": 711285,
+    "cumulative_physical_seconds": 37779.891620999995,
+    "period_ledger": [
+      {
+        "period_ms": 20,
+        "inserted": 331147,
+        "physical_seconds": 7362.41523,
+        "retained_sampler_expected_weight": 0.47448692133357934
+      },
+      {
+        "period_ms": 40,
+        "inserted": 179987,
+        "physical_seconds": 7620.011332999999,
+        "retained_sampler_expected_weight": 0.2503323188174662
+      },
+      {
+        "period_ms": 80,
+        "inserted": 91749,
+        "physical_seconds": 7583.471774999999,
+        "retained_sampler_expected_weight": 0.13025360901193356
+      },
+      {
+        "period_ms": 120,
+        "inserted": 61131,
+        "physical_seconds": 7509.933613,
+        "retained_sampler_expected_weight": 0.07914615767894824
+      },
+      {
+        "period_ms": 160,
+        "inserted": 47271,
+        "physical_seconds": 7704.05967,
+        "retained_sampler_expected_weight": 0.06578099315807259
+      }
+    ],
+    "gradient_pair_count": 80,
+    "RL_pair_cosine": {
+      "min": 0.9873151482966838,
+      "median": 0.9979228900593224
+    },
+    "by_layer": {
+      "shared_fc1": {
+        "min": 0.9268996191893497,
+        "median": 0.9866744319910284,
+        "max": 0.9988363680000633
+      },
+      "shared_fc2": {
+        "min": 0.8999096501918127,
+        "median": 0.986551546756359,
+        "max": 0.9991929684492779
+      },
+      "output": {
+        "min": 0.9886224057982153,
+        "median": 0.9984901132212816,
+        "max": 0.9999440304037513
+      },
+      "period_input": {
+        "min": -0.9972658988596089,
+        "median": -0.9690616014869553,
+        "max": 0.9994264608069121
+      }
+    },
+    "historical_sampling_weights": "NOT_RECORDED",
+    "contemporaneous_policy_lag": "NOT_RECORDED",
+    "version_distance_to_final": {
+      "n": 150000,
+      "mean": 171.77848666666668,
+      "p50": 173.0,
+      "p95": 229.0,
+      "p99": 235.0,
+      "min": 103.0,
+      "max": 237.0
+    },
+    "caveat": "Cumulative ingress, final replay expected weights, and finite frozen gradient queries are different quantities; final-version distance is not online lag"
+  },
+  "S2": {
+    "status": "NOT_IDENTIFIABLE_FOR_CORE120",
+    "frozen_runs_audited": 264,
+    "A_core_runs": 120,
+    "A_core_reconstructible": 0,
+    "missing_core_fields": [
+      "avg_rtt_us",
+      "srtt_us_scaled8",
+      "min_rtt_us"
+    ],
+    "training_control": {
+      "episodes": 216,
+      "max_reward_abs_error": 6.505374017251597e-11
+    },
+    "caveat": "Training reward controls do not reconstruct frozen deployment reward. Logged time-weighted utilities, if present, are not interval SMDP returns; external legacy utilities use different rewards."
+  },
+  "S3": {
+    "status": "PARTIAL_DEPLOYMENT_STATE_NOT_RECORDED",
+    "frozen_state149_runs": 0,
+    "failure_cells_covered_by_native": 8,
+    "deep_conditions": [
+      "V34-development-constant24-R100-q5p0-i0",
+      "V17-compound_drop24-R100-q5p0",
+      "V34-development-mixed_pulse48-R100-q5p0-i0",
+      "V17-anchor-Tconstant24-R20",
+      "V17-mixed_timescale48-R20-q5p0"
+    ],
+    "training_startup_queries": 48,
+    "startup_state_parity_matches": 24,
+    "startup_state_parity_abs_max": 0.0,
+    "actual_actor_forward_max_abs": 0.0,
+    "moving_diagnostic_forward_max_abs": 0.0,
+    "BN_batch1_moving2_mean_action_difference": 0.13121795388030932,
+    "BN_batch_both_mean_action_difference": 0.13365078233564417,
+    "training_query_exact_saturation_fraction": 0.0,
+    "training_query_local_zero_RL_fraction": 0.0,
+    "caveat": "Training-state and BN alternative forwards do not establish missing failure-state local gradients or a BN implementation bug. Integer25-percent commands do not identify precise tanh saturation."
+  },
+  "S4": {
+    "status": "NOT_IDENTIFIABLE",
+    "registered_horizon_seconds": 20,
+    "reason": "No full149 frozen deployment states and no original ACK-RTT reward intervals; no same-policy finite-return labels fabricated",
+    "initial_state_matched_frozen_reference": "NOT_RECORDED",
+    "new_value_optimization": "NOT_RUN"
+  },
+  "S5": {
+    "status": "MEASURED_MICROBENCHMARK",
+    "threads": {
+      "intra": 1,
+      "inter": 1,
+      "OMP": 1,
+      "OPENBLAS": 1
+    },
+    "records": [
+      {
+        "block": 0,
+        "variant": "selector_5_two_fetch",
+        "process_cpu_ms_per_call": 0.23798805273437562,
+        "wall_ms_per_call": 0.22158945312478195,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.2212095507800882,
+          "p50": 0.21898449995205738,
+          "p95": 0.22720000010849617,
+          "p99": 0.24027210996337087,
+          "min": 0.21364400004131312,
+          "max": 0.8024969999951281
+        }
+      },
+      {
+        "block": 0,
+        "variant": "actor_only",
+        "process_cpu_ms_per_call": 0.0865153300781251,
+        "wall_ms_per_call": 0.07853496093712664,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.07825915429071628,
+          "p50": 0.07702849995894212,
+          "p95": 0.08281194994879115,
+          "p99": 0.08951790010542024,
+          "min": 0.0747980000141979,
+          "max": 0.35580999997364415
+        }
+      },
+      {
+        "block": 0,
+        "variant": "bridge_wire_only",
+        "process_cpu_ms_per_call": 0.021722822265624574,
+        "wall_ms_per_call": 0.021718140625015536,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.021539880854959392,
+          "p50": 0.02119999999194988,
+          "p95": 0.021644499940975948,
+          "p99": 0.02446340015467284,
+          "min": 0.020779000124093727,
+          "max": 0.14153699999042146
+        }
+      },
+      {
+        "block": 1,
+        "variant": "actor_only",
+        "process_cpu_ms_per_call": 0.08708723046875044,
+        "wall_ms_per_call": 0.07911248242198354,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.07882726757868497,
+          "p50": 0.07734350003829604,
+          "p95": 0.08285545004582673,
+          "p99": 0.0877305100129888,
+          "min": 0.07461799987140694,
+          "max": 0.4415880000578909
+        }
+      },
+      {
+        "block": 1,
+        "variant": "selector_5_two_fetch",
+        "process_cpu_ms_per_call": 0.23854456249999995,
+        "wall_ms_per_call": 0.22228468750018493,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.22188243750109748,
+          "p50": 0.21983900001032453,
+          "p95": 0.22824794987172936,
+          "p99": 0.2442288000202097,
+          "min": 0.21291500002007524,
+          "max": 0.6910110000717395
+        }
+      },
+      {
+        "block": 1,
+        "variant": "bridge_wire_only",
+        "process_cpu_ms_per_call": 0.021772861328124907,
+        "wall_ms_per_call": 0.021768062500093777,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.021579320311548855,
+          "p50": 0.021048999997219653,
+          "p95": 0.021364050076044805,
+          "p99": 0.02927219009052348,
+          "min": 0.020668999923145748,
+          "max": 0.20405400005074625
+        }
+      },
+      {
+        "block": 2,
+        "variant": "bridge_wire_only",
+        "process_cpu_ms_per_call": 0.0213037499999999,
+        "wall_ms_per_call": 0.021298990234175363,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.02111724218689659,
+          "p50": 0.020839999933741638,
+          "p95": 0.02114359990628145,
+          "p99": 0.022324609958559435,
+          "min": 0.020489000007728464,
+          "max": 0.13307599988365837
+        }
+      },
+      {
+        "block": 2,
+        "variant": "actor_only",
+        "process_cpu_ms_per_call": 0.08726655859375015,
+        "wall_ms_per_call": 0.07890122070319805,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.078631765624948,
+          "p50": 0.07679800000914838,
+          "p95": 0.08328544992082243,
+          "p99": 0.09548230009613683,
+          "min": 0.0733679999029846,
+          "max": 0.5133959998602222
+        }
+      },
+      {
+        "block": 2,
+        "variant": "selector_5_two_fetch",
+        "process_cpu_ms_per_call": 0.24044745703125092,
+        "wall_ms_per_call": 0.22395882226566854,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.22356662890921086,
+          "p50": 0.22061899994696432,
+          "p95": 0.2329600000280152,
+          "p99": 0.2529045000460428,
+          "min": 0.2123350000147184,
+          "max": 0.8207370001400704
+        }
+      },
+      {
+        "block": 3,
+        "variant": "bridge_wire_only",
+        "process_cpu_ms_per_call": 0.02142894335937541,
+        "wall_ms_per_call": 0.021425060546587105,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.021239371091663628,
+          "p50": 0.020899999981338624,
+          "p95": 0.02119900000252528,
+          "p99": 0.024096709948935285,
+          "min": 0.020530000028884388,
+          "max": 0.1602150000508118
+        }
+      },
+      {
+        "block": 3,
+        "variant": "actor_only",
+        "process_cpu_ms_per_call": 0.08720419726562528,
+        "wall_ms_per_call": 0.07925624999982617,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.0789824042954912,
+          "p50": 0.07766850001189596,
+          "p95": 0.08295655001120394,
+          "p99": 0.08884980994253056,
+          "min": 0.07380700003523089,
+          "max": 0.48704699997870193
+        }
+      },
+      {
+        "block": 3,
+        "variant": "selector_5_two_fetch",
+        "process_cpu_ms_per_call": 0.23888188867187463,
+        "wall_ms_per_call": 0.22273086523449948,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.22230718554361317,
+          "p50": 0.22049349990993505,
+          "p95": 0.22924945003524044,
+          "p99": 0.2470856999070746,
+          "min": 0.2127140000993677,
+          "max": 0.6691609999052162
+        }
+      },
+      {
+        "block": 4,
+        "variant": "bridge_wire_only",
+        "process_cpu_ms_per_call": 0.021409431640624296,
+        "wall_ms_per_call": 0.021405255859363592,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.02122168359086629,
+          "p50": 0.02093850002893305,
+          "p95": 0.021289999949658522,
+          "p99": 0.022300299979178814,
+          "min": 0.02053899993370578,
+          "max": 0.13807699997414602
+        }
+      },
+      {
+        "block": 4,
+        "variant": "actor_only",
+        "process_cpu_ms_per_call": 0.08790244335937607,
+        "wall_ms_per_call": 0.07992361328135189,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.07964192579068552,
+          "p50": 0.07785299987972394,
+          "p95": 0.0846539000121993,
+          "p99": 0.10570460000963063,
+          "min": 0.07256699996105453,
+          "max": 0.42729799997687223
+        }
+      },
+      {
+        "block": 4,
+        "variant": "selector_5_two_fetch",
+        "process_cpu_ms_per_call": 0.23578267187500043,
+        "wall_ms_per_call": 0.21964278906283496,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.21923880859242573,
+          "p50": 0.2176984999096021,
+          "p95": 0.22646399997938715,
+          "p99": 0.22995981004669375,
+          "min": 0.2103439999245893,
+          "max": 0.5890039999485452
+        }
+      },
+      {
+        "block": 5,
+        "variant": "actor_only",
+        "process_cpu_ms_per_call": 0.09351058984375,
+        "wall_ms_per_call": 0.08445346679719634,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.08411081445336421,
+          "p50": 0.07769300009385915,
+          "p95": 0.0995134999129732,
+          "p99": 0.11039238987677887,
+          "min": 0.07282699993993447,
+          "max": 0.358980000100928
+        }
+      },
+      {
+        "block": 5,
+        "variant": "bridge_wire_only",
+        "process_cpu_ms_per_call": 0.02189627734375081,
+        "wall_ms_per_call": 0.021892802734235772,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.021710201175473287,
+          "p50": 0.02126999993379286,
+          "p95": 0.02168945004541456,
+          "p99": 0.030243910025546935,
+          "min": 0.020809000034205383,
+          "max": 0.14471600002252671
+        }
+      },
+      {
+        "block": 5,
+        "variant": "selector_5_two_fetch",
+        "process_cpu_ms_per_call": 0.2366031289062504,
+        "wall_ms_per_call": 0.21960308593760303,
+        "latency_ms": {
+          "n": 512,
+          "mean": 0.2192257402420239,
+          "p50": 0.21645950005222403,
+          "p95": 0.22592994997694404,
+          "p99": 0.24419471016244626,
+          "min": 0.20948399992448685,
+          "max": 0.8976450001227931
+        }
+      }
+    ],
+    "actor_cpu_ms": 0.08824772493489619,
+    "selector_cpu_ms": 0.238041293619792,
+    "ratio": 2.697421307975978,
+    "cost_projection": [
+      {
+        "period_reference_ms": 120,
+        "observed_fixed_actor_calls_per_s": 8.222216236264751,
+        "actor_cpu_one_core_percent": 0.07255918767731293,
+        "selector_at_same_calls_cpu_one_core_percent": 0.19572269893021188,
+        "increment_percent": 0.12316351125289897
+      },
+      {
+        "period_reference_ms": 160,
+        "observed_fixed_actor_calls_per_s": 6.190028915818117,
+        "actor_cpu_one_core_percent": 0.05462559691021709,
+        "selector_at_same_calls_cpu_one_core_percent": 0.14734824906652633,
+        "increment_percent": 0.09272265215630923
+      },
+      {
+        "period_reference_ms": 20,
+        "observed_fixed_actor_calls_per_s": 46.219153099787,
+        "actor_cpu_one_core_percent": 0.4078735109473858,
+        "selector_at_same_calls_cpu_one_core_percent": 1.1002066993884516,
+        "increment_percent": 0.692333188441066
+      },
+      {
+        "period_reference_ms": 40,
+        "observed_fixed_actor_calls_per_s": 24.00985110633293,
+        "actor_cpu_one_core_percent": 0.21188147361594814,
+        "selector_at_same_calls_cpu_one_core_percent": 0.5715336016970085,
+        "increment_percent": 0.3596521280810604
+      },
+      {
+        "period_reference_ms": 80,
+        "observed_fixed_actor_calls_per_s": 12.246734578810829,
+        "actor_cpu_one_core_percent": 0.10807464644615797,
+        "selector_at_same_calls_cpu_one_core_percent": 0.29152285417583684,
+        "increment_percent": 0.18344820772967885
+      }
+    ],
+    "lambda_scan": false,
+    "interpretation": "Same-host same-state actual two-fetch selector structure; includes read-only guard overhead and Python bridge. Projections assume fixed observed call rates; not closed-loop policy/network/native CPU benefit. Six within-process blocks measure timing variation, not independent network runs."
+  },
+  "cleanup": "PASS_FROZEN_CLOSED",
+  "budget_at_final_check": {
+    "wall_seconds": 484.69563841819763,
+    "task_machine_hours": 0.164477658867836
+  },
+  "next_action": "Separate approval for a finite frozen data-collection run list; no automatic D-Q, intervention, or training"
+}
