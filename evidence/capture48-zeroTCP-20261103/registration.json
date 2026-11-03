@@ -1,0 +1,269 @@
+{
+  "status": "AUTHORIZED_ZERO_TCP_PROBES_ONLY",
+  "authorization": "User: review Claude proposal; if agreed execute. Accepted finite zero-TCP checks, no automatic A-prime or D-Q.",
+  "start_epoch": 1793701142.2792919,
+  "deadline_epoch": 1793703842.2792919,
+  "wall_cap_seconds": 2700,
+  "cumulative_machine_hour_cap": 1,
+  "cleanup_reserve_seconds": 600,
+  "learner_reserved_cap_seconds": 2700,
+  "actor_reserved_cap_seconds_each": 60,
+  "cloud_root": "/home/experiment/orca-capture48-zeroTCP-20261103-181902",
+  "capture_root": "/home/experiment/orca-common-period-capture48-20261103-171927",
+  "model_files": {
+    ".index": {
+      "sha256": "cfea440fb95b920dacbfff3a6217db054c4880f8040c8580643f77bb96f4af35",
+      "bytes": 4404
+    },
+    ".data-00000-of-00001": {
+      "sha256": "7d6003803bde1961ca301bb164b8f7cc2cc3fd0b8b64e5785ad3af1049bf1f91",
+      "bytes": 5211454
+    },
+    ".meta": {
+      "sha256": "3650964223d7d48a9ca7148e137b1d70e8a4f3c94dd4a0a4b972240fc501feea",
+      "bytes": 3081224
+    },
+    ".metadata.json": {
+      "sha256": "82a10cfc0e5b51d94b7900fbfe4e4998483e186a5d469525b8d73e87f4bc97a0",
+      "bytes": 15261
+    }
+  },
+  "seed": 20261103,
+  "source_capture_manifest": {
+    "capture48-009-A20-r0": {
+      "bytes": 489531,
+      "sha256": "9f1fc94c39fd522d7b79433d08d16bb9718004a0fcf8903dc9d103cbd0f10011"
+    },
+    "capture48-014-A120-r0": {
+      "bytes": 96881,
+      "sha256": "26414eb74c4d845176d7c000ff941cade99bbac682ee830602135af3da4952b7"
+    },
+    "capture48-015-A20-r1": {
+      "bytes": 504867,
+      "sha256": "89e3693151095e713830218e1964ceb266eee9e1da1a41090deeae38d4c0569f"
+    },
+    "capture48-016-A20-r1": {
+      "bytes": 488149,
+      "sha256": "a5f566ae6bcb5b33b2b08e36fdc68e2b9f22be1b7e41feb8c93d3ea3a75e9993"
+    },
+    "capture48-020-A80-r0": {
+      "bytes": 132512,
+      "sha256": "5807f873aca1b9c0939b249da6554e474a68f786732b71c2993c966244fbf9b7"
+    },
+    "capture48-039-A80-r0": {
+      "bytes": 142157,
+      "sha256": "0eb6831ad28feb4627d2546f7a9e7e314e544000f6f85046f0d4e28918832d1a"
+    },
+    "capture48-047-A160-r0": {
+      "bytes": 64392,
+      "sha256": "e15888df3dd8d26c70d45bec7a326de0fc616d3bea588b527c18634497191960"
+    },
+    "capture48-000-A40-r0": {
+      "bytes": 259721,
+      "sha256": "c7a24164b2d8633376b91a1d4f6aea0ef7868375613dbb74ee3a741923b04efa"
+    },
+    "capture48-006-A120-r1": {
+      "bytes": 82592,
+      "sha256": "890b2a5cfc9420cdad8faf7221ab6c5f01bb0cb59f9cd87b08ae02a605bfd947"
+    },
+    "capture48-010-A40-r1": {
+      "bytes": 261039,
+      "sha256": "0c71faa807b8eb42103b61e19d645841d62578898f4ddd3b3bb82429113ab4fc"
+    },
+    "capture48-013-A40-r0": {
+      "bytes": 262844,
+      "sha256": "ad233e29f0596b527dd2d1d7d02ba19f11512fa4f9eef4f652818615befec770"
+    },
+    "capture48-024-A120-r1": {
+      "bytes": 89787,
+      "sha256": "e9491239ddf5a9df9b72844b7f8136c52fd299dd5a58137635c3176b2f9a2846"
+    },
+    "capture48-033-A20-r0": {
+      "bytes": 506893,
+      "sha256": "689488e1747c44aa74e3155d064d11d6361e6986a50839dfb7cd0f23d70bf009"
+    },
+    "capture48-034-A120-r0": {
+      "bytes": 81368,
+      "sha256": "d1e9977ef31f109247a9928d0de440bfd053d52a7293c723b33e58c175f0622d"
+    },
+    "capture48-037-A160-r0": {
+      "bytes": 68317,
+      "sha256": "b57f31a3585c908ce1653bf14570879814b8516cc31e6bdf836ca9464bf015a8"
+    },
+    "capture48-040-A120-r1": {
+      "bytes": 97694,
+      "sha256": "4fb08c437be03fb1bde1d99df39bb40ab9064868ff0b90b140f6de8489bb4acb"
+    },
+    "capture48-043-A120-r0": {
+      "bytes": 82174,
+      "sha256": "5d6896a304fe329d125bbcdc4650af71e4262fa14c2a2a7f7201089232f77f5a"
+    },
+    "capture48-045-A80-r1": {
+      "bytes": 130781,
+      "sha256": "75af7607bdcaa287e8461fc4933c627812cc08366dd756c4d196a54778f66194"
+    },
+    "capture48-046-A40-r1": {
+      "bytes": 263308,
+      "sha256": "3f30bd6c6115352d436d6358aca4f749be96a59fe53e046b9e2a0025990a945b"
+    },
+    "capture48-001-A120-r0": {
+      "bytes": 95813,
+      "sha256": "23e607bf4237946c4f6913af91f0ca4169cdb2d09d3c3c97843273dcfe266f55"
+    },
+    "capture48-004-A20-r1": {
+      "bytes": 497179,
+      "sha256": "86a2786e79ae95c051c8a76a851e4ca4fe60fad064b13b0b4c5ea4469014259f"
+    },
+    "capture48-011-A20-r1": {
+      "bytes": 500986,
+      "sha256": "267bbd33d9c7ccc1b156c0240fa91c35d5e582d27c0560189ec92c8e7b6f17e2"
+    },
+    "capture48-029-A40-r0": {
+      "bytes": 268105,
+      "sha256": "24e8107befef902859892fc573cf280f28605d5e650315b07d84587476b66d3d"
+    },
+    "capture48-002-A120-r1": {
+      "bytes": 95410,
+      "sha256": "5e1181a150cd37d6c010095df65faf77501b258ec4a455e98bd7cf97dd5c71a3"
+    },
+    "capture48-005-A160-r0": {
+      "bytes": 71057,
+      "sha256": "ffe686e7ac3838108275f73b29c6aa8914cec6cd3d382598f76f50e30fd6c8fa"
+    },
+    "capture48-007-A40-r0": {
+      "bytes": 237513,
+      "sha256": "1182667321aff6a1b33ea8da56380fc343315d499592b773a842006179837bcf"
+    },
+    "capture48-008-A20-r1": {
+      "bytes": 467103,
+      "sha256": "d8a280bd159a032ddfad7ad915172bb5b3bee65c08dc85e99078737ccde2c754"
+    },
+    "capture48-018-A40-r1": {
+      "bytes": 245255,
+      "sha256": "50920a6e97e84e19704e87b03e2df7652aeb8e7ce3797a61ae9bb1f5d43e62a6"
+    },
+    "capture48-019-A40-r1": {
+      "bytes": 266256,
+      "sha256": "4aa86af0b5185b8e05ac06fcbddaa0bdd71a9d034a7771a86d3061e48dc785dd"
+    },
+    "capture48-021-A80-r1": {
+      "bytes": 141902,
+      "sha256": "b48c82858e645fb9b822ed566828a33e7c8b12b11a4b942a5ce445bf0f786681"
+    },
+    "capture48-022-A20-r0": {
+      "bytes": 501781,
+      "sha256": "e0050e885a8e4fbe40ab705209983a5fe0b58748ad26339eef1d0f2985d46f63"
+    },
+    "capture48-023-A80-r0": {
+      "bytes": 136041,
+      "sha256": "adbe97d1440a95640d85122c4daa15997067994d3359887966a1f4fc8f1e076e"
+    },
+    "capture48-025-A20-r0": {
+      "bytes": 490952,
+      "sha256": "869b86e1e39681b27769fc869e6e91e7feb37cdc538027f9ef90e8fed0d61dde"
+    },
+    "capture48-026-A40-r1": {
+      "bytes": 235249,
+      "sha256": "e0ea4c14dc3548431a6a0111c7af3fe886391f466a9166fce2831d778f09775c"
+    },
+    "capture48-028-A80-r1": {
+      "bytes": 139997,
+      "sha256": "fc057302eb0121b07a18972ea96dfab482e4035a2a46ff9ba40dfcbdf1eeb85b"
+    },
+    "capture48-032-A40-r0": {
+      "bytes": 260241,
+      "sha256": "6ec7ce8d79fbf9d3c98400899f0e44539cc566346eebcec916c364c4f947e0d4"
+    },
+    "capture48-035-A20-r0": {
+      "bytes": 480090,
+      "sha256": "9cf8eafb6e055a03816b07423240a9d9d3ca501caf183832a41b988bc573e325"
+    },
+    "capture48-036-A40-r1": {
+      "bytes": 233147,
+      "sha256": "1217441e85120009d5c724eab362b6435f3d44058cb5c44c94af6c20496b9df2"
+    },
+    "capture48-038-A160-r1": {
+      "bytes": 74228,
+      "sha256": "07fdca0d5e304d479343af8b576e5c3506ae0d6600d3c6515eb60319ca14e211"
+    },
+    "capture48-003-A80-r1": {
+      "bytes": 136714,
+      "sha256": "b59c99b5912cfb5322b4b5b1c3e48af877699ff29562cacda391528f0b119aa4"
+    },
+    "capture48-012-A40-r0": {
+      "bytes": 251227,
+      "sha256": "b9bfcd85089d8fb01d0b289d895c671d49cb8b56f1cbbc83c083e385536f2dba"
+    },
+    "capture48-017-A160-r1": {
+      "bytes": 70475,
+      "sha256": "226dc68226a75fd7c76498570f44b3bd552681782d5d5c6cd817b0c908398588"
+    },
+    "capture48-027-A20-r0": {
+      "bytes": 470730,
+      "sha256": "17d783653f074f3a115d500a949952c394cc131c76be168266ab8ee7915e2b66"
+    },
+    "capture48-030-A160-r0": {
+      "bytes": 74435,
+      "sha256": "50b3844986b42056b83c1d0f8df256b2be49acf446f1e99f85e0850c019f974f"
+    },
+    "capture48-031-A20-r1": {
+      "bytes": 465758,
+      "sha256": "778a6114aab939a4eb56cccca763fcd4113325d503b7be904d7e6688d0cce42e"
+    },
+    "capture48-041-A160-r1": {
+      "bytes": 64568,
+      "sha256": "4457b96164311f62676abd8ed008d16babd39a61a7c1ca849bb11b512f8397ad"
+    },
+    "capture48-042-A80-r0": {
+      "bytes": 134025,
+      "sha256": "6627d1331c24d7b03fca9069d86d9d15ed912ddaa7e489adc5ec7d82c5476a37"
+    },
+    "capture48-044-A160-r1": {
+      "bytes": 63731,
+      "sha256": "a95e2e3b689b851d099e9bc1ffdadb504de1ac251cfef814f70246abff0fe464"
+    }
+  },
+  "new_TCP": 0,
+  "Canopy_optimizer_operations": 0,
+  "probe_fitting": "Supervised external readout only; never changes Canopy variables, BN, optimizer or checkpoint",
+  "D_Q": "NOT_RUN",
+  "A_prime": "NOT_RUN",
+  "queue_definitions": {
+    "primary": "current SRTT/minRTT >=2, recoverable in deployment and replay states",
+    "secondary": "current ACK interval avgRTT/minRTT >=2 if RTT count>0; SRTT fallback, capture/native audit only"
+  },
+  "gradient_periods": [
+    20,
+    40,
+    80
+  ],
+  "gradient_state_sampling": "Per A20 run, 128 equal physical-time grid points at0..59.8s; retain each queue-stratum. Fetch own plus alternate periods on exactly same149 state. Local derivative, off-policy for other periods; no intervention.",
+  "capacity_targets": [
+    "run average service capacity from complete packet-log opportunities over60s",
+    "past1s service-capacity average ending at exact s0 sample-wall clock, shortened to available history at startup"
+  ],
+  "capacity_label_caveat": "Trace-derived supervised labels only. They do not enter Canopy inference/reward. Six selected conditions are not a universal capacity-identifiability dataset.",
+  "probe_models": {
+    "ridge_alpha": 1.0,
+    "extra_trees": {
+      "n_estimators": 32,
+      "max_depth": 8,
+      "min_samples_leaf": 32,
+      "max_features": 0.5,
+      "n_jobs": 1
+    }
+  },
+  "feature_sets": [
+    "full149",
+    "without_context72_to75"
+  ],
+  "validation": [
+    "repeat0->repeat1",
+    "repeat1->repeat0",
+    "leave_one_condition_out"
+  ],
+  "fitting_weights": "Actual following decision dt, normalized to equal total weight per independent TCP run. No random-row holdout.",
+  "probe_interpretation": "Successful decoding only establishes available information in sampled distributions; failure of these probes is not proof of mathematical non-identifiability. Run-heldout can exploit condition/path fingerprints; leave-condition-out is separately reported.",
+  "training_support": "Full original711285 accepted decisions: current pre-action raw ACK/SRTT ratios joined by native sequence; retained replay state SRTT ratios reported separately. Presence is not sufficient joint-state coverage; retained absence cannot mean never seen.",
+  "automatic_training_choice": false
+}

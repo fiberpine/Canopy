@@ -1,0 +1,79 @@
+{
+  "status": "PASS_CLOSED_ZERO_TCP",
+  "nodes": [
+    {
+      "epoch": 1793701821.95049,
+      "hostname": "learner-vm",
+      "owned_processes": [],
+      "protected51_unchanged": true,
+      "sysctl_unchanged": true,
+      "native_unchanged": true,
+      "source_unchanged": true,
+      "new_TCP": 0,
+      "new_IPC_allocations": 0,
+      "passed": true,
+      "closure_reserved_seconds": 0.09325313568115234
+    },
+    {
+      "epoch": 1793701822.2634852,
+      "hostname": "actor1-vm",
+      "owned_processes": [],
+      "protected51_unchanged": true,
+      "sysctl_unchanged": true,
+      "native_unchanged": true,
+      "source_unchanged": true,
+      "new_TCP": 0,
+      "new_IPC_allocations": 0,
+      "passed": true,
+      "closure_reserved_seconds": 0.4071812629699707
+    },
+    {
+      "epoch": 1793701822.26397,
+      "hostname": "actor2-vm",
+      "owned_processes": [],
+      "protected51_unchanged": true,
+      "sysctl_unchanged": true,
+      "native_unchanged": true,
+      "source_unchanged": true,
+      "new_TCP": 0,
+      "new_IPC_allocations": 0,
+      "passed": true,
+      "closure_reserved_seconds": 0.40783095359802246
+    },
+    {
+      "epoch": 1793701822.2609165,
+      "hostname": "actor3-vm",
+      "owned_processes": [],
+      "protected51_unchanged": true,
+      "sysctl_unchanged": true,
+      "native_unchanged": true,
+      "source_unchanged": true,
+      "new_TCP": 0,
+      "new_IPC_allocations": 0,
+      "passed": true,
+      "closure_reserved_seconds": 0.4076266288757324
+    },
+    {
+      "epoch": 1793701822.264136,
+      "hostname": "actor4-vm",
+      "owned_processes": [],
+      "protected51_unchanged": true,
+      "sysctl_unchanged": true,
+      "native_unchanged": true,
+      "source_unchanged": true,
+      "new_TCP": 0,
+      "new_IPC_allocations": 0,
+      "passed": true,
+      "closure_reserved_seconds": 0.4065093994140625
+    }
+  ],
+  "actor_reserved_seconds": 66.23479127883911,
+  "learner_reserved_seconds": 680.032194852829,
+  "task_reserved_machine_hours": 0.20729638503657447,
+  "wall_elapsed_seconds": 680.032194852829,
+  "instances_shutdown": false,
+  "failed_attempt_accounting": "Conservatively charged10s per actor for first failed label-clock assertion (entire attempt under4s); corrected re-read/closure actual reserved intervals added",
+  "export_cloud_VPC_bytes": 5448433,
+  "public_download_fullstates_bytes": 0,
+  "cloud_export_total_bytes": 6581408
+}

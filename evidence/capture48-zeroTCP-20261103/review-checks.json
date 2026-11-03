@@ -1,0 +1,74 @@
+{
+  "run48": {
+    "Q_on_label_slope": 0.12270975936013184,
+    "correlation": 0.3140295205886854,
+    "points": 48,
+    "independent_unit": "run;384 suffixes overlap"
+  },
+  "overlapping384": {
+    "Q_on_label_slope": 0.1735612876520648,
+    "correlation": 0.25178961644008835,
+    "points": 384,
+    "independent_unit": "run;384 suffixes overlap"
+  },
+  "four_scans": [
+    {
+      "condition": "V17-NYC-bus-R20-q5p0",
+      "descriptive_best_period_ms": 40,
+      "utility_by_period": {
+        "20": 0.17363656680418157,
+        "40": 0.1774147342551584,
+        "80": 0.17173876833432156,
+        "120": 0.17121262627047132,
+        "160": 0.1072759528537518
+      },
+      "utility40_minus80": 0.005675965920836856
+    },
+    {
+      "condition": "V17-anchor-Tconstant24-R20",
+      "descriptive_best_period_ms": 40,
+      "utility_by_period": {
+        "20": 0.33826089987587166,
+        "40": 0.38271180912894265,
+        "80": 0.3649419616576738,
+        "120": 0.279667219061298,
+        "160": 0.2508518503025872
+      },
+      "utility40_minus80": 0.017769847471268863
+    },
+    {
+      "condition": "V17-mixed_timescale48-R20-q5p0",
+      "descriptive_best_period_ms": 80,
+      "utility_by_period": {
+        "20": 0.5225376424205139,
+        "40": 0.6673279696872887,
+        "80": 0.6876646535744465,
+        "120": 0.6032577728383671,
+        "160": 0.5647138430723327
+      },
+      "utility40_minus80": -0.020336683887157814
+    },
+    {
+      "condition": "V34-development-constant24-R100-q5p0-i0",
+      "descriptive_best_period_ms": 80,
+      "utility_by_period": {
+        "20": 0.25302546805379855,
+        "40": 0.3578382796627415,
+        "80": 0.46648896777007404,
+        "120": 0.3971979400622486,
+        "160": 0.4085421246359821
+      },
+      "utility40_minus80": -0.10865068810733253
+    }
+  ],
+  "original_A_max_repeat_queue_gap": {
+    "condition": "V34-development-constant24-R100-q5p0-i0",
+    "period": "A120",
+    "window": "trim10",
+    "queue_values_ms": [
+      25.502872554819174,
+      90.29931720424717
+    ],
+    "gap_ms": 64.796444649428
+  }
+}

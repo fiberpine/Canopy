@@ -1,0 +1,6 @@
+{
+  "host": "learner",
+  "code": 1,
+  "output": "",
+  "error": "Traceback (most recent call last):\n  File \"<stdin>\", line 20, in <module>\n  File \"/usr/lib/python3.6/concurrent/futures/_base.py\", line 586, in result_iterator\n    yield fs.pop().result()\n  File \"/usr/lib/python3.6/concurrent/futures/_base.py\", line 432, in result\n    return self.__get_result()\n  File \"/usr/lib/python3.6/concurrent/futures/_base.py\", line 384, in __get_result\n    raise self._exception\n  File \"/usr/lib/python3.6/concurrent/futures/thread.py\", line 56, in run\n    result = self.fn(*self.args, **self.kwargs)\n  File \"<stdin>\", line 18, in one\nAssertionError: Traceback (most recent call last):\n  File \"/home/experiment/orca-capture48-zeroTCP-20261103-181902/export.py\", line 21, in <module>\n    current_ms=np.asarray([float(c['sample_wall_us'])/1000. for c in clock[:n]]);relative=(current_ms-base)/1000.;assert relative.min()>=0 and relative.max()<=61,(job['run'],base,current_ms[:1].tolist(),relative.min(),relative.max())\nAssertionError: ('capture48-009-A20-r0', 31.0, [1793697628845.737], 1793697628.814737, 1793697688.745069)\n\n"
+}

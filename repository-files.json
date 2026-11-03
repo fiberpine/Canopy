@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-03 frozen48 capture; original FAIL_A preserved, no D-Q or optimization",
+  "scope": "2026-11-03 bounded zeroTCP review; capacity readout and training support; no Canopy updates, A-prime or D-Q",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10916,
-      "sha256": "6371971dab9bea9a3dec4b6f82930294ac675236b7ff27e17a2f3479a0ae8d16"
+      "bytes": 10980,
+      "sha256": "57ba3bf18c39d98c9bb206932165fc79cf578fdee92bcda129ff3d7a48808a63"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -59,8 +59,8 @@
     },
     {
       "path": "docs/COMMON_PERIOD_D0_20261103.md",
-      "bytes": 4330,
-      "sha256": "7e618334c363083624d24aa2d1c5b51c27326f8d410336cf0b92e0e06bef52e8"
+      "bytes": 6088,
+      "sha256": "c84756441f0ea77c82b6b7701dbb73fd5f78b69ab63526d8bd1a263f60a02ea4"
     },
     {
       "path": "docs/MODELS.md",
@@ -84,8 +84,8 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 57292,
-      "sha256": "2b092b723e8fa26f1aa1d6be1868d04eac199f619c6156352dc759cdab78a945"
+      "bytes": 57663,
+      "sha256": "2f0dc54c623ee0d017b840803095fc1d665f0597cab92836e68982ab2ce1e0f1"
     },
     {
       "path": "docs/SCALAR_BASE_ROADMAP.md",
@@ -7461,6 +7461,166 @@
       "path": "evidence/borrowed-signs-review-20261028/reviewed-startup.json",
       "bytes": 11030,
       "sha256": "ba1a9f4eeab0aa2804940f486f146e946e09267691792823c8a32d1ee438ed28"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/capacity-probes.csv",
+      "bytes": 9033,
+      "sha256": "338026b595334b8bb32a9a5834e4e6b45f3ae147cc3535a7f814e064aeda3535"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/delivery.json",
+      "bytes": 452,
+      "sha256": "a42e9e8a5b78cd011ddfe542c04b8e5dfe07cfe2c2a7ce02c38765f5be1cd635"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/exports-metadata.json",
+      "bytes": 593249,
+      "sha256": "2dff40a179baaa48223f7c7d5d4794b9a7f882c1788b9a12834455ce226397e6"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/final-cleanup.json",
+      "bytes": 2428,
+      "sha256": "094f4d75341883117b4213d74b2f4105fadcdad70c9fab2718108b34735df5c6"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/full-training-coverage.csv",
+      "bytes": 125929,
+      "sha256": "50b8ebbed8e1b8f6b8ca0d8a2c2e6d43325776cde79f0b3094a1fe6ea0e1aa5a"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/gather-response-attempt1.json",
+      "bytes": 1148,
+      "sha256": "19c447504e6848d6a96c531d8e95a332fa63b4c82b54cc9cec5239e6a26716a7"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/gather-result.json",
+      "bytes": 674,
+      "sha256": "9875895112925891d7664041afda2f29adf48ed774d5be36079b009492d7ddb7"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/gradient-by-run.csv",
+      "bytes": 24901,
+      "sha256": "5a8cd908770dd84a7e82255aad08acf89cb426cd10522e306c5d8ceeb2a60c25"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/gradient-comparison.json",
+      "bytes": 4651,
+      "sha256": "c4ce84992cc2c115c4ef2598526558851f5004c45196ce863ce2c8d5d3b8fc9c"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/gradient-points.json",
+      "bytes": 3450699,
+      "sha256": "963fb65cb7ffd850963be36cc65d00986a7b6bfddde70ed6215d78516524109f"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/gradient-runs.json",
+      "bytes": 64020,
+      "sha256": "b06adad74a77c500074404590baf77f6439b75a6e8207cd4479badc323a96b2f"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/gradient-state-points.csv",
+      "bytes": 1409631,
+      "sha256": "232c7d1970d3e9804119a0c809662ae142b30d7483cd92b0e0611258ce50ac51"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/model-proof.json",
+      "bytes": 324,
+      "sha256": "c90eed3be2c647231f6b935dd013ad98ff1a36e74c964e541124aa01ed8d5cdf"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/probe-results.json",
+      "bytes": 213100,
+      "sha256": "62162ab934d4663080e0a74c492cd829ca54acad0f7428fb860f6cba4b8dbd31"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/publication-provenance.json",
+      "bytes": 11168,
+      "sha256": "5115b2961774d88d5f01251484b6c3d46f29f5d106e6021ba172e3dfebcc97f7"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/recompute-receipt.json",
+      "bytes": 440,
+      "sha256": "59c52e3adc8132ac334a4127c76a53564bc38c183dadb19c46f5869cb8036b1d"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/registration.json",
+      "bytes": 10337,
+      "sha256": "e4bc9f5eec8db26d88072e1c7fa14dcf836d0ea587c37ee5b19841370172c2e8"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/report/review-and-zeroTCP.md",
+      "bytes": 8706,
+      "sha256": "f22211260a3a708d6ee429003e9d3990098eb035763c798748a4974bec850450"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/report/zeroTCP-checks.png",
+      "bytes": 81624,
+      "sha256": "203a75a554dcb42d06bc5171f9824cf4ef177208b918327944ae766d89930ed9"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/report/zeroTCP-checks.svg",
+      "bytes": 54677,
+      "sha256": "e3ff61dfda3b9362470ebba3855a11f05c2c6a0609c3c9f5b3ad61d73fe89c21"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/results.json",
+      "bytes": 1034,
+      "sha256": "2638405ad9adf1e75e0629705e0253267d0c1607b9561fc9df8830518b1d80fd"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/retained-replay-coverage.csv",
+      "bytes": 1936,
+      "sha256": "28629e810fb2e7b0f607a5a924daa1bff4fd0722cd7df3bee530edcce48a39de"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/review-checks.json",
+      "bytes": 2093,
+      "sha256": "a1a3d4602a642a14c60efcccf85c9d5730f357ac12093971ec3cf53dc2086e06"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/runtime-source/analyze.py",
+      "bytes": 10133,
+      "sha256": "9613316660a4d8b53c94c82b8498cf86cdc35f3e81cd4c5f695be04ec8e6b0df"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/runtime-source/collect_finish.py",
+      "bytes": 5112,
+      "sha256": "5e550e22bf258a880bf379aa8b09987deae37f7186123426f107aaac55febb4c"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/runtime-source/export.py",
+      "bytes": 5055,
+      "sha256": "c77483b521b6667cf9de373aea5f4a8054ecc7d946a7a909388bba57df7c2a21"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/runtime-source/gather.py",
+      "bytes": 3514,
+      "sha256": "84d1e44b9ea4852794890784c4b597bad269bd3be7df907b449702374925cb37"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/runtime-source/gather_retry.py",
+      "bytes": 3714,
+      "sha256": "1c803371b55a04de027a4bbe8c5ef50526aa7564a5054181f755704c149942a1"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/runtime-source/launch_analysis.py",
+      "bytes": 1060,
+      "sha256": "662d11bc351db6da8c123517fd44ff6bcae148671ca84657be54f6c0d57aae12"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/runtime-source/summarize.py",
+      "bytes": 16532,
+      "sha256": "b7df5981bdc0d8b12ff398f33deb4a72f44ebea83426795aae29a519ac423403"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/runtime-source/test_zeroTCP.py",
+      "bytes": 3452,
+      "sha256": "fc114bf45da490c0a81d2df28ffbeb707d7c5700e6996e30c5f02b00430a15ef"
+    },
+    {
+      "path": "evidence/capture48-zeroTCP-20261103/training-support.json",
+      "bytes": 387053,
+      "sha256": "d0f4a7c51cdedb333d875abc52921c72764015aed6a01901e9607ad009ed448c"
     },
     {
       "path": "evidence/causal/audit/analysis-columns-v36.json",
@@ -22008,6 +22168,11 @@
       "path": "tools/test_baseline_reproduction.py",
       "bytes": 2201,
       "sha256": "83db0c4591bca6b37f3e46db3409843f66353af823ba4919508fef3ebbc5853d"
+    },
+    {
+      "path": "tools/test_capture48_zeroTCP.py",
+      "bytes": 182,
+      "sha256": "1820028bb47a05d4d0ececf53661f6a2d72fd2562175c97d41706c541694c71c"
     },
     {
       "path": "tools/test_common_period.py",
