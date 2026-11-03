@@ -1,4 +1,17 @@
-# D0冻结诊断（2026-11-03）
+# D0 与48次冻结补采（2026-11-03）
+
+**最新：48/48次冻结采证完成，0网络失败、0优化；原FAIL_A不改判。** 用户将38次提案修订为24格×2次共48次，四个条件补齐五周期扫描。采得63,156个完整149维状态/动作/后继区间。按采前登记容差，24格中8格两次全过，16格的旧A解释降级；不能把新连接变化直接归因插桩或当作旧A失败复现。
+
+- [完整补采报告和逐格表](../evidence/common-period-capture48-20261103/report/report.md) · [结果](../evidence/common-period-capture48-20261103/results.json) · [周期图](../evidence/common-period-capture48-20261103/report/period-scans.png)
+- [两次重复](../evidence/common-period-capture48-20261103/run-summary.csv) · [扰动逐项核对](../evidence/common-period-capture48-20261103/instrumentation-checks.csv) · [有限回报](../evidence/common-period-capture48-20261103/finite-return-labels.csv) · [公开谱系](../evidence/common-period-capture48-20261103/publication-provenance.json)
+
+新轨迹无float32精确±1饱和，但最高边界比例97.57%；部署状态上21/48个固定16点cohort出现共享fc1/fc2跨周期负梯度余弦，与训练状态样本不同。这是冻结critic下的离策略局部诊断，不证明真实环境梯度或五头方案有效。384个H≥20秒同连接后缀按run聚合，每格仍只有2个独立连接；Q既有高估也有低估，不用重叠后缀制造窄置信区间。
+
+预算含小包交付21.69分钟、保守1.808机时，均低于45分钟/4机时；五机进程/IPC清零，51保护模型/选定CP/native/系统参数未变，实例未自动关机。原始NPZ/大日志/模型仍云端。D-Q、λ扫描、选择器TCP、新训练和B0/C均未执行；价值优化仍另行审批。
+
+---
+
+## 历史：原D0阶段
 
 **PARTIAL：冻结部署字段不足。原FAIL_A不改判，B0/C未运行。** 本轮0新拥塞控制TCP、0优化、0λ扫描，模型和BN/target/原checkpoint不变。
 
