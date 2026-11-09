@@ -1,0 +1,2198 @@
+[
+  {
+    "job": {
+      "host": 1,
+      "condition": {
+        "trace": "trace-3114405-bus",
+        "trace_sha256": "37cd1d5f768d4ab80ced579498f292d82a898457896be7dd9a533d9cc332e0af",
+        "source_git_tree": "ac6717b5f113bf899344e91ffc57e472daf29954",
+        "source_git_blob": "2281d9d971f095ffbf8bc803dfc54ce2e5a4a849",
+        "source_url": "https://github.com/Soheil-ab/Cellular-Traces-NYC/blob/master/trace-3114405-bus",
+        "packet_bytes": 1504,
+        "packets": 212684,
+        "trace_period_ms": 314891,
+        "capacity_mbps": 8.126665697018968,
+        "peak_mbps": 24.220416,
+        "nominal_mbps": 8.126665697018968,
+        "kind": "real",
+        "family": "bus",
+        "split": "exact training trace+depth;seen60s prefix,not blind generalization",
+        "capacity_definition": "Mahimahi1504-byte packet opportunity; mean over actual last-timestamp repeat period; peak1s bin",
+        "condition": "V17-NYC-bus-R20-q0p5",
+        "base_rtt_ms": 20,
+        "delay_ms": 10.0,
+        "queue_packets": 21,
+        "queue_bdp": 0.5,
+        "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+        "policy_inverse_rtt_noise": 0,
+        "observation_noise_seed": 141067,
+        "source_actor_role": "V17-NYC-bus-R20"
+      },
+      "seconds": 60,
+      "period_ms": 20,
+      "order": 900,
+      "group": "V31",
+      "repeat": 0
+    },
+    "run": "s20-v31-900-V31-r0",
+    "status": "COMPLETED",
+    "frozen_audit_pass": true,
+    "wall_seconds": 62.703495025634766,
+    "returncode": 0,
+    "orphan_cleanup": [],
+    "policy": {
+      "schema": "common-period-deployment-no-step-logs-v1",
+      "decisions": 2763,
+      "observations": 2763,
+      "policy_inferences": 2764,
+      "physical_exposure_s": 59.948782999999914,
+      "python_step_logs": false,
+      "unobserved_tail_dropped": true,
+      "cwnd_low_saturation": 0.0003619254433586681,
+      "cwnd_high_saturation": 0.0,
+      "cwnd_abs_gt_099": 0.0003619254433586681,
+      "planned_mtp_ms_mean": 20.0,
+      "inference_ms_mean": 0.18792108143107963,
+      "time_weighted_raw_utility": 0.13832496202763014
+    },
+    "fixed20_controlled_samples": 2763,
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.5693955465181276,
+        "departure_mbps": 7.223431466666667,
+        "capacity_mbps": 12.686139733333333,
+        "queue_mean_ms": 4.400682745413672,
+        "queue_p95_ms": 15.0,
+        "queue_p99_ms": 26.0,
+        "dropped_packets": 74.0,
+        "arrival_packets": 36105.0,
+        "drop_fraction": 0.00204957762082814,
+        "dropped_bytes": 111296.0,
+        "arrival_bytes": 54287032.0,
+        "complete_window": true,
+        "last_log_s": 60.182,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.7235656464310304,
+        "departure_mbps": 11.649420800000001,
+        "capacity_mbps": 16.1000192,
+        "queue_mean_ms": 3.6249742002063985,
+        "queue_p95_ms": 12.0,
+        "queue_p99_ms": 22.0,
+        "dropped_packets": 41.0,
+        "arrival_packets": 9738.0,
+        "drop_fraction": 0.004210310125282399,
+        "dropped_bytes": 61664.0,
+        "arrival_bytes": 14633968.0,
+        "complete_window": true,
+        "last_log_s": 60.182,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.528038113689304,
+        "departure_mbps": 6.3382336,
+        "capacity_mbps": 12.00336384,
+        "queue_mean_ms": 4.686040772939524,
+        "queue_p95_ms": 16.0,
+        "queue_p99_ms": 28.0,
+        "dropped_packets": 33.0,
+        "arrival_packets": 26367.0,
+        "drop_fraction": 0.0012515644555694619,
+        "dropped_bytes": 49632.0,
+        "arrival_bytes": 39653064.0,
+        "complete_window": true,
+        "last_log_s": 60.182,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 2156736,
+        "departure_bytes": 1197180
+      },
+      {
+        "service_bytes": 1561152,
+        "departure_bytes": 1216736
+      },
+      {
+        "service_bytes": 1731104,
+        "departure_bytes": 1076864
+      },
+      {
+        "service_bytes": 2043936,
+        "departure_bytes": 1654400
+      },
+      {
+        "service_bytes": 2431968,
+        "departure_bytes": 2090612
+      },
+      {
+        "service_bytes": 1731104,
+        "departure_bytes": 1513024
+      },
+      {
+        "service_bytes": 1866464,
+        "departure_bytes": 905408
+      },
+      {
+        "service_bytes": 2346240,
+        "departure_bytes": 1777728
+      },
+      {
+        "service_bytes": 1824352,
+        "departure_bytes": 1227264
+      },
+      {
+        "service_bytes": 2431968,
+        "departure_bytes": 1902560
+      },
+      {
+        "service_bytes": 1890528,
+        "departure_bytes": 1446848
+      },
+      {
+        "service_bytes": 1577696,
+        "departure_bytes": 938496
+      },
+      {
+        "service_bytes": 2475584,
+        "departure_bytes": 1147552
+      },
+      {
+        "service_bytes": 2522208,
+        "departure_bytes": 1812372
+      },
+      {
+        "service_bytes": 2146208,
+        "departure_bytes": 1424288
+      },
+      {
+        "service_bytes": 1723584,
+        "departure_bytes": 1188160
+      },
+      {
+        "service_bytes": 1728096,
+        "departure_bytes": 1126496
+      },
+      {
+        "service_bytes": 1532576,
+        "departure_bytes": 977600
+      },
+      {
+        "service_bytes": 1895040,
+        "departure_bytes": 1135520
+      },
+      {
+        "service_bytes": 1436320,
+        "departure_bytes": 1010688
+      },
+      {
+        "service_bytes": 1395712,
+        "departure_bytes": 788096
+      },
+      {
+        "service_bytes": 1118976,
+        "departure_bytes": 664768
+      },
+      {
+        "service_bytes": 1216736,
+        "departure_bytes": 779072
+      },
+      {
+        "service_bytes": 1073856,
+        "departure_bytes": 813664
+      },
+      {
+        "service_bytes": 1592736,
+        "departure_bytes": 873824
+      },
+      {
+        "service_bytes": 1461888,
+        "departure_bytes": 894880
+      },
+      {
+        "service_bytes": 1564160,
+        "departure_bytes": 917440
+      },
+      {
+        "service_bytes": 1710048,
+        "departure_bytes": 1200192
+      },
+      {
+        "service_bytes": 1695008,
+        "departure_bytes": 906912
+      },
+      {
+        "service_bytes": 1582208,
+        "departure_bytes": 977600
+      },
+      {
+        "service_bytes": 1537088,
+        "departure_bytes": 1003168
+      },
+      {
+        "service_bytes": 1314496,
+        "departure_bytes": 752052
+      },
+      {
+        "service_bytes": 976096,
+        "departure_bytes": 568512
+      },
+      {
+        "service_bytes": 983616,
+        "departure_bytes": 742976
+      },
+      {
+        "service_bytes": 989632,
+        "departure_bytes": 604608
+      },
+      {
+        "service_bytes": 1192672,
+        "departure_bytes": 637696
+      },
+      {
+        "service_bytes": 1152064,
+        "departure_bytes": 591072
+      },
+      {
+        "service_bytes": 977600,
+        "departure_bytes": 633184
+      },
+      {
+        "service_bytes": 867808,
+        "departure_bytes": 506848
+      },
+      {
+        "service_bytes": 1039264,
+        "departure_bytes": 482784
+      },
+      {
+        "service_bytes": 905408,
+        "departure_bytes": 588064
+      },
+      {
+        "service_bytes": 833216,
+        "departure_bytes": 588064
+      },
+      {
+        "service_bytes": 1410752,
+        "departure_bytes": 303808
+      },
+      {
+        "service_bytes": 1379168,
+        "departure_bytes": 651232
+      },
+      {
+        "service_bytes": 1687488,
+        "departure_bytes": 667776
+      },
+      {
+        "service_bytes": 1176128,
+        "departure_bytes": 497824
+      },
+      {
+        "service_bytes": 1431808,
+        "departure_bytes": 564000
+      },
+      {
+        "service_bytes": 2645536,
+        "departure_bytes": 610624
+      },
+      {
+        "service_bytes": 2392864,
+        "departure_bytes": 600096
+      },
+      {
+        "service_bytes": 2140192,
+        "departure_bytes": 564000
+      },
+      {
+        "service_bytes": 1880000,
+        "departure_bytes": 645216
+      },
+      {
+        "service_bytes": 1734112,
+        "departure_bytes": 801632
+      },
+      {
+        "service_bytes": 1985280,
+        "departure_bytes": 831712
+      },
+      {
+        "service_bytes": 1585216,
+        "departure_bytes": 783584
+      },
+      {
+        "service_bytes": 1419776,
+        "departure_bytes": 702368
+      },
+      {
+        "service_bytes": 1306976,
+        "departure_bytes": 554976
+      },
+      {
+        "service_bytes": 1049792,
+        "departure_bytes": 511360
+      },
+      {
+        "service_bytes": 1037760,
+        "departure_bytes": 517376
+      },
+      {
+        "service_bytes": 1156576,
+        "departure_bytes": 536928
+      },
+      {
+        "service_bytes": 1493472,
+        "departure_bytes": 545952
+      }
+    ],
+    "checkpoint_sha256": {
+      ".index": "d3a22bb4ced91394377ccd8e18cfef1e3a738b9459eb64307f3636154551caaf",
+      ".data-00000-of-00001": "5918f1fec697567b96614119c4f52a7a68c9acb2ece232acbe28750aa90399fc"
+    },
+    "raw_log_sha256": "8dacb80df644837561966b9680ee879a205b67bf9b999073010ccdcd5d67df5e"
+  },
+  {
+    "job": {
+      "host": 2,
+      "condition": {
+        "trace": "dyn-constant24-s0",
+        "kind": "constant",
+        "seed": 0,
+        "packet_bytes": 1504,
+        "trace_period_ms": 60000,
+        "capacity_mbps": 23.999829333333334,
+        "nominal_mbps": 24,
+        "peak_mbps": 24,
+        "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+        "packets": 119680,
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 1.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 1.0,
+            "end_s": 2.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 2.0,
+            "end_s": 3.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 3.0,
+            "end_s": 4.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 4.0,
+            "end_s": 5.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 6.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 6.0,
+            "end_s": 7.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 7.0,
+            "end_s": 8.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 8.0,
+            "end_s": 9.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 9.0,
+            "end_s": 10.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 10.0,
+            "end_s": 11.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 11.0,
+            "end_s": 12.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 12.0,
+            "end_s": 13.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 13.0,
+            "end_s": 14.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 14.0,
+            "end_s": 15.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 15.0,
+            "end_s": 16.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 16.0,
+            "end_s": 17.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 17.0,
+            "end_s": 18.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 18.0,
+            "end_s": 19.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 19.0,
+            "end_s": 20.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 20.0,
+            "end_s": 21.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 21.0,
+            "end_s": 22.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 22.0,
+            "end_s": 23.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 23.0,
+            "end_s": 24.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 24.0,
+            "end_s": 25.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 25.0,
+            "end_s": 26.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 26.0,
+            "end_s": 27.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 27.0,
+            "end_s": 28.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 28.0,
+            "end_s": 29.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 29.0,
+            "end_s": 30.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 30.0,
+            "end_s": 31.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 31.0,
+            "end_s": 32.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 32.0,
+            "end_s": 33.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 33.0,
+            "end_s": 34.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 34.0,
+            "end_s": 35.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 35.0,
+            "end_s": 36.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 36.0,
+            "end_s": 37.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 37.0,
+            "end_s": 38.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 38.0,
+            "end_s": 39.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 39.0,
+            "end_s": 40.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 40.0,
+            "end_s": 41.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 41.0,
+            "end_s": 42.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 42.0,
+            "end_s": 43.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 43.0,
+            "end_s": 44.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 44.0,
+            "end_s": 45.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 45.0,
+            "end_s": 46.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 46.0,
+            "end_s": 47.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 47.0,
+            "end_s": 48.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 48.0,
+            "end_s": 49.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 49.0,
+            "end_s": 50.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 50.0,
+            "end_s": 51.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 51.0,
+            "end_s": 52.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 52.0,
+            "end_s": 53.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 53.0,
+            "end_s": 54.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 54.0,
+            "end_s": 55.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 55.0,
+            "end_s": 56.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 56.0,
+            "end_s": 57.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 57.0,
+            "end_s": 58.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 58.0,
+            "end_s": 59.0,
+            "nominal_mbps": 24
+          },
+          {
+            "start_s": 59.0,
+            "end_s": 60.0,
+            "nominal_mbps": 24
+          }
+        ],
+        "capacity_definition": "1504-byte service opportunities; total bytes / actual 60s repeat period; evaluation uses logged capacity integral",
+        "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+        "split": "seen-anchor",
+        "condition": "V17-anchor-Tconstant24-R20",
+        "base_rtt_ms": 20,
+        "delay_ms": 10,
+        "queue_packets": 200,
+        "queue_bytes": 299296,
+        "policy_inverse_rtt_noise": 0.0,
+        "queue_bdp": 5,
+        "episode_environments": [
+          {
+            "trace": "dyn-constant24-s0",
+            "kind": "constant",
+            "seed": 0,
+            "packet_bytes": 1504,
+            "trace_period_ms": 60000,
+            "capacity_mbps": 23.999829333333334,
+            "nominal_mbps": 24,
+            "peak_mbps": 24,
+            "trace_sha256": "e951b8889100e1008e9170fcb49a5a4ae7d646e959e625f9b3f258630c72f458",
+            "packets": 119680,
+            "segments": [
+              {
+                "start_s": 0.0,
+                "end_s": 1.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 1.0,
+                "end_s": 2.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 2.0,
+                "end_s": 3.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 3.0,
+                "end_s": 4.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 4.0,
+                "end_s": 5.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 5.0,
+                "end_s": 6.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 6.0,
+                "end_s": 7.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 7.0,
+                "end_s": 8.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 8.0,
+                "end_s": 9.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 9.0,
+                "end_s": 10.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 10.0,
+                "end_s": 11.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 11.0,
+                "end_s": 12.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 12.0,
+                "end_s": 13.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 13.0,
+                "end_s": 14.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 14.0,
+                "end_s": 15.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 15.0,
+                "end_s": 16.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 16.0,
+                "end_s": 17.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 17.0,
+                "end_s": 18.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 18.0,
+                "end_s": 19.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 19.0,
+                "end_s": 20.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 20.0,
+                "end_s": 21.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 21.0,
+                "end_s": 22.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 22.0,
+                "end_s": 23.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 23.0,
+                "end_s": 24.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 24.0,
+                "end_s": 25.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 25.0,
+                "end_s": 26.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 26.0,
+                "end_s": 27.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 27.0,
+                "end_s": 28.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 28.0,
+                "end_s": 29.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 29.0,
+                "end_s": 30.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 30.0,
+                "end_s": 31.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 31.0,
+                "end_s": 32.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 32.0,
+                "end_s": 33.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 33.0,
+                "end_s": 34.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 34.0,
+                "end_s": 35.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 35.0,
+                "end_s": 36.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 36.0,
+                "end_s": 37.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 37.0,
+                "end_s": 38.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 38.0,
+                "end_s": 39.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 39.0,
+                "end_s": 40.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 40.0,
+                "end_s": 41.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 41.0,
+                "end_s": 42.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 42.0,
+                "end_s": 43.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 43.0,
+                "end_s": 44.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 44.0,
+                "end_s": 45.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 45.0,
+                "end_s": 46.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 46.0,
+                "end_s": 47.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 47.0,
+                "end_s": 48.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 48.0,
+                "end_s": 49.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 49.0,
+                "end_s": 50.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 50.0,
+                "end_s": 51.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 51.0,
+                "end_s": 52.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 52.0,
+                "end_s": 53.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 53.0,
+                "end_s": 54.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 54.0,
+                "end_s": 55.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 55.0,
+                "end_s": 56.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 56.0,
+                "end_s": 57.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 57.0,
+                "end_s": 58.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 58.0,
+                "end_s": 59.0,
+                "nominal_mbps": 24
+              },
+              {
+                "start_s": 59.0,
+                "end_s": 60.0,
+                "nominal_mbps": 24
+              }
+            ],
+            "capacity_definition": "1504-byte service opportunities; total bytes / actual 60s repeat period; evaluation uses logged capacity integral",
+            "queue_rule": "Registered fixed physical queue: q*peak1s_or_nominal_Mbps*baseRTT /1504bytes; same trace, no capacity oracle to policy",
+            "split": "train-and-seen-evaluation",
+            "condition": "V17-anchor-Tconstant24-R20",
+            "base_rtt_ms": 20,
+            "delay_ms": 10,
+            "queue_packets": 200,
+            "queue_bytes": 299296,
+            "policy_inverse_rtt_noise": 0.0,
+            "queue_bdp": 5
+          }
+        ]
+      },
+      "seconds": 60,
+      "period_ms": 20,
+      "order": 901,
+      "group": "V31",
+      "repeat": 0
+    },
+    "run": "s20-v31-901-V31-r0",
+    "status": "COMPLETED",
+    "frozen_audit_pass": true,
+    "wall_seconds": 62.76962852478027,
+    "returncode": 0,
+    "orphan_cleanup": [],
+    "policy": {
+      "schema": "common-period-deployment-no-step-logs-v1",
+      "decisions": 2720,
+      "observations": 2720,
+      "policy_inferences": 2721,
+      "physical_exposure_s": 59.943005999999976,
+      "python_step_logs": false,
+      "unobserved_tail_dropped": true,
+      "cwnd_low_saturation": 0.0003676470588235294,
+      "cwnd_high_saturation": 0.0,
+      "cwnd_abs_gt_099": 0.0003676470588235294,
+      "planned_mtp_ms_mean": 20.0,
+      "inference_ms_mean": 0.3326215963234765,
+      "time_weighted_raw_utility": 0.42456614228773965
+    },
+    "fixed20_controlled_samples": 2720,
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.9909599179784905,
+        "departure_mbps": 23.782471466666664,
+        "capacity_mbps": 23.999428266666666,
+        "queue_mean_ms": 8.558833448560781,
+        "queue_p95_ms": 14.0,
+        "queue_p99_ms": 17.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 118631.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 178406136.0,
+        "complete_window": true,
+        "last_log_s": 60.095,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.9458499756765752,
+        "departure_mbps": 22.6972032,
+        "capacity_mbps": 23.996620800000002,
+        "queue_mean_ms": 4.577946163628656,
+        "queue_p95_ms": 9.0,
+        "queue_p99_ms": 11.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 18877.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 28379024.0,
+        "complete_window": true,
+        "last_log_s": 60.095,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.9999806399917397,
+        "departure_mbps": 23.99952512,
+        "capacity_mbps": 23.999989760000002,
+        "queue_mean_ms": 9.312110213167024,
+        "queue_p95_ms": 14.0,
+        "queue_p99_ms": 17.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 99754.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 150027112.0,
+        "complete_window": true,
+        "last_log_s": 60.095,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 2995968,
+        "departure_bytes": 1488876
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2943408
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2980928
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2982484
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2983936
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2994464
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2997524
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2999028
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      }
+    ],
+    "checkpoint_sha256": {
+      ".index": "d3a22bb4ced91394377ccd8e18cfef1e3a738b9459eb64307f3636154551caaf",
+      ".data-00000-of-00001": "5918f1fec697567b96614119c4f52a7a68c9acb2ece232acbe28750aa90399fc"
+    },
+    "raw_log_sha256": "09bfcb19c5d7891f54d2165df4303b1d004d524ce294782658e60555b3f8c59e"
+  },
+  {
+    "job": {
+      "host": 3,
+      "condition": {
+        "actual_capacity_mbps": 23.999829333333334,
+        "actual_repeat_period_ms": 60000,
+        "base_rtt_ms": 100,
+        "capacity_definition": "Actual 1504-byte service opportunities divided by the actual 60000ms repeat period; runtime evaluation must use logged integrated service.",
+        "capacity_mbps": 23.999829333333334,
+        "condition": "V34-development-constant24-R100-q5p0-i0",
+        "delay_ms": 50.0,
+        "event_fingerprint": "cfd298c52da5988cfeb12d32f3c9255a990c037d37fc3cad9a49832de78a3ae3",
+        "family": "constant",
+        "generalization_claim_eligible": false,
+        "generator_version": "regime-v11-design-1",
+        "id": "V34-development-constant24-R100-q5p0-i0",
+        "initial_phase_bit_milliseconds": -10240000,
+        "instance": 0,
+        "intentional_constant_control_overlap": true,
+        "kind": "synthetic",
+        "matched_condition_id": "constant24-R100-q5p0",
+        "materialized": true,
+        "mechanism_hypothesis": "Keep an opponent-favorable stable control: fixed MTP and rule CC may be strong; learned timing must preserve performance while reducing measured cost.",
+        "network_executed": false,
+        "nominal_integrated_capacity_mbps": 24.0,
+        "nominal_mbps": 24,
+        "oneway_delay_ms": 50.0,
+        "packet_bytes": 1504,
+        "packets": 119680,
+        "peak_mbps": 24,
+        "period_ms": 60000,
+        "policy_inverse_rtt_noise": 0.0,
+        "policy_may_read_capacity": false,
+        "policy_may_read_schedule": false,
+        "quantization_version": "v11b-integer-endpoint-phase",
+        "queue_bdp": 5.0,
+        "queue_bdp_at_peak": 5.0,
+        "queue_packets": 998,
+        "queue_rule": "Fixed physical packets from declared peak bandwidth and base RTT; no resizing within a trace or based on outcomes.",
+        "residual_bit_milliseconds": 0,
+        "role": 1,
+        "seed": 3402000,
+        "segments": [
+          {
+            "end_ms": 10000,
+            "end_ratio": 10000,
+            "start_ms": 0,
+            "start_ratio": 10000
+          },
+          {
+            "end_ms": 60000,
+            "end_ratio": 10000,
+            "start_ms": 10000,
+            "start_ratio": 10000
+          }
+        ],
+        "split": "development",
+        "trace": "V34-development-constant24-R100-q5p0-i0.trace",
+        "trace_period_ms": 60000,
+        "trace_relative_path": "configs/scenario-suite-v34/traces/development/V34-development-constant24-R100-q5p0-i0.trace",
+        "trace_sha256": "f2b548fb0eec4ed89fd2830584755510df9c538ba0b10173b372b4246704a790",
+        "waveform_origin": "Our predeclared, unvalidated synthetic design; not a copied paper trace or a demonstrated candidate advantage."
+      },
+      "seconds": 60,
+      "period_ms": 20,
+      "order": 902,
+      "group": "V31",
+      "repeat": 0
+    },
+    "run": "s20-v31-902-V31-r0",
+    "status": "COMPLETED",
+    "frozen_audit_pass": true,
+    "wall_seconds": 62.951786518096924,
+    "returncode": 0,
+    "orphan_cleanup": [],
+    "policy": {
+      "schema": "common-period-deployment-no-step-logs-v1",
+      "decisions": 2758,
+      "observations": 2758,
+      "policy_inferences": 2759,
+      "physical_exposure_s": 59.86783600000014,
+      "python_step_logs": false,
+      "unobserved_tail_dropped": true,
+      "cwnd_low_saturation": 0.0010877447425670776,
+      "cwnd_high_saturation": 0.0,
+      "cwnd_abs_gt_099": 0.0010877447425670776,
+      "planned_mtp_ms_mean": 20.0,
+      "inference_ms_mean": 0.17391530456966628,
+      "time_weighted_raw_utility": 0.2061034599153724
+    },
+    "fixed20_controlled_samples": 2758,
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.4272392222321385,
+        "departure_mbps": 10.253497066666666,
+        "capacity_mbps": 23.999428266666666,
+        "queue_mean_ms": 2.059755191427789,
+        "queue_p95_ms": 2.0,
+        "queue_p99_ms": 39.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 51144.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 76904236.0,
+        "complete_window": true,
+        "last_log_s": 60.439,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.10505099106922815,
+        "departure_mbps": 2.5207424,
+        "capacity_mbps": 23.995417600000003,
+        "queue_mean_ms": 1.0099857346647647,
+        "queue_p95_ms": 1.0,
+        "queue_p99_ms": 1.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 2103.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 3150928.0,
+        "complete_window": true,
+        "last_log_s": 60.439,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.4916639466927784,
+        "departure_mbps": 11.800048,
+        "capacity_mbps": 24.0002304,
+        "queue_mean_ms": 2.104773751503905,
+        "queue_p95_ms": 2.0,
+        "queue_p99_ms": 39.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 49041.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 73753308.0,
+        "complete_window": true,
+        "last_log_s": 60.439,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 2994464,
+        "departure_bytes": 138364
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 206048
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 243648
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 263200
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 279796
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 269216
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 293280
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 315840
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 386528
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 755008
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1282912
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2812532
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2113120
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1660416
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1440832
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1377664
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1409248
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1433312
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1472416
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1431808
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1421280
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1454368
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1457376
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1440832
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1391200
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1467904
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1433312
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1439380
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1433312
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1431808
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1451360
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1466400
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1481440
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1422784
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1443840
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1406240
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1463392
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1425792
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1443840
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1443840
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1436320
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1427296
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1406240
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1436320
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1448352
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1403232
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1443840
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1413760
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1434816
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1466400
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1382176
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1362624
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1412256
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1424288
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1403232
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1424288
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 1475424
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1421280
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1409300
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 1464896
+      }
+    ],
+    "checkpoint_sha256": {
+      ".index": "d3a22bb4ced91394377ccd8e18cfef1e3a738b9459eb64307f3636154551caaf",
+      ".data-00000-of-00001": "5918f1fec697567b96614119c4f52a7a68c9acb2ece232acbe28750aa90399fc"
+    },
+    "raw_log_sha256": "cf516f071845e35eb56acf3a80f5239cd845d9a864b8ffe2afa2f59d1eadad79"
+  },
+  {
+    "job": {
+      "host": 4,
+      "condition": {
+        "actual_capacity_mbps": 20.731136,
+        "actual_repeat_period_ms": 60000,
+        "base_rtt_ms": 20,
+        "capacity_definition": "Actual 1504-byte service opportunities divided by the actual 60000ms repeat period; runtime evaluation must use logged integrated service.",
+        "capacity_mbps": 20.731136,
+        "condition": "V34-development-mixed_step24-R20-q1p0-i0",
+        "delay_ms": 10.0,
+        "event_fingerprint": "8e7060902d62fb0c1b59bf5fbd558862fc29b07ea0106763dec77d8b4d1c4e1b",
+        "family": "mixed_step",
+        "generalization_claim_eligible": true,
+        "generator_version": "regime-v11-design-1",
+        "id": "V34-development-mixed_step24-R20-q1p0-i0",
+        "initial_phase_bit_milliseconds": -3840000,
+        "instance": 0,
+        "intentional_constant_control_overlap": false,
+        "kind": "synthetic",
+        "matched_condition_id": "mixed_step24-R20-q1p0",
+        "materialized": true,
+        "mechanism_hypothesis": "After a sustained capacity drop, observation/control delay and in-flight data may affect queue recovery; faster decisions are not guaranteed to help.",
+        "network_executed": false,
+        "nominal_integrated_capacity_mbps": 20.7312,
+        "nominal_mbps": 24,
+        "oneway_delay_ms": 10.0,
+        "packet_bytes": 1504,
+        "packets": 103380,
+        "peak_mbps": 24,
+        "period_ms": 60000,
+        "policy_inverse_rtt_noise": 0.0,
+        "policy_may_read_capacity": false,
+        "policy_may_read_schedule": false,
+        "quantization_version": "v11b-integer-endpoint-phase",
+        "queue_bdp": 1.0,
+        "queue_bdp_at_peak": 1.0,
+        "queue_packets": 40,
+        "queue_rule": "Fixed physical packets from declared peak bandwidth and base RTT; no resizing within a trace or based on outcomes.",
+        "residual_bit_milliseconds": 0,
+        "role": 2,
+        "seed": 3403000,
+        "segments": [
+          {
+            "end_ms": 10000,
+            "end_ratio": 10000,
+            "start_ms": 0,
+            "start_ratio": 10000
+          },
+          {
+            "end_ms": 17460,
+            "end_ratio": 10000,
+            "start_ms": 10000,
+            "start_ratio": 10000
+          },
+          {
+            "end_ms": 19320,
+            "end_ratio": 4000,
+            "start_ms": 17460,
+            "start_ratio": 4000
+          },
+          {
+            "end_ms": 26240,
+            "end_ratio": 10000,
+            "start_ms": 19320,
+            "start_ratio": 10000
+          },
+          {
+            "end_ms": 30160,
+            "end_ratio": 2500,
+            "start_ms": 26240,
+            "start_ratio": 2500
+          },
+          {
+            "end_ms": 34520,
+            "end_ratio": 10000,
+            "start_ms": 30160,
+            "start_ratio": 10000
+          },
+          {
+            "end_ms": 38060,
+            "end_ratio": 4000,
+            "start_ms": 34520,
+            "start_ratio": 4000
+          },
+          {
+            "end_ms": 43620,
+            "end_ratio": 10000,
+            "start_ms": 38060,
+            "start_ratio": 10000
+          },
+          {
+            "end_ms": 46760,
+            "end_ratio": 6000,
+            "start_ms": 43620,
+            "start_ratio": 6000
+          },
+          {
+            "end_ms": 54720,
+            "end_ratio": 10000,
+            "start_ms": 46760,
+            "start_ratio": 10000
+          },
+          {
+            "end_ms": 56560,
+            "end_ratio": 6000,
+            "start_ms": 54720,
+            "start_ratio": 6000
+          },
+          {
+            "end_ms": 60000,
+            "end_ratio": 10000,
+            "start_ms": 56560,
+            "start_ratio": 10000
+          }
+        ],
+        "split": "development",
+        "trace": "V34-development-mixed_step24-R20-q1p0-i0.trace",
+        "trace_period_ms": 60000,
+        "trace_relative_path": "configs/scenario-suite-v34/traces/development/V34-development-mixed_step24-R20-q1p0-i0.trace",
+        "trace_sha256": "74568a4ddb06cab827848f2d4e1819cfdd6fcbd4f0bbbdbba03bb678b99e6fe6",
+        "waveform_origin": "Our predeclared, unvalidated synthetic design; not a copied paper trace or a demonstrated candidate advantage."
+      },
+      "seconds": 60,
+      "period_ms": 20,
+      "order": 903,
+      "group": "V31",
+      "repeat": 0
+    },
+    "run": "s20-v31-903-V31-r0",
+    "status": "COMPLETED",
+    "frozen_audit_pass": true,
+    "wall_seconds": 62.65300464630127,
+    "returncode": 0,
+    "orphan_cleanup": [],
+    "policy": {
+      "schema": "common-period-deployment-no-step-logs-v1",
+      "decisions": 2767,
+      "observations": 2767,
+      "policy_inferences": 2768,
+      "physical_exposure_s": 59.95929400000007,
+      "python_step_logs": false,
+      "unobserved_tail_dropped": true,
+      "cwnd_low_saturation": 0.0003614022406938923,
+      "cwnd_high_saturation": 0.0,
+      "cwnd_abs_gt_099": 0.0003614022406938923,
+      "planned_mtp_ms_mean": 20.0,
+      "inference_ms_mean": 0.18791817564109697,
+      "time_weighted_raw_utility": 0.38406043784526656
+    },
+    "fixed20_controlled_samples": 2767,
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.9754990001576532,
+        "departure_mbps": 20.2228112,
+        "capacity_mbps": 20.730734933333334,
+        "queue_mean_ms": 6.322459744586341,
+        "queue_p95_ms": 13.0,
+        "queue_p99_ms": 18.0,
+        "dropped_packets": 52.0,
+        "arrival_packets": 100926.0,
+        "drop_fraction": 0.0005152289796484553,
+        "dropped_bytes": 78208.0,
+        "arrival_bytes": 151776364.0,
+        "complete_window": true,
+        "last_log_s": 60.082,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.9318106656083843,
+        "departure_mbps": 22.360307199999998,
+        "capacity_mbps": 23.996620800000002,
+        "queue_mean_ms": 4.936155335628227,
+        "queue_p95_ms": 10.0,
+        "queue_p99_ms": 12.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 18605.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 27969936.0,
+        "complete_window": true,
+        "last_log_s": 60.082,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.9859422264712737,
+        "departure_mbps": 19.795312,
+        "capacity_mbps": 20.07755776,
+        "queue_mean_ms": 6.63577020324808,
+        "queue_p95_ms": 13.0,
+        "queue_p99_ms": 19.0,
+        "dropped_packets": 52.0,
+        "arrival_packets": 82321.0,
+        "drop_fraction": 0.0006316735705348574,
+        "dropped_bytes": 78208.0,
+        "arrival_bytes": 123806428.0,
+        "complete_window": true,
+        "last_log_s": 60.082,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 2995968,
+        "departure_bytes": 1159580
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2800448
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2991508
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2997524
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2992960
+      },
+      {
+        "service_bytes": 2028896,
+        "departure_bytes": 2016864
+      },
+      {
+        "service_bytes": 1200192,
+        "departure_bytes": 1200192
+      },
+      {
+        "service_bytes": 2422944,
+        "departure_bytes": 2254496
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2989952
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2974912
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2995968
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2974912
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2974912
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2985440
+      },
+      {
+        "service_bytes": 1291936,
+        "departure_bytes": 1284416
+      },
+      {
+        "service_bytes": 750496,
+        "departure_bytes": 749044
+      },
+      {
+        "service_bytes": 748992,
+        "departure_bytes": 748992
+      },
+      {
+        "service_bytes": 750496,
+        "departure_bytes": 750496
+      },
+      {
+        "service_bytes": 2638016,
+        "departure_bytes": 1895040
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2820000
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2962880
+      },
+      {
+        "service_bytes": 2137184,
+        "departure_bytes": 2120640
+      },
+      {
+        "service_bytes": 1200192,
+        "departure_bytes": 1200192
+      },
+      {
+        "service_bytes": 1200192,
+        "departure_bytes": 1198688
+      },
+      {
+        "service_bytes": 1200192,
+        "departure_bytes": 1200192
+      },
+      {
+        "service_bytes": 2890688,
+        "departure_bytes": 2606432
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2997472
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2995968
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2989952
+      },
+      {
+        "service_bytes": 2546272,
+        "departure_bytes": 2496640
+      },
+      {
+        "service_bytes": 1798784,
+        "departure_bytes": 1770208
+      },
+      {
+        "service_bytes": 1800288,
+        "departure_bytes": 1792768
+      },
+      {
+        "service_bytes": 2087552,
+        "departure_bytes": 2012352
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2994464
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2998976
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 2665088,
+        "departure_bytes": 2665088
+      },
+      {
+        "service_bytes": 1798784,
+        "departure_bytes": 1798784
+      },
+      {
+        "service_bytes": 2326688,
+        "departure_bytes": 2311648
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 3000480
+      },
+      {
+        "service_bytes": 3000480,
+        "departure_bytes": 2999028
+      }
+    ],
+    "checkpoint_sha256": {
+      ".index": "d3a22bb4ced91394377ccd8e18cfef1e3a738b9459eb64307f3636154551caaf",
+      ".data-00000-of-00001": "5918f1fec697567b96614119c4f52a7a68c9acb2ece232acbe28750aa90399fc"
+    },
+    "raw_log_sha256": "c0760efacf702036dc49d93c31f34b870ec7bc6b424b86700da68dd75a799806"
+  }
+]

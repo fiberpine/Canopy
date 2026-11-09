@@ -14,6 +14,13 @@ SCHEMA = 'common-period-v1'
 REWARD = 'throughput-times-delay-minus-loss-v1'
 
 
+def training_periods(periods=PERIODS):
+    periods = tuple(periods)
+    if periods not in ((20,), PERIODS):
+        raise ValueError('Expected S20 or the original A period set')
+    return periods
+
+
 def encoded_period(ms):
     if ms not in PERIODS:
         raise ValueError('Unknown candidate period')
@@ -57,10 +64,11 @@ def ending(kind, connection, next_connection, has_next):
     return True, True
 
 
-def calibration(blocks):
+def calibration(blocks, active_periods=PERIODS):
     """Blocks contain interval rewards, actual durations, period and connection IDs."""
     mass = total_reward = 0.
-    gammas = {t: [] for t in PERIODS}
+    active_periods = training_periods(active_periods)
+    gammas = {t: [] for t in active_periods}
     for block in blocks:
         if block['connection'] != block['end_connection']:
             raise ValueError('Calibration block crosses a connection')
@@ -68,6 +76,8 @@ def calibration(blocks):
             raise ValueError('Calibration block shorter than 40 seconds')
         if len(block['duration']) != len(block['reward']):
             raise ValueError('Mismatched calibration arrays')
+        if block['period_ms'] not in gammas:
+            raise ValueError('Inactive calibration period')
         for dt, reward in zip(block['duration'], block['reward']):
             g = discount(dt)
             # R / discounted mass estimates the interval utility density;
@@ -76,10 +86,11 @@ def calibration(blocks):
             mass += dt
             gammas[block['period_ms']].append(g)
     if mass <= 0 or not all(gammas.values()):
-        raise ValueError('All five periods need calibration data')
+        raise ValueError('All active periods need calibration data')
     c = total_reward / mass
-    return dict(c=c, K=c / .005,
-                n0={str(t): 1 / (1 - float(np.mean(gs))) for t, gs in gammas.items()})
+    n0 = {str(t): 1 / (1 - discount(t / 1000.)) for t in PERIODS}
+    n0.update({str(t): 1 / (1 - float(np.mean(gs))) for t, gs in gammas.items()})
+    return dict(c=c, K=c / .005, n0=n0)
 
 
 def bias_correction(labels, predictions, suffix_discounts, weights=None):
@@ -112,7 +123,8 @@ def return_label(rows, start, tail_value, K, horizon=20.):
 
 
 class Replay:
-    def __init__(self, reward_checksum, capacity=150000):
+    def __init__(self, reward_checksum, capacity=150000, active_periods=PERIODS):
+        self.active_periods = training_periods(active_periods)
         self.rows = []
         self.capacity = capacity
         self.ptr = 0
@@ -143,6 +155,8 @@ class Replay:
         g = discount(row['duration'])
         if abs(g - row['discount']) > 1e-7:
             raise ValueError('Discount must use actual duration')
+        if row['period_ms'] not in self.active_periods:
+            raise ValueError('Inactive replay period')
         p = PERIODS.index(row['period_ms'])
         if abs(row['action'][1] - encoded_period(row['period_ms'])) > 1e-6:
             raise ValueError('Executed period and action mismatch')
@@ -225,7 +239,9 @@ class Credit:
         if self.critic >= self.limit(replay):
             raise ValueError('No real-experience credit')
         # The first 5000 updates calibrate critics only. N still learns each step.
-        return self.critic >= 5000 and replay.retained_coverage.min() >= 128 and (self.critic + 1) % 2 == 0
+        columns = [PERIODS.index(t) for t in replay.active_periods]
+        return (self.critic >= 5000 and replay.retained_coverage[:, columns].min() >= 128
+                and (self.critic + 1) % 2 == 0)
 
     def record(self, actor):
         self.critic += 1
@@ -235,14 +251,15 @@ class Credit:
 
 
 class Exploration:
-    def __init__(self, seed):
+    def __init__(self, seed, active_periods=PERIODS):
+        self.active_periods = training_periods(active_periods)
         self.rng = np.random.RandomState(seed)
         self.until = self.neutral_until = self.next_second = 0.
         self.period = 20
 
     def choose(self, elapsed, window):
         if elapsed >= self.until:
-            self.period = int(self.rng.choice(PERIODS))
+            self.period = int(self.rng.choice(self.active_periods))
             self.until = elapsed + self.rng.uniform(1, 5)
         while elapsed >= self.next_second:
             if self.next_second >= self.neutral_until and self.rng.rand() < .05:

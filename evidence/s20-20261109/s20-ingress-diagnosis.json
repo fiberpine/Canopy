@@ -1,0 +1,1406 @@
+[
+  {
+    "node": 0,
+    "result": {
+      "stage": "A",
+      "status": "FAILED",
+      "reason": "RuntimeError('INGRESS Full()',)",
+      "statistics": {
+        "max_backlog": 4096,
+        "max_debt": 5557,
+        "ingress_rows": 641329,
+        "invalid_rows": 0
+      },
+      "ledger": {
+        "inserted": 398446,
+        "real_training_seconds": 8981.583494000613,
+        "inserted_by_actor": [
+          16792,
+          16121,
+          16918,
+          16458,
+          16788,
+          16137,
+          16904,
+          16586,
+          16693,
+          16425,
+          16746,
+          16531,
+          16755,
+          16333,
+          16713,
+          16522,
+          16764,
+          16137,
+          16897,
+          16597,
+          16727,
+          16355,
+          16882,
+          16665
+        ],
+        "sampled_by_actor": [
+          494294,
+          494294,
+          494294,
+          494294,
+          494294,
+          494294,
+          494294,
+          494294,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293,
+          494293
+        ],
+        "retained_actor_period": [
+          [
+            6299,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6066,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6349,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6177,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6302,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6070,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6349,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6247,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6279,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6175,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6287,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6261,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6297,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6280,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6264,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6298,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6130,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6351,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6269,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6291,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6161,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6353,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            6284,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "warmup_seconds": 1800.0060520000284,
+        "issued": 28726,
+        "critic_iterations": 23170,
+        "critic_optimizer_ops": 46340,
+        "actor_updates": 9085,
+        "N_updates": 23170,
+        "target_updates": 23170,
+        "calibration_intervals": 242883,
+        "calibration_credit": 0,
+        "B0_updates": 0,
+        "complete_tcp_resume": false
+      },
+      "final_checkpoint": null,
+      "done": [],
+      "calibration_done": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "exposure_by_actor": [
+        595.8317799999957,
+        595.9881719999995,
+        595.9078459999967,
+        596.0154829999959,
+        597.5695079999948,
+        594.8801150000028,
+        597.5305809999957,
+        597.8681499999968,
+        597.6303959999981,
+        599.3576639999986,
+        599.3503439999985,
+        598.6284219999956,
+        601.0095909999993,
+        599.1504330000009,
+        600.9698069999977,
+        601.0239109999951,
+        603.2422089999963,
+        602.9806899999988,
+        603.141449999995,
+        604.5565459999949,
+        603.7835409999923,
+        603.5440829999951,
+        604.7217869999985,
+        605.4244949999929
+      ],
+      "calibration_exposure_by_actor": [
+        220.02099999999973,
+        220.5224930000002,
+        221.02011400000015,
+        221.51259500000032,
+        222.03155799999988,
+        222.52341099999953,
+        223.01435799999942,
+        223.54028200000005,
+        224.02502600000022,
+        224.5122820000003,
+        225.02116299999992,
+        225.5083169999996,
+        226.0084270000005,
+        226.5426900000009,
+        227.01993799999977,
+        227.52492800000095,
+        228.0171720000005,
+        228.5212710000005,
+        229.01774600000022,
+        229.53120799999888,
+        230.00953300000046,
+        230.52985800000081,
+        231.0172270000007,
+        231.53091299999983
+      ],
+      "elapsed_s": 636.977428464,
+      "mean_busy_all_cores": 0.07441062801932374,
+      "min_memory_available": 30202941440
+    },
+    "checkpoints": [
+      {
+        "name": "checkpoint",
+        "bytes": 237,
+        "modified": 1794234443.5029876
+      },
+      {
+        "name": "failure-step-398446.data-00000-of-00001",
+        "bytes": 5211454,
+        "modified": 1794234443.5029876
+      },
+      {
+        "name": "failure-step-398446.index",
+        "bytes": 4404,
+        "modified": 1794234443.5029876
+      },
+      {
+        "name": "failure-step-398446.meta",
+        "bytes": 3081222,
+        "modified": 1794234443.5589871
+      },
+      {
+        "name": "failure-step-398446.metadata.json",
+        "bytes": 15070,
+        "modified": 1794234443.566987
+      },
+      {
+        "name": "failure-step-398446.replay.npz",
+        "bytes": 24832897,
+        "modified": 1794234443.4989877
+      },
+      {
+        "name": "step-0.data-00000-of-00001",
+        "bytes": 5211454,
+        "modified": 1794234057.2905433
+      },
+      {
+        "name": "step-0.index",
+        "bytes": 4404,
+        "modified": 1794234057.2905433
+      },
+      {
+        "name": "step-0.meta",
+        "bytes": 3081222,
+        "modified": 1794234057.4265423
+      },
+      {
+        "name": "step-0.metadata.json",
+        "bytes": 14716,
+        "modified": 1794234057.442542
+      },
+      {
+        "name": "step-0.replay.npz",
+        "bytes": 3214,
+        "modified": 1794234057.210544
+      },
+      {
+        "name": "step-398446.data-00000-of-00001",
+        "bytes": 5211454,
+        "modified": 1794234439.6870246
+      },
+      {
+        "name": "step-398446.index",
+        "bytes": 4404,
+        "modified": 1794234439.6870246
+      },
+      {
+        "name": "step-398446.meta",
+        "bytes": 3081222,
+        "modified": 1794234439.747024
+      },
+      {
+        "name": "step-398446.metadata.json",
+        "bytes": 15070,
+        "modified": 1794234439.755024
+      },
+      {
+        "name": "step-398446.replay.npz",
+        "bytes": 24832897,
+        "modified": 1794234439.6870246
+      },
+      {
+        "name": "step-79192.data-00000-of-00001",
+        "bytes": 5211454,
+        "modified": 1794234134.601831
+      },
+      {
+        "name": "step-79192.index",
+        "bytes": 4404,
+        "modified": 1794234134.601831
+      },
+      {
+        "name": "step-79192.meta",
+        "bytes": 3081222,
+        "modified": 1794234134.6618304
+      },
+      {
+        "name": "step-79192.metadata.json",
+        "bytes": 14882,
+        "modified": 1794234134.6698303
+      },
+      {
+        "name": "step-79192.replay.npz",
+        "bytes": 13151615,
+        "modified": 1794234134.597831
+      }
+    ],
+    "sample_gaps": [
+      {
+        "start": 1794234051.0536485,
+        "end": 1794234057.4502048,
+        "seconds": 6.396556377410889
+      },
+      {
+        "start": 1794234435.2160454,
+        "end": 1794234439.759201,
+        "seconds": 4.543155670166016
+      },
+      {
+        "start": 1794234132.614959,
+        "end": 1794234134.67304,
+        "seconds": 2.0580809116363525
+      },
+      {
+        "start": 1794234329.2630987,
+        "end": 1794234330.2967424,
+        "seconds": 1.0336437225341797
+      },
+      {
+        "start": 1794234364.5682483,
+        "end": 1794234365.5976403,
+        "seconds": 1.0293920040130615
+      },
+      {
+        "start": 1794234281.7929542,
+        "end": 1794234282.8149285,
+        "seconds": 1.0219743251800537
+      },
+      {
+        "start": 1794234321.1804516,
+        "end": 1794234322.1980977,
+        "seconds": 1.017646074295044
+      },
+      {
+        "start": 1794234242.426906,
+        "end": 1794234243.4444563,
+        "seconds": 1.0175502300262451
+      }
+    ],
+    "failure": "Traceback (most recent call last):\n  File \"<S20_RUN>/training/framework/common_period_service.py\", line 155, in main\n    if errors:raise RuntimeError(errors[0])\nRuntimeError: INGRESS Full()\n",
+    "calibration": {
+      "params": {
+        "c": 0.29258978357641885,
+        "K": 58.517956715283766,
+        "n0": {
+          "20": 179.33658378925264,
+          "40": 100.25062656641649,
+          "80": 50.37656640816863,
+          "120": 33.7524366145224,
+          "160": 25.4407893910375
+        }
+      },
+      "global_bias_offset": 8.17468623827502,
+      "fit": {
+        "points": 54223,
+        "residual_mean": -1.3418581808795947e-15,
+        "residual_std": 56.38016335593592,
+        "tail_abs_mean": 0.20283945562443162,
+        "tail_abs_max": 0.5624503557479772
+      },
+      "independent_check": {
+        "points": 53354,
+        "residual_mean": -23.625902828267588,
+        "residual_std": 49.22055471808979,
+        "tail_abs_mean": 0.1934885971531239,
+        "tail_abs_max": 0.5653982718333137
+      },
+      "stopping_gate": false,
+      "limitation": "Finite same-policy suffix plus frozen tail; check not an A stopping gate; no universal critic-correctness claim"
+    },
+    "early_guard": false,
+    "resource_samples": 621
+  },
+  {
+    "node": 1,
+    "actors": [
+      {
+        "status": "FAILED",
+        "actor": 0,
+        "physical_seconds": 599.671583999996,
+        "training_seconds": 360.0222940000019,
+        "calibration_seconds": 220.02099999999973,
+        "generated": 26843,
+        "acknowledged": 26840,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor00-ep000",
+            "kind": "calibration",
+            "physical_seconds": 180.0002149999998,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor00-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.02078499999993,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor00-ep002",
+            "kind": "training",
+            "physical_seconds": 180.02037900000136,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor00-ep003",
+            "kind": "training",
+            "physical_seconds": 180.00191500000054,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 4,
+        "physical_seconds": 601.4393569999952,
+        "training_seconds": 360.0265769999991,
+        "calibration_seconds": 222.03155799999988,
+        "generated": 26940,
+        "acknowledged": 26936,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor04-ep000",
+            "kind": "calibration",
+            "physical_seconds": 182.01864999999995,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor04-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.012907999999925,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor04-ep002",
+            "kind": "training",
+            "physical_seconds": 180.02099699999965,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor04-ep003",
+            "kind": "training",
+            "physical_seconds": 180.00557999999947,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 8,
+        "physical_seconds": 601.5013039999984,
+        "training_seconds": 360.0237820000002,
+        "calibration_seconds": 224.02502600000022,
+        "generated": 26929,
+        "acknowledged": 26925,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor08-ep000",
+            "kind": "calibration",
+            "physical_seconds": 184.01336000000023,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor08-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.011666,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor08-ep002",
+            "kind": "training",
+            "physical_seconds": 180.0186500000003,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor08-ep003",
+            "kind": "training",
+            "physical_seconds": 180.00513199999992,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 12,
+        "physical_seconds": 604.865654999999,
+        "training_seconds": 360.01066100000094,
+        "calibration_seconds": 226.0084270000005,
+        "generated": 27076,
+        "acknowledged": 27072,
+        "max_pending": 5,
+        "episodes": [
+          {
+            "run": "s20-training-actor12-ep000",
+            "kind": "calibration",
+            "physical_seconds": 186.0034020000005,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor12-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.005025,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor12-ep002",
+            "kind": "training",
+            "physical_seconds": 180.0099210000009,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor12-ep003",
+            "kind": "training",
+            "physical_seconds": 180.00074,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 16,
+        "physical_seconds": 607.1075179999965,
+        "training_seconds": 360.0063350000005,
+        "calibration_seconds": 228.0171720000005,
+        "generated": 27178,
+        "acknowledged": 27174,
+        "max_pending": 6,
+        "episodes": [
+          {
+            "run": "s20-training-actor16-ep000",
+            "kind": "calibration",
+            "physical_seconds": 188.0135740000005,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor16-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.003598000000004,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor16-ep002",
+            "kind": "training",
+            "physical_seconds": 180.00033500000043,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor16-ep003",
+            "kind": "training",
+            "physical_seconds": 180.00600000000003,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 20,
+        "physical_seconds": 607.6788429999925,
+        "training_seconds": 360.0243390000006,
+        "calibration_seconds": 230.00953300000046,
+        "generated": 27249,
+        "acknowledged": 27245,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor20-ep000",
+            "kind": "calibration",
+            "physical_seconds": 190.00905000000037,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor20-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.000483000000095,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor20-ep002",
+            "kind": "training",
+            "physical_seconds": 180.0208920000003,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor20-ep003",
+            "kind": "training",
+            "physical_seconds": 180.0034470000003,
+            "status": "COMPLETED"
+          }
+        ]
+      }
+    ],
+    "status": "FAILED"
+  },
+  {
+    "node": 2,
+    "actors": [
+      {
+        "status": "FAILED",
+        "actor": 1,
+        "physical_seconds": 599.815426999999,
+        "training_seconds": 360.01758499999994,
+        "calibration_seconds": 220.5224930000002,
+        "generated": 25973,
+        "acknowledged": 25968,
+        "max_pending": 5,
+        "episodes": [
+          {
+            "run": "s20-training-actor01-ep000",
+            "kind": "calibration",
+            "physical_seconds": 180.50740900000014,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor01-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.01508400000006,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor01-ep002",
+            "kind": "training",
+            "physical_seconds": 180.0103539999997,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor01-ep003",
+            "kind": "training",
+            "physical_seconds": 180.00723100000025,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 5,
+        "physical_seconds": 598.759294000002,
+        "training_seconds": 360.029482000001,
+        "calibration_seconds": 222.52341099999953,
+        "generated": 26081,
+        "acknowledged": 26077,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor05-ep000",
+            "kind": "calibration",
+            "physical_seconds": 182.5009629999995,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor05-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.02244800000003,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor05-ep002",
+            "kind": "training",
+            "physical_seconds": 180.00850900000046,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor05-ep003",
+            "kind": "training",
+            "physical_seconds": 180.02097300000054,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 9,
+        "physical_seconds": 603.2249779999977,
+        "training_seconds": 360.0246020000003,
+        "calibration_seconds": 224.5122820000003,
+        "generated": 26462,
+        "acknowledged": 26459,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor09-ep000",
+            "kind": "calibration",
+            "physical_seconds": 184.51050100000026,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor09-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.00178100000006,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor09-ep002",
+            "kind": "training",
+            "physical_seconds": 180.00256700000037,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor09-ep003",
+            "kind": "training",
+            "physical_seconds": 180.0220349999999,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 13,
+        "physical_seconds": 603.0170990000003,
+        "training_seconds": 360.0213820000009,
+        "calibration_seconds": 226.5426900000009,
+        "generated": 26463,
+        "acknowledged": 26459,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor13-ep000",
+            "kind": "calibration",
+            "physical_seconds": 186.52093900000085,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor13-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.02175100000005,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor13-ep002",
+            "kind": "training",
+            "physical_seconds": 180.01349700000077,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor13-ep003",
+            "kind": "training",
+            "physical_seconds": 180.0078850000002,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 17,
+        "physical_seconds": 606.8567039999987,
+        "training_seconds": 360.02303600000107,
+        "calibration_seconds": 228.5212710000005,
+        "generated": 26348,
+        "acknowledged": 26344,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor17-ep000",
+            "kind": "calibration",
+            "physical_seconds": 188.50330400000047,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor17-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.01796700000002,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor17-ep002",
+            "kind": "training",
+            "physical_seconds": 180.01489100000035,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor17-ep003",
+            "kind": "training",
+            "physical_seconds": 180.0081450000007,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 21,
+        "physical_seconds": 607.4324059999951,
+        "training_seconds": 360.04093900000197,
+        "calibration_seconds": 230.52985800000081,
+        "generated": 26672,
+        "acknowledged": 26668,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor21-ep000",
+            "kind": "calibration",
+            "physical_seconds": 190.52120900000077,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor21-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.008649000000055,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor21-ep002",
+            "kind": "training",
+            "physical_seconds": 180.02163000000073,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor21-ep003",
+            "kind": "training",
+            "physical_seconds": 180.01930900000124,
+            "status": "COMPLETED"
+          }
+        ]
+      }
+    ],
+    "status": "FAILED"
+  },
+  {
+    "node": 3,
+    "actors": [
+      {
+        "status": "FAILED",
+        "actor": 2,
+        "physical_seconds": 599.8011669999967,
+        "training_seconds": 360.0362710000002,
+        "calibration_seconds": 221.02011400000015,
+        "generated": 27129,
+        "acknowledged": 27125,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor02-ep000",
+            "kind": "calibration",
+            "physical_seconds": 181.00931700000018,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor02-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.01079699999997,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor02-ep002",
+            "kind": "training",
+            "physical_seconds": 180.01692299999985,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor02-ep003",
+            "kind": "training",
+            "physical_seconds": 180.01934800000038,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 6,
+        "physical_seconds": 601.3997459999952,
+        "training_seconds": 360.02730799999927,
+        "calibration_seconds": 223.01435799999942,
+        "generated": 27206,
+        "acknowledged": 27202,
+        "max_pending": 5,
+        "episodes": [
+          {
+            "run": "s20-training-actor06-ep000",
+            "kind": "calibration",
+            "physical_seconds": 183.01246099999943,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor06-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.00189699999999,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor06-ep002",
+            "kind": "training",
+            "physical_seconds": 180.0108139999998,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor06-ep003",
+            "kind": "training",
+            "physical_seconds": 180.01649399999948,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 10,
+        "physical_seconds": 603.2236539999984,
+        "training_seconds": 360.02518399999946,
+        "calibration_seconds": 225.02116299999992,
+        "generated": 27140,
+        "acknowledged": 27136,
+        "max_pending": 5,
+        "episodes": [
+          {
+            "run": "s20-training-actor10-ep000",
+            "kind": "calibration",
+            "physical_seconds": 185.00090299999985,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor10-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.020260000000064,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor10-ep002",
+            "kind": "training",
+            "physical_seconds": 180.01622599999962,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor10-ep003",
+            "kind": "training",
+            "physical_seconds": 180.00895799999984,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 14,
+        "physical_seconds": 604.8234999999969,
+        "training_seconds": 360.0299649999999,
+        "calibration_seconds": 227.01993799999977,
+        "generated": 27196,
+        "acknowledged": 27193,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor14-ep000",
+            "kind": "calibration",
+            "physical_seconds": 187.01222999999973,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor14-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.00770800000004,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor14-ep002",
+            "kind": "training",
+            "physical_seconds": 180.0090089999997,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor14-ep003",
+            "kind": "training",
+            "physical_seconds": 180.02095600000018,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 18,
+        "physical_seconds": 607.0124769999957,
+        "training_seconds": 360.012373,
+        "calibration_seconds": 229.01774600000022,
+        "generated": 27474,
+        "acknowledged": 27470,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor18-ep000",
+            "kind": "calibration",
+            "physical_seconds": 189.0009060000002,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor18-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.016840000000016,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor18-ep002",
+            "kind": "training",
+            "physical_seconds": 180.0064110000003,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor18-ep003",
+            "kind": "training",
+            "physical_seconds": 180.0059619999997,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 22,
+        "physical_seconds": 608.6338469999979,
+        "training_seconds": 360.008117,
+        "calibration_seconds": 231.0172270000007,
+        "generated": 27559,
+        "acknowledged": 27555,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor22-ep000",
+            "kind": "calibration",
+            "physical_seconds": 191.01403700000068,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor22-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.003190000000025,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor22-ep002",
+            "kind": "training",
+            "physical_seconds": 180.00542399999964,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor22-ep003",
+            "kind": "training",
+            "physical_seconds": 180.0026930000004,
+            "status": "COMPLETED"
+          }
+        ]
+      }
+    ],
+    "status": "FAILED"
+  },
+  {
+    "node": 4,
+    "actors": [
+      {
+        "status": "FAILED",
+        "actor": 3,
+        "physical_seconds": 599.8932249999957,
+        "training_seconds": 360.0376140000009,
+        "calibration_seconds": 221.51259500000032,
+        "generated": 26587,
+        "acknowledged": 26583,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor03-ep000",
+            "kind": "calibration",
+            "physical_seconds": 181.50615600000035,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor03-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.006438999999965,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor03-ep002",
+            "kind": "training",
+            "physical_seconds": 180.01917600000021,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor03-ep003",
+            "kind": "training",
+            "physical_seconds": 180.01843800000063,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 7,
+        "physical_seconds": 601.715004999997,
+        "training_seconds": 360.0327270000003,
+        "calibration_seconds": 223.54028200000005,
+        "generated": 26802,
+        "acknowledged": 26798,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor07-ep000",
+            "kind": "calibration",
+            "physical_seconds": 183.52166800000012,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor07-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.01861399999994,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor07-ep002",
+            "kind": "training",
+            "physical_seconds": 180.02114600000067,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor07-ep003",
+            "kind": "training",
+            "physical_seconds": 180.01158099999964,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 11,
+        "physical_seconds": 602.4796459999956,
+        "training_seconds": 360.0115720000002,
+        "calibration_seconds": 225.5083169999996,
+        "generated": 26847,
+        "acknowledged": 26844,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor11-ep000",
+            "kind": "calibration",
+            "physical_seconds": 185.5067739999996,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor11-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.001543000000005,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor11-ep002",
+            "kind": "training",
+            "physical_seconds": 180.00814400000007,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor11-ep003",
+            "kind": "training",
+            "physical_seconds": 180.00342800000018,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 15,
+        "physical_seconds": 604.9153279999954,
+        "training_seconds": 360.01046000000156,
+        "calibration_seconds": 227.52492800000095,
+        "generated": 26924,
+        "acknowledged": 26920,
+        "max_pending": 4,
+        "episodes": [
+          {
+            "run": "s20-training-actor15-ep000",
+            "kind": "calibration",
+            "physical_seconds": 187.51453500000096,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor15-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.01039300000001,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor15-ep002",
+            "kind": "training",
+            "physical_seconds": 180.00382200000135,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor15-ep003",
+            "kind": "training",
+            "physical_seconds": 180.0066380000002,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 19,
+        "physical_seconds": 608.4114149999956,
+        "training_seconds": 360.00572900000014,
+        "calibration_seconds": 229.53120799999888,
+        "generated": 27090,
+        "acknowledged": 27086,
+        "max_pending": 5,
+        "episodes": [
+          {
+            "run": "s20-training-actor19-ep000",
+            "kind": "calibration",
+            "physical_seconds": 189.51252499999893,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor19-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.01868299999996,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor19-ep002",
+            "kind": "training",
+            "physical_seconds": 180.00428899999966,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor19-ep003",
+            "kind": "training",
+            "physical_seconds": 180.00144000000049,
+            "status": "COMPLETED"
+          }
+        ]
+      },
+      {
+        "status": "FAILED",
+        "actor": 23,
+        "physical_seconds": 609.304860999992,
+        "training_seconds": 360.01045000000045,
+        "calibration_seconds": 231.53091299999983,
+        "generated": 27260,
+        "acknowledged": 27256,
+        "max_pending": 5,
+        "episodes": [
+          {
+            "run": "s20-training-actor23-ep000",
+            "kind": "calibration",
+            "physical_seconds": 191.51927499999985,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor23-ep001",
+            "kind": "calibration",
+            "physical_seconds": 40.01163799999998,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor23-ep002",
+            "kind": "training",
+            "physical_seconds": 180.00825199999997,
+            "status": "COMPLETED"
+          },
+          {
+            "run": "s20-training-actor23-ep003",
+            "kind": "training",
+            "physical_seconds": 180.00219800000048,
+            "status": "COMPLETED"
+          }
+        ]
+      }
+    ],
+    "status": "FAILED"
+  }
+]

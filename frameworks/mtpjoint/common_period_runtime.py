@@ -7,14 +7,14 @@ Calibration and training connections have distinct IDs and data paths.
 import json
 import pathlib
 import numpy as np
-from common_period import Replay, Credit, discount, checksum, REWARD, encoded_period
+from common_period import Replay, Credit, discount, checksum, REWARD, encoded_period, PERIODS
 
 
 class Runtime:
-    def __init__(self, model, reward_config, seed=3):
+    def __init__(self, model, reward_config, seed=3, active_periods=PERIODS):
         self.model = model
         self.reward_config = reward_config
-        self.replay = Replay(checksum(reward_config))
+        self.replay = Replay(checksum(reward_config), active_periods=active_periods)
         self.credit = Credit()
         self.rng = np.random.RandomState(seed)
         self.calibration = []
@@ -50,7 +50,7 @@ class Runtime:
         # Use exactly the same validation in both paths, with calibration kept
         # outside the real replay and therefore outside its exposure ledger.
         if calibration:
-            isolated=Replay(self.replay.reward_checksum,capacity=1)
+            isolated=Replay(self.replay.reward_checksum,capacity=1,active_periods=self.replay.active_periods)
             checked=dict(row,calibration=False)
             if isolated.append(checked):
                 self.calibration.append(dict(isolated.rows[0],calibration=True))
@@ -66,10 +66,13 @@ class Runtime:
         self.credit.record(actor)
         if self.credit.critic % 100 == 0:
             self.gradient_history.append(dict(critic_iterations=self.credit.critic,
-                periods=self.model.diagnostics(batch['s0'])))
+                periods=(self.model.diagnostics(batch['s0']) if self.replay.active_periods == PERIODS
+                         else self.model.diagnostics(batch['s0'], self.replay.active_periods))))
         return actor
 
     def evaluate_b0(self, updates, registered_cap):
+        if self.replay.active_periods != PERIODS:
+            raise ValueError('B0 requires a separately registered multi-period family')
         if updates != registered_cap or updates <= 0:
             raise ValueError('B0 must use its exact preregistered finite update budget')
         if self.credit.b0:
@@ -91,14 +94,15 @@ class Runtime:
                     calibration_intervals=len(self.calibration),calibration_credit=0,
                     B0_updates=self.credit.b0,complete_tcp_resume=False)
 
-    def save(self,prefix):
+    def save(self,prefix,*,compress_replay=True):
         if pathlib.Path(prefix+'.replay.npz').exists():raise ValueError('Never overwrite replay')
         rows=self.replay.rows
         fields=['s0','s1','action','reward','duration','discount','period_ms','snapshot','actor','kind',
                 'connection','next_connection','behavior','bootstrap','apply','reward_version','reward_checksum']
         string_fields=('connection','next_connection','kind','behavior','reward_version','reward_checksum')
         arrays={key:np.asarray([str(row[key]) if key in string_fields else row[key] for row in rows]) for key in fields}
-        np.savez_compressed(prefix+'.replay.npz',**arrays)
+        write_replay = np.savez_compressed if compress_replay else np.savez
+        write_replay(prefix+'.replay.npz',**arrays)
         return self.model.save(prefix,self.ledger(),dict(reward_version=REWARD,
             reward_checksum=self.replay.reward_checksum,raw_rewards=True,rows=len(rows),
             optimizer_rng=self.rng.get_state()[1].tolist(),rng_position=self.rng.get_state()[2]))

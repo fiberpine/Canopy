@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-03 bounded zeroTCP review; capacity readout and training support; no Canopy updates, A-prime or D-Q",
+  "scope": "2026-11-09 fixed-20 ms S20 training stopped at ingress overflow; no formal frozen evaluation",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 10980,
-      "sha256": "57ba3bf18c39d98c9bb206932165fc79cf578fdee92bcda129ff3d7a48808a63"
+      "bytes": 11297,
+      "sha256": "4b124e3bb856f02fe7e3d41146c44e58ebd81d14bf3316c46df2cc48f4da6e76"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -84,8 +84,8 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 57663,
-      "sha256": "2f0dc54c623ee0d017b840803095fc1d665f0597cab92836e68982ab2ce1e0f1"
+      "bytes": 57983,
+      "sha256": "90e63841c2234cdbc94439adb404de36135b43617d9bd261fb79fd5c772dad1e"
     },
     {
       "path": "docs/SCALAR_BASE_ROADMAP.md",
@@ -12773,6 +12773,101 @@
       "sha256": "8bbfd3585e230e1617818f86f38cc33b0027d2616a86966739cd223264440b2c"
     },
     {
+      "path": "evidence/s20-20261109/offline-manifest-audit.json",
+      "bytes": 281,
+      "sha256": "3232e324b37308510f364f7a7d00df0e2e2b3a74d17a27c96ff8d2cb8f6ce6d5"
+    },
+    {
+      "path": "evidence/s20-20261109/offline-replay-write-candidate.patch",
+      "bytes": 1311,
+      "sha256": "964931d5a2638b3bf2703d0f25e946d7b2dd432702890512d2b5128ac9242513"
+    },
+    {
+      "path": "evidence/s20-20261109/publication-provenance.json",
+      "bytes": 8067,
+      "sha256": "173de9e42027fd6b63371940d16d19c36522ba750f1596cdee0eb436b24ff869"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-capacity-receipt.json",
+      "bytes": 252,
+      "sha256": "05d70c455a7463f656da359ca913eb90c922696ffd07682bf01c047603ccf953"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-closure.json",
+      "bytes": 2223,
+      "sha256": "1ad25192c3c26f06907ffa38e10741d976d1414680c2f7140e729c48670e0b60"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-final-result.json",
+      "bytes": 57681,
+      "sha256": "12e2f6c5399cedef22ad827a6edf11e50a4eac3a3627741470a6dd86e60222aa"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-ingress-diagnosis.json",
+      "bytes": 37593,
+      "sha256": "bf48afda4597801e2a4c99a9947118445e9a051911a6d8fec42f28fa828078bb"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-prelaunch-v1.json",
+      "bytes": 323,
+      "sha256": "bc4615aab6759aee250441fb1ce11c82ba13e283d4abb08668e1446a43b84516"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-registration.json",
+      "bytes": 1094175,
+      "sha256": "4355c687579fe4601195535bb9da5cfbb32065a2cc2735aec9540cdc283fa02a"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-result.md",
+      "bytes": 3167,
+      "sha256": "340c20a280399a89d3db5fa5da76c3807705a4efc5bd86b6c0a9ba2fb07c1f59"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-run-approval.md",
+      "bytes": 5588,
+      "sha256": "344b0f3838084eeed653bd491a7f32a39834a808f14b96e7a9a9350f9d364f4a"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-run-receipt.json",
+      "bytes": 412,
+      "sha256": "3d18c1e5a5713c7cba7046415f2f840cf34fb227ae4f33e8e780340be8f63349"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-save-diagnosis.json",
+      "bytes": 754,
+      "sha256": "379220b25b1331354827efd810ca4b83939015e483e19b0eed8877cb1e8d3a2f"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-static-benchmark.json",
+      "bytes": 147,
+      "sha256": "4142f727dc2a59e73c2e2c286e2047ef590b069fd2dc620fadb398821984aaac"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-training-observations.jsonl",
+      "bytes": 1789,
+      "sha256": "136b11e6358080faa9fb109dc676d6fcd22849c760e128c11097ec27c08983cc"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-v31-frozen-counter-checks.json",
+      "bytes": 163,
+      "sha256": "afdb4d28ceb0c4af0cf7f50d6c085f017af1e1b7e2d96f8b717ab78923fe3b8f"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-v31-receipt.json",
+      "bytes": 52,
+      "sha256": "ec0aa27e57283b60433b2d900a0f5f1b04671d87dd76bea73d90e2dd01d71275"
+    },
+    {
+      "path": "evidence/s20-20261109/s20-v31-results.json",
+      "bytes": 57380,
+      "sha256": "5a94bddeab27e81ad703e1dacb1c0b623502b67244d8c450546bc6b89b6bc17c"
+    },
+    {
+      "path": "evidence/s20-20261109/tf14-s20.json",
+      "bytes": 321,
+      "sha256": "76feb206ca193d78032fff28f3bc33fb0ba004bf845861f099c854fb93852649"
+    },
+    {
       "path": "evidence/scalar-20261025/audit/canopy-qc-modes.json",
       "bytes": 103545,
       "sha256": "595a49364b534a7d6a10a60ed7bf24b9a8eee1fecf43005b5cdf181b580ab034"
@@ -19767,18 +19862,18 @@
     },
     {
       "path": "frameworks/mtpjoint/common_period.py",
-      "bytes": 13891,
-      "sha256": "b0bfe93f042bb493a2b5e9474653b203de9fd6089685d5d2378af0b54e028231"
+      "bytes": 14745,
+      "sha256": "1a8dad1223768f4dfc32b44e66d4d9dc38093f002e044c07c79a39ebd171525b"
     },
     {
       "path": "frameworks/mtpjoint/common_period_actor.py",
-      "bytes": 12170,
-      "sha256": "a2fd8f4456cf0c27a9dccad10d2e1bdd36029f9f5ced440240b16d0cb4480fcc"
+      "bytes": 12317,
+      "sha256": "990a3468f74c66782247bf15b1717da6384a5b386c05d848d935c2084beb1215"
     },
     {
       "path": "frameworks/mtpjoint/common_period_calibration.py",
-      "bytes": 3152,
-      "sha256": "7abc6abc93ec82a8031958387124b75f9381b400036206844ae669c0b96b2026"
+      "bytes": 3354,
+      "sha256": "8a4f3eda85c224398eb08d2fdb4740e46510f5fbc076d0468eb5909cca60ba3a"
     },
     {
       "path": "frameworks/mtpjoint/common_period_client.py",
@@ -19797,8 +19892,8 @@
     },
     {
       "path": "frameworks/mtpjoint/common_period_frozen.py",
-      "bytes": 2698,
-      "sha256": "21ecba29f13016efe285b2c954fc425c0dfa5c64e687b2ac22a118820119f62e"
+      "bytes": 2968,
+      "sha256": "a7c80229fa2a189160e1cbd4a6d73f46e492e06021fb6e872a3452d48bfef5c8"
     },
     {
       "path": "frameworks/mtpjoint/common_period_host.py",
@@ -19807,23 +19902,23 @@
     },
     {
       "path": "frameworks/mtpjoint/common_period_metrics.py",
-      "bytes": 1979,
-      "sha256": "5497603190b2d32313fe720912331c30c5ff2f87d94f5c21f9f73b83848f85d3"
+      "bytes": 2376,
+      "sha256": "6e73a143c169511cef7b584f3d8b643dd04d7c6d57113fd61dc999dfba3537af"
     },
     {
       "path": "frameworks/mtpjoint/common_period_runtime.py",
-      "bytes": 6184,
-      "sha256": "fa7f0883bbde281a18f5b9381aeb4b2d5342eeaa111d1987d58a25e9ac710ca8"
+      "bytes": 6657,
+      "sha256": "5ee2e64d13d5830ac64e7b50ed7926841791b4daf2b982f670f1bf4b04b06dc0"
     },
     {
       "path": "frameworks/mtpjoint/common_period_service.py",
-      "bytes": 11993,
-      "sha256": "cf972e076c465e0c898b7fba7cab0d334368d8908c449d8c79d1eb261992418d"
+      "bytes": 13149,
+      "sha256": "96da714415460539d93fcef989fc6067e6d54f621fc08c063186320443451b13"
     },
     {
       "path": "frameworks/mtpjoint/common_period_tf.py",
-      "bytes": 18740,
-      "sha256": "6564d630449971cea83905f675e145077829ab01c42090f63665735c94751f14"
+      "bytes": 18757,
+      "sha256": "5bc2eb30e12633e36e7a55e1096334f1a9dd37a62dfb280574cf79362bb52987"
     },
     {
       "path": "frameworks/mtpjoint/common_period_transport.py",
@@ -21870,6 +21965,11 @@
       "sha256": "a7dc0a4071a6159d6fde545aa8ee4434d1a26cdd6a3942012b43cc3547e76386"
     },
     {
+      "path": "tools/check_s20_tf.py",
+      "bytes": 4107,
+      "sha256": "afe2131a5c98bc0fb2b84c6729f4d0552875e5d055a2ad32382971849916d93b"
+    },
+    {
       "path": "tools/comprehensive_audit.py",
       "bytes": 12667,
       "sha256": "a6bbecb0bb82c704b00809d900501cac12173b26df6591bb1b1b5d5c6bea494e"
@@ -22160,6 +22260,11 @@
       "sha256": "aecc1f7fe0718c38caeb9af4af91ba085b41e86c46f4e28cc7d15dcba3816e02"
     },
     {
+      "path": "tools/score_s20.py",
+      "bytes": 9324,
+      "sha256": "3cbb754ae8d5238c6d245ae524480afcebb0e0b36dee258f55d784b20d7afd73"
+    },
+    {
       "path": "tools/test_base_first_principles.py",
       "bytes": 1661,
       "sha256": "8b755e09fbf4a11a59b061869818690b915965a8dcbd5b2e25a65bf9c4b7057b"
@@ -22203,6 +22308,11 @@
       "path": "tools/test_common_period_runtime.py",
       "bytes": 2881,
       "sha256": "10335b9a2bb8818f860e18d1c9e89dc9ee19b745284ab7ee32dc05e926658159"
+    },
+    {
+      "path": "tools/test_common_period_s20.py",
+      "bytes": 3310,
+      "sha256": "18d877ed5b12df53a92bdedcb51279343973af1877e9a831ce494d2b2482f450"
     },
     {
       "path": "tools/test_comprehensive_audit.py",

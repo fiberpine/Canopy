@@ -19,6 +19,10 @@ class Wrapper(TCP_Env_Wrapper):
         return info,delay,utility(float(x[1]),float(x[7]),cfg['common_reward_config']['scale_bps'],float(x[0]),float(x[8]),float(x[14]),float(x[2])),ok
 def build(c):
     meta=json.loads(pathlib.Path(c['checkpoint']+'.metadata.json').read_text())
+    if meta.get('active_training_periods_ms') == [20] and (
+            c.get('common_fixed_period_ms') != 20 or c.get('common_rule') or
+            c.get('selector_lambda') is not None):
+        raise ValueError('S20 checkpoint requires fixed 20 ms frozen evaluation')
     model=Model(c['source_checkpoint'],meta['K'],meta['n0'],reward_config=c['common_reward_config']);model.restore(c['checkpoint']);rule=Hysteresis()
     with model.graph.as_default():variables=model.tf.global_variables()
     def digest():

@@ -6,7 +6,7 @@ ROOT=pathlib.Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT/'code/canopy/rl-module'))
 import evaluate
 from envwrapper_v2 import TCP_Env_Wrapper
-from common_period import PERIODS,REWARD,SCHEMA,encoded_period,discount,utility,checksum,Exploration,validate_execution
+from common_period import PERIODS,REWARD,SCHEMA,encoded_period,discount,utility,checksum,Exploration,validate_execution,training_periods
 from common_period_transport import Policy
 from common_period_client import Sender
 
@@ -38,7 +38,8 @@ class NetMonitor:
 
 def main(cfg,index):
     host=pathlib.Path(cfg['host_root']);host.mkdir(exist_ok=True);reward=cfg['common_reward_config'];policy=Policy(cfg['source_checkpoint'],checksum(reward));sender=Sender(cfg,index)
-    exploration=Exploration(cfg['seed']+index*1009);exposure=0.;training=0.;episode=0;calibration_exposure=0.;results=[];status='FAILED';reason='';recent=collections.deque()
+    periods = training_periods(cfg.get('active_periods', PERIODS))
+    exploration=Exploration(cfg['seed']+index*1009, periods);exposure=0.;training=0.;episode=0;calibration_exposure=0.;results=[];status='FAILED';reason='';recent=collections.deque()
     original_read=evaluate.StateReader.read
     def guarded_read(self):
         if self.last_id is not None:return original_read(self)
@@ -103,11 +104,11 @@ def main(cfg,index):
                     if cal_part==0:
                         if block<4 and clock-block_start>=40.001:
                             block+=1;block_start=clock
-                        b=block if block<4 else None;t=PERIODS[min(block,3)]
-                    else:b=4;t=160
+                        b=block if block<4 else None;t=periods[0] if len(periods)==1 else periods[min(block,3)]
+                    else:b=4;t=periods[-1]
                     window=policy.window(state,t);action=np.asarray([window,encoded_period(t)],np.float32);source='policy';nn=action.copy()
                 elif kind=='capacity':
-                    b=None;t=PERIODS[int(clock//5)%5];window=policy.window(state,t);action=np.asarray([window,encoded_period(t)],np.float32);source='policy';nn=action.copy()
+                    b=None;t=periods[int(clock//5)%len(periods)];window=policy.window(state,t);action=np.asarray([window,encoded_period(t)],np.float32);source='policy';nn=action.copy()
                 else:
                     b=None;query={}
                     def window(t):

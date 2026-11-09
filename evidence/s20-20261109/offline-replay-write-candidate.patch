@@ -1,0 +1,22 @@
+diff --git a/frameworks/mtpjoint/common_period_runtime.py b/frameworks/mtpjoint/common_period_runtime.py
+index 266d3b4..fbbde7a 100644
+--- a/frameworks/mtpjoint/common_period_runtime.py
++++ b/frameworks/mtpjoint/common_period_runtime.py
+@@ -97 +97 @@ class Runtime:
+-    def save(self,prefix):
++    def save(self,prefix,*,compress_replay=True):
+@@ -104 +104,2 @@ class Runtime:
+-        np.savez_compressed(prefix+'.replay.npz',**arrays)
++        write_replay = np.savez_compressed if compress_replay else np.savez
++        write_replay(prefix+'.replay.npz',**arrays)
+diff --git a/frameworks/mtpjoint/common_period_service.py b/frameworks/mtpjoint/common_period_service.py
+index aca7cb0..f49f24a 100644
+--- a/frameworks/mtpjoint/common_period_service.py
++++ b/frameworks/mtpjoint/common_period_service.py
+@@ -134 +134,5 @@ def main(cfg):
+-                    runtime.save(str(root/'checkpoints'/('step-%d'%runtime.replay.inserted)));next_checkpoint+=300
++                    # Keep S20 checkpoint contents while removing compression
++                    # from the learner loop during live fixed-period ingress.
++                    prefix = root/'checkpoints'/('step-%d'%runtime.replay.inserted)
++                    runtime.save(str(prefix), compress_replay=not s20)
++                    next_checkpoint+=300

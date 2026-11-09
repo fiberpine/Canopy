@@ -2,10 +2,11 @@
 import collections,pathlib
 import numpy as np
 
-def network(path,seconds=60):
+def network(path,seconds=60,with_seconds=False):
     specs=[('full',0,seconds),('startup0_10',0,min(10,seconds))]
     if seconds>10:specs.append(('trim10',10,seconds))
     accum={n:collections.defaultdict(float) for n,_,_ in specs};delays={n:[] for n,_,_ in specs};base=None;last=0.
+    bins = [dict(service_bytes=0, departure_bytes=0) for _ in range(seconds)] if with_seconds else None
     with pathlib.Path(path).open() as stream:
         for line in stream:
             if line.startswith('# base timestamp:'):base=float(line.split(':')[1]);continue
@@ -13,6 +14,11 @@ def network(path,seconds=60):
             fields=line.split()
             if len(fields)<3:continue
             t=(float(fields[0])-base)/1000.;last=max(last,t);sign=fields[1];size=int(fields[2])
+            if bins is not None and 0 <= t < seconds:
+                if sign == '#':
+                    bins[int(t)]['service_bytes'] += size
+                elif sign == '-':
+                    bins[int(t)]['departure_bytes'] += size
             for name,start,end in specs:
                 if not start<=t<end:continue
                 a=accum[name]
@@ -30,4 +36,4 @@ def network(path,seconds=60):
             drop_fraction=a['drops']/a['arrivals'] if a['arrivals'] else 0.,
             dropped_bytes=a['drop_bytes'],arrival_bytes=a['arrival_bytes'],
             complete_window=last>=end-.01,last_log_s=last,start_s=start,end_s=end))
-    return result
+    return (result, bins) if with_seconds else result

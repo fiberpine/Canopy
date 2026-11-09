@@ -1,0 +1,28 @@
+{
+  "rows": 150000,
+  "measurements": [
+    {
+      "variant": "uncompressed",
+      "elapsed_s": 0.8455615230000149,
+      "bytes": 294754234,
+      "all_arrays_equal": true
+    },
+    {
+      "variant": "compressed",
+      "elapsed_s": 3.109625737999977,
+      "bytes": 24832897,
+      "all_arrays_equal": true
+    },
+    {
+      "variant": "uncompressed_repeat",
+      "elapsed_s": 0.8441294399999606,
+      "bytes": 294754234,
+      "all_arrays_equal": true
+    }
+  ],
+  "patched_source_sha256": "5ee2e64d13d5830ac64e7b50ed7926841791b4daf2b982f670f1bf4b04b06dc0",
+  "included": "array reconstruction and replay write; TF checkpoint and simultaneous ingress excluded",
+  "new_training_rows": 0,
+  "new_updates": 0,
+  "new_experiment_connections": 0
+}

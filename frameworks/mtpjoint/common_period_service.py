@@ -8,7 +8,7 @@ from http.server import BaseHTTPRequestHandler,HTTPServer
 import numpy as np
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parent/'code/runtime/_deps'))
 import psutil
-from common_period import PERIODS,encoded_period,checksum,REWARD,discount
+from common_period import PERIODS,encoded_period,checksum,REWARD,discount,training_periods
 from common_period_tf import Model
 from common_period_runtime import Runtime,require_a0
 from common_period_transport import unpack_row,snapshot_bytes
@@ -17,14 +17,22 @@ from common_period_calibration import calibrate
 class Server(socketserver.ThreadingMixIn,HTTPServer):daemon_threads=True
 
 def main(cfg):
+    periods = training_periods(cfg.get('active_periods', PERIODS))
+    s20 = periods == (20,)
+    if s20 and cfg['stage'] not in ('A', 'capacity'):
+        raise ValueError('Unknown S20 stage')
     if cfg['stage']=='A':
         require_a0(cfg['preregistration'],cfg['a0_results'])
         if cfg['capacity_receipt']['status']!='PASS':raise ValueError('24-actor capacity has not passed')
-        if cfg['planned_evaluation_runs']!=264:raise ValueError('A evaluation reservation incomplete')
+        if cfg['planned_evaluation_runs'] != (116 if s20 else 264):raise ValueError('Evaluation reservation incomplete')
+        if s20 and cfg.get('max_complete_updates') != 145000:
+            raise ValueError('S20 requires the registered update cap')
     root=pathlib.Path(cfg['root']);root.mkdir(exist_ok=True)
     (root/'checkpoints').mkdir(exist_ok=True)
     reward=cfg['common_reward_config'];model=Model(cfg['source_checkpoint'],0.,{str(t):1/(1-.995**(t/20.)) for t in PERIODS},reward_config=reward)
-    runtime=Runtime(model,reward);inbox=queue.Queue(4096);done=set();cal_done=set();exposure=np.zeros(24);cal_exposure=np.zeros(24)
+    if s20:
+        model.metadata['active_training_periods_ms'] = list(periods)
+    runtime=Runtime(model,reward,seed=cfg['seed'],active_periods=periods);inbox=queue.Queue(4096);done=set();cal_done=set();exposure=np.zeros(24);cal_exposure=np.zeros(24)
     state=dict(phase='CAPACITY' if cfg['stage']=='capacity' else 'CALIBRATION',version=0,inserted=0,backlog=0,closed=False)
     published=dict(blob=b'',hash='');state_lock=threading.Lock();stop=threading.Event();errors=[]
     statistics=dict(max_backlog=0,max_debt=0,ingress_rows=0,invalid_rows=0);recent={};guard_since=None
@@ -92,6 +100,8 @@ def main(cfg):
         if runtime.boundary(**args):
             statistics['ingress_rows']+=1;exposure[actor]+=row['duration']
             if is_cal:runtime.calibration[-1]['block']=block
+            if s20 and cfg['stage'] == 'A' and exposure[actor] > 1801.:
+                raise ValueError('S20 exposure overshoot exceeds one second')
     try:
         (root/'service-ready.json').write_text(json.dumps(dict(pid=os.getpid(),epoch=time.time(),source='freshV31,empty replay/optimizers',stage=cfg['stage'])))
         while True:
@@ -106,11 +116,13 @@ def main(cfg):
                 except queue.Empty:break
                 consume(item);consumed+=1
             if cfg['stage']=='A' and state['phase']=='CALIBRATION' and len(cal_done)==24:
-                audit=calibrate(model,runtime.calibration)
+                audit=calibrate(model,runtime.calibration,periods)
                 (root/'calibration-audit.json').write_text(json.dumps(audit,indent=2))
                 state['phase']='TRAINING';publish();runtime.save(str(root/'checkpoints/step-0'))
             if cfg['stage']=='A' and state['phase']=='TRAINING':
                 limit=runtime.credit.limit(runtime.replay);debt=limit-runtime.credit.critic
+                if s20 and limit > cfg['max_complete_updates']:
+                    raise ValueError('S20 physical credit exceeds the registered update cap')
                 statistics['max_debt']=max(statistics['max_debt'],debt)
                 if debt>0:
                     runtime.update_once()
@@ -119,7 +131,11 @@ def main(cfg):
             if cfg['stage']=='A' and state['phase']=='TRAINING':
                 mean_exposure=float(exposure.mean())
                 if mean_exposure>=next_checkpoint:
-                    runtime.save(str(root/'checkpoints'/('step-%d'%runtime.replay.inserted)));next_checkpoint+=300
+                    # Keep S20 checkpoint contents while removing compression
+                    # from the learner loop during live fixed-period ingress.
+                    prefix = root/'checkpoints'/('step-%d'%runtime.replay.inserted)
+                    runtime.save(str(prefix), compress_replay=not s20)
+                    next_checkpoint+=300
                 unhealthy=[i for i,r in recent.items() if now-r['epoch']<=3 and r['saturation']>=.99 and (r['utilization']<.5 or r['queue_mean_ms']>2*r['reference_queue_ms'])]
                 guard_since=(guard_since if guard_since is not None else time.monotonic()) if len(unhealthy)>12 else None
                 if guard_since is not None and time.monotonic()-guard_since>=120:
@@ -133,6 +149,8 @@ def main(cfg):
                 (root/'status.json.tmp').write_text(json.dumps(state));(root/'status.json.tmp').replace(root/'status.json')
                 last_status=time.monotonic()
             if len(done)==24 and inbox.empty():
+                if s20 and stopping:
+                    status='STOPPED';reason='deadline or owned stop request';break
                 if cfg['stage']=='A' and runtime.credit.critic<runtime.credit.limit(runtime.replay):continue
                 status='COMPLETED';break
             if stopping:

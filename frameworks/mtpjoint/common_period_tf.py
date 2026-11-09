@@ -226,10 +226,10 @@ class Model:
         with self.lock:
             self.session.run(self.step,fd)
 
-    def diagnostics(self, states):
+    def diagnostics(self, states, periods=PERIODS):
         """No random operations or updates: report each executed candidate."""
         result = {}
-        for period in PERIODS:
+        for period in periods:
             a = np.zeros((len(states),2),np.float32)
             a[:,1] = encoded_period(period)
             with self.lock:

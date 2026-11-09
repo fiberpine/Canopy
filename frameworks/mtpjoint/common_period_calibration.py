@@ -1,18 +1,20 @@
 """Fixed-budget fit/check calibration from isolated same-connection blocks."""
 import numpy as np
-from common_period import calibration,bias_correction,center,encoded_period
+from common_period import calibration,bias_correction,center,encoded_period,PERIODS
 
-def calibrate(model,rows):
+def calibrate(model,rows,active_periods=PERIODS):
     groups={}
     for row in rows:
         if row.get('block') is not None:groups.setdefault((row['actor'],row['block'],row['connection']),[]).append(row)
-    if len(groups)!=120:raise ValueError('Require24 actors x5 distinct calibration blocks')
+    identities = [(actor, block) for actor, block, _ in groups]
+    if len(identities) != 120 or set(identities) != {(a, b) for a in range(24) for b in range(5)}:
+        raise ValueError('Require one same-connection block per actor and block ID')
     blocks=[]
     for key,part in groups.items():
         periods={r['period_ms'] for r in part}
         if len(periods)!=1:raise ValueError('Mixed period in calibration block')
         blocks.append(dict(connection=key[2],end_connection=part[-1]['next_connection'],period_ms=part[0]['period_ms'],duration=[r['duration'] for r in part],reward=[r['reward'] for r in part]))
-    params=calibration(blocks);model.initialize_centering(params['K'],params['n0'])
+    params=calibration(blocks,active_periods);model.initialize_centering(params['K'],params['n0'])
     records=[]
     for (actor,block,connection),part in groups.items():
         elapsed=np.r_[0.,np.cumsum([r['duration'] for r in part])]
