@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-09 fixed-20 ms S20 training stopped at ingress overflow; no formal frozen evaluation",
+  "scope": "2026-11-10 fresh single-action fixed-period baseline and bounded evaluation",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11297,
-      "sha256": "4b124e3bb856f02fe7e3d41146c44e58ebd81d14bf3316c46df2cc48f4da6e76"
+      "bytes": 11510,
+      "sha256": "64d2534f7e0ad64ce174fc53fe7301648fa9ccba94d13d9dba45ad5b33aadd10"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -84,8 +84,8 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 57983,
-      "sha256": "90e63841c2234cdbc94439adb404de36135b43617d9bd261fb79fd5c772dad1e"
+      "bytes": 58199,
+      "sha256": "d2da227077ec25f3fcb11fc42839d144bca8d36af6e6b08cb26ed7d9337991ca"
     },
     {
       "path": "docs/SCALAR_BASE_ROADMAP.md",
@@ -12166,6 +12166,126 @@
       "path": "evidence/e2-handover-20261027/runs/node4/receipt.json",
       "bytes": 6747,
       "sha256": "e0e0236f421a69ae093f98a93b38d27f7493ba6e84f6919bea6aeddef285d903"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/auxiliary-closure-repair.json",
+      "bytes": 459,
+      "sha256": "eec03fb95237402224e7b1785c16933597d8b9fb1ebab915c05d8afb12fe5f8f"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/claude-consensus.md",
+      "bytes": 1513,
+      "sha256": "6162d102c7ec076c60d5f673ca561cbfcbb5d8a201e1e867cdca5d33e564372e"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/closure.json",
+      "bytes": 1274,
+      "sha256": "33f0105f9fad7bf43528f59331d15741dff2a3bfa7545285ddf427d225ef0aec"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/execution-sources.json",
+      "bytes": 1370,
+      "sha256": "85ca4eb191c0aef85b09c257f0f4e7533e288cab070287ec224fdffe26949eb9"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/failure-patterns.json",
+      "bytes": 3888,
+      "sha256": "2c4180af9db0e250459e714b35d8a35aaefc06d4259106426c0e79b2f09ecc45"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/final-assessment.json",
+      "bytes": 34310,
+      "sha256": "01b375bcfbc518b0fe8ea1f03a39d6ab04bd1f80c5e3930950c6eac421af726e"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/fresh-initializer-parity.json",
+      "bytes": 61,
+      "sha256": "478129ba0f613429094dba28bbdc74a074c388fceda25c49449461cf2c6c5a60"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/grid-results.json",
+      "bytes": 95128,
+      "sha256": "bc11f1b6b35e5c517b52b8d96ab096f511fb29921ac3de713f4736b944de6f9d"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/healthy_worker.py",
+      "bytes": 5640,
+      "sha256": "ea1a1a845686959c997775642237584f0b84cf7898369817ec999bc527856bcb"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/milestone-health.jsonl",
+      "bytes": 1014,
+      "sha256": "5be5502c508b9beb47ff465bae4d9177718ac2b5e43d92aceb8870e3eeb92357"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/monitor-only-guard.patch",
+      "bytes": 810,
+      "sha256": "c737cc9d156c6acb64b8c1ada18f9d7f3de8e001b030225746770893a8208f5d"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/outcome.json",
+      "bytes": 57,
+      "sha256": "5ef59443b27a0987f4ef3575481b742afd921828033a16dfa5c7d860a956cf14"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/plan.md",
+      "bytes": 4417,
+      "sha256": "bd85295adaf1345062dd1cb397df9ae6e9b0cdd6823c8fecdb6e5bbc700289c3"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/positive-results.json",
+      "bytes": 15921,
+      "sha256": "a5118e2530a65ff7667d8955163f69df396fd8bcd8828a6377f4ecd1e905b97c"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/recheck-results.json",
+      "bytes": 15900,
+      "sha256": "edc6db4ae9ef5b935b59b14d588b5765418eecf234daf23d480672b30dae4ffd"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/registration.json",
+      "bytes": 26220,
+      "sha256": "ffc4fbfedcf05125e9f041ee8fa8496164102a6dceda9640a35d022e5891f529"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/result.md",
+      "bytes": 4526,
+      "sha256": "8bd5c5c879bd57e9b435e082811560a183b23a37be71c564d31acfe500f0e139"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/screen-receipt.json",
+      "bytes": 243,
+      "sha256": "d101be3ff5168e1c2fd9ce93fddf3705b3104cfccb31a57e3bf3366b15004bee"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/screen-results.json",
+      "bytes": 15789,
+      "sha256": "508cbf3fc478b52939bb0bdc545b4836d73bb97b0ce5025e59a20a6401c542c4"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/selected-policy.json",
+      "bytes": 337,
+      "sha256": "00d21a231ba87503795aeffce8601c439d58bcc9e4b21677bb4d8d3559b24354"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/smoke-receipt.json",
+      "bytes": 445,
+      "sha256": "106cfe71074b8359d5cb8f0a54d5de95f97b2d4f8c1ece7f94ce2d5eb44d0201"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/smoke-transport.json",
+      "bytes": 8043,
+      "sha256": "56696975a3a54d05f7b0d0ac2cc6826ea14004e2c56e07f72182344059d99259"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/topology.json",
+      "bytes": 1973,
+      "sha256": "a21e8e482c247d404d5ef35c51bd9857a449fde97ff33a56436e16a8cec0f9e7"
+    },
+    {
+      "path": "evidence/healthy-base-20261110/training-summary.json",
+      "bytes": 690,
+      "sha256": "84dcde902dabbc4aeda0e7f42175a8244f5936ac93f2d0abf769e94cae8fbc1d"
     },
     {
       "path": "evidence/interval-reward-20261025/existing-measurement-checks.json",

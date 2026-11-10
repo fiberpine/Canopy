@@ -1,0 +1,11 @@
+--- a/cluster_control.py
++++ b/cluster_control.py
+@@ -68 +68 @@
+-    if not cfg['capacity_only'] and debt_since and now-debt_since>120 and not stop_reason:stop_reason='SUSTAINED_UPDATE_DEBT';stop(stop_reason)
++    debt_warning=bool(debt_since and now-debt_since>120)
+@@ -76 +76 @@
+-       if bad_since[i] and now-bad_since[i]>=cfg.get('collapse_guard_seconds',300) and not stop_reason:stop_reason='PERSISTENT_LOW_WINDOW_LOW_UTIL_ACTOR%d'%i;stop(stop_reason)
++       entry['persistent_low_window_warning']=bool(bad_since[i] and now-bad_since[i]>=cfg.get('collapse_guard_seconds',300))
+@@ -81 +81 @@
+-   samples.append(dict(epoch=now,learner=local,actors=statuses,debt=debt))
++   samples.append(dict(epoch=now,learner=local,actors=statuses,debt=debt,update_debt_warning=bool(debt_since and now-debt_since>120)))

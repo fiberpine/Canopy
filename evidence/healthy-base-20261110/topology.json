@@ -1,0 +1,77 @@
+{
+  "status": "PASS_ROUTE_AND_TRANSFER",
+  "routes": [
+    {
+      "node": 1,
+      "private_route": true,
+      "device": "eth0",
+      "ping_app_p50_ms": 0.05516400003102717,
+      "ping_app_p95_ms": 0.2168049999795585,
+      "bytes": 4194304,
+      "client_s": 0.004385651999996298,
+      "receiver_s": 0.0043547880000005534,
+      "application_Mbps": 7650.956345835994
+    },
+    {
+      "node": 2,
+      "private_route": true,
+      "device": "eth0",
+      "ping_app_p50_ms": 0.054808999976785344,
+      "ping_app_p95_ms": 0.08297800002310396,
+      "bytes": 4194304,
+      "client_s": 0.00351525900003935,
+      "receiver_s": 0.003493958000035491,
+      "application_Mbps": 9545.365504966885
+    },
+    {
+      "node": 3,
+      "private_route": true,
+      "device": "eth0",
+      "ping_app_p50_ms": 0.03611150000892849,
+      "ping_app_p95_ms": 0.1106710000158273,
+      "bytes": 4194304,
+      "client_s": 0.0019047890000365442,
+      "receiver_s": 0.0018894520000003467,
+      "application_Mbps": 17615.826214534125
+    },
+    {
+      "node": 4,
+      "private_route": true,
+      "device": "eth0",
+      "ping_app_p50_ms": 0.05184949998238153,
+      "ping_app_p95_ms": 0.06119900001522183,
+      "bytes": 4194304,
+      "client_s": 0.0017254579999530506,
+      "receiver_s": 0.0017171669999811456,
+      "application_Mbps": 19446.681403379866
+    }
+  ],
+  "receiver": [
+    {
+      "peer": 3,
+      "bulk_bytes": 4194304,
+      "received_s": 0.0018894520000003467
+    },
+    {
+      "peer": 1,
+      "bulk_bytes": 4194304,
+      "received_s": 0.0043547880000005534
+    },
+    {
+      "peer": 2,
+      "bulk_bytes": 4194304,
+      "received_s": 0.003493958000035491
+    },
+    {
+      "peer": 4,
+      "bulk_bytes": 4194304,
+      "received_s": 0.0017171669999811456
+    }
+  ],
+  "probe_bulk_bytes": 16777216,
+  "learner": {
+    "pid": 4979,
+    "ready": true
+  },
+  "scope": "bounded TCP to the existing learner port, using the private address on every sender"
+}

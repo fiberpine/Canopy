@@ -1,0 +1,148 @@
+{
+  "frozen_completed": {
+    "positive": 6,
+    "screen": 6,
+    "grid": 36,
+    "confirm": 0,
+    "recheck": 6,
+    "heldout": 0
+  },
+  "failed": [],
+  "replicated_conditions": {
+    "G12-R200": {
+      "fresh": [
+        {
+          "phase": "grid",
+          "host": 3,
+          "startup": 0.5350720211378678,
+          "trim10": 0.03348182846411575,
+          "final10": 0.024874623871614845,
+          "full_drop": 0.20991189427312776,
+          "trim_queue": 21.870137642130462
+        },
+        {
+          "phase": "recheck",
+          "host": 3,
+          "startup": 0.549339121489383,
+          "trim10": 0.031937194562410634,
+          "final10": 0.020361083249749248,
+          "full_drop": 0.16480221427747666,
+          "trim_queue": 9.313676286072774
+        }
+      ],
+      "H0": [
+        {
+          "phase": "grid",
+          "host": 3,
+          "startup": 0.5351803356362169,
+          "trim10": 0.6853380887342879,
+          "final10": 0.9619894257239805,
+          "full_drop": 0.03170690033928092,
+          "trim_queue": 13.634442590803992
+        },
+        {
+          "phase": "recheck",
+          "host": 3,
+          "startup": 0.5397092689465001,
+          "trim10": 0.7765918500181396,
+          "final10": 0.9804447918222753,
+          "full_drop": 0.031224699678344018,
+          "trim_queue": 13.000051658229156
+        }
+      ]
+    },
+    "G48-R20": {
+      "fresh": [
+        {
+          "phase": "grid",
+          "host": 3,
+          "startup": 0.7775919348867677,
+          "trim10": 0.770273771488615,
+          "final10": 0.7730768256321906,
+          "full_drop": 0.0,
+          "trim_queue": 1.6331150656755666
+        },
+        {
+          "phase": "recheck",
+          "host": 3,
+          "startup": 0.7369260370780127,
+          "trim10": 0.7303337635945659,
+          "final10": 0.7257458009526198,
+          "full_drop": 0.0,
+          "trim_queue": 1.324596511220798
+        }
+      ],
+      "H0": [
+        {
+          "phase": "grid",
+          "host": 3,
+          "startup": 0.985283856864404,
+          "trim10": 0.9996545686808938,
+          "final10": 0.9999757978056677,
+          "full_drop": 0.0,
+          "trim_queue": 5.917601211732135
+        },
+        {
+          "phase": "recheck",
+          "host": 3,
+          "startup": 0.9890445749108363,
+          "trim10": 1.0000003466981007,
+          "final10": 1.0,
+          "full_drop": 0.0,
+          "trim_queue": 7.083995146701963
+        }
+      ]
+    },
+    "G72-R20": {
+      "fresh": [
+        {
+          "phase": "grid",
+          "host": 2,
+          "startup": 0.5867572269093428,
+          "trim10": 0.5718385819632495,
+          "final10": 0.5600774494396404,
+          "full_drop": 0.0,
+          "trim_queue": 1.2533533609589882
+        },
+        {
+          "phase": "recheck",
+          "host": 2,
+          "startup": 0.8836619967726312,
+          "trim10": 0.8860162738935032,
+          "final10": 0.8875167112299466,
+          "full_drop": 0.0,
+          "trim_queue": 1.7390436744147448
+        }
+      ],
+      "H0": [
+        {
+          "phase": "grid",
+          "host": 2,
+          "startup": 0.9828363792307654,
+          "trim10": 0.9920123787546934,
+          "final10": 0.9999838665519399,
+          "full_drop": 0.0,
+          "trim_queue": 5.568846378022526
+        },
+        {
+          "phase": "recheck",
+          "host": 2,
+          "startup": 0.9781233398217337,
+          "trim10": 0.9869522183268858,
+          "final10": 0.9756188932899078,
+          "full_drop": 0.0,
+          "trim_queue": 5.335490468982286
+        }
+      ]
+    }
+  },
+  "condition_equal_utilization_r20": {
+    "fresh": 0.8710342546891884,
+    "H0": 0.976249230061775
+  },
+  "descriptive_utilization_excluding_g12_r200": {
+    "fresh": 0.9480738698958112,
+    "H0": 0.987177740486024
+  },
+  "heldout_status": "NOT_RUN_AFTER_PRIMARY_HEALTH_FAILURE"
+}

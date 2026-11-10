@@ -1,0 +1,1109 @@
+{
+  "status": "FAIL_DEEP_GRID",
+  "checks": {
+    "full": {
+      "means": {
+        "fresh": {
+          "utilization": 0.8995263748308987,
+          "queue_mean_ms": 38.2288866013719,
+          "queue_p95_ms": 166.49583333333308,
+          "queue_p99_ms": 214.95833333333334,
+          "drop_fraction": 0.009654926655142781
+        },
+        "H0": {
+          "utilization": 0.9648784003137894,
+          "queue_mean_ms": 43.83913638132974,
+          "queue_p95_ms": 172.04166666666666,
+          "queue_p99_ms": 241.04166666666666,
+          "drop_fraction": 0.003271797434163917
+        }
+      },
+      "gates": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "cells": false
+      },
+      "utilization_floor": 0.95
+    },
+    "trim10": {
+      "means": {
+        "fresh": {
+          "utilization": 0.9099336882965384,
+          "queue_mean_ms": 10.743571355234852,
+          "queue_p95_ms": 21.958333333333332,
+          "queue_p99_ms": 26.486874999999998,
+          "drop_fraction": 0.0
+        },
+        "H0": {
+          "utilization": 0.9765022083564485,
+          "queue_mean_ms": 32.061911115123415,
+          "queue_p95_ms": 43.125,
+          "queue_p99_ms": 46.25,
+          "drop_fraction": 0.0
+        }
+      },
+      "gates": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "cells": false
+      },
+      "utilization_floor": 0.9565022083564485
+    },
+    "startup0_10": {
+      "means": {
+        "fresh": {
+          "utilization": 0.8474844356687645,
+          "queue_mean_ms": 100.86712037712638,
+          "queue_p95_ms": 215.0270833333333,
+          "queue_p99_ms": 236.99833333333345,
+          "drop_fraction": 0.021995920675551006
+        },
+        "H0": {
+          "utilization": 0.9067534042117037,
+          "queue_mean_ms": 113.39587618040284,
+          "queue_p95_ms": 241.5979166666666,
+          "queue_p99_ms": 258.125,
+          "drop_fraction": 0.01867095617863688
+        }
+      },
+      "gates": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "cells": false
+      },
+      "utilization_floor": 0.95
+    }
+  },
+  "cells": {
+    "full": {
+      "fresh": {
+        "G12-R20": {
+          "utilization": 0.9964576650199733,
+          "queue_mean_ms": 5.599594075515373,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R50": {
+          "utilization": 0.957841794377578,
+          "queue_mean_ms": 6.370646332100231,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 18.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R100": {
+          "utilization": 0.8621861676340649,
+          "queue_mean_ms": 35.12794456380775,
+          "queue_p95_ms": 318.0,
+          "queue_p99_ms": 490.0,
+          "drop_fraction": 0.04283305852492728
+        },
+        "G12-R200": {
+          "utilization": 0.11761842373429349,
+          "queue_mean_ms": 457.276567966483,
+          "queue_p95_ms": 978.0,
+          "queue_p99_ms": 982.5,
+          "drop_fraction": 0.1873570542753022
+        },
+        "G24-R200": {
+          "utilization": 0.9547157862388418,
+          "queue_mean_ms": 73.89823792775417,
+          "queue_p95_ms": 716.0,
+          "queue_p99_ms": 889.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R20": {
+          "utilization": 0.9971508687732816,
+          "queue_mean_ms": 5.872506453884065,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R50": {
+          "utilization": 0.9515546988735166,
+          "queue_mean_ms": 6.4362066542528895,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 17.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R100": {
+          "utilization": 0.9876506450487339,
+          "queue_mean_ms": 8.28307187219712,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 17.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R100": {
+          "utilization": 0.9879480536365962,
+          "queue_mean_ms": 10.989271196856341,
+          "queue_p95_ms": 18.0,
+          "queue_p99_ms": 20.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R200": {
+          "utilization": 0.9686213265643424,
+          "queue_mean_ms": 53.932984635501796,
+          "queue_p95_ms": 437.8999999999942,
+          "queue_p99_ms": 525.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R20": {
+          "utilization": 0.916303946914765,
+          "queue_mean_ms": 1.9456362497948365,
+          "queue_p95_ms": 4.0,
+          "queue_p99_ms": 6.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R50": {
+          "utilization": 0.9493814015599068,
+          "queue_mean_ms": 6.656183994367519,
+          "queue_p95_ms": 15.0,
+          "queue_p99_ms": 17.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R50": {
+          "utilization": 0.8777729070197037,
+          "queue_mean_ms": 7.050295680936604,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 16.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R100": {
+          "utilization": 0.9133469191835647,
+          "queue_mean_ms": 22.2591065830721,
+          "queue_p95_ms": 26.0,
+          "queue_p99_ms": 467.0,
+          "drop_fraction": 0.0015281269231972796
+        },
+        "G42-R200": {
+          "utilization": 0.969581939422119,
+          "queue_mean_ms": 45.662292600456084,
+          "queue_p95_ms": 349.0,
+          "queue_p99_ms": 421.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R20": {
+          "utilization": 0.833359451175275,
+          "queue_mean_ms": 1.7409304750935461,
+          "queue_p95_ms": 4.0,
+          "queue_p99_ms": 5.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R20": {
+          "utilization": 0.7514628737467988,
+          "queue_mean_ms": 1.4942475041130945,
+          "queue_p95_ms": 3.0,
+          "queue_p99_ms": 4.5,
+          "drop_fraction": 0.0
+        },
+        "G48-R50": {
+          "utilization": 0.993670409231498,
+          "queue_mean_ms": 6.443714234056956,
+          "queue_p95_ms": 11.0,
+          "queue_p99_ms": 13.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R100": {
+          "utilization": 0.9815143483851422,
+          "queue_mean_ms": 44.33948402165835,
+          "queue_p95_ms": 375.0,
+          "queue_p99_ms": 443.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R200": {
+          "utilization": 0.971619019180015,
+          "queue_mean_ms": 41.33551855363586,
+          "queue_p95_ms": 280.0,
+          "queue_p99_ms": 343.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R200": {
+          "utilization": 0.9740471076703575,
+          "queue_mean_ms": 32.0790147052531,
+          "queue_p95_ms": 143.0,
+          "queue_p99_ms": 162.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R20": {
+          "utilization": 0.7299743710931662,
+          "queue_mean_ms": 1.5071704452582961,
+          "queue_p95_ms": 3.0,
+          "queue_p99_ms": 4.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R50": {
+          "utilization": 0.9608843052142635,
+          "queue_mean_ms": 8.089515682563238,
+          "queue_p95_ms": 17.0,
+          "queue_p99_ms": 18.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R100": {
+          "utilization": 0.9839685662437707,
+          "queue_mean_ms": 33.10313602431316,
+          "queue_p95_ms": 224.0,
+          "queue_p99_ms": 261.0,
+          "drop_fraction": 0.0
+        }
+      },
+      "H0": {
+        "G12-R20": {
+          "utilization": 0.8835844069325444,
+          "queue_mean_ms": 2.567926455566905,
+          "queue_p95_ms": 5.0,
+          "queue_p99_ms": 9.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R50": {
+          "utilization": 0.9853915250722659,
+          "queue_mean_ms": 20.182000135694416,
+          "queue_p95_ms": 37.0,
+          "queue_p99_ms": 42.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R100": {
+          "utilization": 0.9876176554592169,
+          "queue_mean_ms": 51.63416200503625,
+          "queue_p95_ms": 487.0,
+          "queue_p99_ms": 501.0,
+          "drop_fraction": 0.04086791657889193
+        },
+        "G12-R200": {
+          "utilization": 0.6987143041081731,
+          "queue_mean_ms": 88.54721000014374,
+          "queue_p95_ms": 676.5,
+          "queue_p99_ms": 975.0,
+          "drop_fraction": 0.03146580000881247
+        },
+        "G24-R200": {
+          "utilization": 0.9667466493781062,
+          "queue_mean_ms": 74.43417446610476,
+          "queue_p95_ms": 704.0,
+          "queue_p99_ms": 889.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R20": {
+          "utilization": 0.9983210655335083,
+          "queue_mean_ms": 7.991259795057263,
+          "queue_p95_ms": 10.0,
+          "queue_p99_ms": 11.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R50": {
+          "utilization": 0.995328705246643,
+          "queue_mean_ms": 23.301671005122177,
+          "queue_p95_ms": 41.0,
+          "queue_p99_ms": 45.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R100": {
+          "utilization": 0.9902990599656482,
+          "queue_mean_ms": 13.263682011899236,
+          "queue_p95_ms": 21.0,
+          "queue_p99_ms": 30.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R100": {
+          "utilization": 0.9760035616848473,
+          "queue_mean_ms": 25.955377359028613,
+          "queue_p95_ms": 34.0,
+          "queue_p99_ms": 463.0,
+          "drop_fraction": 0.00462532065106354
+        },
+        "G36-R200": {
+          "utilization": 0.9647128779008542,
+          "queue_mean_ms": 44.33295330880448,
+          "queue_p95_ms": 435.0,
+          "queue_p99_ms": 525.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R20": {
+          "utilization": 0.98400207815321,
+          "queue_mean_ms": 4.843112280999689,
+          "queue_p95_ms": 8.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R50": {
+          "utilization": 0.9950929497698257,
+          "queue_mean_ms": 24.282597987080596,
+          "queue_p95_ms": 42.0,
+          "queue_p99_ms": 45.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R50": {
+          "utilization": 0.9948190779112203,
+          "queue_mean_ms": 24.237435316481218,
+          "queue_p95_ms": 42.0,
+          "queue_p99_ms": 44.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R100": {
+          "utilization": 0.9714296423187584,
+          "queue_mean_ms": 25.17163387393051,
+          "queue_p95_ms": 33.0,
+          "queue_p99_ms": 455.0,
+          "drop_fraction": 0.0015641011811660644
+        },
+        "G42-R200": {
+          "utilization": 0.9356265010244257,
+          "queue_mean_ms": 38.61754075160105,
+          "queue_p95_ms": 352.0,
+          "queue_p99_ms": 421.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R20": {
+          "utilization": 0.9963566690091014,
+          "queue_mean_ms": 5.948313626625384,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R20": {
+          "utilization": 0.9977170937554894,
+          "queue_mean_ms": 6.49577711421127,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R50": {
+          "utilization": 0.9566848933645498,
+          "queue_mean_ms": 16.199078522141672,
+          "queue_p95_ms": 33.0,
+          "queue_p99_ms": 39.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R100": {
+          "utilization": 0.9837578337300574,
+          "queue_mean_ms": 38.768482927263406,
+          "queue_p95_ms": 375.0,
+          "queue_p99_ms": 443.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R200": {
+          "utilization": 0.9762682184006958,
+          "queue_mean_ms": 317.0233828797299,
+          "queue_p95_ms": 344.0,
+          "queue_p99_ms": 345.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R200": {
+          "utilization": 0.9747922809775972,
+          "queue_mean_ms": 145.90571480426343,
+          "queue_p95_ms": 162.0,
+          "queue_p99_ms": 163.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R20": {
+          "utilization": 0.9879820174086518,
+          "queue_mean_ms": 5.5113678797773344,
+          "queue_p95_ms": 8.5,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R50": {
+          "utilization": 0.9713873924581788,
+          "queue_mean_ms": 18.35936474076113,
+          "queue_p95_ms": 36.0,
+          "queue_p99_ms": 39.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R100": {
+          "utilization": 0.9844451479673768,
+          "queue_mean_ms": 28.565053904589302,
+          "queue_p95_ms": 225.0,
+          "queue_p99_ms": 261.0,
+          "drop_fraction": 0.0
+        }
+      }
+    },
+    "trim10": {
+      "fresh": {
+        "G12-R20": {
+          "utilization": 0.9999412065985189,
+          "queue_mean_ms": 5.593612710385364,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R50": {
+          "utilization": 0.9640936639706353,
+          "queue_mean_ms": 5.756293953643211,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 17.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R100": {
+          "utilization": 0.9217978936810431,
+          "queue_mean_ms": 7.572690675660973,
+          "queue_p95_ms": 16.0,
+          "queue_p99_ms": 24.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R200": {
+          "utilization": 0.03270951151326319,
+          "queue_mean_ms": 15.591906964101618,
+          "queue_p95_ms": 99.5,
+          "queue_p99_ms": 136.68499999999995,
+          "drop_fraction": 0.0
+        },
+        "G24-R200": {
+          "utilization": 0.9999906634798011,
+          "queue_mean_ms": 21.128103028053882,
+          "queue_p95_ms": 35.0,
+          "queue_p99_ms": 40.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R20": {
+          "utilization": 0.999730227917796,
+          "queue_mean_ms": 5.875155503832417,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R50": {
+          "utilization": 0.9574931710023689,
+          "queue_mean_ms": 6.211985669990782,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 17.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R100": {
+          "utilization": 0.9996897607716767,
+          "queue_mean_ms": 7.780959356282168,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 16.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R100": {
+          "utilization": 1.0000006933382637,
+          "queue_mean_ms": 10.647373381549835,
+          "queue_p95_ms": 17.0,
+          "queue_p99_ms": 19.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R200": {
+          "utilization": 0.9999469862896803,
+          "queue_mean_ms": 23.34619035522815,
+          "queue_p95_ms": 38.0,
+          "queue_p99_ms": 43.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R20": {
+          "utilization": 0.9160702120548413,
+          "queue_mean_ms": 1.8611498245127585,
+          "queue_p95_ms": 4.0,
+          "queue_p99_ms": 5.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R50": {
+          "utilization": 0.9552076814768461,
+          "queue_mean_ms": 6.591556392187599,
+          "queue_p95_ms": 15.0,
+          "queue_p99_ms": 17.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R50": {
+          "utilization": 0.882831539962202,
+          "queue_mean_ms": 7.076789759634421,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 16.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R100": {
+          "utilization": 0.9313929464122417,
+          "queue_mean_ms": 8.424924629299205,
+          "queue_p95_ms": 18.0,
+          "queue_p99_ms": 23.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R200": {
+          "utilization": 0.9998857830884594,
+          "queue_mean_ms": 21.77656721037127,
+          "queue_p95_ms": 36.0,
+          "queue_p99_ms": 43.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R20": {
+          "utilization": 0.8312326860940072,
+          "queue_mean_ms": 1.6675422087099199,
+          "queue_p95_ms": 3.0,
+          "queue_p99_ms": 4.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R20": {
+          "utilization": 0.7503037675415904,
+          "queue_mean_ms": 1.4788557884481823,
+          "queue_p95_ms": 2.5,
+          "queue_p99_ms": 4.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R50": {
+          "utilization": 0.9997546710901788,
+          "queue_mean_ms": 6.441578110660321,
+          "queue_p95_ms": 11.0,
+          "queue_p99_ms": 13.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R100": {
+          "utilization": 0.9999502088189329,
+          "queue_mean_ms": 19.08726847905657,
+          "queue_p95_ms": 31.0,
+          "queue_p99_ms": 35.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R200": {
+          "utilization": 0.9999301536672658,
+          "queue_mean_ms": 22.468817376828888,
+          "queue_p95_ms": 38.0,
+          "queue_p99_ms": 44.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R200": {
+          "utilization": 0.9999502129792923,
+          "queue_mean_ms": 22.993465647017928,
+          "queue_p95_ms": 38.0,
+          "queue_p99_ms": 43.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R20": {
+          "utilization": 0.7289274279283764,
+          "queue_mean_ms": 1.4961985176868664,
+          "queue_p95_ms": 3.0,
+          "queue_p99_ms": 4.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R50": {
+          "utilization": 0.9675805605728752,
+          "queue_mean_ms": 8.150102071481125,
+          "queue_p95_ms": 17.0,
+          "queue_p99_ms": 18.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R100": {
+          "utilization": 0.9999968888667653,
+          "queue_mean_ms": 18.826624911013,
+          "queue_p95_ms": 31.0,
+          "queue_p99_ms": 34.0,
+          "drop_fraction": 0.0
+        }
+      },
+      "H0": {
+        "G12-R20": {
+          "utilization": 0.8847964638596642,
+          "queue_mean_ms": 2.360190433008388,
+          "queue_p95_ms": 5.0,
+          "queue_p99_ms": 7.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R50": {
+          "utilization": 0.9895507266480292,
+          "queue_mean_ms": 19.560305683937404,
+          "queue_p95_ms": 37.0,
+          "queue_p99_ms": 40.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R100": {
+          "utilization": 0.9995808169188416,
+          "queue_mean_ms": 12.543847327018783,
+          "queue_p95_ms": 20.0,
+          "queue_p99_ms": 24.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R200": {
+          "utilization": 0.7309649693762137,
+          "queue_mean_ms": 13.317247124516573,
+          "queue_p95_ms": 25.0,
+          "queue_p99_ms": 28.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R200": {
+          "utilization": 0.999991010264837,
+          "queue_mean_ms": 24.47094341136587,
+          "queue_p95_ms": 35.0,
+          "queue_p99_ms": 37.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R20": {
+          "utilization": 0.9996901075567127,
+          "queue_mean_ms": 8.000260855606388,
+          "queue_p95_ms": 10.0,
+          "queue_p99_ms": 11.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R50": {
+          "utilization": 0.9997101677372543,
+          "queue_mean_ms": 23.261582759796937,
+          "queue_p95_ms": 41.0,
+          "queue_p99_ms": 44.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R100": {
+          "utilization": 0.9998201519451972,
+          "queue_mean_ms": 12.80580634805987,
+          "queue_p95_ms": 21.0,
+          "queue_p99_ms": 25.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R100": {
+          "utilization": 0.9860367895949482,
+          "queue_mean_ms": 13.511273506243475,
+          "queue_p95_ms": 26.0,
+          "queue_p99_ms": 33.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R200": {
+          "utilization": 0.993770515701445,
+          "queue_mean_ms": 13.104634425237101,
+          "queue_p95_ms": 23.0,
+          "queue_p99_ms": 25.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R20": {
+          "utilization": 0.9849536707816589,
+          "queue_mean_ms": 4.7207823496277594,
+          "queue_p95_ms": 8.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R50": {
+          "utilization": 1.0000004622255092,
+          "queue_mean_ms": 24.409285972112674,
+          "queue_p95_ms": 42.0,
+          "queue_p99_ms": 45.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R50": {
+          "utilization": 0.9999834024263854,
+          "queue_mean_ms": 24.425180515759312,
+          "queue_p95_ms": 42.0,
+          "queue_p99_ms": 44.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R100": {
+          "utilization": 0.9824934310796806,
+          "queue_mean_ms": 13.22583523867295,
+          "queue_p95_ms": 25.0,
+          "queue_p99_ms": 33.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R200": {
+          "utilization": 0.9595247515698347,
+          "queue_mean_ms": 13.110183410077699,
+          "queue_p95_ms": 24.0,
+          "queue_p99_ms": 27.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R20": {
+          "utilization": 0.9987453819423276,
+          "queue_mean_ms": 5.918856113332913,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R20": {
+          "utilization": 0.9998274576894972,
+          "queue_mean_ms": 6.50079817921705,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R50": {
+          "utilization": 0.9632494546172187,
+          "queue_mean_ms": 16.225131816596658,
+          "queue_p95_ms": 34.0,
+          "queue_p99_ms": 39.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R100": {
+          "utilization": 0.9987819962343253,
+          "queue_mean_ms": 13.385178380494857,
+          "queue_p95_ms": 24.0,
+          "queue_p99_ms": 31.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R200": {
+          "utilization": 0.9999976931241766,
+          "queue_mean_ms": 320.0312569317864,
+          "queue_p95_ms": 344.0,
+          "queue_p99_ms": 345.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R200": {
+          "utilization": 1.000000435558653,
+          "queue_mean_ms": 146.91634833050367,
+          "queue_p95_ms": 162.0,
+          "queue_p99_ms": 163.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R20": {
+          "utilization": 0.9894822985407896,
+          "queue_mean_ms": 5.452168423502406,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R50": {
+          "utilization": 0.977209455711685,
+          "queue_mean_ms": 18.439987960996366,
+          "queue_p95_ms": 36.0,
+          "queue_p99_ms": 39.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R100": {
+          "utilization": 0.9978913894498805,
+          "queue_mean_ms": 13.788781265490401,
+          "queue_p95_ms": 24.0,
+          "queue_p99_ms": 30.0,
+          "drop_fraction": 0.0
+        }
+      }
+    },
+    "startup0_10": {
+      "fresh": {
+        "G12-R20": {
+          "utilization": 0.9790382099401762,
+          "queue_mean_ms": 5.6301187551187555,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 11.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R50": {
+          "utilization": 0.9265793107569636,
+          "queue_mean_ms": 9.564135842526499,
+          "queue_p95_ms": 16.0,
+          "queue_p99_ms": 170.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R100": {
+          "utilization": 0.5640976388506498,
+          "queue_mean_ms": 256.9747722494744,
+          "queue_p95_ms": 493.64999999999964,
+          "queue_p99_ms": 501.0,
+          "drop_fraction": 0.28827930174563593
+        },
+        "G12-R200": {
+          "utilization": 0.5422055713136253,
+          "queue_mean_ms": 586.6527954395465,
+          "queue_p95_ms": 979.5,
+          "queue_p99_ms": 982.5,
+          "drop_fraction": 0.22958820424189555
+        },
+        "G24-R200": {
+          "utilization": 0.7283186922011426,
+          "queue_mean_ms": 427.475873655914,
+          "queue_p95_ms": 890.0,
+          "queue_p99_ms": 891.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R20": {
+          "utilization": 0.984252779360699,
+          "queue_mean_ms": 5.859056642216789,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 10.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R50": {
+          "utilization": 0.9218593597599366,
+          "queue_mean_ms": 7.600282793125952,
+          "queue_p95_ms": 15.0,
+          "queue_p99_ms": 82.13000000000102,
+          "drop_fraction": 0.0
+        },
+        "G24-R100": {
+          "utilization": 0.927449028157501,
+          "queue_mean_ms": 10.986656582572525,
+          "queue_p95_ms": 16.0,
+          "queue_p99_ms": 155.90000000000146,
+          "drop_fraction": 0.0
+        },
+        "G36-R100": {
+          "utilization": 0.9276788120893337,
+          "queue_mean_ms": 12.83114872164206,
+          "queue_p95_ms": 19.0,
+          "queue_p99_ms": 122.31000000000131,
+          "drop_fraction": 0.0
+        },
+        "G36-R200": {
+          "utilization": 0.8119773216537385,
+          "queue_mean_ms": 238.6639347571561,
+          "queue_p95_ms": 525.0,
+          "queue_p99_ms": 526.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R20": {
+          "utilization": 0.9174727384060439,
+          "queue_mean_ms": 2.3673513986013988,
+          "queue_p95_ms": 5.0,
+          "queue_p99_ms": 8.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R50": {
+          "utilization": 0.9202470807532044,
+          "queue_mean_ms": 6.991539271578489,
+          "queue_p95_ms": 15.0,
+          "queue_p99_ms": 33.61999999999898,
+          "drop_fraction": 0.0
+        },
+        "G42-R50": {
+          "utilization": 0.8524768430448653,
+          "queue_mean_ms": 6.913126764350047,
+          "queue_p95_ms": 15.0,
+          "queue_p99_ms": 16.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R100": {
+          "utilization": 0.8231064402918825,
+          "queue_mean_ms": 100.14166955316938,
+          "queue_p95_ms": 480.0,
+          "queue_p99_ms": 491.0,
+          "drop_fraction": 0.01003459022569266
+        },
+        "G42-R200": {
+          "utilization": 0.8180453530002829,
+          "queue_mean_ms": 189.42321490169024,
+          "queue_p95_ms": 421.0,
+          "queue_p99_ms": 422.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R20": {
+          "utilization": 0.8439944954978684,
+          "queue_mean_ms": 2.1022742701968773,
+          "queue_p95_ms": 5.0,
+          "queue_p99_ms": 8.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R20": {
+          "utilization": 0.7572589859823902,
+          "queue_mean_ms": 1.5704776926210133,
+          "queue_p95_ms": 3.5,
+          "queue_p99_ms": 6.5,
+          "drop_fraction": 0.0
+        },
+        "G48-R50": {
+          "utilization": 0.9632460491123105,
+          "queue_mean_ms": 6.454798584365567,
+          "queue_p95_ms": 12.0,
+          "queue_p99_ms": 14.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R100": {
+          "utilization": 0.8893258019397837,
+          "queue_mean_ms": 184.11003802070326,
+          "queue_p95_ms": 444.0,
+          "queue_p99_ms": 444.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R200": {
+          "utilization": 0.8300491507178437,
+          "queue_mean_ms": 153.1786107065363,
+          "queue_p95_ms": 344.0,
+          "queue_p99_ms": 345.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R200": {
+          "utilization": 0.8445185936409882,
+          "queue_mean_ms": 84.99795588607472,
+          "queue_p95_ms": 162.0,
+          "queue_p99_ms": 162.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R20": {
+          "utilization": 0.735209611840987,
+          "queue_mean_ms": 1.561900050764224,
+          "queue_p95_ms": 3.0,
+          "queue_p99_ms": 6.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R50": {
+          "utilization": 0.9273996710046732,
+          "queue_mean_ms": 7.773469314209521,
+          "queue_p95_ms": 17.0,
+          "queue_p99_ms": 18.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R100": {
+          "utilization": 0.903818916733459,
+          "queue_mean_ms": 110.98568719687853,
+          "queue_p95_ms": 262.0,
+          "queue_p99_ms": 262.0,
+          "drop_fraction": 0.0
+        }
+      },
+      "H0": {
+        "G12-R20": {
+          "utilization": 0.8775235143839519,
+          "queue_mean_ms": 3.6144358154408405,
+          "queue_p95_ms": 7.0,
+          "queue_p99_ms": 43.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R50": {
+          "utilization": 0.9645934311258518,
+          "queue_mean_ms": 23.36876558603491,
+          "queue_p95_ms": 39.0,
+          "queue_p99_ms": 174.0,
+          "drop_fraction": 0.0
+        },
+        "G12-R100": {
+          "utilization": 0.9277958479798012,
+          "queue_mean_ms": 260.21629724809935,
+          "queue_p95_ms": 501.0,
+          "queue_p99_ms": 503.0,
+          "drop_fraction": 0.21216454950786573
+        },
+        "G12-R200": {
+          "utilization": 0.5374448022913585,
+          "queue_mean_ms": 582.6761640460979,
+          "queue_p95_ms": 977.5,
+          "queue_p99_ms": 981.0,
+          "drop_fraction": 0.19772189884224017
+        },
+        "G24-R200": {
+          "utilization": 0.8005081710750134,
+          "queue_mean_ms": 379.44483223120255,
+          "queue_p95_ms": 890.0,
+          "queue_p99_ms": 891.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R20": {
+          "utilization": 0.9914751687678612,
+          "queue_mean_ms": 7.945894012944984,
+          "queue_p95_ms": 10.0,
+          "queue_p99_ms": 11.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R50": {
+          "utilization": 0.9734191952499557,
+          "queue_mean_ms": 23.507468067573136,
+          "queue_p95_ms": 42.0,
+          "queue_p99_ms": 83.0,
+          "drop_fraction": 0.0
+        },
+        "G24-R100": {
+          "utilization": 0.9426888247183289,
+          "queue_mean_ms": 15.690074956142682,
+          "queue_p95_ms": 30.0,
+          "queue_p99_ms": 155.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R100": {
+          "utilization": 0.9258323916025828,
+          "queue_mean_ms": 91.93243000395357,
+          "queue_p95_ms": 484.0,
+          "queue_p99_ms": 492.0,
+          "drop_fraction": 0.02841107160287248
+        },
+        "G36-R200": {
+          "utilization": 0.819410119771083,
+          "queue_mean_ms": 230.01923769147703,
+          "queue_p95_ms": 525.0,
+          "queue_p99_ms": 526.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R20": {
+          "utilization": 0.9792436378946291,
+          "queue_mean_ms": 5.458230958230958,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 11.0,
+          "drop_fraction": 0.0
+        },
+        "G36-R50": {
+          "utilization": 0.9705529269276203,
+          "queue_mean_ms": 23.630044071064592,
+          "queue_p95_ms": 42.0,
+          "queue_p99_ms": 45.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R50": {
+          "utilization": 0.9689944954978684,
+          "queue_mean_ms": 23.268789545266394,
+          "queue_p95_ms": 42.0,
+          "queue_p99_ms": 45.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R100": {
+          "utilization": 0.9161043575072921,
+          "queue_mean_ms": 88.8676991976115,
+          "queue_p95_ms": 473.34999999999854,
+          "queue_p99_ms": 489.0,
+          "drop_fraction": 0.009805428334306704
+        },
+        "G42-R200": {
+          "utilization": 0.8161215514550226,
+          "queue_mean_ms": 185.91626142438352,
+          "queue_p95_ms": 422.0,
+          "queue_p99_ms": 422.0,
+          "drop_fraction": 0.0
+        },
+        "G42-R20": {
+          "utilization": 0.9844117352961261,
+          "queue_mean_ms": 6.097729918509895,
+          "queue_p95_ms": 8.0,
+          "queue_p99_ms": 11.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R20": {
+          "utilization": 0.9871642158876202,
+          "queue_mean_ms": 6.470162112376996,
+          "queue_p95_ms": 8.5,
+          "queue_p99_ms": 10.5,
+          "drop_fraction": 0.0
+        },
+        "G48-R50": {
+          "utilization": 0.9238587954393426,
+          "queue_mean_ms": 16.063271563068074,
+          "queue_p95_ms": 33.0,
+          "queue_p99_ms": 39.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R100": {
+          "utilization": 0.9086294876568433,
+          "queue_mean_ms": 176.35508271658685,
+          "queue_p95_ms": 443.0,
+          "queue_p99_ms": 444.0,
+          "drop_fraction": 0.0
+        },
+        "G48-R200": {
+          "utilization": 0.857608946134782,
+          "queue_mean_ms": 299.44852361095457,
+          "queue_p95_ms": 344.0,
+          "queue_p99_ms": 345.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R200": {
+          "utilization": 0.8487388690270031,
+          "queue_mean_ms": 139.9372578807444,
+          "queue_p95_ms": 162.0,
+          "queue_p99_ms": 163.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R20": {
+          "utilization": 0.9804798595262496,
+          "queue_mean_ms": 5.8100757061980435,
+          "queue_p95_ms": 8.0,
+          "queue_p99_ms": 10.5,
+          "drop_fraction": 0.0
+        },
+        "G72-R50": {
+          "utilization": 0.9422741570828228,
+          "queue_mean_ms": 17.94131730155352,
+          "queue_p95_ms": 36.0,
+          "queue_p99_ms": 39.0,
+          "drop_fraction": 0.0
+        },
+        "G72-R100": {
+          "utilization": 0.9172071987818781,
+          "queue_mean_ms": 107.82098266415161,
+          "queue_p95_ms": 262.0,
+          "queue_p99_ms": 262.0,
+          "drop_fraction": 0.0
+        }
+      }
+    }
+  },
+  "recheck_conditions": []
+}
