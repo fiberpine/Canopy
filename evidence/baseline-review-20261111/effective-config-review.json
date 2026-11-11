@@ -1,0 +1,38 @@
+{
+  "status": "SOURCE_AND_SAVED_CONFIG_REVIEW_ONLY",
+  "read_cloud": false,
+  "new_TF_queries": false,
+  "new_TCP": false,
+  "template": {
+    "backend": "moving_stats",
+    "target_bn_consistent": "ABSENT",
+    "independent_critic_adam_v34": "ABSENT",
+    "sampler": "balanced_actor",
+    "warmup": 12288,
+    "update_ratio": 0.1,
+    "checkpoint_interval": 500000,
+    "LOSS_TYPE": "MSE",
+    "require_coverage_gate": true,
+    "bn_relevant_only": true
+  },
+  "actual_Nov10": {
+    "backend": "moving_stats",
+    "target_bn_consistent": "ABSENT",
+    "independent_critic_adam_v34": "ABSENT",
+    "sampler": "balanced_actor",
+    "warmup": 12288,
+    "update_ratio": 0.1,
+    "checkpoint_interval": 300000,
+    "LOSS_TYPE": "MSE",
+    "require_coverage_gate": true,
+    "bn_relevant_only": true
+  },
+  "source_sha256": {
+    "templates/baseline-train.json": "0cf6293d02fce5f59a01322adcd8fcad8291c8e02714d43874857e04bda800de",
+    "frameworks/baseline/distributed.py": "364d116b2c61b975b0a666878ec218d687ab4586ca7b9d6c398175f55dc21c7f",
+    "frameworks/baseline/moving_stats_backend.py": "8134cbf68d0eb2eacbbed5c065817f998a7c7ccac6779c358c72af7fdefff952",
+    "frameworks/baseline/consistent_target_bn.py": "ac64991d4bb40c10afff580b5c8140ec1e6587c9eb64344e8a37b3b5b00380a5",
+    "frameworks/baseline/code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8"
+  },
+  "finding": "target_bn_consistent is absent in both. distributed.setup installs repair only when truthy. moving_stats_backend changes online forward/action loss, not target actor. Training critic feed uses is_training=True. Actual fixed-query delta in this scalar configuration has not been newly measured; not evidence of unique historical cause."
+}
