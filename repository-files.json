@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-11 offline scalar reconnection candidate; live TF/TCP admission pending",
+  "scope": "2026-11-11 checkpoint screen NO_CANDIDATE; two real reconnect admissions failed before updates; postrun fixes offline only; confirmation and formal training NOT_RUN",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11694,
-      "sha256": "286f537451f34c45057b9c4c5f70ef70e43e18e94df3282e74980d19d0f76a1f"
+      "bytes": 11903,
+      "sha256": "2bf1cbc657f8e17e0ae9e770a41066d30019a72ecea73a89313240d48ad03cd4"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -89,8 +89,8 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 58199,
-      "sha256": "d2da227077ec25f3fcb11fc42839d144bca8d36af6e6b08cb26ed7d9337991ca"
+      "bytes": 59905,
+      "sha256": "b842164f8d65b749739c9eb6b8783fbaeb245b959a518ca819c9d6fa6ca72de7"
     },
     {
       "path": "docs/SCALAR_BASE_ROADMAP.md",
@@ -6796,6 +6796,161 @@
       "path": "evidence/base-reproduction-20261028/verification.json",
       "bytes": 1076,
       "sha256": "7f9a0fb1775ce84b2c27065c0f0d2e37074bb66cc86424ec4ab5390011d07143"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/README.md",
+      "bytes": 1934,
+      "sha256": "50299911d77402efb1642ca7c278f66e6c020d07f5f7d2677247b9a68268d083"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/capacity-attempt1-latest.json",
+      "bytes": 76605,
+      "sha256": "a48851409d982f91f0a7b8e67e439524ac0c90e587bcd1027dbd3c180b7a03bf"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/capacity-core.json",
+      "bytes": 2988,
+      "sha256": "bcbc55b8cd68ed70e6ad3ebd7278e8e95e83fcdaae32d2e53022e92c828a25a1"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/capacity-deployment.json",
+      "bytes": 213,
+      "sha256": "cfd670efd0d8d0886e525e778ce2e4c820e65510e0251ce82a6584113ac1a9f8"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/capacity-latest.json",
+      "bytes": 78611,
+      "sha256": "df60b9c4ea930384937eddab47b6b9ca1435d70216e44899e1239a500ee8ca1b"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/capacity-r2-actor0-failure.json",
+      "bytes": 3350,
+      "sha256": "d56927eba54499879d86bf067c6b4dc5a59adf1f2cdc0eef773dc959ced5cba0"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/capacity-r2-listener-diagnosis.json",
+      "bytes": 35,
+      "sha256": "4ed1f4aeca52862499cb8216b6e3d964bb96e996748a3039a428ee5f89f1ee4e"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/capacity-r2-repair.json",
+      "bytes": 563,
+      "sha256": "076c37ebdf9578a5692c15ca5635cf60e78872be5a84917339c252c9a158de50"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/checkpoint-screen.csv",
+      "bytes": 2073,
+      "sha256": "6932ed31aca809af66547aa9d16703bb56e71ad1e83a8bccd67b60c0d41c736c"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/closure.json",
+      "bytes": 17141,
+      "sha256": "1c2037ea2e643f2290933525c8fc2b38d69436a8bd5793cf037d87368f0b3601"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/confirmation-placement-amendment.json",
+      "bytes": 462,
+      "sha256": "cd52396599c4327c0d192ce0a505dc651e8a5d4854459a0a8d9cb0d13da2499b"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/delivery.json",
+      "bytes": 565,
+      "sha256": "c1b9d9a03ec6c4ddb1bc860421f3e0b1a092568080e905b9227e40c0ade2d0bf"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/deployment.json",
+      "bytes": 4068,
+      "sha256": "3ada058a3f40f3285e744f1d328a8e34bdb3bfd700f9bbf7687780baab69fa53"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/frozen-host-resources.json",
+      "bytes": 721,
+      "sha256": "2ceef9c9ed54b22119d1b87640b4c56c94da41eb4329d85748021d4957939c09"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/historical-endpoint-runs.json",
+      "bytes": 70615,
+      "sha256": "7399e00dd012b3359b509785fd9dd1d74ee70a6d805f617c420ee59bff4c7a9e"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/loss-clock-audit.json",
+      "bytes": 24923,
+      "sha256": "d5e9bf3118a506ec0df7c26ab7720e947821d30ec582e47f02ff319bcd454afc"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/policies.json",
+      "bytes": 1737,
+      "sha256": "7af0868817c06442caff5371cd3fa76973ab8a4f49dd44a42bf9ec8355061a2f"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/positive-latest.json",
+      "bytes": 21308,
+      "sha256": "a37c5cf561c0c9dd470eabee2a1abcd444ea72737a8c93b14e0a3d32e9116a31"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/positive-plan.json",
+      "bytes": 5335,
+      "sha256": "31fdee8fea49b56ca255b72aaae6e5f333de6ab49c18fbd10a60a1e51c15d108"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/preflight.json",
+      "bytes": 7639,
+      "sha256": "0305521a324bac659441931817d90cf300447bf3d52f1666c56c108c1781371c"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/publication-provenance.json",
+      "bytes": 12600,
+      "sha256": "86431adaa9ead82077ae64e7bd1d0ca7926b177141da4f5cbaf76f5ac2e46600"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/registration-frozen.json",
+      "bytes": 14158,
+      "sha256": "7e3a4b531005815e68fc26677f297a0471ba4ea820732d49610edf3de4a17200"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/result.json",
+      "bytes": 20346,
+      "sha256": "41d8acc05f823d503be1d6b1977df44ed13a86512d11d43a81f0c3e71ed41508"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/runtime-source/capture_frozen.py",
+      "bytes": 1212,
+      "sha256": "fe1074f97ff6d7df23f06f0340a12de0f963ba25ab136f61f79c0978b2968abf"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/runtime-source/frozen_worker.py",
+      "bytes": 4873,
+      "sha256": "25f2f2267e6defca09b1bc1d194fc7f746f393ffa6385d4f6449c7ec1b5b286d"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/screen-assessment.json",
+      "bytes": 17107,
+      "sha256": "a2e435744caf9cf6554353b8c8df54a8ea30e66a3a04a1402e4f8c44560fdd0c"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/screen-latest.json",
+      "bytes": 63111,
+      "sha256": "c52e2304007c57019b059587a92b9e9199bca619ee51a39226289269c5c833ab"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/screen-plan.json",
+      "bytes": 15609,
+      "sha256": "109cbf49ee65491be44ddcdce1e94fcf3c4624d733662d1611f6953872918276"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/summary.md",
+      "bytes": 4043,
+      "sha256": "ff06d284e9416b341a7f4f7820cdd6ed11738b4927d780e0b65bf4136807d327"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/transfer-diagnosis.json",
+      "bytes": 1899,
+      "sha256": "48a5abea61cd0b0cc9b5e78cb55c048fa665490cf662ddccf0f5bc22541a2b3e"
+    },
+    {
+      "path": "evidence/baseline-screen-20261111/verify_results.py",
+      "bytes": 3004,
+      "sha256": "bf09630960efb788cdbc41228e12e1fa5a63a6240c28b8a678407dc0d1717cdb"
     },
     {
       "path": "evidence/baseline/audit/author-checkpoint-node-parity.json",

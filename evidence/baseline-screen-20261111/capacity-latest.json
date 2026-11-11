@@ -1,0 +1,2236 @@
+[
+  {
+    "node": 0,
+    "status": {
+      "host": "learner-vm",
+      "epoch": 1794385373.8601727,
+      "load": [
+        0.06,
+        0.06,
+        0.02
+      ],
+      "mem_available": 31662477312,
+      "cpu_times": {
+        "user": 47.89,
+        "nice": 0.0,
+        "system": 22.46,
+        "idle": 20893.1,
+        "iowait": 98.27,
+        "irq": 0.0,
+        "softirq": 1.19,
+        "steal": 0.0,
+        "guest": 0.0,
+        "guest_nice": 0.0
+      },
+      "network": {
+        "bytes_sent": 35034363,
+        "bytes_recv": 63014161,
+        "packets_sent": 88345,
+        "packets_recv": 97386,
+        "errin": 0,
+        "errout": 0,
+        "dropin": 0,
+        "dropout": 0
+      },
+      "entries": [
+        {
+          "pid": 26197,
+          "created": 1794385319.05,
+          "role": "learner",
+          "index": 0,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": true,
+          "flow_ready": false,
+          "result": null,
+          "producer": null,
+          "finished": false,
+          "training": [
+            {
+              "wall_s": "30.106533290000243",
+              "inserted": "14277",
+              "replay_length": "14277",
+              "critic_iterations": "0",
+              "critic_optimizer_ops": "0",
+              "actor_updates": "0",
+              "target_updates": "0",
+              "whole_U": "0.0",
+              "post_warmup_U": "0.0",
+              "fifo_backlog": "4",
+              "sample_age_mean": "0",
+              "critic_loss": "nan",
+              "critic2_loss": "nan",
+              "actor_loss": "nan",
+              "q_mean": "nan",
+              "actor_grad": "nan",
+              "critic_grad": "nan",
+              "minimum_condition_inserted": "0",
+              "active_conditions": "23",
+              "minimum_condition_sampled": "0",
+              "maximum_condition_sampled": "0"
+            }
+          ]
+        }
+      ]
+    },
+    "result": {
+      "run_id": "reconnect-admission-r2",
+      "status": "FAILED",
+      "reason": "actor0: SystemExit(1,)",
+      "stop_reason": null,
+      "wall_s": 38.45240235328674,
+      "started_epoch": 1794385319.8555074,
+      "all_ready_epoch": 1794385352.9258883,
+      "final": null,
+      "producer_records": {
+        "0": {
+          "generated": 876,
+          "enqueued": 876,
+          "exploration_calls": 877,
+          "errors": [],
+          "seed": 3,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      }
+    },
+    "probe": null
+  },
+  {
+    "node": 1,
+    "status": {
+      "host": "actor1-vm",
+      "epoch": 1794385373.8181524,
+      "load": [
+        0.77,
+        0.33,
+        0.16
+      ],
+      "mem_available": 31652655104,
+      "cpu_times": {
+        "user": 129.86,
+        "nice": 0.0,
+        "system": 60.22,
+        "idle": 20870.31,
+        "iowait": 7.59,
+        "irq": 0.0,
+        "softirq": 1.41,
+        "steal": 0.0,
+        "guest": 0.0,
+        "guest_nice": 0.0
+      },
+      "network": {
+        "bytes_sent": 16824109,
+        "bytes_recv": 13164712,
+        "packets_sent": 32435,
+        "packets_recv": 37593,
+        "errin": 0,
+        "errout": 0,
+        "dropin": 0,
+        "dropout": 0
+      },
+      "entries": [
+        {
+          "pid": 22972,
+          "created": 1794385321.87,
+          "role": "actor",
+          "index": 0,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "FAILED",
+            "reason": "SystemExit(1,)",
+            "cfg": {
+              "trace": "constant12",
+              "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+              "capacity_mbps": 11.995904,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G12-R20",
+              "nominal_mbps": 12,
+              "delay_ms": 10,
+              "base_rtt_ms": 20,
+              "queue_packets": 100,
+              "queue_bytes": 150400,
+              "queue_bdp": 5.015045135406219,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor0",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24000,
+              "seed": 3,
+              "actor_rng_seed": 3,
+              "actor_index": 0,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor0-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 876,
+                "generated": 876,
+                "end_kind": "truncated",
+                "reason": "time_limit",
+                "wall_s": 21.324081836000005
+              }
+            ],
+            "counters": {
+              "valid": 876
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 876,
+            "enqueued": 876,
+            "exploration_calls": 877,
+            "errors": [],
+            "seed": 3,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 664,
+            "enqueued": 664,
+            "exploration_calls": 665,
+            "epoch": 1794385339.2132287
+          }
+        },
+        {
+          "pid": 23429,
+          "created": 1794385324.62,
+          "role": "actor",
+          "index": 4,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "FAILED",
+            "reason": "SystemExit(1,)",
+            "cfg": {
+              "trace": "constant24",
+              "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+              "capacity_mbps": 23.991808,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G24-R200",
+              "nominal_mbps": 24,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 2000,
+              "queue_bytes": 3008000,
+              "queue_bdp": 5.015045135406219,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor4",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24004,
+              "seed": 3,
+              "actor_rng_seed": 4039,
+              "actor_index": 4,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor4-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 702,
+                "generated": 702,
+                "end_kind": "truncated",
+                "reason": "time_limit",
+                "wall_s": 21.21956093200015
+              }
+            ],
+            "counters": {
+              "valid": 702
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 702,
+            "enqueued": 702,
+            "exploration_calls": 703,
+            "errors": [],
+            "seed": 4039,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 674,
+            "enqueued": 674,
+            "exploration_calls": 675,
+            "epoch": 1794385346.4980414
+          }
+        },
+        {
+          "pid": 24352,
+          "created": 1794385331.66,
+          "role": "actor",
+          "index": 8,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant36",
+              "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+              "capacity_mbps": 35.999744,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G36-R100",
+              "nominal_mbps": 36,
+              "delay_ms": 50,
+              "base_rtt_ms": 100,
+              "queue_packets": 1500,
+              "queue_bytes": 2256000,
+              "queue_bdp": 5.0133689839572195,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor8",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24008,
+              "seed": 3,
+              "actor_rng_seed": 8075,
+              "actor_index": 8,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor8-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 743,
+                "generated": 743,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 20.631082016000164
+              }
+            ],
+            "counters": {
+              "valid": 743
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 743,
+            "enqueued": 743,
+            "exploration_calls": 744,
+            "errors": [],
+            "seed": 8075,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 647,
+            "enqueued": 647,
+            "exploration_calls": 648,
+            "epoch": 1794385351.4775593
+          },
+          "recent": {
+            "step": 742,
+            "min_saturation": 0.0,
+            "cwnd_mean": 741976491.045,
+            "action_mean": 0.39361226486042145,
+            "reward_mean": 0.0634571448660433
+          }
+        },
+        {
+          "pid": 24988,
+          "created": 1794385336.23,
+          "role": "actor",
+          "index": 12,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant42",
+              "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+              "capacity_mbps": 41.99168,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G42-R50",
+              "nominal_mbps": 42,
+              "delay_ms": 25,
+              "base_rtt_ms": 50,
+              "queue_packets": 875,
+              "queue_bytes": 1316000,
+              "queue_bdp": 5.01432664756447,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor12",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24012,
+              "seed": 3,
+              "actor_rng_seed": 12111,
+              "actor_index": 12,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor12-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 660,
+                "generated": 660,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 16.00966755699983
+              }
+            ],
+            "counters": {
+              "valid": 660
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 660,
+            "enqueued": 660,
+            "exploration_calls": 661,
+            "errors": [],
+            "seed": 12111,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 449,
+            "enqueued": 449,
+            "exploration_calls": 450,
+            "epoch": 1794385349.0292118
+          },
+          "recent": {
+            "step": 659,
+            "min_saturation": 0.005,
+            "cwnd_mean": 418668457.76,
+            "action_mean": 0.4624650582089089,
+            "reward_mean": -0.12773191647858723
+          }
+        },
+        {
+          "pid": 25461,
+          "created": 1794385339.14,
+          "role": "actor",
+          "index": 16,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant48",
+              "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+              "capacity_mbps": 47.995648,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G48-R20",
+              "nominal_mbps": 48,
+              "delay_ms": 10,
+              "base_rtt_ms": 20,
+              "queue_packets": 400,
+              "queue_bytes": 601600,
+              "queue_bdp": 5.013787916771121,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor16",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24016,
+              "seed": 3,
+              "actor_rng_seed": 16147,
+              "actor_index": 16,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor16-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 536,
+                "generated": 536,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 13.023787552000158
+              }
+            ],
+            "counters": {
+              "valid": 536
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 536,
+            "enqueued": 536,
+            "exploration_calls": 537,
+            "errors": [],
+            "seed": 16147,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 451,
+            "enqueued": 451,
+            "exploration_calls": 452,
+            "epoch": 1794385351.8018916
+          },
+          "recent": {
+            "step": 535,
+            "min_saturation": 0.03,
+            "cwnd_mean": 15098555.875,
+            "action_mean": 0.2883018418820575,
+            "reward_mean": -0.5765753665720261
+          }
+        },
+        {
+          "pid": 25924,
+          "created": 1794385342.13,
+          "role": "actor",
+          "index": 20,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant72",
+              "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+              "capacity_mbps": 71.999488,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G72-R200",
+              "nominal_mbps": 72,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 6000,
+              "queue_bytes": 9024000,
+              "queue_bdp": 5.0133689839572195,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor20",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24020,
+              "seed": 3,
+              "actor_rng_seed": 20183,
+              "actor_index": 20,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor20-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 204,
+                "generated": 204,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 10.039299004999975
+              }
+            ],
+            "counters": {
+              "valid": 204
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 204,
+            "enqueued": 204,
+            "exploration_calls": 205,
+            "errors": [],
+            "seed": 20183,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 1,
+            "enqueued": 1,
+            "exploration_calls": 2,
+            "epoch": 1794385349.2195435
+          },
+          "recent": {
+            "step": 203,
+            "min_saturation": 0.0,
+            "cwnd_mean": 2147483647.0,
+            "action_mean": 0.8503243470191956,
+            "reward_mean": 0.691624625053045
+          }
+        }
+      ]
+    },
+    "result": null,
+    "probe": null
+  },
+  {
+    "node": 2,
+    "status": {
+      "host": "actor2-vm",
+      "epoch": 1794385373.8137367,
+      "load": [
+        0.39,
+        0.2,
+        0.13
+      ],
+      "mem_available": 31641632768,
+      "cpu_times": {
+        "user": 138.69,
+        "nice": 0.0,
+        "system": 69.01,
+        "idle": 20869.63,
+        "iowait": 9.18,
+        "irq": 0.0,
+        "softirq": 1.37,
+        "steal": 0.0,
+        "guest": 0.0,
+        "guest_nice": 0.0
+      },
+      "network": {
+        "bytes_sent": 17481333,
+        "bytes_recv": 13167044,
+        "packets_sent": 33960,
+        "packets_recv": 38990,
+        "errin": 0,
+        "errout": 0,
+        "dropin": 0,
+        "dropout": 0
+      },
+      "entries": [
+        {
+          "pid": 22951,
+          "created": 1794385321.58,
+          "role": "actor",
+          "index": 1,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "FAILED",
+            "reason": "SystemExit(1,)",
+            "cfg": {
+              "trace": "constant12",
+              "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+              "capacity_mbps": 11.995904,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G12-R50",
+              "nominal_mbps": 12,
+              "delay_ms": 25,
+              "base_rtt_ms": 50,
+              "queue_packets": 250,
+              "queue_bytes": 376000,
+              "queue_bdp": 5.015045135406219,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor1",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24001,
+              "seed": 3,
+              "actor_rng_seed": 1012,
+              "actor_index": 1,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor1-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 860,
+                "generated": 860,
+                "end_kind": "truncated",
+                "reason": "time_limit",
+                "wall_s": 21.79796443999976
+              }
+            ],
+            "counters": {
+              "valid": 860
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 860,
+            "enqueued": 860,
+            "exploration_calls": 861,
+            "errors": [],
+            "seed": 1012,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 658,
+            "enqueued": 658,
+            "exploration_calls": 659,
+            "epoch": 1794385339.584217
+          }
+        },
+        {
+          "pid": 23408,
+          "created": 1794385324.31,
+          "role": "actor",
+          "index": 5,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "FAILED",
+            "reason": "SystemExit(1,)",
+            "cfg": {
+              "trace": "constant24",
+              "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+              "capacity_mbps": 23.991808,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G24-R20",
+              "nominal_mbps": 24,
+              "delay_ms": 10,
+              "base_rtt_ms": 20,
+              "queue_packets": 200,
+              "queue_bytes": 300800,
+              "queue_bdp": 5.015045135406219,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor5",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24005,
+              "seed": 3,
+              "actor_rng_seed": 5048,
+              "actor_index": 5,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor5-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 822,
+                "generated": 822,
+                "end_kind": "truncated",
+                "reason": "time_limit",
+                "wall_s": 21.36386619299992
+              }
+            ],
+            "counters": {
+              "valid": 822
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 822,
+            "enqueued": 822,
+            "exploration_calls": 823,
+            "errors": [],
+            "seed": 5048,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 623,
+            "enqueued": 623,
+            "exploration_calls": 624,
+            "epoch": 1794385342.047855
+          }
+        },
+        {
+          "pid": 23897,
+          "created": 1794385327.07,
+          "role": "actor",
+          "index": 9,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "FAILED",
+            "reason": "SystemExit(1,)",
+            "cfg": {
+              "trace": "constant36",
+              "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+              "capacity_mbps": 35.999744,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G36-R200",
+              "nominal_mbps": 36,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 3000,
+              "queue_bytes": 4512000,
+              "queue_bdp": 5.0133689839572195,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor9",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24009,
+              "seed": 3,
+              "actor_rng_seed": 9084,
+              "actor_index": 9,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor9-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 705,
+                "generated": 705,
+                "end_kind": "truncated",
+                "reason": "time_limit",
+                "wall_s": 21.387290824000047
+              }
+            ],
+            "counters": {
+              "valid": 706
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 706,
+            "enqueued": 706,
+            "exploration_calls": 708,
+            "errors": [],
+            "seed": 9084,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 706,
+            "enqueued": 706,
+            "exploration_calls": 708,
+            "epoch": 1794385355.649216
+          }
+        },
+        {
+          "pid": 24787,
+          "created": 1794385334.22,
+          "role": "actor",
+          "index": 13,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant42",
+              "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+              "capacity_mbps": 41.99168,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G42-R100",
+              "nominal_mbps": 42,
+              "delay_ms": 50,
+              "base_rtt_ms": 100,
+              "queue_packets": 1750,
+              "queue_bytes": 2632000,
+              "queue_bdp": 5.01432664756447,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor13",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24013,
+              "seed": 3,
+              "actor_rng_seed": 13120,
+              "actor_index": 13,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor13-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 613,
+                "generated": 613,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 17.76745180500029
+              }
+            ],
+            "counters": {
+              "valid": 613
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 613,
+            "enqueued": 613,
+            "exploration_calls": 614,
+            "errors": [],
+            "seed": 13120,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 427,
+            "enqueued": 427,
+            "exploration_calls": 428,
+            "epoch": 1794385349.2988431
+          },
+          "recent": {
+            "step": 612,
+            "min_saturation": 0.0,
+            "cwnd_mean": 955806415.9,
+            "action_mean": 0.4143682791431638,
+            "reward_mean": 0.19774212065369157
+          }
+        },
+        {
+          "pid": 25440,
+          "created": 1794385338.8,
+          "role": "actor",
+          "index": 17,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant48",
+              "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+              "capacity_mbps": 47.995648,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G48-R50",
+              "nominal_mbps": 48,
+              "delay_ms": 25,
+              "base_rtt_ms": 50,
+              "queue_packets": 1000,
+              "queue_bytes": 1504000,
+              "queue_bdp": 5.013787916771121,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor17",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24017,
+              "seed": 3,
+              "actor_rng_seed": 17156,
+              "actor_index": 17,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor17-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 536,
+                "generated": 536,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 13.141721644999961
+              }
+            ],
+            "counters": {
+              "valid": 536
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 536,
+            "enqueued": 536,
+            "exploration_calls": 537,
+            "errors": [],
+            "seed": 17156,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 453,
+            "enqueued": 453,
+            "exploration_calls": 454,
+            "epoch": 1794385351.8604858
+          },
+          "recent": {
+            "step": 535,
+            "min_saturation": 0.0,
+            "cwnd_mean": 321014648.66,
+            "action_mean": 0.44932738338131456,
+            "reward_mean": -0.10055969197786462
+          }
+        },
+        {
+          "pid": 25904,
+          "created": 1794385341.75,
+          "role": "actor",
+          "index": 21,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant72",
+              "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+              "capacity_mbps": 71.999488,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G72-R20",
+              "nominal_mbps": 72,
+              "delay_ms": 10,
+              "base_rtt_ms": 20,
+              "queue_packets": 600,
+              "queue_bytes": 902400,
+              "queue_bdp": 5.0133689839572195,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor21",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24021,
+              "seed": 3,
+              "actor_rng_seed": 21192,
+              "actor_index": 21,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor21-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 410,
+                "generated": 410,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 10.155472505000034
+              }
+            ],
+            "counters": {
+              "valid": 410
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 410,
+            "enqueued": 410,
+            "exploration_calls": 411,
+            "errors": [],
+            "seed": 21192,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 227,
+            "enqueued": 227,
+            "exploration_calls": 228,
+            "epoch": 1794385349.6392212
+          },
+          "recent": {
+            "step": 409,
+            "min_saturation": 0.0,
+            "cwnd_mean": 10535996.71,
+            "action_mean": 0.34060325952945275,
+            "reward_mean": -0.3555053956577547
+          }
+        }
+      ]
+    },
+    "result": null,
+    "probe": null
+  },
+  {
+    "node": 3,
+    "status": {
+      "host": "actor3-vm",
+      "epoch": 1794385373.953577,
+      "load": [
+        0.43,
+        0.25,
+        0.14
+      ],
+      "mem_available": 31651102720,
+      "cpu_times": {
+        "user": 132.31,
+        "nice": 0.0,
+        "system": 64.96,
+        "idle": 20889.66,
+        "iowait": 7.39,
+        "irq": 0.0,
+        "softirq": 1.28,
+        "steal": 0.0,
+        "guest": 0.0,
+        "guest_nice": 0.0
+      },
+      "network": {
+        "bytes_sent": 18290361,
+        "bytes_recv": 13213760,
+        "packets_sent": 34682,
+        "packets_recv": 39677,
+        "errin": 0,
+        "errout": 0,
+        "dropin": 0,
+        "dropout": 0
+      },
+      "entries": [
+        {
+          "pid": 22756,
+          "created": 1794385322.1,
+          "role": "actor",
+          "index": 2,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "FAILED",
+            "reason": "SystemExit(1,)",
+            "cfg": {
+              "trace": "constant12",
+              "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+              "capacity_mbps": 11.995904,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G12-R100",
+              "nominal_mbps": 12,
+              "delay_ms": 50,
+              "base_rtt_ms": 100,
+              "queue_packets": 500,
+              "queue_bytes": 752000,
+              "queue_bdp": 5.015045135406219,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor2",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24002,
+              "seed": 3,
+              "actor_rng_seed": 2021,
+              "actor_index": 2,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor2-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 770,
+                "generated": 770,
+                "end_kind": "truncated",
+                "reason": "time_limit",
+                "wall_s": 21.97395881600005
+              }
+            ],
+            "counters": {
+              "valid": 770
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 770,
+            "enqueued": 770,
+            "exploration_calls": 771,
+            "errors": [],
+            "seed": 2021,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 640,
+            "enqueued": 640,
+            "exploration_calls": 641,
+            "epoch": 1794385340.0003216
+          }
+        },
+        {
+          "pid": 23212,
+          "created": 1794385324.88,
+          "role": "actor",
+          "index": 6,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant24",
+              "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+              "capacity_mbps": 23.991808,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G24-R50",
+              "nominal_mbps": 24,
+              "delay_ms": 25,
+              "base_rtt_ms": 50,
+              "queue_packets": 500,
+              "queue_bytes": 752000,
+              "queue_bdp": 5.015045135406219,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor6",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24006,
+              "seed": 3,
+              "actor_rng_seed": 6057,
+              "actor_index": 6,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor6-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 838,
+                "generated": 838,
+                "end_kind": "truncated",
+                "reason": "time_limit",
+                "wall_s": 21.428175967000243
+              },
+              {
+                "connection": 1,
+                "active_run": "reconnect-admission-r2-actor6-episode0001",
+                "first_actor_sequence": 839,
+                "last_actor_sequence": 1049,
+                "generated": 211,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 6.0836998879999555
+              }
+            ],
+            "counters": {
+              "valid": 1049
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 1049,
+            "enqueued": 1049,
+            "exploration_calls": 1051,
+            "errors": [],
+            "seed": 6057,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 839,
+            "enqueued": 839,
+            "exploration_calls": 841,
+            "epoch": 1794385348.9579372
+          },
+          "recent": {
+            "step": 210,
+            "min_saturation": 0.0,
+            "cwnd_mean": 130107360.0,
+            "action_mean": 0.3290372381592169,
+            "reward_mean": -0.21257775868125361
+          }
+        },
+        {
+          "pid": 23699,
+          "created": 1794385327.73,
+          "role": "actor",
+          "index": 10,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant36",
+              "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+              "capacity_mbps": 35.999744,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G36-R20",
+              "nominal_mbps": 36,
+              "delay_ms": 10,
+              "base_rtt_ms": 20,
+              "queue_packets": 300,
+              "queue_bytes": 451200,
+              "queue_bdp": 5.0133689839572195,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor10",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24010,
+              "seed": 3,
+              "actor_rng_seed": 10093,
+              "actor_index": 10,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor10-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 867,
+                "generated": 867,
+                "end_kind": "truncated",
+                "reason": "time_limit",
+                "wall_s": 21.06995463300018
+              },
+              {
+                "connection": 1,
+                "active_run": "reconnect-admission-r2-actor10-episode0001",
+                "first_actor_sequence": 868,
+                "last_actor_sequence": 982,
+                "generated": 115,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 3.6713351769999463
+              }
+            ],
+            "counters": {
+              "valid": 982
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 982,
+            "enqueued": 982,
+            "exploration_calls": 984,
+            "errors": [],
+            "seed": 10093,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 868,
+            "enqueued": 868,
+            "exploration_calls": 870,
+            "epoch": 1794385351.1161983
+          },
+          "recent": {
+            "step": 114,
+            "min_saturation": 0.017543859649122806,
+            "cwnd_mean": 10023612.578947369,
+            "action_mean": 0.34177532740623545,
+            "reward_mean": -0.5872744541053803
+          }
+        },
+        {
+          "pid": 24169,
+          "created": 1794385330.65,
+          "role": "actor",
+          "index": 14,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant42",
+              "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+              "capacity_mbps": 41.99168,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G42-R200",
+              "nominal_mbps": 42,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 3500,
+              "queue_bytes": 5264000,
+              "queue_bdp": 5.01432664756447,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor14",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24014,
+              "seed": 3,
+              "actor_rng_seed": 14129,
+              "actor_index": 14,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor14-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 699,
+                "generated": 699,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 21.210612139000204
+              }
+            ],
+            "counters": {
+              "valid": 699
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 699,
+            "enqueued": 699,
+            "exploration_calls": 700,
+            "errors": [],
+            "seed": 14129,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 671,
+            "enqueued": 671,
+            "exploration_calls": 672,
+            "epoch": 1794385352.5242126
+          },
+          "recent": {
+            "step": 698,
+            "min_saturation": 0.0,
+            "cwnd_mean": 2147483647.0,
+            "action_mean": 0.8211808094382286,
+            "reward_mean": 0.40464977454966783
+          }
+        },
+        {
+          "pid": 25065,
+          "created": 1794385337.96,
+          "role": "actor",
+          "index": 18,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant48",
+              "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+              "capacity_mbps": 47.995648,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G48-R100",
+              "nominal_mbps": 48,
+              "delay_ms": 50,
+              "base_rtt_ms": 100,
+              "queue_packets": 2000,
+              "queue_bytes": 3008000,
+              "queue_bdp": 5.013787916771121,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor18",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24018,
+              "seed": 3,
+              "actor_rng_seed": 18165,
+              "actor_index": 18,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor18-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 559,
+                "generated": 559,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 14.406733906999762
+              }
+            ],
+            "counters": {
+              "valid": 559
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 559,
+            "enqueued": 559,
+            "exploration_calls": 560,
+            "errors": [],
+            "seed": 18165,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 447,
+            "enqueued": 447,
+            "exploration_calls": 448,
+            "epoch": 1794385351.1891456
+          },
+          "recent": {
+            "step": 558,
+            "min_saturation": 0.0,
+            "cwnd_mean": 2147483647.0,
+            "action_mean": 0.8051554751396179,
+            "reward_mean": 0.23173867956568714
+          }
+        },
+        {
+          "pid": 25621,
+          "created": 1794385341.79,
+          "role": "actor",
+          "index": 22,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant72",
+              "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+              "capacity_mbps": 71.999488,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G72-R50",
+              "nominal_mbps": 72,
+              "delay_ms": 25,
+              "base_rtt_ms": 50,
+              "queue_packets": 1500,
+              "queue_bytes": 2256000,
+              "queue_bdp": 5.0133689839572195,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor22",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24022,
+              "seed": 3,
+              "actor_rng_seed": 22201,
+              "actor_index": 22,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor22-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 411,
+                "generated": 411,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 10.487795265999921
+              }
+            ],
+            "counters": {
+              "valid": 411
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 411,
+            "enqueued": 411,
+            "exploration_calls": 412,
+            "errors": [],
+            "seed": 22201,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 225,
+            "enqueued": 225,
+            "exploration_calls": 226,
+            "epoch": 1794385349.5553467
+          },
+          "recent": {
+            "step": 410,
+            "min_saturation": 0.0,
+            "cwnd_mean": 598748715.18,
+            "action_mean": 0.40294048123061654,
+            "reward_mean": 0.133588317045741
+          }
+        }
+      ]
+    },
+    "result": null,
+    "probe": null
+  },
+  {
+    "node": 4,
+    "status": {
+      "host": "actor4-vm",
+      "epoch": 1794385373.8333037,
+      "load": [
+        0.81,
+        0.35,
+        0.17
+      ],
+      "mem_available": 31652737024,
+      "cpu_times": {
+        "user": 119.67,
+        "nice": 0.0,
+        "system": 63.26,
+        "idle": 20864.35,
+        "iowait": 20.14,
+        "irq": 0.0,
+        "softirq": 1.46,
+        "steal": 0.0,
+        "guest": 0.0,
+        "guest_nice": 0.0
+      },
+      "network": {
+        "bytes_sent": 16025386,
+        "bytes_recv": 12830219,
+        "packets_sent": 31449,
+        "packets_recv": 36447,
+        "errin": 0,
+        "errout": 0,
+        "dropin": 0,
+        "dropout": 0
+      },
+      "entries": [
+        {
+          "pid": 23118,
+          "created": 1794385322.36,
+          "role": "actor",
+          "index": 3,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant12",
+              "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+              "capacity_mbps": 11.995904,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G12-R200",
+              "nominal_mbps": 12,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 1000,
+              "queue_bytes": 1504000,
+              "queue_bdp": 5.015045135406219,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor3",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24003,
+              "seed": 3,
+              "actor_rng_seed": 3030,
+              "actor_index": 3,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor3-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 682,
+                "generated": 682,
+                "end_kind": "truncated",
+                "reason": "time_limit",
+                "wall_s": 22.29790977799985
+              },
+              {
+                "connection": 1,
+                "active_run": "reconnect-admission-r2-actor3-episode0001",
+                "first_actor_sequence": 683,
+                "last_actor_sequence": 783,
+                "generated": 101,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 8.253865265000059
+              }
+            ],
+            "counters": {
+              "valid": 783
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 783,
+            "enqueued": 783,
+            "exploration_calls": 785,
+            "errors": [],
+            "seed": 3030,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 683,
+            "enqueued": 683,
+            "exploration_calls": 685,
+            "epoch": 1794385351.4848614
+          },
+          "recent": {
+            "step": 100,
+            "min_saturation": 0.03,
+            "cwnd_mean": 1028826682.85,
+            "action_mean": 0.5380211728066207,
+            "reward_mean": -0.31691363638894987
+          }
+        },
+        {
+          "pid": 24127,
+          "created": 1794385330.13,
+          "role": "actor",
+          "index": 7,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant24",
+              "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+              "capacity_mbps": 23.991808,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G24-R100",
+              "nominal_mbps": 24,
+              "delay_ms": 50,
+              "base_rtt_ms": 100,
+              "queue_packets": 1000,
+              "queue_bytes": 1504000,
+              "queue_bdp": 5.015045135406219,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor7",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24007,
+              "seed": 3,
+              "actor_rng_seed": 7066,
+              "actor_index": 7,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor7-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 870,
+                "generated": 870,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 21.98778276699977
+              }
+            ],
+            "counters": {
+              "valid": 870
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 870,
+            "enqueued": 870,
+            "exploration_calls": 871,
+            "errors": [],
+            "seed": 7066,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 680,
+            "enqueued": 680,
+            "exploration_calls": 681,
+            "epoch": 1794385347.8167586
+          },
+          "recent": {
+            "step": 869,
+            "min_saturation": 0.02,
+            "cwnd_mean": 466040798.825,
+            "action_mean": 0.37896094981580974,
+            "reward_mean": -0.1721236660636851
+          }
+        },
+        {
+          "pid": 24669,
+          "created": 1794385333.74,
+          "role": "actor",
+          "index": 11,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant36",
+              "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+              "capacity_mbps": 35.999744,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G36-R50",
+              "nominal_mbps": 36,
+              "delay_ms": 25,
+              "base_rtt_ms": 50,
+              "queue_packets": 750,
+              "queue_bytes": 1128000,
+              "queue_bdp": 5.0133689839572195,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor11",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24011,
+              "seed": 3,
+              "actor_rng_seed": 11102,
+              "actor_index": 11,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor11-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 802,
+                "generated": 802,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 19.11208465000027
+              }
+            ],
+            "counters": {
+              "valid": 802
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 802,
+            "enqueued": 802,
+            "exploration_calls": 803,
+            "errors": [],
+            "seed": 11102,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 677,
+            "enqueued": 677,
+            "exploration_calls": 678,
+            "epoch": 1794385350.9285028
+          },
+          "recent": {
+            "step": 801,
+            "min_saturation": 0.015,
+            "cwnd_mean": 445635100.4,
+            "action_mean": 0.44125800296664236,
+            "reward_mean": -0.271946382268972
+          }
+        },
+        {
+          "pid": 25137,
+          "created": 1794385336.57,
+          "role": "actor",
+          "index": 15,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant42",
+              "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+              "capacity_mbps": 41.99168,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G42-R20",
+              "nominal_mbps": 42,
+              "delay_ms": 10,
+              "base_rtt_ms": 20,
+              "queue_packets": 350,
+              "queue_bytes": 526400,
+              "queue_bdp": 5.01432664756447,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor15",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24015,
+              "seed": 3,
+              "actor_rng_seed": 15138,
+              "actor_index": 15,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor15-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 666,
+                "generated": 666,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 16.264807461000146
+              }
+            ],
+            "counters": {
+              "valid": 666
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 666,
+            "enqueued": 666,
+            "exploration_calls": 667,
+            "errors": [],
+            "seed": 15138,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 660,
+            "enqueued": 660,
+            "exploration_calls": 661,
+            "epoch": 1794385353.562706
+          },
+          "recent": {
+            "step": 665,
+            "min_saturation": 0.04,
+            "cwnd_mean": 9797877.005,
+            "action_mean": 0.2811113633471541,
+            "reward_mean": -0.5257491634543231
+          }
+        },
+        {
+          "pid": 25611,
+          "created": 1794385339.39,
+          "role": "actor",
+          "index": 19,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant48",
+              "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+              "capacity_mbps": 47.995648,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G48-R200",
+              "nominal_mbps": 48,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 4000,
+              "queue_bytes": 6016000,
+              "queue_bdp": 5.013787916771121,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor19",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24019,
+              "seed": 3,
+              "actor_rng_seed": 19174,
+              "actor_index": 19,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor19-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 351,
+                "generated": 351,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 13.337477493000279
+              }
+            ],
+            "counters": {
+              "valid": 351
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 351,
+            "enqueued": 351,
+            "exploration_calls": 352,
+            "errors": [],
+            "seed": 19174,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 226,
+            "enqueued": 226,
+            "exploration_calls": 227,
+            "epoch": 1794385350.909892
+          },
+          "recent": {
+            "step": 350,
+            "min_saturation": 0.0,
+            "cwnd_mean": 2147483647.0,
+            "action_mean": 0.826611525118351,
+            "reward_mean": 0.4614238931066019
+          }
+        },
+        {
+          "pid": 26543,
+          "created": 1794385346.65,
+          "role": "actor",
+          "index": 23,
+          "alive": false,
+          "cpu": {},
+          "rss": 0,
+          "threads": 0,
+          "ready": false,
+          "flow_ready": true,
+          "result": {
+            "status": "COMPLETED",
+            "reason": "",
+            "cfg": {
+              "trace": "constant72",
+              "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+              "capacity_mbps": 71.999488,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G72-R100",
+              "nominal_mbps": 72,
+              "delay_ms": 50,
+              "base_rtt_ms": 100,
+              "queue_packets": 3000,
+              "queue_bytes": 4512000,
+              "queue_bdp": 5.0133689839572195,
+              "method": "canopy",
+              "run_id": "reconnect-admission-r2-actor23",
+              "seconds": 0,
+              "training_steps": 1000000,
+              "port": 24023,
+              "seed": 3,
+              "actor_rng_seed": 23210,
+              "actor_index": 23,
+              "code_commit": "portable-release",
+              "reward_mode": "raw",
+              "control_period_ms": 20,
+              "history_frames": 10,
+              "use_normalizer": false,
+              "stop_file": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/logs/reconnect-admission-r2-stop.json",
+              "server_binary": "/home/experiment/orca-baseline-screen-20261111-154219-reconnect/frameworks/baseline/code/runtime/orca-server-control-log-safe"
+            },
+            "episodes": [
+              {
+                "connection": 0,
+                "active_run": "reconnect-admission-r2-actor23-episode0000",
+                "first_actor_sequence": 1,
+                "last_actor_sequence": 56,
+                "generated": 56,
+                "end_kind": "truncated",
+                "reason": "coordinator_stop",
+                "wall_s": 6.050274533999982
+              }
+            ],
+            "counters": {
+              "valid": 56
+            },
+            "meaning": "Actor episode summary; each connection has a separate result and packet log."
+          },
+          "producer": {
+            "generated": 56,
+            "enqueued": 56,
+            "exploration_calls": 57,
+            "errors": [],
+            "seed": 23210,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          },
+          "finished": false,
+          "ingress_progress": {
+            "generated": 1,
+            "enqueued": 1,
+            "exploration_calls": 2,
+            "epoch": 1794385352.482586
+          },
+          "recent": {
+            "step": 55,
+            "min_saturation": 0.0,
+            "cwnd_mean": 2147483647.0,
+            "action_mean": 0.8206694407896562,
+            "reward_mean": 0.3482855829058127
+          }
+        }
+      ]
+    },
+    "result": null,
+    "probe": null
+  }
+]

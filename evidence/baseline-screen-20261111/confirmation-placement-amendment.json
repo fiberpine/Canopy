@@ -1,0 +1,14 @@
+{
+  "stage": "before_any_confirmation_data",
+  "confirmation_hosts": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "one_frozen_flow_per_host": true,
+  "reason": "Use the idle learner for local frozen inference within the same five-host budget; old pipeline had already supported learner-side evaluation.",
+  "condition_assignment": "Fixed i modulo 5 for all three new independent repetitions",
+  "scope": "72 existing authorized confirmation runs, no extra runs"
+}

@@ -1,0 +1,2954 @@
+[
+  {
+    "job": {
+      "host": 1,
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R50",
+        "nominal_mbps": 24,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "fresh",
+      "checkpoint": "/home/experiment/orca-healthy-base-20261110-1794277977/framework/checkpoints/frozen-policy/model",
+      "port": 39121,
+      "repeat": 0,
+      "run": "healthy-screen-01-fresh"
+    },
+    "status": "COMPLETED",
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.9515546988735166,
+        "departure_mbps": 22.829136,
+        "capacity_mbps": 23.991406933333334,
+        "queue_mean_ms": 6.4362066542528895,
+        "queue_p95_ms": 14.0,
+        "queue_p99_ms": 17.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 113872.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 171248600.0,
+        "complete_window": true,
+        "last_log_s": 60.943,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.9218593597599366,
+        "departure_mbps": 22.1148544,
+        "capacity_mbps": 23.9894016,
+        "queue_mean_ms": 7.600282793125952,
+        "queue_p95_ms": 15.0,
+        "queue_p99_ms": 82.13000000000102,
+        "dropped_packets": 0.0,
+        "arrival_packets": 18395.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 27654096.0,
+        "complete_window": true,
+        "last_log_s": 60.943,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.9574931710023689,
+        "departure_mbps": 22.971992320000002,
+        "capacity_mbps": 23.991808,
+        "queue_mean_ms": 6.211985669990782,
+        "queue_p95_ms": 14.0,
+        "queue_p99_ms": 17.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 95477.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 143594504.0,
+        "complete_window": true,
+        "last_log_s": 60.943,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 2995968,
+        "departure_bytes": 1852924
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2908736
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2872640
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2856096
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2863668
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2839552
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2856096
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2862112
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2865120
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2866624
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2863616
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2866624
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2865172
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2881664
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2866624
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2854592
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2877152
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2868128
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2868128
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2862112
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2880160
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2880160
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2857600
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2877152
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2877152
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2884672
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2865120
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2866624
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2862164
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2869632
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2878656
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2880160
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2862112
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2863616
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2866624
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2875648
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2862112
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2875648
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2845568
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2878656
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2862112
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2865120
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2868128
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2871136
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2878656
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2869632
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2877152
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2887680
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2892192
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2872640
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2880160
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2857600
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2854592
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2874144
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2875648
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2880160
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2880160
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2886176
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2869632
+      },
+      {
+        "service_bytes": 2998976,
+        "departure_bytes": 2889184
+      }
+    ],
+    "model_sha256": {
+      ".index": "0d54c7b2ac69aaddf1a931c11d9554a6dfde3d2d606f8dbc4934073a19953ab6",
+      ".data-00000-of-00001": "2879b8b58529f723c8aef2eeb50215a249fc48fe124c5e777619bad1b9d1b635"
+    },
+    "wall_s": 63.240184149000015
+  },
+  {
+    "job": {
+      "host": 2,
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R100",
+        "nominal_mbps": 36,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "fresh",
+      "checkpoint": "/home/experiment/orca-healthy-base-20261110-1794277977/framework/checkpoints/frozen-policy/model",
+      "port": 39122,
+      "repeat": 0,
+      "run": "healthy-screen-02-fresh"
+    },
+    "status": "COMPLETED",
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.9879480536365962,
+        "departure_mbps": 35.56528266666666,
+        "capacity_mbps": 35.9991424,
+        "queue_mean_ms": 10.989271196856341,
+        "queue_p95_ms": 18.0,
+        "queue_p99_ms": 20.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 177398.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 266777220.0,
+        "complete_window": true,
+        "last_log_s": 60.716,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.9276788120893337,
+        "departure_mbps": 33.3928512,
+        "capacity_mbps": 35.996134399999995,
+        "queue_mean_ms": 12.83114872164206,
+        "queue_p95_ms": 19.0,
+        "queue_p99_ms": 122.31000000000131,
+        "dropped_packets": 0.0,
+        "arrival_packets": 27820.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 41816264.0,
+        "complete_window": true,
+        "last_log_s": 60.716,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 1.0000006933382637,
+        "departure_mbps": 35.999768960000004,
+        "capacity_mbps": 35.999744,
+        "queue_mean_ms": 10.647373381549835,
+        "queue_p95_ms": 17.0,
+        "queue_p99_ms": 19.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 149578.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 224960956.0,
+        "complete_window": true,
+        "last_log_s": 60.716,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 4495456,
+        "departure_bytes": 1809532
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 3933240
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4498516
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4500020
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4500020
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 4499968,
+        "departure_bytes": 4500020
+      }
+    ],
+    "model_sha256": {
+      ".index": "0d54c7b2ac69aaddf1a931c11d9554a6dfde3d2d606f8dbc4934073a19953ab6",
+      ".data-00000-of-00001": "2879b8b58529f723c8aef2eeb50215a249fc48fe124c5e777619bad1b9d1b635"
+    },
+    "wall_s": 63.432886055999916
+  },
+  {
+    "job": {
+      "host": 4,
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "fresh",
+      "checkpoint": "/home/experiment/orca-healthy-base-20261110-1794277977/framework/checkpoints/frozen-policy/model",
+      "port": 39124,
+      "repeat": 0,
+      "run": "healthy-screen-04-fresh"
+    },
+    "status": "COMPLETED",
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.971619019180015,
+        "departure_mbps": 46.632705066666674,
+        "capacity_mbps": 47.994845866666665,
+        "queue_mean_ms": 41.33551855363586,
+        "queue_p95_ms": 280.0,
+        "queue_p99_ms": 343.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 233163.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 349868616.0,
+        "complete_window": true,
+        "last_log_s": 60.772,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.8300491507178437,
+        "departure_mbps": 39.834752,
+        "capacity_mbps": 47.99083520000001,
+        "queue_mean_ms": 153.1786107065363,
+        "queue_p95_ms": 344.0,
+        "queue_p99_ms": 345.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 33761.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 49970912.0,
+        "complete_window": true,
+        "last_log_s": 60.772,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.9999301536672658,
+        "departure_mbps": 47.99229568,
+        "capacity_mbps": 47.995648,
+        "queue_mean_ms": 22.468817376828888,
+        "queue_p95_ms": 38.0,
+        "queue_p99_ms": 44.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 199402.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 299897704.0,
+        "complete_window": true,
+        "last_log_s": 60.772,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 5993440,
+        "departure_bytes": 105276
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 3329920
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999400
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 6000432
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999044
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4543528
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5817472
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5998004
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5997952
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5998004
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5991936
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5993440
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5996448
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5999456
+      }
+    ],
+    "model_sha256": {
+      ".index": "0d54c7b2ac69aaddf1a931c11d9554a6dfde3d2d606f8dbc4934073a19953ab6",
+      ".data-00000-of-00001": "2879b8b58529f723c8aef2eeb50215a249fc48fe124c5e777619bad1b9d1b635"
+    },
+    "wall_s": 63.852590283000154
+  },
+  {
+    "job": {
+      "host": 2,
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "fresh",
+      "checkpoint": "/home/experiment/orca-healthy-base-20261110-1794277977/framework/checkpoints/frozen-policy/model",
+      "port": 39232,
+      "repeat": 0,
+      "run": "healthy-grid-16-fresh"
+    },
+    "status": "COMPLETED",
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.5743248150267046,
+        "departure_mbps": 41.350401600000005,
+        "capacity_mbps": 71.9982848,
+        "queue_mean_ms": 1.2572437237225587,
+        "queue_p95_ms": 2.0,
+        "queue_p99_ms": 3.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 206215.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 310131020.0,
+        "complete_window": true,
+        "last_log_s": 60.234,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.5867572269093428,
+        "departure_mbps": 42.241984,
+        "capacity_mbps": 71.99226879999999,
+        "queue_mean_ms": 1.276198883699738,
+        "queue_p95_ms": 2.0,
+        "queue_p99_ms": 4.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 35116.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 52802480.0,
+        "complete_window": true,
+        "last_log_s": 60.234,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.5718385819632495,
+        "departure_mbps": 41.17208512,
+        "capacity_mbps": 71.999488,
+        "queue_mean_ms": 1.2533533609589882,
+        "queue_p95_ms": 2.0,
+        "queue_p99_ms": 3.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 171099.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 257328540.0,
+        "complete_window": true,
+        "last_log_s": 60.234,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 8990912,
+        "departure_bytes": 4086364
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5152704
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5072992
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4921140
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4969216
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 6850720
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 6037056
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5185792
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5298592
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5227904
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4904544
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5136212
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5206848
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5227904
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5080512
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4943648
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5396352
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5071488
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5121120
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5251968
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5122624
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5226400
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5196320
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5915232
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5375296
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5814464
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5164736
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4940692
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4957184
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5540736
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5076000
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5322656
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5085024
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5152704
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5170752
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4949664
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5218880
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4838368
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4973728
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4957184
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4976736
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5276032
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5325664
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4912064
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5056448
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5154208
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5152704
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5310624
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5191808
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5223392
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4993280
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4888000
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5211360
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4815808
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5160224
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5116608
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 4916576
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5191808
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5106132
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 5006816
+      }
+    ],
+    "model_sha256": {
+      ".index": "0d54c7b2ac69aaddf1a931c11d9554a6dfde3d2d606f8dbc4934073a19953ab6",
+      ".data-00000-of-00001": "2879b8b58529f723c8aef2eeb50215a249fc48fe124c5e777619bad1b9d1b635"
+    },
+    "wall_s": 63.483318246000636
+  },
+  {
+    "job": {
+      "host": 3,
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "fresh",
+      "checkpoint": "/home/experiment/orca-healthy-base-20261110-1794277977/framework/checkpoints/frozen-policy/model",
+      "port": 39204,
+      "repeat": 0,
+      "run": "healthy-grid-02-fresh"
+    },
+    "status": "COMPLETED",
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.1170732062999979,
+        "departure_mbps": 1.4043754666666666,
+        "capacity_mbps": 11.995703466666667,
+        "queue_mean_ms": 462.6148592138277,
+        "queue_p95_ms": 979.0,
+        "queue_p99_ms": 984.0,
+        "dropped_packets": 1906.0,
+        "arrival_packets": 9080.0,
+        "drop_fraction": 0.20991189427312776,
+        "dropped_bytes": 2737840.0,
+        "arrival_bytes": 13270656.0,
+        "complete_window": true,
+        "last_log_s": 64.947,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.5350720211378678,
+        "departure_mbps": 6.4180288,
+        "capacity_mbps": 11.9947008,
+        "queue_mean_ms": 596.4481192077048,
+        "queue_p95_ms": 981.0,
+        "queue_p99_ms": 984.0,
+        "dropped_packets": 1906.0,
+        "arrival_packets": 7409.0,
+        "drop_fraction": 0.2572546902415981,
+        "dropped_bytes": 2737840.0,
+        "arrival_bytes": 10760376.0,
+        "complete_window": true,
+        "last_log_s": 64.947,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.03348182846411575,
+        "departure_mbps": 0.40164479999999997,
+        "capacity_mbps": 11.995904,
+        "queue_mean_ms": 21.870137642130462,
+        "queue_p95_ms": 147.0,
+        "queue_p99_ms": 196.29999999999995,
+        "dropped_packets": 0.0,
+        "arrival_packets": 1671.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 2510280.0,
+        "complete_window": true,
+        "last_log_s": 64.947,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 1497984,
+        "departure_bytes": 102268
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 1280776
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 1498720
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 1500712
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 1499428
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 1498464
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 401528
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 33088
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 177472
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 24064
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 46624
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30132
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 69184
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 24064
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 57152
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 52640
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 42112
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 42112
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 76704
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 526400
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 33088
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30132
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 261696
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 36096
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 54144
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 36096
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 37600
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 25568
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 34592
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 93248
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 37600
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      }
+    ],
+    "model_sha256": {
+      ".index": "0d54c7b2ac69aaddf1a931c11d9554a6dfde3d2d606f8dbc4934073a19953ab6",
+      ".data-00000-of-00001": "2879b8b58529f723c8aef2eeb50215a249fc48fe124c5e777619bad1b9d1b635"
+    },
+    "wall_s": 66.56992749700021
+  },
+  {
+    "job": {
+      "host": 3,
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R20",
+        "nominal_mbps": 48,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 400,
+        "queue_bytes": 601600,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "fresh",
+      "checkpoint": "/home/experiment/orca-healthy-base-20261110-1794277977/framework/checkpoints/frozen-policy/model",
+      "port": 39224,
+      "repeat": 0,
+      "run": "healthy-grid-12-fresh"
+    },
+    "status": "COMPLETED",
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.7714933634651614,
+        "departure_mbps": 37.02770506666667,
+        "capacity_mbps": 47.994845866666665,
+        "queue_mean_ms": 1.6581662216975257,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 5.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 184660.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 277712300.0,
+        "complete_window": true,
+        "last_log_s": 60.295,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.7775919348867677,
+        "departure_mbps": 37.3172864,
+        "capacity_mbps": 47.99083520000001,
+        "queue_mean_ms": 1.782226090320085,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 8.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 31026.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 46651120.0,
+        "complete_window": true,
+        "last_log_s": 60.295,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.770273771488615,
+        "departure_mbps": 36.969788799999996,
+        "capacity_mbps": 47.995648,
+        "queue_mean_ms": 1.6331150656755666,
+        "queue_p95_ms": 3.0,
+        "queue_p99_ms": 5.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 153634.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 231061180.0,
+        "complete_window": true,
+        "last_log_s": 60.295,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 5993440,
+        "departure_bytes": 4032220
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4626304
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 5292576
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4719604
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4650368
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4812800
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4605248
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4675936
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4567648
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4663904
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4733088
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4561684
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4706016
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4650368
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4596224
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4718048
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4648864
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4581184
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4582688
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4543584
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4651872
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4561632
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4653376
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4623296
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4566144
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4567648
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4623296
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4567700
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4630816
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4638336
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4579680
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4584192
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4678944
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4575168
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4561632
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4552608
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4596224
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4693984
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4566144
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4635328
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4584192
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4588704
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4600736
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4808288
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4584192
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4578176
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4561632
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4629312
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4731584
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4584192
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4692480
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4739104
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4644352
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4615776
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4627808
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4590208
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4600736
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4687968
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4540628
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4641344
+      }
+    ],
+    "model_sha256": {
+      ".index": "0d54c7b2ac69aaddf1a931c11d9554a6dfde3d2d606f8dbc4934073a19953ab6",
+      ".data-00000-of-00001": "2879b8b58529f723c8aef2eeb50215a249fc48fe124c5e777619bad1b9d1b635"
+    },
+    "wall_s": 63.39196060799986
+  },
+  {
+    "job": {
+      "host": 2,
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "fresh",
+      "checkpoint": "/home/experiment/orca-healthy-base-20261110-1794277977/framework/checkpoints/frozen-policy/model",
+      "port": 39404,
+      "repeat": 1,
+      "run": "healthy-recheck-02-fresh"
+    },
+    "status": "COMPLETED",
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.8856239271596278,
+        "departure_mbps": 63.763403733333334,
+        "capacity_mbps": 71.9982848,
+        "queue_mean_ms": 1.7570971667940336,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 5.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 317984.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 478233048.0,
+        "complete_window": true,
+        "last_log_s": 60.214,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.8836619967726312,
+        "departure_mbps": 63.616832,
+        "capacity_mbps": 71.99226879999999,
+        "queue_mean_ms": 1.8476012178287098,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 8.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 52893.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 79539088.0,
+        "complete_window": true,
+        "last_log_s": 60.214,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.8860162738935032,
+        "departure_mbps": 63.79271808,
+        "capacity_mbps": 71.999488,
+        "queue_mean_ms": 1.7390436744147448,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 5.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 265091.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 398693960.0,
+        "complete_window": true,
+        "last_log_s": 60.214,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 8990912,
+        "departure_bytes": 6885228
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8234480
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8207328
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8226880
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8132180
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7981728
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7974208
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7932096
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7942624
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8004288
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7945632
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7908032
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8059988
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8371264
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7905024
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7989248
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7947136
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7935104
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8004288
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7965184
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7969696
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7921568
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7938112
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7969696
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7947136
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8011808
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7918560
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7908032
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8062944
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7960672
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7960724
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7956160
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8002784
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7956160
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7996768
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7900512
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7932096
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7935104
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7906528
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7957664
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7990752
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7978720
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7963680
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7941120
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7951648
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7912544
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7968192
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7941120
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7975712
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8061440
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7941120
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7950144
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7980224
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8094528
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7963680
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7968192
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7948640
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 8076480
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7953152
+      },
+      {
+        "service_bytes": 8999936,
+        "departure_bytes": 7999776
+      }
+    ],
+    "model_sha256": {
+      ".index": "0d54c7b2ac69aaddf1a931c11d9554a6dfde3d2d606f8dbc4934073a19953ab6",
+      ".data-00000-of-00001": "2879b8b58529f723c8aef2eeb50215a249fc48fe124c5e777619bad1b9d1b635"
+    },
+    "wall_s": 63.67239868500019
+  },
+  {
+    "job": {
+      "host": 3,
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "fresh",
+      "checkpoint": "/home/experiment/orca-healthy-base-20261110-1794277977/framework/checkpoints/frozen-policy/model",
+      "port": 39400,
+      "repeat": 1,
+      "run": "healthy-recheck-00-fresh"
+    },
+    "status": "COMPLETED",
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.11816364116858907,
+        "departure_mbps": 1.417456,
+        "capacity_mbps": 11.995703466666667,
+        "queue_mean_ms": 451.93827671913834,
+        "queue_p95_ms": 977.0,
+        "queue_p99_ms": 981.0,
+        "dropped_packets": 1429.0,
+        "arrival_packets": 8671.0,
+        "drop_fraction": 0.16480221427747666,
+        "dropped_bytes": 2033696.0,
+        "arrival_bytes": 12664616.0,
+        "complete_window": true,
+        "last_log_s": 62.262,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.549339121489383,
+        "departure_mbps": 6.5891584000000005,
+        "capacity_mbps": 11.9947008,
+        "queue_mean_ms": 576.8574716713881,
+        "queue_p95_ms": 978.0,
+        "queue_p99_ms": 981.0,
+        "dropped_packets": 1429.0,
+        "arrival_packets": 7077.0,
+        "drop_fraction": 0.20192171824219302,
+        "dropped_bytes": 2033696.0,
+        "arrival_bytes": 10270144.0,
+        "complete_window": true,
+        "last_log_s": 62.262,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.031937194562410634,
+        "departure_mbps": 0.38311552000000004,
+        "capacity_mbps": 11.995904,
+        "queue_mean_ms": 9.313676286072774,
+        "queue_p95_ms": 52.0,
+        "queue_p99_ms": 77.06999999999994,
+        "dropped_packets": 0.0,
+        "arrival_packets": 1594.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 2394472.0,
+        "complete_window": true,
+        "last_log_s": 62.262,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 1497984,
+        "departure_bytes": 102268
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 1310936
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 1499168
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 1498880
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 1500404
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 1499096
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 366976
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 391040
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 37600
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 34592
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 37600
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 46676
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 34592
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 34592
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 45120
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 54144
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 43616
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 25568
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 33088
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 285760
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 70688
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 40608
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 45120
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30132
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 237632
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 251168
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 75200
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 28576
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 34592
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 27072
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 30080
+      },
+      {
+        "service_bytes": 1499488,
+        "departure_bytes": 31584
+      }
+    ],
+    "model_sha256": {
+      ".index": "0d54c7b2ac69aaddf1a931c11d9554a6dfde3d2d606f8dbc4934073a19953ab6",
+      ".data-00000-of-00001": "2879b8b58529f723c8aef2eeb50215a249fc48fe124c5e777619bad1b9d1b635"
+    },
+    "wall_s": 63.81039556399992
+  },
+  {
+    "job": {
+      "host": 3,
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R20",
+        "nominal_mbps": 48,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 400,
+        "queue_bytes": 601600,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "fresh",
+      "checkpoint": "/home/experiment/orca-healthy-base-20261110-1794277977/framework/checkpoints/frozen-policy/model",
+      "port": 39403,
+      "repeat": 1,
+      "run": "healthy-recheck-01-fresh"
+    },
+    "status": "COMPLETED",
+    "network": [
+      {
+        "window": "full",
+        "utilization": 0.7314323840284361,
+        "departure_mbps": 35.10498453333333,
+        "capacity_mbps": 47.994845866666665,
+        "queue_mean_ms": 1.330328786528663,
+        "queue_p95_ms": 2.0,
+        "queue_p99_ms": 4.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 175077.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 263300920.0,
+        "complete_window": true,
+        "last_log_s": 60.191,
+        "start_s": 0,
+        "end_s": 60
+      },
+      {
+        "window": "startup0_10",
+        "utilization": 0.7369260370780127,
+        "departure_mbps": 35.365696,
+        "capacity_mbps": 47.99083520000001,
+        "queue_mean_ms": 1.3587292949219414,
+        "queue_p95_ms": 3.0,
+        "queue_p99_ms": 5.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 29401.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 44207120.0,
+        "complete_window": true,
+        "last_log_s": 60.191,
+        "start_s": 0,
+        "end_s": 10
+      },
+      {
+        "window": "trim10",
+        "utilization": 0.7303337635945659,
+        "departure_mbps": 35.052842240000004,
+        "capacity_mbps": 47.995648,
+        "queue_mean_ms": 1.324596511220798,
+        "queue_p95_ms": 2.0,
+        "queue_p99_ms": 3.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 145676.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 219093800.0,
+        "complete_window": true,
+        "last_log_s": 60.191,
+        "start_s": 10,
+        "end_s": 60
+      }
+    ],
+    "second_bins": [
+      {
+        "service_bytes": 5993440,
+        "departure_bytes": 3790076
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4641344
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4438304
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4700052
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4334528
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4505984
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4370624
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4462368
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4463872
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4403712
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4427776
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4438304
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4324052
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4281888
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4330016
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4375136
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4331520
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4345056
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4295424
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4333024
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4387168
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4402208
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4472896
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4391680
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4411232
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4400704
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4445824
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4400704
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4346560
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4408224
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4351072
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4385716
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4370624
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4502976
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4366112
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4459360
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4357088
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4408224
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4415744
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4346560
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4369120
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4432288
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4333024
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4411232
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4409728
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4438304
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4330016
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4499968
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4399200
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4469888
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4314976
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4299936
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4346560
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4378144
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4426272
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4415744
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4194656
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4295424
+      },
+      {
+        "service_bytes": 5999456,
+        "departure_bytes": 4399200
+      }
+    ],
+    "model_sha256": {
+      ".index": "0d54c7b2ac69aaddf1a931c11d9554a6dfde3d2d606f8dbc4934073a19953ab6",
+      ".data-00000-of-00001": "2879b8b58529f723c8aef2eeb50215a249fc48fe124c5e777619bad1b9d1b635"
+    },
+    "wall_s": 63.261518000999786
+  }
+]

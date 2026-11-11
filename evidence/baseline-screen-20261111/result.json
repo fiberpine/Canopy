@@ -1,0 +1,622 @@
+{
+  "status": "SCREEN_COMPLETE_NO_CANDIDATE_ADMISSION_FAILED",
+  "frozen_runs": 24,
+  "frozen_execution_errors": 0,
+  "confirmation_runs_started": 0,
+  "screen": {
+    "status": "NO_CANDIDATE",
+    "selected_step": null,
+    "rankings": [
+      {
+        "step": 600009,
+        "execution_valid": true,
+        "eligible": false,
+        "mean_utilization": 0.937152460152589,
+        "mean_queue_ms": 62.030800593979876,
+        "cells": {
+          "G12-R200": {
+            "metrics": {
+              "utilization": 0.8926794212424508,
+              "queue_mean_ms": 9.284975956136803,
+              "queue_p95_ms": 23.0,
+              "queue_p99_ms": 29.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.9059177532597793,
+            "checks": {
+              "utilization": false,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.19166666666666668,
+            "missing_post_handoff_drop": false
+          },
+          "G24-R50": {
+            "metrics": {
+              "utilization": 1.0000006935700718,
+              "queue_mean_ms": 26.049938817676676,
+              "queue_p95_ms": 32.0,
+              "queue_p99_ms": 33.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 1.0,
+            "checks": {
+              "utilization": true,
+              "mean_queue": false,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.7111111111111111,
+            "missing_post_handoff_drop": false
+          },
+          "G48-R20": {
+            "metrics": {
+              "utilization": 1.0000003466981007,
+              "queue_mean_ms": 8.073050157431362,
+              "queue_p95_ms": 11.0,
+              "queue_p99_ms": 13.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 1.0,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.36666666666666664,
+            "missing_post_handoff_drop": false
+          },
+          "G36-R100": {
+            "metrics": {
+              "utilization": 0.8890713178404824,
+              "queue_mean_ms": 6.082070868450533,
+              "queue_p95_ms": 13.0,
+              "queue_p99_ms": 15.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.8891042780748664,
+            "checks": {
+              "utilization": false,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.18571428571428572,
+            "missing_post_handoff_drop": false
+          },
+          "G72-R20": {
+            "metrics": {
+              "utilization": 0.8411634482734099,
+              "queue_mean_ms": 2.5154581828440197,
+              "queue_p95_ms": 6.0,
+              "queue_p99_ms": 7.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.8394390804556833,
+            "checks": {
+              "utilization": false,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": false,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.2,
+            "missing_post_handoff_drop": false
+          },
+          "G48-R200": {
+            "metrics": {
+              "utilization": 0.9999995332910184,
+              "queue_mean_ms": 320.17930958133985,
+              "queue_p95_ms": 344.0,
+              "queue_p99_ms": 345.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 1.0000042003808345,
+            "checks": {
+              "utilization": true,
+              "mean_queue": false,
+              "p95": false,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 2.8666666666666667,
+            "missing_post_handoff_drop": false
+          }
+        },
+        "violations": 7,
+        "worst_utilization": 0.8411634482734099,
+        "worst_normalized_p95": 2.8666666666666667,
+        "historical_reuse": false
+      },
+      {
+        "step": 1200010,
+        "execution_valid": true,
+        "eligible": false,
+        "mean_utilization": 0.9983911269676877,
+        "mean_queue_ms": 128.59060160625523,
+        "cells": {
+          "G72-R20": {
+            "metrics": {
+              "utilization": 0.9980817819148936,
+              "queue_mean_ms": 10.097984783744325,
+              "queue_p95_ms": 18.0,
+              "queue_p99_ms": 23.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.9978275401069518,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.6,
+            "missing_post_handoff_drop": false
+          },
+          "G48-R200": {
+            "metrics": {
+              "utilization": 0.9999986398766821,
+              "queue_mean_ms": 320.0208673535745,
+              "queue_p95_ms": 344.0,
+              "queue_p99_ms": 345.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.999994532837644,
+            "checks": {
+              "utilization": true,
+              "mean_queue": false,
+              "p95": false,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 2.8666666666666667,
+            "missing_post_handoff_drop": false
+          },
+          "G12-R200": {
+            "metrics": {
+              "utilization": 0.992281205318082,
+              "queue_mean_ms": 399.8257731342093,
+              "queue_p95_ms": 976.0,
+              "queue_p99_ms": 994.0,
+              "drop_fraction": 0.09639807313334793
+            },
+            "tail_utilization": 1.0,
+            "checks": {
+              "utilization": true,
+              "mean_queue": false,
+              "p95": false,
+              "trim_drop": false,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": false
+            },
+            "normalized_p95": 8.133333333333333,
+            "missing_post_handoff_drop": false
+          },
+          "G24-R50": {
+            "metrics": {
+              "utilization": 0.999991010264837,
+              "queue_mean_ms": 6.96307997833544,
+              "queue_p95_ms": 10.0,
+              "queue_p99_ms": 11.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 1.0000017339251799,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.2222222222222222,
+            "missing_post_handoff_drop": false
+          },
+          "G48-R20": {
+            "metrics": {
+              "utilization": 1.0000003466981007,
+              "queue_mean_ms": 10.93185829171931,
+              "queue_p95_ms": 15.0,
+              "queue_p99_ms": 17.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 1.0,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.5,
+            "missing_post_handoff_drop": false
+          },
+          "G36-R100": {
+            "metrics": {
+              "utilization": 0.9999937777335306,
+              "queue_mean_ms": 23.704046095948556,
+              "queue_p95_ms": 26.0,
+              "queue_p99_ms": 27.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 1.0,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.37142857142857144,
+            "missing_post_handoff_drop": false
+          }
+        },
+        "violations": 6,
+        "worst_utilization": 0.992281205318082,
+        "worst_normalized_p95": 8.133333333333333,
+        "historical_reuse": false
+      },
+      {
+        "step": 1800000,
+        "execution_valid": true,
+        "eligible": false,
+        "mean_utilization": 0.8814975114509508,
+        "mean_queue_ms": 9.03737476336421,
+        "cells": {
+          "G12-R200": {
+            "metrics": {
+              "utilization": 0.7092498239399048,
+              "queue_mean_ms": 12.802058881755705,
+              "queue_p95_ms": 27.0,
+              "queue_p99_ms": 29.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.8403244307390256,
+            "checks": {
+              "utilization": false,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": false,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.225,
+            "missing_post_handoff_drop": false
+          },
+          "G24-R50": {
+            "metrics": {
+              "utilization": 0.9073430664333426,
+              "queue_mean_ms": 6.9711711711711715,
+              "queue_p95_ms": 14.0,
+              "queue_p99_ms": 16.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.906571443052562,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.3111111111111111,
+            "missing_post_handoff_drop": false
+          },
+          "G48-R20": {
+            "metrics": {
+              "utilization": 0.9016901665751028,
+              "queue_mean_ms": 4.327654369040006,
+              "queue_p95_ms": 10.0,
+              "queue_p99_ms": 11.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.9028587258578111,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.3333333333333333,
+            "missing_post_handoff_drop": false
+          },
+          "G36-R100": {
+            "metrics": {
+              "utilization": 0.9274937777335306,
+              "queue_mean_ms": 10.75594392994847,
+              "queue_p95_ms": 23.0,
+              "queue_p99_ms": 27.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.9269385026737967,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.32857142857142857,
+            "missing_post_handoff_drop": false
+          },
+          "G72-R20": {
+            "metrics": {
+              "utilization": 0.8953613092359768,
+              "queue_mean_ms": 4.53763974691577,
+              "queue_p95_ms": 10.0,
+              "queue_p99_ms": 12.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.8945861392792126,
+            "checks": {
+              "utilization": false,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.3333333333333333,
+            "missing_post_handoff_drop": false
+          },
+          "G48-R200": {
+            "metrics": {
+              "utilization": 0.9478469247878474,
+              "queue_mean_ms": 14.829780481354138,
+              "queue_p95_ms": 31.0,
+              "queue_p99_ms": 34.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.9505640511406368,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true,
+              "post_handoff_drop": true
+            },
+            "normalized_p95": 0.25833333333333336,
+            "missing_post_handoff_drop": false
+          }
+        },
+        "violations": 3,
+        "worst_utilization": 0.7092498239399048,
+        "worst_normalized_p95": 0.3333333333333333,
+        "historical_reuse": false
+      },
+      {
+        "step": 2410158,
+        "execution_valid": true,
+        "eligible": false,
+        "mean_utilization": 0.7448941208318547,
+        "mean_queue_ms": 9.649189616434361,
+        "cells": {
+          "G24-R50": {
+            "metrics": {
+              "utilization": 0.9574931710023689,
+              "queue_mean_ms": 6.211985669990782,
+              "queue_p95_ms": 14.0,
+              "queue_p99_ms": 17.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.9585757271815446,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true
+            },
+            "normalized_p95": 0.3111111111111111,
+            "missing_post_handoff_drop": true
+          },
+          "G36-R100": {
+            "metrics": {
+              "utilization": 1.0000006933382637,
+              "queue_mean_ms": 10.647373381549835,
+              "queue_p95_ms": 17.0,
+              "queue_p99_ms": 19.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 1.000001155563773,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true
+            },
+            "normalized_p95": 0.24285714285714285,
+            "missing_post_handoff_drop": true
+          },
+          "G48-R200": {
+            "metrics": {
+              "utilization": 0.9999301536672658,
+              "queue_mean_ms": 22.468817376828888,
+              "queue_p95_ms": 38.0,
+              "queue_p99_ms": 44.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.9999498621208323,
+            "checks": {
+              "utilization": true,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": true,
+              "no_catastrophe": true
+            },
+            "normalized_p95": 0.31666666666666665,
+            "missing_post_handoff_drop": true
+          },
+          "G72-R20": {
+            "metrics": {
+              "utilization": 0.7289274279283764,
+              "queue_mean_ms": 1.4961985176868664,
+              "queue_p95_ms": 3.0,
+              "queue_p99_ms": 4.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.7237970803347935,
+            "checks": {
+              "utilization": false,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": false,
+              "no_catastrophe": true
+            },
+            "normalized_p95": 0.1,
+            "missing_post_handoff_drop": true
+          },
+          "G12-R200": {
+            "metrics": {
+              "utilization": 0.03270951151326319,
+              "queue_mean_ms": 15.591906964101618,
+              "queue_p95_ms": 99.5,
+              "queue_p99_ms": 136.68499999999995,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.022617853560682046,
+            "checks": {
+              "utilization": false,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": false,
+              "no_catastrophe": false
+            },
+            "normalized_p95": 0.8291666666666667,
+            "missing_post_handoff_drop": true
+          },
+          "G48-R20": {
+            "metrics": {
+              "utilization": 0.7503037675415904,
+              "queue_mean_ms": 1.4788557884481823,
+              "queue_p95_ms": 2.5,
+              "queue_p99_ms": 4.0,
+              "drop_fraction": 0.0
+            },
+            "tail_utilization": 0.7494113132924052,
+            "checks": {
+              "utilization": false,
+              "mean_queue": true,
+              "p95": true,
+              "trim_drop": true,
+              "tail": false,
+              "no_catastrophe": true
+            },
+            "normalized_p95": 0.08333333333333333,
+            "missing_post_handoff_drop": true
+          }
+        },
+        "violations": 7,
+        "worst_utilization": 0.03270951151326319,
+        "worst_normalized_p95": 0.8291666666666667,
+        "historical_reuse": true
+      }
+    ]
+  },
+  "admission": {
+    "reconnect-admission": {
+      "max_logged_inserted": 15028,
+      "critic_iterations": 0,
+      "coverage_gate_open": false,
+      "result": {
+        "run_id": "reconnect-admission",
+        "status": "FAILED",
+        "reason": "actor0: ValueError('I/O operation on closed file.',)",
+        "stop_reason": null,
+        "wall_s": 47.60440135002136,
+        "started_epoch": 1794385027.5493782,
+        "all_ready_epoch": 1794385069.774027,
+        "final": null,
+        "producer_records": {
+          "0": {
+            "generated": 876,
+            "enqueued": 876,
+            "exploration_calls": 877,
+            "errors": [],
+            "seed": 3,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          }
+        }
+      }
+    },
+    "reconnect-admission-r2": {
+      "max_logged_inserted": 15666,
+      "critic_iterations": 0,
+      "coverage_gate_open": false,
+      "result": {
+        "run_id": "reconnect-admission-r2",
+        "status": "FAILED",
+        "reason": "actor0: SystemExit(1,)",
+        "stop_reason": null,
+        "wall_s": 38.45240235328674,
+        "started_epoch": 1794385319.8555074,
+        "all_ready_epoch": 1794385352.9258883,
+        "final": null,
+        "producer_records": {
+          "0": {
+            "generated": 876,
+            "enqueued": 876,
+            "exploration_calls": 877,
+            "errors": [],
+            "seed": 3,
+            "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+          }
+        }
+      }
+    }
+  },
+  "final_code_commit": "3ee6b695ab4b357252c26611e12afe51014004bf",
+  "latest_lifecycle_fixes_online_verified": false,
+  "protected_model_files_per_host": 51,
+  "hosts_clear": 5,
+  "start_epoch": 1794382939.0,
+  "closure_epoch": 1794385869.1705413,
+  "conservative_reserved_machine_hours_at_closure": 4.069681307342317,
+  "authorization_deadline": 1794386539.0
+}

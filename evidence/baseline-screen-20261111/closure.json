@@ -1,0 +1,600 @@
+[
+  {
+    "node": 0,
+    "remaining": [],
+    "ipc": [],
+    "protected": true,
+    "sysctl": {
+      "net/ipv4/tcp_rmem": "4096\t87380\t6291456",
+      "net/ipv4/tcp_wmem": "4096\t32768\t4194304",
+      "net/core/rmem_max": "212992",
+      "net/core/wmem_max": "212992"
+    },
+    "attempts": {
+      "reconnect-admission": {
+        "episodes": [],
+        "max_logged_inserted": 15028,
+        "max_logged_critic_iterations": 0,
+        "coverage_gate_open": false,
+        "result": {
+          "run_id": "reconnect-admission",
+          "status": "FAILED",
+          "reason": "actor0: ValueError('I/O operation on closed file.',)",
+          "stop_reason": null,
+          "wall_s": 47.60440135002136,
+          "started_epoch": 1794385027.5493782,
+          "all_ready_epoch": 1794385069.774027,
+          "final": null,
+          "producer_records": {
+            "0": {
+              "generated": 876,
+              "enqueued": 876,
+              "exploration_calls": 877,
+              "errors": [],
+              "seed": 3,
+              "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+            }
+          }
+        }
+      },
+      "reconnect-admission-r2": {
+        "episodes": [],
+        "max_logged_inserted": 15666,
+        "max_logged_critic_iterations": 0,
+        "coverage_gate_open": false,
+        "result": {
+          "run_id": "reconnect-admission-r2",
+          "status": "FAILED",
+          "reason": "actor0: SystemExit(1,)",
+          "stop_reason": null,
+          "wall_s": 38.45240235328674,
+          "started_epoch": 1794385319.8555074,
+          "all_ready_epoch": 1794385352.9258883,
+          "final": null,
+          "producer_records": {
+            "0": {
+              "generated": 876,
+              "enqueued": 876,
+              "exploration_calls": 877,
+              "errors": [],
+              "seed": 3,
+              "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+            }
+          }
+        }
+      }
+    },
+    "status": "PASS",
+    "epoch": 1794385864.9612675
+  },
+  {
+    "node": 1,
+    "remaining": [],
+    "ipc": [],
+    "protected": true,
+    "sysctl": {
+      "net/ipv4/tcp_rmem": "4096\t87380\t6291456",
+      "net/ipv4/tcp_wmem": "4096\t32768\t4194304",
+      "net/core/rmem_max": "212992",
+      "net/core/wmem_max": "212992"
+    },
+    "attempts": {
+      "reconnect-admission": {
+        "episodes": [
+          {
+            "run": "reconnect-admission-actor4-episode0000",
+            "status": "COMPLETED",
+            "valid": 700,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor4-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "server exited"
+          },
+          {
+            "run": "reconnect-admission-actor20-episode0000",
+            "status": "COMPLETED",
+            "valid": 202,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor12-episode0000",
+            "status": "COMPLETED",
+            "valid": 664,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor0-episode0000",
+            "status": "COMPLETED",
+            "valid": 876,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor8-episode0000",
+            "status": "COMPLETED",
+            "valid": 776,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor16-episode0000",
+            "status": "COMPLETED",
+            "valid": 534,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor0-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "server exited"
+          }
+        ],
+        "max_logged_inserted": null,
+        "max_logged_critic_iterations": null,
+        "coverage_gate_open": false,
+        "result": null
+      },
+      "reconnect-admission-r2": {
+        "episodes": [
+          {
+            "run": "reconnect-admission-r2-actor4-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "server exited"
+          },
+          {
+            "run": "reconnect-admission-r2-actor12-episode0000",
+            "status": "COMPLETED",
+            "valid": 660,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor0-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "server exited"
+          },
+          {
+            "run": "reconnect-admission-r2-actor20-episode0000",
+            "status": "COMPLETED",
+            "valid": 204,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor4-episode0000",
+            "status": "COMPLETED",
+            "valid": 702,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor16-episode0000",
+            "status": "COMPLETED",
+            "valid": 536,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor0-episode0000",
+            "status": "COMPLETED",
+            "valid": 876,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor8-episode0000",
+            "status": "COMPLETED",
+            "valid": 743,
+            "reason": ""
+          }
+        ],
+        "max_logged_inserted": null,
+        "max_logged_critic_iterations": null,
+        "coverage_gate_open": false,
+        "result": null
+      }
+    },
+    "status": "PASS",
+    "epoch": 1794385869.1705413
+  },
+  {
+    "node": 2,
+    "remaining": [],
+    "ipc": [],
+    "protected": true,
+    "sysctl": {
+      "net/ipv4/tcp_rmem": "4096\t87380\t6291456",
+      "net/ipv4/tcp_wmem": "4096\t32768\t4194304",
+      "net/core/rmem_max": "212992",
+      "net/core/wmem_max": "212992"
+    },
+    "attempts": {
+      "reconnect-admission": {
+        "episodes": [
+          {
+            "run": "reconnect-admission-actor9-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "I/O operation on closed file."
+          },
+          {
+            "run": "reconnect-admission-actor1-episode0000",
+            "status": "COMPLETED",
+            "valid": 870,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor17-episode0000",
+            "status": "COMPLETED",
+            "valid": 493,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor5-episode0000",
+            "status": "COMPLETED",
+            "valid": 839,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor13-episode0000",
+            "status": "COMPLETED",
+            "valid": 577,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor5-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "server exited"
+          },
+          {
+            "run": "reconnect-admission-actor1-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "server exited"
+          },
+          {
+            "run": "reconnect-admission-actor9-episode0000",
+            "status": "COMPLETED",
+            "valid": 702,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor21-episode0000",
+            "status": "COMPLETED",
+            "valid": 368,
+            "reason": ""
+          }
+        ],
+        "max_logged_inserted": null,
+        "max_logged_critic_iterations": null,
+        "coverage_gate_open": false,
+        "result": null
+      },
+      "reconnect-admission-r2": {
+        "episodes": [
+          {
+            "run": "reconnect-admission-r2-actor9-episode0000",
+            "status": "COMPLETED",
+            "valid": 705,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor5-episode0000",
+            "status": "COMPLETED",
+            "valid": 822,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor13-episode0000",
+            "status": "COMPLETED",
+            "valid": 613,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor1-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "server exited"
+          },
+          {
+            "run": "reconnect-admission-r2-actor5-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "server exited"
+          },
+          {
+            "run": "reconnect-admission-r2-actor21-episode0000",
+            "status": "COMPLETED",
+            "valid": 410,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor1-episode0000",
+            "status": "COMPLETED",
+            "valid": 860,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor17-episode0000",
+            "status": "COMPLETED",
+            "valid": 536,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor9-episode0001",
+            "status": "FAILED",
+            "valid": 1,
+            "reason": "insufficient control progress"
+          }
+        ],
+        "max_logged_inserted": null,
+        "max_logged_critic_iterations": null,
+        "coverage_gate_open": false,
+        "result": null
+      }
+    },
+    "status": "PASS",
+    "epoch": 1794385869.112015
+  },
+  {
+    "node": 3,
+    "remaining": [],
+    "ipc": [],
+    "protected": true,
+    "sysctl": {
+      "net/ipv4/tcp_rmem": "4096\t87380\t6291456",
+      "net/ipv4/tcp_wmem": "4096\t32768\t4194304",
+      "net/core/rmem_max": "212992",
+      "net/core/wmem_max": "212992"
+    },
+    "attempts": {
+      "reconnect-admission": {
+        "episodes": [
+          {
+            "run": "reconnect-admission-actor10-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "I/O operation on closed file."
+          },
+          {
+            "run": "reconnect-admission-actor18-episode0000",
+            "status": "COMPLETED",
+            "valid": 520,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor6-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "I/O operation on closed file."
+          },
+          {
+            "run": "reconnect-admission-actor14-episode0000",
+            "status": "COMPLETED",
+            "valid": 683,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor10-episode0000",
+            "status": "COMPLETED",
+            "valid": 862,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor22-episode0000",
+            "status": "COMPLETED",
+            "valid": 371,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor2-episode0000",
+            "status": "COMPLETED",
+            "valid": 780,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor6-episode0000",
+            "status": "COMPLETED",
+            "valid": 815,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor2-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "server exited"
+          }
+        ],
+        "max_logged_inserted": null,
+        "max_logged_critic_iterations": null,
+        "coverage_gate_open": false,
+        "result": null
+      },
+      "reconnect-admission-r2": {
+        "episodes": [
+          {
+            "run": "reconnect-admission-r2-actor10-episode0000",
+            "status": "COMPLETED",
+            "valid": 867,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor2-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "server exited"
+          },
+          {
+            "run": "reconnect-admission-r2-actor22-episode0000",
+            "status": "COMPLETED",
+            "valid": 411,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor2-episode0000",
+            "status": "COMPLETED",
+            "valid": 770,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor6-episode0000",
+            "status": "COMPLETED",
+            "valid": 838,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor18-episode0000",
+            "status": "COMPLETED",
+            "valid": 559,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor14-episode0000",
+            "status": "COMPLETED",
+            "valid": 699,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor10-episode0001",
+            "status": "COMPLETED",
+            "valid": 115,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor6-episode0001",
+            "status": "COMPLETED",
+            "valid": 211,
+            "reason": ""
+          }
+        ],
+        "max_logged_inserted": null,
+        "max_logged_critic_iterations": null,
+        "coverage_gate_open": false,
+        "result": null
+      }
+    },
+    "status": "PASS",
+    "epoch": 1794385867.9559517
+  },
+  {
+    "node": 4,
+    "remaining": [],
+    "ipc": [],
+    "protected": true,
+    "sysctl": {
+      "net/ipv4/tcp_rmem": "4096\t87380\t6291456",
+      "net/ipv4/tcp_wmem": "4096\t32768\t4194304",
+      "net/core/rmem_max": "212992",
+      "net/core/wmem_max": "212992"
+    },
+    "attempts": {
+      "reconnect-admission": {
+        "episodes": [
+          {
+            "run": "reconnect-admission-actor7-episode0000",
+            "status": "COMPLETED",
+            "valid": 867,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor3-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "I/O operation on closed file."
+          },
+          {
+            "run": "reconnect-admission-actor7-episode0001",
+            "status": "FAILED",
+            "valid": 0,
+            "reason": "server exited"
+          },
+          {
+            "run": "reconnect-admission-actor19-episode0000",
+            "status": "COMPLETED",
+            "valid": 351,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor11-episode0000",
+            "status": "COMPLETED",
+            "valid": 791,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor3-episode0000",
+            "status": "COMPLETED",
+            "valid": 661,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor23-episode0000",
+            "status": "COMPLETED",
+            "valid": 55,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-actor15-episode0000",
+            "status": "COMPLETED",
+            "valid": 671,
+            "reason": ""
+          }
+        ],
+        "max_logged_inserted": null,
+        "max_logged_critic_iterations": null,
+        "coverage_gate_open": false,
+        "result": null
+      },
+      "reconnect-admission-r2": {
+        "episodes": [
+          {
+            "run": "reconnect-admission-r2-actor23-episode0000",
+            "status": "COMPLETED",
+            "valid": 56,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor19-episode0000",
+            "status": "COMPLETED",
+            "valid": 351,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor7-episode0000",
+            "status": "COMPLETED",
+            "valid": 870,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor3-episode0001",
+            "status": "COMPLETED",
+            "valid": 101,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor11-episode0000",
+            "status": "COMPLETED",
+            "valid": 802,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor15-episode0000",
+            "status": "COMPLETED",
+            "valid": 666,
+            "reason": ""
+          },
+          {
+            "run": "reconnect-admission-r2-actor3-episode0000",
+            "status": "COMPLETED",
+            "valid": 682,
+            "reason": ""
+          }
+        ],
+        "max_logged_inserted": null,
+        "max_logged_critic_iterations": null,
+        "coverage_gate_open": false,
+        "result": null
+      }
+    },
+    "status": "PASS",
+    "epoch": 1794385867.8942301
+  }
+]
