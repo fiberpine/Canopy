@@ -42,7 +42,7 @@ def setup(cfg,role,index):
 class Replay(ReplayBuffer):
  def __init__(self,cfg):
   super().__init__(cfg['memsize'],70,1,512);self.lock=threading.RLock();self.inserted=0;self.birth=np.zeros(self.size,np.int64);self.cfg=cfg;self.ages=[];self.actor_ids=np.full(self.size,-1,np.int32);self.actor_inserted=np.zeros(cfg['num_actors'],np.int64);self.actor_slots=[[] for _ in range(cfg['num_actors'])];self.slot_position=np.full(self.size,-1,np.int32);self.sampled_by_actor=np.zeros(cfg['num_actors'],np.int64);self.sample_calls=0
-  self.actor_sequences=np.zeros(self.size,np.int64) if cfg.get('episode_seconds') else None
+  self.actor_sequences=np.zeros(self.size,np.int64) if cfg.get('episode_seconds') or cfg.get('capacity_replay_probe') else None
  def append_many(self,data):
   with self.lock:
    for values,actor_id in zip(zip(*data[:5]),data[5]):
@@ -89,7 +89,8 @@ def learner(cfg):
   initial=cfg['cold_init_checkpoint'];assert initial.startswith(str(R/'checkpoints')) and pathlib.Path(initial).name=='step-0','Only an own random step-0 checkpoint can be used for a paired cold initialization'
   save.restore(sess,initial);assert int(sess.run(a.global_step))==0,'Cold initialization must not contain prior optimization';a.init_target()
  counter={'critic_iterations':0,'critic_optimizer_ops':0,'actor_updates':0,'target_updates':0};stop=threading.Event();errors=[]
- def checkpoint(n):
+ def checkpoint(n,kind='live'):
+  started=time.time();fifo_before=int(sess.run(size))
   save.save(sess,str(cp/('step-%d'%n)),write_meta_graph=n==0)
   (cp/('step-%d.counters.json'%n)).write_text(json.dumps(dict(counter,inserted=a.rp_buffer.inserted,cfg=cfg),indent=2))
   (cp/('step-%d.variables.json'%n)).write_text(json.dumps(dict(global_step=int(sess.run(a.global_step)),variables=[v.name for v in tf.global_variables()],target_assign_ops_per_set=len(a.target_actor_update_op)+len(a.target_critic_update_op)+len(a.target_critic_update_op2),meaning='global_step counts optimizer operations, not environment samples; a target update is one set invocation including stock overlapping critic scopes'),indent=2))
@@ -97,7 +98,8 @@ def learner(cfg):
   h=hashlib.sha256()
   for v,value in zip(policy,sess.run(policy)):h.update(v.name.encode());h.update(value.tobytes())
   (cp/('step-%d.policy.sha256'%n)).write_text(h.hexdigest())
- checkpoint(0);(run/'ready').write_text(str(os.getpid()))
+  with (run/'checkpoint-events.jsonl').open('a') as events:events.write(json.dumps(dict(kind=kind,inserted=n,replay_full=a.rp_buffer.full,start_epoch=started,end_epoch=time.time(),wall_s=time.time()-started,fifo_before=fifo_before,fifo_after=int(sess.run(size)),stop_requested=pathlib.Path(cfg['stop_file']).exists()))+'\n')
+ checkpoint(0,'initial');(run/'ready').write_text(str(os.getpid()))
  def receive():
   try:
    while not stop.is_set():
@@ -154,7 +156,7 @@ def learner(cfg):
    if cfg.get('optimizer_sleep_ms',5)>0:time.sleep(cfg.get('optimizer_sleep_ms',5)/1000.)
   if errors:raise RuntimeError(errors[0])
   if cfg.get('capacity_replay_probe') and replay_probe is None:raise RuntimeError('Full replay persistence probe was not reached')
-  stop.set();t.join(10);checkpoint(a.rp_buffer.inserted)
+  stop.set();t.join(10);checkpoint(a.rp_buffer.inserted,'final')
   rp=a.rp_buffer
   np.savez(str(cp/'replay.npz'),**rp.snapshot())
   (cp/'sample-coverage.json').write_text(json.dumps(dict(inserted_by_actor=rp.actor_inserted.tolist(),sampled_by_actor=rp.sampled_by_actor.tolist(),retained_by_actor=[len(x) for x in rp.actor_slots],sample_calls=rp.sample_calls,definition='sampled_by_actor counts replay rows used in complete updates; this is not additional real environment experience'),indent=2))
@@ -183,7 +185,7 @@ def learner(cfg):
 def actor(cfg,index):
  import evaluate
  run_id=cfg['run_id']+'-actor%d'%index
- episodic=bool(cfg.get('episode_seconds'))
+ episodic=bool(cfg.get('episode_seconds'));track_origins=episodic or bool(cfg.get('capacity_replay_probe'))
  if episodic:(R/'logs'/run_id).mkdir(exist_ok=False)
  a,sess,fifo,ph,enq,nph,deq,size=setup(cfg,'actor',index)
  deadline=time.monotonic()+100
@@ -199,7 +201,7 @@ def actor(cfg,index):
  transition_context={}
  def context(value):
   transition_context.clear();transition_context.update(value)
- if episodic:evaluate.transition_context_hook=context
+ if track_origins:evaluate.transition_context_hook=context
  def writer():
   try:
    last_progress=0
@@ -231,12 +233,14 @@ def actor(cfg,index):
  evaluate.model=model_proxy
  # The copied evaluator's hook receives the completed transition after next action is sent.
  def transition(h,a0,reward,h1):
+  nonlocal episode_trace
   if errors:raise RuntimeError(errors[0])
-  if episodic:
+  if track_origins:
+   if episode_trace is None:episode_trace=(R/'logs'/run_id/'transition-origins.jsonl').open('x',buffering=65536)
    duration=transition_context['duration']
    if not np.isfinite(duration) or duration<=0:raise RuntimeError('invalid physical transition duration')
    origin=dict(actor=index,actor_sequence=counts['generated']+1,
-    connection=evaluate.training_connection,connection_step=transition_context['connection_step'],
+    connection=getattr(evaluate,'training_connection',0),connection_step=transition_context['connection_step'],generation_epoch=transition_context.get('generation_epoch',time.time()),
     elapsed_s=transition_context['elapsed_s'],duration=duration,state_id=transition_context['state_id'],
     phase='startup' if transition_context['elapsed_s']<10 else 'steady')
    episode_trace.write(json.dumps(origin)+'\n')
@@ -249,6 +253,7 @@ def actor(cfg,index):
  evaluate.distributed_session=True
  ecfg=dict(cfg['conditions'][index],method='canopy',run_id=run_id,seconds=0,training_steps=cfg['steps_per_actor'],port=cfg.get('actor_port_base',48200)+index,seed=cfg['seed'],actor_rng_seed=cfg['seed']+index*1009,actor_index=index,code_commit=cfg.get('code_commit'),reward_mode='raw',control_period_ms=20,history_frames=10,use_normalizer=False,stop_file=cfg.get('stop_file'))
  if cfg.get('server_binary'):ecfg['server_binary']=cfg['server_binary']
+ if cfg.get('capacity_replay_probe'):ecfg['verify_owned_cleanup']=True
  path=R/'configs'/(run_id+'.json');path.write_text(json.dumps(ecfg,indent=2));sys.argv=['evaluate.py','--config',str(path)]
  if cfg.get('serialized_start'):
   release=R/'logs'/(cfg['run_id']+'-launch-actor%d'%index)

@@ -20,6 +20,7 @@ def make_config(run,per_host,u,formal=False,steps=100000,portbase=48200):
   for host in range(4):conditions.append(base[(host+slot)%4]);assignment.append(host)
  return dict(run_id=run,model_id=run,seed=3,num_actors=4*per_host,steps_per_actor=steps,memsize=150000,sampler='contiguous',warmup=10240,update_ratio=u,reward_mode='raw',LOSS_TYPE=source['LOSS_TYPE'],control_period_ms=20,conditions=conditions,actor_hosts=assignment,learner_endpoint='172.21.0.15:48100',direct_actor_session=True,tf_threads=4,optimizer_sleep_ms=0,target_no_fetch=False,serialized_start=True,instrument_timing=True,profile_stages=True,checkpoint_interval=200000 if formal else 1000000000,exploration_std=.2,fixed_action=None if formal else 0.,capacity_only=not formal,stop_file=str(R/'logs'/(run+'-stop.json')),absolute_deadline_epoch=DEADLINE-180,timeout_s=5400 if formal else 600,shutdown_barrier_s=240,actor_port_base=portbase,code_commit=subprocess.check_output(['git','-C',str(R),'rev-parse','HEAD']).decode().strip(),model_source='random initialization seed3',configuration_notes='Same preserved raw-reward Canopy model architecture; explicit inherited critic loss. Capacity fixed executed neutral action while actual remote policy inference remains active')
 def execute(cfg,duration=None):
+ assert cfg.get('performance_guard_policy','stop') in ('stop','warn')
  run=cfg['run_id'];assert time.time()<DEADLINE-600
  node.dump(R/'configs'/(run+'.json'),cfg);start=time.time();samples=[];results={};failure=None;stop_reason=None;all_ready=None;debt_since=None;bad_since={}
  sample_stream=(R/'logs'/(run+'-cluster-samples.jsonl')).open('w',buffering=262144)
@@ -68,7 +69,7 @@ def execute(cfg,duration=None):
    if latest:
     debt=max(0,(int(latest['inserted'])-cfg['warmup'])*cfg['update_ratio']-int(latest['critic_iterations']))
     debt_since=(debt_since or now) if debt>1000 else None
-    if not cfg['capacity_only'] and debt_since and now-debt_since>120 and not stop_reason:stop_reason='SUSTAINED_UPDATE_DEBT';stop(stop_reason)
+    if not cfg['capacity_only'] and debt_since and now-debt_since>120 and not stop_reason and cfg.get('performance_guard_policy','stop')=='stop':stop_reason='SUSTAINED_UPDATE_DEBT';stop(stop_reason)
     if not cfg['capacity_only'] and int(latest['inserted'])>=cfg.get('collapse_guard_after_samples',500000):
      for host_index,s in enumerate(statuses):
       for entry in s['entries']:
@@ -76,12 +77,13 @@ def execute(cfg,duration=None):
        if bad:
         network=rpc(HOSTS[host_index],dict(op='recent_network',run=run,index=i));bad=network is not None and network['utilization'] is not None and network['utilization']<.25;entry['recent_network']=network
        bad_since[i]=(bad_since.get(i) or now) if bad else None
-       if bad_since[i] and now-bad_since[i]>=cfg.get('collapse_guard_seconds',300) and not stop_reason:stop_reason='PERSISTENT_LOW_WINDOW_LOW_UTIL_ACTOR%d'%i;stop(stop_reason)
+       entry['persistent_low_window_warning']=bool(bad_since[i] and now-bad_since[i]>=cfg.get('collapse_guard_seconds',300))
+       if entry['persistent_low_window_warning'] and not stop_reason and cfg.get('performance_guard_policy','stop')=='stop':stop_reason='PERSISTENT_LOW_WINDOW_LOW_UTIL_ACTOR%d'%i;stop(stop_reason)
    else:debt=None
    if not stop_reason and cfg.get('sample_budget') and latest and int(latest['inserted'])>=cfg['sample_budget']:stop_reason='SAMPLE_BUDGET_COMPLETE';stop(stop_reason)
    if not stop_reason and ((duration and now-all_ready>=duration) or now>=DEADLINE-cfg.get('evaluation_reserve_s',900) or now-start>cfg['timeout_s']-90):
     stop_reason='CAPACITY_WINDOW_COMPLETE' if duration and now-all_ready>=duration else 'RESERVE_EVALUATION_OR_TIMEOUT';stop(stop_reason)
-   samples.append(dict(epoch=now,learner=local,actors=statuses,debt=debt))
+   samples.append(dict(epoch=now,learner=local,actors=statuses,debt=debt,update_debt_warning=bool(debt_since and now-debt_since>120)))
    sample_stream.write(json.dumps(samples[-1])+'\n');sample_stream.flush()
    progress('RUNNING',run_id=run,actors=cfg['num_actors'],all_ready_epoch=all_ready,latest=latest,debt=debt,producer_complete=len(results),stop_reason=stop_reason)
    if (R/'logs'/run/'finished').exists():

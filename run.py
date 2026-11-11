@@ -32,12 +32,14 @@ def doctor():
 def main():
  ap=argparse.ArgumentParser(description=__doc__);sp=ap.add_subparsers(dest='cmd');sp.add_parser('doctor')
  for cmd in ['evaluate','train','smoke-training','verify-training']:
-  p=sp.add_parser(cmd);p.add_argument('--variant',required=True);p.add_argument('--run-id');p.add_argument('--scenario',type=int,default=0);p.add_argument('--seconds',type=float,default=90 if cmd=='smoke-training' else 60);p.add_argument('--actors',type=int,default=1);p.add_argument('--samples',type=int,default=2400000);p.add_argument('--seconds-per-actor',type=float);p.add_argument('--cluster');p.add_argument('--port',type=int,default=23000);p.add_argument('--learner-port',type=int,default=25000);p.add_argument('--episode-seconds',type=float);p.add_argument('--replay-probe',action='store_true');p.add_argument('--seed',type=int,default=3);p.add_argument('--deadline-epoch',type=float)
+  p=sp.add_parser(cmd);p.add_argument('--variant',required=True);p.add_argument('--run-id');p.add_argument('--scenario',type=int,default=0);p.add_argument('--seconds',type=float,default=90 if cmd=='smoke-training' else 60);p.add_argument('--actors',type=int,default=1);p.add_argument('--samples',type=int,default=2400000);p.add_argument('--seconds-per-actor',type=float);p.add_argument('--cluster');p.add_argument('--port',type=int,default=23000);p.add_argument('--learner-port',type=int,default=25000);p.add_argument('--episode-seconds',type=float);p.add_argument('--replay-probe',action='store_true');p.add_argument('--seed',type=int,default=3);p.add_argument('--deadline-epoch',type=float);p.add_argument('--checkpoint-interval',type=int);p.add_argument('--performance-guard-policy',choices=['stop','warn']);p.add_argument('--target-bn-consistent',action='store_true')
  a=ap.parse_args()
  if a.cmd=='doctor':return doctor()
  if not a.cmd:ap.print_help();return 2
  if a.episode_seconds is not None and (a.cmd not in ['train','smoke-training'] or a.variant!='baseline' or not 0<a.episode_seconds<float('inf')):raise ValueError('episode-seconds requires baseline training and a finite positive duration')
- if a.replay_probe and (a.episode_seconds is None or a.cmd!='train'):raise ValueError('replay-probe requires episodic baseline train with the production replay capacity')
+ if a.replay_probe and (a.variant!='baseline' or a.cmd!='train'):raise ValueError('replay-probe requires baseline train with the production replay capacity')
+ if any((a.checkpoint_interval is not None,a.performance_guard_policy is not None,a.target_bn_consistent)) and (a.variant!='baseline' or a.cmd not in ['train','smoke-training']):raise ValueError('Baseline recovery controls require baseline training')
+ if a.checkpoint_interval is not None and a.checkpoint_interval<=0:raise ValueError('checkpoint-interval must be positive')
  if a.deadline_epoch is not None and (a.cmd not in ['train','smoke-training'] or not time.time()+600<a.deadline_epoch<float('inf')):raise ValueError('deadline-epoch requires training with at least ten minutes remaining')
  if a.cmd in ['evaluate','verify-training']:
   f,c=template(a.variant,'eval');r=a.run_id or runid(a.cmd+'-'+a.variant);allocate(f,r);cs=c.pop('conditions');condition=cs[a.scenario];c.update(condition);c.update(run_id=r,group=a.variant,seconds=a.seconds,port=a.port,seed=a.seed,absolute_deadline_epoch=time.time()+max(600,a.seconds+120),timeout_s=a.seconds+120,no_training=True,code_commit='portable-release',evaluation_code_commit='portable-release')
@@ -56,6 +58,13 @@ def main():
  c.update(run_id=r,model_id=r,seed=a.seed,num_actors=n,actor_hosts=[i%len(hosts) for i in range(n)],learner_endpoint=A['nodes'][0]['ip']+':'+str(a.learner_port),actor_port_base=a.port,absolute_deadline_epoch=A['deadline_epoch']-60,stop_file=str(f/'logs'/(r+'-stop.json')),timeout_s=cap-120,shutdown_barrier_s=120,evaluation_reserve_s=90,code_commit='portable-release',capacity_only=False,steps_per_actor=1000000)
  if a.episode_seconds is not None:c['episode_seconds']=a.episode_seconds
  if a.replay_probe:c['capacity_replay_probe']=True
+ if a.checkpoint_interval is not None:c['checkpoint_interval']=a.checkpoint_interval
+ if a.performance_guard_policy is not None:c['performance_guard_policy']=a.performance_guard_policy
+ if a.target_bn_consistent:c['target_bn_consistent']=True
+ if a.variant=='baseline' and (a.replay_probe or a.episode_seconds is not None or a.target_bn_consistent):
+  sys.path.insert(0,str(f));from baseline_admission import validate_ports
+  ephemeral=list(map(int,pathlib.Path('/proc/sys/net/ipv4/ip_local_port_range').read_text().split()))
+  c['port_plan']=validate_ports(a.port,n,a.learner_port,ephemeral,max(0,A['deadline_epoch']-time.time()),a.episode_seconds)
  if c.get('joint_control'):c.update(physical_seconds_per_actor=seconds,sample_budget=None)
  else:c.update(sample_budget=2048*n if smoke else a.samples)
  if smoke:
@@ -70,7 +79,14 @@ def main():
  counters=q['final']['counters'];assert counters['critic_iterations']>0 and counters['actor_updates']>0,'No real optimizer update; smoke is not PASS'
  if a.replay_probe:
   probe=read(f/'logs'/r/'replay-probe.json');actors=read(f/'metrics'/(r+'-actors.json'))
-  assert probe['rows']==c['memsize'] and all(row['connections_completed']>=4 for row in actors),'Capacity admission requires a full replay save and at least three reconnections per actor'
+  assert probe['rows']==c['memsize'],'Capacity admission requires a full replay save'
+  if a.episode_seconds is not None:assert all(row['connections_completed']>=4 for row in actors),'Episodic admission requires at least three reconnections per actor'
+  events=[json.loads(line) for line in (f/'logs'/r/'checkpoint-events.jsonl').read_text().splitlines()]
+  assert any(e['kind']=='live' and e['replay_full'] and not e['stop_requested'] and e['inserted']<q['final']['inserted'] for e in events),'Admission missed a live model save after full replay and before stopping'
+  expected=int(max(0,q['final']['inserted']-c['warmup'])*c['update_ratio'])
+  assert all(counters[key]==expected for key in ('critic_iterations','actor_updates','target_updates')) and counters['critic_optimizer_ops']==2*expected,'Admission update credits were not fully drained'
+  coverage=read(f/'checkpoints'/r/'sample-coverage.json')['inserted_by_actor']
+  assert all(row['producer']['generated']==row['producer']['enqueued']==coverage[row['index']] and not row['producer']['errors'] for row in actors),'Per-actor generated/enqueued/inserted mismatch'
  print(json.dumps(dict(status='PASS_REAL_TCP_TRAINING' if smoke else 'COMPLETED_TRAINING',run_id=r,counters=counters,result=str(f/'metrics'/(r+'-cluster-result.json')))))
  return 0
 if __name__=='__main__':sys.exit(main())

@@ -160,7 +160,7 @@ def main():
                     duplicate_action=act(h1);send(duplicate_action)
                 sw.writerow([time.time()*1e6,time.monotonic()-control_start,valid,reader.last_id,action,no_noise,pct,reward,raw[1]/env.max_bw,5*raw[7]/env.max_bw,s1[-1],env.max_bw,raw[5],raw[3],raw[8],raw[14],json.dumps(s1.tolist())])
                 if globals().get('transition_context_hook'):
-                    transition_context_hook(dict(duration=float(raw[3]),elapsed_s=time.monotonic()-control_start,state_id=reader.last_id,connection_step=valid))
+                    transition_context_hook(dict(duration=float(raw[3]),elapsed_s=time.monotonic()-control_start,state_id=reader.last_id,connection_step=valid,generation_epoch=time.time()))
                 if globals().get('transition_hook'):transition_hook(hist,action,reward,h1)
                 hist=h1;action=next_action;no_noise=next_nn;pct=nextpct
                 if cfg.get('training_steps') and valid>=cfg['training_steps']:break
@@ -179,6 +179,15 @@ def main():
             if shm:
                 try:shm.remove()
                 except sysv_ipc.ExistentialError:pass
+                if cfg.get('verify_owned_cleanup'):
+                    try:shm.detach()
+                    except sysv_ipc.Error:pass
+        if cfg.get('verify_owned_cleanup'):
+            from baseline_admission import cleanup_report
+            ownership=json.loads((run/'ownership.json').read_text()) if (run/'ownership.json').exists() else {}
+            report=cleanup_report(owned,cfg['port'],ownership.get('shm_keys',[]),sysv_ipc)
+            (run/'cleanup-audit.json').write_text(json.dumps(report,indent=2))
+            if report['status']!='PASS':status='FAILED';reason='Owned resource cleanup verification failed'
         states.close()
         result={'cfg':cfg,'status':status,'reason':reason,'counters':{'valid':valid,'critic_iterations':0,'critic_optimizer_ops':0,'actor_updates':0,'target_updates':0,'exploration_calls':0},
             'inserted':0,'wall_s':time.monotonic()-start,'policy_sha256_before':before,'policy_sha256_after':after,'policy_variables':vars_used,

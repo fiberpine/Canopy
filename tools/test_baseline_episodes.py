@@ -47,7 +47,7 @@ class Noise:
 
 
 class ScalarActorEpisodes(unittest.TestCase):
-    def run_actor(self, episode_seconds=20, stop_after_first=False, short=False, exit_code=0):
+    def run_actor(self, episode_seconds=20, stop_after_first=False, short=False, exit_code=0, replay_probe=False):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
         root = pathlib.Path(temporary.name)
@@ -60,6 +60,8 @@ class ScalarActorEpisodes(unittest.TestCase):
                    absolute_deadline_epoch=time.time() + 300)
         if episode_seconds is not None:
             cfg["episode_seconds"] = episode_seconds
+        if replay_probe:
+            cfg['capacity_replay_probe'] = True
         sent = []
         noise = Noise()
         agent = types.SimpleNamespace(
@@ -176,6 +178,14 @@ class ScalarActorEpisodes(unittest.TestCase):
         self.assertEqual(len(sent), 20)
         self.assertEqual(noise.calls, 21)
         self.assertFalse((root / "logs/run-actor0/episodes.json").exists())
+
+    def test_single_connection_probe_records_true_origins_without_reset(self):
+        root, sent, noise, invocations = self.run_actor(episode_seconds=None, replay_probe=True)
+        self.assertEqual(len(invocations), 1)
+        rows = [json.loads(line) for line in (root/'logs/run-actor0/transition-origins.jsonl').read_text().splitlines()]
+        self.assertEqual(len(rows), len(sent))
+        self.assertEqual([row['actor_sequence'] for row in rows], list(range(1,21)))
+        self.assertTrue(all(row['connection']==0 and row['generation_epoch']>0 for row in rows))
 
     def test_stop_between_episodes_does_not_create_a_phantom_connection(self):
         root, sent, noise, invocations = self.run_actor(stop_after_first=True)
