@@ -38,6 +38,8 @@ else:
     original_main=evaluate.main
     def main():
         try:return original_main()
-        finally:f.flush();f.close()
+        finally:
+            f.flush()
+            if not cfg.get('episode_seconds'):f.close()
     evaluate.main=main
     d.actor(cfg,args.index)

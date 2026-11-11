@@ -33,7 +33,11 @@ def cleanup(server,owned):
         for pid,created in list(owned.items())[::-1]:
             try:
                 p=psutil.Process(pid)
-                if abs(p.create_time()-created)<.01:p.send_signal(sig)
+                if abs(p.create_time()-created)>=.01:continue
+            except psutil.Error:continue
+            try:p.send_signal(sig)
+            except psutil.AccessDenied:
+                subprocess.run(['sudo','-n','kill','-'+str(int(sig)),'--',str(pid)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
             except psutil.Error:pass
         try:server.wait(timeout=3)
         except subprocess.TimeoutExpired:pass

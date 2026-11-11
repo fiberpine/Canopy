@@ -2,10 +2,12 @@
 
 import ast
 import hashlib
+import io
 import json
 import pathlib
 import queue
 import random
+import subprocess
 import sys
 import tempfile
 import threading
@@ -29,7 +31,7 @@ class ActorExit(BaseException):
 
 def source_definition(path, name, namespace):
     tree = ast.parse(path.read_text(encoding="utf-8"))
-    node, = [node for node in tree.body if getattr(node, "name", None) == name]
+    node, = [node for node in ast.walk(tree) if getattr(node, "name", None) == name]
     tree.body = [node]
     exec(compile(tree, str(path), "exec"), namespace)
     return namespace[name]
@@ -105,6 +107,8 @@ class ScalarActorEpisodes(unittest.TestCase):
                 evaluator.producer_finish()
 
         evaluator.main = evaluate
+        evaluator.main = source_definition(FRAMEWORK / "timed_distributed.py", "main",
+            dict(original_main=evaluate, f=io.StringIO(), cfg=cfg))
         params = root / "code/canopy/params_base_eval.json"
         params.parent.mkdir(parents=True)
         params.write_text("{}")
@@ -142,6 +146,7 @@ class ScalarActorEpisodes(unittest.TestCase):
     def test_normal_actor_reconnects_without_cross_connection_rows_or_rng_reset(self):
         root, sent, noise, invocations = self.run_actor()
         self.assertEqual(len(invocations), 4)
+        self.assertEqual(len({cfg['port'] for cfg in invocations}), 4)
         self.assertEqual(len(sent), 20)
         self.assertEqual(noise.calls, 24)
         self.assertTrue(all(np.array_equal(row[3], row[0] + 1) for row in sent))
@@ -238,6 +243,39 @@ class ScalarActorEpisodes(unittest.TestCase):
             self.assertEqual(result["mapping_errors"], 0)
             self.assertEqual(result["connections_completed"], 2)
             self.assertEqual(result["control"]["mean"], 1.)
+
+    def test_privileged_cleanup_requires_a_verified_creation_time(self):
+        class ProcessError(Exception):
+            pass
+
+        class AccessDenied(ProcessError):
+            pass
+
+        class Process:
+            def __init__(self, pid):
+                self.pid = pid
+
+            def children(self, recursive):
+                return []
+
+            def create_time(self):
+                if self.pid == 102:
+                    raise AccessDenied()
+                return 2. if self.pid == 101 else 1.
+
+            def send_signal(self, sig):
+                raise AccessDenied()
+
+        with mock.patch.object(subprocess, 'run') as elevated:
+            namespace=dict(psutil=types.SimpleNamespace(Process=Process, Error=ProcessError,
+                          AccessDenied=AccessDenied), subprocess=subprocess,
+                          signal=types.SimpleNamespace(SIGTERM=15,SIGKILL=9),
+                          time=types.SimpleNamespace(sleep=lambda seconds: None))
+            cleanup=source_definition(FRAMEWORK/'evaluate.py','cleanup',namespace)
+            server=types.SimpleNamespace(pid=100,created=1.,wait=lambda timeout: None)
+            cleanup(server,{101:1.,102:1.})
+            self.assertEqual(elevated.call_count,2)
+            self.assertEqual({call.args[0][-1] for call in elevated.call_args_list},{'100'})
 
 
 if __name__ == "__main__":

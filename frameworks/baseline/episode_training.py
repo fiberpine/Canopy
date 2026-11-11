@@ -41,8 +41,11 @@ def run_episodes(root, cfg, run_id, counts, evaluation_cfg, evaluator):
                 break
             connection = len(episodes)
             name = run_id + "-episode%04d" % connection
+            port = evaluation_cfg["port"] + connection * int(cfg.get("num_actors", 1))
+            if not 1 <= port <= 65535:
+                raise ValueError("Episode port allocation exceeds the TCP port range")
             current = dict(evaluation_cfg, run_id=name, seconds=seconds,
-                           training_steps=maximum_steps - counts["generated"])
+                           port=port, training_steps=maximum_steps - counts["generated"])
             path = root / "configs" / (name + ".json")
             with path.open("x") as stream:
                 json.dump(current, stream, indent=2)
