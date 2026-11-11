@@ -1,120 +1,86 @@
-# Canopy：baseline与两种MTP双动作实现
+# Canopy 双动作拥塞控制
 
-[2026-11-10 健康基座重训](evidence/healthy-base-20261110/result.md)。固定 20 ms 从头训练完成，终点未达到完整健康门槛。包含五机负载诊断、同期归档对照和清理记录。
+在 Orca/Canopy（CUBIC + 强化学习调窗口）之上，让同一个策略同时输出**窗口倍率**和**下一个监测周期 MTP**，目标是在保持性能的同时降低推理调用开销。
 
-[固定 20 ms 训练 S20（2026-11-09）](evidence/s20-20261109/s20-result.md)。学习器在第 600 秒里程碑保存期间入库队列溢出，训练提前结束，116 次正式冻结评测均未执行。离线保存修复候选已验证数据等价，尚待并发短测。原 FAIL_A 保留，B0/C 未启动。
+## 当前状态（2026-11-11）
 
-本仓库保存三个原始交付实现、选定模型、训练/评测框架，以及后续基线与双动作研究的代码和证据。**截至2026-10-28，研究仍为PARTIAL：新的单动作基座仍未通过完整性能验收，双动作模型尚未证明稳定的性能—CPU优势。**
+- **单动作基线尚未合格。** 固定 20 ms、70 维状态、单窗口动作的基线从随机初始化训练过三次（同一初始化），结果分别是：归档模型（高吞吐、高排队）、中途塌缩、2026-11-10 终点（低排队、部分条件低吞吐）。最新一次见 [evidence/healthy-base-20261110/result.md](evidence/healthy-base-20261110/result.md)。
+- **双动作（mtpjoint，V31）暂停。** 在基线合格之前不继续扩展。
+- 逐次实验的结论、失败记录和旧入口见 [docs/HISTORY.md](docs/HISTORY.md) 与 [EXPLORATION_HISTORY.md](EXPLORATION_HISTORY.md)。
 
-此前：[D0补采后的零TCP复核](docs/COMMON_PERIOD_D0_20261103.md)：容量有部分可读信息、跨条件泛化差；A20高队列训练状态约4万条。四个周期扫描的原效用最高均值是40/40/80/80ms，不能宣称80ms统一最优或critic因果已证。0新TCP/0 Canopy优化；奖励A′与D-Q均未启动，原FAIL_A不变。
+## 目录
 
-此前：[共周期条件窗口执行与264次冻结评测](docs/COMMON_PERIOD_20261102.md)：A0和24actor短准入已通过；A单seed完成711,285条/143,919完整更新，264次评测0运行失败。A门槛状态 **FAIL_A**，研究仍PARTIAL，不宣称最终周期选择器或双动作CPU收益已通过。完整正负结果、原方案和运行谱系保留。
+| 路径 | 内容 |
+|---|---|
+| `run.py` | 唯一支持的训练/评测入口 |
+| `frameworks/baseline/` | 单动作基线：`distributed.py`（learner/actor）、`evaluate.py`（真实 TCP 闭环）、`cluster_control.py`（五机调度） |
+| `frameworks/mtpjoint/` | 双动作 V31：观测与执行同周期（论文主线） |
+| `frameworks/mtp20/` | 双动作 V14：固定 20 ms 观测（早期方案，保留作对照） |
+| `frameworks/canopy_single/`、`frameworks/baseline_ipc_audit/` | 基线诊断用的研究框架，不是训练入口 |
+| `frameworks/*/code/canopy`、`code/orca` | 上游 Canopy / Orca 源码（模型、奖励、内核补丁） |
+| `frameworks/*/code/runtime` | 本项目的 native 服务端源码与二进制 |
+| `models/` | 选定模型：`baseline`、`mtp20`、`mtpjoint`、`fixed20…160`、`official-orca` 及两个先验 |
+| `templates/` | 各模型的训练/评测配置模板 |
+| `traces/` | Mahimahi 链路 trace（训练格、动态与留出条件） |
+| `configs/` | 集群配置样例 `cluster.example.json` |
+| `tools/` | 离线审计与单元测试（不连云、不跑 TCP） |
+| `evidence/` | 每轮实验的登记、结果和失败记录，按日期命名 |
+| `docs/` | 各实现说明与研究文档 |
+| `runtime/` | Mahimahi 源码与 IBP 依赖；Python 环境和内核包在 Release 里 |
+| `environment/` | 依赖锁定、原始训练配置、可移植性补丁 |
 
-此前入口：[2026-11-02全面离线审计：环境、数据、目标与双动作控制](docs/BASE_FIRST_PRINCIPLES_REVIEW.md)。复算96个历史冻结窗口、核对有效训练链，并执行原奖励/SMDP数值检查；没有新云连接、TCP或TF训练。原奖励存在吞吐尺度别名及负净效用时延迟惩罚反向，但不能单独解释最新失败；已知修复也没有在所有默认路径中启用。新方案先建立可复算、同测量/真实时钟的固定周期参考，再验证有支持的双动作学习。[本轮计算证据与边界](evidence/comprehensive-audit-20261102/results-v2.json)。
+## 环境
 
-此前五机fresh seed3原配方实际1,675,235条/166,294完整更新，触发原1.5M后180秒持续低窗口低利用守卫，**2.4M未完成、没有新健康H0**。48停点/归档冻结trim10分别44.66%/190.57ms和97.90%/32.25ms。106初始变量逐项相同不保证异步轨迹相同；历史曾恢复不保证本次恢复。[原失败、NOT_RUN、停止快照与完整证据](evidence/base-reproduction-20261028/final-analysis.json)保留；没有追加训练。
-
-此前[累计探索/缓冲诊断](docs/SCALAR_EXPLORATION_AND_BUFFER_CAP.md)、[双向IPC/初始化诊断](tools/scalar_ipc_diagnostic/README.md)、[E2接管诊断](tools/e2_handover/README.md)保留全部结果。原始快照tag `consolidated-20261018` 和51个选定模型文件未变；归档源码不意味着论文复现或新模型合格。
-
-| 入口名称 | 选定实现 | 状态/动作 | 观测周期 | RL窗口动作执行周期 | 详细说明 |
-|---|---|---|---|---|---|
-| `baseline` | 冻结seed3，step2412694 | 70/1 | 原20ms | 原20ms | [baseline](docs/BASELINE.md) |
-| `mtp20` | V14，step277317 | 72/2 | 固定20ms | 学习20—160ms | [V14](docs/MTP20_V14.md) |
-| `mtpjoint` | 健康V31，step157704 | 149/2 | 学习20—160ms | 与观测同周期 | [V31](docs/MTPJOINT_V31.md) |
-
-两个创新均保留原窗口动作：归一化输出映射为窗口倍率，执行端按整数百分比写入；CUBIC继续逐ACK工作。MTP不是重复施加窗口倍率的次数。V31长MTP期间没有隐藏20ms RL观测，没有提前唤醒、QC或fallback。
-
-## 完整性与交付方式
-
-- Git直接包含原三套源码、native源码和二进制、必要本地依赖、**原始11组模型与先验**、训练/评测模板、trace、IBP和Mahimahi源码、性能与失败证据、原始来源清单及许可证文件。后续研究新增checkpoint/replay仍在原实验存储，不在Git中，不能把证据中的来源路径当成已下载模型。
-- 完整Python3.6/TF1.14环境和定制内核安装包放在同一仓库的[Release](../../releases/tag/consolidated-20261018)。完整迁移包也包含上述源码与模型，可独立解压使用。它不依赖原五台服务器的路径。
-- Git与Release共同构成完整交付；直接clone尚未包含Python环境和内核deb。历史replay、所有旧checkpoint、逐包历史档案不是当前运行依赖，没有上传到GitHub。选定模型和必要先验均已包含，绝不是只有checkpoint路径的空索引。
-- [模型清单](docs/MODELS.md)、[原便携包说明](docs/PORTABLE_RELEASE.md)、[验证范围](docs/VALIDATION.md)、[试错记录](EXPLORATION_HISTORY.md)、[来源清单](manifest.json)。历史绝对路径仅说明来源，原实验目录已退役，不用于新运行。
-
-## 快速使用完整迁移包
-
-要求：**Ubuntu18.04 x86_64、Python3.6、定制4.13.1-0521-learner内核、Mahimahi、TUN、sudo。** Windows只用于查看源码，不能直接执行TCP实验。未验证任意新OS的一键安装，也未通过重装系统验收。
+Ubuntu 18.04 x86_64、Python 3.6、TensorFlow 1.14、定制内核 `4.13.1-0521-learner`、Mahimahi、TUN、sudo。Windows 只能看源码和跑离线测试，不能跑 TCP 实验。
 
 ```sh
+git clone https://github.com/fiberpine/Canopy.git && cd Canopy
+python3 tools/verify_repository.py                 # 校验源码与模型文件
+mkdir -p assets
 gh release download consolidated-20261018 --repo fiberpine/Canopy \
-  --pattern orca-portable-release-20261018.tar.gz \
-  --pattern orca-portable-release-20261018.tar.gz.sha256
-sha256sum -c orca-portable-release-20261018.tar.gz.sha256
-tar -xzf orca-portable-release-20261018.tar.gz
-cd orca-release-20261018
-bash setup.sh --system # 新机安装依赖、构建Mahimahi、安装定制内核；不会自动重启
-# 重启到4.13.1-0521-learner后：
+  --pattern orca-portable-release-20261018.tar.gz --dir assets
+python3 tools/install_runtime_assets.py --archive assets/orca-portable-release-20261018.tar.gz
+bash setup.sh --system    # 新机：装依赖、编译并安装 Mahimahi、装内核；不会自动重启
+# 重启进入 4.13.1-0521-learner 之后：
 bash setup.sh
 runtime/venv/bin/python build_native.py
 runtime/venv/bin/python run.py doctor
 ```
 
-仓库已于2026-10-20从Private改为Public，源码与Release资产均可公开访问。上述gh命令需要官方GitHub CLI，也可直接在Release网页下载同名资产再传到目标服务器。没有在仓库中嵌入token或SSH私钥，不需要访问原五台服务器。若服务器已有匹配内核与工具，可跳过系统安装与重启。
+Python 环境和内核 deb 不在 Git 里，在 [Release `consolidated-20261018`](../../releases/tag/consolidated-20261018)。细节见 [docs/PORTABLE_RELEASE.md](docs/PORTABLE_RELEASE.md)。
 
-## 使用Git源码
-
-```sh
-git clone https://github.com/fiberpine/Canopy.git
-cd Canopy
-python3 tools/verify_repository.py
-mkdir -p assets
-gh release download consolidated-20261018 --repo fiberpine/Canopy \
-  --pattern orca-portable-release-20261018.tar.gz --dir assets
-python3 tools/install_runtime_assets.py --archive assets/orca-portable-release-20261018.tar.gz
-bash setup.sh # 新机仍须先按上节安装系统依赖及定制内核
-runtime/venv/bin/python build_native.py
-runtime/venv/bin/python run.py doctor
-```
-
-`run.py`是本交付支持的训练/评测入口。旧helper中保留的历史pipeline/factory CLI不是迁移入口；不要直接重启旧pipeline。仓库包含`setup.sh`依赖与完整原生代码。
-
-## 三套模型的评测和训练
+## 常用命令
 
 ```sh
+# 冻结评测（关闭探索和优化），结果在 frameworks/<实现>/logs/<run_id>/result.json
 runtime/venv/bin/python run.py evaluate --variant baseline --scenario 0 --seconds 60
-runtime/venv/bin/python run.py evaluate --variant mtp20 --scenario 0 --seconds 60
-runtime/venv/bin/python run.py evaluate --variant mtpjoint --scenario 0 --seconds 60
-# 90秒打包短测降低warmup，仅验证真实更新链路：
-runtime/venv/bin/python run.py smoke-training --variant mtpjoint --actors 1 --seconds 90
+
+# 本机 1 actor 短测，只验证真实更新链路
+runtime/venv/bin/python run.py smoke-training --variant baseline --actors 1
+
+# 五机正式训练：先复制 configs/cluster.example.json 填好自己的主机和 SSH key
+runtime/venv/bin/python run.py train --variant baseline --actors 24 --samples 2400000 \
+  --cluster configs/my-cluster.json
 ```
 
-正式训练先复制并填写`configs/cluster.example.json`；使用自己的SSH key和known_hosts，保持主机密钥验证。所有机器采用相同绝对入口路径，或使用同名软链接；路径不能含空格。
+`--variant` 可取 `baseline`、`mtp20`、`mtpjoint`；评测还可取 `fixed20/40/80/120/160`、`official-orca`、`cubic`、`reno`。训练规模是 1 learner + 24 actor（四台 actor 机各 6 个环境）。每次运行使用新的 run ID，不覆盖旧结果。
+
+离线测试（不需要内核和 TensorFlow，只需 NumPy）：
 
 ```sh
-runtime/venv/bin/python run.py train --variant baseline --actors 24 --samples 2400000 --cluster configs/my-cluster.json
-runtime/venv/bin/python run.py train --variant mtp20 --actors 24 --seconds-per-actor 1800 --cluster configs/my-cluster.json
-runtime/venv/bin/python run.py train --variant mtpjoint --actors 24 --seconds-per-actor 600 --cluster configs/my-cluster.json
+python3 -m unittest discover -s tools -p 'test_*.py'
 ```
 
-实际规模为1learner＋24actor，四台actor机器各6个独立环境；通过重连轮换环境，不是同时运行56actor。默认不传cluster时为本机1actor。每次使用独立run ID，禁止覆盖旧结果。训练会使用明确的有限时间/样本预算；调用命令即启动对应工作，不会自动继续下一轮实验。
+## 文档
 
-评测关闭探索和优化，结果位于`frameworks/<实现>/logs/<run_id>/result.json`。默认场景列表因实现不同而不同；正式比较须统一trace、RTT、队列、启动、评测窗口和重复数。固定周期入口`fixed20/fixed40/fixed80/fixed120/fixed160`均为独立训练模型，另可评测`official-orca/cubic/reno`。同权重强制周期诊断不能冒充独立训练对照。
+- 实现说明：[baseline](docs/BASELINE.md)、[mtp20 / V14](docs/MTP20_V14.md)、[mtpjoint / V31](docs/MTPJOINT_V31.md)、[模型清单](docs/MODELS.md)
+- 研究审阅入口：[当前问题与已确认事实](docs/RESEARCH_REVIEW_BRIEF.md)、[基线第一性原理审计](docs/BASE_FIRST_PRINCIPLES_REVIEW.md)
+- 验证范围与限制：[docs/VALIDATION.md](docs/VALIDATION.md)
+- 第三方代码与许可证：[docs/THIRD_PARTY.md](docs/THIRD_PARTY.md)
 
-## 结果和限制
+## 维护约定
 
-本仓库保留逐场景吞吐/利用率、平均/P95/P99排队、丢包、调用及CPU指标；不能只凭总平均或调用数宣布优势。[V31说明](docs/MTPJOINT_V31.md)列出了弱场景与正常启动参照，完整多算法结果在`evidence/multialgorithm`。
-
-V14四个浅队列动态条件MTP变化不足；V31仍有浅队列/高RTT吞吐及尾延迟弱项。一个训练seed来源的评测重复不等于多训练seed。少调用不等于同比例省CPU。完整resume加载器不存在；V14/V31正式模板按原谱系从包内先验新建优化器/replay/计数/TCP，并非从最终交付模型无缝续训。
-
-三套通过重编译、离线模型更新与重载、迁移后1actor真实训练、四机4actor训练、冻结评测及完整包解压验证。初次同机并行解包冻结中两MTP首次反馈超时，原因未定位，失败日志保留；前后顺序冻结均通过。本交付认证顺序冻结流程，不宣称同机多冻结流已通过。
-
-上游代码及第三方文件保留原许可证；仓库现公开可读；本次没有为新增研究代码另行选择开源许可证，第三方代码继续遵循各自许可证。来源见[第三方说明](docs/THIRD_PARTY.md)。
-
-## 下一步研究审阅
-
-请先读[当前研究状态与优先问题](docs/RESEARCH_REVIEW_BRIEF.md)。它区分已确认事实、待验证机制与最小实验。2026-10-26更新同步后续研究源码和小证据，没有为发布新增TCP实验或训练，也没有替换原模型。
-
-可直接检查：
-
-- [单动作研究框架及有限运行入口](frameworks/canopy_single/README.md)，包含明确的artifact/initializer QC模式及正常启动native源码；与原`baseline`身份不同。
-- [V31兼容校准实现与实验](docs/V31_COMPATIBLE_CRITIC_CALIBRATION.md)，新方案均需显式启用，价值门槛通过不等于网络性能收益。
-- [两组Orca全部144次冻结结果](evidence/scalar-20261025/evaluation_runs.csv)、[逐条件均值](evidence/scalar-20261025/evaluation_summary.csv)，保留full/trim10和失败方向，不只报告总体平均。
-- [16个checkpoint只读方向审计](evidence/scalar-direction-20261026/learner-outcome.json)和[可复现原奖励数值核查](tools/scalar_audit/audit.py)。Q网格和梯度是模型预测，不能冒充真实网络反事实。
-
-```sh
-# 本机数值/证据检查，无网络控制实验；需要NumPy
-python3 -m unittest discover -s tools -p 'test_v31*.py'
-python3 -m unittest discover -s tools/scalar_audit -p 'test_audit.py'
-python3 -m unittest discover -s tools/interval_reward -p 'test_shadow_reward.py'
-python3 tools/scalar_audit/audit.py --output diagnostics/scalar-offline-audit.json
-```
+- 仓库用 `repository-files.json` 记录每个文件的 SHA256。增删文件后运行 `python3 tools/update_repository_inventory.py` 重新生成，再用 `tools/verify_repository.py` 校验。
+- Mahimahi 的编译产物不入库，由 `setup.sh --system` 重新生成。
+- 上游 Orca 的示例 trace（`wired6/48/96` 等）不入库，需要时从 [Soheil-ab/Orca](https://github.com/Soheil-ab/Orca) 获取；本项目训练和评测只用 `traces/`。
+- 密钥、`configs/my-cluster.json`、运行日志和 checkpoint 不入库（见 `.gitignore`）。

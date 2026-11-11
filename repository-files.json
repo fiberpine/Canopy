@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-10 fresh single-action fixed-period baseline and bounded evaluation",
+  "scope": "2026-11-11 tree cleanup: build outputs, upstream sample traces and an unreferenced legacy pipeline removed; no executed source changed",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 288,
-      "sha256": "55991c124e6e15b93adc5363b628c77033451aa5598c518553708676e8eed3e4"
+      "bytes": 1015,
+      "sha256": "8044cf77e29f3f49a8a3b97d7130a702f19e9c06d4629acfe5e8e5f28b7fbc58"
     },
     {
       "path": "EXPLORATION_HISTORY.md",
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11510,
-      "sha256": "64d2534f7e0ad64ce174fc53fe7301648fa9ccba94d13d9dba45ad5b33aadd10"
+      "bytes": 5345,
+      "sha256": "1c105e1f8761f99c2292a0f19b94af628ef9c64026b225d567e5fa4d083a07fe"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -61,6 +61,11 @@
       "path": "docs/COMMON_PERIOD_D0_20261103.md",
       "bytes": 6088,
       "sha256": "c84756441f0ea77c82b6b7701dbb73fd5f78b69ab63526d8bd1a263f60a02ea4"
+    },
+    {
+      "path": "docs/HISTORY.md",
+      "bytes": 11555,
+      "sha256": "74f44a3f1090ebf4124327e17f0ed758931fa13e8635e9cdbd4579a33173bc46"
     },
     {
       "path": "docs/MODELS.md",
@@ -16258,231 +16263,6 @@
       "sha256": "519438d2533f87104ae2e1dcc508b6c243b258e617102f7d2d4fbf648a69c698"
     },
     {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/INSTALLER",
-      "bytes": 4,
-      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/LICENSE",
-      "bytes": 1548,
-      "sha256": "b89c063b3786e28e0c0a38f1931db61fed35e69dd2a2966fbecffee0f46c8d10"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/METADATA",
-      "bytes": 21837,
-      "sha256": "19f679f9f89daead325ce0a0c8de1fba70a554793a47fcdf273fb714ac742a35"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/RECORD",
-      "bytes": 4619,
-      "sha256": "2d983d5c16ce35cc833ca9e8323e3cb4a0260d5493ef88e385874dca0689f58d"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/REQUESTED",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/WHEEL",
-      "bytes": 221,
-      "sha256": "ae0a550668e3bdb20d7862829161067777f8d151cc4ec0e4423d4b82297cdb31"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/top_level.txt",
-      "bytes": 7,
-      "sha256": "8023619f9ef0ce4b038d20084a680c2746a25f342e964d062616f6f81032620c"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/__init__.py",
-      "bytes": 89169,
-      "sha256": "6167ff8b6663b89a842d17cd97a9d7d2766ea22d3d197a8c64f255b0c24c0904"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_common.py",
-      "bytes": 29393,
-      "sha256": "053c07c5d6094329eb9f98bc20eb3a5c5c4ba3d2f5120e5c8030aae986b2a6bd"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_compat.py",
-      "bytes": 15349,
-      "sha256": "00e174bd209695efec6c9d46c3e086c7468423dca4e6eef46213d838f837287b"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psaix.py",
-      "bytes": 18749,
-      "sha256": "d5ba84c2393a206dd8fb3ac36a32a2f283d262fab736baa93d441e0d1a385208"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psbsd.py",
-      "bytes": 31956,
-      "sha256": "16bb80272fc6ae98c07c72e96f873721519fcb65e28bc6f50479c88f151f6db2"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_pslinux.py",
-      "bytes": 88043,
-      "sha256": "41823ac874ef44c619955c41d3af3154010c10018645253d13bfac243df5eb9a"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psosx.py",
-      "bytes": 16209,
-      "sha256": "77f28c4b39a32fabc0610c757d0379edbdf16b3246753b78ac8cac383075af68"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psposix.py",
-      "bytes": 8235,
-      "sha256": "5fdadded61ca43a994027da285bd373029f3ac1b50b2b3d1902a2e1319ae6a04"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_pssunos.py",
-      "bytes": 25559,
-      "sha256": "671e9e2d8fb435150514828fed2c9c92d803a28b6d767940f5a5fccb87bbe1d6"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psutil_linux.abi3.so",
-      "bytes": 115304,
-      "sha256": "a27c26f015a7e9ac5b2a33ea076eb72479baadb0dc12f32770a6218696eee48e"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psutil_posix.abi3.so",
-      "bytes": 71624,
-      "sha256": "c4d54acb52dd29c9e28047bf0696977d8120e2a69df4c91e74bc24621e016819"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_pswindows.py",
-      "bytes": 37734,
-      "sha256": "057828012a484ba71cc398d3c7857e1f67ccb08712bff350e84a33b3116063ed"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/__init__.py",
-      "bytes": 64753,
-      "sha256": "81ceb6d55be08f635ac6eb01ff31b07eac0ffe7a77a9a090a899723eba750f49"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/__main__.py",
-      "bytes": 269,
-      "sha256": "7f5618e9265e6dcb5de47c1bd629f8d2715285f270e3303614b89db1d83f798f"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/runner.py",
-      "bytes": 11464,
-      "sha256": "5ad4672d9e604b7f60232b0b0a4795f7d870e4bbe8755c0119eb287a7f4830db"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_aix.py",
-      "bytes": 4585,
-      "sha256": "f122a3170edc4776f2052865bd60334123938e38b90699e4f09c9492c4740102"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_bsd.py",
-      "bytes": 21245,
-      "sha256": "91f3572ec675a7e5681ad557e00b7da8c392ff337c38c54ff7279cb87116682e"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_connections.py",
-      "bytes": 21642,
-      "sha256": "0872fae6ad886316fc12bb4901487ced1c8a48259ec309808385452bcd1aacef"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_contracts.py",
-      "bytes": 12998,
-      "sha256": "fd301637b95d6e0a8921d87ab4c9110e2bd73e81fa4f78ca606e3bfcacc3bed1"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_linux.py",
-      "bytes": 92530,
-      "sha256": "2cfbe110f50f490e0c7710650113dc4784e1b1dff036a2a4aa3d09aa52a4642a"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_memleaks.py",
-      "bytes": 15012,
-      "sha256": "a73c043146b3e9787c02637faa20a6613536cb3a2dfddc2c75b4df15d2bcf559"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_misc.py",
-      "bytes": 35117,
-      "sha256": "268bd830935286edb20b7b76b1f905639b96f7a4cbecae609305e78ce476e5a4"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_osx.py",
-      "bytes": 6603,
-      "sha256": "310b1ea4edb94e57f275a3b18ea80404ce16ae2f529c2524a412c48909cabf64"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_posix.py",
-      "bytes": 17387,
-      "sha256": "b036a6f6f749256b9835d768be1c62d5cdcafb3e007d3003d1f432c9a783f186"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_process.py",
-      "bytes": 61535,
-      "sha256": "94eab79cec9042f2912516934443b4181d04ace40665eab11ec11b9f9aacf0fe"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_process_all.py",
-      "bytes": 16112,
-      "sha256": "aa42d79e4555604a8cd88861203d02cc45560260f821bee2d04e26523a3c27f6"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_sunos.py",
-      "bytes": 1310,
-      "sha256": "36166c1c00492a30840f3180ed92fadace8d96aa49c29a03c9b68f076066f471"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_system.py",
-      "bytes": 37044,
-      "sha256": "adfcc63ff66e307c73b93cf70ae5719fcfb35cd7b9ffd6029b5679253297a93f"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_testutils.py",
-      "bytes": 14828,
-      "sha256": "9816ec4416d47f85660eb2936ef952795aa8ff91d333d87879313f559ff97977"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_unicode.py",
-      "bytes": 12549,
-      "sha256": "94acadcf1340ef665d861cfa8e75e35519bedfeefd8f5cde9623ced5231255a1"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_windows.py",
-      "bytes": 35298,
-      "sha256": "0ff7ca761a7caec5c317b3ab0572d13d2ed7329a97033a89cdbae33ea94be691"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/agent.py",
-      "bytes": 17262,
-      "sha256": "07b2bfb04fd137a3b5070608eb01f1f7b9851a40ed0db95c76f8d5d260da8fb6"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/baseline.py",
-      "bytes": 19458,
-      "sha256": "6a4f0a9cbf79bdcc3a06e7d5b0093a874909dd0012c8dea33afc27f60d5f9561"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/client",
-      "bytes": 13808,
-      "sha256": "aa6a1385e134e0bf888c4d86d881d097fc86567ebf4a3b1439053739ddb92b0b"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/envwrapper.py",
-      "bytes": 14869,
-      "sha256": "0896a709632caa48b09b119218e89b5bf168f5784da3841f32450ba72de405ba"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/orca-server",
-      "bytes": 31000,
-      "sha256": "82d35044871d3a726c233788d66d782c2245a12f6684ca3f71e26e2ea7d43895"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/tcp-native",
-      "bytes": 26664,
-      "sha256": "c32a44e05f3fb665a261df7842373ebc81d26a21838a069a4cfa87ff9fe330ed"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/utils.py",
-      "bytes": 7984,
-      "sha256": "8d07243a46e44ffc560ab41c26adb27816f4d346fbeeb68f57b16c32a1732071"
-    },
-    {
       "path": "frameworks/baseline/code/canopy/.gitignore",
       "bytes": 26,
       "sha256": "af15647a775cc3c305da9f6822947665748ac0f37f1141ec52f86119693c6a23"
@@ -17221,46 +17001,6 @@
       "path": "frameworks/baseline/code/orca/src/util.h",
       "bytes": 2171,
       "sha256": "a9982aa98b5441d5d8ee5692ebc94526c1c7f384702e150ae184554836fc58c7"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/step-10s-3-level",
-      "bytes": 196296,
-      "sha256": "5636a172ec6f9014a209dbff882b04d1e13f02609953872558675f29d2521dd5"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired12",
-      "bytes": 2,
-      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired192",
-      "bytes": 32,
-      "sha256": "3ff41cf22d4c4544514802ce2aecc08eea6c0989c3fa2e735c545f1054b26b88"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired24",
-      "bytes": 4,
-      "sha256": "ad0fadf63cc7cd779ce475e345bf4063565b63a3c2efef1eebc89790aaa6acba"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired300",
-      "bytes": 50,
-      "sha256": "8d62c939abc65069a90e348b81888038410b08ddf81ef5c642ada8634a676b3d"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired48",
-      "bytes": 43555584,
-      "sha256": "13267a13d09eb72073a63c4506f63c9fa53a4d743e59351173069d6e225494b5"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired6",
-      "bytes": 5444453,
-      "sha256": "83b9a79ebbd8e0fd310dd0057476154f63b585eda00fe194ca8d04b52b01861c"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired96",
-      "bytes": 87111184,
-      "sha256": "4f08be35986baf50e1f5466ec74e8f742078ccfd96b626507a7f68e0bff95d79"
     },
     {
       "path": "frameworks/baseline/code/runtime/_deps/psutil-5.9.8.dist-info/INSTALLER",
@@ -20425,11 +20165,6 @@
       "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
     },
     {
-      "path": "runtime/mahimahi/Makefile",
-      "bytes": 26526,
-      "sha256": "71c6a04d06a44856b46f081ae4006f68eb49676cbcb6f5c4c1d41cd99f2f332a"
-    },
-    {
       "path": "runtime/mahimahi/Makefile.am",
       "bytes": 57,
       "sha256": "64ed3fffce4f81bd69a5816de400b4d6f984119d2d489b236812225f23c01cd7"
@@ -20470,24 +20205,9 @@
       "sha256": "19c12bb2ca19e68724c2854ed0512469518df19b0710cc2011a5ca540810979c"
     },
     {
-      "path": "runtime/mahimahi/config.h",
-      "bytes": 6063,
-      "sha256": "7bcb832264cdbc1e032e037f24147daf9911fb13f79933331cbe40b0639d87f7"
-    },
-    {
       "path": "runtime/mahimahi/config.h.in",
       "bytes": 5379,
       "sha256": "7b99be07ec4af7c324f04c5a3944cefe35aaeecc3f3b383a183145ef88c8ffe4"
-    },
-    {
-      "path": "runtime/mahimahi/config.log",
-      "bytes": 52236,
-      "sha256": "6bede7916b02a7bae85d7dab5f9e1b3b31e47d8c6983c2728a40306ae73d4f0b"
-    },
-    {
-      "path": "runtime/mahimahi/config.status",
-      "bytes": 70517,
-      "sha256": "10a30af1741f116491ef520f1d08c807ab993956cf40520de8801780bc27b917"
     },
     {
       "path": "runtime/mahimahi/config.sub",
@@ -20575,11 +20295,6 @@
       "sha256": "fb968adf6c7fa83071ad294c8a5a13a63c92a8f109f78bae51a80d6eee59990d"
     },
     {
-      "path": "runtime/mahimahi/libtool",
-      "bytes": 345327,
-      "sha256": "1ad67e4792f1a8b4d8e25a113c141711af027735260bf1a6df52d1c74706948b"
-    },
-    {
       "path": "runtime/mahimahi/ltmain.sh",
       "bytes": 324412,
       "sha256": "cd1ff57339d0c757dd9cbe04de126d4645167db629c787d5cb885a2cd033deea"
@@ -20613,11 +20328,6 @@
       "path": "runtime/mahimahi/m4/lt~obsolete.m4",
       "bytes": 6140,
       "sha256": "26fa3285c35dd6ab00ed1e466ba92a17e4655e01897731ec18a587a4cf5e4f8d"
-    },
-    {
-      "path": "runtime/mahimahi/man/Makefile",
-      "bytes": 16523,
-      "sha256": "3fdff9fae6c3ec3e2d85363e137af2cb4a5c7582165cae8a055d1b53aba76740"
     },
     {
       "path": "runtime/mahimahi/man/Makefile.am",
@@ -20695,11 +20405,6 @@
       "sha256": "b1a337b731bbb58846d31ca2f5143c293a455fa41b481e236e89a9016d96b034"
     },
     {
-      "path": "runtime/mahimahi/scripts/Makefile",
-      "bytes": 16164,
-      "sha256": "052ba84e3fbf533973158a6e8f9484a9672f6918968c24f795c5b0c930728b36"
-    },
-    {
       "path": "runtime/mahimahi/scripts/Makefile.am",
       "bytes": 54,
       "sha256": "2d6e0f0622f37c8bb85524dbdfb41bb57d3c3f96ac32636ef078368be5847377"
@@ -20725,11 +20430,6 @@
       "sha256": "461cd35db52e082d4254deb3271dd88d1320c271935fda9bf8281558ac2c35ec"
     },
     {
-      "path": "runtime/mahimahi/src/Makefile",
-      "bytes": 19593,
-      "sha256": "4bc70fd8bf1825c95e7ad6d67f06f3234ecb643e8e78c9d899bbc6fae8948bdf"
-    },
-    {
       "path": "runtime/mahimahi/src/Makefile.am",
       "bytes": 72,
       "sha256": "7582db7647c8d3091e633a7455ed31a54c56d8a2ef0e98e3b2a32712ee5b09e9"
@@ -20738,11 +20438,6 @@
       "path": "runtime/mahimahi/src/Makefile.in",
       "bytes": 19205,
       "sha256": "859adc26a72837ad940acf42dd8849cbf0021fae6a18b61f42468dbb3d36a793"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/Makefile",
-      "bytes": 36448,
-      "sha256": "ec54c98c3552c7f4093c4d5001a7fc11efe397142fd313e0545f90949bf0e95f"
     },
     {
       "path": "runtime/mahimahi/src/frontend/Makefile.am",
@@ -20820,51 +20515,6 @@
       "sha256": "55e3f7e5d619f2b6910fb18c3fee61788ca97002f3eb853a91d46d87102d189f"
     },
     {
-      "path": "runtime/mahimahi/src/frontend/mm-delay",
-      "bytes": 2767256,
-      "sha256": "a6202d741459ea10dbc2cf31e56b591ed2c175037a02dfc976feb83eced970a6"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-intermittent",
-      "bytes": 2828080,
-      "sha256": "dddf81d37766e95cdf09e094d50840f45c6f074684a260a65a4ba536b1f161d1"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-link",
-      "bytes": 4693984,
-      "sha256": "9aef2f1d56b6300ab1529218b29fbe9663f144bc6c8aa4dc6345017acef2b4c2"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-loss",
-      "bytes": 2815320,
-      "sha256": "18d0903e4ec6bba3de7322ce79754686eae1c8e48d9ed1f1c30ce8f8db4716d3"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-meter",
-      "bytes": 3978144,
-      "sha256": "864029593849ccb9860d2a11c3d1036ed103aaeac78df76eaea2272926f00bc6"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-onoff",
-      "bytes": 2828728,
-      "sha256": "eadc5874fef254f7a6fed7a089d5e223b030fc5944f3230d8a897a07f473f3e8"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-replayserver",
-      "bytes": 1861784,
-      "sha256": "dcb228ad6883931f725e09bb336c299bd61bdf7fd609fd06760da8aad63fd0cd"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-webrecord",
-      "bytes": 4608104,
-      "sha256": "42ecf9ea6d5b397a4f7cfe1a657b2cd483c61920663c9a7393fdfdce90b4e79e"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-webreplay",
-      "bytes": 2967720,
-      "sha256": "3c3e0bdc76617249d393977d87583e66e7da928299f4e8481f73762e8e3d6e60"
-    },
-    {
       "path": "runtime/mahimahi/src/frontend/mod_deepcgi.c",
       "bytes": 4925,
       "sha256": "afbe2f6eec3516833d4bbfa9f30b34a2eac755cdfd962a035ee5cac930e22663"
@@ -20903,11 +20553,6 @@
       "path": "runtime/mahimahi/src/frontend/web_server.hh",
       "bytes": 826,
       "sha256": "548cbdf30a97feaf8765a6f7cce76d9d0683cbfdff333bee86e83642a1f9bd53"
-    },
-    {
-      "path": "runtime/mahimahi/src/graphing/Makefile",
-      "bytes": 19405,
-      "sha256": "fd7e1029701199486e57c55938047b6b12027cf73f3991c3a302cb8bb028c463"
     },
     {
       "path": "runtime/mahimahi/src/graphing/Makefile.am",
@@ -20958,16 +20603,6 @@
       "path": "runtime/mahimahi/src/graphing/graph.hh",
       "bytes": 2350,
       "sha256": "0bbfac59b2ff9d0f513457809feaf15646cabd2941b591137af0c5730afbbdda"
-    },
-    {
-      "path": "runtime/mahimahi/src/graphing/libgraph.a",
-      "bytes": 2439788,
-      "sha256": "38333d7d7d647e00f684bb183c4c4d628eef12d97681fc8de425b260ab8e103b"
-    },
-    {
-      "path": "runtime/mahimahi/src/http/Makefile",
-      "bytes": 19896,
-      "sha256": "cd9b4b89fec458e9f95dfc03cd321e591c78069ce386e647f660c83eee2a377c"
     },
     {
       "path": "runtime/mahimahi/src/http/Makefile.am",
@@ -21065,11 +20700,6 @@
       "sha256": "7a294e372fe352c91b90df5abdda8687656f9491b3297eeae3d2cd5d7056e0bd"
     },
     {
-      "path": "runtime/mahimahi/src/http/libhttp.a",
-      "bytes": 2603476,
-      "sha256": "f0219d07ddab8587505a2d6000a034dfcfcc51d623802cd143c89dc92b148785"
-    },
-    {
       "path": "runtime/mahimahi/src/http/mime_type.cc",
       "bytes": 483,
       "sha256": "5b88dc5274154ca3f532eee62e0b4fa378fa5033796dcf57e045c8a9c705f2a0"
@@ -21083,11 +20713,6 @@
       "path": "runtime/mahimahi/src/http/tokenize.hh",
       "bytes": 1031,
       "sha256": "1d6401708a867c97754d5f7cdac088a598d3d767cbf78c4d231a66780d2aac97"
-    },
-    {
-      "path": "runtime/mahimahi/src/httpserver/Makefile",
-      "bytes": 19384,
-      "sha256": "fb3682e169a206650a4c5728ef723ed1ab165cec1e186a994a8eeb55bcf3325b"
     },
     {
       "path": "runtime/mahimahi/src/httpserver/Makefile.am",
@@ -21120,11 +20745,6 @@
       "sha256": "069e1933c5e136efa75e79ce3a58f0b167a32491851f9477b57655a681334b8b"
     },
     {
-      "path": "runtime/mahimahi/src/httpserver/libhttpserver.a",
-      "bytes": 2013700,
-      "sha256": "65de0cc18c9dd7b04bd4522ac0ae58b7352e87d7efd47e65b3e5192f0c24596f"
-    },
-    {
       "path": "runtime/mahimahi/src/httpserver/secure_socket.cc",
       "bytes": 5051,
       "sha256": "004680d647e200ec020cd7e99c84e264200fc5b355c068b94daea79effa322ae"
@@ -21133,11 +20753,6 @@
       "path": "runtime/mahimahi/src/httpserver/secure_socket.hh",
       "bytes": 1029,
       "sha256": "610c12da28531996d9801af687e637e52b5bdeec6c2aed556067dea2ba545c97"
-    },
-    {
-      "path": "runtime/mahimahi/src/packet/Makefile",
-      "bytes": 19686,
-      "sha256": "789321b6b834ef05dd342998128065434e9656219aa511e0a05a4f2e71127561"
     },
     {
       "path": "runtime/mahimahi/src/packet/Makefile.am",
@@ -21195,11 +20810,6 @@
       "sha256": "6bb04adc9fe7c2dd2653a21a348e294dced5f6f0acd16a59dabd5888e540501a"
     },
     {
-      "path": "runtime/mahimahi/src/packet/libpacket.a",
-      "bytes": 929682,
-      "sha256": "d18c9bec17a23f9cd7eef856a1d3c3d3215e02c9d14015c4ee6b91581eb2f119"
-    },
-    {
       "path": "runtime/mahimahi/src/packet/packetshell.cc",
       "bytes": 8319,
       "sha256": "5af74838d2c2e526079310ad07d3888f06bf3973d64359c1fddaaf22fd6b5daa"
@@ -21223,11 +20833,6 @@
       "path": "runtime/mahimahi/src/packet/queued_packet.hh",
       "bytes": 426,
       "sha256": "f1b3aa79e53fe5251cec756149e0ca827bec8d83c411429dac582b9103a74de8"
-    },
-    {
-      "path": "runtime/mahimahi/src/protobufs/Makefile",
-      "bytes": 19994,
-      "sha256": "8d4f487f63384ff4d0f13b2dbb4c6091914a007fb62aaded4054187a1bebb4ef"
     },
     {
       "path": "runtime/mahimahi/src/protobufs/Makefile.am",
@@ -21255,16 +20860,6 @@
       "sha256": "cf981de9d584c0bd0d0f0268d530c4b928bd2490147ad922a82e4cfbf9717417"
     },
     {
-      "path": "runtime/mahimahi/src/protobufs/libhttprecordprotos.a",
-      "bytes": 843480,
-      "sha256": "3b80e9d664aec10d6b2a0f318da881e20528f0d3bdf964a5a07ffa8717af39a1"
-    },
-    {
-      "path": "runtime/mahimahi/src/tests/Makefile",
-      "bytes": 13391,
-      "sha256": "3a3e57fb0b63203da575b3d773aca933a6d765ca3a94935b365ed741eeeb4f7d"
-    },
-    {
       "path": "runtime/mahimahi/src/tests/Makefile.am",
       "bytes": 87,
       "sha256": "6f644e57b7d14fc2093081ece29d2614f4149b82a7cde8530cce456321ed7345"
@@ -21278,11 +20873,6 @@
       "path": "runtime/mahimahi/src/tests/packetshell-test",
       "bytes": 977,
       "sha256": "7fed6a29d54e4042d95d56285c015888148054b93f9842c3a60432d9743d9f5b"
-    },
-    {
-      "path": "runtime/mahimahi/src/util/Makefile",
-      "bytes": 20899,
-      "sha256": "9e62de89cda5ebb4c49843c0d6ef5cad4a6fe668057f60f49ad9f93ddc4e47d4"
     },
     {
       "path": "runtime/mahimahi/src/util/Makefile.am",
@@ -21390,11 +20980,6 @@
       "sha256": "643508cb128952e6bbce274233cff22c1c4a3bc9438b4f853d7eaf45273f358a"
     },
     {
-      "path": "runtime/mahimahi/src/util/libutil.a",
-      "bytes": 6215760,
-      "sha256": "3831f01caf7f2fc0c5c0bf6108c62fe0b57ff05ba2fb31eb105fdf09f11c3a07"
-    },
-    {
       "path": "runtime/mahimahi/src/util/nat.cc",
       "bytes": 2204,
       "sha256": "ffd926bec100ade02aa248895e90bfab2e1bd44f3751973790742e460c1c7611"
@@ -21495,11 +21080,6 @@
       "sha256": "0bbac1ab5551e11aaef599e9e3e79e3f92519b9a0761b067aedcbc997e3ee040"
     },
     {
-      "path": "runtime/mahimahi/stamp-h1",
-      "bytes": 23,
-      "sha256": "24fdde0aee1f49666fc7a5bd7f422dc0118e4db128bc1f606f7f047c9b245bb4"
-    },
-    {
       "path": "runtime/mahimahi/traces/ATT-LTE-driving-2016.down",
       "bytes": 271440,
       "sha256": "24a40538340de991e0a6595aefc381b11a3da0446176e69b51750707a57b0344"
@@ -21518,11 +21098,6 @@
       "path": "runtime/mahimahi/traces/ATT-LTE-driving.up",
       "bytes": 483248,
       "sha256": "d58a640b9bccd131a421bff6eaf727aba324d9258b35009655bbf68e087b9b29"
-    },
-    {
-      "path": "runtime/mahimahi/traces/Makefile",
-      "bytes": 15894,
-      "sha256": "f82ef177af663c03d82136be696f2329f487d3df30e7df6fb81f117ae5e4d36a"
     },
     {
       "path": "runtime/mahimahi/traces/Makefile.am",
@@ -22423,6 +21998,11 @@
       "path": "tools/test_v31_optimizer_gate.py",
       "bytes": 1139,
       "sha256": "41bd92275bba72c6ddde0cb75435424104e07e8d742a3585d409e3154787a4ad"
+    },
+    {
+      "path": "tools/update_repository_inventory.py",
+      "bytes": 2239,
+      "sha256": "de690308c479b9988c1607cb9e3c5621059722eb31175af420ed36f5a0eed2dc"
     },
     {
       "path": "tools/v31_boundary_rate_audit.py",
