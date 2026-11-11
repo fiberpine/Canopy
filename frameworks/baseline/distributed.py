@@ -253,7 +253,7 @@ def actor(cfg,index):
  evaluate.distributed_session=True
  ecfg=dict(cfg['conditions'][index],method='canopy',run_id=run_id,seconds=0,training_steps=cfg['steps_per_actor'],port=cfg.get('actor_port_base',48200)+index,seed=cfg['seed'],actor_rng_seed=cfg['seed']+index*1009,actor_index=index,code_commit=cfg.get('code_commit'),reward_mode='raw',control_period_ms=20,history_frames=10,use_normalizer=False,stop_file=cfg.get('stop_file'))
  if cfg.get('server_binary'):ecfg['server_binary']=cfg['server_binary']
- if cfg.get('capacity_replay_probe'):ecfg['verify_owned_cleanup']=True
+ if cfg.get('capacity_replay_probe') or cfg.get('verify_owned_cleanup'):ecfg['verify_owned_cleanup']=True
  path=R/'configs'/(run_id+'.json');path.write_text(json.dumps(ecfg,indent=2));sys.argv=['evaluate.py','--config',str(path)]
  if cfg.get('serialized_start'):
   release=R/'logs'/(cfg['run_id']+'-launch-actor%d'%index)

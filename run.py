@@ -57,11 +57,14 @@ def main():
   if isinstance(c.get(key),list):c[key]=[copy.deepcopy(c[key][i%len(c[key])]) for i in range(n)]
  c.update(run_id=r,model_id=r,seed=a.seed,num_actors=n,actor_hosts=[i%len(hosts) for i in range(n)],learner_endpoint=A['nodes'][0]['ip']+':'+str(a.learner_port),actor_port_base=a.port,absolute_deadline_epoch=A['deadline_epoch']-60,stop_file=str(f/'logs'/(r+'-stop.json')),timeout_s=cap-120,shutdown_barrier_s=120,evaluation_reserve_s=90,code_commit='portable-release',capacity_only=False,steps_per_actor=1000000)
  if a.episode_seconds is not None:c['episode_seconds']=a.episode_seconds
- if a.replay_probe:c['capacity_replay_probe']=True
+ if a.replay_probe:
+  if a.samples%n:raise ValueError('Admission sample budget must divide equally among actors')
+  c['capacity_replay_probe']=True;c['steps_per_actor']=a.samples//n;c['sample_budget_enforcement']='Per-actor admission quota; no generated transition discarded'
  if a.checkpoint_interval is not None:c['checkpoint_interval']=a.checkpoint_interval
  if a.performance_guard_policy is not None:c['performance_guard_policy']=a.performance_guard_policy
  if a.target_bn_consistent:c['target_bn_consistent']=True
  if a.variant=='baseline' and (a.replay_probe or a.episode_seconds is not None or a.target_bn_consistent):
+  c['verify_owned_cleanup']=True
   sys.path.insert(0,str(f));from baseline_admission import validate_ports
   ephemeral=list(map(int,pathlib.Path('/proc/sys/net/ipv4/ip_local_port_range').read_text().split()))
   c['port_plan']=validate_ports(a.port,n,a.learner_port,ephemeral,max(0,A['deadline_epoch']-time.time()),a.episode_seconds)

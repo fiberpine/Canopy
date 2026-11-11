@@ -15,7 +15,7 @@ def validate_ports(base, actors, learner, ephemeral, seconds, episode=None):
     return dict(first=base, last=end, learner=learner, maximum_connections=connections)
 
 
-def cleanup_report(owned, port, keys, ipc_module):
+def _cleanup_snapshot(owned, port, keys, ipc_module):
     import os
     import psutil
     import subprocess
@@ -29,7 +29,7 @@ def cleanup_report(owned, port, keys, ipc_module):
             pass
         except psutil.Error as error:
             remaining.append(dict(pid=pid, verification_error=type(error).__name__))
-    command = subprocess.run(['sudo', '-n', 'ss', '-ltn'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    command = subprocess.run(['sudo', '-n', 'ss', '-ltnp'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     listeners = [line for line in command.stdout.decode().splitlines()
                  if any(token.rsplit(':', 1)[-1] == str(port) for token in line.split())]
     ipc = []
@@ -46,3 +46,35 @@ def cleanup_report(owned, port, keys, ipc_module):
     return dict(status='PASS' if not remaining and not listeners and not ipc and command.returncode == 0 else 'FAIL',
                 remaining=remaining, listeners=listeners, accessible_shm_keys=ipc,
                 listener_check_returncode=command.returncode, actor_fd_count=len(os.listdir('/proc/self/fd')))
+
+
+def cleanup_report(owned, port, keys, ipc_module, timeout_seconds=3.):
+    """Confirm eventual teardown; record a bounded wait without killing strangers."""
+    import time
+    start=time.monotonic();deadline=start+timeout_seconds;checks=[]
+    while True:
+        result=_cleanup_snapshot(owned,port,keys,ipc_module)
+        checks.append(dict(elapsed_s=time.monotonic()-start,**result))
+        if result['status']=='PASS' or time.monotonic()>=deadline:
+            return dict(result,checks=checks,teardown_wait_s=time.monotonic()-start)
+        time.sleep(min(.05,max(0,deadline-time.monotonic())))
+
+
+def drain_after_failure(actors, collect, forward, finished, timeout_seconds=45.):
+    """Stop is already requested; preserve producer records and the learner drain.
+
+    This never changes the failed experiment's status into a successful run.
+    """
+    import time
+    deadline=time.monotonic()+timeout_seconds;forwarded={}
+    while True:
+        for entry in collect():
+            producer=entry.get('producer');index=entry['index']
+            if producer is not None and index not in forwarded:
+                forward(index,producer);forwarded[index]=producer
+        done=bool(finished())
+        if done and len(forwarded)==actors:
+            return dict(status='DRAIN_RECORDED_RUN_STILL_FAILED',forwarded=len(forwarded),learner_finished=True)
+        if time.monotonic()>=deadline:
+            return dict(status='DRAIN_INCOMPLETE_RUN_FAILED',forwarded=len(forwarded),learner_finished=done)
+        time.sleep(min(.2,max(0,deadline-time.monotonic())))

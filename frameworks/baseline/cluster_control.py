@@ -103,11 +103,17 @@ def execute(cfg,duration=None):
   produced=sum(x.get('generated',0) for x in results.values());enqueued=sum(x.get('enqueued',0) for x in results.values())
   if len(results)!=cfg['num_actors'] or produced!=enqueued or enqueued!=final.get('inserted'):raise RuntimeError('generated/enqueued/inserted mismatch')
   if any(x['mapping_errors'] for x in actors):raise RuntimeError('action mapping/alignment error')
+  if not stop_reason and cfg.get('sample_budget_enforcement') and produced==cfg['sample_budget']:stop_reason='PER_ACTOR_SAMPLE_QUOTAS_COMPLETE'
  except Exception as error:
   failure=str(error);(R/'logs'/(run+'-failure.txt')).write_text(traceback.format_exc())
-  try:stop('FAILURE: '+failure)
-  except Exception:pass
-  time.sleep(3)
+  try:
+   stop('FAILURE: '+failure)
+   from baseline_admission import drain_after_failure
+   def forward_failure_producer(index,producer):
+    results[index]=producer;node.dump(R/'logs'/(run+'-actor%d'%index)/'producer.json',producer)
+   drained=drain_after_failure(cfg['num_actors'],lambda:[entry for host in get_status() for entry in host['entries']],forward_failure_producer,lambda:(R/'logs'/run/'finished').exists(),min(45,max(0,DEADLINE-time.time()-15)))
+   node.dump(R/'audit'/(run+'-failure-drain.json'),drained)
+  except Exception as drain_error:(R/'logs'/(run+'-failure-drain-error.txt')).write_text(str(drain_error))
  finally:
   sample_stream.close();node.dump(R/'logs'/(run+'-cluster-samples.json'),samples)
   try:parallel(lambda hi:rpc(hi[1],dict(op='cleanup',run=run)))
