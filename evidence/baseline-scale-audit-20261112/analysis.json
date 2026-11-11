@@ -1,0 +1,157 @@
+{
+  "status": "OFFLINE_ANALYSIS_NO_CLOUD_NO_TF",
+  "scale": {
+    "actors_current": 24,
+    "actors_official": 256,
+    "actor_ratio": 0.09375,
+    "nominal_official_training_decisions_per_round": 12800000,
+    "nominal_official_rounds_unknown": true,
+    "current_transitions": 2418460,
+    "fraction_of_one_nominal_official_round": 0.1889421875,
+    "current_mean_transitions_per_actor": 100769.16666666667,
+    "current_min_transitions_per_actor": 50001,
+    "current_max_transitions_per_actor": 132115,
+    "official_replay_capacity_from_launcher": 880000,
+    "current_replay": 150000,
+    "official_slots_per_actor": 3437.5,
+    "current_mean_slots_per_actor": 6250.0,
+    "current_critic_iterations": 240617,
+    "current_replay_row_draws": 123195904,
+    "replay_rows_per_transition": 50.93981459275737,
+    "current_learner_minutes": 49.031211580783335,
+    "h0_learner_minutes": 38.45575155626666,
+    "h0_transitions": 2412694,
+    "h0_updates": 240040,
+    "current_final_replay_total_fraction": 0.062022940218155354,
+    "official_replay_fraction_of_one_nominal_round": 0.06875,
+    "scale_match_13M_at_observed_average_hours": 4.325062975571416,
+    "theoretical_24actor_realtime20ms_max_samples_per_s": 1200,
+    "actual_current_average_samples_per_s": 822.0817998807995,
+    "warning": "Nominal50k epochs are not verified successful insertions. Learner duration includes startup/drain; fixed-rate projections are arithmetic, not convergence or fee estimates. Official learner update count/UTD unavailable."
+  },
+  "training": {
+    "learner_log_rows": 588,
+    "actor_monitor_rows": 42,
+    "actor_monitor_first_inserted": 744775.0,
+    "actor_monitor_first_is_not_training_start": true,
+    "fifo_max_logged": 16.0,
+    "max_credit_debt_logged": 2123.1000000000004,
+    "max_credit_debt_after100k": 2.400000000023283,
+    "first_update_gate_inserted": 34534,
+    "gate_credit_available": 2224,
+    "first_gate_min_actor_inserted": 774,
+    "final_debt": 0,
+    "finite_numerical_faults": [],
+    "final_actor_grad": 7.844821681146641e-09,
+    "h0_final_logged_actor_grad": 0.8907859325408936,
+    "actor_grad_max": 0.8474609851837158,
+    "actor_grad_min": 0.0,
+    "first_logged_actor_grad_below_1e_minus6": 391570.0,
+    "fraction_logged_points_actor_grad_below_1e_minus6": 0.5224913494809689,
+    "all_min_observed": [
+      1236014.0
+    ],
+    "all_max_observed": [
+      1320679.0,
+      1373110.0
+    ],
+    "monitor_last": {
+      "epoch": 1794412496.9899666,
+      "inserted": 2417092.0,
+      "critic_iterations": 240479.0,
+      "fifo_backlog": 0.0,
+      "minimum_condition_inserted": 49985.0,
+      "min_saturation_actors": 18.0,
+      "max_saturation_actors": 6.0,
+      "low_window_actors": 18.0
+    },
+    "h0_low_window_max_logged": 17.0,
+    "h0_low_window_final_logged": 0.0
+  },
+  "performance": {
+    "overall": {
+      "utilization": 0.9176839598533658,
+      "queue_mean_ms": 274.48676984760783,
+      "queue_p95_ms": 330.1111111111111,
+      "queue_p99_ms": 331.06944444444446,
+      "drop_fraction": 0.1521933846069358
+    },
+    "failed_check_counts": {
+      "utilization": 2,
+      "mean_queue": 24,
+      "p95": 24,
+      "trim_drop": 17,
+      "tail": 2,
+      "no_catastrophe": 4,
+      "post_handoff_drop": 16
+    },
+    "by_rtt_condition_equal_repeat_means": {
+      "20": {
+        "utilization": 0.9482420970357769,
+        "queue_mean_ms": 85.03082764576476,
+        "queue_p95_ms": 100.77777777777777,
+        "drop_fraction": 0.26903438025957804
+      },
+      "50": {
+        "utilization": 0.810563289350897,
+        "queue_mean_ms": 177.02096150418984,
+        "queue_p95_ms": 234.27777777777777,
+        "drop_fraction": 0.1998892056717983
+      },
+      "100": {
+        "utilization": 0.9175094358761079,
+        "queue_mean_ms": 346.81404172211893,
+        "queue_p95_ms": 428.6111111111111,
+        "drop_fraction": 0.10513024384303025
+      },
+      "200": {
+        "utilization": 0.9944210171506813,
+        "queue_mean_ms": 489.08124851835777,
+        "queue_p95_ms": 556.7777777777778,
+        "drop_fraction": 0.0347197086533366
+      }
+    },
+    "catastrophic_runs": 5,
+    "catastrophic_conditions": [
+      "G36-R50",
+      "G72-R100",
+      "G72-R20",
+      "G72-R50"
+    ],
+    "maximum_logged_control_period_ms": 839.284,
+    "worst_run_control_p95_ms": 68.91720000000001,
+    "low_utilization_median_conditions": [
+      "G36-R50",
+      "G72-R50"
+    ],
+    "zero_drop_high_util_R100plus_inferred_flight_bytes": {
+      "count": 7,
+      "mean": 3112635.169739712,
+      "min": 3087553.9289086005,
+      "max": 3121352.3863693643,
+      "inference_only": true,
+      "not_socket_measurement": true
+    }
+  },
+  "config_differences": {
+    "checkpoint_interval": {
+      "h0": 500000,
+      "current": 300000
+    },
+    "target_bn_consistent": {
+      "h0": null,
+      "current": true
+    },
+    "performance_guard_policy": {
+      "h0": null,
+      "current": "warn"
+    }
+  },
+  "source_proof": "upstream-proof.json",
+  "limitations": [
+    "No new TF queries, optimizer replay, TCP or cloud log reads.",
+    "Gradients are logged diagnostics, not parameter movements or ground-truth environment gradients.",
+    "Actor monitor begins744775; earlier actor saturation cannot be dated from it.",
+    "H0 and current are not matched one-factor causal runs."
+  ]
+}

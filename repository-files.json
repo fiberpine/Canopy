@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-12 targetBN-only2.418M training endpoint health FAIL; original cluster teardown FAILED; strict225k admission PASS;70/72 original frozen plus2 separately labeled zero-policy startup repairs; no healthy baseline",
+  "scope": "2026-11-12 offline baseline scale/source/trajectory audit; no new cloud or learning; prior full endpoint remains FAIL",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12778,
-      "sha256": "3e69b6f45836fab7c6fc31f4eb06dd681b95c30b7c8d50dc045f6c7a57e9e18f"
+      "bytes": 13120,
+      "sha256": "7db8b2ddd83c57032780b3b7abb944abbe86c350f5d98ea894e9dfdf83de2bce"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -56,6 +56,11 @@
       "path": "docs/BASELINE_RECOVERY_20261111.md",
       "bytes": 6097,
       "sha256": "8d1287be750ab79a18b19019bea2f9f59a2719957bbb4a31b62af0b9fc0f4053"
+    },
+    {
+      "path": "docs/BASELINE_SCALE_AND_FAILURE_AUDIT_20261112.md",
+      "bytes": 17780,
+      "sha256": "c1989ea9b4de5e0a904a4d4fa59a6a5e75824673219f147960c260975b77376b"
     },
     {
       "path": "docs/BASELINE_TARGET_RETRAIN_20261111.md",
@@ -99,8 +104,8 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 61363,
-      "sha256": "d5a1c5615849ba472da72661625cc3b4caaabdc3b4022f9467b01bb8d68a4521"
+      "bytes": 61781,
+      "sha256": "48d367161e7f6561eec774fc7dc6471b5be160b3cfb64c1f54f5fad931560863"
     },
     {
       "path": "docs/SCALAR_BASE_ROADMAP.md",
@@ -6841,6 +6846,51 @@
       "path": "evidence/baseline-review-20261111/round4-sent.md",
       "bytes": 4505,
       "sha256": "d5c0f6b1b7238f61c7a01a785fefc8213fc0702d2936eee0092b0151ec26f82b"
+    },
+    {
+      "path": "evidence/baseline-scale-audit-20261112/actor-information-balance.json",
+      "bytes": 4655,
+      "sha256": "51ab5896b8c3847c43b70709b64e242308ecbaec1e5cc0a163998a8006483477"
+    },
+    {
+      "path": "evidence/baseline-scale-audit-20261112/analysis.json",
+      "bytes": 5498,
+      "sha256": "7ea9f026692af5e0e0475557e0423bcf3e8c2feed5673cb53c3da95863492994"
+    },
+    {
+      "path": "evidence/baseline-scale-audit-20261112/current-training.csv",
+      "bytes": 147996,
+      "sha256": "d53335907067c01424f095d423b93e1a162b0ea4a697863b126c9cbf49136510"
+    },
+    {
+      "path": "evidence/baseline-scale-audit-20261112/h0-and-current-facts.json",
+      "bytes": 16969,
+      "sha256": "4e12691c2c28e0dfcb2c4d3c75a3fa993ad601e43d8dc6e9b28ab479df2dd931"
+    },
+    {
+      "path": "evidence/baseline-scale-audit-20261112/performance-cells.json",
+      "bytes": 17487,
+      "sha256": "b89872fcfbcb2ac62d50ff638c393812a5210aa355eb134ca95c84729347cb8f"
+    },
+    {
+      "path": "evidence/baseline-scale-audit-20261112/summary.md",
+      "bytes": 2623,
+      "sha256": "aa1cc97245df9937d1754868e296ef48f778bb93668679af801106a549c1ab35"
+    },
+    {
+      "path": "evidence/baseline-scale-audit-20261112/trajectory-milestones.json",
+      "bytes": 7832,
+      "sha256": "e7c45be93331283cb53896b7a5e8015abf232a4d3bb2325bafd2c751b0be7f0a"
+    },
+    {
+      "path": "evidence/baseline-scale-audit-20261112/upstream-proof.json",
+      "bytes": 8814,
+      "sha256": "5c8a4e3e28fa0bab082f345d537c0a40988268e528976934600c3fac695a0003"
+    },
+    {
+      "path": "evidence/baseline-scale-audit-20261112/validation.json",
+      "bytes": 430,
+      "sha256": "0a2c168c2f84171cc47ff8a6ea35502df980852831594d2c1102ffd670395766"
     },
     {
       "path": "evidence/baseline-screen-20261111/README.md",
@@ -22673,6 +22723,11 @@
       "path": "templates/scalar-orca-moving-train.json",
       "bytes": 13938,
       "sha256": "b1eff100fdcf4c75210361f9a0e31ccd8c024394095984fd0722140b6c079e48"
+    },
+    {
+      "path": "tools/analyze_baseline_scale.py",
+      "bytes": 9523,
+      "sha256": "fa1e6e1831dbacdd127e98edb2a89307e5d8aad43b28d570103fad54cbe5914e"
     },
     {
       "path": "tools/audit_baseline_target_bn.py",

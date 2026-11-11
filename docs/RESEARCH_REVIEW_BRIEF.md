@@ -1,3 +1,9 @@
+# 最新：规模与源码差异已离线复核（2026-11-12）
+
+[完整分析](BASELINE_SCALE_AND_FAILURE_AUDIT_20261112.md)和[复算证据](../evidence/baseline-scale-audit-20261112/summary.md)补齐规模、目标/执行差异、588行learner全程和固定权重连接敏感性。训练不足仍待检验；H0不等于当前全部健康门通过。当前0云连接/0新TCP/0新TF，五机可关闭。
+
+---
+
 # 最新：目标BN完整重训仍未得到健康基座（2026-11-12）
 
 [目标BN单变量完整重训与最终评测](../evidence/baseline-target-retrain-20261111/summary.md)：短准入通过，fresh seed3完成2,418,460条/240,617完整更新；最终健康 **FAIL**（利用率91.77%、mean queue 274.49ms）。原72项70完成、2项首次策略动作前启动失败，2项同权重补测单列。正式训练因清理超时保留FAILED，完整终点已持久化且独立验账；五机最终收尾通过。没有新健康基座、第二训练seed或双动作收益结论。[下一步复核方向](BASELINE_TARGET_RETRAIN_20261111.md)。
