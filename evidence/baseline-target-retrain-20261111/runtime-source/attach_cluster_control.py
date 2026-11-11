@@ -1,0 +1,124 @@
+"""Deadline-bounded five-node control; data/inference use TF directly over VPC."""
+import pathlib,json,time,subprocess,sys,os,concurrent.futures,traceback,csv,hashlib,math
+R=pathlib.Path(__file__).resolve().parent;PY=sys.executable
+import node_control as node
+A=json.loads(pathlib.Path(os.environ.get('ORCA_AUTHORIZATION_FILE',str(R/'configs/authorization.json'))).read_text());HOSTS=[x['ip'] for x in A['nodes'][1:]];DEADLINE=A['deadline_epoch']
+SSH=['ssh','-i',os.environ.get('ORCA_SSH_KEY',str(R/'id_cluster')),'-o','UserKnownHostsFile='+os.environ.get('ORCA_KNOWN_HOSTS',str(R/'known_hosts')),'-o','StrictHostKeyChecking=yes','-o','BatchMode=yes','-o','ConnectTimeout=5','-o','ServerAliveInterval=5','-o','ServerAliveCountMax=2']
+def rpc(host,request,timeout=35):
+ p=subprocess.run(([PY,str(R/'node_control.py'),'rpc'] if host=='local' else SSH+['ubuntu@'+host,PY+' '+str(R/'node_control.py')+' rpc']),input=json.dumps(request).encode(),stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=timeout)
+ if p.returncode:raise RuntimeError(host+': '+p.stderr.decode(errors='replace')[-1500:]+p.stdout.decode(errors='replace')[-500:])
+ return json.loads(p.stdout)
+def parallel(fn):
+ with concurrent.futures.ThreadPoolExecutor(max_workers=max(1,len(HOSTS))) as pool:return list(pool.map(fn,enumerate(HOSTS)))
+def progress(stage,**data):node.dump(R/'logs/controller-status.json',dict(stage=stage,epoch=time.time(),remaining_s=DEADLINE-time.time(),**data))
+def write(host,path,text):return rpc(host,dict(op='write',path=str(path),text=text))
+def make_config(run,per_host,u,formal=False,steps=100000,portbase=48200):
+ source=json.loads(pathlib.Path('/home/experiment/orca-capacity-20261009-165124/configs/formal.json').read_text())
+ assert source['LOSS_TYPE'] in ['HUBER','MSE'],'Future runs must inherit an explicit validated critic loss'
+ base=source['conditions'][:4];conditions=[];assignment=[]
+ for slot in range(per_host):
+  for host in range(4):conditions.append(base[(host+slot)%4]);assignment.append(host)
+ return dict(run_id=run,model_id=run,seed=3,num_actors=4*per_host,steps_per_actor=steps,memsize=150000,sampler='contiguous',warmup=10240,update_ratio=u,reward_mode='raw',LOSS_TYPE=source['LOSS_TYPE'],control_period_ms=20,conditions=conditions,actor_hosts=assignment,learner_endpoint='HOST_IP_1:48100',direct_actor_session=True,tf_threads=4,optimizer_sleep_ms=0,target_no_fetch=False,serialized_start=True,instrument_timing=True,profile_stages=True,checkpoint_interval=200000 if formal else 1000000000,exploration_std=.2,fixed_action=None if formal else 0.,capacity_only=not formal,stop_file=str(R/'logs'/(run+'-stop.json')),absolute_deadline_epoch=DEADLINE-180,timeout_s=5400 if formal else 600,shutdown_barrier_s=240,actor_port_base=portbase,code_commit=subprocess.check_output(['git','-C',str(R),'rev-parse','HEAD']).decode().strip(),model_source='random initialization seed3',configuration_notes='Same preserved raw-reward Canopy model architecture; explicit inherited critic loss. Capacity fixed executed neutral action while actual remote policy inference remains active')
+def execute(cfg,duration=None):
+ assert cfg.get('performance_guard_policy','stop') in ('stop','warn')
+ run=cfg['run_id'];assert time.time()<DEADLINE-600
+ start=time.time();samples=[];results={};failure=None;stop_reason=None;all_ready=None;debt_since=None;bad_since={}
+ sample_path=R/'logs'/(run+'-cluster-samples.jsonl');samples=[json.loads(line) for line in sample_path.read_text().splitlines()]
+ sample_stream=sample_path.open('a',buffering=262144)
+ def get_status():
+  rows=parallel(lambda hi:rpc(hi[1],dict(op='status',run=run)))
+  for row in rows:row['entries']=[e for e in row['entries'] if e['role']=='actor']
+  return rows
+ def stop(reason):
+  node.signal_stop(run,reason);parallel(lambda hi:rpc(hi[1],dict(op='stop',run=run,reason=reason)))
+ # Attach preflight/activation errors must never stop the existing training.
+ try:
+  local=node.status(run);statuses=get_status()
+  assert len(local['entries'])==1 and local['entries'][0]['alive']
+  entries=[entry for host in statuses for entry in host['entries']]
+  assert len(entries)==cfg['num_actors'] and all(entry['alive'] for entry in entries)
+  all_ready=cfg['_original_all_ready_epoch'];start=cfg['_original_start_epoch']
+  node.dump(R/'audit'/(run+'-handover-ready.json'),dict(learner=local['entries'][0]['pid'],actors={entry['index']:entry['pid'] for entry in entries},epoch=time.time()))
+ except BaseException:
+  (R/'audit'/(run+'-handover-preflight-error.txt')).write_text(traceback.format_exc());os._exit(2)
+ until=time.time()+30
+ while not (R/'audit'/(run+'-handover-activate.json')).exists():
+  if time.time()>until or (R/'audit'/(run+'-handover-abort.json')).exists():os._exit(3)
+  time.sleep(.1)
+ try:
+  while True:
+   statuses=get_status();local=node.status(run);now=time.time();entries=[x for s in statuses for x in s['entries']]
+   for entry in entries:
+    i=entry['index'];p=entry['producer']
+    if p is not None:
+     results[i]=p;node.dump(R/'logs'/(run+'-actor%d'%i)/'producer.json',p)
+    if entry['result'] and entry['result']['status']!='COMPLETED':raise RuntimeError('actor%d: %s'%(i,entry['result']['reason']))
+    if not entry['alive'] and not entry['producer']:raise RuntimeError('actor%d died without producer record'%i)
+   training=local['entries'][0]['training'];latest=training[-1] if training else {}
+   if cfg.get('require_coverage_gate') and not (R/'logs'/run/'coverage-ready.json').exists():
+    minimum=cfg.get('minimum_enqueued_per_actor',512)
+    coverage={e['index']:e.get('ingress_progress',{}).get('enqueued',0) for e in entries}
+    if len(coverage)==cfg['num_actors'] and min(coverage.values())>=minimum:
+     node.dump(R/'logs'/run/'coverage-ready.json',dict(epoch=now,all_ready_epoch=all_ready,minimum_enqueued_per_actor=minimum,per_actor_lower_bound=coverage,definition='Coordinator confirms all actors active and minimum enqueued. Learner independently gates on its exact per-actor INSERTED counters. Delayed training-log totals must never be compared against newer producer snapshots.'))
+   if latest:
+    debt=max(0,(int(latest['inserted'])-cfg['warmup'])*cfg['update_ratio']-int(latest['critic_iterations']))
+    debt_since=(debt_since or now) if debt>1000 else None
+    if not cfg['capacity_only'] and debt_since and now-debt_since>120 and not stop_reason and cfg.get('performance_guard_policy','stop')=='stop':stop_reason='SUSTAINED_UPDATE_DEBT';stop(stop_reason)
+    if not cfg['capacity_only'] and int(latest['inserted'])>=cfg.get('collapse_guard_after_samples',500000):
+     for host_index,s in enumerate(statuses):
+      for entry in s['entries']:
+       i=entry['index'];recent=entry.get('recent',{});bad=recent.get('min_saturation',0)>=.99 and recent.get('cwnd_mean',1e6)<=10
+       if bad:
+        network=rpc(HOSTS[host_index],dict(op='recent_network',run=run,index=i));bad=network is not None and network['utilization'] is not None and network['utilization']<.25;entry['recent_network']=network
+       bad_since[i]=(bad_since.get(i) or now) if bad else None
+       entry['persistent_low_window_warning']=bool(bad_since[i] and now-bad_since[i]>=cfg.get('collapse_guard_seconds',300))
+       if entry['persistent_low_window_warning'] and not stop_reason and cfg.get('performance_guard_policy','stop')=='stop':stop_reason='PERSISTENT_LOW_WINDOW_LOW_UTIL_ACTOR%d'%i;stop(stop_reason)
+   else:debt=None
+   if not stop_reason and cfg.get('sample_budget') and latest and int(latest['inserted'])>=cfg['sample_budget']:stop_reason='SAMPLE_BUDGET_COMPLETE';stop(stop_reason)
+   if not stop_reason and ((duration and now-all_ready>=duration) or now>=DEADLINE-cfg.get('evaluation_reserve_s',900) or now-start>cfg['timeout_s']-90):
+    stop_reason='CAPACITY_WINDOW_COMPLETE' if duration and now-all_ready>=duration else 'RESERVE_EVALUATION_OR_TIMEOUT';stop(stop_reason)
+   samples.append(dict(epoch=now,learner=local,actors=statuses,debt=debt,update_debt_warning=bool(debt_since and now-debt_since>120)))
+   sample_stream.write(json.dumps(samples[-1])+'\n');sample_stream.flush()
+   progress('RUNNING',run_id=run,actors=cfg['num_actors'],all_ready_epoch=all_ready,latest=latest,debt=debt,producer_complete=len(results),stop_reason=stop_reason)
+   if (R/'logs'/run/'finished').exists():
+    parallel(lambda hi:write(hi[1],'logs/'+run+'/finished',(R/'logs'/run/'finished').read_text()))
+    break
+   if not local['entries'][0]['alive']:raise RuntimeError('learner exited without result')
+   if time.time()-start>cfg['timeout_s']:raise RuntimeError('cluster bounded timeout')
+   time.sleep(5)
+  until=time.time()+30
+  while time.time()<until:
+   if all(not x['alive'] for s in get_status() for x in s['entries']):break
+   time.sleep(1)
+  summaries=parallel(lambda hi:rpc(hi[1],dict(op='summarize',run=run),timeout=120));actors=[x for part in summaries for x in part]
+  node.dump(R/'metrics'/(run+'-actors.json'),actors)
+  final=node.load(R/'logs'/run/'result.json',{})
+  if final.get('status')!='COMPLETED':raise RuntimeError('learner failed: '+str(final.get('reason')))
+  produced=sum(x.get('generated',0) for x in results.values());enqueued=sum(x.get('enqueued',0) for x in results.values())
+  if len(results)!=cfg['num_actors'] or produced!=enqueued or enqueued!=final.get('inserted'):raise RuntimeError('generated/enqueued/inserted mismatch')
+  if any(x['mapping_errors'] for x in actors):raise RuntimeError('action mapping/alignment error')
+  if not stop_reason and cfg.get('sample_budget_enforcement') and produced==cfg['sample_budget']:stop_reason='PER_ACTOR_SAMPLE_QUOTAS_COMPLETE'
+ except Exception as error:
+  failure=str(error);(R/'logs'/(run+'-failure.txt')).write_text(traceback.format_exc())
+  try:
+   stop('FAILURE: '+failure)
+   from baseline_admission import drain_after_failure
+   def forward_failure_producer(index,producer):
+    results[index]=producer;node.dump(R/'logs'/(run+'-actor%d'%index)/'producer.json',producer)
+   drained=drain_after_failure(cfg['num_actors'],lambda:[entry for host in get_status() for entry in host['entries']],forward_failure_producer,lambda:(R/'logs'/run/'finished').exists(),min(45,max(0,DEADLINE-time.time()-15)))
+   node.dump(R/'audit'/(run+'-failure-drain.json'),drained)
+  except Exception as drain_error:(R/'logs'/(run+'-failure-drain-error.txt')).write_text(str(drain_error))
+ finally:
+  sample_stream.close();node.dump(R/'logs'/(run+'-cluster-samples.json'),samples)
+  try:parallel(lambda hi:rpc(hi[1],dict(op='cleanup',run=run)))
+  except Exception as error:(R/'logs'/(run+'-cleanup-error.txt')).write_text(str(error))
+  node.cleanup(run)
+  result=dict(run_id=run,status='FAILED' if failure else 'COMPLETED',reason=failure,stop_reason=stop_reason,wall_s=time.time()-start,started_epoch=start,all_ready_epoch=all_ready,final=node.load(R/'logs'/run/'result.json'),producer_records=results)
+  node.dump(R/'metrics'/(run+'-cluster-result.json'),result);progress('UNIT_COMPLETE',**result)
+ if failure:raise RuntimeError(failure)
+ return result
+def main():
+ import argparse
+ p=argparse.ArgumentParser();p.add_argument('mode',choices=['capacity','formal']);p.add_argument('--run',required=True);p.add_argument('--per-host',type=int,required=True);p.add_argument('--u',type=float,required=True);p.add_argument('--seconds',type=int,default=120);p.add_argument('--steps',type=int,default=100000);p.add_argument('--port-base',type=int,default=48200);a=p.parse_args()
+ cfg=make_config(a.run,a.per_host,a.u,a.mode=='formal',a.steps,a.port_base);result=execute(cfg,a.seconds if a.mode=='capacity' else None);print(json.dumps(result),flush=True)
+if __name__=='__main__':main()

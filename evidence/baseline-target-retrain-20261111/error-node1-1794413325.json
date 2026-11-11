@@ -1,0 +1,5 @@
+{
+  "code": 1,
+  "output": "",
+  "error": "Traceback (most recent call last):\n  File \"/home/experiment/orca-targetbn-retrain-20261111-night/controller-tasks/8aa6d793d83d40559feb904a9a4de002.py\", line 13, in <module>\n    with (d/'control.csv').open() as s:assert not list(csv.DictReader(s))\n  File \"/usr/lib/python3.6/pathlib.py\", line 1183, in open\n    opener=self._opener)\n  File \"/usr/lib/python3.6/pathlib.py\", line 1037, in _opener\n    return self._accessor.open(self, flags, mode)\n  File \"/usr/lib/python3.6/pathlib.py\", line 387, in wrapped\n    return strfunc(str(pathobj), *args)\nFileNotFoundError: [Errno 2] No such file or directory: '/home/experiment/orca-targetbn-retrain-20261111-night/frameworks/baseline/logs/targetbn-confirm-r0-c06/control.csv'\n"
+}

@@ -1,0 +1,205 @@
+[
+  [
+    {
+      "node": 1,
+      "actor": 16,
+      "condition": "G48-R20",
+      "windows": [
+        {
+          "step": 1800000,
+          "checkpoint_epoch": 1794280595.1109333,
+          "start_epoch": 1794280535.1109333,
+          "end_epoch": 1794280595.1109333,
+          "rows": 2710,
+          "exposure_seconds": 59.97071400000016,
+          "reward": 0.8037691189681447,
+          "throughput_term": 0.846846825008734,
+          "max_bw_capacity": 1.025253622995149,
+          "capacity_bytes": 359967360,
+          "departure_bytes": 348503872,
+          "queue_sum": 1354490.0,
+          "departures": 231718,
+          "arrivals": 231713,
+          "drops": 0,
+          "utilization": 0.9681540904153088,
+          "mean_queue_ms": 5.845424179390466,
+          "drop_fraction": 0.0
+        },
+        {
+          "step": 2410158,
+          "checkpoint_epoch": 1794281171.096219,
+          "start_epoch": 1794281104.884268,
+          "end_epoch": 1794281164.884268,
+          "rows": 2710,
+          "exposure_seconds": 59.98419499999988,
+          "reward": 0.7844902819807988,
+          "throughput_term": 0.8499777488148108,
+          "max_bw_capacity": 1.0252536229951537,
+          "capacity_bytes": 359967360,
+          "departure_bytes": 351414112,
+          "queue_sum": 1609125.0,
+          "departures": 233653,
+          "arrivals": 233667,
+          "drops": 0,
+          "utilization": 0.9762388234311022,
+          "mean_queue_ms": 6.886815063363192,
+          "drop_fraction": 0.0
+        }
+      ],
+      "clock": "Packet epoch=(init timestamp+event timestamp)/1000; training end clipped to last observed state",
+      "limitation": "Checkpoint file mtime is an anchor; online weights change and exploration is active. Descriptive only."
+    }
+  ],
+  [
+    {
+      "node": 2,
+      "actor": 21,
+      "condition": "G72-R20",
+      "windows": [
+        {
+          "step": 1800000,
+          "checkpoint_epoch": 1794280595.1109333,
+          "start_epoch": 1794280535.1109333,
+          "end_epoch": 1794280595.1109333,
+          "rows": 2680,
+          "exposure_seconds": 59.98208399999996,
+          "reward": 0.8052465843228027,
+          "throughput_term": 0.8445426542030305,
+          "max_bw_capacity": 1.020248477322506,
+          "capacity_bytes": 539996160,
+          "departure_bytes": 521044256,
+          "queue_sum": 1972759.0,
+          "departures": 346439,
+          "arrivals": 346486,
+          "drops": 0,
+          "utilization": 0.9649036319073083,
+          "mean_queue_ms": 5.694390643085796,
+          "drop_fraction": 0.0
+        },
+        {
+          "step": 2410158,
+          "checkpoint_epoch": 1794281171.096219,
+          "start_epoch": 1794281104.9094784,
+          "end_epoch": 1794281164.9094784,
+          "rows": 2680,
+          "exposure_seconds": 59.988966000000005,
+          "reward": 0.7832745549613548,
+          "throughput_term": 0.8512663340115271,
+          "max_bw_capacity": 1.0202484773225045,
+          "capacity_bytes": 539996160,
+          "departure_bytes": 528791360,
+          "queue_sum": 2533920.0,
+          "departures": 351590,
+          "arrivals": 351600,
+          "drops": 0,
+          "utilization": 0.9792502228163993,
+          "mean_queue_ms": 7.207030916692739,
+          "drop_fraction": 0.0
+        }
+      ],
+      "clock": "Packet epoch=(init timestamp+event timestamp)/1000; training end clipped to last observed state",
+      "limitation": "Checkpoint file mtime is an anchor; online weights change and exploration is active. Descriptive only."
+    }
+  ],
+  [],
+  [
+    {
+      "node": 4,
+      "actor": 3,
+      "condition": "G12-R200",
+      "windows": [
+        {
+          "step": 1800000,
+          "checkpoint_epoch": 1794280595.1109333,
+          "start_epoch": 1794280535.1109333,
+          "end_epoch": 1794280595.1109333,
+          "rows": 2675,
+          "exposure_seconds": 59.98490099999995,
+          "reward": 0.862419596726095,
+          "throughput_term": 0.8662356838106422,
+          "max_bw_capacity": 1.0309785740199309,
+          "capacity_bytes": 89969280,
+          "departure_bytes": 87089120,
+          "queue_sum": 1637593.0,
+          "departures": 57905,
+          "arrivals": 57901,
+          "drops": 0,
+          "utilization": 0.9679872952189903,
+          "mean_queue_ms": 28.280683878766947,
+          "drop_fraction": 0.0
+        },
+        {
+          "step": 2410158,
+          "checkpoint_epoch": 1794281171.096219,
+          "start_epoch": 1794281104.9200091,
+          "end_epoch": 1794281164.9200091,
+          "rows": 2679,
+          "exposure_seconds": 59.98222999999998,
+          "reward": 0.8735327337967074,
+          "throughput_term": 0.874464508559573,
+          "max_bw_capacity": 1.0309785740199335,
+          "capacity_bytes": 89969280,
+          "departure_bytes": 87329760,
+          "queue_sum": 1382492.0,
+          "departures": 58065,
+          "arrivals": 58066,
+          "drops": 0,
+          "utilization": 0.9706619859578737,
+          "mean_queue_ms": 23.80938603289417,
+          "drop_fraction": 0.0
+        }
+      ],
+      "clock": "Packet epoch=(init timestamp+event timestamp)/1000; training end clipped to last observed state",
+      "limitation": "Checkpoint file mtime is an anchor; online weights change and exploration is active. Descriptive only."
+    },
+    {
+      "node": 4,
+      "actor": 19,
+      "condition": "G48-R200",
+      "windows": [
+        {
+          "step": 1800000,
+          "checkpoint_epoch": 1794280595.1109333,
+          "start_epoch": 1794280535.1109333,
+          "end_epoch": 1794280595.1109333,
+          "rows": 2678,
+          "exposure_seconds": 59.97510099999999,
+          "reward": 0.8859179670845894,
+          "throughput_term": 0.8904510591451928,
+          "max_bw_capacity": 1.0074295069419625,
+          "capacity_bytes": 359967360,
+          "departure_bytes": 350095104,
+          "queue_sum": 6689256.0,
+          "departures": 232776,
+          "arrivals": 232744,
+          "drops": 0,
+          "utilization": 0.972574580095262,
+          "mean_queue_ms": 28.736880090731002,
+          "drop_fraction": 0.0
+        },
+        {
+          "step": 2410158,
+          "checkpoint_epoch": 1794281171.096219,
+          "start_epoch": 1794281104.906716,
+          "end_epoch": 1794281164.906716,
+          "rows": 2677,
+          "exposure_seconds": 59.97819499999997,
+          "reward": 0.9006638832315832,
+          "throughput_term": 0.9025868345242656,
+          "max_bw_capacity": 1.0074295069419603,
+          "capacity_bytes": 359967360,
+          "departure_bytes": 352891040,
+          "queue_sum": 6084373.0,
+          "departures": 234635,
+          "arrivals": 234748,
+          "drops": 0,
+          "utilization": 0.9803417732096599,
+          "mean_queue_ms": 25.931225094295396,
+          "drop_fraction": 0.0
+        }
+      ],
+      "clock": "Packet epoch=(init timestamp+event timestamp)/1000; training end clipped to last observed state",
+      "limitation": "Checkpoint file mtime is an anchor; online weights change and exploration is active. Descriptive only."
+    }
+  ]
+]

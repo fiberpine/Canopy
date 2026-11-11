@@ -1,5 +1,7 @@
 # Canopy：baseline与两种MTP双动作实现
 
+[目标BN单变量完整重训与最终评测](evidence/baseline-target-retrain-20261111/summary.md)：短准入通过，fresh seed3完成2,418,460条/240,617完整更新；最终健康 **FAIL**（利用率91.77%、mean queue 274.49ms）。原72项70完成、2项首次策略动作前启动失败，2项同权重补测单列。正式训练因清理超时保留FAILED，完整终点已持久化且独立验账；五机最终收尾通过。没有新健康基座、第二训练seed或双动作收益结论。[下一步复核方向](docs/BASELINE_TARGET_RETRAIN_20261111.md)。
+
 [与 Claude 复核后的下一轮方案](docs/BASELINE_NEXT_TRAIN_20261111.md)：先只读核对目标BN，再决定BN修复或重连这个单一训练变量。正常入口配置、逐连接清理和真实保存压力准入仍需补齐；目前正式重训NO-GO，本次没有新云端实验。
 
 [11 月 11 日筛查与准入结果](evidence/baseline-screen-20261111/summary.md)：24 次冻结执行成功，四个候选未过六条件粗筛；两次重连准入均在更新前失败，72 次确认与正式重训未启动。[独立重连修复](docs/BASELINE_RECOVERY_20261111.md)已通过 173 项离线测试，最新端口及清理修复仍待真实准入，没有新健康基座。

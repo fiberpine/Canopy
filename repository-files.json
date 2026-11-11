@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-11 checkpoint screen NO_CANDIDATE; two real reconnect admissions failed before updates; postrun fixes offline only; confirmation and formal training NOT_RUN",
+  "scope": "2026-11-12 targetBN-only2.418M training endpoint health FAIL; original cluster teardown FAILED; strict225k admission PASS;70/72 original frozen plus2 separately labeled zero-policy startup repairs; no healthy baseline",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12201,
-      "sha256": "7c006bbdabc575093ea1f6e85512c62b826083f79cb44185b98100ab3bdb2d43"
+      "bytes": 12778,
+      "sha256": "3e69b6f45836fab7c6fc31f4eb06dd681b95c30b7c8d50dc045f6c7a57e9e18f"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -49,13 +49,18 @@
     },
     {
       "path": "docs/BASELINE_NEXT_TRAIN_20261111.md",
-      "bytes": 7795,
-      "sha256": "983b741ab3a179f33abef4cf9e9f8e51839f67656d47883997f30e43f87c737c"
+      "bytes": 8308,
+      "sha256": "111cacb9e7a0396aebd4de2c2d34b9a1609c8054f72e64698a337b6f6a7dae7a"
     },
     {
       "path": "docs/BASELINE_RECOVERY_20261111.md",
       "bytes": 6097,
       "sha256": "8d1287be750ab79a18b19019bea2f9f59a2719957bbb4a31b62af0b9fc0f4053"
+    },
+    {
+      "path": "docs/BASELINE_TARGET_RETRAIN_20261111.md",
+      "bytes": 2435,
+      "sha256": "e047835c703ae151398b560828f9e8b605bb55eb97b43ad2ff51f53783c07b08"
     },
     {
       "path": "docs/BASE_FIRST_PRINCIPLES_REVIEW.md",
@@ -94,8 +99,8 @@
     },
     {
       "path": "docs/RESEARCH_REVIEW_BRIEF.md",
-      "bytes": 60441,
-      "sha256": "9fe82502729731351794448f1fbf0ccca41462906a423ca8a49348f12d999310"
+      "bytes": 61363,
+      "sha256": "d5a1c5615849ba472da72661625cc3b4caaabdc3b4022f9467b01bb8d68a4521"
     },
     {
       "path": "docs/SCALAR_BASE_ROADMAP.md",
@@ -6991,6 +6996,461 @@
       "path": "evidence/baseline-screen-20261111/verify_results.py",
       "bytes": 3004,
       "sha256": "bf09630960efb788cdbc41228e12e1fa5a63a6240c28b8a678407dc0d1717cdb"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/admission-failure-review.json",
+      "bytes": 20227,
+      "sha256": "c7ecb41e8858db4084b7d9cee1dedae055088680cdb0c6d451d33f74e1bfb036"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/admission-latest.json",
+      "bytes": 78542,
+      "sha256": "9fac3edc4fb665bb9fa13ba0b3d62b732dc6246d165fa8c1b9a9a4d6465b603a"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/admission-launch.json",
+      "bytes": 863,
+      "sha256": "af9f83c4c9c80dc35541a417b07ec1f425196a6b1010d148bcfebb13c94b69ee"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/closure.json",
+      "bytes": 1647,
+      "sha256": "93c38952890d8b1b621e6c3012fc533a34c540be9109f94d7ac17f039679f43e"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/collected-evidence.json",
+      "bytes": 29045,
+      "sha256": "818aafc51edd43d50dd544838b7db5bb7e3f20c5f08b1d27e8d7ab2a291c98ed"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/deployment-r2.json",
+      "bytes": 218,
+      "sha256": "0aa864b2067292d9fa574b6dcf9211b68364ebbde584fb3ad0cc8f6d5cf185fc"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/deployment-r3.json",
+      "bytes": 218,
+      "sha256": "0aa864b2067292d9fa574b6dcf9211b68364ebbde584fb3ad0cc8f6d5cf185fc"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/deployment.json",
+      "bytes": 218,
+      "sha256": "0aa864b2067292d9fa574b6dcf9211b68364ebbde584fb3ad0cc8f6d5cf185fc"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/initial-tensor-parity.json",
+      "bytes": 144,
+      "sha256": "5ddce91c83143a4c6303efb1d7ba7cf3d5d544e08b6fcdba2273d81b226670d4"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/old-training-review.json",
+      "bytes": 7124,
+      "sha256": "b01d26c964b2b26c9d8a469b9c268e40f196a2f7f9302fad5502e465cbe9238e"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/preflight.json",
+      "bytes": 5427,
+      "sha256": "1069099d91341cddeb84fb8d208c45b0213880fef26e51b2c5b912f54f1ecc8c"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/probe-origin-audit.json",
+      "bytes": 8228,
+      "sha256": "8cd736a7bf636c3d82848787231b75769d86843cdf34744fe17a42553c04ff15"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/registration.json",
+      "bytes": 545,
+      "sha256": "18cfa1ac01d94ce7530cacbbef6eb4dc05936e348d1da7140aff7d7d0238f539"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/repaired-target-audit.json",
+      "bytes": 79538,
+      "sha256": "8cf9356f581854f4fc1196315a55b13dbc88b48d03c6891a15a95889922fa494"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/result.json",
+      "bytes": 3308,
+      "sha256": "c450535e25a4901c86293ba464e54c38212d5ef56aca60183642bd07820c27bd"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/runtime-source/control.py",
+      "bytes": 23979,
+      "sha256": "e192658eb436e626e24193b84dc3398c31d03c7e871e00b645cf9f1baeaa290e"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/runtime-source/old_log_review.py",
+      "bytes": 2752,
+      "sha256": "e2d5555a57e71ca9c34418da7c4fc61980744d7bca7230936fbb1086279fc059"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/runtime-source/summarize.py",
+      "bytes": 6721,
+      "sha256": "2f3a1145bcff104009a0914c726fb553d5c5f01ff19dbbd82c873a70e741a655"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/selection-frozen.json",
+      "bytes": 812,
+      "sha256": "6a91f600b41ee32368ad9c600617cbc26bade49f9170a384d3b6a5da3ddfa2e3"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/source-manifest-r2.json",
+      "bytes": 1519,
+      "sha256": "aa7fe7cebe756b9cb40c760907eddb20bb1f5c5020cda33dc146497812db2570"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/source-manifest-r3.json",
+      "bytes": 1519,
+      "sha256": "17eb151e44ab9218ce3a4c82b22c76da4726b3411af5168f713b3876ad036ebe"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/source-manifest.json",
+      "bytes": 1519,
+      "sha256": "d4eaa5ccea9863e31bd13059b80907bcd044005bb3066646316126eb12e64f44"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/stock-target-audit.json",
+      "bytes": 96651,
+      "sha256": "b6fad7073bd61f8bc54f4e688204d2988cc7c66ac6ed0ee964b8b7cf938958c1"
+    },
+    {
+      "path": "evidence/baseline-target-audit-20261111/summary.md",
+      "bytes": 3178,
+      "sha256": "15686b322449e97232159212cf167b367d8e78b1866076d5e2bd66175f780684"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/actor-cleanup-reports.json",
+      "bytes": 339047,
+      "sha256": "db0ce9d063da5eac2be596b696004b9116082a3edb34c530e5ea4f76f72ddcd0"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/admission-cleanup-proof.json",
+      "bytes": 5014,
+      "sha256": "1330325caf2a11f692fa6b3a67a70791736bce0536d5ed311977744447d3e3a8"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/admission-pass.json",
+      "bytes": 85211,
+      "sha256": "e39bd5ba4fa8a9a62b661862c8dcb493ba3642ed9a9b1c51912fd2b13ccc6375"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/admission-r1-latest.json",
+      "bytes": 81557,
+      "sha256": "c6212743f71cbc0c03d5052e214bdbf51ca5bfa51efd2ad3501a7a9cd57f3965"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/admission-r1-launch.json",
+      "bytes": 840,
+      "sha256": "46957616d409f77558ff39d893dff7a907f50ef2bb6d80f0099e02a242320785"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/closure.json",
+      "bytes": 1628,
+      "sha256": "3588babdb62f71758793ef61f2ef065ae84d42587266c99e3d83a8d2f828b423"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/condition-metrics.csv",
+      "bytes": 2799,
+      "sha256": "09444ef7a830433045e3b905433d071e50f4123666511b9cbda97821fc692a4a"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/confirm-dependency-retry.json",
+      "bytes": 2844,
+      "sha256": "98cf9760d3ef2156c5f7ce3565130159368a2e4534391ea39aa2b6486ca311cb"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/confirm-latest.json",
+      "bytes": 562531,
+      "sha256": "1f3ca5609553af2323609e3edb7fb2cc55eca8302763a879dc4f1a4edf9be530"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/confirm-launch.json",
+      "bytes": 964,
+      "sha256": "a7cb21de97a12326d75059473f13bc87d160f093734534d5cd2c6c42e1ad64a7"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/confirm-original-final.json",
+      "bytes": 562531,
+      "sha256": "1f3ca5609553af2323609e3edb7fb2cc55eca8302763a879dc4f1a4edf9be530"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/confirm-plan.json",
+      "bytes": 66417,
+      "sha256": "1df72c37b8c2140c1b6043ce9f604ffbff104f16197e633dd24f5128c23c3fe4"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/confirm-with-startup-retries.json",
+      "bytes": 566880,
+      "sha256": "34b7533b62aae0df90da7a789b0ce82e72f2098dd48e63c031b1e7dcffc64d1e"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/deployment.json",
+      "bytes": 218,
+      "sha256": "0aa864b2067292d9fa574b6dcf9211b68364ebbde584fb3ad0cc8f6d5cf185fc"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/endpoint-evaluation-amendment.json",
+      "bytes": 458,
+      "sha256": "6623e450320d848f1a452db5e42bef874a5d5e01d3d51f25f10faa9efd2fa48e"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/error-node1-1794413325.json",
+      "bytes": 782,
+      "sha256": "2e2137364ff34d6574ac944c35a68ec2293053bb61ef2c2858d3a5b17935558a"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/error-node1-1794413390.json",
+      "bytes": 337,
+      "sha256": "64bf98789f3beec089d5e6265a5e341625ceb00ca12a6934d187b3f143e6697a"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/error-node1-1794413417.json",
+      "bytes": 337,
+      "sha256": "a3920e3189f5b9c9a6578317fc01b20985a2ffa2493e064b11ffad900edfd6e4"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/evaluation-failure-details.json",
+      "bytes": 9023,
+      "sha256": "422851fc8492b7f22a868fd00eff43d024ab10d79886dc707e1313724fdedc76"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/evaluation-worker-inspection.json",
+      "bytes": 3728,
+      "sha256": "a370539edfa4038d8ce72bd7d64014864955b576fd223bda032ecaf8cee13024"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/formal-initial-parity.json",
+      "bytes": 13128,
+      "sha256": "bbd06812fdb15616ef56cd451a9d2980c92b39769eabea82a64d1ed7c874ae25"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/frozen-helper-deployment.json",
+      "bytes": 1173,
+      "sha256": "4f5bc58be12aaa9e111fb22c4699db4c2fe884e5f1ab0cc53f8ba540cc55418f"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/frozen-helper-parallel-proof.json",
+      "bytes": 528,
+      "sha256": "ef3ed3d38baac7da1c4e04800086563fe1e0f7ee25cce2afbcb00a1c984850ee"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/frozen-policy-host-proof.json",
+      "bytes": 228,
+      "sha256": "4d2a8a6f8611bb78ffe4156304e860984de0effb661637b433b6e5372f752e4a"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/frozen-policy.json",
+      "bytes": 582,
+      "sha256": "4abdf5ce638f7dc32ea9f6d6a206add1f1d290e3aa5553917fa00e709f5b7ae8"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/frozen-scheduling-amendment.json",
+      "bytes": 379,
+      "sha256": "c9e67c2dfc5d37ac5fb4a314b2ae4783b9bb21a0ac13404d40f8fd1e9e01db30"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/handover-commit.json",
+      "bytes": 233,
+      "sha256": "9e8413512b7b1eced6bb9fb3b4a0bf32361cbfe07e27600ee389d2d8f7c6931e"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/handover-model-pid-proof.json",
+      "bytes": 348,
+      "sha256": "572a903270d5d7cb4504159dec28fa72bd38299e09c6fdf63f1f96735335fa79"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/handover-new-ownership.json",
+      "bytes": 857,
+      "sha256": "4e799a51ff94450c557bf0b0eaa514527653d48bb43af48c0a278711c02a6ad5"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/handover-suspended.json",
+      "bytes": 4070,
+      "sha256": "e2d8d0f7f806da917da6f8c57d773e68bfa8dc12184e05c99172ea3068e7b88a"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/health-assessment.json",
+      "bytes": 20182,
+      "sha256": "7af2a028cfa6af9ad52fc549741f448513b739874ed65942f16acba7f8338e74"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/health-original-execution.json",
+      "bytes": 3285,
+      "sha256": "df195c6278838c4088ebcdb20dde24847582acf2550b2097ff0a535d3e5c2866"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/health-registration.json",
+      "bytes": 11105,
+      "sha256": "c61b26a925c3a37b30a1b6346c716749b488e5af817811fb83b1e52a862357c4"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/learner-summary.json",
+      "bytes": 171945,
+      "sha256": "bb1c2b54d46dbef2d0a6e550486e056d4eb1c2ad650eaf9694de6cb81acb727b"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/phase-state.json",
+      "bytes": 122,
+      "sha256": "2b0bec00dcbe79a257f9ea207b1e8b29d41021dfb5c744109c5812d0d475266e"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/postfailure-actor-summaries.json",
+      "bytes": 73903,
+      "sha256": "fcbd49caa7bdc6dbc48fad47248f77ea3eaf098e7445b5df2431c243b11eed63"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/postrun-inspection.json",
+      "bytes": 1604,
+      "sha256": "df821c390ba027d18a79e51ff4a8f0273cbef974ce6bf1363976869ccacce827"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/pre-evaluation-resource-check.json",
+      "bytes": 1626,
+      "sha256": "99d8ad2ecac9e8d3d74271754d53c9ddbf163999d742fcb103c3e33122d3ecde"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/preflight.json",
+      "bytes": 5427,
+      "sha256": "02989b87594a84d1899ec413bb4b90bdb62ae491dfa7c2607cc6c42dedb80ff9"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/publication-provenance.json",
+      "bytes": 30750,
+      "sha256": "b5dcf029121bf5bca7793615025851934410c2a99921ea4059defe9dbb463b19"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/registration.json",
+      "bytes": 1198,
+      "sha256": "701ef176f5c277e4dc2a734b2f262717d989d5d79f9ba6761cd55df7ae9ae277"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/result.json",
+      "bytes": 1686,
+      "sha256": "3fe50b018899e637e8b510413081fe5e01cb03a890eaa30ede0d8a4194292b90"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/runtime-source/attach_cluster_control.py",
+      "bytes": 11611,
+      "sha256": "13c170f42855b210717e8e9414a74e7231bf49de48b8861592c920e9ae7a8549"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/runtime-source/collect_retries.py",
+      "bytes": 1258,
+      "sha256": "0858be6d1c0dbaddb20a4f5ede8d743080900f32358339043ed99603aed140a3"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/runtime-source/control.py",
+      "bytes": 32969,
+      "sha256": "a2ea267fe91d1413f62d9c61581f874f1adc67624a20a2dca142133045c47825"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/runtime-source/control_hard_watch.py",
+      "bytes": 482,
+      "sha256": "350a40e347bca92da98baddc1a3432e36ff34fc0ca3e44c3f5d61068fa916195"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/runtime-source/finish_and_evaluate.py",
+      "bytes": 765,
+      "sha256": "e1a227863fba234d00724c224acbb8c4c1f28a56d1f4408c9ce939ee4ceb9855"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/runtime-source/frozen_worker_parallel.py",
+      "bytes": 5194,
+      "sha256": "1f363dec5b4f84c82e36630817b8df40eaad1710add8447adcdea4608eaa09dc"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/runtime-source/prepare_supervision.py",
+      "bytes": 3746,
+      "sha256": "6f6eac1dcd12584dddf19211e863a90fcd876c37879983714ce7d501fb49c1d5"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/runtime-source/repair_eval_dependency.py",
+      "bytes": 2089,
+      "sha256": "902b63737ff61aae6992fc7b1423e740e09bf8b453eb6a86dac1389a4d7b7b5a"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/runtime-source/retry_zero_feedback.py",
+      "bytes": 2608,
+      "sha256": "707bd7ecac325e712f8581635c997f41dfc54e15ec670c5020575a3903004456"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/runtime-source/salvage_final.py",
+      "bytes": 3074,
+      "sha256": "4ce74db04b7fd1e80686259c3b77882d2c4081458a6d7d9f27cd5febe83fbd37"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/runtime-source/update_docs.py",
+      "bytes": 5060,
+      "sha256": "f4008ce8c12dbecc80aba1328813f263b5ec0440a2cc0c79792f45b1d6985726"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/score.py",
+      "bytes": 4339,
+      "sha256": "4db5042cfb55ed62960a00c117a3751306e501f11457555abe4bec6d626d7fe4"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/source-manifest.json",
+      "bytes": 1519,
+      "sha256": "6cea6a6de756ba5e0fed7c54028a6058bf9fc7fe8d533285f5608209fea13b36"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/summary.md",
+      "bytes": 7407,
+      "sha256": "ba6ef94b2151896df629b3ea56f45f6be41abcc1686beece5886ff0beb48e86a"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/supervision-amendment.json",
+      "bytes": 687,
+      "sha256": "808c3fad1ccf7ade751e079529a4160bcdd63878abdb7d83db3a257fe148267c"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/supervision-source-proof.json",
+      "bytes": 407,
+      "sha256": "c5ec33519a0eead4f2c097b02750a261be19b8a303357a8455b7308813372039"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/targetbn-base-seed3-latest.json",
+      "bytes": 86612,
+      "sha256": "a6cb57bd59bae15cdb8c1e5de07850af9985acff8089fda33774b811ed79116d"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/targetbn-base-seed3-launch.json",
+      "bytes": 831,
+      "sha256": "974344907ddce0f2bdf8bfdeea6207ddf081d4b05e33df2b5efd832a06325e29"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/training-complete.json",
+      "bytes": 94419,
+      "sha256": "4e6688a725d955567806dc7523bd418e1059c0241881cad14cd9e197fac0f6ee"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/training-progress.csv",
+      "bytes": 2205,
+      "sha256": "86583dd931c71dc7b5ea81614806097b769638ddfaacdcd84d1d824dc1fdbfd5"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/zero-feedback-retry-launch.json",
+      "bytes": 149,
+      "sha256": "e9617eceb239de6159a4367463e81a319961f6d3d2d80327cbbdfe09e0feeea3"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/zero-feedback-retry-plan.json",
+      "bytes": 2399,
+      "sha256": "91f3a70850d0899ba7e750c903ee1b551da3a7b9e9c26aa5440745118675a05d"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/zero-feedback-retry-registration.json",
+      "bytes": 407,
+      "sha256": "24ba160474caa62028702b81b0b20f84393099f45376baac38a6f534628a6803"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/zero-feedback-retry-results.json",
+      "bytes": 10834,
+      "sha256": "67f195fbf1254add562ea659ddf6abb2ebb356cb4f3aca31003b335c946f101f"
+    },
+    {
+      "path": "evidence/baseline-target-retrain-20261111/zero-feedback-retry-status.json",
+      "bytes": 7886,
+      "sha256": "6756c2b40f6e80cccbd11bbf6afd507f33fdc0b2a4200c9303677c6b5f7aaf2c"
     },
     {
       "path": "evidence/baseline/audit/author-checkpoint-node-parity.json",
@@ -16453,9 +16913,14 @@
       "sha256": "37bc1efdfc20bacfd3150fd0e8e7564f154375c901ec5e254071b78c68ffb58a"
     },
     {
+      "path": "frameworks/baseline/baseline_admission.py",
+      "bytes": 3816,
+      "sha256": "27533939b7f239909a5d48598ef64611c4b67d0a097a8ed28ce305c26e29171e"
+    },
+    {
       "path": "frameworks/baseline/cluster_control.py",
-      "bytes": 10820,
-      "sha256": "519438d2533f87104ae2e1dcc508b6c243b258e617102f7d2d4fbf648a69c698"
+      "bytes": 11850,
+      "sha256": "fa314d5f30dd8fdc3e9935b215e587be6e0723de621165000db61116111ce416"
     },
     {
       "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/INSTALLER",
@@ -17793,8 +18258,8 @@
     },
     {
       "path": "frameworks/baseline/distributed.py",
-      "bytes": 21131,
-      "sha256": "364d116b2c61b975b0a666878ec218d687ab4586ca7b9d6c398175f55dc21c7f"
+      "bytes": 21980,
+      "sha256": "66e5cff07c03b821c6ab4c99c52c958788fe1974e578ac0d79090f6f01e1f3f2"
     },
     {
       "path": "frameworks/baseline/episode_training.py",
@@ -17803,8 +18268,8 @@
     },
     {
       "path": "frameworks/baseline/evaluate.py",
-      "bytes": 14301,
-      "sha256": "2c197e27460682f9b3fc1821bf988bdcae9c68e889b1aef0036edfce17e8e48a"
+      "bytes": 14958,
+      "sha256": "41dd8700380d7421c640b3e84dcb25966e33c4335c309ebca5c4c90e2bede198"
     },
     {
       "path": "frameworks/baseline/frozen_evaluate.py",
@@ -20616,8 +21081,8 @@
     },
     {
       "path": "run.py",
-      "bytes": 8751,
-      "sha256": "4663dc797bb17f2b57d3dce033c48c061f9f1c10284207b661926183e08113eb"
+      "bytes": 11136,
+      "sha256": "49434064072b746dbb0fc5a32e2249ae54139febfe22f8cbfe40b29cc47d91f1"
     },
     {
       "path": "runtime/mahimahi/.gitignore",
@@ -22205,6 +22670,11 @@
       "sha256": "b1eff100fdcf4c75210361f9a0e31ccd8c024394095984fd0722140b6c079e48"
     },
     {
+      "path": "tools/audit_baseline_target_bn.py",
+      "bytes": 8125,
+      "sha256": "15fe7d6219e2f9c9a2e53dffe48dd596b4a163987ea9f59573fdb89779bb4391"
+    },
+    {
       "path": "tools/audit_episode_replay.py",
       "bytes": 3626,
       "sha256": "b83e31748b3a96c3c41ca6911f728819dfe8e7ed2c4eeea4f99b4362959c1895"
@@ -22525,9 +22995,14 @@
       "sha256": "8b755e09fbf4a11a59b061869818690b915965a8dcbd5b2e25a65bf9c4b7057b"
     },
     {
+      "path": "tools/test_baseline_admission.py",
+      "bytes": 4844,
+      "sha256": "c2d10669299407344135f783ab0c95ff7c0fa5bf60bf51422c1c5725fe6f2a69"
+    },
+    {
       "path": "tools/test_baseline_episodes.py",
-      "bytes": 13257,
-      "sha256": "b9874774776393208a1fb8f49d6943606aff5790d58bece0404eb081b2f24006"
+      "bytes": 13923,
+      "sha256": "59ae5019a33657c6a6c520a924d4ce668a6393b4ee1c293a9ee339445fea5a0b"
     },
     {
       "path": "tools/test_baseline_reproduction.py",

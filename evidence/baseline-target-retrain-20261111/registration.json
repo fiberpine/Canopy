@@ -1,0 +1,27 @@
+{
+  "start_epoch": 1794409006.9040022,
+  "deadline_epoch": 1794414406.9040022,
+  "task_cutoff_epoch": 1794413806.9040022,
+  "train_cutoff_epoch": 1794413146.9040022,
+  "authorized_wall_minutes": 90,
+  "conservative_machine_hours": 7.5,
+  "cleanup_reserve_minutes": 10,
+  "eval_reserve_minutes": 20,
+  "user_authorization": "\u540c\u610f\uff0c\u6309\u6b64\u9884\u7b97\u6301\u7eed\u63a8\u8fdb",
+  "scope": [
+    "at most two repaired225k admissions",
+    "one fresh2.4M scalar targetBN run",
+    "24conditions x3 frozen evaluation"
+  ],
+  "formal_training_included": true,
+  "cloud_root": "/home/experiment/orca-targetbn-retrain-20261111-night",
+  "selected_variable": "target_bn_consistent=True; original single connection retained",
+  "source_commit": "735f03fbad23ebaee0209ff7ad078171c23ab3e2",
+  "prior_failed_batch": "baseline-target-audit-20261111-2222",
+  "retry_permission": "Unexpected failure may be repaired and rechecked within this same absolute window; no phase reapproval required",
+  "original_train_cutoff_epoch": 1794412606.9040022,
+  "evaluation_slots_per_host": 2,
+  "supervision_amended_epoch": 1794411281.3337338,
+  "status": "CLOSED",
+  "remaining_budget_auto_resume": false
+}

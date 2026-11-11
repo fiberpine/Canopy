@@ -1,0 +1,22 @@
+{
+  "selection": "TARGET_BN_ONLY_SINGLE_CONNECTION",
+  "basis": "Same target weights and96 focal real states;8 balanced512 contexts. Stock action context dependence; repaired invariance and statistics contract pass. Not a performance result.",
+  "stock_range": {
+    "max_context_range": 0.13621653616428375,
+    "median_context_range": 0.044983476400375366,
+    "p95_context_range": 0.11135676689445972,
+    "median_context_std": 0.014185445383191109
+  },
+  "repaired_range": {
+    "max_context_range": 0.0,
+    "median_context_range": 0.0,
+    "p95_context_range": 0.0,
+    "median_context_std": 0.0
+  },
+  "no_joint_reconnection_change": true,
+  "admission_samples": 225000,
+  "memsize": 150000,
+  "checkpoint_interval": 100000,
+  "performance_guard_policy": "warn",
+  "new_training_budget_included": false
+}

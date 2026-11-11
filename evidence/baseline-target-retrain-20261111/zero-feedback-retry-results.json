@@ -1,0 +1,288 @@
+[
+  {
+    "node": 1,
+    "original": {
+      "job": {
+        "host": 1,
+        "slot": 1,
+        "condition": {
+          "trace": "constant24",
+          "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+          "capacity_mbps": 23.991808,
+          "packet_bytes": 1504,
+          "trace_period_ms": 1000,
+          "condition": "G24-R50",
+          "nominal_mbps": 24,
+          "delay_ms": 25,
+          "base_rtt_ms": 50,
+          "queue_packets": 500,
+          "queue_bytes": 752000,
+          "queue_bdp": 5.015045135406219
+        },
+        "group": "fresh-targetbn-final",
+        "checkpoint": "/home/experiment/orca-targetbn-retrain-20261111-night/frameworks/baseline/checkpoints/frozen-final/model",
+        "model_sha256": {
+          ".index": "1d3e01990134a16874a73a1e5ca4f957c0eb939e36ebc53255bfe3b8bba0fc7a",
+          ".data-00000-of-00001": "5231946f2a07db36e0bfbabec9a19a3f58cfe2be6eeae6746dbf0e7442666f96"
+        },
+        "repeat": 0,
+        "run": "targetbn-confirm-r0-c06",
+        "port": 13006
+      },
+      "status": "EXECUTION_ERROR",
+      "reason": "AssertionError('no valid state within15s',)",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/experiment/orca-targetbn-retrain-20261111-night/frameworks/baseline/frozen_worker.py\", line 93, in main\n    try:result=run(job,registration)\n  File \"/home/experiment/orca-targetbn-retrain-20261111-night/frameworks/baseline/frozen_worker.py\", line 49, in run\n    assert code==0 and result['status']=='COMPLETED',result.get('reason')\nAssertionError: no valid state within15s\n"
+    },
+    "retry": {
+      "job": {
+        "host": 1,
+        "slot": 0,
+        "condition": {
+          "trace": "constant24",
+          "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+          "capacity_mbps": 23.991808,
+          "packet_bytes": 1504,
+          "trace_period_ms": 1000,
+          "condition": "G24-R50",
+          "nominal_mbps": 24,
+          "delay_ms": 25,
+          "base_rtt_ms": 50,
+          "queue_packets": 500,
+          "queue_bytes": 752000,
+          "queue_bdp": 5.015045135406219
+        },
+        "group": "fresh-targetbn-final",
+        "checkpoint": "/home/experiment/orca-targetbn-retrain-20261111-night/frameworks/baseline/checkpoints/frozen-final/model",
+        "model_sha256": {
+          ".index": "1d3e01990134a16874a73a1e5ca4f957c0eb939e36ebc53255bfe3b8bba0fc7a",
+          ".data-00000-of-00001": "5231946f2a07db36e0bfbabec9a19a3f58cfe2be6eeae6746dbf0e7442666f96"
+        },
+        "repeat": 0,
+        "run": "targetbn-confirm-r0-c06-startup-retry",
+        "port": 14000,
+        "original_run": "targetbn-confirm-r0-c06"
+      },
+      "status": "COMPLETED",
+      "windows": [
+        {
+          "window": "full",
+          "utilization": 0.9897339465188069,
+          "departure_mbps": 23.745109866666667,
+          "capacity_mbps": 23.991406933333334,
+          "queue_mean_ms": 230.17224413587775,
+          "queue_p95_ms": 251.0,
+          "queue_p99_ms": 252.0,
+          "dropped_packets": 39942.0,
+          "arrival_packets": 159343.0,
+          "drop_fraction": 0.25066680054975743,
+          "dropped_bytes": 59703840.0,
+          "arrival_bytes": 238544164.0,
+          "complete_window": true,
+          "last_log_s": 61.1,
+          "start_s": 0,
+          "end_s": 60
+        },
+        {
+          "window": "startup0_10",
+          "utilization": 0.9706409016888524,
+          "departure_mbps": 23.2850944,
+          "capacity_mbps": 23.9894016,
+          "queue_mean_ms": 226.8064979725915,
+          "queue_p95_ms": 251.0,
+          "queue_p99_ms": 252.0,
+          "dropped_packets": 6218.0,
+          "arrival_packets": 26193.0,
+          "drop_fraction": 0.2373916695300271,
+          "dropped_bytes": 9157968.0,
+          "arrival_bytes": 39004304.0,
+          "complete_window": true,
+          "last_log_s": 61.1,
+          "start_s": 0,
+          "end_s": 10
+        },
+        {
+          "window": "trim10",
+          "utilization": 0.9935521724748714,
+          "departure_mbps": 23.837112960000002,
+          "capacity_mbps": 23.991808,
+          "queue_mean_ms": 230.8318312579211,
+          "queue_p95_ms": 251.0,
+          "queue_p99_ms": 252.0,
+          "dropped_packets": 33724.0,
+          "arrival_packets": 133150.0,
+          "drop_fraction": 0.2532782576042058,
+          "dropped_bytes": 50545872.0,
+          "arrival_bytes": 199539860.0,
+          "complete_window": true,
+          "last_log_s": 61.1,
+          "start_s": 10,
+          "end_s": 60
+        }
+      ],
+      "tail_utilization": 0.9916908971595638,
+      "handoff_s": 0.408340087890625,
+      "post_handoff_drop_fraction": 0.2514621723883933,
+      "model_sha256": {
+        ".index": "1d3e01990134a16874a73a1e5ca4f957c0eb939e36ebc53255bfe3b8bba0fc7a",
+        ".data-00000-of-00001": "5231946f2a07db36e0bfbabec9a19a3f58cfe2be6eeae6746dbf0e7442666f96"
+      },
+      "policy_sha256": "376becae9fc26e862557ec5a155e07aa59f2fb620e49df8617a53bf89f7300a8",
+      "valid": 2667,
+      "control_period_ms": {
+        "p50": 21.618,
+        "p95": 21.683,
+        "p99": 44.23208,
+        "max": 163.634
+      },
+      "wall_s": 64.21435351499986
+    },
+    "eligibility": {
+      "node": 1,
+      "zero_policy_decisions_verified": true,
+      "original": "targetbn-confirm-r0-c06"
+    }
+  },
+  {
+    "node": 2,
+    "original": {
+      "job": {
+        "host": 2,
+        "slot": 1,
+        "condition": {
+          "trace": "constant24",
+          "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+          "capacity_mbps": 23.991808,
+          "packet_bytes": 1504,
+          "trace_period_ms": 1000,
+          "condition": "G24-R100",
+          "nominal_mbps": 24,
+          "delay_ms": 50,
+          "base_rtt_ms": 100,
+          "queue_packets": 1000,
+          "queue_bytes": 1504000,
+          "queue_bdp": 5.015045135406219
+        },
+        "group": "fresh-targetbn-final",
+        "checkpoint": "/home/experiment/orca-targetbn-retrain-20261111-night/frameworks/baseline/checkpoints/frozen-final/model",
+        "model_sha256": {
+          ".index": "1d3e01990134a16874a73a1e5ca4f957c0eb939e36ebc53255bfe3b8bba0fc7a",
+          ".data-00000-of-00001": "5231946f2a07db36e0bfbabec9a19a3f58cfe2be6eeae6746dbf0e7442666f96"
+        },
+        "repeat": 0,
+        "run": "targetbn-confirm-r0-c07",
+        "port": 13007
+      },
+      "status": "EXECUTION_ERROR",
+      "reason": "AssertionError('no valid state within15s',)",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/experiment/orca-targetbn-retrain-20261111-night/frameworks/baseline/frozen_worker.py\", line 93, in main\n    try:result=run(job,registration)\n  File \"/home/experiment/orca-targetbn-retrain-20261111-night/frameworks/baseline/frozen_worker.py\", line 49, in run\n    assert code==0 and result['status']=='COMPLETED',result.get('reason')\nAssertionError: no valid state within15s\n"
+    },
+    "retry": {
+      "job": {
+        "host": 2,
+        "slot": 0,
+        "condition": {
+          "trace": "constant24",
+          "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+          "capacity_mbps": 23.991808,
+          "packet_bytes": 1504,
+          "trace_period_ms": 1000,
+          "condition": "G24-R100",
+          "nominal_mbps": 24,
+          "delay_ms": 50,
+          "base_rtt_ms": 100,
+          "queue_packets": 1000,
+          "queue_bytes": 1504000,
+          "queue_bdp": 5.015045135406219
+        },
+        "group": "fresh-targetbn-final",
+        "checkpoint": "/home/experiment/orca-targetbn-retrain-20261111-night/frameworks/baseline/checkpoints/frozen-final/model",
+        "model_sha256": {
+          ".index": "1d3e01990134a16874a73a1e5ca4f957c0eb939e36ebc53255bfe3b8bba0fc7a",
+          ".data-00000-of-00001": "5231946f2a07db36e0bfbabec9a19a3f58cfe2be6eeae6746dbf0e7442666f96"
+        },
+        "repeat": 0,
+        "run": "targetbn-confirm-r0-c07-startup-retry",
+        "port": 14001,
+        "original_run": "targetbn-confirm-r0-c07"
+      },
+      "status": "COMPLETED",
+      "windows": [
+        {
+          "window": "full",
+          "utilization": 0.9865997799034179,
+          "departure_mbps": 23.6699168,
+          "capacity_mbps": 23.991406933333334,
+          "queue_mean_ms": 357.26331774734143,
+          "queue_p95_ms": 493.0,
+          "queue_p99_ms": 500.0,
+          "dropped_packets": 19877.0,
+          "arrival_packets": 141661.0,
+          "drop_fraction": 0.14031384784803158,
+          "dropped_bytes": 28221600.0,
+          "arrival_bytes": 207137008.0,
+          "complete_window": true,
+          "last_log_s": 60.983,
+          "start_s": 0,
+          "end_s": 60
+        },
+        {
+          "window": "startup0_10",
+          "utilization": 0.9430060314634943,
+          "departure_mbps": 22.6221504,
+          "capacity_mbps": 23.9894016,
+          "queue_mean_ms": 356.73021228006434,
+          "queue_p95_ms": 495.0,
+          "queue_p99_ms": 500.0,
+          "dropped_packets": 3222.0,
+          "arrival_packets": 23258.0,
+          "drop_fraction": 0.1385329779000774,
+          "dropped_bytes": 4626168.0,
+          "arrival_bytes": 34059840.0,
+          "complete_window": true,
+          "last_log_s": 60.983,
+          "start_s": 0,
+          "end_s": 10
+        },
+        {
+          "window": "trim10",
+          "utilization": 0.9953176550929383,
+          "departure_mbps": 23.879470079999997,
+          "capacity_mbps": 23.991808,
+          "queue_mean_ms": 357.364445494644,
+          "queue_p95_ms": 492.0,
+          "queue_p99_ms": 501.0,
+          "dropped_packets": 16655.0,
+          "arrival_packets": 118403.0,
+          "drop_fraction": 0.14066366561658067,
+          "dropped_bytes": 23595432.0,
+          "arrival_bytes": 173077168.0,
+          "complete_window": true,
+          "last_log_s": 60.983,
+          "start_s": 10,
+          "end_s": 60
+        }
+      ],
+      "tail_utilization": 0.9963326148658742,
+      "handoff_s": 0.85039794921875,
+      "post_handoff_drop_fraction": 0.14127723088951277,
+      "model_sha256": {
+        ".index": "1d3e01990134a16874a73a1e5ca4f957c0eb939e36ebc53255bfe3b8bba0fc7a",
+        ".data-00000-of-00001": "5231946f2a07db36e0bfbabec9a19a3f58cfe2be6eeae6746dbf0e7442666f96"
+      },
+      "policy_sha256": "376becae9fc26e862557ec5a155e07aa59f2fb620e49df8617a53bf89f7300a8",
+      "valid": 2739,
+      "control_period_ms": {
+        "p50": 21.643,
+        "p95": 21.695,
+        "p99": 21.72762,
+        "max": 22.951
+      },
+      "wall_s": 63.862605710000025
+    },
+    "eligibility": {
+      "node": 2,
+      "zero_policy_decisions_verified": true,
+      "original": "targetbn-confirm-r0-c07"
+    }
+  }
+]

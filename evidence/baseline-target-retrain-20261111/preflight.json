@@ -1,0 +1,126 @@
+[
+  {
+    "node": 0,
+    "hostname": "learner-vm",
+    "kernel": "4.13.1-0521-learner",
+    "protected": 51,
+    "core": {
+      "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+      "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+      "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+      "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+      "code/runtime/client": "361f85d03abe62a9e457c484f67f2f34dca2288f434c4aa4645dfb5836c8a672"
+    },
+    "sysctl": {
+      "net/ipv4/ip_local_port_range": "32768\t60999",
+      "net/ipv4/tcp_rmem": "4096\t87380\t6291456",
+      "net/ipv4/tcp_wmem": "4096\t32768\t4194304",
+      "net/core/rmem_max": "212992",
+      "net/core/wmem_max": "212992"
+    },
+    "old_checkpoint": {
+      "step-2410158.index": {
+        "bytes": 3692,
+        "sha256": "07010b8e9dfb290c128370e34b87e0800772e4fd7e5a555cf8cacfbc6d219dd9"
+      },
+      "step-2410158.data-00000-of-00001": {
+        "bytes": 4410448,
+        "sha256": "55a10b88e5a658811ad23ce1b9ed9bd832099747966ec749198a1deaf9638cf1"
+      }
+    },
+    "replay_bytes": 87603371,
+    "epoch": 1794409009.4810114
+  },
+  {
+    "node": 1,
+    "hostname": "actor1-vm",
+    "kernel": "4.13.1-0521-learner",
+    "protected": 51,
+    "core": {
+      "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+      "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+      "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+      "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+      "code/runtime/client": "361f85d03abe62a9e457c484f67f2f34dca2288f434c4aa4645dfb5836c8a672"
+    },
+    "sysctl": {
+      "net/ipv4/ip_local_port_range": "32768\t60999",
+      "net/ipv4/tcp_rmem": "4096\t87380\t6291456",
+      "net/ipv4/tcp_wmem": "4096\t32768\t4194304",
+      "net/core/rmem_max": "212992",
+      "net/core/wmem_max": "212992"
+    },
+    "old_checkpoint": {},
+    "replay_bytes": null,
+    "epoch": 1794409009.561044
+  },
+  {
+    "node": 2,
+    "hostname": "actor2-vm",
+    "kernel": "4.13.1-0521-learner",
+    "protected": 51,
+    "core": {
+      "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+      "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+      "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+      "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+      "code/runtime/client": "361f85d03abe62a9e457c484f67f2f34dca2288f434c4aa4645dfb5836c8a672"
+    },
+    "sysctl": {
+      "net/ipv4/ip_local_port_range": "32768\t60999",
+      "net/ipv4/tcp_rmem": "4096\t87380\t6291456",
+      "net/ipv4/tcp_wmem": "4096\t32768\t4194304",
+      "net/core/rmem_max": "212992",
+      "net/core/wmem_max": "212992"
+    },
+    "old_checkpoint": {},
+    "replay_bytes": null,
+    "epoch": 1794409009.5611985
+  },
+  {
+    "node": 3,
+    "hostname": "actor3-vm",
+    "kernel": "4.13.1-0521-learner",
+    "protected": 51,
+    "core": {
+      "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+      "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+      "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+      "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+      "code/runtime/client": "361f85d03abe62a9e457c484f67f2f34dca2288f434c4aa4645dfb5836c8a672"
+    },
+    "sysctl": {
+      "net/ipv4/ip_local_port_range": "32768\t60999",
+      "net/ipv4/tcp_rmem": "4096\t87380\t6291456",
+      "net/ipv4/tcp_wmem": "4096\t32768\t4194304",
+      "net/core/rmem_max": "212992",
+      "net/core/wmem_max": "212992"
+    },
+    "old_checkpoint": {},
+    "replay_bytes": null,
+    "epoch": 1794409009.5606582
+  },
+  {
+    "node": 4,
+    "hostname": "actor4-vm",
+    "kernel": "4.13.1-0521-learner",
+    "protected": 51,
+    "core": {
+      "code/canopy/rl-module/agent_v2.py": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8",
+      "code/canopy/rl-module/envwrapper_v2.py": "7b7e6a411818e090ab8427d1fdf0c3d47dd4aab08408638728277a7b60c7181e",
+      "code/canopy/rl-module/utils_v2.py": "6d9041d8b837f8fd900875942d7f54c82cee39350c67fd25e6f0b4c0396f85db",
+      "code/runtime/orca-server-control-log-safe": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+      "code/runtime/client": "361f85d03abe62a9e457c484f67f2f34dca2288f434c4aa4645dfb5836c8a672"
+    },
+    "sysctl": {
+      "net/ipv4/ip_local_port_range": "32768\t60999",
+      "net/ipv4/tcp_rmem": "4096\t87380\t6291456",
+      "net/ipv4/tcp_wmem": "4096\t32768\t4194304",
+      "net/core/rmem_max": "212992",
+      "net/core/wmem_max": "212992"
+    },
+    "old_checkpoint": {},
+    "replay_bytes": null,
+    "epoch": 1794409009.6155677
+  }
+]

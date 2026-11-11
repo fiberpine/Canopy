@@ -1,0 +1,538 @@
+[
+  {
+    "node": 0,
+    "reports": [],
+    "listeners": "State    Recv-Q    Send-Q        Local Address:Port        Peer Address:Port                                                                                    \nLISTEN   0         128                 0.0.0.0:111              0.0.0.0:*        users:((\"rpcbind\",pid=1008,fd=8))                                              \nLISTEN   0         128           127.0.0.53%lo:53               0.0.0.0:*        users:((\"systemd-resolve\",pid=1125,fd=13))                                     \nLISTEN   0         128                 0.0.0.0:22               0.0.0.0:*        users:((\"sshd\",pid=1922,fd=3))                                                 \nLISTEN   0         128                    [::]:111                 [::]:*        users:((\"rpcbind\",pid=1008,fd=11))                                             \n",
+    "remaining": [],
+    "learner_failure": null,
+    "epoch": 1794408151.7633271
+  },
+  {
+    "node": 1,
+    "reports": [
+      {
+        "actor": "targetbn-admission-actor16",
+        "audit": {
+          "status": "PASS",
+          "remaining": [],
+          "listeners": [],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10375,
+          "enqueued": 10375,
+          "exploration_calls": 10376,
+          "errors": [],
+          "seed": 16147,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor4",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10004            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10828,
+          "enqueued": 10828,
+          "exploration_calls": 10829,
+          "errors": [],
+          "seed": 4039,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor0",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10000            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 11043,
+          "enqueued": 11043,
+          "exploration_calls": 11044,
+          "errors": [],
+          "seed": 3,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor20",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10020            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 9245,
+          "enqueued": 9245,
+          "exploration_calls": 9246,
+          "errors": [],
+          "seed": 20183,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor8",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10008            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 8039,
+          "enqueued": 8039,
+          "exploration_calls": 8040,
+          "errors": [],
+          "seed": 8075,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor12",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10012            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 9677,
+          "enqueued": 9677,
+          "exploration_calls": 9678,
+          "errors": [],
+          "seed": 12111,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      }
+    ],
+    "listeners": "State    Recv-Q    Send-Q        Local Address:Port        Peer Address:Port                                                                                    \nLISTEN   0         128                 0.0.0.0:111              0.0.0.0:*        users:((\"rpcbind\",pid=901,fd=8))                                               \nLISTEN   0         128           127.0.0.53%lo:53               0.0.0.0:*        users:((\"systemd-resolve\",pid=1130,fd=13))                                     \nLISTEN   0         128                 0.0.0.0:22               0.0.0.0:*        users:((\"sshd\",pid=1621,fd=3))                                                 \nLISTEN   0         128                    [::]:111                 [::]:*        users:((\"rpcbind\",pid=901,fd=11))                                              \n",
+    "remaining": [],
+    "learner_failure": null,
+    "epoch": 1794408151.6023872
+  },
+  {
+    "node": 2,
+    "reports": [
+      {
+        "actor": "targetbn-admission-actor5",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10005            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10705,
+          "enqueued": 10705,
+          "exploration_calls": 10706,
+          "errors": [],
+          "seed": 5048,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor13",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10013            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 7494,
+          "enqueued": 7494,
+          "exploration_calls": 7495,
+          "errors": [],
+          "seed": 13120,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor17",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10017            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 9547,
+          "enqueued": 9547,
+          "exploration_calls": 9548,
+          "errors": [],
+          "seed": 17156,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor9",
+        "audit": {
+          "status": "PASS",
+          "remaining": [],
+          "listeners": [],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10550,
+          "enqueued": 10550,
+          "exploration_calls": 10551,
+          "errors": [],
+          "seed": 9084,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor1",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10001            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 9965,
+          "enqueued": 9965,
+          "exploration_calls": 9966,
+          "errors": [],
+          "seed": 1012,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor21",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10021            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10093,
+          "enqueued": 10093,
+          "exploration_calls": 10094,
+          "errors": [],
+          "seed": 21192,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      }
+    ],
+    "listeners": "State    Recv-Q    Send-Q        Local Address:Port        Peer Address:Port                                                                                    \nLISTEN   0         128                 0.0.0.0:111              0.0.0.0:*        users:((\"rpcbind\",pid=1038,fd=8))                                              \nLISTEN   0         128           127.0.0.53%lo:53               0.0.0.0:*        users:((\"systemd-resolve\",pid=1185,fd=13))                                     \nLISTEN   0         128                 0.0.0.0:22               0.0.0.0:*        users:((\"sshd\",pid=1631,fd=3))                                                 \nLISTEN   0         128                    [::]:111                 [::]:*        users:((\"rpcbind\",pid=1038,fd=11))                                             \n",
+    "remaining": [],
+    "learner_failure": null,
+    "epoch": 1794408151.6386392
+  },
+  {
+    "node": 3,
+    "reports": [
+      {
+        "actor": "targetbn-admission-actor22",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10022            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 9585,
+          "enqueued": 9585,
+          "exploration_calls": 9586,
+          "errors": [],
+          "seed": 22201,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor10",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10010            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10884,
+          "enqueued": 10884,
+          "exploration_calls": 10885,
+          "errors": [],
+          "seed": 10093,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor14",
+        "audit": {
+          "status": "PASS",
+          "remaining": [],
+          "listeners": [],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10609,
+          "enqueued": 10609,
+          "exploration_calls": 10610,
+          "errors": [],
+          "seed": 14129,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor6",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10006            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10032,
+          "enqueued": 10032,
+          "exploration_calls": 10033,
+          "errors": [],
+          "seed": 6057,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor18",
+        "audit": {
+          "status": "PASS",
+          "remaining": [],
+          "listeners": [],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10456,
+          "enqueued": 10456,
+          "exploration_calls": 10457,
+          "errors": [],
+          "seed": 18165,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor2",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10002            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 8440,
+          "enqueued": 8440,
+          "exploration_calls": 8441,
+          "errors": [],
+          "seed": 2021,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      }
+    ],
+    "listeners": "State    Recv-Q    Send-Q        Local Address:Port        Peer Address:Port                                                                                    \nLISTEN   0         128                 0.0.0.0:111              0.0.0.0:*        users:((\"rpcbind\",pid=1032,fd=8))                                              \nLISTEN   0         128           127.0.0.53%lo:53               0.0.0.0:*        users:((\"systemd-resolve\",pid=1183,fd=13))                                     \nLISTEN   0         128                 0.0.0.0:22               0.0.0.0:*        users:((\"sshd\",pid=1608,fd=3))                                                 \nLISTEN   0         128                    [::]:111                 [::]:*        users:((\"rpcbind\",pid=1032,fd=11))                                             \n",
+    "remaining": [],
+    "learner_failure": null,
+    "epoch": 1794408151.6375482
+  },
+  {
+    "node": 4,
+    "reports": [
+      {
+        "actor": "targetbn-admission-actor23",
+        "audit": {
+          "status": "PASS",
+          "remaining": [],
+          "listeners": [],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 9759,
+          "enqueued": 9759,
+          "exploration_calls": 9760,
+          "errors": [],
+          "seed": 23210,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor19",
+        "audit": {
+          "status": "PASS",
+          "remaining": [],
+          "listeners": [],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10059,
+          "enqueued": 10059,
+          "exploration_calls": 10060,
+          "errors": [],
+          "seed": 19174,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor15",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10015            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10346,
+          "enqueued": 10346,
+          "exploration_calls": 10347,
+          "errors": [],
+          "seed": 15138,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor11",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10011            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 10026,
+          "enqueued": 10026,
+          "exploration_calls": 10027,
+          "errors": [],
+          "seed": 11102,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor3",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10003            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 9845,
+          "enqueued": 9845,
+          "exploration_calls": 9846,
+          "errors": [],
+          "seed": 3030,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      },
+      {
+        "actor": "targetbn-admission-actor7",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [
+            "LISTEN   0         1                   0.0.0.0:10007            0.0.0.0:*       "
+          ],
+          "accessible_shm_keys": [],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 15
+        },
+        "producer": {
+          "generated": 8790,
+          "enqueued": 8790,
+          "exploration_calls": 8791,
+          "errors": [],
+          "seed": 7066,
+          "initial_policy_hash": "de8ec8d8c88645380ce0863aa4bda258bbf7cc099cf4b79c8d9296ce5bdd83ca"
+        }
+      }
+    ],
+    "listeners": "State    Recv-Q    Send-Q        Local Address:Port        Peer Address:Port                                                                                    \nLISTEN   0         128                 0.0.0.0:111              0.0.0.0:*        users:((\"rpcbind\",pid=1040,fd=8))                                              \nLISTEN   0         128           127.0.0.53%lo:53               0.0.0.0:*        users:((\"systemd-resolve\",pid=1168,fd=13))                                     \nLISTEN   0         128                 0.0.0.0:22               0.0.0.0:*        users:((\"sshd\",pid=1668,fd=3))                                                 \nLISTEN   0         128                    [::]:111                 [::]:*        users:((\"rpcbind\",pid=1040,fd=11))                                             \n",
+    "remaining": [],
+    "learner_failure": null,
+    "epoch": 1794408151.6813443
+  }
+]

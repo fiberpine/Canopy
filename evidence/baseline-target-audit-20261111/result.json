@@ -1,0 +1,91 @@
+{
+  "status": "FAILED_ADMISSION_NO_FINAL_CHECKPOINT",
+  "healthy_baseline": false,
+  "selected_variable": "target_bn_consistent only; original single connection",
+  "query": {
+    "stock_action": {
+      "max_context_range": 0.13621653616428375,
+      "median_context_range": 0.044983476400375366,
+      "p95_context_range": 0.11135676689445972,
+      "median_context_std": 0.014185445383191109
+    },
+    "repaired_action": {
+      "max_context_range": 0.0,
+      "median_context_range": 0.0,
+      "p95_context_range": 0.0,
+      "median_context_std": 0.0
+    },
+    "stock_td": {
+      "max_context_range": 0.33914947509765625,
+      "median_context_range": 0.029590606689453125,
+      "p95_context_range": 0.15425682067871094,
+      "median_context_std": 0.009707661345601082
+    },
+    "repaired_td": {
+      "max_context_range": 0.0,
+      "median_context_range": 0.0,
+      "p95_context_range": 0.0,
+      "median_context_std": 0.0
+    },
+    "query_variables_unchanged": true,
+    "synthetic_statistics_contract": {
+      "initial_copy_error": 0.0,
+      "tau_error": 0.0,
+      "pairs": 4,
+      "in_memory_assignments_only": true,
+      "optimizer_operations": 0,
+      "old_checkpoint_written": false
+    }
+  },
+  "initial_parity": {
+    "variables": 106,
+    "different": [],
+    "all_identical": true,
+    "source": "Saved step-0 tensors only; no live model queries or optimizer"
+  },
+  "observed_ledger": {
+    "generated": 236392,
+    "enqueued": 236392,
+    "last_logged_inserted": 236392,
+    "complete_critic_actor_target": 22410,
+    "critic_optimizer_operations": 44820,
+    "final_manifest_missing": true,
+    "nominal_sample_budget": 225000,
+    "overshoot": 11392,
+    "overshoot_reason": "Historical5s training-log interval plus5s controller polling and stop tail. Fixed offline with per-actor9375 quotas, not used in this run."
+  },
+  "persistence": {
+    "probe": {
+      "path": "capacity-probe-replay-150001.npz",
+      "rows": 150000,
+      "copy_s": 0.006589506999944206,
+      "save_s": 0.09131920200002241,
+      "fifo_after": 6,
+      "inserted_before": 150001,
+      "inserted_after": 150103,
+      "meaning": "Live full-replay persistence stress only; this file is not a model checkpoint"
+    },
+    "probe_rows": 150000,
+    "probe_origin_join_actors": 24,
+    "postfull_live_checkpoint": 200009,
+    "final_replay_exists": false,
+    "final_result_exists": false
+  },
+  "teardown": {
+    "initial_port_check_failures": 18,
+    "initial_passes": 6,
+    "current_remaining": 0,
+    "cause": "One-shot listener checks still saw18 LISTEN sockets after recorded owned processes exited. Later all listeners disappeared; exact kernel/process release timing not isolated.",
+    "coordinator_failure": "Failure path forwarded only actor0 producer before raising, then killed learner after3s; no final model/replay/manifest persisted."
+  },
+  "runtime_source_commit": "b7161b7",
+  "runtime_source_manifest": "source-manifest-r3.json",
+  "postrun_offline_repair_commit": "735f03f",
+  "postrun_repairs_online_verified": false,
+  "cloud_started_epoch": 1794406902.8964245,
+  "cloud_closed_epoch": 1794408331.998126,
+  "conservative_machine_hours": 1.9848634743028217,
+  "old_files_and_systems_preserved": true,
+  "full_training_run": false,
+  "frozen_performance_evaluation": false
+}
