@@ -18,10 +18,12 @@ def runid(label):return label+'-'+time.strftime('%Y%m%d-%H%M%S')+'-'+uuid.uuid4(
 def allocate(f,r):
  if (f/'logs'/r).exists() or (f/'configs'/(r+'.json')).exists():raise ValueError('Run ID already exists: '+r)
  for n in ['logs','audit','metrics','report','plots','checkpoints','configs']:(f/n).mkdir(exist_ok=True)
-def auth(f,r,cluster,cap):
+def auth(f,r,cluster,cap,deadline=None):
  a=read(pathlib.Path(cluster)) if cluster else dict(nodes=[dict(ip='127.0.0.1'),dict(ip='local')])
  assert len(a['nodes'])>=2,'One learner and >=1 actor location required (local is supported)'
- now=time.time();a.update(start_epoch=now,deadline_epoch=now+max(1200,cap),authorization='Explicit portable CLI invocation; bounded fresh run; no automatic continuation')
+ now=time.time();end=now+max(1200,cap)
+ if deadline is not None:end=min(end,deadline)
+ a.update(start_epoch=now,deadline_epoch=end,authorization='Explicit portable CLI invocation; bounded fresh run; no automatic continuation')
  q=f/'configs'/(r+'-authorization.json');write(q,a);return a,q
 def doctor():
  z=dict(package=str(P),python=python(),kernel=os.uname().release,tools={x:shutil.which(x) for x in ['g++','mm-link','mm-delay','sudo','ip']},tun=pathlib.Path('/dev/net/tun').exists())
@@ -30,12 +32,15 @@ def doctor():
 def main():
  ap=argparse.ArgumentParser(description=__doc__);sp=ap.add_subparsers(dest='cmd');sp.add_parser('doctor')
  for cmd in ['evaluate','train','smoke-training','verify-training']:
-  p=sp.add_parser(cmd);p.add_argument('--variant',required=True);p.add_argument('--run-id');p.add_argument('--scenario',type=int,default=0);p.add_argument('--seconds',type=float,default=90 if cmd=='smoke-training' else 60);p.add_argument('--actors',type=int,default=1);p.add_argument('--samples',type=int,default=2400000);p.add_argument('--seconds-per-actor',type=float);p.add_argument('--cluster');p.add_argument('--port',type=int,default=23000);p.add_argument('--learner-port',type=int,default=25000)
+  p=sp.add_parser(cmd);p.add_argument('--variant',required=True);p.add_argument('--run-id');p.add_argument('--scenario',type=int,default=0);p.add_argument('--seconds',type=float,default=90 if cmd=='smoke-training' else 60);p.add_argument('--actors',type=int,default=1);p.add_argument('--samples',type=int,default=2400000);p.add_argument('--seconds-per-actor',type=float);p.add_argument('--cluster');p.add_argument('--port',type=int,default=23000);p.add_argument('--learner-port',type=int,default=25000);p.add_argument('--episode-seconds',type=float);p.add_argument('--replay-probe',action='store_true');p.add_argument('--seed',type=int,default=3);p.add_argument('--deadline-epoch',type=float)
  a=ap.parse_args()
  if a.cmd=='doctor':return doctor()
  if not a.cmd:ap.print_help();return 2
+ if a.episode_seconds is not None and (a.cmd not in ['train','smoke-training'] or a.variant!='baseline' or not 0<a.episode_seconds<float('inf')):raise ValueError('episode-seconds requires baseline training and a finite positive duration')
+ if a.replay_probe and (a.episode_seconds is None or a.cmd!='train'):raise ValueError('replay-probe requires episodic baseline train with the production replay capacity')
+ if a.deadline_epoch is not None and (a.cmd not in ['train','smoke-training'] or not time.time()+600<a.deadline_epoch<float('inf')):raise ValueError('deadline-epoch requires training with at least ten minutes remaining')
  if a.cmd in ['evaluate','verify-training']:
-  f,c=template(a.variant,'eval');r=a.run_id or runid(a.cmd+'-'+a.variant);allocate(f,r);cs=c.pop('conditions');condition=cs[a.scenario];c.update(condition);c.update(run_id=r,group=a.variant,seconds=a.seconds,port=a.port,seed=3,absolute_deadline_epoch=time.time()+max(600,a.seconds+120),timeout_s=a.seconds+120,no_training=True,code_commit='portable-release',evaluation_code_commit='portable-release')
+  f,c=template(a.variant,'eval');r=a.run_id or runid(a.cmd+'-'+a.variant);allocate(f,r);cs=c.pop('conditions');condition=cs[a.scenario];c.update(condition);c.update(run_id=r,group=a.variant,seconds=a.seconds,port=a.port,seed=a.seed,absolute_deadline_epoch=time.time()+max(600,a.seconds+120),timeout_s=a.seconds+120,no_training=True,code_commit='portable-release',evaluation_code_commit='portable-release')
   p=f/'configs'/(r+'.json');write(p,c)
   if a.cmd=='evaluate':call([f/'repair_evaluate.py','--config',p],cwd=str(f));result=read(f/'logs'/r/'result.json');assert result['status']=='COMPLETED',result;print(json.dumps(dict(run_id=r,result=str(f/'logs'/r/'result.json'),status=result['status'])))
   else:
@@ -44,11 +49,13 @@ def main():
  if a.variant not in ['baseline','mtp20','mtpjoint']:raise ValueError('Production training supports three preserved implementations')
  f,c=template(a.variant,'train');r=a.run_id or runid(a.cmd+'-'+a.variant);allocate(f,r);smoke=a.cmd=='smoke-training';n=a.actors;assert n>=1
  seconds=a.seconds if smoke else (a.seconds_per_actor or c.get('physical_seconds_per_actor',600));cap=1200 if smoke else (max(1200,int(seconds)+900) if c.get('joint_control') else max(1200,int(a.samples/(40*n))+900))
- A,af=auth(f,r,a.cluster,cap);hosts=[x['ip'] for x in A['nodes'][1:]];cs=c['conditions'];c['conditions']=[copy.deepcopy(cs[i%len(cs)]) for i in range(n)]
+ A,af=auth(f,r,a.cluster,cap,a.deadline_epoch);hosts=[x['ip'] for x in A['nodes'][1:]];cs=c['conditions'];c['conditions']=[copy.deepcopy(cs[i%len(cs)]) for i in range(n)]
  if c.get('actor_environment_sequences'):c['actor_environment_sequences']=[copy.deepcopy(c['actor_environment_sequences'][i%len(c['actor_environment_sequences'])]) for i in range(n)]
  for key in ['condition_sequences','actor_sequences']:
   if isinstance(c.get(key),list):c[key]=[copy.deepcopy(c[key][i%len(c[key])]) for i in range(n)]
- c.update(run_id=r,model_id=r,num_actors=n,actor_hosts=[i%len(hosts) for i in range(n)],learner_endpoint=A['nodes'][0]['ip']+':'+str(a.learner_port),actor_port_base=a.port,absolute_deadline_epoch=A['deadline_epoch']-60,stop_file=str(f/'logs'/(r+'-stop.json')),timeout_s=cap-120,shutdown_barrier_s=120,evaluation_reserve_s=90,code_commit='portable-release',capacity_only=False,steps_per_actor=1000000)
+ c.update(run_id=r,model_id=r,seed=a.seed,num_actors=n,actor_hosts=[i%len(hosts) for i in range(n)],learner_endpoint=A['nodes'][0]['ip']+':'+str(a.learner_port),actor_port_base=a.port,absolute_deadline_epoch=A['deadline_epoch']-60,stop_file=str(f/'logs'/(r+'-stop.json')),timeout_s=cap-120,shutdown_barrier_s=120,evaluation_reserve_s=90,code_commit='portable-release',capacity_only=False,steps_per_actor=1000000)
+ if a.episode_seconds is not None:c['episode_seconds']=a.episode_seconds
+ if a.replay_probe:c['capacity_replay_probe']=True
  if c.get('joint_control'):c.update(physical_seconds_per_actor=seconds,sample_budget=None)
  else:c.update(sample_budget=2048*n if smoke else a.samples)
  if smoke:
@@ -61,6 +68,9 @@ def main():
  code="import sys,json,pathlib;sys.path.insert(0,sys.argv[1]);from cluster_control import execute;c=json.loads(pathlib.Path(sys.argv[2]).read_text());print(json.dumps(execute(c)))"
  call(['-B','-c',code,f,p],env=env,cwd=str(f));q=read(f/'metrics'/(r+'-cluster-result.json'));assert q['status']=='COMPLETED',q
  counters=q['final']['counters'];assert counters['critic_iterations']>0 and counters['actor_updates']>0,'No real optimizer update; smoke is not PASS'
+ if a.replay_probe:
+  probe=read(f/'logs'/r/'replay-probe.json');actors=read(f/'metrics'/(r+'-actors.json'))
+  assert probe['rows']==c['memsize'] and all(row['connections_completed']>=4 for row in actors),'Capacity admission requires a full replay save and at least three reconnections per actor'
  print(json.dumps(dict(status='PASS_REAL_TCP_TRAINING' if smoke else 'COMPLETED_TRAINING',run_id=r,counters=counters,result=str(f/'metrics'/(r+'-cluster-result.json')))))
  return 0
 if __name__=='__main__':sys.exit(main())

@@ -36,14 +36,17 @@ def status(run):
   if z['role']=='learner':q['training']=tail(d/'training.csv',8192)[-1:]
   elif z['role']=='actor':
    q['ingress_progress']=load(d/'ingress-progress.json',{})
-   recent=tail(d/'states.csv',65536)[-200:]
+   active=load(d/'episode-progress.json',{}).get('active_run',stem)
+   recent=tail(R/'logs'/active/'states.csv',65536)[-200:]
    if recent:q['recent']=dict(step=int(recent[-1]['transition']),min_saturation=sum(float(x['action_no_noise'])<=-.99 for x in recent)/len(recent),cwnd_mean=sum(float(x['cwnd']) for x in recent)/len(recent),action_mean=sum(float(x['action_no_noise']) for x in recent)/len(recent),reward_mean=sum(float(x['reward']) for x in recent)/len(recent))
   entries.append(q)
  return dict(host=os.uname()[1],epoch=time.time(),load=list(os.getloadavg()),mem_available=psutil.virtual_memory().available,cpu_times=psutil.cpu_times()._asdict(),network=psutil.net_io_counters()._asdict(),entries=entries)
 def signal_stop(run,reason):
  dump(R/'logs'/(run+'-stop.json'),dict(reason=reason,epoch=time.time()))
 def recent_network(run,index):
- path=R/'logs'/(run+'-actor%d'%index)/'down.log'
+ actor=run+'-actor%d'%index
+ active=load(R/'logs'/actor/'episode-progress.json',{}).get('active_run',actor)
+ path=R/'logs'/active/'down.log'
  if not path.exists():return None
  with path.open('rb') as f:
   f.seek(0,2);end=f.tell();f.seek(max(0,end-1000000));lines=f.read().decode(errors='replace').splitlines()[1:]
@@ -124,15 +127,20 @@ def cleanup(run):
 def summarize(run):
  import numpy as np
  from mahimahi_metrics import csvread,mm
+ from episode_training import episode_logs
  result=[]
  for z in load(own_path(run),[]):
   if z['role']!='actor':continue
-  i=z['index'];d=R/'logs'/(run+'-actor'+str(i));states=csvread(d/'states.csv');control=csvread(d/'control.csv');timing=csvread(R/'logs'/(run+'-actor%d-timing.csv'%i))
-  periods=np.diff([float(x['time_us']) for x in control])/1000
+  i=z['index'];d=R/'logs'/(run+'-actor'+str(i));connections=episode_logs(R,d)
+  states=[row for connection in connections for row in csvread(connection/'states.csv')]
+  controls=[csvread(connection/'control.csv') for connection in connections]
+  control=[row for connection in controls for row in connection]
+  timing=csvread(R/'logs'/(run+'-actor%d-timing.csv'%i))
+  periods=np.concatenate([np.diff([float(x['time_us']) for x in connection])/1000 for connection in controls])
   rpc=[float(x['duration_ms']) for x in timing if x['kind']=='inference_rpc'][1:]
   def stats(v):return dict(mean=float(np.mean(v)),p50=float(np.percentile(v,50)),p95=float(np.percentile(v,95)),p99=float(np.percentile(v,99))) if len(v) else {}
   errors=sum(x['state_id']!=x['action_id'] or int(x['return_code'])!=0 or int(x['cwnd_requested'])!=min(2147483647,max(4,int(x['percent'])*int(x['cwnd_before'])//100)) for x in control)
-  q=dict(index=i,producer=load(d/'producer.json'),result=load(d/'result.json'),valid_rows=len(states),control=stats(periods),rpc=stats(rpc),mapping_errors=errors,reward_mean=float(np.mean([float(x['reward']) for x in states])) if states else None)
+  q=dict(index=i,producer=load(d/'producer.json'),result=load(d/'result.json'),valid_rows=len(states),control=stats(periods),rpc=stats(rpc),mapping_errors=errors,reward_mean=float(np.mean([float(x['reward']) for x in states])) if states else None,connections_completed=len(connections))
   if states:
    q.update(cwnd_mean=float(np.mean([float(x['cwnd']) for x in states])),min_saturation=float(np.mean([float(x['action_no_noise'])<=-.99 for x in states])),max_saturation=float(np.mean([float(x['action_no_noise'])>=.99 for x in states])))
   result.append(q)

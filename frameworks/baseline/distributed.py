@@ -12,6 +12,9 @@ from agent_v2 import Agent
 from utils_v2 import ReplayBuffer
 
 def setup(cfg,role,index):
+ if 'episode_seconds' in cfg:
+  seconds=float(cfg['episode_seconds'])
+  if not np.isfinite(seconds) or seconds<=0:raise ValueError('episode_seconds must be finite and positive')
  assert cfg['warmup']>=(512 if cfg.get('portable_smoke_training') else max(10000,20*512))
  assert cfg.get('reward_mode','raw')=='raw','This baseline implements raw Orca reward only; constraint-reward training requires a separate verified backend.'
  if cfg.get('backend')=='moving_stats':
@@ -39,6 +42,7 @@ def setup(cfg,role,index):
 class Replay(ReplayBuffer):
  def __init__(self,cfg):
   super().__init__(cfg['memsize'],70,1,512);self.lock=threading.RLock();self.inserted=0;self.birth=np.zeros(self.size,np.int64);self.cfg=cfg;self.ages=[];self.actor_ids=np.full(self.size,-1,np.int32);self.actor_inserted=np.zeros(cfg['num_actors'],np.int64);self.actor_slots=[[] for _ in range(cfg['num_actors'])];self.slot_position=np.full(self.size,-1,np.int32);self.sampled_by_actor=np.zeros(cfg['num_actors'],np.int64);self.sample_calls=0
+  self.actor_sequences=np.zeros(self.size,np.int64) if cfg.get('episode_seconds') else None
  def append_many(self,data):
   with self.lock:
    for values,actor_id in zip(zip(*data[:5]),data[5]):
@@ -48,7 +52,9 @@ class Replay(ReplayBuffer):
     if old>=0:
      pool=self.actor_slots[old];position=int(self.slot_position[self.ptr]);moved=pool[-1];pool[position]=moved;self.slot_position[moved]=position;pool.pop()
     self.slot_position[self.ptr]=len(self.actor_slots[actor_id]);self.actor_slots[actor_id].append(self.ptr);self.actor_ids[self.ptr]=actor_id;self.actor_inserted[actor_id]+=1
-    self.birth[self.ptr]=self.inserted;self.store(*values);self.inserted+=1
+    self.birth[self.ptr]=self.inserted
+    if self.actor_sequences is not None:self.actor_sequences[self.ptr]=self.actor_inserted[actor_id]
+    self.store(*values);self.inserted+=1
  def sample(self):
   with self.lock:
    n=self.length_buf;k=min(n,self.batch_size)
@@ -62,6 +68,17 @@ class Replay(ReplayBuffer):
    self.sampled_by_actor+=np.bincount(self.actor_ids[idx],minlength=self.cfg['num_actors'])
    self.ages=(self.inserted-self.birth[idx]).tolist()
    return [x[idx].copy() for x in self.peek_buffer()]
+ def snapshot(self):
+  with self.lock:
+   n=self.length_buf
+   result=dict(
+    s0=self.s0_buf[:n].copy(),a=self.a_buf[:n].copy(),reward=self.reward_buf[:n].copy(),
+    s1=self.s1_buf[:n].copy(),terminal=self.terminal_buf[:n].copy(),
+    birth=self.birth[:n].copy(),actor_ids=self.actor_ids[:n].copy(),
+    actor_inserted=self.actor_inserted.copy(),sampled_by_actor=self.sampled_by_actor.copy(),
+    sample_calls=self.sample_calls,ptr=self.ptr,full=self.full)
+   if self.actor_sequences is not None:result['actor_sequences']=self.actor_sequences[:n].copy()
+   return result
 
 def learner(cfg):
  run=R/'logs'/cfg['run_id'];run.mkdir(exist_ok=False);(run/'config.json').write_text(json.dumps(cfg,indent=2))
@@ -97,7 +114,7 @@ def learner(cfg):
   target_no_fetch=tf.group(*(a.target_actor_update_op+a.target_critic_update_op+a.target_critic_update_op2),name='target_no_fetch_capacity')
  bn=[v for v in tf.get_collection(tf.GraphKeys.UPDATE_OPS) if 'actor' in v.name and 'target' not in v.name and (not cfg.get('bn_relevant_only') or 'abstract_actor' in v.name)];diag=[float('nan')]*6
  stage_rows=[]
- status='RUNNING';reason='';next_checkpoint=cfg.get('checkpoint_interval',50000);producer_check=0;producers_done=False;produced=0
+ status='RUNNING';reason='';next_checkpoint=cfg.get('checkpoint_interval',50000);producer_check=0;producers_done=False;produced=0;replay_probe=None
  try:
   while not stop.is_set():
    n=a.rp_buffer.inserted;it=counter['critic_iterations'];limit=int(max(0,n-cfg['warmup'])*cfg['update_ratio'])
@@ -113,6 +130,11 @@ def learner(cfg):
    if n>=next_checkpoint:
     with a.rp_buffer.lock:checkpoint(a.rp_buffer.inserted)
     next_checkpoint=((a.rp_buffer.inserted//cfg.get('checkpoint_interval',50000))+1)*cfg.get('checkpoint_interval',50000)
+   if cfg.get('capacity_replay_probe') and replay_probe is None and a.rp_buffer.full:
+    started=time.monotonic();snapshot=a.rp_buffer.snapshot();copied=time.monotonic()
+    path=cp/('capacity-probe-replay-%d.npz'%n);np.savez(str(path),**snapshot)
+    replay_probe=dict(path=path.name,rows=len(snapshot['s0']),copy_s=copied-started,save_s=time.monotonic()-copied,fifo_after=int(sess.run(size)),inserted_before=n,inserted_after=a.rp_buffer.inserted,meaning='Live full-replay persistence stress only; this file is not a model checkpoint')
+    (run/'replay-probe.json').write_text(json.dumps(replay_probe,indent=2));del snapshot
    if it>=limit:time.sleep(.01);continue
    if cfg.get('require_coverage_gate') and not (R/'logs'/run.name/'coverage-ready.json').exists():time.sleep(.02);continue
    if cfg.get('require_coverage_gate') and int(a.rp_buffer.actor_inserted.min())<cfg.get('minimum_enqueued_per_actor',512):time.sleep(.02);continue
@@ -131,9 +153,10 @@ def learner(cfg):
     if not np.all(np.isfinite(diag)):raise RuntimeError('nonfinite losses/gradients')
    if cfg.get('optimizer_sleep_ms',5)>0:time.sleep(cfg.get('optimizer_sleep_ms',5)/1000.)
   if errors:raise RuntimeError(errors[0])
+  if cfg.get('capacity_replay_probe') and replay_probe is None:raise RuntimeError('Full replay persistence probe was not reached')
   stop.set();t.join(10);checkpoint(a.rp_buffer.inserted)
   rp=a.rp_buffer
-  with rp.lock:np.savez(str(cp/'replay.npz'),s0=rp.s0_buf[:rp.length_buf],a=rp.a_buf[:rp.length_buf],reward=rp.reward_buf[:rp.length_buf],s1=rp.s1_buf[:rp.length_buf],terminal=rp.terminal_buf[:rp.length_buf],birth=rp.birth[:rp.length_buf],actor_ids=rp.actor_ids[:rp.length_buf],actor_inserted=rp.actor_inserted,sampled_by_actor=rp.sampled_by_actor,sample_calls=rp.sample_calls,ptr=rp.ptr,full=rp.full)
+  np.savez(str(cp/'replay.npz'),**rp.snapshot())
   (cp/'sample-coverage.json').write_text(json.dumps(dict(inserted_by_actor=rp.actor_inserted.tolist(),sampled_by_actor=rp.sampled_by_actor.tolist(),retained_by_actor=[len(x) for x in rp.actor_slots],sample_calls=rp.sample_calls,definition='sampled_by_actor counts replay rows used in complete updates; this is not additional real environment experience'),indent=2))
   import pickle
   with (cp/'python-state.pkl').open('wb') as out:pickle.dump(dict(counters=counter,inserted=rp.inserted,numpy_random=np.random.get_state(),python_random=random.getstate()),out,protocol=4)
@@ -160,6 +183,8 @@ def learner(cfg):
 def actor(cfg,index):
  import evaluate
  run_id=cfg['run_id']+'-actor%d'%index
+ episodic=bool(cfg.get('episode_seconds'))
+ if episodic:(R/'logs'/run_id).mkdir(exist_ok=False)
  a,sess,fifo,ph,enq,nph,deq,size=setup(cfg,'actor',index)
  deadline=time.monotonic()+100
  while not (R/'logs'/cfg['run_id']/'ready').exists():
@@ -170,6 +195,11 @@ def actor(cfg,index):
  for v,value in zip(policy,sess.run(policy)):h.update(v.name.encode());h.update(value.tobytes())
  initial_policy_hash=h.hexdigest()
  local=queue.Queue(1024);done=threading.Event();errors=[];counts={'generated':0,'enqueued':0,'exploration_calls':0};seen=[]
+ episode_trace=(R/'logs'/run_id/'transition-origins.jsonl').open('x',buffering=65536) if episodic else None
+ transition_context={}
+ def context(value):
+  transition_context.clear();transition_context.update(value)
+ if episodic:evaluate.transition_context_hook=context
  def writer():
   try:
    last_progress=0
@@ -202,6 +232,14 @@ def actor(cfg,index):
  # The copied evaluator's hook receives the completed transition after next action is sent.
  def transition(h,a0,reward,h1):
   if errors:raise RuntimeError(errors[0])
+  if episodic:
+   duration=transition_context['duration']
+   if not np.isfinite(duration) or duration<=0:raise RuntimeError('invalid physical transition duration')
+   origin=dict(actor=index,actor_sequence=counts['generated']+1,
+    connection=evaluate.training_connection,connection_step=transition_context['connection_step'],
+    elapsed_s=transition_context['elapsed_s'],duration=duration,state_id=transition_context['state_id'],
+    phase='startup' if transition_context['elapsed_s']<10 else 'steady')
+   episode_trace.write(json.dumps(origin)+'\n')
   local.put_nowait([h.copy(),np.array([a0],np.float32),np.array([reward],np.float32),h1.copy(),np.array([0],np.float32)]);counts['generated']+=1
  evaluate.transition_hook=transition
  def finish():
@@ -215,9 +253,14 @@ def actor(cfg,index):
  if cfg.get('serialized_start'):
   release=R/'logs'/(cfg['run_id']+'-launch-actor%d'%index)
   while not release.exists():time.sleep(.05)
- try:evaluate.main()
+ try:
+  if episodic:
+   from episode_training import run_episodes
+   run_episodes(R,cfg,run_id,counts,ecfg,evaluate)
+  else:evaluate.main()
  finally:
   done.set();t.join(timeout=30)
+  if episode_trace:episode_trace.close()
   if t.is_alive():errors.append('writer failed to drain in 30s')
   # evaluator closes the session only after the producer thread has been drained (hook).
   (R/'logs'/run_id/'producer.json').write_text(json.dumps(dict(counts,errors=errors,seed=cfg['seed']+index*1009,initial_policy_hash=initial_policy_hash),indent=2))

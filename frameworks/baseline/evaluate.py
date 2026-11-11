@@ -155,6 +155,8 @@ def main():
                     # with a fresh sequence ID before reading another state.
                     duplicate_action=act(h1);send(duplicate_action)
                 sw.writerow([time.time()*1e6,time.monotonic()-control_start,valid,reader.last_id,action,no_noise,pct,reward,raw[1]/env.max_bw,5*raw[7]/env.max_bw,s1[-1],env.max_bw,raw[5],raw[3],raw[8],raw[14],json.dumps(s1.tolist())])
+                if globals().get('transition_context_hook'):
+                    transition_context_hook(dict(duration=float(raw[3]),elapsed_s=time.monotonic()-control_start,state_id=reader.last_id,connection_step=valid))
                 if globals().get('transition_hook'):transition_hook(hist,action,reward,h1)
                 hist=h1;action=next_action;no_noise=next_nn;pct=nextpct
                 if cfg.get('training_steps') and valid>=cfg['training_steps']:break

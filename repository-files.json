@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-10 fresh single-action fixed-period baseline and bounded evaluation",
+  "scope": "2026-11-11 offline scalar reconnection candidate; live TF/TCP admission pending",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11510,
-      "sha256": "64d2534f7e0ad64ce174fc53fe7301648fa9ccba94d13d9dba45ad5b33aadd10"
+      "bytes": 11694,
+      "sha256": "286f537451f34c45057b9c4c5f70ef70e43e18e94df3282e74980d19d0f76a1f"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -46,6 +46,11 @@
       "path": "docs/BASELINE.md",
       "bytes": 2746,
       "sha256": "d19f057ffb0da9ffdded4988a7c89d12740d7c0a9029fc09cec8d6998294560d"
+    },
+    {
+      "path": "docs/BASELINE_RECOVERY_20261111.md",
+      "bytes": 5193,
+      "sha256": "b5b6cbcf719f522106130c6e04aa056604ab76551e0687d0086c8291f765d65e"
     },
     {
       "path": "docs/BASE_FIRST_PRINCIPLES_REVIEW.md",
@@ -17593,13 +17598,18 @@
     },
     {
       "path": "frameworks/baseline/distributed.py",
-      "bytes": 18681,
-      "sha256": "98231517544471e941c67bdc0567de6cf67adea43777c8124280b5473be63090"
+      "bytes": 21131,
+      "sha256": "364d116b2c61b975b0a666878ec218d687ab4586ca7b9d6c398175f55dc21c7f"
+    },
+    {
+      "path": "frameworks/baseline/episode_training.py",
+      "bytes": 4401,
+      "sha256": "33ace682c906d65eee35fb8cc43e6f5792f6459a3ce9e4e73a85c2d3c4647e17"
     },
     {
       "path": "frameworks/baseline/evaluate.py",
-      "bytes": 13835,
-      "sha256": "1d9c522fb162115018dca8b780951df22797be1c7857be7ddbfd9e6955b1e234"
+      "bytes": 14057,
+      "sha256": "1757ec6ad0675bb5ea85c3ef841bd1fb04589d5a78174ab2e60047fd9acafece"
     },
     {
       "path": "frameworks/baseline/frozen_evaluate.py",
@@ -17618,8 +17628,8 @@
     },
     {
       "path": "frameworks/baseline/node_control.py",
-      "bytes": 10913,
-      "sha256": "c4729c6a01b7959da44518c05f40eac4842bf6040a043fe7ccc393d947c48e37"
+      "bytes": 11416,
+      "sha256": "6f1c5b73362c1276f57c2be9bdaf7a6ca1498cab125e3033d4270c321f77aa2c"
     },
     {
       "path": "frameworks/baseline/remote_frozen_evaluate.py",
@@ -20411,8 +20421,8 @@
     },
     {
       "path": "run.py",
-      "bytes": 7405,
-      "sha256": "d31f725dfcaa104c9376fc511785adaae3fc7fca5536a9642aa4e43a9bdf02ab"
+      "bytes": 8751,
+      "sha256": "4663dc797bb17f2b57d3dce033c48c061f9f1c10284207b661926183e08113eb"
     },
     {
       "path": "runtime/mahimahi/.gitignore",
@@ -22000,6 +22010,11 @@
       "sha256": "b1eff100fdcf4c75210361f9a0e31ccd8c024394095984fd0722140b6c079e48"
     },
     {
+      "path": "tools/audit_episode_replay.py",
+      "bytes": 3626,
+      "sha256": "b83e31748b3a96c3c41ca6911f728819dfe8e7ed2c4eeea4f99b4362959c1895"
+    },
+    {
       "path": "tools/baseline_reproduction_check.py",
       "bytes": 5587,
       "sha256": "fbe42b6f14b68d9f63471351b88b000a1ad3aab91780593b81862ebdaf7bf61e"
@@ -22313,6 +22328,11 @@
       "path": "tools/test_base_first_principles.py",
       "bytes": 1661,
       "sha256": "8b755e09fbf4a11a59b061869818690b915965a8dcbd5b2e25a65bf9c4b7057b"
+    },
+    {
+      "path": "tools/test_baseline_episodes.py",
+      "bytes": 11649,
+      "sha256": "69ae52681624d609890a1eebe8c6fa86cedfb0815f125ac720e1e5bda42db29f"
     },
     {
       "path": "tools/test_baseline_reproduction.py",
