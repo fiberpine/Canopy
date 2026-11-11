@@ -1,5 +1,7 @@
 # 目标BN完整重训后的复核交接
 
+最新：[与Claude的实测后复核及保留边界](../evidence/baseline-target-retrain-20261111/claude-postrun-review.md)已完成。双方同意更新图与学习信号优先于重连；“后半训练无信息”、相关性可证明critic正确及新的饱和早停均未采纳为既定事实或当前门槛。未新增云端实验。
+
 [完整结果与24格表](../evidence/baseline-target-retrain-20261111/summary.md) · [机器可读结论](../evidence/baseline-target-retrain-20261111/result.json) · [首批目标BN证据和失败](../evidence/baseline-target-audit-20261111/summary.md)
 
 目标点策略依赖batch的问题已用同权重/同focal输入隔离，修复后上下文影响为0；但BN-only最终健康失败。不能将“找到真实缺陷”与“已充分解释训练失败”画等号。只保留一个seed且没有新健康终点，双动作暂不接入。
