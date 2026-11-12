@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-12 offline baseline scale/source/trajectory audit; no new cloud or learning; prior full endpoint remains FAIL",
+  "scope": "2026-11-12 offline learner/actor capacity audit; current32/48 U010 admission NOT_RUN; no new training",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 13120,
-      "sha256": "7db8b2ddd83c57032780b3b7abb944abbe86c350f5d98ea894e9dfdf83de2bce"
+      "bytes": 13404,
+      "sha256": "b2eff70ff1f86067aa1ac423bfc2b38e107966b0e0da607c5ea3cfec5fe8b0db"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -46,6 +46,11 @@
       "path": "docs/BASELINE.md",
       "bytes": 2746,
       "sha256": "d19f057ffb0da9ffdded4988a7c89d12740d7c0a9029fc09cec8d6998294560d"
+    },
+    {
+      "path": "docs/BASELINE_CAPACITY_AUDIT_20261112.md",
+      "bytes": 8011,
+      "sha256": "b04a1ab53f70a3741c29240f2bb9877dea5a2d05441f52b3f30444541781eff1"
     },
     {
       "path": "docs/BASELINE_NEXT_TRAIN_20261111.md",
@@ -6811,6 +6816,16 @@
       "path": "evidence/base-reproduction-20261028/verification.json",
       "bytes": 1076,
       "sha256": "7f9a0fb1775ce84b2c27065c0f0d2e37074bb66cc86424ec4ab5390011d07143"
+    },
+    {
+      "path": "evidence/baseline-capacity-audit-20261112/analysis.json",
+      "bytes": 15216,
+      "sha256": "35164e17931f56f59533cb29183e01031ab6483a1ddf565229bd377798adf0fb"
+    },
+    {
+      "path": "evidence/baseline-capacity-audit-20261112/validation.json",
+      "bytes": 343,
+      "sha256": "ac6f4be29cae4ddb75fa7e820ecd769553d1e750b65bf2fc7215206368d3d89a"
     },
     {
       "path": "evidence/baseline-review-20261111/README.md",
@@ -22733,6 +22748,11 @@
       "path": "templates/scalar-orca-moving-train.json",
       "bytes": 13938,
       "sha256": "b1eff100fdcf4c75210361f9a0e31ccd8c024394095984fd0722140b6c079e48"
+    },
+    {
+      "path": "tools/analyze_baseline_capacity.py",
+      "bytes": 4878,
+      "sha256": "829e25e8be076fc434c71de4326fffc07333172c3c149594a6c5bbf6cd9627c6"
     },
     {
       "path": "tools/analyze_baseline_scale.py",

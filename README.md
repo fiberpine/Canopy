@@ -1,5 +1,7 @@
 # Canopy：baseline与两种MTP双动作实现
 
+[五机低利用率与actor扩容分析](docs/BASELINE_CAPACITY_AUDIT_20261112.md)：现有五台值得短测32/48，但低整机CPU不代表learner吞吐有同比余量。历史48actor在CPU约47%时已有更新积压；当前U=.1的更高并发仍待实测，本轮0云连接。
+
 [规模、开源差异和全程异常的离线分析](docs/BASELINE_SCALE_AND_FAILURE_AUDIT_20261112.md)：官方一轮名义12.8M与本轮2.418M须区分；已核对固定上游源码、588行训练日志及同权重重复的不稳定。不能仅归因于机器少，也不能排除训练不足。本轮0云连接，五机可以关闭。
 
 [目标BN单变量完整重训与最终评测](evidence/baseline-target-retrain-20261111/summary.md)：短准入通过，fresh seed3完成2,418,460条/240,617完整更新；最终健康 **FAIL**（利用率91.77%、mean queue 274.49ms）。原72项70完成、2项首次策略动作前启动失败，2项同权重补测单列。正式训练因清理超时保留FAILED，完整终点已持久化且独立验账；五机最终收尾通过。没有新健康基座、第二训练seed或双动作收益结论。[下一步复核方向](docs/BASELINE_TARGET_RETRAIN_20261111.md)。
