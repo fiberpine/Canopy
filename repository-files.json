@@ -63,6 +63,11 @@
       "sha256": "03021598486532382eae61a244b0ad62aaf64f59e0730bb90c2758c506f95877"
     },
     {
+      "path": "docs/BASELINE_HEALTH_VALIDATION_PLAN_20261112.md",
+      "bytes": 6782,
+      "sha256": "72f288f0be77ece7a38d705d57928cd30149d34099f3f70b3e74d7eda69107e2"
+    },
+    {
       "path": "docs/BASELINE_NEXT_TRAIN_20261111.md",
       "bytes": 8308,
       "sha256": "111cacb9e7a0396aebd4de2c2d34b9a1609c8054f72e64698a337b6f6a7dae7a"
@@ -89,8 +94,8 @@
     },
     {
       "path": "docs/BASELINE_STARTUP_NEXT_20261112.md",
-      "bytes": 9795,
-      "sha256": "6ce3bf7293c7e492e475cc4a42580f201098d32b67666618af7c4e40fcbb50a0"
+      "bytes": 10340,
+      "sha256": "ad79c359cccf286e2ae3fa9e4181568070487e904c8c9afe14f0f17c296b7711"
     },
     {
       "path": "docs/BASELINE_TARGET_RETRAIN_20261111.md",
@@ -7178,6 +7183,31 @@
       "sha256": "b3e18f9ae0b3c1285673437fac0a3f428a54a4b7ad667d3975fab1de5169361a"
     },
     {
+      "path": "evidence/baseline-health-validation-plan-20261112/H0-recipe-differences.json",
+      "bytes": 1369,
+      "sha256": "92885a63b0676131a1889729a2cb69f337a9ad39ea34b6f3571eb78437670f25"
+    },
+    {
+      "path": "evidence/baseline-health-validation-plan-20261112/collapse-audit.json",
+      "bytes": 25802,
+      "sha256": "ac44ae36596f68e3d40bab9959b8ba7359c6e29ab067c465e776c41fc92c16b4"
+    },
+    {
+      "path": "evidence/baseline-health-validation-plan-20261112/seed7-config.draft.json",
+      "bytes": 12826,
+      "sha256": "42e80c3388e2bf489b56d0e7afb34f58109ed7b4b9d35437a53bc1ee1d92ee4f"
+    },
+    {
+      "path": "evidence/baseline-health-validation-plan-20261112/stage-plan.draft.json",
+      "bytes": 4612,
+      "sha256": "cea581dac5abe4c839dde77512a90e1799d004c9991f5a90b53e90f6311c92cf"
+    },
+    {
+      "path": "evidence/baseline-health-validation-plan-20261112/two-host-screen.draft.json",
+      "bytes": 36440,
+      "sha256": "6bacfd10819ad8799c2df7044402da74aa8800814ef0846b140fecb96d589f67"
+    },
+    {
       "path": "evidence/baseline-online-bn-repair-20261112/H0-observed-reference.json",
       "bytes": 795,
       "sha256": "d1ec9999d2c392ff95e31922652c59e6ff03eb37b5c5bc89ab207bc1bab2dfaa"
@@ -7719,8 +7749,8 @@
     },
     {
       "path": "evidence/baseline-startup-diagnostic-20261112/static-source-contract.json",
-      "bytes": 715,
-      "sha256": "590c45ffd8c55e3359733a054161d085b5d16e969f99fa69347f78250bd1f554"
+      "bytes": 782,
+      "sha256": "12ed4d22ea6618e3b842dfc264931779e94287be218e52db0577157aeed41114"
     },
     {
       "path": "evidence/baseline-target-audit-20261111/admission-failure-review.json",
@@ -18919,8 +18949,8 @@
     },
     {
       "path": "frameworks/baseline/code/runtime/src/orca-server-control-log-safe.cc",
-      "bytes": 28079,
-      "sha256": "0b4d3bae7ec1be5aca370b0e903008b73b62b279d33975142d6bbab95deb7601"
+      "bytes": 28200,
+      "sha256": "e6ad6a296f1bc9b7c7ea40ea001df7fd83248ba31725469fa66cb44f8961c722"
     },
     {
       "path": "frameworks/baseline/code/runtime/src/orca-server-fast-handshake-probe.cc",
@@ -23475,6 +23505,11 @@
       "sha256": "a7dc0a4071a6159d6fde545aa8ee4434d1a26cdd6a3942012b43cc3547e76386"
     },
     {
+      "path": "tools/capture_baseline_health_validation.py",
+      "bytes": 1537,
+      "sha256": "40e4d5b9ff01b7d891d4303fb28001d1c0c8f7c5eb23dc18b3a683138b90fd2b"
+    },
+    {
       "path": "tools/check_s20_tf.py",
       "bytes": 4107,
       "sha256": "afe2131a5c98bc0fb2b84c6729f4d0552875e5d055a2ad32382971849916d93b"
@@ -23550,6 +23585,11 @@
       "sha256": "a3df180e5fb56fa30c6a2aecac199757f55fbc2bd2d227eb41f0cd49715758b2"
     },
     {
+      "path": "tools/packet_window_completion.py",
+      "bytes": 2632,
+      "sha256": "09b15cd3a4b38d3eaf274ab22c0c7d3f4d8151bba75b2262652623d36ac79ba2"
+    },
+    {
       "path": "tools/plan_scalar_startup_screen.py",
       "bytes": 4913,
       "sha256": "ba6fd61e4632546993ba118050110435fef97ae6eb70ffa7d06a313cf1ca2543"
@@ -23568,6 +23608,16 @@
       "path": "tools/plot_baseline_repair_6m.py",
       "bytes": 12562,
       "sha256": "6f9ce94f3c9125c906fa6d969dbc9975c879baadece77f2c5d5e9a82fae5a52a"
+    },
+    {
+      "path": "tools/prepare_baseline_health_validation.py",
+      "bytes": 11090,
+      "sha256": "9d4e033fd569089a12a0a61f2e05c67f27c50e56c79e8a9261980ba29fa44abe"
+    },
+    {
+      "path": "tools/run_baseline_paired_frozen_worker.py",
+      "bytes": 2199,
+      "sha256": "c8f4b6016016a5fa50a00064363b20539ca956fe3a1bed0281ba89a65ee64dd8"
     },
     {
       "path": "tools/scalar_audit/audit.py",
@@ -23796,8 +23846,8 @@
     },
     {
       "path": "tools/test_base_first_principles.py",
-      "bytes": 2593,
-      "sha256": "53012ade04f8b54c582cfcdc3fa20295cbe84dc67c9076cf220cfbf3ebfa62e5"
+      "bytes": 2738,
+      "sha256": "1c5f47e5770bb3175b77b271bfe1041be4505dcaf4dcb88644de243204183abb"
     },
     {
       "path": "tools/test_baseline_admission.py",
@@ -23883,6 +23933,11 @@
       "path": "tools/test_learning_check.py",
       "bytes": 18360,
       "sha256": "7f36b75c6d251f5998c46053b1ad85887a33e3526d5747f6150ab99d967ab8f4"
+    },
+    {
+      "path": "tools/test_packet_window_completion.py",
+      "bytes": 2229,
+      "sha256": "b1b8e99a402d97ddc7dd6375ad2dc956691b7b6c08cbb503c1c300b3affd1c0e"
     },
     {
       "path": "tools/test_scalar_exploration.py",

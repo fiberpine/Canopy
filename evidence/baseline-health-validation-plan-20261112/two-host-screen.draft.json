@@ -1,0 +1,1072 @@
+{
+  "status": "OFFLINE_TWO_HOST_DRAFT_NOT_AUTHORIZED",
+  "seed": 20261113,
+  "slots_per_host": 1,
+  "order": "per-host plan order; both pair members on the same host",
+  "jobs": [
+    {
+      "pair": 0,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 3,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 0,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 3,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 1,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 1,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 2,
+      "host_slot": 0,
+      "group": "H0-reference",
+      "repeat": 2,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      }
+    },
+    {
+      "pair": 2,
+      "host_slot": 0,
+      "group": "H0-reference",
+      "repeat": 2,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      }
+    },
+    {
+      "pair": 3,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R100",
+        "nominal_mbps": 36,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 3,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R100",
+        "nominal_mbps": 36,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 4,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 4,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 5,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R50",
+        "nominal_mbps": 24,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 5,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R50",
+        "nominal_mbps": 24,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 6,
+      "host_slot": 0,
+      "group": "H0-reference",
+      "repeat": 0,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      }
+    },
+    {
+      "pair": 6,
+      "host_slot": 0,
+      "group": "H0-reference",
+      "repeat": 0,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      }
+    },
+    {
+      "pair": 7,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 7,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 8,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 8,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 9,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R100",
+        "nominal_mbps": 36,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 9,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R100",
+        "nominal_mbps": 36,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 10,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R50",
+        "nominal_mbps": 24,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 10,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R50",
+        "nominal_mbps": 24,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 11,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 11,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 12,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 12,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 13,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 13,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 14,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 14,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 15,
+      "host_slot": 1,
+      "group": "H0-reference",
+      "repeat": 1,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      }
+    },
+    {
+      "pair": 15,
+      "host_slot": 1,
+      "group": "H0-reference",
+      "repeat": 1,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      }
+    },
+    {
+      "pair": 16,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 16,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 17,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 4,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 17,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 4,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 18,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 18,
+      "host_slot": 0,
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 19,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 5,
+      "startup": "legacy",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    },
+    {
+      "pair": 19,
+      "host_slot": 1,
+      "group": "onlinebn-final6m",
+      "repeat": 5,
+      "startup": "first-feedback",
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      }
+    }
+  ],
+  "frozen_model": "step-6013196; no optimizer, exploration or checkpoint selection",
+  "suggested_budget": {
+    "initial_phase_minutes": 45,
+    "active_hosts": 2,
+    "maximum_host_hours": 1.5,
+    "authorized": false
+  },
+  "execution": {
+    "no_training": true,
+    "no_exploration": true,
+    "control_period_ms": 20,
+    "matched_audit": true,
+    "condition_coverage_change": false
+  },
+  "screen_gates": {
+    "all_40_canonical_complete": true,
+    "legacy_G12_R200_catastrophes_at_least": "2/6 is mechanism-screen evidence only, not a performance confirmation prerequisite",
+    "first_feedback_G12_R200_catastrophes": 0,
+    "catastrophe_utilization_below": 0.5,
+    "candidate_all_cell_medians_pass_original_gates": true,
+    "per_condition_first_10s_paired_utilization_median_difference_at_least": -0.05,
+    "source_model_action_cadence_provenance_pass": true,
+    "real_inflight_audit_required": true,
+    "failure_to_reproduce_legacy": "MECHANISM_INCONCLUSIVE; performance confirmation may proceed if current first-feedback arm passes all registered performance/protocol gates",
+    "incomplete_or_unqualified_execution_error": "INCOMPLETE"
+  },
+  "retry_policy": {
+    "maximum": 2,
+    "only_zero_valid_and_zero_control": true,
+    "unchanged_model_and_owned_cleanup_required": true,
+    "preserve_original_and_canonical_mapping": true,
+    "performance_retry": false
+  },
+  "conditional_confirmation": {
+    "startup": "first-feedback",
+    "candidate_repeats": 3,
+    "reference_repeats": 1,
+    "conditions": 24,
+    "total_runs": 96,
+    "independent_from_screen": true,
+    "keep_original_legacy_FAIL": true,
+    "no_automatic_training": true
+  },
+  "source_registration_sha256": "c2cec844057c77ee74d12c36e8f5c53430cf13a37d218e6c266b7f5c0b0f6e2a",
+  "unbound": [
+    "new explicit budget/deadline",
+    "fresh host identity mapping",
+    "built native hashes and matched audit setting",
+    "metric/helper hashes",
+    "absolute traffic-clock and first-10-second capture protocol"
+  ],
+  "original_health_gates": {
+    "cell_utilization": 0.9,
+    "queue_rtt_factor": 0.25,
+    "queue_margin_ms": 10,
+    "p95_rtt_factor": 0.5,
+    "p95_margin_ms": 20,
+    "trim_drop": 0.01,
+    "tail_utilization": 0.85,
+    "catastrophe_utilization": 0.5,
+    "post_handoff_drop": 0.05,
+    "overall_utilization": 0.95,
+    "overall_queue_ms": 20
+  }
+}

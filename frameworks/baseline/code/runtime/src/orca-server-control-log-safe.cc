@@ -417,9 +417,11 @@ void* CntThread(void* information)
     bool got_alpha=false;
     bool slow_start_passed=0;
 #ifdef ORCA_STARTUP_AUDIT
+    // Preserve legacy diagnostic __LINE__ values across opt-in insertions.
     bool startup_handoff_logged=false;
     unsigned long startup_assist_writes=0;
 #endif
+#line 419
     for(int i=0;i<FLOW_NUM;i++)
     {
         if (setsockopt(sock_for_cnt[i], IPPROTO_TCP, TCP_NODELAY, &reuse, sizeof(reuse)) < 0)
@@ -491,6 +493,7 @@ void* CntThread(void* information)
                     // but publish its first feedback without pre-policy CWND writes.
                     slow_start_passed=1;
 #else
+#line 485
                     if (!slow_start_passed)
                         //Just for the first Time
                         slow_start_passed=(orca_info.snd_ssthresh<orca_info.cwnd)?1:0;
@@ -511,6 +514,7 @@ void* CntThread(void* information)
 #ifdef ORCA_STARTUP_AUDIT
                         startup_assist_writes++;
 #endif
+#line 502
                         usleep(report_period*1000); // Keep slow-start assistance at the configured control cadence.
                         continue;
                     }
@@ -531,6 +535,7 @@ void* CntThread(void* information)
                         startup_handoff_logged=true;
                     }
 #endif
+#line 505
                     // Send message to RL-Module
                     sprintf(message,"%d %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f",
                             msg_id,delay,(double)orca_info.thr,(double)orca_info.cnt,(double)time_delta,

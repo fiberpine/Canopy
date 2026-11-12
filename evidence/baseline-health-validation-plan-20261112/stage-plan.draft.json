@@ -1,0 +1,105 @@
+{
+  "status": "OFFLINE_PREPARATION_AWAITING_NEW_BUDGET_AND_POWER_ON",
+  "authorized": false,
+  "requested_overall_minutes": 240,
+  "conservative_maximum_host_hours": 20,
+  "cleanup_reserve_minutes": 10,
+  "first_power_on": [
+    "canopy-learner-test",
+    "canopy-actor1"
+  ],
+  "other_hosts": "Power on actor2-4 only after the initial screen permits full confirmation",
+  "old_budget_reused": false,
+  "seed3_policy": "631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0",
+  "training_core_sha256": {
+    "distributed.py": "8534ead119bcb16f4064e3debaef08cd8eda91030e8393909663d42e7eafa0ce",
+    "consistent_target_bn.py": "ac64991d4bb40c10afff580b5c8140ec1e6587c9eb64344e8a37b3b5b00380a5",
+    "independent_critic_v34.py": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266",
+    "unique_critic_targets.py": "535f527dfa5ed2379c17526459d380d8ac5e4547cfd5043edc05ae38e2e48124",
+    "unique_online_bn.py": "d0f135a44e704b1ede0d980aefda30b18ea532eec54ab379253b278df3fcb619"
+  },
+  "stages": [
+    {
+      "name": "build_and_weak_screen",
+      "hosts": 2,
+      "maximum_minutes": 45,
+      "jobs": 40,
+      "extra_protocol_trials_max": 4,
+      "training": false,
+      "gates": "same frozen model; build/kernel/clock/action checks, first-feedback weak cells and sentinels pass; keep legacy mechanism outcome separate"
+    },
+    {
+      "name": "independent_full_seed3_confirmation",
+      "hosts": 5,
+      "jobs": 96,
+      "candidate_repeats": 3,
+      "H0_repeats": 1,
+      "conditions": 24,
+      "reuse_screen_results": false,
+      "training": false,
+      "gates": "original absolute health gates"
+    },
+    {
+      "name": "single_recipe_replication",
+      "hosts": 5,
+      "learners": 1,
+      "actors": 24,
+      "seed": 7,
+      "fresh": true,
+      "nominal_samples": 6000000,
+      "maximum_runs": 1,
+      "minimum_remaining_minutes_to_start": 150,
+      "training_native": "exact original legacy632bca97; only seed differs in learning recipe",
+      "evaluation_startup": "same validated first-feedback deployment protocol as seed3",
+      "final_checkpoint": "fully drained endpoint; no score-based selection"
+    },
+    {
+      "name": "seed7_frozen_confirmation",
+      "hosts": 5,
+      "candidate_jobs": 72,
+      "conditions": 24,
+      "H0_sentinels": 6,
+      "reference_identity": "same H0, same native and metric clock",
+      "training": false,
+      "gates": "same absolute health gates; no performance retries"
+    }
+  ],
+  "training_stability": {
+    "reward_network_noise_U_replay_unchanged": true,
+    "early_boundary_saturation_alone_is_not_failure": true,
+    "no_guard_induced_stop_change": true,
+    "prolonged_boundary_audit": {
+      "after_samples": 1500000,
+      "actors_at_least": 20,
+      "no_noise_boundary_fraction_at_least": 0.99,
+      "actor_gradient_median_at_most": 1e-06,
+      "duration_seconds_at_least": 180,
+      "stale_actor_data_cannot_pass": true
+    },
+    "if_prolonged_boundary": "Recipe stability PARTIAL even if final performance passes; do not clean old code"
+  },
+  "outcome_rules": {
+    "seed3_pass": "healthy endpoint under explicitly named deployment protocol; recipe reproducibility still pending",
+    "seed3_and_seed7_pass": "initial two-training-seed reproduction; not an estimated universal success rate",
+    "any_performance_failure": "retain negative result; diagnose; no automatic second long training",
+    "insufficient_time": "do not launch a training that cannot reserve final evaluation and cleanup",
+    "cleanup": "only after seed3/seed7 health, training-stability and byte-reproduction checks pass"
+  },
+  "archive_before_cleanup": [
+    "immutable source tag plus verified Git bundle",
+    "both selected policies and complete-model checksums",
+    "train/eval configs, native/kernel/dependencies, run/sample/update/seed ledgers",
+    "all acceptance results and failure/repair summaries",
+    "fresh-checkout reproduction and inventory verification"
+  ],
+  "conditional_cleanup": {
+    "delete_now": false,
+    "scope": "GitHub main obsolete baseline execution copies and duplicate checkpoints only after archive gates",
+    "preserve": [
+      "protected original H0 local package/tag/history",
+      "negative evidence and issue/repair records",
+      "innovation branches and implementations unless independently proven unused"
+    ],
+    "method": "dependency/reference inventory; move historical runnable source links to immutable tags; retain one canonical baseline entry"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "unchanged": {
+    "num_actors": 24,
+    "memsize": 150000,
+    "sampler": "balanced_actor",
+    "warmup": 12288,
+    "update_ratio": 0.1,
+    "reward_mode": "raw",
+    "LOSS_TYPE": "MSE",
+    "control_period_ms": 20,
+    "tf_threads": 4,
+    "exploration_std": 0.2,
+    "backend": "moving_stats",
+    "minimum_enqueued_per_actor": 512
+  },
+  "changed": [
+    {
+      "setting": "target_bn_consistent",
+      "H0": null,
+      "current": true
+    },
+    {
+      "setting": "independent_critic_adam_v34",
+      "H0": false,
+      "current": true
+    },
+    {
+      "setting": "unique_critic_targets",
+      "H0": false,
+      "current": true
+    },
+    {
+      "setting": "unique_online_bn_updates",
+      "H0": false,
+      "current": true
+    },
+    {
+      "setting": "sample_budget",
+      "H0": 2400000,
+      "current": 6000000
+    },
+    {
+      "setting": "checkpoint_interval",
+      "H0": 500000,
+      "current": 300000
+    },
+    {
+      "setting": "performance_guard_policy",
+      "H0": null,
+      "current": "warn"
+    }
+  ],
+  "current_runtime_commit": "9bb1500eaf791bcb0e97724c63dcb725323dd5cd",
+  "note": "H0 missing optional boolean flags means disabled; the public historical facts select only relevant config fields. Not a claim of bitwise identical H0/repair optimizer initialization."
+}

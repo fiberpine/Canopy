@@ -24,6 +24,8 @@ def default_startup_source(source):
             active=parents[-1] and not active
         elif directive=='#endif' and parents:
             active=parents.pop()
+        elif directive.startswith('#line '):
+            if not directive.split()[1].isdigit():raise AssertionError('Unexpected line directive')
         elif active:
             lines.append(line)
     if parents:raise AssertionError('Unclosed startup conditional')
