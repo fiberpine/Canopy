@@ -1,5 +1,7 @@
 # Canopy：baseline与两种MTP双动作实现
 
+[11月12日更新契约实测与容量准入](evidence/baseline-capacity-repair-20261112/summary.md)：已修复可复现的早期共享Adam竞争，24/32容量通过、48因更新积压未准入；24actor随机seed3的名义6M训练正在运行，最终24格×3与H0参照尚待完成，不能称新健康基座。上轮实际云端native与H0相同，已更正此前将本机缓存ELF差异当作实际运行差异的表述。
+
 [五机低利用率与actor扩容分析](docs/BASELINE_CAPACITY_AUDIT_20261112.md)：现有五台值得短测32/48，但低整机CPU不代表learner吞吐有同比余量。历史48actor在CPU约47%时已有更新积压；当前U=.1的更高并发仍待实测，本轮0云连接。
 
 [规模、开源差异和全程异常的离线分析](docs/BASELINE_SCALE_AND_FAILURE_AUDIT_20261112.md)：官方一轮名义12.8M与本轮2.418M须区分；已核对固定上游源码、588行训练日志及同权重重复的不稳定。不能仅归因于机器少，也不能排除训练不足。本轮0云连接，五机可以关闭。

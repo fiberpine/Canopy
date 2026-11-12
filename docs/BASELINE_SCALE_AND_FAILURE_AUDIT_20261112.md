@@ -51,7 +51,7 @@
 
 Critic集合前缀重叠、target2重复assign及共享Adam来自保留的上游实现，并非这轮新引入。它们仍值得核实实际梯度/时钟/数值更新，但“存在于上游”不证明无害，“偏离标准TD3直觉”也不自动证明是当前唯一根因。普通集合重叠不等于两次非None梯度更新；并发重复assign不等于确定2tau。
 
-与旧H0逐文件核对：agent_v2/envwrapper/utils、moving快速路径、target BN模块及native C++源码均相同；distributed/evaluate已有后续工程改动。H0与当前native**二进制hash不同**，不能说全部执行字节一致。后续[只读ELF核查](../evidence/baseline-scale-audit-20261112/native-elf-comparison.json)补充确认17个native源码/头文件全部LF一致，但二进制不只是build-id不同：.text、.rodata等段也不同，.text长度均13186字节、.rodata相差48字节。编译路径/链接地址也能产生代码字节差，当前既未证明行为等价，也未证明它导致失败；下一次匹配比较应先固定同一个已校验native二进制，或在同一环境从相同源码/选项重编译，去掉这个干扰。选出的学习配置仅checkpoint频率、target BN启用与性能守卫策略不同；这不是证明所有隐含执行差异已排除。见[H0对照事实](../evidence/baseline-scale-audit-20261112/h0-and-current-facts.json)。
+与旧H0逐文件核对：agent_v2/envwrapper/utils、moving快速路径、target BN模块及native C++源码均相同；distributed/evaluate已有后续工程改动。**更正：此前“当前native二进制不同”指本机仓库缓存，并非上轮实际云端执行文件。** [本机只读ELF核查](../evidence/baseline-scale-audit-20261112/native-elf-comparison.json)的字节差仍成立，但11月11日两批当时preflight均记录云端native为H0的`90ccb86a…`；11月12日重新读取上轮实际配置及符号链接，运行文件直接解析到H0同一路径、完整SHA一致。因此不能把本机缓存的`.text/.rodata`差异列作上轮云端性能混淆或失败原因。见[配置、路径及哈希更正证据](../evidence/baseline-capacity-repair-20261112/native-runtime-correction.json)。本轮新CLOEXEC native为独立编译，五机一致，并用于随后候选/H0同执行链评测。选出的学习配置仅checkpoint频率、target BN启用与性能守卫策略不同；这不是证明所有隐含执行差异已排除。见[H0对照事实](../evidence/baseline-scale-audit-20261112/h0-and-current-facts.json)。
 
 ## 3. 当前性能弱项：普遍高队列，加上少数条件的极端不稳定
 

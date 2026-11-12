@@ -661,5 +661,6 @@
   ],
   "executed_binary": false,
   "cloud_connections": 0,
-  "limitation": "Section equality/differences are byte-level evidence. Machine-code differences can include linked addresses; this does not prove behavioral equivalence or a performance cause."
+  "limitation": "Section equality/differences are byte-level evidence. Machine-code differences can include linked addresses; this does not prove behavioral equivalence or a performance cause.",
+  "comparison_scope_correction": "Both compared files were local copies. current_sha256 is the local repository cached ELF, not the prior cloud runtime. Prior actual cloud/H0 both90ccb86a...; see baseline-capacity-repair-20261112/native-runtime-correction.json."
 }

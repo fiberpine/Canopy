@@ -1,0 +1,13 @@
+{
+  "prior_config_binary": "@CLOUD_HOME@/orca-targetbn-retrain-20261111-night/frameworks/baseline/code/runtime/orca-server-control-log-safe",
+  "prior_resolved_binary": "@CLOUD_HOME@/orca-repair-20261010-114820/code/runtime/orca-server-control-log-safe",
+  "prior_sha256": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+  "H0_sha256": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+  "same": true,
+  "current_repaired_sha256": "632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0e12fe1d",
+  "historical_preflight_sha256": {
+    "baseline-target-audit-20261111-2222": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121",
+    "baseline-target-retrain-20261111-night": "90ccb86a8d14964b316c0200b6f0c267148a4baa64de41239c72900a4681c121"
+  },
+  "interpretation": "The prior cloud configuration resolved to the actual H0 executable, not the different local repository cache. Current repaired binary is a separate CLOEXEC build."
+}
