@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 15096,
-      "sha256": "f7ce4ed0be4213317beee569e175c532e5cacdace68ef5efa22efcb8f1642c39"
+      "bytes": 15516,
+      "sha256": "8c588b9964580bf400ff1dade63b73eb1031173b8d55ade0f9ef0e6dd6edf39f"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -64,8 +64,8 @@
     },
     {
       "path": "docs/BASELINE_ONLINE_BN_REPAIR_20261112.md",
-      "bytes": 11983,
-      "sha256": "4d4cfea498f4170c8e594212a7082c06d5ac9456474713822e4421f6a07eb6be"
+      "bytes": 12451,
+      "sha256": "af8234e9aa1bc88b5c1d7d6757cf1bb220c559cc512246628371fc57f1be5559"
     },
     {
       "path": "docs/BASELINE_RECOVERY_20261111.md",
@@ -81,6 +81,11 @@
       "path": "docs/BASELINE_SCALE_AND_FAILURE_AUDIT_20261112.md",
       "bytes": 18717,
       "sha256": "29ee1f91517356627c560a8bde28fd59fe9baf1aea8d3c64a43b4f59fe65b85e"
+    },
+    {
+      "path": "docs/BASELINE_STARTUP_NEXT_20261112.md",
+      "bytes": 9795,
+      "sha256": "6ce3bf7293c7e492e475cc4a42580f201098d32b67666618af7c4e40fcbb50a0"
     },
     {
       "path": "docs/BASELINE_TARGET_RETRAIN_20261111.md",
@@ -7661,6 +7666,26 @@
       "path": "evidence/baseline-screen-20261111/verify_results.py",
       "bytes": 3004,
       "sha256": "bf09630960efb788cdbc41228e12e1fa5a63a6240c28b8a678407dc0d1717cdb"
+    },
+    {
+      "path": "evidence/baseline-startup-diagnostic-20261112/claude-review-receipt.json",
+      "bytes": 1307,
+      "sha256": "922f2872c5c068d56605deace16a5328e709b527e9487e1218266b3757949a5e"
+    },
+    {
+      "path": "evidence/baseline-startup-diagnostic-20261112/offline-checks.json",
+      "bytes": 523,
+      "sha256": "5d98605128e06c0775845ba1b42a82ea87aea77a13ea21b00f647b087c450b26"
+    },
+    {
+      "path": "evidence/baseline-startup-diagnostic-20261112/screen-draft.json",
+      "bytes": 36221,
+      "sha256": "eb76412b36b363198b0e45f3faf78192fd44893a48a767e940f8eb9d4d81b740"
+    },
+    {
+      "path": "evidence/baseline-startup-diagnostic-20261112/static-source-contract.json",
+      "bytes": 715,
+      "sha256": "590c45ffd8c55e3359733a054161d085b5d16e969f99fa69347f78250bd1f554"
     },
     {
       "path": "evidence/baseline-target-audit-20261111/admission-failure-review.json",
@@ -18859,8 +18884,8 @@
     },
     {
       "path": "frameworks/baseline/code/runtime/src/orca-server-control-log-safe.cc",
-      "bytes": 26557,
-      "sha256": "c5d5a3f030a3fed576a58b9fcf10e0c56a341a9ae9a659a241c252c721a6625d"
+      "bytes": 28079,
+      "sha256": "0b4d3bae7ec1be5aca370b0e903008b73b62b279d33975142d6bbab95deb7601"
     },
     {
       "path": "frameworks/baseline/code/runtime/src/orca-server-fast-handshake-probe.cc",
@@ -23400,6 +23425,11 @@
       "sha256": "fbe42b6f14b68d9f63471351b88b000a1ad3aab91780593b81862ebdaf7bf61e"
     },
     {
+      "path": "tools/build_scalar_startup_candidate.py",
+      "bytes": 3943,
+      "sha256": "0751e8e4ed72adaa3f4bcdf0777eada60592e63f3b1865325c0d41f2c8a6878c"
+    },
+    {
       "path": "tools/build_scalar_verified_ipc.py",
       "bytes": 1545,
       "sha256": "a7dc0a4071a6159d6fde545aa8ee4434d1a26cdd6a3942012b43cc3547e76386"
@@ -23478,6 +23508,11 @@
       "path": "tools/interval_reward/test_shadow_reward.py",
       "bytes": 2335,
       "sha256": "a3df180e5fb56fa30c6a2aecac199757f55fbc2bd2d227eb41f0cd49715758b2"
+    },
+    {
+      "path": "tools/plan_scalar_startup_screen.py",
+      "bytes": 4913,
+      "sha256": "ba6fd61e4632546993ba118050110435fef97ae6eb70ffa7d06a313cf1ca2543"
     },
     {
       "path": "tools/plot_baseline_frozen_6m.py",
@@ -23721,8 +23756,8 @@
     },
     {
       "path": "tools/test_base_first_principles.py",
-      "bytes": 1661,
-      "sha256": "8b755e09fbf4a11a59b061869818690b915965a8dcbd5b2e25a65bf9c4b7057b"
+      "bytes": 2593,
+      "sha256": "53012ade04f8b54c582cfcdc3fa20295cbe84dc67c9076cf220cfbf3ebfa62e5"
     },
     {
       "path": "tools/test_baseline_admission.py",
@@ -23813,6 +23848,11 @@
       "path": "tools/test_scalar_exploration.py",
       "bytes": 3123,
       "sha256": "73afb15d3dcea163f6b8a907486ed7acb7a53b2cc8979b6938a6ddf1dac4c884"
+    },
+    {
+      "path": "tools/test_scalar_startup_build.py",
+      "bytes": 2375,
+      "sha256": "6783d09b14ef255f93106dc9a80a6d4966470165c4747f2b8c0a4ec94549857a"
     },
     {
       "path": "tools/test_scalar_update_contract_cli.py",

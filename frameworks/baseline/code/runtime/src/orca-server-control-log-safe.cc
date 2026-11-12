@@ -416,6 +416,10 @@ void* CntThread(void* information)
     int msg_id=657;
     bool got_alpha=false;
     bool slow_start_passed=0;
+#ifdef ORCA_STARTUP_AUDIT
+    bool startup_handoff_logged=false;
+    unsigned long startup_assist_writes=0;
+#endif
     for(int i=0;i<FLOW_NUM;i++)
     {
         if (setsockopt(sock_for_cnt[i], IPPROTO_TCP, TCP_NODELAY, &reuse, sizeof(reuse)) < 0)
@@ -482,6 +486,11 @@ void* CntThread(void* information)
                     // TODO: sample the cwnd bewween the decision time
 
                     report_period=20;
+#ifdef ORCA_FIRST_FEEDBACK_HANDOFF
+                    // Opt-in startup protocol: retain the outer avg_urtt>0 gate,
+                    // but publish its first feedback without pre-policy CWND writes.
+                    slow_start_passed=1;
+#else
                     if (!slow_start_passed)
                         //Just for the first Time
                         slow_start_passed=(orca_info.snd_ssthresh<orca_info.cwnd)?1:0;
@@ -499,9 +508,29 @@ void* CntThread(void* information)
                            DBGPRINT(0,0,"setsockopt: for index:%d flow_index:%d ... %s (ret1:%d)\n",i,          flow_index,strerror(errno),ret1);
                            return((void *)0);
                         }
+#ifdef ORCA_STARTUP_AUDIT
+                        startup_assist_writes++;
+#endif
                         usleep(report_period*1000); // Keep slow-start assistance at the configured control cadence.
                         continue;
                     }
+#endif
+#ifdef ORCA_STARTUP_AUDIT
+                    if (!startup_handoff_logged) {
+#ifdef ORCA_FIRST_FEEDBACK_HANDOFF
+                        const char *startup_mode="first-feedback";
+#else
+                        const char *startup_mode="legacy";
+#endif
+                        fprintf(stderr,"ORCA_STARTUP_HANDOFF mode=%s time_us=%llu scheme=%s assist_writes=%lu cwnd=%u packets_out=%u max_packets_out=%u retrans_out=%u lost_bytes=%u avg_urtt=%u srtt_scaled8=%u min_rtt=%u mss=%u pacing_rate=%u ssthresh=%u\n",
+                            startup_mode,(unsigned long long)t1,scheme?scheme:"default",startup_assist_writes,
+                            orca_info.cwnd,orca_info.packets_out,orca_info.max_packets_out,
+                            orca_info.retrans_out,orca_info.lost_bytes,orca_info.avg_urtt,
+                            orca_info.srtt_us,orca_info.min_rtt,orca_info.mss,
+                            orca_info.pacing_rate,orca_info.snd_ssthresh);
+                        startup_handoff_logged=true;
+                    }
+#endif
                     // Send message to RL-Module
                     sprintf(message,"%d %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f",
                             msg_id,delay,(double)orca_info.thr,(double)orca_info.cnt,(double)time_delta,

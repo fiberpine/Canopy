@@ -88,7 +88,7 @@ H0最后有效反馈在其RL接管后约55.10秒；down.log覆盖75.949秒、原
 
 ## 可复用交付和版本
 
-实际训练与冻结学习源码：`9bb1500eaf791bcb0e97724c63dcb725323dd5cd`。之后的报告、画图和显式选点CLI是交付工具，未热部署到本轮，不能冒充实际运行版本。最终选择固定为step-6013196，policy SHA `631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0`。
+实际训练与冻结学习源码：`9bb1500eaf791bcb0e97724c63dcb725323dd5cd`。之后的报告、画图和显式选点CLI是交付工具，未热部署到本轮，不能冒充实际运行版本。再之后新增的默认关闭启动候选也只作离线准备；实际本轮native仍是下述已归档ELF。最终选择固定为step-6013196，policy SHA `631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0`。
 
 [最终12张量策略](../evidence/baseline-online-bn-repair-20261112/final-policy)含真实index/data两个文件，共343558字节；[校验清单](../evidence/baseline-online-bn-repair-20261112/policy-local-delivery.json)。原baseline默认模板/模型均未覆盖。相同定制Linux环境中可显式选择：
 
@@ -105,8 +105,10 @@ native使用本轮SHA `632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0
 
 ## 下一步边界
 
-若PASS，先保留此终点和冻结运行契约，再做独立第二训练seed以估计训练稳定性；不要因本轮较好就断言随机性问题全部消失。双动作迁移应沿用已验证窗口能力，并独立验证新状态/时间动作/SMDP和critic校准，不能把旧70维单动作CP直接当72维双动作模型加载。若PARTIAL/FAIL，则先用已有保存状态区分启动覆盖、Q动作支持与统计滞后，避免同配方盲目继续长训或多项一起改。当前窗口不自动启动这些下一轮实验。
+本轮仍FAIL。优先冻结此唯一终点，隔离首策略前的启动协议异常；不立即原配方再训更久或扩actor。当前240分钟窗口已于20:11:10结束，训练、评测、五机归属清理与备份均完成，五台服务器可以关闭。后续新的网络/云端TF诊断需新的明确窗口。
 
-Claude新的四路BN与本轮完整结果仍未送达：此前窗口被Esc停止，恢复操作问题尚待回复。本报告不声称Claude审过新代码/结果或已经达成新共识；已完成的此前讨论保留在旧报告。没有因等待讨论而停下本轮训练/评测。
+用户允许恢复Claude讨论后，新四路BN、完整结果及首窗证据已送达并复核。对方实际读了完整报告、unique_online_bn.py和启动源码片段，弱日志JSON只直接读首run，未运行代码。双方支持先40次同权重启动配对筛查，阳性才独立完整确认；cwnd不等于实际在途量，小样本不能证明稳定率，旧FAIL保留。其后新增的首反馈接管候选仅离线准备，对方尚未审代码，本机尚未编译或做真实TCP。具体阅读范围、因果边界、候选和待授权方案见[复核与下一步](BASELINE_STARTUP_NEXT_20261112.md)。
+
+完整单动作工程门与独立第二训练seed确认后，再推进双动作迁移，独立核查新状态/SMDP/时间头与critic校准；不能把旧70维单动作CP直接当72维双动作加载，也不把少调用直接当CPU收益。
 
 [完整原96汇总](../evidence/baseline-online-bn-repair-20261112/frozen-final-latest.json) · [原评分器结果](../evidence/baseline-online-bn-repair-20261112/health-assessment.json) · [独立复算](../evidence/baseline-online-bn-repair-20261112/final-results-validation.json) · [逐格CSV](../evidence/baseline-online-bn-repair-20261112/condition-metrics.csv) · [最终五机收尾](../evidence/baseline-online-bn-repair-20261112/closure-final.json)

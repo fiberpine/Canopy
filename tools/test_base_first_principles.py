@@ -10,6 +10,26 @@ def load(relative,name):
     spec=importlib.util.spec_from_file_location(name,str(ROOT/relative));module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);return module
 
 
+def default_startup_source(source):
+    # Inspect the default branch, rather than treating inactive audit code as
+    # an execution change. This is a static check, not a C++ compilation test.
+    lines=[];parents=[];active=True
+    for line in source.splitlines(keepends=True):
+        directive=line.strip()
+        if directive.startswith('#ifdef ORCA_'):
+            if directive not in ('#ifdef ORCA_STARTUP_AUDIT','#ifdef ORCA_FIRST_FEEDBACK_HANDOFF'):
+                raise AssertionError('Unreviewed startup conditional: '+directive)
+            parents.append(active);active=False
+        elif directive=='#else' and parents:
+            active=parents[-1] and not active
+        elif directive=='#endif' and parents:
+            active=parents.pop()
+        elif active:
+            lines.append(line)
+    if parents:raise AssertionError('Unclosed startup conditional')
+    return ''.join(lines)
+
+
 class BaselineIPCCompatibilityTests(unittest.TestCase):
     def test_legacy_float_mapping_is_preserved_without_policy_clamp(self):
         audit=load('frameworks/baseline_ipc_audit/verified_ipc.py','baseline_audit_ipc')
@@ -26,7 +46,7 @@ class BaselineIPCCompatibilityTests(unittest.TestCase):
         def gate(source):
             begin=source.index('                    if (!slow_start_passed)')
             return source[begin:source.index('                    // Send message to RL-Module',begin)]
-        self.assertEqual(gate(baseline),gate(candidate))
+        self.assertEqual(gate(default_startup_source(baseline)),gate(candidate))
         self.assertNotIn('NORMAL_CUBIC_FIRST_FEEDBACK',candidate)
 
 
