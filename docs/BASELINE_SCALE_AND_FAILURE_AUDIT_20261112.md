@@ -51,7 +51,7 @@
 
 Critic集合前缀重叠、target2重复assign及共享Adam来自保留的上游实现，并非这轮新引入。它们仍值得核实实际梯度/时钟/数值更新，但“存在于上游”不证明无害，“偏离标准TD3直觉”也不自动证明是当前唯一根因。普通集合重叠不等于两次非None梯度更新；并发重复assign不等于确定2tau。
 
-与旧H0逐文件核对：agent_v2/envwrapper/utils、moving快速路径、target BN模块及native C++源码均相同；distributed/evaluate已有后续工程改动。H0与当前native**二进制hash不同**，不能说全部执行字节一致，编译/链接差异尚未细分。选出的学习配置仅checkpoint频率、target BN启用与性能守卫策略不同；这不是证明所有隐含执行差异已排除。见[H0对照事实](../evidence/baseline-scale-audit-20261112/h0-and-current-facts.json)。
+与旧H0逐文件核对：agent_v2/envwrapper/utils、moving快速路径、target BN模块及native C++源码均相同；distributed/evaluate已有后续工程改动。H0与当前native**二进制hash不同**，不能说全部执行字节一致。后续[只读ELF核查](../evidence/baseline-scale-audit-20261112/native-elf-comparison.json)补充确认17个native源码/头文件全部LF一致，但二进制不只是build-id不同：.text、.rodata等段也不同，.text长度均13186字节、.rodata相差48字节。编译路径/链接地址也能产生代码字节差，当前既未证明行为等价，也未证明它导致失败；下一次匹配比较应先固定同一个已校验native二进制，或在同一环境从相同源码/选项重编译，去掉这个干扰。选出的学习配置仅checkpoint频率、target BN启用与性能守卫策略不同；这不是证明所有隐含执行差异已排除。见[H0对照事实](../evidence/baseline-scale-audit-20261112/h0-and-current-facts.json)。
 
 ## 3. 当前性能弱项：普遍高队列，加上少数条件的极端不稳定
 
@@ -127,3 +127,5 @@ H0中间点也不单调更好：例如G12-R200在约100万时利用率约94%，�
 在仓库根运行 `python tools/analyze_baseline_scale.py`，只读已有小证据，重建JSON和current-training.csv。它不导入TF、不连实验服务器、不加载模型、不执行优化。源哈希和所选H0事实在证据目录；原始完整checkpoint/replay/逐包日志仍按既定偏好留云端。
 
 本轮没有足够本机数据完成“所有checkpoint的真实tanh前激活/一步optimizer重放/新连接逐动作反事实”的因果检查。588行learner日志与42行actor监控可以定位异常阶段，不能替代缺失的早期actor细轨迹或证明唯一原因。所有解决方法均按已证事实、可验证机制和未执行提案分开，不将更大集群或更长训练承诺为必然解。
+
+[Claude复核、保留分歧及最小方案](../evidence/baseline-scale-audit-20261112/claude-review.md)已完成。双方同意先静态审计、native匹配和有限设计；总样本量假设的优先级、6条件缩小消融的解释范围以及早停提案仍有保留，未自动运行。

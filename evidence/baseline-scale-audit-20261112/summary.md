@@ -2,6 +2,8 @@
 
 [完整分析及下一步](../../docs/BASELINE_SCALE_AND_FAILURE_AUDIT_20261112.md) · [机器可读复算](analysis.json) · [每条件弱项](performance-cells.json) · [训练里程碑](trajectory-milestones.json) · [固定上游版本和校验](upstream-proof.json)
 
+[Claude复核与保留分歧](claude-review.md)已追加。另已只读检查[native ELF](native-elf-comparison.json)：17个源码/头文件LF相同，二进制代码/数据段有差异；不能声称仅元数据不同，也未证明行为不同。下一轮匹配参考先统一执行文件。
+
 - 0实验服务器连接，0新TCP，0新TF构图或优化；上一轮五机已终检，可关闭。只获取公开作者源码，未取云端大模型、replay或逐包。
 - 官方256条件、50k epoch/actor的一轮名义目标约12.8M；当前24条件实际2.418M，约18.89%。官方实际入库与更新次数未核实，不能从时长或5ms sleep反推。覆盖不足/训练不足仍待验证，不被本轮排除。
 - 当前每条件有效50k—132k，平均100.8k，超过官方每actor50k名义目标；官方replay由脚本算为880k，不是全量，当前150k的每actor平均槽位反而更多。因此不能把“actor少10倍”直接等价为“每个条件都少训10倍”。
