@@ -1,0 +1,1874 @@
+{
+  "status": "OFFLINE_REANALYSIS_NO_CLOUD_NO_TF_NO_NEW_EXPERIMENT",
+  "current_overall": {
+    "utilization": 0.968140393732896,
+    "queue_mean_ms": 16.787938278039853,
+    "queue_p95_ms": 23.083333333333332,
+    "drop_fraction": 0.0
+  },
+  "historical_H0": {
+    "cells": 24,
+    "repeats": 3,
+    "statistics": {
+      "utilization": 0.9774833675377443,
+      "queue_mean_ms": 32.323054412063385,
+      "queue_p95_ms": 43.416666666666664,
+      "drop_fraction": 0.0
+    },
+    "weak_G12_R200": [
+      0.652178610298982,
+      0.6132016795066049,
+      0.9875640752043364
+    ],
+    "scope": "Historical campaign, different execution date/chain; not the matched current reference"
+  },
+  "matched": {
+    "candidate": {
+      "utilization": 0.9921167151206761,
+      "queue_mean_ms": 16.583842506205833,
+      "queue_p95_ms": 22.463768115942027,
+      "drop_fraction": 0.0
+    },
+    "H0": {
+      "utilization": 0.9925593575440957,
+      "queue_mean_ms": 33.11732685230832,
+      "queue_p95_ms": 44.130434782608695,
+      "drop_fraction": 0.0
+    },
+    "cells": 23,
+    "candidate_repeats": 3,
+    "H0_repeats": 1,
+    "queue_improved": 12,
+    "queue_worsened": 11
+  },
+  "other_windows": {
+    "full": {
+      "candidate_all24": {
+        "utilization": 0.9550331134179852,
+        "queue_mean_ms": 33.31938404566513,
+        "queue_p95_ms": 148.34722222222223,
+        "drop_fraction": 0.004316870329271349
+      },
+      "candidate_same23": {
+        "utilization": 0.9775644482156116,
+        "queue_mean_ms": 24.42677858774262,
+        "queue_p95_ms": 118.78260869565217,
+        "drop_fraction": 0.0009387303994953811
+      },
+      "H0_same23": {
+        "utilization": 0.9806815008432677,
+        "queue_mean_ms": 39.96825686974615,
+        "queue_p95_ms": 126.1304347826087,
+        "drop_fraction": 0.0015798624432406725
+      }
+    },
+    "startup0_10": {
+      "candidate_all24": {
+        "utilization": 0.8894899617617787,
+        "queue_mean_ms": 95.22415123021005,
+        "queue_p95_ms": 207.79166666666666,
+        "drop_fraction": 0.014394180741938501
+      },
+      "candidate_same23": {
+        "utilization": 0.9047956312137758,
+        "queue_mean_ms": 74.22281075773587,
+        "queue_p95_ms": 174.2608695652174,
+        "drop_fraction": 0.006048418607068845
+      },
+      "H0_same23": {
+        "utilization": 0.9212861283915159,
+        "queue_mean_ms": 80.80559244386984,
+        "queue_p95_ms": 171.30434782608697,
+        "drop_fraction": 0.00973935123936122
+      }
+    }
+  },
+  "sensitivity": [
+    {
+      "excluded": [
+        "G48-R200"
+      ],
+      "cells": 22,
+      "candidate": {
+        "utilization": 0.9917585935037432,
+        "queue_mean_ms": 15.611975641096778,
+        "queue_p95_ms": 21.196969696969695,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "utilization": 0.9922211083380925,
+        "queue_mean_ms": 20.073665510176806,
+        "queue_p95_ms": 30.5,
+        "drop_fraction": 0.0
+      },
+      "scope": "Descriptive sensitivity only; original acceptance unchanged"
+    },
+    {
+      "excluded": [
+        "G48-R200",
+        "G72-R200"
+      ],
+      "cells": 21,
+      "candidate": {
+        "utilization": 0.9913662937245517,
+        "queue_mean_ms": 14.55177616545498,
+        "queue_p95_ms": 19.746031746031747,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "utilization": 0.991850705666509,
+        "queue_mean_ms": 14.029384622260272,
+        "queue_p95_ms": 24.238095238095237,
+        "drop_fraction": 0.0
+      },
+      "scope": "Descriptive sensitivity only; original acceptance unchanged"
+    }
+  ],
+  "by_rtt": [
+    {
+      "base_rtt_ms": 20,
+      "cells": 6,
+      "candidate": {
+        "utilization": 0.9998294776639881,
+        "queue_mean_ms": 6.383493923481914,
+        "queue_p95_ms": 9.333333333333334,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "utilization": 0.99620055239328,
+        "queue_mean_ms": 6.206507660976636,
+        "queue_p95_ms": 9.333333333333334,
+        "drop_fraction": 0.0
+      }
+    },
+    {
+      "base_rtt_ms": 50,
+      "cells": 6,
+      "candidate": {
+        "utilization": 0.9833617749584792,
+        "queue_mean_ms": 4.102513440010875,
+        "queue_p95_ms": 6.833333333333333,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "utilization": 0.9908290946920701,
+        "queue_mean_ms": 21.656907388377906,
+        "queue_p95_ms": 39.333333333333336,
+        "drop_fraction": 0.0
+      }
+    },
+    {
+      "base_rtt_ms": 100,
+      "cells": 6,
+      "candidate": {
+        "utilization": 0.9865941888046058,
+        "queue_mean_ms": 19.68143551369405,
+        "queue_p95_ms": 26.555555555555557,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "utilization": 0.994428059043343,
+        "queue_mean_ms": 12.789158849853486,
+        "queue_p95_ms": 22.5,
+        "drop_fraction": 0.0
+      }
+    },
+    {
+      "base_rtt_ms": 200,
+      "cells": 5,
+      "candidate": {
+        "utilization": 0.9999943598426224,
+        "queue_mean_ms": 40.08474407592262,
+        "queue_p95_ms": 52.06666666666667,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "utilization": 0.9880237973484088,
+        "queue_mean_ms": 103.5566148415686,
+        "queue_p95_ms": 117.6,
+        "drop_fraction": 0.0
+      }
+    }
+  ],
+  "cells": [
+    {
+      "condition": "G12-R100",
+      "base_rtt_ms": 100,
+      "candidate": {
+        "utilization": 0.9238844725666361,
+        "queue_mean_ms": 18.438903789129697,
+        "queue_p95_ms": 22.666666666666668,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9922789112016902,
+        "departure_mbps": 11.903282560000001,
+        "capacity_mbps": 11.995904,
+        "queue_mean_ms": 16.321662488881703,
+        "queue_p95_ms": 29.0,
+        "queue_p99_ms": 35.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 49462.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 74386492.0,
+        "complete_window": true,
+        "last_log_s": 61.803,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": 2.1172413002479935
+    },
+    {
+      "condition": "G12-R20",
+      "base_rtt_ms": 20,
+      "candidate": {
+        "utilization": 0.9995801233487698,
+        "queue_mean_ms": 7.6091746161553635,
+        "queue_p95_ms": 11.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 1.0000020807102157,
+        "departure_mbps": 11.99592896,
+        "capacity_mbps": 11.995904,
+        "queue_mean_ms": 8.321605520229475,
+        "queue_p95_ms": 10.0,
+        "queue_p99_ms": 11.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 49856.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 74979068.0,
+        "complete_window": true,
+        "last_log_s": 60.581,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -0.7124309040741119
+    },
+    {
+      "condition": "G12-R50",
+      "base_rtt_ms": 50,
+      "candidate": {
+        "utilization": 0.996992591248924,
+        "queue_mean_ms": 5.432930017990046,
+        "queue_p95_ms": 7.666666666666667,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9871628715935039,
+        "departure_mbps": 11.84191104,
+        "capacity_mbps": 11.995904,
+        "queue_mean_ms": 19.287186052182395,
+        "queue_p95_ms": 36.0,
+        "queue_p99_ms": 40.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 49233.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 74043528.0,
+        "complete_window": true,
+        "last_log_s": 61.24,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -13.85425603419235
+    },
+    {
+      "condition": "G24-R100",
+      "base_rtt_ms": 100,
+      "candidate": {
+        "utilization": 1.0000006935700718,
+        "queue_mean_ms": 16.991752087888575,
+        "queue_p95_ms": 18.333333333333332,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9998000917646557,
+        "departure_mbps": 23.98701184,
+        "capacity_mbps": 23.991808,
+        "queue_mean_ms": 11.556278967115427,
+        "queue_p95_ms": 19.0,
+        "queue_p99_ms": 23.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 99680.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 149915816.0,
+        "complete_window": true,
+        "last_log_s": 61.481,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": 5.435473120773148
+    },
+    {
+      "condition": "G24-R20",
+      "base_rtt_ms": 20,
+      "candidate": {
+        "utilization": 1.0000006935700718,
+        "queue_mean_ms": 7.807934310913188,
+        "queue_p95_ms": 10.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9994590686954481,
+        "departure_mbps": 23.978830079999998,
+        "capacity_mbps": 23.991808,
+        "queue_mean_ms": 6.6198518786127165,
+        "queue_p95_ms": 9.0,
+        "queue_p99_ms": 10.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 99647.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 149866184.0,
+        "complete_window": true,
+        "last_log_s": 60.462,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": 1.1880824323004715
+    },
+    {
+      "condition": "G24-R200",
+      "base_rtt_ms": 200,
+      "candidate": {
+        "utilization": 0.999991010264837,
+        "queue_mean_ms": 42.57715325001839,
+        "queue_p95_ms": 54.333333333333336,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9999906634798011,
+        "departure_mbps": 23.991584,
+        "capacity_mbps": 23.991808,
+        "queue_mean_ms": 24.103138383767465,
+        "queue_p95_ms": 34.0,
+        "queue_p99_ms": 36.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 99719.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 149974472.0,
+        "complete_window": true,
+        "last_log_s": 61.203,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": 18.474014866250926
+    },
+    {
+      "condition": "G24-R50",
+      "base_rtt_ms": 50,
+      "candidate": {
+        "utilization": 0.9792052042652781,
+        "queue_mean_ms": 2.0662431603176734,
+        "queue_p95_ms": 4.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9999003926673637,
+        "departure_mbps": 23.98941824,
+        "capacity_mbps": 23.991808,
+        "queue_mean_ms": 23.215854832885288,
+        "queue_p95_ms": 41.0,
+        "queue_p99_ms": 44.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 99696.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 149939880.0,
+        "complete_window": true,
+        "last_log_s": 60.849,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -21.149611672567616
+    },
+    {
+      "condition": "G36-R100",
+      "base_rtt_ms": 100,
+      "candidate": {
+        "utilization": 0.999998388136686,
+        "queue_mean_ms": 25.963454256914833,
+        "queue_p95_ms": 31.666666666666668,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9999670397656161,
+        "departure_mbps": 35.99855744,
+        "capacity_mbps": 35.999744,
+        "queue_mean_ms": 9.39707347072468,
+        "queue_p95_ms": 15.0,
+        "queue_p99_ms": 18.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 149613.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 225015048.0,
+        "complete_window": true,
+        "last_log_s": 60.999,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": 16.56638078619015
+    },
+    {
+      "condition": "G36-R20",
+      "base_rtt_ms": 20,
+      "candidate": {
+        "utilization": 0.9999002718834149,
+        "queue_mean_ms": 6.8567325042981935,
+        "queue_p95_ms": 10.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9805555061724883,
+        "departure_mbps": 35.299747200000006,
+        "capacity_mbps": 35.999744,
+        "queue_mean_ms": 4.554671629378161,
+        "queue_p95_ms": 10.0,
+        "queue_p99_ms": 12.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 146718.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 220659516.0,
+        "complete_window": true,
+        "last_log_s": 60.601,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": 2.3020608749200324
+    },
+    {
+      "condition": "G36-R200",
+      "base_rtt_ms": 200,
+      "candidate": {
+        "utilization": 0.9999937777335306,
+        "queue_mean_ms": 42.247130700997985,
+        "queue_p95_ms": 53.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9810501585789054,
+        "departure_mbps": 35.317554560000005,
+        "capacity_mbps": 35.999744,
+        "queue_mean_ms": 13.466797939605364,
+        "queue_p95_ms": 24.0,
+        "queue_p99_ms": 27.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 146766.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 220731708.0,
+        "complete_window": true,
+        "last_log_s": 61.046,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": 28.78033276139262
+    },
+    {
+      "condition": "G36-R50",
+      "base_rtt_ms": 50,
+      "candidate": {
+        "utilization": 0.9720660472844843,
+        "queue_mean_ms": 2.2038513808827127,
+        "queue_p95_ms": 4.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 1.0000004622255092,
+        "departure_mbps": 35.99976064,
+        "capacity_mbps": 35.999744,
+        "queue_mean_ms": 24.505561422975628,
+        "queue_p95_ms": 42.0,
+        "queue_p99_ms": 45.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 149603.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 225000008.0,
+        "complete_window": true,
+        "last_log_s": 60.982,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -22.301710042092914
+    },
+    {
+      "condition": "G42-R100",
+      "base_rtt_ms": 100,
+      "candidate": {
+        "utilization": 0.9958151710053039,
+        "queue_mean_ms": 14.41713064970144,
+        "queue_p95_ms": 23.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9827455800768152,
+        "departure_mbps": 41.26713792,
+        "capacity_mbps": 41.99168,
+        "queue_mean_ms": 13.482144939705643,
+        "queue_p95_ms": 26.0,
+        "queue_p99_ms": 33.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 171490.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 257916604.0,
+        "complete_window": true,
+        "last_log_s": 60.729,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": 0.9349857099957966
+    },
+    {
+      "condition": "G42-R20",
+      "base_rtt_ms": 20,
+      "candidate": {
+        "utilization": 0.9997903381495254,
+        "queue_mean_ms": 5.490716457933932,
+        "queue_p95_ms": 9.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.998625038102786,
+        "departure_mbps": 41.93394304,
+        "capacity_mbps": 41.99168,
+        "queue_mean_ms": 6.0309706074761,
+        "queue_p95_ms": 9.0,
+        "queue_p99_ms": 11.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 174260.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 262084136.0,
+        "complete_window": true,
+        "last_log_s": 60.306,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -0.540254149542168
+    },
+    {
+      "condition": "G42-R200",
+      "base_rtt_ms": 200,
+      "candidate": {
+        "utilization": 0.9999947316547786,
+        "queue_mean_ms": 39.75835826041715,
+        "queue_p95_ms": 51.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9590777601658234,
+        "departure_mbps": 40.273286399999996,
+        "capacity_mbps": 41.99168,
+        "queue_mean_ms": 13.131697348844712,
+        "queue_p95_ms": 24.0,
+        "queue_p99_ms": 27.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 167364.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 251712552.0,
+        "complete_window": true,
+        "last_log_s": 60.965,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": 26.626660911572436
+    },
+    {
+      "condition": "G42-R50",
+      "base_rtt_ms": 50,
+      "candidate": {
+        "utilization": 0.9728887805076307,
+        "queue_mean_ms": 2.247881219263379,
+        "queue_p95_ms": 4.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9626594220569408,
+        "departure_mbps": 40.4236864,
+        "capacity_mbps": 41.99168,
+        "queue_mean_ms": 18.58600716726394,
+        "queue_p95_ms": 36.0,
+        "queue_p99_ms": 39.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 167918.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 252545768.0,
+        "complete_window": true,
+        "last_log_s": 60.84,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -16.33812594800056
+    },
+    {
+      "condition": "G48-R100",
+      "base_rtt_ms": 100,
+      "candidate": {
+        "utilization": 0.9999953329101838,
+        "queue_mean_ms": 21.654865940339565,
+        "queue_p95_ms": 31.666666666666668,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9970071153117883,
+        "departure_mbps": 47.85200256,
+        "capacity_mbps": 47.995648,
+        "queue_mean_ms": 11.89938900203666,
+        "queue_p95_ms": 22.0,
+        "queue_p99_ms": 27.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 198869.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 299096072.0,
+        "complete_window": true,
+        "last_log_s": 60.62,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": 9.755476938302905
+    },
+    {
+      "condition": "G48-R20",
+      "base_rtt_ms": 20,
+      "candidate": {
+        "utilization": 0.9999602941777832,
+        "queue_mean_ms": 5.2436369455025815,
+        "queue_p95_ms": 8.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9985613895659873,
+        "departure_mbps": 47.92660096,
+        "capacity_mbps": 47.995648,
+        "queue_mean_ms": 5.771762106795872,
+        "queue_p95_ms": 9.0,
+        "queue_p99_ms": 10.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 199168.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 299545768.0,
+        "complete_window": true,
+        "last_log_s": 60.264,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -0.5281251612932909
+    },
+    {
+      "condition": "G48-R200",
+      "base_rtt_ms": 200,
+      "candidate": {
+        "utilization": 0.9999953906932006,
+        "queue_mean_ms": 37.96491353860505,
+        "queue_p95_ms": 50.333333333333336,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 1.0000008400761669,
+        "departure_mbps": 47.99568832,
+        "capacity_mbps": 47.995648,
+        "queue_mean_ms": 320.0778763792015,
+        "queue_p95_ms": 344.0,
+        "queue_p99_ms": 345.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 207459.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 299970404.0,
+        "complete_window": true,
+        "last_log_s": 60.763,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -282.1129628405964
+    },
+    {
+      "condition": "G48-R50",
+      "base_rtt_ms": 50,
+      "candidate": {
+        "utilization": 0.9801341054922313,
+        "queue_mean_ms": 4.139649924783472,
+        "queue_p95_ms": 7.333333333333333,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 1.000000520047151,
+        "departure_mbps": 47.99567296,
+        "capacity_mbps": 47.995648,
+        "queue_mean_ms": 24.124540618591848,
+        "queue_p95_ms": 42.0,
+        "queue_p99_ms": 45.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 199447.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 299963932.0,
+        "complete_window": true,
+        "last_log_s": 60.742,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -19.984890693808374
+    },
+    {
+      "condition": "G72-R100",
+      "base_rtt_ms": 100,
+      "candidate": {
+        "utilization": 0.999871074638753,
+        "queue_mean_ms": 20.622506358190208,
+        "queue_p95_ms": 32.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9947696161394926,
+        "departure_mbps": 71.62290304000001,
+        "capacity_mbps": 71.999488,
+        "queue_mean_ms": 14.078404230656806,
+        "queue_p95_ms": 24.0,
+        "queue_p99_ms": 31.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 297574.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 447548392.0,
+        "complete_window": true,
+        "last_log_s": 60.565,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": 6.544102127533401
+    },
+    {
+      "condition": "G72-R20",
+      "base_rtt_ms": 20,
+      "candidate": {
+        "utilization": 0.9997451448543634,
+        "queue_mean_ms": 5.292768706088223,
+        "queue_p95_ms": 8.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 1.0000002311127545,
+        "departure_mbps": 71.99950464,
+        "capacity_mbps": 71.999488,
+        "queue_mean_ms": 5.940184223367491,
+        "queue_p95_ms": 9.0,
+        "queue_p99_ms": 10.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 299195.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 449986376.0,
+        "complete_window": true,
+        "last_log_s": 60.196,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -0.6474155172792679
+    },
+    {
+      "condition": "G72-R200",
+      "base_rtt_ms": 200,
+      "candidate": {
+        "utilization": 0.9999968888667653,
+        "queue_mean_ms": 37.876164629574546,
+        "queue_p95_ms": 51.666666666666664,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9999995644413472,
+        "departure_mbps": 71.99945664,
+        "capacity_mbps": 71.999488,
+        "queue_mean_ms": 147.003564156424,
+        "queue_p95_ms": 162.0,
+        "queue_p99_ms": 163.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 310493.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 449460492.0,
+        "complete_window": true,
+        "last_log_s": 60.526,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -109.12739952684946
+    },
+    {
+      "condition": "G72-R50",
+      "base_rtt_ms": 50,
+      "candidate": {
+        "utilization": 0.9988839209523267,
+        "queue_mean_ms": 8.524524936827966,
+        "queue_p95_ms": 14.0,
+        "drop_fraction": 0.0
+      },
+      "H0": {
+        "window": "trim10",
+        "utilization": 0.9952508995619525,
+        "departure_mbps": 71.6575552,
+        "capacity_mbps": 71.999488,
+        "queue_mean_ms": 20.222294236368338,
+        "queue_p95_ms": 39.0,
+        "queue_p99_ms": 41.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 297799.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 447886792.0,
+        "complete_window": true,
+        "last_log_s": 60.498,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "queue_delta_ms": -11.697769299540372
+    }
+  ],
+  "weak_condition_runs": [
+    {
+      "run": "onlinebn-confirm-r2-c03",
+      "group": "onlinebn-final6m",
+      "host_slot": 1,
+      "original_status": "COMPLETED",
+      "diagnostic_status": "COMPLETED",
+      "windows": [
+        {
+          "window": "full",
+          "utilization": 0.3546003849200407,
+          "departure_mbps": 4.253681066666666,
+          "capacity_mbps": 11.995703466666667,
+          "queue_mean_ms": 167.4445690783324,
+          "queue_p95_ms": 907.0,
+          "queue_p99_ms": 980.0,
+          "dropped_packets": 1402.0,
+          "arrival_packets": 22812.0,
+          "drop_fraction": 0.061458881290548835,
+          "dropped_bytes": 1981448.0,
+          "arrival_bytes": 33905112.0,
+          "complete_window": true,
+          "last_log_s": 62.045,
+          "start_s": 0,
+          "end_s": 60
+        },
+        {
+          "window": "startup0_10",
+          "utilization": 0.5275124161496384,
+          "departure_mbps": 6.3273535999999995,
+          "capacity_mbps": 11.9947008,
+          "queue_mean_ms": 591.1716596213931,
+          "queue_p95_ms": 979.0,
+          "queue_p99_ms": 983.0,
+          "dropped_packets": 1402.0,
+          "arrival_packets": 6843.0,
+          "drop_fraction": 0.20488090018997515,
+          "dropped_bytes": 1981448.0,
+          "arrival_bytes": 9890640.0,
+          "complete_window": true,
+          "last_log_s": 62.045,
+          "start_s": 0,
+          "end_s": 10
+        },
+        {
+          "window": "trim10",
+          "utilization": 0.32002144732068544,
+          "departure_mbps": 3.83894656,
+          "capacity_mbps": 11.995904,
+          "queue_mean_ms": 22.944468818552178,
+          "queue_p95_ms": 38.0,
+          "queue_p99_ms": 41.0,
+          "dropped_packets": 0.0,
+          "arrival_packets": 15969.0,
+          "drop_fraction": 0.0,
+          "dropped_bytes": 0.0,
+          "arrival_bytes": 24014472.0,
+          "complete_window": true,
+          "last_log_s": 62.045,
+          "start_s": 10,
+          "end_s": 60
+        }
+      ],
+      "first_control": {
+        "time_us": "1794478647522494",
+        "state_id": "657",
+        "action_id": "657",
+        "percent": "25",
+        "cwnd_before": "3843302",
+        "cwnd_requested": "960825",
+        "return_code": "0",
+        "socket": "4"
+      },
+      "handoff_s": 5.148493896484375,
+      "control_period_ms": {
+        "p50": 21.604,
+        "p95": 181.9708,
+        "p99": 182.39620000000002,
+        "max": 254.125
+      },
+      "first_five_consecutive_seconds_ge90_after10_s": 45,
+      "sustained_ge90_to_end_after10_s": 45,
+      "bins10": [
+        {
+          "start_s": 0,
+          "utilization": 0.5275124161496384
+        },
+        {
+          "start_s": 10,
+          "utilization": 0.020063648391984466
+        },
+        {
+          "start_s": 20,
+          "utilization": 0.01965897693079238
+        },
+        {
+          "start_s": 30,
+          "utilization": 0.021166958321773833
+        },
+        {
+          "start_s": 40,
+          "utilization": 0.5392176529588766
+        },
+        {
+          "start_s": 50,
+          "utilization": 1.0
+        }
+      ],
+      "model_hash_unchanged": true,
+      "state_rows": 1209,
+      "state_intervals_on_RL_clock": [
+        {
+          "start_s": 0,
+          "end_s": 1,
+          "rows": 46,
+          "action": {
+            "count": 46,
+            "minimum": -1.0,
+            "maximum": -0.46130266785621643,
+            "mean": -0.776774869016979
+          },
+          "cwnd": {
+            "count": 46,
+            "minimum": 26.0,
+            "maximum": 960825.0,
+            "mean": 27878.304347826088
+          },
+          "max_bw": {
+            "count": 46,
+            "minimum": 1244554.0,
+            "maximum": 1495105.0,
+            "mean": 1440723.652173913
+          }
+        },
+        {
+          "start_s": 1,
+          "end_s": 5,
+          "rows": 49,
+          "action": {
+            "count": 49,
+            "minimum": -0.97626131772995,
+            "maximum": 0.997681736946106,
+            "mean": -0.5026371050245908
+          },
+          "cwnd": {
+            "count": 49,
+            "minimum": 2.0,
+            "maximum": 42.0,
+            "mean": 10.83673469387755
+          },
+          "max_bw": {
+            "count": 49,
+            "minimum": 1495105.0,
+            "maximum": 1495105.0,
+            "mean": 1495105.0
+          }
+        },
+        {
+          "start_s": 5,
+          "end_s": 10,
+          "rows": 48,
+          "action": {
+            "count": 48,
+            "minimum": -0.7081385850906372,
+            "maximum": -0.3788571059703827,
+            "mean": -0.6012959759682417
+          },
+          "cwnd": {
+            "count": 48,
+            "minimum": 4.0,
+            "maximum": 4.0,
+            "mean": 4.0
+          },
+          "max_bw": {
+            "count": 48,
+            "minimum": 1495105.0,
+            "maximum": 1495105.0,
+            "mean": 1495105.0
+          }
+        },
+        {
+          "start_s": 10,
+          "end_s": 20,
+          "rows": 100,
+          "action": {
+            "count": 100,
+            "minimum": -0.7163236141204834,
+            "maximum": -0.2254829704761505,
+            "mean": -0.5755935448408127
+          },
+          "cwnd": {
+            "count": 100,
+            "minimum": 4.0,
+            "maximum": 4.0,
+            "mean": 4.0
+          },
+          "max_bw": {
+            "count": 100,
+            "minimum": 1495105.0,
+            "maximum": 1495105.0,
+            "mean": 1495105.0
+          }
+        },
+        {
+          "start_s": 20,
+          "end_s": 40,
+          "rows": 265,
+          "action": {
+            "count": 265,
+            "minimum": -0.9318693280220032,
+            "maximum": 1.0,
+            "mean": -0.03362120627689193
+          },
+          "cwnd": {
+            "count": 265,
+            "minimum": 4.0,
+            "maximum": 547.0,
+            "mean": 21.264150943396228
+          },
+          "max_bw": {
+            "count": 265,
+            "minimum": 1495105.0,
+            "maximum": 1495105.0,
+            "mean": 1495105.0
+          }
+        },
+        {
+          "start_s": 40,
+          "end_s": 60,
+          "rows": 701,
+          "action": {
+            "count": 701,
+            "minimum": -0.7719187140464783,
+            "maximum": 0.7336414456367493,
+            "mean": 0.006304869340591866
+          },
+          "cwnd": {
+            "count": 701,
+            "minimum": 143.0,
+            "maximum": 537.0,
+            "mean": 329.77032810271044
+          },
+          "max_bw": {
+            "count": 701,
+            "minimum": 1495105.0,
+            "maximum": 1495105.0,
+            "mean": 1495105.0
+          }
+        }
+      ]
+    },
+    {
+      "run": "onlinebn-confirm-r1-c03",
+      "group": "onlinebn-final6m",
+      "host_slot": 2,
+      "original_status": "COMPLETED",
+      "diagnostic_status": "COMPLETED",
+      "windows": [
+        {
+          "window": "full",
+          "utilization": 0.1175556012410488,
+          "departure_mbps": 1.4101621333333334,
+          "capacity_mbps": 11.995703466666667,
+          "queue_mean_ms": 452.00458588104505,
+          "queue_p95_ms": 979.0,
+          "queue_p99_ms": 984.0,
+          "dropped_packets": 1305.0,
+          "arrival_packets": 8501.0,
+          "drop_fraction": 0.15351135160569346,
+          "dropped_bytes": 1852744.0,
+          "arrival_bytes": 12428960.0,
+          "complete_window": true,
+          "last_log_s": 64.119,
+          "start_s": 0,
+          "end_s": 60
+        },
+        {
+          "window": "startup0_10",
+          "utilization": 0.5340545051361348,
+          "departure_mbps": 6.405824,
+          "capacity_mbps": 11.9947008,
+          "queue_mean_ms": 591.1839227123587,
+          "queue_p95_ms": 980.0,
+          "queue_p99_ms": 984.0,
+          "dropped_packets": 1305.0,
+          "arrival_packets": 6791.0,
+          "drop_fraction": 0.1921661021940804,
+          "dropped_bytes": 1852744.0,
+          "arrival_bytes": 9860024.0,
+          "complete_window": true,
+          "last_log_s": 64.119,
+          "start_s": 0,
+          "end_s": 10
+        },
+        {
+          "window": "trim10",
+          "utilization": 0.03426417550523912,
+          "departure_mbps": 0.41102976,
+          "capacity_mbps": 11.995904,
+          "queue_mean_ms": 5.491228070175438,
+          "queue_p95_ms": 23.0,
+          "queue_p99_ms": 39.0,
+          "dropped_packets": 0.0,
+          "arrival_packets": 1710.0,
+          "drop_fraction": 0.0,
+          "dropped_bytes": 0.0,
+          "arrival_bytes": 2568936.0,
+          "complete_window": true,
+          "last_log_s": 64.119,
+          "start_s": 10,
+          "end_s": 60
+        }
+      ],
+      "first_control": {
+        "time_us": "1794478717103819",
+        "state_id": "657",
+        "action_id": "657",
+        "percent": "25",
+        "cwnd_before": "3575421",
+        "cwnd_requested": "893855",
+        "return_code": "0",
+        "socket": "4"
+      },
+      "handoff_s": 5.162819091796875,
+      "control_period_ms": {
+        "p50": 21.7805,
+        "p95": 184.09185000000002,
+        "p99": 196.37861000000007,
+        "max": 402.196
+      },
+      "first_five_consecutive_seconds_ge90_after10_s": null,
+      "sustained_ge90_to_end_after10_s": null,
+      "bins10": [
+        {
+          "start_s": 0,
+          "utilization": 0.5340545051361348
+        },
+        {
+          "start_s": 10,
+          "utilization": 0.05205963635587614
+        },
+        {
+          "start_s": 20,
+          "utilization": 0.04604158219338868
+        },
+        {
+          "start_s": 30,
+          "utilization": 0.025075225677031094
+        },
+        {
+          "start_s": 40,
+          "utilization": 0.02357071213640923
+        },
+        {
+          "start_s": 50,
+          "utilization": 0.02457372116349047
+        }
+      ],
+      "model_hash_unchanged": true,
+      "state_rows": 904,
+      "state_intervals_on_RL_clock": [
+        {
+          "start_s": 0,
+          "end_s": 1,
+          "rows": 46,
+          "action": {
+            "count": 46,
+            "minimum": -1.0,
+            "maximum": -0.41360655426979065,
+            "mean": -0.79332544233488
+          },
+          "cwnd": {
+            "count": 46,
+            "minimum": 26.0,
+            "maximum": 893855.0,
+            "mean": 25936.739130434784
+          },
+          "max_bw": {
+            "count": 46,
+            "minimum": 1153500.0,
+            "maximum": 1473614.0,
+            "mean": 1374645.652173913
+          }
+        },
+        {
+          "start_s": 1,
+          "end_s": 5,
+          "rows": 57,
+          "action": {
+            "count": 57,
+            "minimum": -0.9999343156814575,
+            "maximum": 1.0,
+            "mean": -0.3363627566580187
+          },
+          "cwnd": {
+            "count": 57,
+            "minimum": 1.0,
+            "maximum": 47.0,
+            "mean": 13.070175438596491
+          },
+          "max_bw": {
+            "count": 57,
+            "minimum": 1473614.0,
+            "maximum": 1473614.0,
+            "mean": 1473614.0
+          }
+        },
+        {
+          "start_s": 5,
+          "end_s": 10,
+          "rows": 76,
+          "action": {
+            "count": 76,
+            "minimum": -0.9999863505363464,
+            "maximum": 1.0,
+            "mean": -0.3894084929243514
+          },
+          "cwnd": {
+            "count": 76,
+            "minimum": 2.0,
+            "maximum": 42.0,
+            "mean": 8.592105263157896
+          },
+          "max_bw": {
+            "count": 76,
+            "minimum": 1473614.0,
+            "maximum": 1473614.0,
+            "mean": 1473614.0
+          }
+        },
+        {
+          "start_s": 10,
+          "end_s": 20,
+          "rows": 164,
+          "action": {
+            "count": 164,
+            "minimum": -0.9999451637268066,
+            "maximum": 1.0,
+            "mean": -0.34000942849258825
+          },
+          "cwnd": {
+            "count": 164,
+            "minimum": 2.0,
+            "maximum": 97.0,
+            "mean": 15.170731707317072
+          },
+          "max_bw": {
+            "count": 164,
+            "minimum": 1473614.0,
+            "maximum": 1473614.0,
+            "mean": 1473614.0
+          }
+        },
+        {
+          "start_s": 20,
+          "end_s": 40,
+          "rows": 307,
+          "action": {
+            "count": 307,
+            "minimum": -0.9996269941329956,
+            "maximum": 1.0,
+            "mean": -0.4482399957703505
+          },
+          "cwnd": {
+            "count": 307,
+            "minimum": 1.0,
+            "maximum": 22.0,
+            "mean": 4.2117263843648205
+          },
+          "max_bw": {
+            "count": 307,
+            "minimum": 1473614.0,
+            "maximum": 1473614.0,
+            "mean": 1473614.0
+          }
+        },
+        {
+          "start_s": 40,
+          "end_s": 60,
+          "rows": 254,
+          "action": {
+            "count": 254,
+            "minimum": -0.9996258020401001,
+            "maximum": 1.0,
+            "mean": -0.5644242309444533
+          },
+          "cwnd": {
+            "count": 254,
+            "minimum": 1.0,
+            "maximum": 34.0,
+            "mean": 3.7440944881889764
+          },
+          "max_bw": {
+            "count": 254,
+            "minimum": 1473614.0,
+            "maximum": 1473614.0,
+            "mean": 1473614.0
+          }
+        }
+      ]
+    },
+    {
+      "run": "onlinebn-confirm-r0-c03",
+      "group": "onlinebn-final6m",
+      "host_slot": 2,
+      "original_status": "COMPLETED",
+      "diagnostic_status": "COMPLETED",
+      "windows": [
+        {
+          "window": "full",
+          "utilization": 0.83828125305665,
+          "departure_mbps": 10.055773333333335,
+          "capacity_mbps": 11.995703466666667,
+          "queue_mean_ms": 94.09877377427112,
+          "queue_p95_ms": 599.0,
+          "queue_p99_ms": 972.0,
+          "dropped_packets": 1615.0,
+          "arrival_packets": 51976.0,
+          "drop_fraction": 0.03107203324611359,
+          "dropped_bytes": 2308848.0,
+          "arrival_bytes": 77793324.0,
+          "complete_window": true,
+          "last_log_s": 62.965,
+          "start_s": 0,
+          "end_s": 60
+        },
+        {
+          "window": "startup0_10",
+          "utilization": 0.5508117718117654,
+          "departure_mbps": 6.6068224,
+          "capacity_mbps": 11.9947008,
+          "queue_mean_ms": 552.4093639575972,
+          "queue_p95_ms": 978.0,
+          "queue_p99_ms": 1004.0,
+          "dropped_packets": 1615.0,
+          "arrival_packets": 7275.0,
+          "drop_fraction": 0.2219931271477663,
+          "dropped_bytes": 2308848.0,
+          "arrival_bytes": 10567376.0,
+          "complete_window": true,
+          "last_log_s": 62.965,
+          "start_s": 0,
+          "end_s": 10
+        },
+        {
+          "window": "trim10",
+          "utilization": 0.8957693826159329,
+          "departure_mbps": 10.74556352,
+          "capacity_mbps": 11.995904,
+          "queue_mean_ms": 36.01072620193923,
+          "queue_p95_ms": 51.0,
+          "queue_p99_ms": 56.0,
+          "dropped_packets": 0.0,
+          "arrival_packets": 44701.0,
+          "drop_fraction": 0.0,
+          "dropped_bytes": 0.0,
+          "arrival_bytes": 67225948.0,
+          "complete_window": true,
+          "last_log_s": 62.965,
+          "start_s": 10,
+          "end_s": 60
+        }
+      ],
+      "first_control": {
+        "time_us": "1794479043962641",
+        "state_id": "657",
+        "action_id": "657",
+        "percent": "25",
+        "cwnd_before": "3575421",
+        "cwnd_requested": "893855",
+        "return_code": "0",
+        "socket": "4"
+      },
+      "handoff_s": 5.03864111328125,
+      "control_period_ms": {
+        "p50": 21.606,
+        "p95": 21.668,
+        "p99": 136.8028,
+        "max": 161.464
+      },
+      "first_five_consecutive_seconds_ge90_after10_s": 16,
+      "sustained_ge90_to_end_after10_s": 16,
+      "bins10": [
+        {
+          "start_s": 0,
+          "utilization": 0.5508117718117654
+        },
+        {
+          "start_s": 10,
+          "utilization": 0.4789402782816535
+        },
+        {
+          "start_s": 20,
+          "utilization": 0.9999031669476515
+        },
+        {
+          "start_s": 30,
+          "utilization": 1.0
+        },
+        {
+          "start_s": 40,
+          "utilization": 1.0
+        },
+        {
+          "start_s": 50,
+          "utilization": 1.0000034678503595
+        }
+      ],
+      "model_hash_unchanged": true,
+      "state_rows": 2341,
+      "state_intervals_on_RL_clock": [
+        {
+          "start_s": 0,
+          "end_s": 1,
+          "rows": 46,
+          "action": {
+            "count": 46,
+            "minimum": -1.0,
+            "maximum": -0.3933008015155792,
+            "mean": -0.7370080565628798
+          },
+          "cwnd": {
+            "count": 46,
+            "minimum": 28.0,
+            "maximum": 893855.0,
+            "mean": 25938.195652173912
+          },
+          "max_bw": {
+            "count": 46,
+            "minimum": 1548874.0,
+            "maximum": 1548874.0,
+            "mean": 1548874.0
+          }
+        },
+        {
+          "start_s": 1,
+          "end_s": 5,
+          "rows": 107,
+          "action": {
+            "count": 107,
+            "minimum": -1.0,
+            "maximum": 1.0,
+            "mean": -0.32625598014358465
+          },
+          "cwnd": {
+            "count": 107,
+            "minimum": 7.0,
+            "maximum": 951.0,
+            "mean": 68.28971962616822
+          },
+          "max_bw": {
+            "count": 107,
+            "minimum": 1548874.0,
+            "maximum": 1548874.0,
+            "mean": 1548874.0
+          }
+        },
+        {
+          "start_s": 5,
+          "end_s": 10,
+          "rows": 105,
+          "action": {
+            "count": 105,
+            "minimum": -0.651317298412323,
+            "maximum": 0.9998096823692322,
+            "mean": -0.14328935771648374
+          },
+          "cwnd": {
+            "count": 105,
+            "minimum": 15.0,
+            "maximum": 37.0,
+            "mean": 16.866666666666667
+          },
+          "max_bw": {
+            "count": 105,
+            "minimum": 1548874.0,
+            "maximum": 1548874.0,
+            "mean": 1548874.0
+          }
+        },
+        {
+          "start_s": 10,
+          "end_s": 20,
+          "rows": 451,
+          "action": {
+            "count": 451,
+            "minimum": -0.8970832824707031,
+            "maximum": 0.9911238551139832,
+            "mean": 0.014661970215864033
+          },
+          "cwnd": {
+            "count": 451,
+            "minimum": 22.0,
+            "maximum": 569.0,
+            "mean": 334.2439024390244
+          },
+          "max_bw": {
+            "count": 451,
+            "minimum": 1548874.0,
+            "maximum": 1548874.0,
+            "mean": 1548874.0
+          }
+        },
+        {
+          "start_s": 20,
+          "end_s": 40,
+          "rows": 925,
+          "action": {
+            "count": 925,
+            "minimum": -0.671242356300354,
+            "maximum": 0.6960964798927307,
+            "mean": 0.006984442085833163
+          },
+          "cwnd": {
+            "count": 925,
+            "minimum": 190.0,
+            "maximum": 560.0,
+            "mean": 349.9935135135135
+          },
+          "max_bw": {
+            "count": 925,
+            "minimum": 1548874.0,
+            "maximum": 1548874.0,
+            "mean": 1548874.0
+          }
+        },
+        {
+          "start_s": 40,
+          "end_s": 60,
+          "rows": 707,
+          "action": {
+            "count": 707,
+            "minimum": -0.6770033836364746,
+            "maximum": 0.7084320783615112,
+            "mean": 0.005172000325889534
+          },
+          "cwnd": {
+            "count": 707,
+            "minimum": 192.0,
+            "maximum": 563.0,
+            "mean": 349.85572842998585
+          },
+          "max_bw": {
+            "count": 707,
+            "minimum": 1548874.0,
+            "maximum": 1548874.0,
+            "mean": 1548874.0
+          }
+        }
+      ]
+    },
+    {
+      "run": "H0-reference-c03",
+      "group": "H0-reference",
+      "host_slot": 4,
+      "original_status": "EXECUTION_ERROR",
+      "diagnostic_status": "FAILED",
+      "windows": [
+        {
+          "window": "full",
+          "utilization": 0.10356712607856396,
+          "departure_mbps": 1.2423605333333334,
+          "capacity_mbps": 11.995703466666667,
+          "queue_mean_ms": 504.09740769835037,
+          "queue_p95_ms": 979.0,
+          "queue_p99_ms": 983.0,
+          "dropped_packets": 1418.0,
+          "arrival_packets": 7783.0,
+          "drop_fraction": 0.18219195682898626,
+          "dropped_bytes": 2014024.0,
+          "arrival_bytes": 11331728.0,
+          "complete_window": true,
+          "last_log_s": 75.949,
+          "start_s": 0,
+          "end_s": 60
+        },
+        {
+          "window": "startup0_10",
+          "utilization": 0.5235442638135668,
+          "departure_mbps": 6.2797567999999995,
+          "capacity_mbps": 11.9947008,
+          "queue_mean_ms": 595.4330796361611,
+          "queue_p95_ms": 980.0,
+          "queue_p99_ms": 983.0,
+          "dropped_packets": 1418.0,
+          "arrival_packets": 6805.0,
+          "drop_fraction": 0.20837619397501836,
+          "dropped_bytes": 2014024.0,
+          "arrival_bytes": 9863720.0,
+          "complete_window": true,
+          "last_log_s": 75.949,
+          "start_s": 0,
+          "end_s": 10
+        },
+        {
+          "window": "trim10",
+          "utilization": 0.019580123348769712,
+          "departure_mbps": 0.23488128,
+          "capacity_mbps": 11.995904,
+          "queue_mean_ms": 1.0040899795501022,
+          "queue_p95_ms": 1.0,
+          "queue_p99_ms": 1.0,
+          "dropped_packets": 0.0,
+          "arrival_packets": 978.0,
+          "drop_fraction": 0.0,
+          "dropped_bytes": 0.0,
+          "arrival_bytes": 1468008.0,
+          "complete_window": true,
+          "last_log_s": 75.949,
+          "start_s": 10,
+          "end_s": 60
+        }
+      ],
+      "first_control": {
+        "time_us": "1794478581969989",
+        "state_id": "657",
+        "action_id": "657",
+        "percent": "25",
+        "cwnd_before": "3843302",
+        "cwnd_requested": "960825",
+        "return_code": "0",
+        "socket": "4"
+      },
+      "handoff_s": 5.146989013671875,
+      "control_period_ms": null,
+      "first_five_consecutive_seconds_ge90_after10_s": null,
+      "sustained_ge90_to_end_after10_s": null,
+      "bins10": [
+        {
+          "start_s": 0,
+          "utilization": 0.5235442638135668
+        },
+        {
+          "start_s": 10,
+          "utilization": 0.019662444781151967
+        },
+        {
+          "start_s": 20,
+          "utilization": 0.019361542073027593
+        },
+        {
+          "start_s": 30,
+          "utilization": 0.019558676028084254
+        },
+        {
+          "start_s": 40,
+          "utilization": 0.01965897693079238
+        },
+        {
+          "start_s": 50,
+          "utilization": 0.01965897693079238
+        }
+      ],
+      "model_hash_unchanged": true,
+      "state_rows": 842,
+      "state_intervals_on_RL_clock": [
+        {
+          "start_s": 0,
+          "end_s": 1,
+          "rows": 46,
+          "action": {
+            "count": 46,
+            "minimum": -0.9999998211860657,
+            "maximum": 0.43959712982177734,
+            "mean": -0.6439363230829653
+          },
+          "cwnd": {
+            "count": 46,
+            "minimum": 27.0,
+            "maximum": 960825.0,
+            "mean": 27976.869565217392
+          },
+          "max_bw": {
+            "count": 46,
+            "minimum": 1255515.0,
+            "maximum": 1490789.0,
+            "mean": 1444655.9347826086
+          }
+        },
+        {
+          "start_s": 1,
+          "end_s": 5,
+          "rows": 58,
+          "action": {
+            "count": 58,
+            "minimum": -0.9968613982200623,
+            "maximum": 0.9998624920845032,
+            "mean": -0.5621703685871486
+          },
+          "cwnd": {
+            "count": 58,
+            "minimum": 1.0,
+            "maximum": 32.0,
+            "mean": 7.620689655172414
+          },
+          "max_bw": {
+            "count": 58,
+            "minimum": 1490789.0,
+            "maximum": 1490789.0,
+            "mean": 1490789.0
+          }
+        },
+        {
+          "start_s": 5,
+          "end_s": 10,
+          "rows": 73,
+          "action": {
+            "count": 73,
+            "minimum": -0.8981714844703674,
+            "maximum": -0.7175977826118469,
+            "mean": -0.8162474264837292
+          },
+          "cwnd": {
+            "count": 73,
+            "minimum": 3.0,
+            "maximum": 3.0,
+            "mean": 3.0
+          },
+          "max_bw": {
+            "count": 73,
+            "minimum": 1490789.0,
+            "maximum": 1490789.0,
+            "mean": 1490789.0
+          }
+        },
+        {
+          "start_s": 10,
+          "end_s": 20,
+          "rows": 147,
+          "action": {
+            "count": 147,
+            "minimum": -0.8595209717750549,
+            "maximum": -0.40432819724082947,
+            "mean": -0.6882391282084848
+          },
+          "cwnd": {
+            "count": 147,
+            "minimum": 3.0,
+            "maximum": 4.0,
+            "mean": 3.0136054421768708
+          },
+          "max_bw": {
+            "count": 147,
+            "minimum": 1490789.0,
+            "maximum": 1490789.0,
+            "mean": 1490789.0
+          }
+        },
+        {
+          "start_s": 20,
+          "end_s": 40,
+          "rows": 296,
+          "action": {
+            "count": 296,
+            "minimum": -0.7253295183181763,
+            "maximum": 0.060462575405836105,
+            "mean": -0.3664013061124196
+          },
+          "cwnd": {
+            "count": 296,
+            "minimum": 3.0,
+            "maximum": 4.0,
+            "mean": 3.0067567567567566
+          },
+          "max_bw": {
+            "count": 296,
+            "minimum": 1490789.0,
+            "maximum": 1490789.0,
+            "mean": 1490789.0
+          }
+        },
+        {
+          "start_s": 40,
+          "end_s": 60,
+          "rows": 222,
+          "action": {
+            "count": 222,
+            "minimum": -0.3542138338088989,
+            "maximum": 0.33655327558517456,
+            "mean": 0.044876574059352616
+          },
+          "cwnd": {
+            "count": 222,
+            "minimum": 3.0,
+            "maximum": 3.0,
+            "mean": 3.0
+          },
+          "max_bw": {
+            "count": 222,
+            "minimum": 1490789.0,
+            "maximum": 1490789.0,
+            "mean": 1490789.0
+          }
+        }
+      ]
+    }
+  ],
+  "hypothetical_other_23_unchanged": {
+    "weak_cell_mean_util90": 0.9882785186573145,
+    "weak_cell_mean_util100": 0.9924451853239812
+  },
+  "checks": {
+    "all_three_windows_rebuilt_from_60_second_bins": true,
+    "native_to_packet_clock_handoff_rebuilt": true,
+    "original_FAIL_and_H0_execution_error_unchanged": true
+  },
+  "source_sha256": {
+    "evidence\\baseline\\metrics\\evaluation_runs.csv": "1322e4307ef7ddf6e4ced9436fcf5acee162a66be8b55021532542cd33f3ab12",
+    "evidence\\baseline-online-bn-repair-20261112\\frozen-final-latest.json": "839e9a2b578e3899ee2a028af6afc1313f8f990ca992a6fb696540f714bcbf26",
+    "evidence\\baseline-online-bn-repair-20261112\\weak-existing-log-audit.json": "4ac9d1b574151228a8c2d9ae25bc052de2f2d743d93cea4a80c62b47946e4555",
+    "evidence\\baseline-online-bn-repair-20261112\\health-assessment.json": "b329b31b55169a609755b120df3748fa645919ca02d295b94de28b7966d91853"
+  }
+}
