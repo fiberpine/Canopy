@@ -1,0 +1,23 @@
+{
+  "start_epoch": 1794471070.0960433,
+  "deadline_epoch": 1794485470.0960433,
+  "task_cutoff_epoch": 1794484870.0960433,
+  "train_cutoff_epoch": 1794483070.0960433,
+  "capacity_cutoff_epoch": 1794474670.0960433,
+  "authorized_wall_minutes": 240,
+  "conservative_machine_hours": 20,
+  "cleanup_reserve_minutes": 10,
+  "user_instruction": "\u4e0d\u8981\u4e24\u4e2a learner \u5404\u5e26 24 actor\u3002\u6309\u7167\u4e4b\u524d\u8ba8\u8bba\u7684\u53bb\u8dd1\u4fee\u590d\u65b9\u6848",
+  "budget_basis": "Latest explicit instruction resumes the previous repair plan; retain the previously explicitly confirmed240min ceiling as stated to user before connection, never unlimited continuation",
+  "scope": [
+    "BN fourway source/update contract diagnosis",
+    "minimal validated onlineBN repair",
+    "one learner24actor production admission, at most two attempts including fixes",
+    "at most one fresh nominal6M scalar training after admission",
+    "registered endpoint72 frozen and H0reference24"
+  ],
+  "formal_training_included": true,
+  "cloud_root": "@CLOUD_HOME@/orca-online-bn-repair-20261112",
+  "remaining_budget_auto_resume": false,
+  "dual_learner_proposal_cancelled": true
+}

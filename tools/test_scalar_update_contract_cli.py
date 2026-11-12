@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ScalarContractCLI(unittest.TestCase):
-    def test_explicit_contract_selects_repairs_and_preserves_recipe(self):
+    def _configuration(self, online=False):
         spec = importlib.util.spec_from_file_location('contract_cli', ROOT/'run.py')
         m = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(m)
@@ -30,6 +30,7 @@ class ScalarContractCLI(unittest.TestCase):
             argv = ['run.py', 'train', '--variant', 'baseline', '--run-id', 'contract',
                     '--actors', '24', '--scalar-update-contract', '--port', '10000',
                     '--learner-port', '20000', '--server-binary', str(m.P/'native')]
+            if online:argv.append('--unique-online-bn-updates')
             with mock.patch.object(sys, 'argv', argv), mock.patch.object(Path, 'read_text', reading), mock.patch.object(m, 'call', side_effect=RuntimeError('before any launch')):
                 with self.assertRaisesRegex(RuntimeError, 'before any launch'):
                     m.main()
@@ -40,6 +41,13 @@ class ScalarContractCLI(unittest.TestCase):
                 self.assertEqual(cfg[key], old[key])
             self.assertEqual(cfg['server_binary'], str((m.P/'native').resolve()))
             self.assertNotIn('episode_seconds', cfg)
+            self.assertEqual(cfg.get('unique_online_bn_updates',False),online)
+
+    def test_explicit_contract_selects_repairs_and_preserves_recipe(self):
+        self._configuration()
+
+    def test_online_bn_fix_requires_explicit_flag_and_preserves_recipe(self):
+        self._configuration(True)
 
 
 if __name__ == '__main__':

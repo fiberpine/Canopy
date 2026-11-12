@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-12 fresh6M completed;95 frozen runs completed and1 interrupted; performance failure already forced; final five-host post-reboot closurePASS",
+  "scope": "OnlineBN minimal dedup repair; realTF fourway and187offline checks pass;24actor admission/fresh6M/frozen pending",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 14565,
-      "sha256": "e85b4cbd46cd083506d366dd3f09b55f995c01c27b99b453655ffc495edb9ae3"
+      "bytes": 14848,
+      "sha256": "8439910db72d2b58f8f5ff5031b5a61ba61f5602026d8527641294fcd0ae09cd"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -61,6 +61,11 @@
       "path": "docs/BASELINE_NEXT_TRAIN_20261111.md",
       "bytes": 8308,
       "sha256": "111cacb9e7a0396aebd4de2c2d34b9a1609c8054f72e64698a337b6f6a7dae7a"
+    },
+    {
+      "path": "docs/BASELINE_ONLINE_BN_REPAIR_20261112.md",
+      "bytes": 2005,
+      "sha256": "19fa38acb2825ceef4456a3e5e49895348e1f426d61d513620dc87cbd0a2e062"
     },
     {
       "path": "docs/BASELINE_RECOVERY_20261111.md",
@@ -7131,6 +7136,46 @@
       "path": "evidence/baseline-capacity-repair-20261112/update-contract.json",
       "bytes": 12193,
       "sha256": "8a6e5d5a6dd36c370f62d80cab1a2cd6e5f7ef2004f5978fe408ee930351dda0"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/candidate-actual-contract.json",
+      "bytes": 34154,
+      "sha256": "f757ccd7cec323b4b9ec602afadc01d6c271e67d99b8bda8fbd808f7df1be7a7"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/formal-source-manifest.json",
+      "bytes": 8950,
+      "sha256": "830679de4c740289cf24bfea678e65ac7fac22682943ae021af9381aaf85b540"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/fourway-final6m.json",
+      "bytes": 31442,
+      "sha256": "d73e8cecc59e9c67784955c68eb89de48277ab88ef3edc7f4a3615d48c71f939"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/fourway-old1500k.json",
+      "bytes": 32731,
+      "sha256": "08bea9afd2584ec321dc669a91bfb96c9a4275a66c43604cbb75e12d2d3df307"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/fourway-original.py",
+      "bytes": 14345,
+      "sha256": "6adff6c1b966e77b990869862f9221f8ea454ab6b8e0921d35e1fc171145a988"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/fourway-provenance.json",
+      "bytes": 626,
+      "sha256": "a29febe1eada54652dbf2d76b86de7c3e41c3e3a9f5dd378705b518d24f190bf"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/fourway-step0.json",
+      "bytes": 34482,
+      "sha256": "77b4c620298c2feafe0b7e83bc7fb167ad2ff3790d8e909ef36cf5b735d776a0"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/registration.json",
+      "bytes": 1208,
+      "sha256": "0f25127a5076e982ed5d5f0b97497d2d2df5d1d7cbd018323591dddc6b2a3698"
     },
     {
       "path": "evidence/baseline-review-20261111/README.md",
@@ -18643,8 +18688,8 @@
     },
     {
       "path": "frameworks/baseline/distributed.py",
-      "bytes": 22215,
-      "sha256": "ec701d8fcfa1fc2cb4bece57cc5702ee5432e6b1f735a48af56cddb8c47cd768"
+      "bytes": 22401,
+      "sha256": "8534ead119bcb16f4064e3debaef08cd8eda91030e8393909663d42e7eafa0ce"
     },
     {
       "path": "frameworks/baseline/episode_training.py",
@@ -18700,6 +18745,11 @@
       "path": "frameworks/baseline/unique_critic_targets.py",
       "bytes": 1052,
       "sha256": "535f527dfa5ed2379c17526459d380d8ac5e4547cfd5043edc05ae38e2e48124"
+    },
+    {
+      "path": "frameworks/baseline/unique_online_bn.py",
+      "bytes": 2531,
+      "sha256": "d0f135a44e704b1ede0d980aefda30b18ea532eec54ab379253b278df3fcb619"
     },
     {
       "path": "frameworks/baseline_ipc_audit/evaluate.py",
@@ -21476,8 +21526,8 @@
     },
     {
       "path": "run.py",
-      "bytes": 11597,
-      "sha256": "b6664dcb629caf8591bd93e6ba1519bd8a3e3331fbb764f0338c9b6cccfcb793"
+      "bytes": 11863,
+      "sha256": "e9a2c5aca5aff1232c12c8bb965be5e2ef779496df2d116387a1685a084c8238"
     },
     {
       "path": "runtime/mahimahi/.gitignore",
@@ -23095,6 +23145,11 @@
       "sha256": "b83e31748b3a96c3c41ca6911f728819dfe8e7ed2c4eeea4f99b4362959c1895"
     },
     {
+      "path": "tools/audit_scalar_bn_fourway.py",
+      "bytes": 14723,
+      "sha256": "ac7c039dd05bc86558a7a32e6f7629151297a2c03762dbe1a46c67bac2077115"
+    },
+    {
       "path": "tools/audit_scalar_update_contract.py",
       "bytes": 12983,
       "sha256": "3e3854006e7e9ad425092837bb4dc3dee0163fe1f9eb41b8423b9d72d6e48171"
@@ -23511,13 +23566,18 @@
     },
     {
       "path": "tools/test_scalar_update_contract_cli.py",
-      "bytes": 2404,
-      "sha256": "61c95f25ed2cd58f30171d03f75b5d5f207520ccd572768b9db80dc8062a0d86"
+      "bytes": 2735,
+      "sha256": "b539183563980012043e01ab50b3dab9f3dc391a93b6f83e76de7bf8a54233e7"
     },
     {
       "path": "tools/test_scalar_verified_ipc.py",
       "bytes": 2261,
       "sha256": "6e98bee9ef2f6a2708fc5909419235566c9dcdad52af2b0efc61d59396f81f8b"
+    },
+    {
+      "path": "tools/test_unique_online_bn.py",
+      "bytes": 2618,
+      "sha256": "92a853f05fbd7340cc792ecd5a2922b9dc1e2d4f706bbef4266f690a962afa0c"
     },
     {
       "path": "tools/test_v31_boundary_rate.py",

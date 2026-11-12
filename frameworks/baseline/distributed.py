@@ -121,6 +121,10 @@ def learner(cfg):
  if cfg.get('target_no_fetch'):
   target_no_fetch=tf.group(*(a.target_actor_update_op+a.target_critic_update_op+a.target_critic_update_op2),name='target_no_fetch_capacity')
  bn=[v for v in tf.get_collection(tf.GraphKeys.UPDATE_OPS) if 'actor' in v.name and 'target' not in v.name and (not cfg.get('bn_relevant_only') or 'abstract_actor' in v.name)];diag=[float('nan')]*6
+ if cfg.get('unique_online_bn_updates'):
+  from unique_online_bn import select_online_updates
+  bn,bn_contract=select_online_updates(bn)
+  (run/'online-bn-contract.json').write_text(json.dumps(bn_contract,indent=2))
  stage_rows=[]
  status='RUNNING';reason='';next_checkpoint=cfg.get('checkpoint_interval',50000);producer_check=0;producers_done=False;produced=0;replay_probe=None
  try:
@@ -134,7 +138,7 @@ def learner(cfg):
     producers_done=all(p.exists() for p in producer_paths)
     if producers_done:produced=sum(json.loads(p.read_text())['enqueued'] for p in producer_paths)
    received_all=producers_done and n==produced
-   if received_all and (cfg.get('capacity_only') or it>=limit):break
+   if received_all and it>=limit:break
    if n>=next_checkpoint:
     with a.rp_buffer.lock:checkpoint(a.rp_buffer.inserted)
     next_checkpoint=((a.rp_buffer.inserted//cfg.get('checkpoint_interval',50000))+1)*cfg.get('checkpoint_interval',50000)
