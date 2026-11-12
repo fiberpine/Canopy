@@ -1,6 +1,6 @@
 # 600万样本修复重训：结果、异常和下一步
 
-2026-11-12。本报告目前区分“训练执行完成”和“冻结验收尚未收齐”。恢复会话时原240分钟窗口已结束，服务器已关闭；本机保留45/96次结果，不能据此报告24格总体性能。用户表示稍后开机，届时只取已生成结果与核查收尾，不自动补跑。
+2026-11-12。训练执行完成，冻结计划95/96次完整完成，最后1次中断。原始72次新模型确认评分为INCOMPLETE_OR_EXECUTION_FAILED，但已有23个完整三重复条件全部排队失败，且全量排队均值的保守下界274.68ms远超20ms门槛，故端点已确定不能通过健康验收。五机最终终检通过。恢复开机后只取证/收尾，没有追加训练或评测，也没有续原240分钟窗口。
 
 ## 已完成什么
 
@@ -8,9 +8,26 @@
 
 选定端点为`@RUN_ROOT@/frameworks/baseline/checkpoints/repaired-base-seed3-6m/step-6010470`。22个保存点只作离线诊断，未挑选中间点替代最终验收。12张量policy经VPC分发并核对SHA，不代表本机已下载新模型或完整replay。
 
-最终评测预登记为新模型24格×3次，加H0每格1次，共96次；每机同时仅一流，同一native，模型冻结、优化和探索均为0。中断前45次执行完成、0错误，但抽样进度不足以替代全96次。健康门保持原值：逐格利用率、mean/P95排队、丢包、末段利用率及灾难run共同判断，不以平均吞吐较好替代。
+最终评测预登记为新模型24格×3次，加H0每格1次，共96次；每机同时仅一流，同一native，模型冻结、优化和探索均为0。最终保留新模型71次、H0全部24次完整结果，95次完整项0执行错误。新模型G12-R100第二重复只有34.494秒down.log、无最终result，单独保留中断证据，不填零、不外推、不补跑；该格另两次有效。原健康评分器保持不变，对71/72返回INCOMPLETE_OR_EXECUTION_FAILED。
 
 [训练账本](../evidence/baseline-capacity-repair-20261112/training-complete.json) · [复算结果](../evidence/baseline-capacity-repair-20261112/training-diagnosis.json) · [原健康登记](../evidence/baseline-capacity-repair-20261112/health-registration.json)
+
+## 冻结性能：主要失败是高排队和丢包
+
+|模型与口径|利用率|平均排队|P95条件等权|丢包|
+|---|---:|---:|---:|---:|
+|新端点：各条件已完成重复均值，再24格等权|98.857%|281.058ms|337.007ms|15.530%|
+|H0：24格各一次|98.328%|32.437ms|43.750ms|0%|
+
+新模型不是计划72次齐全的估计：G12-R100为2次、其余23格3次；H0单次也不支持稳定性或修复因果比较。已完成新模型所有run的最低利用率91.78%，没有低于50%的灾难run。23个三重复条件利用率和尾段利用率均过门，但mean和P95排队全部失败；16格trim丢包失败、15格接管后丢包失败。失败形态由之前部分连接低吞吐，转为持续过度排队，不能据吞吐接近满载称健康。
+
+![冻结网格](../evidence/baseline-capacity-repair-20261112/plots/frozen-available-grid24.png)
+
+最弱排队格G24-R200为829.65ms、G12-R200为740.03ms；R20六格平均排队86.30ms、丢包26.57%。这与窗口控制过于激进相容，尚不能仅凭结果定位为BN、Q或探索中的唯一因素。历史512状态全+1也不能代替这71条新连接的实际动作序列。
+
+缺失run不会逆转结论：71条有效queue之和除以预定72，已经274.684ms；任何非负的缺失run排队只会使该全量均值更高。此处只做数学下界，**没有把中断run虚构为零排队样本**。因此正式确认执行仍标INCOMPLETE，工程结论明确为不接受此端点作健康基座，也不再为凑齐次数补测。
+
+[95次原始汇总](../evidence/baseline-capacity-repair-20261112/frozen-final-latest.json) · [原评分器结果](../evidence/baseline-capacity-repair-20261112/health-assessment.json) · [已观测失败与下界](../evidence/baseline-capacity-repair-20261112/observed-performance-assessment.json) · [逐格CSV](../evidence/baseline-capacity-repair-20261112/available-condition-metrics.csv) · [中断证据](../evidence/baseline-capacity-repair-20261112/interrupted-run-evidence.json)
 
 ## 训练过程的异常意味着什么
 
@@ -50,9 +67,9 @@ native请求上限2³¹−1共2,173,263次，其中2,153,768次是窗口已到�
 
 ## 下一步的可证伪顺序
 
-1. 收齐现有96次结果并核查终止状态；若云端因关机未完成，原NOT_RUN/失败照存，不用有效性能差触发重测，不擅自延长已结束窗口。
+1. 本轮以95完整、1中断收尾，原始结果保留；端点不接受为基座。下一轮先补执行/学习短诊断，不原样追加更久训练。
 2. 在下一次允许的短诊断中，先补在线BN“唯一写入并行”控制；同CP、同512状态、同优化器现场重复24次，同时记录每个变量、部署动作、调用次序和EMA预期值。再以多个保存点验证，不能仅凭一次确定性声称性能根治。
-3. 明确BN候选契约后，比较健康H0与失败端点在启动/稳态保留状态上的actor logits、Q动作曲线、tanh导数、真实行为动作支持和clamp别名。离线Q偏好不等于真实网络因果收益。
+3. 明确BN候选契约后，比较归档H0与失败端点在启动/稳态保留状态上的actor logits、Q动作曲线、tanh导数、真实行为动作支持和clamp别名。离线Q偏好不等于真实网络因果收益。
 4. 再登记最小单变量学习：执行修复优先；探索范围、actor延迟和重连分别改变学习/数据机制，不能全塞入同一“修复”后解释唯一因果。仍保留足够训练预算、最终冻结验收和H0同期参考。
 5. 基座通过后再第二seed和独立双动作分支。当前不把目标转成调reward迎合门槛，也不拿CPU低作为加机器依据。
 
@@ -60,6 +77,6 @@ native请求上限2³¹−1共2,173,263次，其中2,153,768次是窗口已到�
 
 ## 复算与存储范围
 
-`python tools/analyze_baseline_repair_6m.py evidence/baseline-capacity-repair-20261112`复算训练与完整行为日志汇总；2.26MB压缩分析输入来自已有小证据传输，含进程/逐核计数与状态摘要，不含逐包日志、模型tensor或replay。最终验收必须使用完整注册计划及全部结果，不能用中断前45条替代。
+`python tools/analyze_baseline_repair_6m.py evidence/baseline-capacity-repair-20261112`复算训练与完整行为日志汇总；2.26MB压缩分析输入来自已有小证据传输，含进程/逐核计数与状态摘要，不含逐包日志、模型tensor或replay。`python tools/analyze_baseline_frozen_6m.py evidence/baseline-capacity-repair-20261112`复算71条新模型/24条H0与缺失run下界；`plot_baseline_frozen_6m.py`重绘保留网格。原始计划和中断均保留，不把95条标成96条。
 
-当前保留训练后五机清理证据；冻结评测后的全五机收尾尚待开机核实，不能声称已完成。大checkpoint、replay与原始逐包日志默认留云端。没有完整TCP/history/max_bw/actor随机现场的resume加载器，载入权重不称无缝恢复。
+重新开机后五机最终只读终检均PASS：本轮活进程/已登记IPC/相关监听均0，51个旧模型、旧core/sysctl/查询过的旧CP与replay未变，当前formal清单和native未变。终检发生在重启后，不能据此声称关机前曾完成正常收尾。仅额外复制343558字节的12张量负面端点策略供复核，见evidence下negative-final-policy与传输SHA；不作为健康基座，不覆盖H0。其余大checkpoint、replay及逐包原始日志仍云端。无完整TCP/history/max_bw/actor随机现场resume加载器，载权重不称无缝恢复。

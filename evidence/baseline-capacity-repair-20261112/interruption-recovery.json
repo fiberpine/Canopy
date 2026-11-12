@@ -1,47 +1,88 @@
 {
-  "epoch": 1794468343.1952798,
+  "epoch": 1794469069.7166884,
   "registration_unchanged": true,
   "action": "Read existing completion artifacts by SFTP only; no new experiment or deadline extension",
   "nodes": [
     {
       "node": 0,
       "finished": false,
-      "done": 0,
+      "done": 19,
       "errors": [],
-      "connection_error": "SSHException('Error reading SSH protocol banner')",
-      "remote_files": {}
+      "connection_error": null,
+      "remote_files": {
+        "final-progress.json": {
+          "mtime": 1794459177,
+          "bytes": 49103
+        }
+      }
     },
     {
       "node": 1,
-      "finished": false,
-      "done": 0,
+      "finished": true,
+      "done": 19,
       "errors": [],
-      "connection_error": "BadHostKeyException('@HOST_ADDRESS@', PKey(alg=ED25519, bits=256, fp=SHA256:md5Nhjr3h3MOeaFw4NO3UZMQV4wfGc2Js+NVFYADtJI), PKey(alg=ED25519, bits=256, fp=SHA256:afblJO/qP4FMgINBUqQkJ0mN8v+MbNcAzgYSfpsYhs0))",
-      "remote_files": {}
+      "connection_error": null,
+      "remote_files": {
+        "final-result.json": {
+          "mtime": 1794459172,
+          "bytes": 48954
+        },
+        "final-progress.json": {
+          "mtime": 1794459172,
+          "bytes": 48954
+        }
+      }
     },
     {
       "node": 2,
-      "finished": false,
-      "done": 0,
+      "finished": true,
+      "done": 19,
       "errors": [],
-      "connection_error": "SSHException('Error reading SSH protocol banner')",
-      "remote_files": {}
+      "connection_error": null,
+      "remote_files": {
+        "final-result.json": {
+          "mtime": 1794459176,
+          "bytes": 49296
+        },
+        "final-progress.json": {
+          "mtime": 1794459176,
+          "bytes": 49296
+        }
+      }
     },
     {
       "node": 3,
-      "finished": false,
-      "done": 0,
+      "finished": true,
+      "done": 19,
       "errors": [],
-      "connection_error": "SSHException('Error reading SSH protocol banner')",
-      "remote_files": {}
+      "connection_error": null,
+      "remote_files": {
+        "final-result.json": {
+          "mtime": 1794459184,
+          "bytes": 48823
+        },
+        "final-progress.json": {
+          "mtime": 1794459184,
+          "bytes": 48823
+        }
+      }
     },
     {
       "node": 4,
-      "finished": false,
-      "done": 0,
+      "finished": true,
+      "done": 19,
       "errors": [],
-      "connection_error": "SSHException('Error reading SSH protocol banner')",
-      "remote_files": {}
+      "connection_error": null,
+      "remote_files": {
+        "final-result.json": {
+          "mtime": 1794459172,
+          "bytes": 48929
+        },
+        "final-progress.json": {
+          "mtime": 1794459172,
+          "bytes": 48929
+        }
+      }
     }
   ]
 }

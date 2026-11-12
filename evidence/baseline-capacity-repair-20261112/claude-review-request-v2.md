@@ -2,7 +2,7 @@
 
 目的：减少下一轮无效重训。请区分已证执行缺陷、相关性、机制假设和未验证候选，至多8条答复；明确实际读取的文档/JSON/源码，未运行的检查不要称已复现。
 
-请先读[完整报告](../../docs/BASELINE_6M_REPAIR_RESULT_20261112.md)、[开源RL核查](../../docs/BASELINE_RL_RESEARCH_20261112.md)、[训练复算](training-diagnosis.json)、[BN实测](actor-bn-contract-r3.json)。最终冻结结果还未取齐时不要替代正式健康判定。
+请先读[完整报告](../../docs/BASELINE_6M_REPAIR_RESULT_20261112.md)、[开源RL核查](../../docs/BASELINE_RL_RESEARCH_20261112.md)、[训练复算](training-diagnosis.json)、[BN实测](actor-bn-contract-r3.json)。最终为95次完整、1次中断；新模型71次的可用条件等权98.86%/281.06ms/15.53%丢包，H0全24单次98.33%/32.44ms/0%。原确认评分INCOMPLETE；23个三重复格排队全失败，缺失run不能逆转整体queue门失败。请区别执行未齐与性能已被否定。
 
 已知事实：
 

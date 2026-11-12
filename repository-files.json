@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-12 fresh6M training completed; entire training/support evidence; frozen results and final ownership closure pending retrieval after interruption",
+  "scope": "2026-11-12 fresh6M completed;95 frozen runs completed and1 interrupted; performance failure already forced; final five-host post-reboot closurePASS",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 14605,
-      "sha256": "9bb6908d665a3bf5dd1a99d2dcc1a7625e88fcb4826554406591e7646944634d"
+      "bytes": 14565,
+      "sha256": "e85b4cbd46cd083506d366dd3f09b55f995c01c27b99b453655ffc495edb9ae3"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -49,8 +49,8 @@
     },
     {
       "path": "docs/BASELINE_6M_REPAIR_RESULT_20261112.md",
-      "bytes": 8999,
-      "sha256": "54c3f5818c98dbd486741746d6f4d409db612c8f8ea4941030d90421f784f78a"
+      "bytes": 11691,
+      "sha256": "7955894e1ad3d4bb6acccc09a3c7bf5fb4ae3094a2838bb33d1aaa1b83fb7853"
     },
     {
       "path": "docs/BASELINE_CAPACITY_AUDIT_20261112.md",
@@ -69,8 +69,8 @@
     },
     {
       "path": "docs/BASELINE_RL_RESEARCH_20261112.md",
-      "bytes": 6660,
-      "sha256": "2fe4dbaac1a973d52c51f6ec2386a69a59cfa1ca8d3c963489f299bd9fa8d1d9"
+      "bytes": 6727,
+      "sha256": "e31186eb1d2a305a06d661aba697c34b71e305e3dff240762fd4fdd4cde053e9"
     },
     {
       "path": "docs/BASELINE_SCALE_AND_FAILURE_AUDIT_20261112.md",
@@ -6848,6 +6848,11 @@
       "sha256": "d8e185d62d734231d68221189bc691e2715f3ff8553bbf244466632923844db8"
     },
     {
+      "path": "evidence/baseline-capacity-repair-20261112/H0-reference-assessment.json",
+      "bytes": 16761,
+      "sha256": "8b6f307dd446ccfd001b48a16b8e93cacee23f20770571f24717b99d75a4fc43"
+    },
+    {
       "path": "evidence/baseline-capacity-repair-20261112/action-support-audit.json",
       "bytes": 29419,
       "sha256": "972482d3c1aa0255812291c34ccedcdd002129f8caaf136785d6204d0cc8ca58"
@@ -6861,6 +6866,11 @@
       "path": "evidence/baseline-capacity-repair-20261112/actor-bn-contract-r3.json",
       "bytes": 22936,
       "sha256": "771499e45309cab6dd661fde5c4c8e51ce2f511e1034e8cddbb5e3146066f02b"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/available-condition-metrics.csv",
+      "bytes": 3250,
+      "sha256": "dba327abdb0111a60bab5c88683219c499ae0920dd93f306d126658a5d743641"
     },
     {
       "path": "evidence/baseline-capacity-repair-20261112/capacity-selection.json",
@@ -6884,8 +6894,8 @@
     },
     {
       "path": "evidence/baseline-capacity-repair-20261112/claude-review-request-v2.md",
-      "bytes": 3114,
-      "sha256": "23bb40421e7b8c028ac561dc90a019ac8f3f82e85631d0869be5e5381a8cec9b"
+      "bytes": 3335,
+      "sha256": "8c742b14e37ab6ecf2a5dd42afafb83702bb065d71bea8ee0bd0c5737876f31a"
     },
     {
       "path": "evidence/baseline-capacity-repair-20261112/claude-review.md",
@@ -6893,9 +6903,19 @@
       "sha256": "346689d510b0e606e9b12ffb77bf01d9069a7b22b2818c4b1b05e6ed7e4b9f32"
     },
     {
+      "path": "evidence/baseline-capacity-repair-20261112/closure-final.json",
+      "bytes": 2239,
+      "sha256": "c09293ae4c8e75bddbcbff38219bdd8d43a468f3d7a7936d0d06da9f6f3e81cd"
+    },
+    {
       "path": "evidence/baseline-capacity-repair-20261112/closure-training.json",
       "bytes": 1758,
       "sha256": "1c865eeab46d7840354889ac76b3a8b328785eb63d63471f874ebf32bad857fa"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/final-results-validation.json",
+      "bytes": 326,
+      "sha256": "1dae5ba023631f5d828ce0f6c198087fb956adccc59cb314bc0d5fcff81d2c70"
     },
     {
       "path": "evidence/baseline-capacity-repair-20261112/fixed-probe-analysis.json",
@@ -6914,8 +6934,8 @@
     },
     {
       "path": "evidence/baseline-capacity-repair-20261112/frozen-final-latest.json",
-      "bytes": 170070,
-      "sha256": "4b25c0bb4dc1930b878eeee26b3219964f09396bd96d49520730fe9f1042f07c"
+      "bytes": 359815,
+      "sha256": "c5e6d3ba90e7e0b779591628a03b57a053cfd19d418800d7f7043d6e010889f7"
     },
     {
       "path": "evidence/baseline-capacity-repair-20261112/frozen-final-plan.json",
@@ -6933,6 +6953,16 @@
       "sha256": "b7ec908898c3e8cd9471e42a46f3d0e95454cdc583fe276a57c465baa42593f6"
     },
     {
+      "path": "evidence/baseline-capacity-repair-20261112/frozen-policy.json",
+      "bytes": 510,
+      "sha256": "1f68870dc0fc35d8a47219faa7fcb7c871b5a31e5cdfd6583ab7e5a55037ac1f"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/health-assessment.json",
+      "bytes": 84,
+      "sha256": "3b1fb5a00690537c2f32a162033c25d78d47519035e415d37fc8c05ebd43b720"
+    },
+    {
       "path": "evidence/baseline-capacity-repair-20261112/health-registration.json",
       "bytes": 11622,
       "sha256": "1eb18eb67cf6c4261be66725c563b6f84416e2f5df9646cb0bf84996a1b5be2c"
@@ -6943,9 +6973,14 @@
       "sha256": "45192e422cb9cab9a3c2b90ca3b1065d638e1eaccae5df16cb2587fb4f2b54d5"
     },
     {
+      "path": "evidence/baseline-capacity-repair-20261112/interrupted-run-evidence.json",
+      "bytes": 1488,
+      "sha256": "5d8f44ca0125c5aa9aef4c05cd7bdfc951c63c5386bd4125ba0bfc1e0806fd9d"
+    },
+    {
       "path": "evidence/baseline-capacity-repair-20261112/interruption-recovery.json",
-      "bytes": 1372,
-      "sha256": "16428d967cf3f133407d4cca51982cefbd1acf98af8af74f909d1843c42a96fb"
+      "bytes": 1945,
+      "sha256": "92ffb79d78b317e100d9f5465d03b567baddf4ae253973887911734f2df7080a"
     },
     {
       "path": "evidence/baseline-capacity-repair-20261112/late-recovery-observation.json",
@@ -6953,9 +6988,34 @@
       "sha256": "8c20f303bd9e2dcad916216f57a642c968ff629432707eefa30b9fb53e7fd041"
     },
     {
+      "path": "evidence/baseline-capacity-repair-20261112/missing-frozen-jobs.json",
+      "bytes": 891,
+      "sha256": "145b454016787008b60c0bc9d2e62e3b1d63a54d43035dc2b8c7a2343ae0b8fb"
+    },
+    {
       "path": "evidence/baseline-capacity-repair-20261112/native-runtime-correction.json",
       "bytes": 1001,
       "sha256": "112e9db407c1570057f6be36138682f3700cb22da24bf20764e63a21f59d122c"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/negative-final-policy/README.md",
+      "bytes": 743,
+      "sha256": "c8f64af00b31bb369d1b4e891e658fb6eb270c618f2a889066ba2665741668d3"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/negative-final-policy/model.data-00000-of-00001",
+      "bytes": 343044,
+      "sha256": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/negative-final-policy/model.index",
+      "bytes": 514,
+      "sha256": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/observed-performance-assessment.json",
+      "bytes": 26618,
+      "sha256": "bce199a0771922ee9c47c99553a313e45c2440dc56acfa36b5ebcb11e4f4f4ff"
     },
     {
       "path": "evidence/baseline-capacity-repair-20261112/plots/capacity-and-cpu.png",
@@ -6983,6 +7043,16 @@
       "sha256": "9caa9d39bb8f3dc28dc62e5a723b5c1aabd528160a81a1ee4e2704eab699ba01"
     },
     {
+      "path": "evidence/baseline-capacity-repair-20261112/plots/frozen-available-grid24.png",
+      "bytes": 293652,
+      "sha256": "cfa8870aef2c6342cf6b562e5504a6e55b77981b2a8a49155f1e60fa03044ae8"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/plots/frozen-available-grid24.svg",
+      "bytes": 199095,
+      "sha256": "d135e607b96fe3b86d2a8d46bf22ab105240ec2ab2ae6ac4274fd5312c0920fe"
+    },
+    {
       "path": "evidence/baseline-capacity-repair-20261112/plots/training-CPU.png",
       "bytes": 249618,
       "sha256": "a4784a8afa82fd6e07ff5b90dc5e33ad2484f0cbe0e718ffd823d2fed0b42297"
@@ -7003,6 +7073,16 @@
       "sha256": "e0cb4066ca4ffd0555fcbb6e11d5e5b9a563f6fd0391db5fcfe0b761f91f24cf"
     },
     {
+      "path": "evidence/baseline-capacity-repair-20261112/policy-local-delivery.json",
+      "bytes": 733,
+      "sha256": "53d256247969720e376ed493e4168bd078113b98f87822bf649efa869293057a"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/post-window-closure-receipt.json",
+      "bytes": 358,
+      "sha256": "e205301abc118c30b8da6d5230dd67c7688b6726d4eecb52c954b9810688e16f"
+    },
+    {
       "path": "evidence/baseline-capacity-repair-20261112/registration.json",
       "bytes": 730,
       "sha256": "7bb2f54e786fbaaad38c1173d5e48d4295c0d8dd0586e33f758dfa67724aba5c"
@@ -7014,8 +7094,8 @@
     },
     {
       "path": "evidence/baseline-capacity-repair-20261112/summary.md",
-      "bytes": 3335,
-      "sha256": "ca4af841174b560ee8a92e671e13387eb70bbdac4619a1a6e7c9ae0a4aeeeaa0"
+      "bytes": 3426,
+      "sha256": "53f61c77565c459e930ef472b62cfc7f100d1fa5836371d5be4d5f716aa4a8d2"
     },
     {
       "path": "evidence/baseline-capacity-repair-20261112/training-analysis-transfer.json",
@@ -22990,6 +23070,11 @@
       "sha256": "829e25e8be076fc434c71de4326fffc07333172c3c149594a6c5bbf6cd9627c6"
     },
     {
+      "path": "tools/analyze_baseline_frozen_6m.py",
+      "bytes": 5757,
+      "sha256": "46abfa362539f74ff326d37cdb1c9697603d92e87f228b2638fd812bab01445e"
+    },
+    {
       "path": "tools/analyze_baseline_repair_6m.py",
       "bytes": 4337,
       "sha256": "e5e89c8c564848a35872e5cef03c227a9f37b0f09688b2c3cd8f68b4144e6f9b"
@@ -23098,6 +23183,11 @@
       "path": "tools/interval_reward/test_shadow_reward.py",
       "bytes": 2335,
       "sha256": "a3df180e5fb56fa30c6a2aecac199757f55fbc2bd2d227eb41f0cd49715758b2"
+    },
+    {
+      "path": "tools/plot_baseline_frozen_6m.py",
+      "bytes": 3071,
+      "sha256": "5fca00f65365e24b24918f695cf6a5b5159fdb1cae61e59fa37df830dfdb4643"
     },
     {
       "path": "tools/plot_baseline_repair_6m.py",

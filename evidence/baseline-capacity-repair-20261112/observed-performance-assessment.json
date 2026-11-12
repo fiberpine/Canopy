@@ -1,0 +1,814 @@
+{
+  "status": "PERFORMANCE_FAILURE_ALREADY_FORCED_BUT_CONFIRMATION_INCOMPLETE",
+  "complete_runs": 95,
+  "candidate_valid_runs": 71,
+  "H0_valid_runs": 24,
+  "missing_jobs": [
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "repaired-final6m",
+      "repeat": 1,
+      "run": "repaired-confirm-r1-c02",
+      "host": 0,
+      "port": 12095,
+      "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+        ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+      }
+    }
+  ],
+  "candidate_available_condition_equal": {
+    "utilization": 0.9885703928408192,
+    "queue_mean_ms": 281.0583157441421,
+    "queue_p95_ms": 337.00694444444446,
+    "queue_p99_ms": 338.7361111111111,
+    "drop_fraction": 0.15530013797483136
+  },
+  "candidate_available_run_equal": {
+    "utilization": 0.988489801587926,
+    "queue_mean_ms": 278.5527553066535,
+    "queue_p95_ms": 334.67605633802816,
+    "queue_p99_ms": 336.4225352112676,
+    "drop_fraction": 0.15316647411372622
+  },
+  "H0_single_repeat_condition_equal": {
+    "utilization": 0.9832765879267931,
+    "queue_mean_ms": 32.43651850894368,
+    "queue_p95_ms": 43.75,
+    "queue_p99_ms": 46.875,
+    "drop_fraction": 0.0
+  },
+  "cells": {
+    "G12-R20": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 1.0000051573159194,
+        "queue_mean_ms": 99.31418336558669,
+        "queue_p95_ms": 102.0,
+        "queue_p99_ms": 102.0,
+        "drop_fraction": 0.21620519479200165
+      },
+      "available_repeat_medians": {
+        "utilization": 1.0000051750997674,
+        "queue_mean_ms": 99.51168341456565,
+        "queue_p95_ms": 102.0,
+        "queue_p99_ms": 102.0,
+        "drop_fraction": 0.21108930944996518
+      },
+      "minimum_run_utilization": 1.0000036279049915,
+      "maximum_run_utilization": 1.0000066689429992,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G12-R50": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9992994942273629,
+        "queue_mean_ms": 245.53363988128712,
+        "queue_p95_ms": 252.0,
+        "queue_p99_ms": 252.0,
+        "drop_fraction": 0.23475324143341558
+      },
+      "available_repeat_medians": {
+        "utilization": 1.000008322840863,
+        "queue_mean_ms": 246.8019330438437,
+        "queue_p95_ms": 252.0,
+        "queue_p99_ms": 252.0,
+        "drop_fraction": 0.2513595709299016
+      },
+      "minimum_run_utilization": 0.9978766085490514,
+      "maximum_run_utilization": 1.0000135512921744,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G12-R100": {
+      "valid_repeats": 2,
+      "complete_three_repeats": false,
+      "available_repeat_means": {
+        "utilization": 0.9942923717962397,
+        "queue_mean_ms": 458.95310680582753,
+        "queue_p95_ms": 502.5,
+        "queue_p99_ms": 503.0,
+        "drop_fraction": 0.30679027211329635
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9942923717962397,
+        "queue_mean_ms": 458.95310680582753,
+        "queue_p95_ms": 502.5,
+        "queue_p99_ms": 503.0,
+        "drop_fraction": 0.30679027211329635
+      },
+      "minimum_run_utilization": 0.9934903647111547,
+      "maximum_run_utilization": 0.9950943788813248,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": null
+    },
+    "G12-R200": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9850583132375851,
+        "queue_mean_ms": 740.0298716039132,
+        "queue_p95_ms": 991.6666666666666,
+        "queue_p99_ms": 999.0,
+        "drop_fraction": 0.18810651507222198
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9855057192855161,
+        "queue_mean_ms": 739.1474504837848,
+        "queue_p95_ms": 992.0,
+        "queue_p99_ms": 999.0,
+        "drop_fraction": 0.18868951386999183
+      },
+      "minimum_run_utilization": 0.9833059817751125,
+      "maximum_run_utilization": 0.9863632386521266,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G24-R200": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 1.0000028454156797,
+        "queue_mean_ms": 829.6475374998224,
+        "queue_p95_ms": 891.0,
+        "queue_p99_ms": 891.0,
+        "drop_fraction": 0.0
+      },
+      "available_repeat_medians": {
+        "utilization": 1.0000028009560598,
+        "queue_mean_ms": 829.6434913354205,
+        "queue_p95_ms": 891.0,
+        "queue_p99_ms": 891.0,
+        "drop_fraction": 0.0
+      },
+      "minimum_run_utilization": 1.0000023474679358,
+      "maximum_run_utilization": 1.0000033878230437,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "three_repeat_pass": false
+    },
+    "G24-R20": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9989346319099142,
+        "queue_mean_ms": 95.9695742637403,
+        "queue_p95_ms": 101.0,
+        "queue_p99_ms": 101.0,
+        "drop_fraction": 0.3688696378477672
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9992099169849975,
+        "queue_mean_ms": 95.94370187927392,
+        "queue_p95_ms": 101.0,
+        "queue_p99_ms": 101.0,
+        "drop_fraction": 0.36394629349952523
+      },
+      "minimum_run_utilization": 0.9983234810815425,
+      "maximum_run_utilization": 0.9992704976632024,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G24-R50": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9928314642509087,
+        "queue_mean_ms": 225.31159259051114,
+        "queue_p95_ms": 251.0,
+        "queue_p99_ms": 252.0,
+        "drop_fraction": 0.27576043108987924
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9936578352077509,
+        "queue_mean_ms": 223.42460634641515,
+        "queue_p95_ms": 251.0,
+        "queue_p99_ms": 252.0,
+        "drop_fraction": 0.263035602933753
+      },
+      "minimum_run_utilization": 0.9901489575108303,
+      "maximum_run_utilization": 0.994687600034145,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G24-R100": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9972446150508262,
+        "queue_mean_ms": 356.83026522778295,
+        "queue_p95_ms": 496.0,
+        "queue_p99_ms": 500.3333333333333,
+        "drop_fraction": 0.14918543548018565
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9971170959687573,
+        "queue_mean_ms": 356.9924685207704,
+        "queue_p95_ms": 496.0,
+        "queue_p99_ms": 500.0,
+        "drop_fraction": 0.1522149975439794
+      },
+      "minimum_run_utilization": 0.996959042019676,
+      "maximum_run_utilization": 0.9976577071640453,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G36-R100": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9272925377839724,
+        "queue_mean_ms": 353.79882841763697,
+        "queue_p95_ms": 475.0,
+        "queue_p99_ms": 478.6666666666667,
+        "drop_fraction": 0.10311996845472461
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9268378441802253,
+        "queue_mean_ms": 354.86492939913575,
+        "queue_p95_ms": 475.0,
+        "queue_p99_ms": 476.0,
+        "drop_fraction": 0.10247611693051178
+      },
+      "minimum_run_utilization": 0.9267306967516213,
+      "maximum_run_utilization": 0.9283090724200705,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G36-R200": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9999985185079835,
+        "queue_mean_ms": 490.36509653986104,
+        "queue_p95_ms": 526.0,
+        "queue_p99_ms": 527.0,
+        "drop_fraction": 0.0
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9999985955455684,
+        "queue_mean_ms": 490.3380881264201,
+        "queue_p95_ms": 526.0,
+        "queue_p99_ms": 527.0,
+        "drop_fraction": 0.0
+      },
+      "minimum_run_utilization": 0.9999969955341904,
+      "maximum_run_utilization": 0.9999999644441916,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "three_repeat_pass": false
+    },
+    "G36-R20": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.999670753214245,
+        "queue_mean_ms": 83.03689102173573,
+        "queue_p95_ms": 101.0,
+        "queue_p99_ms": 101.0,
+        "drop_fraction": 0.2430200557985455
+      },
+      "available_repeat_medians": {
+        "utilization": 0.999997582205029,
+        "queue_mean_ms": 83.63783560567208,
+        "queue_p95_ms": 101.0,
+        "queue_p99_ms": 101.0,
+        "drop_fraction": 0.25006877579092157
+      },
+      "minimum_run_utilization": 0.9990165263397428,
+      "maximum_run_utilization": 0.9999981510979634,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G36-R50": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9895071787177153,
+        "queue_mean_ms": 182.10447457489582,
+        "queue_p95_ms": 250.66666666666666,
+        "queue_p99_ms": 251.0,
+        "drop_fraction": 0.2651069689850546
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9901349165149619,
+        "queue_mean_ms": 183.20806479361593,
+        "queue_p95_ms": 251.0,
+        "queue_p99_ms": 251.0,
+        "drop_fraction": 0.2652196237236248
+      },
+      "minimum_run_utilization": 0.9874811376436454,
+      "maximum_run_utilization": 0.9909054819945387,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G42-R50": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9999988111930744,
+        "queue_mean_ms": 168.40146104679806,
+        "queue_p95_ms": 250.0,
+        "queue_p99_ms": 251.0,
+        "drop_fraction": 0.2615774418648196
+      },
+      "available_repeat_medians": {
+        "utilization": 0.999998689264159,
+        "queue_mean_ms": 167.7768581184926,
+        "queue_p95_ms": 250.0,
+        "queue_p99_ms": 251.0,
+        "drop_fraction": 0.26268505474407455
+      },
+      "minimum_run_utilization": 0.9999981253429251,
+      "maximum_run_utilization": 0.9999996189721393,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G42-R100": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9188410148550062,
+        "queue_mean_ms": 319.43434061022543,
+        "queue_p95_ms": 480.0,
+        "queue_p99_ms": 491.6666666666667,
+        "drop_fraction": 0.032130956169337484
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9182412668414315,
+        "queue_mean_ms": 320.04691063870547,
+        "queue_p95_ms": 480.0,
+        "queue_p99_ms": 492.0,
+        "drop_fraction": 0.032403080328216656
+      },
+      "minimum_run_utilization": 0.9177675730049382,
+      "maximum_run_utilization": 0.920514204718649,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "three_repeat_pass": false
+    },
+    "G42-R200": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 1.0000005131175191,
+        "queue_mean_ms": 393.3504100315396,
+        "queue_p95_ms": 422.0,
+        "queue_p99_ms": 423.0,
+        "drop_fraction": 0.0
+      },
+      "available_repeat_medians": {
+        "utilization": 0.999999679936597,
+        "queue_mean_ms": 393.3475598666262,
+        "queue_p95_ms": 422.0,
+        "queue_p99_ms": 423.0,
+        "drop_fraction": 0.0
+      },
+      "minimum_run_utilization": 0.9999982015484973,
+      "maximum_run_utilization": 1.0000036578674634,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "three_repeat_pass": false
+    },
+    "G42-R20": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9984115202503607,
+        "queue_mean_ms": 82.13486895644097,
+        "queue_p95_ms": 100.0,
+        "queue_p99_ms": 101.0,
+        "drop_fraction": 0.2540601670647513
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9988008595988539,
+        "queue_mean_ms": 82.34275503388272,
+        "queue_p95_ms": 100.0,
+        "queue_p99_ms": 101.0,
+        "drop_fraction": 0.25415376490180464
+      },
+      "minimum_run_utilization": 0.9974190696823751,
+      "maximum_run_utilization": 0.999014631469853,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G48-R20": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9976410172300066,
+        "queue_mean_ms": 79.70059654445683,
+        "queue_p95_ms": 100.0,
+        "queue_p99_ms": 101.0,
+        "drop_fraction": 0.2530237190508476
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9974024044846733,
+        "queue_mean_ms": 79.61532320435097,
+        "queue_p95_ms": 100.0,
+        "queue_p99_ms": 101.0,
+        "drop_fraction": 0.2513209804984762
+      },
+      "minimum_run_utilization": 0.9959978104681491,
+      "maximum_run_utilization": 0.9995228367371976,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G48-R50": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9997602315943313,
+        "queue_mean_ms": 161.45606940782025,
+        "queue_p95_ms": 248.0,
+        "queue_p99_ms": 250.0,
+        "drop_fraction": 0.21573186640826075
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9999590896241259,
+        "queue_mean_ms": 161.4718200983837,
+        "queue_p95_ms": 248.0,
+        "queue_p99_ms": 250.0,
+        "drop_fraction": 0.21371933230552542
+      },
+      "minimum_run_utilization": 0.9993356330974008,
+      "maximum_run_utilization": 0.9999859720614669,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G48-R100": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9999991643686805,
+        "queue_mean_ms": 420.2154222071413,
+        "queue_p95_ms": 444.0,
+        "queue_p99_ms": 445.0,
+        "drop_fraction": 0.0
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9999992532656294,
+        "queue_mean_ms": 420.2347116195063,
+        "queue_p95_ms": 444.0,
+        "queue_p99_ms": 445.0,
+        "drop_fraction": 0.0
+      },
+      "minimum_run_utilization": 0.9999968530480097,
+      "maximum_run_utilization": 1.0000013867924025,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "three_repeat_pass": false
+    },
+    "G48-R200": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9999987509978683,
+        "queue_mean_ms": 320.2328139220865,
+        "queue_p95_ms": 344.0,
+        "queue_p99_ms": 345.0,
+        "drop_fraction": 0.0
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9999990399129521,
+        "queue_mean_ms": 320.1976099840987,
+        "queue_p95_ms": 344.0,
+        "queue_p99_ms": 345.0,
+        "drop_fraction": 0.0
+      },
+      "minimum_run_utilization": 0.999997626451465,
+      "maximum_run_utilization": 0.9999995866291878,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "three_repeat_pass": false
+    },
+    "G72-R200": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.999999819257974,
+        "queue_mean_ms": 146.9405049869217,
+        "queue_p95_ms": 162.0,
+        "queue_p99_ms": 163.0,
+        "drop_fraction": 0.0
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9999997866651497,
+        "queue_mean_ms": 146.96408562588846,
+        "queue_p95_ms": 162.0,
+        "queue_p99_ms": 163.0,
+        "drop_fraction": 0.0
+      },
+      "minimum_run_utilization": 0.9999979022073046,
+      "maximum_run_utilization": 1.0000017689014677,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "three_repeat_pass": false
+    },
+    "G72-R20": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9947391240708082,
+        "queue_mean_ms": 77.6565120584224,
+        "queue_p95_ms": 99.33333333333333,
+        "queue_p99_ms": 100.0,
+        "drop_fraction": 0.2587576386030053
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9944386182301741,
+        "queue_mean_ms": 77.65002561263778,
+        "queue_p95_ms": 99.0,
+        "queue_p99_ms": 100.0,
+        "drop_fraction": 0.26050282110446055
+      },
+      "minimum_run_utilization": 0.9940685622653317,
+      "maximum_run_utilization": 0.9957101917169189,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G72-R50": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 0.9321614198145409,
+        "queue_mean_ms": 167.95568005910886,
+        "queue_p95_ms": 237.0,
+        "queue_p99_ms": 238.0,
+        "drop_fraction": 0.10100380116783791
+      },
+      "available_repeat_medians": {
+        "utilization": 0.9323131542268746,
+        "queue_mean_ms": 167.98573192294143,
+        "queue_p95_ms": 237.0,
+        "queue_p99_ms": 238.0,
+        "drop_fraction": 0.1009855542054813
+      },
+      "minimum_run_utilization": 0.9317890260552963,
+      "maximum_run_utilization": 0.9323820791614518,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": false,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": false
+      },
+      "three_repeat_pass": false
+    },
+    "G72-R100": {
+      "valid_repeats": 3,
+      "complete_three_repeats": true,
+      "available_repeat_means": {
+        "utilization": 1.000000160001138,
+        "queue_mean_ms": 247.02583623584695,
+        "queue_p95_ms": 262.0,
+        "queue_p99_ms": 263.0,
+        "drop_fraction": 0.0
+      },
+      "available_repeat_medians": {
+        "utilization": 1.0000009955626352,
+        "queue_mean_ms": 247.0386285420218,
+        "queue_p95_ms": 262.0,
+        "queue_p99_ms": 263.0,
+        "drop_fraction": 0.0
+      },
+      "minimum_run_utilization": 0.9999974222038912,
+      "maximum_run_utilization": 1.000002062236887,
+      "registered_checks_on_available_repeats": {
+        "utilization": true,
+        "mean_queue": false,
+        "p95": false,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "three_repeat_pass": false
+    }
+  },
+  "complete_cells": 23,
+  "failed_complete_cells": [
+    "G12-R20",
+    "G12-R50",
+    "G12-R200",
+    "G24-R200",
+    "G24-R20",
+    "G24-R50",
+    "G24-R100",
+    "G36-R100",
+    "G36-R200",
+    "G36-R20",
+    "G36-R50",
+    "G42-R50",
+    "G42-R100",
+    "G42-R200",
+    "G42-R20",
+    "G48-R20",
+    "G48-R50",
+    "G48-R100",
+    "G48-R200",
+    "G72-R200",
+    "G72-R20",
+    "G72-R50",
+    "G72-R100"
+  ],
+  "catastrophic_completed_runs": [],
+  "queue_lower_bound_even_if_missing_run_queue_zero": 274.68396703850556,
+  "overall_queue_gate": 20,
+  "full_confirmation_cannot_pass": true,
+  "interpretation": [
+    "95 completed runs are not 96 completed runs.",
+    "Candidate available-condition mean uses two repeats in the incomplete cell and three elsewhere; not the planned72-run estimate.",
+    "The nonnegative queue lower bound assigns zero only for a mathematical bound, never as an observed run or a plotted/imputed metric.",
+    "Completed three-repeat cells use unchanged registered gates; incomplete cell is not certified.",
+    "H0 has one repeat per condition: no stability, causal repair effect, or CPU-benefit conclusion."
+  ]
+}

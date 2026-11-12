@@ -911,12 +911,1028 @@
           "max": 23.861
         },
         "wall_s": 64.73724668500108
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant72",
+            "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+            "capacity_mbps": 71.999488,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G72-R20",
+            "nominal_mbps": 72,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 600,
+            "queue_bytes": 902400,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c21",
+          "host": 0,
+          "port": 12045,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9938965360834078,
+            "departure_mbps": 71.55884586666666,
+            "capacity_mbps": 71.9982848,
+            "queue_mean_ms": 77.10572933907095,
+            "queue_p95_ms": 99.0,
+            "queue_p99_ms": 100.0,
+            "dropped_packets": 130285.0,
+            "arrival_packets": 493406.0,
+            "drop_fraction": 0.2640523220228372,
+            "dropped_bytes": 190950080.0,
+            "arrival_bytes": 728532432.0,
+            "complete_window": true,
+            "last_log_s": 60.421,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9848273485721845,
+            "departure_mbps": 70.89995520000001,
+            "capacity_mbps": 71.99226879999999,
+            "queue_mean_ms": 74.35782097272045,
+            "queue_p95_ms": 99.0,
+            "queue_p99_ms": 100.0,
+            "dropped_packets": 22517.0,
+            "arrival_packets": 82918.0,
+            "drop_fraction": 0.27155744229238526,
+            "dropped_bytes": 32983768.0,
+            "arrival_bytes": 122305008.0,
+            "complete_window": true,
+            "last_log_s": 60.421,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9957101917169189,
+            "departure_mbps": 71.690624,
+            "capacity_mbps": 71.999488,
+            "queue_mean_ms": 77.65002561263778,
+            "queue_p95_ms": 99.0,
+            "queue_p99_ms": 100.0,
+            "dropped_packets": 107768.0,
+            "arrival_packets": 410488.0,
+            "drop_fraction": 0.26253629825963243,
+            "dropped_bytes": 157966312.0,
+            "arrival_bytes": 606227424.0,
+            "complete_window": true,
+            "last_log_s": 60.421,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9983340325975651,
+        "handoff_s": 0.15644189453125,
+        "post_handoff_drop_fraction": 0.2641572555300987,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2761,
+        "control_period_ms": {
+          "p50": 21.658,
+          "p95": 21.711,
+          "p99": 21.829,
+          "max": 34.023
+        },
+        "wall_s": 66.18257070099935
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant42",
+            "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+            "capacity_mbps": 41.99168,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G42-R50",
+            "nominal_mbps": 42,
+            "delay_ms": 25,
+            "base_rtt_ms": 50,
+            "queue_packets": 875,
+            "queue_bytes": 1316000,
+            "queue_bdp": 5.01432664756447
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c12",
+          "host": 0,
+          "port": 12050,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9952342283967301,
+            "departure_mbps": 41.79075893333333,
+            "capacity_mbps": 41.990877866666665,
+            "queue_mean_ms": 167.92261149924428,
+            "queue_p95_ms": 250.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 74605.0,
+            "arrival_packets": 288991.0,
+            "drop_fraction": 0.2581568284133416,
+            "dropped_bytes": 107319920.0,
+            "arrival_bytes": 421773316.0,
+            "complete_window": true,
+            "last_log_s": 60.737,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9714120133259192,
+            "departure_mbps": 40.7865472,
+            "capacity_mbps": 41.986867200000006,
+            "queue_mean_ms": 170.8785329453456,
+            "queue_p95_ms": 250.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 10834.0,
+            "arrival_packets": 46225.0,
+            "drop_fraction": 0.23437533802055166,
+            "dropped_bytes": 15580720.0,
+            "arrival_bytes": 67531472.0,
+            "complete_window": true,
+            "last_log_s": 60.737,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9999981253429251,
+            "departure_mbps": 41.991601280000005,
+            "capacity_mbps": 41.99168,
+            "queue_mean_ms": 167.34941785107713,
+            "queue_p95_ms": 250.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 63771.0,
+            "arrival_packets": 242766.0,
+            "drop_fraction": 0.26268505474407455,
+            "dropped_bytes": 91739200.0,
+            "arrival_bytes": 354241844.0,
+            "complete_window": true,
+            "last_log_s": 60.737,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.99998087240139,
+        "handoff_s": 0.409763916015625,
+        "post_handoff_drop_fraction": 0.2586302528582621,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2756,
+        "control_period_ms": {
+          "p50": 21.646,
+          "p95": 21.697,
+          "p99": 21.738149999999997,
+          "max": 27.414
+        },
+        "wall_s": 64.75014121000095
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R100",
+            "nominal_mbps": 48,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 2000,
+            "queue_bytes": 3008000,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c18",
+          "host": 0,
+          "port": 12055,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9893636356686122,
+            "departure_mbps": 47.4843552,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 416.3119339793056,
+            "queue_p95_ms": 444.0,
+            "queue_p99_ms": 445.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 248200.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 358796928.0,
+            "complete_window": true,
+            "last_log_s": 60.593,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9361802146756554,
+            "departure_mbps": 44.928070399999996,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 395.27823976034296,
+            "queue_p95_ms": 444.0,
+            "queue_p99_ms": 445.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 40328.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 58484320.0,
+            "complete_window": true,
+            "last_log_s": 60.593,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9999992532656294,
+            "departure_mbps": 47.99561215999999,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 420.2347116195063,
+            "queue_p95_ms": 444.0,
+            "queue_p99_ms": 445.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 207872.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 300312608.0,
+            "complete_window": true,
+            "last_log_s": 60.593,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.000005867198626,
+        "handoff_s": 3.917875,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2598,
+        "control_period_ms": {
+          "p50": 21.631,
+          "p95": 21.677,
+          "p99": 21.720059999999997,
+          "max": 24.506
+        },
+        "wall_s": 64.71276526899965
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant42",
+            "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+            "capacity_mbps": 41.99168,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G42-R100",
+            "nominal_mbps": 42,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 1750,
+            "queue_bytes": 2632000,
+            "queue_bdp": 5.01432664756447
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c13",
+          "host": 0,
+          "port": 12060,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.906502207158746,
+            "departure_mbps": 38.06482346666667,
+            "capacity_mbps": 41.990877866666665,
+            "queue_mean_ms": 321.11988393402567,
+            "queue_p95_ms": 480.0,
+            "queue_p99_ms": 492.0,
+            "dropped_packets": 6730.0,
+            "arrival_packets": 203170.0,
+            "drop_fraction": 0.03312496923758429,
+            "dropped_bytes": 9902512.0,
+            "arrival_bytes": 295388688.0,
+            "complete_window": true,
+            "last_log_s": 60.827,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.8478001807193655,
+            "departure_mbps": 35.5964736,
+            "capacity_mbps": 41.986867200000006,
+            "queue_mean_ms": 322.0269281476599,
+            "queue_p95_ms": 482.0,
+            "queue_p99_ms": 492.0,
+            "dropped_packets": 1105.0,
+            "arrival_packets": 31593.0,
+            "drop_fraction": 0.03497610230114266,
+            "dropped_bytes": 1627696.0,
+            "arrival_bytes": 46333976.0,
+            "complete_window": true,
+            "last_log_s": 60.827,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9182412668414315,
+            "departure_mbps": 38.55849344,
+            "capacity_mbps": 41.99168,
+            "queue_mean_ms": 320.95420228777846,
+            "queue_p95_ms": 480.0,
+            "queue_p99_ms": 492.0,
+            "dropped_packets": 5625.0,
+            "arrival_packets": 171577.0,
+            "drop_fraction": 0.032784114420930544,
+            "dropped_bytes": 8274816.0,
+            "arrival_bytes": 249054712.0,
+            "complete_window": true,
+            "last_log_s": 60.827,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9140245686764616,
+        "handoff_s": 2.422862060546875,
+        "post_handoff_drop_fraction": 0.033482029447927567,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2537,
+        "control_period_ms": {
+          "p50": 21.657,
+          "p95": 21.716,
+          "p99": 85.42523999999999,
+          "max": 101.918
+        },
+        "wall_s": 64.55576274400119
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant12",
+            "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+            "capacity_mbps": 11.995904,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G12-R20",
+            "nominal_mbps": 12,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 100,
+            "queue_bytes": 150400,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c00",
+          "host": 0,
+          "port": 12065,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9986613873838562,
+            "departure_mbps": 11.979645866666667,
+            "capacity_mbps": 11.995703466666667,
+            "queue_mean_ms": 98.60137801859656,
+            "queue_p95_ms": 102.0,
+            "queue_p99_ms": 102.0,
+            "dropped_packets": 15581.0,
+            "arrival_packets": 75477.0,
+            "drop_fraction": 0.20643374802920095,
+            "dropped_bytes": 23350952.0,
+            "arrival_bytes": 113348696.0,
+            "complete_window": true,
+            "last_log_s": 61.85,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9919495115709764,
+            "departure_mbps": 11.8981376,
+            "capacity_mbps": 11.9947008,
+            "queue_mean_ms": 97.12644603158635,
+            "queue_p95_ms": 102.0,
+            "queue_p99_ms": 102.0,
+            "dropped_packets": 2418.0,
+            "arrival_packets": 12460.0,
+            "drop_fraction": 0.1940609951845907,
+            "dropped_bytes": 3555784.0,
+            "arrival_bytes": 18580360.0,
+            "complete_window": true,
+            "last_log_s": 61.85,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 1.0000036279049915,
+            "departure_mbps": 11.99594752,
+            "capacity_mbps": 11.995904,
+            "queue_mean_ms": 98.89547688296058,
+            "queue_p95_ms": 102.0,
+            "queue_p99_ms": 102.0,
+            "dropped_packets": 13163.0,
+            "arrival_packets": 63017.0,
+            "drop_fraction": 0.20888014345335384,
+            "dropped_bytes": 19795168.0,
+            "arrival_bytes": 94768336.0,
+            "complete_window": true,
+            "last_log_s": 61.85,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0000037346080795,
+        "handoff_s": 0.13727490234375,
+        "post_handoff_drop_fraction": 0.20668019685091593,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2634,
+        "control_period_ms": {
+          "p50": 21.613,
+          "p95": 21.6724,
+          "p99": 75.04619999999998,
+          "max": 128.584
+        },
+        "wall_s": 63.75663716300005
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R200",
+            "nominal_mbps": 48,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 4000,
+            "queue_bytes": 6016000,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c19",
+          "host": 0,
+          "port": 12070,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9762767193135049,
+            "departure_mbps": 46.85625066666666,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 317.192510223056,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 244365.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 353283368.0,
+            "complete_window": true,
+            "last_log_s": 60.886,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.857653221255045,
+            "departure_mbps": 41.1594944,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 299.6486722178463,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 36966.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 53500512.0,
+            "complete_window": true,
+            "last_log_s": 60.886,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9999990399129521,
+            "departure_mbps": 47.99560192,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 320.1976099840987,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 207399.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 299782856.0,
+            "complete_window": true,
+            "last_log_s": 60.886,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9999959996373005,
+        "handoff_s": 4.595967041015625,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2574,
+        "control_period_ms": {
+          "p50": 21.632,
+          "p95": 21.678,
+          "p99": 21.713810000000002,
+          "max": 28.814
+        },
+        "wall_s": 65.024016966001
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant42",
+            "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+            "capacity_mbps": 41.99168,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G42-R200",
+            "nominal_mbps": 42,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 3500,
+            "queue_bytes": 5264000,
+            "queue_bdp": 5.01432664756447
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c14",
+          "host": 0,
+          "port": 12075,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9769321326628199,
+            "departure_mbps": 41.022237866666664,
+            "capacity_mbps": 41.990877866666665,
+            "queue_mean_ms": 389.0937592734775,
+            "queue_p95_ms": 422.0,
+            "queue_p99_ms": 423.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 213811.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 309861224.0,
+            "complete_window": true,
+            "last_log_s": 60.855,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.8615612836196552,
+            "departure_mbps": 36.1742592,
+            "capacity_mbps": 41.986867200000006,
+            "queue_mean_ms": 364.5858232880226,
+            "queue_p95_ms": 422.0,
+            "queue_p99_ms": 423.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 32659.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 47334880.0,
+            "complete_window": true,
+            "last_log_s": 60.855,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 1.0000036578674634,
+            "departure_mbps": 41.9918336,
+            "capacity_mbps": 41.99168,
+            "queue_mean_ms": 393.3147531569735,
+            "queue_p95_ms": 422.0,
+            "queue_p99_ms": 423.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 181152.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 262526344.0,
+            "complete_window": true,
+            "last_log_s": 60.855,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.000015088703286,
+        "handoff_s": 4.590330078125,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2574,
+        "control_period_ms": {
+          "p50": 21.632,
+          "p95": 21.679,
+          "p99": 21.71227,
+          "max": 24.733
+        },
+        "wall_s": 64.73918282199884
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant42",
+            "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+            "capacity_mbps": 41.99168,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G42-R20",
+            "nominal_mbps": 42,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 350,
+            "queue_bytes": 526400,
+            "queue_bdp": 5.01432664756447
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c15",
+          "host": 0,
+          "port": 12080,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9919446123257044,
+            "departure_mbps": 41.65262506666667,
+            "capacity_mbps": 41.990877866666665,
+            "queue_mean_ms": 81.23877322244685,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 72394.0,
+            "arrival_packets": 281472.0,
+            "drop_fraction": 0.2571978740336517,
+            "dropped_bytes": 108135752.0,
+            "arrival_bytes": 421031320.0,
+            "complete_window": true,
+            "last_log_s": 60.785,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9576594464280488,
+            "departure_mbps": 40.20912,
+            "capacity_mbps": 41.986867200000006,
+            "queue_mean_ms": 79.03207187909081,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 12722.0,
+            "arrival_packets": 46685.0,
+            "drop_fraction": 0.27250722930277393,
+            "dropped_bytes": 18984016.0,
+            "arrival_bytes": 69769232.0,
+            "complete_window": true,
+            "last_log_s": 60.785,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9988008595988539,
+            "departure_mbps": 41.941326079999996,
+            "capacity_mbps": 41.99168,
+            "queue_mean_ms": 81.66229657968367,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 59672.0,
+            "arrival_packets": 234787.0,
+            "drop_fraction": 0.25415376490180464,
+            "dropped_bytes": 89151736.0,
+            "arrival_bytes": 351262088.0,
+            "complete_window": true,
+            "last_log_s": 60.785,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0000024385783088,
+        "handoff_s": 0.158677978515625,
+        "post_handoff_drop_fraction": 0.257371605719527,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2725,
+        "control_period_ms": {
+          "p50": 21.648,
+          "p95": 21.701,
+          "p99": 21.83104,
+          "max": 219.058
+        },
+        "wall_s": 64.5989062030003
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant72",
+            "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+            "capacity_mbps": 71.999488,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G72-R50",
+            "nominal_mbps": 72,
+            "delay_ms": 25,
+            "base_rtt_ms": 50,
+            "queue_packets": 1500,
+            "queue_bytes": 2256000,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c22",
+          "host": 0,
+          "port": 12085,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9278302214962395,
+            "departure_mbps": 66.80218453333333,
+            "capacity_mbps": 71.9982848,
+            "queue_mean_ms": 167.8075469429126,
+            "queue_p95_ms": 237.0,
+            "queue_p99_ms": 238.0,
+            "dropped_packets": 39078.0,
+            "arrival_packets": 388724.0,
+            "drop_fraction": 0.10052890997211389,
+            "dropped_bytes": 55585824.0,
+            "arrival_bytes": 557158840.0,
+            "complete_window": true,
+            "last_log_s": 60.169,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9050686509271395,
+            "departure_mbps": 65.1579456,
+            "capacity_mbps": 71.99226879999999,
+            "queue_mean_ms": 166.39177405119153,
+            "queue_p95_ms": 237.0,
+            "queue_p99_ms": 243.0,
+            "dropped_packets": 6166.0,
+            "arrival_packets": 62816.0,
+            "drop_fraction": 0.09815970453387672,
+            "dropped_bytes": 8774888.0,
+            "arrival_bytes": 90222320.0,
+            "complete_window": true,
+            "last_log_s": 60.169,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9323820791614518,
+            "departure_mbps": 67.13103231999999,
+            "capacity_mbps": 71.999488,
+            "queue_mean_ms": 168.0816496015092,
+            "queue_p95_ms": 237.0,
+            "queue_p99_ms": 238.0,
+            "dropped_packets": 32912.0,
+            "arrival_packets": 325908.0,
+            "drop_fraction": 0.1009855542054813,
+            "dropped_bytes": 46810936.0,
+            "arrival_bytes": 466936520.0,
+            "complete_window": true,
+            "last_log_s": 60.169,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9356034531801115,
+        "handoff_s": 0.408534912109375,
+        "post_handoff_drop_fraction": 0.10066305003013863,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2752,
+        "control_period_ms": {
+          "p50": 21.681,
+          "p95": 21.734,
+          "p99": 21.76496,
+          "max": 26.492
+        },
+        "wall_s": 65.62952824799868
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant24",
+            "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+            "capacity_mbps": 23.991808,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G24-R20",
+            "nominal_mbps": 24,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 200,
+            "queue_bytes": 300800,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c05",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 0,
+          "port": 12090
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9985551048855537,
+            "departure_mbps": 23.95674186666667,
+            "capacity_mbps": 23.991406933333334,
+            "queue_mean_ms": 8.358030064615487,
+            "queue_p95_ms": 10.0,
+            "queue_p99_ms": 11.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 119489.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 179695116.0,
+            "complete_window": true,
+            "last_log_s": 60.442,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9913247023218786,
+            "departure_mbps": 23.7812864,
+            "capacity_mbps": 23.9894016,
+            "queue_mean_ms": 8.347241187477874,
+            "queue_p95_ms": 10.0,
+            "queue_p99_ms": 13.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 19787.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 29747664.0,
+            "complete_window": true,
+            "last_log_s": 60.442,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 1.0000010403551078,
+            "departure_mbps": 23.99183296,
+            "capacity_mbps": 23.991808,
+            "queue_mean_ms": 8.360169704020942,
+            "queue_p95_ms": 10.0,
+            "queue_p99_ms": 11.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 99702.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 149947452.0,
+            "complete_window": true,
+            "last_log_s": 60.442,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0000017339251799,
+        "handoff_s": 0.159013916015625,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2772,
+        "control_period_ms": {
+          "p50": 21.586,
+          "p95": 21.62845,
+          "p99": 21.66358,
+          "max": 24.855
+        },
+        "wall_s": 63.61821933899955
       }
-    ]
+    ],
+    "remote_files": {
+      "final-progress.json": {
+        "mtime": 1794459177,
+        "bytes": 49103
+      }
+    }
   },
   {
     "node": 1,
-    "finished": false,
+    "finished": true,
     "rows": [
       {
         "job": {
@@ -1826,12 +2842,1032 @@
           "max": 22.77
         },
         "wall_s": 64.7157583549997
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant12",
+            "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+            "capacity_mbps": 11.995904,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G12-R200",
+            "nominal_mbps": 12,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 1000,
+            "queue_bytes": 1504000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c03",
+          "host": 1,
+          "port": 12046,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9710740876822386,
+            "departure_mbps": 11.6487168,
+            "capacity_mbps": 11.995703466666667,
+            "queue_mean_ms": 726.7502219690751,
+            "queue_p95_ms": 988.3999999999942,
+            "queue_p99_ms": 998.0,
+            "dropped_packets": 13329.0,
+            "arrival_packets": 73870.0,
+            "drop_fraction": 0.18043860836604847,
+            "dropped_bytes": 19030416.0,
+            "arrival_bytes": 107663888.0,
+            "complete_window": true,
+            "last_log_s": 61.291,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.8946206644854368,
+            "departure_mbps": 10.7307072,
+            "capacity_mbps": 11.9947008,
+            "queue_mean_ms": 658.3054402447018,
+            "queue_p95_ms": 980.0,
+            "queue_p99_ms": 984.0,
+            "dropped_packets": 2113.0,
+            "arrival_packets": 11956.0,
+            "drop_fraction": 0.17673134827701573,
+            "dropped_bytes": 3035472.0,
+            "arrival_bytes": 17477968.0,
+            "complete_window": true,
+            "last_log_s": 61.291,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9863632386521266,
+            "departure_mbps": 11.83231872,
+            "capacity_mbps": 11.995904,
+            "queue_mean_ms": 739.1474504837848,
+            "queue_p95_ms": 991.0,
+            "queue_p99_ms": 999.0,
+            "dropped_packets": 11216.0,
+            "arrival_packets": 61914.0,
+            "drop_fraction": 0.1811545046354621,
+            "dropped_bytes": 15994944.0,
+            "arrival_bytes": 90185920.0,
+            "complete_window": true,
+            "last_log_s": 61.291,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9929688000170724,
+        "handoff_s": 5.168634033203125,
+        "post_handoff_drop_fraction": 0.18063831042416376,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2525,
+        "control_period_ms": {
+          "p50": 21.621,
+          "p95": 21.677,
+          "p99": 21.71352,
+          "max": 295.241
+        },
+        "wall_s": 64.01819819100092
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant24",
+            "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+            "capacity_mbps": 23.991808,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G24-R200",
+            "nominal_mbps": 24,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 2000,
+            "queue_bytes": 3008000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c04",
+          "host": 1,
+          "port": 12051,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9798983138140482,
+            "departure_mbps": 23.5091392,
+            "capacity_mbps": 23.991406933333334,
+            "queue_mean_ms": 814.69010079077,
+            "queue_p95_ms": 891.0,
+            "queue_p99_ms": 891.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 125296.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 178989168.0,
+            "complete_window": true,
+            "last_log_s": 61.469,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.8793680622696316,
+            "departure_mbps": 21.0955136,
+            "capacity_mbps": 23.9894016,
+            "queue_mean_ms": 729.016084182978,
+            "queue_p95_ms": 890.0,
+            "queue_p99_ms": 891.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 20177.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 29001912.0,
+            "complete_window": true,
+            "last_log_s": 61.469,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 1.0000023474679358,
+            "departure_mbps": 23.99186432,
+            "capacity_mbps": 23.991808,
+            "queue_mean_ms": 829.6434913354205,
+            "queue_p95_ms": 891.0,
+            "queue_p99_ms": 891.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 105119.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 149987256.0,
+            "complete_window": true,
+            "last_log_s": 61.469,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0000189397981178,
+        "handoff_s": 4.5907509765625,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2575,
+        "control_period_ms": {
+          "p50": 21.629,
+          "p95": 21.676299999999998,
+          "p99": 21.71326,
+          "max": 21.811
+        },
+        "wall_s": 64.28845099499995
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R20",
+            "nominal_mbps": 48,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 400,
+            "queue_bytes": 601600,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c16",
+          "host": 1,
+          "port": 12056,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9959950588472077,
+            "departure_mbps": 47.802629333333336,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 80.44821098563699,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 80829.0,
+            "arrival_packets": 320923.0,
+            "drop_fraction": 0.2518641543298548,
+            "dropped_bytes": 120555136.0,
+            "arrival_bytes": 479613656.0,
+            "complete_window": true,
+            "last_log_s": 60.965,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.988957624975862,
+            "departure_mbps": 47.4609024,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 79.28593021791157,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 13622.0,
+            "arrival_packets": 53508.0,
+            "drop_fraction": 0.25457875457875456,
+            "dropped_bytes": 20306888.0,
+            "arrival_bytes": 79920280.0,
+            "complete_window": true,
+            "last_log_s": 60.965,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9974024044846733,
+            "departure_mbps": 47.87097472,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 80.67887390134888,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 67207.0,
+            "arrival_packets": 267415.0,
+            "drop_fraction": 0.2513209804984762,
+            "dropped_bytes": 100248248.0,
+            "arrival_bytes": 399693376.0,
+            "complete_window": true,
+            "last_log_s": 60.965,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9981857021703301,
+        "handoff_s": 0.15635107421875,
+        "post_handoff_drop_fraction": 0.2520204287798855,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2766,
+        "control_period_ms": {
+          "p50": 21.645,
+          "p95": 21.695,
+          "p99": 21.728,
+          "max": 21.973
+        },
+        "wall_s": 64.92257258899917
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R100",
+            "nominal_mbps": 48,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 2000,
+            "queue_bytes": 3008000,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c18",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 1,
+          "port": 12061
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9835891378380897,
+            "departure_mbps": 47.20720906666667,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 13.198696957727575,
+            "queue_p95_ms": 24.0,
+            "queue_p99_ms": 34.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 235526.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 354169876.0,
+            "complete_window": true,
+            "last_log_s": 60.684,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9194751584569214,
+            "departure_mbps": 44.1263808,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 18.235100239703637,
+            "queue_p95_ms": 33.0,
+            "queue_p99_ms": 188.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 36759.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 55228664.0,
+            "complete_window": true,
+            "last_log_s": 60.684,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9964106478987428,
+            "departure_mbps": 47.82337472,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 12.268339564348864,
+            "queue_p95_ms": 23.0,
+            "queue_p99_ms": 29.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 198767.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 298941212.0,
+            "complete_window": true,
+            "last_log_s": 60.684,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9964160083847602,
+        "handoff_s": 0.9957919921875,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2737,
+        "control_period_ms": {
+          "p50": 21.61,
+          "p95": 21.656999999999996,
+          "p99": 21.676,
+          "max": 22.765
+        },
+        "wall_s": 64.70030423300159
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R50",
+            "nominal_mbps": 48,
+            "delay_ms": 25,
+            "base_rtt_ms": 50,
+            "queue_packets": 1000,
+            "queue_bytes": 1504000,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c17",
+          "host": 1,
+          "port": 12066,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9944877858884759,
+            "departure_mbps": 47.730288,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 162.35407566342124,
+            "queue_p95_ms": 248.0,
+            "queue_p99_ms": 250.0,
+            "dropped_packets": 69806.0,
+            "arrival_packets": 317583.0,
+            "drop_fraction": 0.21980395676090975,
+            "dropped_bytes": 99388480.0,
+            "arrival_bytes": 458494672.0,
+            "complete_window": true,
+            "last_log_s": 60.436,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9669940980731254,
+            "departure_mbps": 46.4068544,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 164.2345334940243,
+            "queue_p95_ms": 248.0,
+            "queue_p99_ms": 250.0,
+            "dropped_packets": 11235.0,
+            "arrival_packets": 51455.0,
+            "drop_fraction": 0.2183461276843844,
+            "dropped_bytes": 16092616.0,
+            "arrival_bytes": 74667336.0,
+            "complete_window": true,
+            "last_log_s": 60.436,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9999859720614669,
+            "departure_mbps": 47.99497472,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 161.992591234006,
+            "queue_p95_ms": 248.0,
+            "queue_p99_ms": 250.0,
+            "dropped_packets": 58571.0,
+            "arrival_packets": 266128.0,
+            "drop_fraction": 0.22008582336319366,
+            "dropped_bytes": 83295864.0,
+            "arrival_bytes": 383827336.0,
+            "complete_window": true,
+            "last_log_s": 60.436,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0000078673799757,
+        "handoff_s": 0.404554931640625,
+        "post_handoff_drop_fraction": 0.22016652999432285,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2756,
+        "control_period_ms": {
+          "p50": 21.646,
+          "p95": 21.696,
+          "p99": 21.727,
+          "max": 22.307
+        },
+        "wall_s": 65.11344781200023
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant42",
+            "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+            "capacity_mbps": 41.99168,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G42-R20",
+            "nominal_mbps": 42,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 350,
+            "queue_bytes": 526400,
+            "queue_bdp": 5.01432664756447
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c15",
+          "host": 1,
+          "port": 12071,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9944776323228349,
+            "departure_mbps": 41.7589888,
+            "capacity_mbps": 41.990877866666665,
+            "queue_mean_ms": 81.57487250811312,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 69882.0,
+            "arrival_packets": 279453.0,
+            "drop_fraction": 0.2500670953612951,
+            "dropped_bytes": 104339560.0,
+            "arrival_bytes": 418037864.0,
+            "complete_window": true,
+            "last_log_s": 60.613,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9717900362902046,
+            "departure_mbps": 40.8024192,
+            "capacity_mbps": 41.986867200000006,
+            "queue_mean_ms": 77.62651910996301,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 12860.0,
+            "arrival_packets": 47127.0,
+            "drop_fraction": 0.27287966558448445,
+            "dropped_bytes": 19236968.0,
+            "arrival_bytes": 70542296.0,
+            "complete_window": true,
+            "last_log_s": 60.613,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.999014631469853,
+            "departure_mbps": 41.950302719999996,
+            "capacity_mbps": 41.99168,
+            "queue_mean_ms": 82.34275503388272,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 57022.0,
+            "arrival_packets": 232326.0,
+            "drop_fraction": 0.2454395978065305,
+            "dropped_bytes": 85102592.0,
+            "arrival_bytes": 347495568.0,
+            "complete_window": true,
+            "last_log_s": 60.613,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0,
+        "handoff_s": 0.159118896484375,
+        "post_handoff_drop_fraction": 0.2502435041682184,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2742,
+        "control_period_ms": {
+          "p50": 21.644,
+          "p95": 21.69395,
+          "p99": 21.77177,
+          "max": 103.939
+        },
+        "wall_s": 65.01541266900131
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R100",
+            "nominal_mbps": 48,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 2000,
+            "queue_bytes": 3008000,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c18",
+          "host": 1,
+          "port": 12076,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9893883494334325,
+            "departure_mbps": 47.48554133333334,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 416.35610242847815,
+            "queue_p95_ms": 444.0,
+            "queue_p99_ms": 445.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 247962.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 358207600.0,
+            "complete_window": true,
+            "last_log_s": 60.631,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9363405119484147,
+            "departure_mbps": 44.935763200000004,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 395.5152915064392,
+            "queue_p95_ms": 444.0,
+            "queue_p99_ms": 445.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 40505.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 58713640.0,
+            "complete_window": true,
+            "last_log_s": 60.631,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9999968530480097,
+            "departure_mbps": 47.995496960000004,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 420.24240324179686,
+            "queue_p95_ms": 444.0,
+            "queue_p99_ms": 445.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 207457.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 299493960.0,
+            "complete_window": true,
+            "last_log_s": 60.631,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9999834651675085,
+        "handoff_s": 3.917718994140625,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2599,
+        "control_period_ms": {
+          "p50": 21.632,
+          "p95": 21.676,
+          "p99": 21.70204,
+          "max": 21.809
+        },
+        "wall_s": 64.7237568519995
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant24",
+            "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+            "capacity_mbps": 23.991808,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G24-R20",
+            "nominal_mbps": 24,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 200,
+            "queue_bytes": 300800,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c05",
+          "host": 1,
+          "port": 12081,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9979893912238088,
+            "departure_mbps": 23.9431696,
+            "capacity_mbps": 23.991406933333334,
+            "queue_mean_ms": 95.74112099525115,
+            "queue_p95_ms": 101.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 63564.0,
+            "arrival_packets": 183369.0,
+            "drop_fraction": 0.34664528900741126,
+            "dropped_bytes": 95363176.0,
+            "arrival_bytes": 275233236.0,
+            "complete_window": true,
+            "last_log_s": 61.285,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9915832164817316,
+            "departure_mbps": 23.787488,
+            "capacity_mbps": 23.9894016,
+            "queue_mean_ms": 93.8214357835218,
+            "queue_p95_ms": 101.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 6451.0,
+            "arrival_packets": 26442.0,
+            "drop_fraction": 0.24396792980863777,
+            "dropped_bytes": 9654744.0,
+            "arrival_bytes": 39664336.0,
+            "complete_window": true,
+            "last_log_s": 61.285,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9992704976632024,
+            "departure_mbps": 23.974305920000003,
+            "capacity_mbps": 23.991808,
+            "queue_mean_ms": 96.12213426853707,
+            "queue_p95_ms": 101.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 57113.0,
+            "arrival_packets": 156927.0,
+            "drop_fraction": 0.36394629349952523,
+            "dropped_bytes": 85708432.0,
+            "arrival_bytes": 235568900.0,
+            "complete_window": true,
+            "last_log_s": 61.285,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9977166872959303,
+        "handoff_s": 0.17856591796875,
+        "post_handoff_drop_fraction": 0.34715076842415704,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2536,
+        "control_period_ms": {
+          "p50": 21.645,
+          "p95": 21.725250000000003,
+          "p99": 84.03205000000035,
+          "max": 200.558
+        },
+        "wall_s": 64.24376422600108
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant72",
+            "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+            "capacity_mbps": 71.999488,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G72-R20",
+            "nominal_mbps": 72,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 600,
+            "queue_bytes": 902400,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c21",
+          "host": 1,
+          "port": 12086,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9925911790609767,
+            "departure_mbps": 71.4648624,
+            "capacity_mbps": 71.9982848,
+            "queue_mean_ms": 78.04460624735965,
+            "queue_p95_ms": 99.0,
+            "queue_p99_ms": 100.0,
+            "dropped_packets": 124718.0,
+            "arrival_packets": 487190.0,
+            "drop_fraction": 0.25599458116956425,
+            "dropped_bytes": 182395516.0,
+            "arrival_bytes": 718837696.0,
+            "complete_window": true,
+            "last_log_s": 60.243,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.983353056932691,
+            "departure_mbps": 70.7938176,
+            "capacity_mbps": 71.99226879999999,
+            "queue_mean_ms": 78.17789545781059,
+            "queue_p95_ms": 99.0,
+            "queue_p99_ms": 100.0,
+            "dropped_packets": 22173.0,
+            "arrival_packets": 82248.0,
+            "drop_fraction": 0.2695871024219434,
+            "dropped_bytes": 32329720.0,
+            "arrival_bytes": 121142400.0,
+            "complete_window": true,
+            "last_log_s": 60.243,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9944386182301741,
+            "departure_mbps": 71.59907136,
+            "capacity_mbps": 71.999488,
+            "queue_mean_ms": 78.01821321301455,
+            "queue_p95_ms": 99.0,
+            "queue_p99_ms": 100.0,
+            "dropped_packets": 102545.0,
+            "arrival_packets": 404942.0,
+            "drop_fraction": 0.253233796444923,
+            "dropped_bytes": 150065796.0,
+            "arrival_bytes": 597695296.0,
+            "complete_window": true,
+            "last_log_s": 60.243,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9930859063886677,
+        "handoff_s": 0.1812470703125,
+        "post_handoff_drop_fraction": 0.25619388222534,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2762,
+        "control_period_ms": {
+          "p50": 21.657,
+          "p95": 21.708,
+          "p99": 21.740389999999998,
+          "max": 27.808
+        },
+        "wall_s": 65.99009181099973
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant24",
+            "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+            "capacity_mbps": 23.991808,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G24-R100",
+            "nominal_mbps": 24,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 1000,
+            "queue_bytes": 1504000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c07",
+          "host": 1,
+          "port": 12091,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.988168563820006,
+            "departure_mbps": 23.707554133333332,
+            "capacity_mbps": 23.991406933333334,
+            "queue_mean_ms": 358.65600297054215,
+            "queue_p95_ms": 497.0,
+            "queue_p99_ms": 501.0,
+            "dropped_packets": 21848.0,
+            "arrival_packets": 143688.0,
+            "drop_fraction": 0.15205166750180948,
+            "dropped_bytes": 30974112.0,
+            "arrival_bytes": 209707880.0,
+            "complete_window": true,
+            "last_log_s": 61.646,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9407180877742277,
+            "departure_mbps": 22.567264,
+            "capacity_mbps": 23.9894016,
+            "queue_mean_ms": 355.60422314911364,
+            "queue_p95_ms": 493.0,
+            "queue_p99_ms": 499.0,
+            "dropped_packets": 3565.0,
+            "arrival_packets": 23575.0,
+            "drop_fraction": 0.15121951219512195,
+            "dropped_bytes": 5099952.0,
+            "arrival_bytes": 34483600.0,
+            "complete_window": true,
+            "last_log_s": 61.646,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9976577071640453,
+            "departure_mbps": 23.93561216,
+            "capacity_mbps": 23.991808,
+            "queue_mean_ms": 359.22980099990195,
+            "queue_p95_ms": 497.0,
+            "queue_p99_ms": 501.0,
+            "dropped_packets": 18283.0,
+            "arrival_packets": 120113.0,
+            "drop_fraction": 0.1522149975439794,
+            "dropped_bytes": 25874160.0,
+            "arrival_bytes": 175224280.0,
+            "complete_window": true,
+            "last_log_s": 61.646,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9960855972171835,
+        "handoff_s": 0.851280029296875,
+        "post_handoff_drop_fraction": 0.1530657997982289,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2741,
+        "control_period_ms": {
+          "p50": 21.638,
+          "p95": 21.687,
+          "p99": 21.711,
+          "max": 21.829
+        },
+        "wall_s": 63.83736518300066
       }
-    ]
+    ],
+    "remote_files": {
+      "final-result.json": {
+        "mtime": 1794459172,
+        "bytes": 48954
+      },
+      "final-progress.json": {
+        "mtime": 1794459172,
+        "bytes": 48954
+      }
+    }
   },
   {
     "node": 2,
-    "finished": false,
+    "finished": true,
     "rows": [
       {
         "job": {
@@ -2741,12 +4777,1032 @@
           "max": 56.609
         },
         "wall_s": 64.94354498100074
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant36",
+            "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+            "capacity_mbps": 35.999744,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G36-R50",
+            "nominal_mbps": 36,
+            "delay_ms": 25,
+            "base_rtt_ms": 50,
+            "queue_packets": 750,
+            "queue_bytes": 1128000,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c11",
+          "host": 2,
+          "port": 12047,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9838091105933309,
+            "departure_mbps": 35.416284266666665,
+            "capacity_mbps": 35.9991424,
+            "queue_mean_ms": 183.40542787773973,
+            "queue_p95_ms": 250.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 67685.0,
+            "arrival_packets": 248520.0,
+            "drop_fraction": 0.27235232576854984,
+            "dropped_bytes": 97866304.0,
+            "arrival_bytes": 364102468.0,
+            "complete_window": true,
+            "last_log_s": 61.836,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9521769093072394,
+            "departure_mbps": 34.274688,
+            "capacity_mbps": 35.996134399999995,
+            "queue_mean_ms": 180.13586937761056,
+            "queue_p95_ms": 250.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 10795.0,
+            "arrival_packets": 40280.0,
+            "drop_fraction": 0.2679990069513406,
+            "dropped_bytes": 15735464.0,
+            "arrival_bytes": 59346648.0,
+            "complete_window": true,
+            "last_log_s": 61.836,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9901349165149619,
+            "departure_mbps": 35.644603520000004,
+            "capacity_mbps": 35.999744,
+            "queue_mean_ms": 184.0308915493981,
+            "queue_p95_ms": 251.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 56890.0,
+            "arrival_packets": 208240.0,
+            "drop_fraction": 0.27319439108720706,
+            "dropped_bytes": 82130840.0,
+            "arrival_bytes": 304755820.0,
+            "complete_window": true,
+            "last_log_s": 61.836,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9913292716748208,
+        "handoff_s": 0.41052099609375,
+        "post_handoff_drop_fraction": 0.2729476001903395,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2747,
+        "control_period_ms": {
+          "p50": 21.637,
+          "p95": 21.694,
+          "p99": 21.742,
+          "max": 48.331
+        },
+        "wall_s": 64.5080069859996
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant12",
+            "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+            "capacity_mbps": 11.995904,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G12-R200",
+            "nominal_mbps": 12,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 1000,
+            "queue_bytes": 1504000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c03",
+          "host": 2,
+          "port": 12052,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9684908516578202,
+            "departure_mbps": 11.617729066666666,
+            "capacity_mbps": 11.995703466666667,
+            "queue_mean_ms": 731.6835902085222,
+            "queue_p95_ms": 990.0,
+            "queue_p99_ms": 996.0,
+            "dropped_packets": 14187.0,
+            "arrival_packets": 74459.0,
+            "drop_fraction": 0.19053438805248527,
+            "dropped_bytes": 20235448.0,
+            "arrival_bytes": 108412472.0,
+            "complete_window": true,
+            "last_log_s": 61.813,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.8944077704714402,
+            "departure_mbps": 10.728153599999999,
+            "capacity_mbps": 11.9947008,
+            "queue_mean_ms": 657.8368662587412,
+            "queue_p95_ms": 980.0,
+            "queue_p99_ms": 982.0,
+            "dropped_packets": 2021.0,
+            "arrival_packets": 11901.0,
+            "drop_fraction": 0.1698176623813125,
+            "dropped_bytes": 2893280.0,
+            "arrival_bytes": 17393360.0,
+            "complete_window": true,
+            "last_log_s": 61.813,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9833059817751125,
+            "departure_mbps": 11.79564416,
+            "capacity_mbps": 11.995904,
+            "queue_mean_ms": 745.0905574290815,
+            "queue_p95_ms": 992.0,
+            "queue_p99_ms": 997.0,
+            "dropped_packets": 12166.0,
+            "arrival_packets": 62558.0,
+            "drop_fraction": 0.194475526711212,
+            "dropped_bytes": 17342168.0,
+            "arrival_bytes": 91019112.0,
+            "complete_window": true,
+            "last_log_s": 61.813,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9684345589961374,
+        "handoff_s": 5.184132080078125,
+        "post_handoff_drop_fraction": 0.19170006728884467,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2514,
+        "control_period_ms": {
+          "p50": 21.617,
+          "p95": 21.682,
+          "p99": 21.72487,
+          "max": 229.382
+        },
+        "wall_s": 64.37213001399869
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant36",
+            "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+            "capacity_mbps": 35.999744,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G36-R100",
+            "nominal_mbps": 36,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 1500,
+            "queue_bytes": 2256000,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c08",
+          "host": 2,
+          "port": 12057,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9194925710230253,
+            "departure_mbps": 33.100944,
+            "capacity_mbps": 35.9991424,
+            "queue_mean_ms": 352.61142622324604,
+            "queue_p95_ms": 475.0,
+            "queue_p99_ms": 480.0,
+            "dropped_packets": 19612.0,
+            "arrival_packets": 192717.0,
+            "drop_fraction": 0.1017658016677304,
+            "dropped_bytes": 29143312.0,
+            "arrival_bytes": 277891336.0,
+            "complete_window": true,
+            "last_log_s": 60.214,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.8827625224112954,
+            "departure_mbps": 31.776038399999997,
+            "capacity_mbps": 35.996134399999995,
+            "queue_mean_ms": 339.00396262769476,
+            "queue_p95_ms": 481.0,
+            "queue_p99_ms": 490.0,
+            "dropped_packets": 3184.0,
+            "arrival_packets": 32100.0,
+            "drop_fraction": 0.09919003115264798,
+            "dropped_bytes": 4687352.0,
+            "arrival_bytes": 46424408.0,
+            "complete_window": true,
+            "last_log_s": 60.214,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9268378441802253,
+            "departure_mbps": 33.36592512,
+            "capacity_mbps": 35.999744,
+            "queue_mean_ms": 355.18799347426534,
+            "queue_p95_ms": 475.0,
+            "queue_p99_ms": 476.0,
+            "dropped_packets": 16428.0,
+            "arrival_packets": 160617.0,
+            "drop_fraction": 0.1022805805114029,
+            "dropped_bytes": 24455960.0,
+            "arrival_bytes": 231466928.0,
+            "complete_window": true,
+            "last_log_s": 60.214,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.928804293719422,
+        "handoff_s": 2.4951279296875,
+        "post_handoff_drop_fraction": 0.10341293430357693,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2518,
+        "control_period_ms": {
+          "p50": 21.64,
+          "p95": 21.701,
+          "p99": 99.74293999999999,
+          "max": 101.912
+        },
+        "wall_s": 64.25822310299918
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R100",
+            "nominal_mbps": 48,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 2000,
+            "queue_bytes": 3008000,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c18",
+          "host": 2,
+          "port": 12062,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9893850601913521,
+            "departure_mbps": 47.48538346666667,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 416.34345434989956,
+            "queue_p95_ms": 444.0,
+            "queue_p99_ms": 445.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 248217.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 358803592.0,
+            "complete_window": true,
+            "last_log_s": 60.776,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9362981038512953,
+            "departure_mbps": 44.933728,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 395.88424279899004,
+            "queue_p95_ms": 444.0,
+            "queue_p99_ms": 445.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 40564.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 58708336.0,
+            "complete_window": true,
+            "last_log_s": 60.776,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 1.0000013867924025,
+            "departure_mbps": 47.99571456,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 420.16915176012066,
+            "queue_p95_ms": 444.0,
+            "queue_p99_ms": 445.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 207653.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 300095256.0,
+            "complete_window": true,
+            "last_log_s": 60.776,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9999943994922206,
+        "handoff_s": 0.973449951171875,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2736,
+        "control_period_ms": {
+          "p50": 21.627,
+          "p95": 21.67,
+          "p99": 21.6963,
+          "max": 22.577
+        },
+        "wall_s": 64.90562479399887
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant42",
+            "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+            "capacity_mbps": 41.99168,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G42-R100",
+            "nominal_mbps": 42,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 1750,
+            "queue_bytes": 2632000,
+            "queue_bdp": 5.01432664756447
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c13",
+          "host": 2,
+          "port": 12067,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9103124315406866,
+            "departure_mbps": 38.224818133333336,
+            "capacity_mbps": 41.990877866666665,
+            "queue_mean_ms": 320.4031597573306,
+            "queue_p95_ms": 480.0,
+            "queue_p99_ms": 492.0,
+            "dropped_packets": 6713.0,
+            "arrival_packets": 206254.0,
+            "drop_fraction": 0.03254724756853201,
+            "dropped_bytes": 9946784.0,
+            "arrival_bytes": 299150948.0,
+            "complete_window": true,
+            "last_log_s": 60.754,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.859297718692382,
+            "departure_mbps": 36.079219200000004,
+            "capacity_mbps": 41.986867200000006,
+            "queue_mean_ms": 322.33781982509186,
+            "queue_p95_ms": 488.0,
+            "queue_p99_ms": 496.0,
+            "dropped_packets": 1062.0,
+            "arrival_packets": 31857.0,
+            "drop_fraction": 0.0333364723608626,
+            "dropped_bytes": 1558728.0,
+            "arrival_bytes": 46711896.0,
+            "complete_window": true,
+            "last_log_s": 60.754,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.920514204718649,
+            "departure_mbps": 38.653937920000004,
+            "capacity_mbps": 41.99168,
+            "queue_mean_ms": 320.04691063870547,
+            "queue_p95_ms": 479.0,
+            "queue_p99_ms": 491.0,
+            "dropped_packets": 5651.0,
+            "arrival_packets": 174397.0,
+            "drop_fraction": 0.032403080328216656,
+            "dropped_bytes": 8388056.0,
+            "arrival_bytes": 252439052.0,
+            "complete_window": true,
+            "last_log_s": 60.754,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9286475035054563,
+        "handoff_s": 2.418466064453125,
+        "post_handoff_drop_fraction": 0.032892365005608076,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2536,
+        "control_period_ms": {
+          "p50": 21.65,
+          "p95": 21.704,
+          "p99": 89.55065,
+          "max": 99.781
+        },
+        "wall_s": 64.3793205539987
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R20",
+            "nominal_mbps": 48,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 400,
+            "queue_bytes": 601600,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c16",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 2,
+          "port": 12072
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.992454545341402,
+            "departure_mbps": 47.63270293333333,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 5.520026100867223,
+            "queue_p95_ms": 8.0,
+            "queue_p99_ms": 10.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 237579.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 357303928.0,
+            "complete_window": true,
+            "last_log_s": 60.285,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9798182799702556,
+            "departure_mbps": 47.0222976,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 5.635293816674768,
+            "queue_p95_ms": 8.0,
+            "queue_p99_ms": 10.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 39114.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 58815472.0,
+            "complete_window": true,
+            "last_log_s": 60.285,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9949815449934127,
+            "departure_mbps": 47.754784,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 5.497321757008027,
+            "queue_p95_ms": 8.0,
+            "queue_p99_ms": 10.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 198465.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 298488456.0,
+            "complete_window": true,
+            "last_log_s": 60.285,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9853597392830283,
+        "handoff_s": 0.1595458984375,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2771,
+        "control_period_ms": {
+          "p50": 21.599,
+          "p95": 21.662,
+          "p99": 21.6973,
+          "max": 22.717
+        },
+        "wall_s": 64.49532933000046
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant12",
+            "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+            "capacity_mbps": 11.995904,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G12-R200",
+            "nominal_mbps": 12,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 1000,
+            "queue_bytes": 1504000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c03",
+          "host": 2,
+          "port": 12077,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9704265224917864,
+            "departure_mbps": 11.6409488,
+            "capacity_mbps": 11.995703466666667,
+            "queue_mean_ms": 723.2197063654343,
+            "queue_p95_ms": 990.0,
+            "queue_p99_ms": 1000.0,
+            "dropped_packets": 14311.0,
+            "arrival_packets": 74856.0,
+            "drop_fraction": 0.19118039970075879,
+            "dropped_bytes": 20455512.0,
+            "arrival_bytes": 109075444.0,
+            "complete_window": true,
+            "last_log_s": 61.388,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.895022975479305,
+            "departure_mbps": 10.735532800000001,
+            "capacity_mbps": 11.9947008,
+            "queue_mean_ms": 653.6153846153846,
+            "queue_p95_ms": 979.0,
+            "queue_p99_ms": 982.0,
+            "dropped_packets": 2523.0,
+            "arrival_packets": 12383.0,
+            "drop_fraction": 0.20374707259953162,
+            "dropped_bytes": 3643736.0,
+            "arrival_bytes": 18105384.0,
+            "complete_window": true,
+            "last_log_s": 61.388,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9855057192855161,
+            "departure_mbps": 11.822032,
+            "capacity_mbps": 11.995904,
+            "queue_mean_ms": 735.8516068988733,
+            "queue_p95_ms": 992.0,
+            "queue_p99_ms": 1001.0,
+            "dropped_packets": 11788.0,
+            "arrival_packets": 62473.0,
+            "drop_fraction": 0.18868951386999183,
+            "dropped_bytes": 16811776.0,
+            "arrival_bytes": 90970060.0,
+            "complete_window": true,
+            "last_log_s": 61.388,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9875560191211934,
+        "handoff_s": 5.14716796875,
+        "post_handoff_drop_fraction": 0.1925002182707139,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2514,
+        "control_period_ms": {
+          "p50": 21.616,
+          "p95": 21.67,
+          "p99": 21.73552,
+          "max": 258.59
+        },
+        "wall_s": 64.1205331960009
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant72",
+            "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+            "capacity_mbps": 71.999488,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G72-R20",
+            "nominal_mbps": 72,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 600,
+            "queue_bytes": 902400,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c21",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 2,
+          "port": 12082
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9925302368684575,
+            "departure_mbps": 71.46047466666667,
+            "capacity_mbps": 71.9982848,
+            "queue_mean_ms": 5.693962880441798,
+            "queue_p95_ms": 8.0,
+            "queue_p99_ms": 10.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 356389.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 535994168.0,
+            "complete_window": true,
+            "last_log_s": 60.199,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9792765303154329,
+            "departure_mbps": 70.5003392,
+            "capacity_mbps": 71.99226879999999,
+            "queue_mean_ms": 5.826336985085833,
+            "queue_p95_ms": 8.0,
+            "queue_p99_ms": 10.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 58631.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 88169040.0,
+            "complete_window": true,
+            "last_log_s": 60.199,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.995180712396177,
+            "departure_mbps": 71.65250176,
+            "capacity_mbps": 71.999488,
+            "queue_mean_ms": 5.66791039763568,
+            "queue_p95_ms": 9.0,
+            "queue_p99_ms": 10.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 297758.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 447825128.0,
+            "complete_window": true,
+            "last_log_s": 60.199,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0,
+        "handoff_s": 0.15912109375,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2772,
+        "control_period_ms": {
+          "p50": 21.597,
+          "p95": 21.639499999999998,
+          "p99": 21.6633,
+          "max": 22.776
+        },
+        "wall_s": 65.51934980100123
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant24",
+            "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+            "capacity_mbps": 23.991808,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G24-R100",
+            "nominal_mbps": 24,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 1000,
+            "queue_bytes": 1504000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c07",
+          "host": 2,
+          "port": 12087,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9875853994656931,
+            "departure_mbps": 23.6935632,
+            "capacity_mbps": 23.991406933333334,
+            "queue_mean_ms": 357.2311659803428,
+            "queue_p95_ms": 496.0,
+            "queue_p99_ms": 501.0,
+            "dropped_packets": 23006.0,
+            "arrival_packets": 145065.0,
+            "drop_fraction": 0.1585909764588288,
+            "dropped_bytes": 32866336.0,
+            "arrival_bytes": 211889596.0,
+            "complete_window": true,
+            "last_log_s": 60.628,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9407124853001753,
+            "departure_mbps": 22.5671296,
+            "capacity_mbps": 23.9894016,
+            "queue_mean_ms": 358.4985680812288,
+            "queue_p95_ms": 497.0,
+            "queue_p99_ms": 501.0,
+            "dropped_packets": 4092.0,
+            "arrival_packets": 23857.0,
+            "drop_fraction": 0.1715219851615878,
+            "dropped_bytes": 5848120.0,
+            "arrival_bytes": 34854632.0,
+            "complete_window": true,
+            "last_log_s": 60.628,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.996959042019676,
+            "departure_mbps": 23.918849920000003,
+            "capacity_mbps": 23.991808,
+            "queue_mean_ms": 356.9924685207704,
+            "queue_p95_ms": 496.0,
+            "queue_p99_ms": 500.0,
+            "dropped_packets": 18914.0,
+            "arrival_packets": 121208.0,
+            "drop_fraction": 0.15604580555738895,
+            "dropped_bytes": 27018216.0,
+            "arrival_bytes": 177034964.0,
+            "complete_window": true,
+            "last_log_s": 60.628,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9972797381506221,
+        "handoff_s": 0.849708984375,
+        "post_handoff_drop_fraction": 0.15964304797063333,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2741,
+        "control_period_ms": {
+          "p50": 21.632,
+          "p95": 21.683,
+          "p99": 21.71,
+          "max": 22.72
+        },
+        "wall_s": 64.17410690199904
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant12",
+            "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+            "capacity_mbps": 11.995904,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G12-R20",
+            "nominal_mbps": 12,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 100,
+            "queue_bytes": 150400,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c00",
+          "host": 2,
+          "port": 12092,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9989257042432615,
+            "departure_mbps": 11.982816533333333,
+            "capacity_mbps": 11.995703466666667,
+            "queue_mean_ms": 99.16644084240812,
+            "queue_p95_ms": 102.0,
+            "queue_p99_ms": 102.0,
+            "dropped_packets": 18142.0,
+            "arrival_packets": 78024.0,
+            "drop_fraction": 0.23251819952835026,
+            "dropped_bytes": 27260276.0,
+            "arrival_bytes": 117283304.0,
+            "complete_window": true,
+            "last_log_s": 61.945,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.993527808546921,
+            "departure_mbps": 11.917068800000001,
+            "capacity_mbps": 11.9947008,
+            "queue_mean_ms": 97.4319830713422,
+            "queue_p95_ms": 102.0,
+            "queue_p99_ms": 102.0,
+            "dropped_packets": 3363.0,
+            "arrival_packets": 13387.0,
+            "drop_fraction": 0.2512138641966086,
+            "dropped_bytes": 5039904.0,
+            "arrival_bytes": 20086640.0,
+            "complete_window": true,
+            "last_log_s": 61.945,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 1.0000051750997674,
+            "departure_mbps": 11.99596608,
+            "capacity_mbps": 11.995904,
+            "queue_mean_ms": 99.51168341456565,
+            "queue_p95_ms": 102.0,
+            "queue_p99_ms": 102.0,
+            "dropped_packets": 14779.0,
+            "arrival_packets": 64637.0,
+            "drop_fraction": 0.22864613147268592,
+            "dropped_bytes": 22220372.0,
+            "arrival_bytes": 97196664.0,
+            "complete_window": true,
+            "last_log_s": 61.945,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0,
+        "handoff_s": 0.158912109375,
+        "post_handoff_drop_fraction": 0.23293018000667642,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2629,
+        "control_period_ms": {
+          "p50": 21.606,
+          "p95": 21.67,
+          "p99": 65.08359999999878,
+          "max": 182.086
+        },
+        "wall_s": 63.81795728799989
       }
-    ]
+    ],
+    "remote_files": {
+      "final-result.json": {
+        "mtime": 1794459176,
+        "bytes": 49296
+      },
+      "final-progress.json": {
+        "mtime": 1794459176,
+        "bytes": 49296
+      }
+    }
   },
   {
     "node": 3,
-    "finished": false,
+    "finished": true,
     "rows": [
       {
         "job": {
@@ -3656,12 +6712,1032 @@
           "max": 157.463
         },
         "wall_s": 64.56105572399974
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant12",
+            "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+            "capacity_mbps": 11.995904,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G12-R50",
+            "nominal_mbps": 12,
+            "delay_ms": 25,
+            "base_rtt_ms": 50,
+            "queue_packets": 250,
+            "queue_bytes": 376000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c01",
+          "host": 3,
+          "port": 12048,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.996647199548425,
+            "departure_mbps": 11.955484266666668,
+            "capacity_mbps": 11.995703466666667,
+            "queue_mean_ms": 247.49290346364597,
+            "queue_p95_ms": 252.0,
+            "queue_p99_ms": 252.0,
+            "dropped_packets": 10329.0,
+            "arrival_packets": 70257.0,
+            "drop_fraction": 0.14701737905119774,
+            "dropped_bytes": 15433268.0,
+            "arrival_bytes": 105476904.0,
+            "complete_window": true,
+            "last_log_s": 61.875,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9798398972986471,
+            "departure_mbps": 11.7528864,
+            "capacity_mbps": 11.9947008,
+            "queue_mean_ms": 242.3979800040808,
+            "queue_p95_ms": 252.0,
+            "queue_p99_ms": 252.0,
+            "dropped_packets": 1445.0,
+            "arrival_packets": 11498.0,
+            "drop_fraction": 0.12567403026613325,
+            "dropped_bytes": 2121412.0,
+            "arrival_bytes": 17190024.0,
+            "complete_window": true,
+            "last_log_s": 61.875,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 1.000008322840863,
+            "departure_mbps": 11.99600384,
+            "capacity_mbps": 11.995904,
+            "queue_mean_ms": 248.49421553884713,
+            "queue_p95_ms": 252.0,
+            "queue_p99_ms": 252.0,
+            "dropped_packets": 8884.0,
+            "arrival_packets": 58759.0,
+            "drop_fraction": 0.15119385966405147,
+            "dropped_bytes": 13311856.0,
+            "arrival_bytes": 88286880.0,
+            "complete_window": true,
+            "last_log_s": 61.875,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0,
+        "handoff_s": 0.44964404296875,
+        "post_handoff_drop_fraction": 0.14796934317026,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2688,
+        "control_period_ms": {
+          "p50": 21.614,
+          "p95": 21.665,
+          "p99": 21.78465,
+          "max": 303.532
+        },
+        "wall_s": 63.768692052000915
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant36",
+            "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+            "capacity_mbps": 35.999744,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G36-R20",
+            "nominal_mbps": 36,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 300,
+            "queue_bytes": 451200,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c10",
+          "host": 3,
+          "port": 12053,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9983956062242194,
+            "departure_mbps": 35.941385600000004,
+            "capacity_mbps": 35.9991424,
+            "queue_mean_ms": 83.34485980268938,
+            "queue_p95_ms": 101.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 60585.0,
+            "arrival_packets": 240576.0,
+            "drop_fraction": 0.2518331005586592,
+            "dropped_bytes": 90783080.0,
+            "arrival_bytes": 360603664.0,
+            "complete_window": true,
+            "last_log_s": 61.165,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9903820783600585,
+            "departure_mbps": 35.6499264,
+            "capacity_mbps": 35.996134399999995,
+            "queue_mean_ms": 81.76394489247312,
+            "queue_p95_ms": 101.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 10590.0,
+            "arrival_packets": 40651.0,
+            "drop_fraction": 0.26051019655113034,
+            "dropped_bytes": 15831816.0,
+            "arrival_bytes": 60843688.0,
+            "complete_window": true,
+            "last_log_s": 61.165,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9999981510979634,
+            "departure_mbps": 35.99967744,
+            "capacity_mbps": 35.999744,
+            "queue_mean_ms": 83.65839208839249,
+            "queue_p95_ms": 101.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 49995.0,
+            "arrival_packets": 199925.0,
+            "drop_fraction": 0.25006877579092157,
+            "dropped_bytes": 74951264.0,
+            "arrival_bytes": 299759976.0,
+            "complete_window": true,
+            "last_log_s": 61.165,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9999697775628626,
+        "handoff_s": 0.1794140625,
+        "post_handoff_drop_fraction": 0.25216222290666024,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2747,
+        "control_period_ms": {
+          "p50": 21.641,
+          "p95": 21.6917,
+          "p99": 22.059179999999998,
+          "max": 89.622
+        },
+        "wall_s": 64.88442838099945
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant72",
+            "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+            "capacity_mbps": 71.999488,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G72-R100",
+            "nominal_mbps": 72,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 3000,
+            "queue_bytes": 4512000,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "repaired-final6m",
+          "repeat": 1,
+          "run": "repaired-confirm-r1-c23",
+          "host": 3,
+          "port": 12058,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9884012051724136,
+            "departure_mbps": 71.16319146666667,
+            "capacity_mbps": 71.9982848,
+            "queue_mean_ms": 245.44607618422444,
+            "queue_p95_ms": 262.0,
+            "queue_p99_ms": 263.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 370289.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 536077552.0,
+            "complete_window": true,
+            "last_log_s": 60.526,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9304143058205717,
+            "departure_mbps": 66.9826368,
+            "capacity_mbps": 71.99226879999999,
+            "queue_mean_ms": 236.69497601440867,
+            "queue_p95_ms": 262.0,
+            "queue_p99_ms": 263.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 59365.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 86076160.0,
+            "complete_window": true,
+            "last_log_s": 60.526,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9999974222038912,
+            "departure_mbps": 71.9993024,
+            "capacity_mbps": 71.999488,
+            "queue_mean_ms": 247.07132151449267,
+            "queue_p95_ms": 262.0,
+            "queue_p99_ms": 263.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 310924.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 450001392.0,
+            "complete_window": true,
+            "last_log_s": 60.526,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9999967999772443,
+        "handoff_s": 3.8782451171875,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2601,
+        "control_period_ms": {
+          "p50": 21.628,
+          "p95": 21.673,
+          "p99": 21.697,
+          "max": 22.759
+        },
+        "wall_s": 65.58972236599948
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant72",
+            "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+            "capacity_mbps": 71.999488,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G72-R200",
+            "nominal_mbps": 72,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 6000,
+            "queue_bytes": 9024000,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c20",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 3,
+          "port": 12063
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9747984737177147,
+            "departure_mbps": 70.18381813333335,
+            "capacity_mbps": 71.9982848,
+            "queue_mean_ms": 145.9702809367308,
+            "queue_p95_ms": 162.0,
+            "queue_p99_ms": 163.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 364604.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 527817580.0,
+            "complete_window": true,
+            "last_log_s": 60.55,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.8487908746112471,
+            "departure_mbps": 61.1063808,
+            "capacity_mbps": 71.99226879999999,
+            "queue_mean_ms": 140.42304697145244,
+            "queue_p95_ms": 162.0,
+            "queue_p99_ms": 163.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 53647.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 77823616.0,
+            "complete_window": true,
+            "last_log_s": 60.55,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9999974666486517,
+            "departure_mbps": 71.9993056,
+            "capacity_mbps": 71.999488,
+            "queue_mean_ms": 146.90950166583053,
+            "queue_p95_ms": 162.0,
+            "queue_p99_ms": 163.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 310957.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 449993964.0,
+            "complete_window": true,
+            "last_log_s": 60.55,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.999994444404938,
+        "handoff_s": 4.59179296875,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2575,
+        "control_period_ms": {
+          "p50": 21.627,
+          "p95": 21.6703,
+          "p99": 21.696260000000002,
+          "max": 24.228
+        },
+        "wall_s": 65.68949368199901
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant12",
+            "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+            "capacity_mbps": 11.995904,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G12-R100",
+            "nominal_mbps": 12,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 500,
+            "queue_bytes": 752000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c02",
+          "host": 3,
+          "port": 12068,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.988220271222443,
+            "departure_mbps": 11.854397333333335,
+            "capacity_mbps": 11.995703466666667,
+            "queue_mean_ms": 454.8081308708538,
+            "queue_p95_ms": 503.0,
+            "queue_p99_ms": 503.0,
+            "dropped_packets": 25751.0,
+            "arrival_packets": 85963.0,
+            "drop_fraction": 0.29955911264148527,
+            "dropped_bytes": 37874220.0,
+            "arrival_bytes": 127517656.0,
+            "complete_window": true,
+            "last_log_s": 62.035,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9538462851862048,
+            "departure_mbps": 11.441100800000001,
+            "capacity_mbps": 11.9947008,
+            "queue_mean_ms": 447.5696950840075,
+            "queue_p95_ms": 502.0,
+            "queue_p99_ms": 503.0,
+            "dropped_packets": 2527.0,
+            "arrival_packets": 12670.0,
+            "drop_fraction": 0.1994475138121547,
+            "dropped_bytes": 3712112.0,
+            "arrival_bytes": 18766992.0,
+            "complete_window": true,
+            "last_log_s": 62.035,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9950943788813248,
+            "departure_mbps": 11.93705664,
+            "capacity_mbps": 11.995904,
+            "queue_mean_ms": 456.2017331922286,
+            "queue_p95_ms": 503.0,
+            "queue_p99_ms": 503.0,
+            "dropped_packets": 23224.0,
+            "arrival_packets": 73293.0,
+            "drop_fraction": 0.31686518494262755,
+            "dropped_bytes": 34162108.0,
+            "arrival_bytes": 108750664.0,
+            "complete_window": true,
+            "last_log_s": 62.035,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9999919972684009,
+        "handoff_s": 0.746926025390625,
+        "post_handoff_drop_fraction": 0.30117424153820965,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2406,
+        "control_period_ms": {
+          "p50": 21.615,
+          "p95": 21.684749999999998,
+          "p99": 80.70054999999773,
+          "max": 599.695
+        },
+        "wall_s": 64.03970310600016
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R200",
+            "nominal_mbps": 48,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 4000,
+            "queue_bytes": 6016000,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c19",
+          "host": 3,
+          "port": 12073,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9762984438684617,
+            "departure_mbps": 46.85729333333334,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 317.2556759535314,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 244598.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 353487860.0,
+            "complete_window": true,
+            "last_log_s": 60.758,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.8577808456227909,
+            "departure_mbps": 41.1656192,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 299.3219386890984,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 36840.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 53497536.0,
+            "complete_window": true,
+            "last_log_s": 60.758,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9999995866291878,
+            "departure_mbps": 47.995628159999995,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 320.3137921241498,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 207758.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 299990324.0,
+            "complete_window": true,
+            "last_log_s": 60.758,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9999961996554354,
+        "handoff_s": 4.5911669921875,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2575,
+        "control_period_ms": {
+          "p50": 21.626,
+          "p95": 21.671,
+          "p99": 21.70478,
+          "max": 21.83
+        },
+        "wall_s": 64.77951385000051
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant24",
+            "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+            "capacity_mbps": 23.991808,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G24-R100",
+            "nominal_mbps": 24,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 1000,
+            "queue_bytes": 1504000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c07",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 3,
+          "port": 12078
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9904420889541606,
+            "departure_mbps": 23.762099199999998,
+            "capacity_mbps": 23.991406933333334,
+            "queue_mean_ms": 14.146867485128464,
+            "queue_p95_ms": 22.0,
+            "queue_p99_ms": 30.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 118539.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 178251840.0,
+            "complete_window": true,
+            "last_log_s": 61.48,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9435470703862826,
+            "departure_mbps": 22.635129600000003,
+            "capacity_mbps": 23.9894016,
+            "queue_mean_ms": 17.376613031703044,
+            "queue_p95_ms": 29.0,
+            "queue_p99_ms": 155.70000000000073,
+            "dropped_packets": 0.0,
+            "arrival_packets": 18858.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 28334520.0,
+            "complete_window": true,
+            "last_log_s": 61.48,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9998201519451972,
+            "departure_mbps": 23.98749312,
+            "capacity_mbps": 23.991808,
+            "queue_mean_ms": 13.536746117732033,
+            "queue_p95_ms": 22.0,
+            "queue_p99_ms": 27.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 99681.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 149917320.0,
+            "complete_window": true,
+            "last_log_s": 61.48,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9997492477432297,
+        "handoff_s": 0.847364990234375,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2745,
+        "control_period_ms": {
+          "p50": 21.595,
+          "p95": 21.634,
+          "p99": 21.66012,
+          "max": 22.73
+        },
+        "wall_s": 64.28816730200015
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant72",
+            "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+            "capacity_mbps": 71.999488,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G72-R20",
+            "nominal_mbps": 72,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 600,
+            "queue_bytes": 902400,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c21",
+          "host": 3,
+          "port": 12083,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9913250526027346,
+            "departure_mbps": 71.37370346666667,
+            "capacity_mbps": 71.9982848,
+            "queue_mean_ms": 76.87974879912241,
+            "queue_p95_ms": 99.0,
+            "queue_p99_ms": 100.0,
+            "dropped_packets": 125877.0,
+            "arrival_packets": 487351.0,
+            "drop_fraction": 0.2582881742317139,
+            "dropped_bytes": 184911992.0,
+            "arrival_bytes": 720914672.0,
+            "complete_window": true,
+            "last_log_s": 60.39,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9776061287292004,
+            "departure_mbps": 70.3800832,
+            "capacity_mbps": 71.99226879999999,
+            "queue_mean_ms": 74.73488042635005,
+            "queue_p95_ms": 99.0,
+            "queue_p99_ms": 100.0,
+            "dropped_packets": 19639.0,
+            "arrival_packets": 79532.0,
+            "drop_fraction": 0.24693205250716693,
+            "dropped_bytes": 28829536.0,
+            "arrival_bytes": 117704192.0,
+            "complete_window": true,
+            "last_log_s": 60.39,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9940685622653317,
+            "departure_mbps": 71.57242751999999,
+            "capacity_mbps": 71.999488,
+            "queue_mean_ms": 77.30129734961484,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 100.0,
+            "dropped_packets": 106238.0,
+            "arrival_packets": 407819.0,
+            "drop_fraction": 0.26050282110446055,
+            "dropped_bytes": 156082456.0,
+            "arrival_bytes": 603210480.0,
+            "complete_window": true,
+            "last_log_s": 60.39,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9954943679599499,
+        "handoff_s": 0.178485107421875,
+        "post_handoff_drop_fraction": 0.25847910947019553,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2761,
+        "control_period_ms": {
+          "p50": 21.649,
+          "p95": 21.701,
+          "p99": 21.7684,
+          "max": 38.143
+        },
+        "wall_s": 66.18820064600004
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R200",
+            "nominal_mbps": 48,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 4000,
+            "queue_bytes": 6016000,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c19",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 3,
+          "port": 12088
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9762869648580932,
+            "departure_mbps": 46.8567424,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 317.2632744999712,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 244358.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 352984144.0,
+            "complete_window": true,
+            "last_log_s": 60.831,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.8576898949239374,
+            "departure_mbps": 41.1612544,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 299.52989237617624,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 36911.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 53504296.0,
+            "complete_window": true,
+            "last_log_s": 60.831,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 1.0000040003626995,
+            "departure_mbps": 47.99584,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 320.292402979903,
+            "queue_p95_ms": 344.0,
+            "queue_p99_ms": 345.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 207447.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 299479848.0,
+            "complete_window": true,
+            "last_log_s": 60.831,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0000101342521721,
+        "handoff_s": 4.59135205078125,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2575,
+        "control_period_ms": {
+          "p50": 21.626,
+          "p95": 21.673,
+          "p99": 21.71126,
+          "max": 22.804
+        },
+        "wall_s": 64.99596580599973
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant72",
+            "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+            "capacity_mbps": 71.999488,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G72-R100",
+            "nominal_mbps": 72,
+            "delay_ms": 50,
+            "base_rtt_ms": 100,
+            "queue_packets": 3000,
+            "queue_bytes": 4512000,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c23",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 3,
+          "port": 12093
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9778069527937792,
+            "departure_mbps": 70.40042346666667,
+            "capacity_mbps": 71.9982848,
+            "queue_mean_ms": 29.22082000102301,
+            "queue_p95_ms": 226.0,
+            "queue_p99_ms": 262.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 351970.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 528105448.0,
+            "complete_window": true,
+            "last_log_s": 60.439,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9149458893008244,
+            "departure_mbps": 65.8690304,
+            "capacity_mbps": 71.99226879999999,
+            "queue_mean_ms": 108.43840299393656,
+            "queue_p95_ms": 262.0,
+            "queue_p99_ms": 263.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 55647.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 82438560.0,
+            "complete_window": true,
+            "last_log_s": 60.439,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.990377904909546,
+            "departure_mbps": 71.30670208,
+            "capacity_mbps": 71.999488,
+            "queue_mean_ms": 14.362594196198067,
+            "queue_p95_ms": 26.0,
+            "queue_p99_ms": 34.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 296323.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 445666888.0,
+            "complete_window": true,
+            "last_log_s": 60.439,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9860127005347593,
+        "handoff_s": 3.8993359375,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2599,
+        "control_period_ms": {
+          "p50": 21.642,
+          "p95": 21.6881,
+          "p99": 21.71602,
+          "max": 24.834
+        },
+        "wall_s": 65.53866615100014
       }
-    ]
+    ],
+    "remote_files": {
+      "final-result.json": {
+        "mtime": 1794459184,
+        "bytes": 48823
+      },
+      "final-progress.json": {
+        "mtime": 1794459184,
+        "bytes": 48823
+      }
+    }
   },
   {
     "node": 4,
-    "finished": false,
+    "finished": true,
     "rows": [
       {
         "job": {
@@ -4571,7 +8647,1027 @@
           "max": 251.973
         },
         "wall_s": 64.24018078300105
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant24",
+            "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+            "capacity_mbps": 23.991808,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G24-R50",
+            "nominal_mbps": 24,
+            "delay_ms": 25,
+            "base_rtt_ms": 50,
+            "queue_packets": 500,
+            "queue_bytes": 752000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c06",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 4,
+          "port": 12049
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9955206628648906,
+            "departure_mbps": 23.883941333333333,
+            "capacity_mbps": 23.991406933333334,
+            "queue_mean_ms": 23.256019544630263,
+            "queue_p95_ms": 41.0,
+            "queue_p99_ms": 45.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 119192.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 179249880.0,
+            "complete_window": true,
+            "last_log_s": 61.195,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9736699726599266,
+            "departure_mbps": 23.35776,
+            "capacity_mbps": 23.9894016,
+            "queue_mean_ms": 23.31486535193862,
+            "queue_p95_ms": 42.0,
+            "queue_p99_ms": 79.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 19439.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 29224272.0,
+            "complete_window": true,
+            "last_log_s": 61.195,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.999890362577093,
+            "departure_mbps": 23.9891776,
+            "capacity_mbps": 23.991808,
+            "queue_mean_ms": 23.24455567704206,
+            "queue_p95_ms": 41.0,
+            "queue_p99_ms": 44.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 99753.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 150025608.0,
+            "complete_window": true,
+            "last_log_s": 61.195,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0,
+        "handoff_s": 0.4278291015625,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2754,
+        "control_period_ms": {
+          "p50": 21.656,
+          "p95": 21.699,
+          "p99": 21.73047,
+          "max": 22.797
+        },
+        "wall_s": 63.91860185900077
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R50",
+            "nominal_mbps": 48,
+            "delay_ms": 25,
+            "base_rtt_ms": 50,
+            "queue_packets": 1000,
+            "queue_bytes": 1504000,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c17",
+          "host": 4,
+          "port": 12054,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9944202230781759,
+            "departure_mbps": 47.727045333333336,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 161.72855906340544,
+            "queue_p95_ms": 248.0,
+            "queue_p99_ms": 250.0,
+            "dropped_packets": 66365.0,
+            "arrival_packets": 313131.0,
+            "drop_fraction": 0.21194005064972807,
+            "dropped_bytes": 94626408.0,
+            "arrival_bytes": 453556168.0,
+            "complete_window": true,
+            "last_log_s": 60.646,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9667231129997087,
+            "departure_mbps": 46.3938496,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 163.06131126094394,
+            "queue_p95_ms": 248.0,
+            "queue_p99_ms": 250.0,
+            "dropped_packets": 10318.0,
+            "arrival_packets": 50481.0,
+            "drop_fraction": 0.20439373229531904,
+            "dropped_bytes": 14779016.0,
+            "arrival_bytes": 73386064.0,
+            "complete_window": true,
+            "last_log_s": 60.646,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9999590896241259,
+            "departure_mbps": 47.99368448,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 161.4718200983837,
+            "queue_p95_ms": 248.0,
+            "queue_p99_ms": 250.0,
+            "dropped_packets": 56047.0,
+            "arrival_packets": 262650.0,
+            "drop_fraction": 0.2133904435560632,
+            "dropped_bytes": 79847392.0,
+            "arrival_bytes": 380170104.0,
+            "complete_window": true,
+            "last_log_s": 60.646,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9999990665820367,
+        "handoff_s": 0.41027392578125,
+        "post_handoff_drop_fraction": 0.21230278058580404,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2756,
+        "control_period_ms": {
+          "p50": 21.646,
+          "p95": 21.697,
+          "p99": 21.733,
+          "max": 22.801
+        },
+        "wall_s": 64.91787945100077
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant36",
+            "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+            "capacity_mbps": 35.999744,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G36-R20",
+            "nominal_mbps": 36,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 300,
+            "queue_bytes": 451200,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c10",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 4,
+          "port": 12059
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9781196269090381,
+            "departure_mbps": 35.211467733333336,
+            "capacity_mbps": 35.9991424,
+            "queue_mean_ms": 4.555828905631581,
+            "queue_p95_ms": 10.0,
+            "queue_p99_ms": 12.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 175603.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 264092024.0,
+            "complete_window": true,
+            "last_log_s": 60.536,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9725584756123147,
+            "departure_mbps": 35.0083456,
+            "capacity_mbps": 35.996134399999995,
+            "queue_mean_ms": 5.1249656404617925,
+            "queue_p95_ms": 11.0,
+            "queue_p99_ms": 15.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 29111.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 43770960.0,
+            "complete_window": true,
+            "last_log_s": 60.536,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.979231745647969,
+            "departure_mbps": 35.25209216,
+            "capacity_mbps": 35.999744,
+            "queue_mean_ms": 4.442759138537151,
+            "queue_p95_ms": 9.0,
+            "queue_p99_ms": 12.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 146492.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 220321064.0,
+            "complete_window": true,
+            "last_log_s": 60.536,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.977840909090909,
+        "handoff_s": 0.1790009765625,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2771,
+        "control_period_ms": {
+          "p50": 21.59,
+          "p95": 21.632,
+          "p99": 21.6712,
+          "max": 22.689
+        },
+        "wall_s": 64.06475298799887
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant24",
+            "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+            "capacity_mbps": 23.991808,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G24-R200",
+            "nominal_mbps": 24,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 2000,
+            "queue_bytes": 3008000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c04",
+          "host": 4,
+          "port": 12064,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9798452503705327,
+            "departure_mbps": 23.507866133333334,
+            "capacity_mbps": 23.991406933333334,
+            "queue_mean_ms": 814.64211260071,
+            "queue_p95_ms": 891.0,
+            "queue_p99_ms": 891.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 125245.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 178974316.0,
+            "complete_window": true,
+            "last_log_s": 61.485,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.8790444526969776,
+            "departure_mbps": 21.087750399999997,
+            "capacity_mbps": 23.9894016,
+            "queue_mean_ms": 728.6987004477448,
+            "queue_p95_ms": 890.0,
+            "queue_p99_ms": 891.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 20176.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 29008600.0,
+            "complete_window": true,
+            "last_log_s": 61.485,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 1.0000033878230437,
+            "departure_mbps": 23.991889280000002,
+            "capacity_mbps": 23.991808,
+            "queue_mean_ms": 829.6237197791738,
+            "queue_p95_ms": 891.0,
+            "queue_p99_ms": 891.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 105069.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 149965716.0,
+            "complete_window": true,
+            "last_log_s": 61.485,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9999963987707804,
+        "handoff_s": 4.600698974609375,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2575,
+        "control_period_ms": {
+          "p50": 21.629,
+          "p95": 21.674,
+          "p99": 21.694779999999998,
+          "max": 21.958
+        },
+        "wall_s": 64.36310693700034
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant36",
+            "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+            "capacity_mbps": 35.999744,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G36-R50",
+            "nominal_mbps": 36,
+            "delay_ms": 25,
+            "base_rtt_ms": 50,
+            "queue_packets": 750,
+            "queue_bytes": 1128000,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c11",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 4,
+          "port": 12069
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.995165558906944,
+            "departure_mbps": 35.82510666666666,
+            "capacity_mbps": 35.9991424,
+            "queue_mean_ms": 24.277051382514273,
+            "queue_p95_ms": 42.0,
+            "queue_p99_ms": 45.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 178762.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 268841708.0,
+            "complete_window": true,
+            "last_log_s": 60.903,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9709874624759708,
+            "departure_mbps": 34.95179520000001,
+            "capacity_mbps": 35.996134399999995,
+            "queue_mean_ms": 23.628316756719553,
+            "queue_p95_ms": 42.0,
+            "queue_p99_ms": 45.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 29093.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 43743888.0,
+            "complete_window": true,
+            "last_log_s": 60.903,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 1.0000006933382637,
+            "departure_mbps": 35.999768960000004,
+            "capacity_mbps": 35.999744,
+            "queue_mean_ms": 24.40305341470425,
+            "queue_p95_ms": 42.0,
+            "queue_p99_ms": 45.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 149669.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 225097820.0,
+            "complete_window": true,
+            "last_log_s": 60.903,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.000001155563773,
+        "handoff_s": 0.408722900390625,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2761,
+        "control_period_ms": {
+          "p50": 21.601,
+          "p95": 21.645,
+          "p99": 21.678,
+          "max": 22.693
+        },
+        "wall_s": 64.34188546000041
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant36",
+            "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+            "capacity_mbps": 35.999744,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G36-R50",
+            "nominal_mbps": 36,
+            "delay_ms": 25,
+            "base_rtt_ms": 50,
+            "queue_packets": 750,
+            "queue_bytes": 1128000,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c11",
+          "host": 4,
+          "port": 12074,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9878535624967184,
+            "departure_mbps": 35.56188106666667,
+            "capacity_mbps": 35.9991424,
+            "queue_mean_ms": 177.59980431610137,
+            "queue_p95_ms": 250.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 64124.0,
+            "arrival_packets": 245491.0,
+            "drop_fraction": 0.2612071318296801,
+            "dropped_bytes": 92827180.0,
+            "arrival_bytes": 360236784.0,
+            "complete_window": true,
+            "last_log_s": 60.498,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9725924348143339,
+            "departure_mbps": 35.009568,
+            "capacity_mbps": 35.996134399999995,
+            "queue_mean_ms": 170.08314796090326,
+            "queue_p95_ms": 251.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 11864.0,
+            "arrival_packets": 42071.0,
+            "drop_fraction": 0.2819994770744694,
+            "dropped_bytes": 17128976.0,
+            "arrival_bytes": 61660880.0,
+            "complete_window": true,
+            "last_log_s": 60.498,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9909054819945387,
+            "departure_mbps": 35.67234368,
+            "capacity_mbps": 35.999744,
+            "queue_mean_ms": 179.07446738167343,
+            "queue_p95_ms": 250.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 52260.0,
+            "arrival_packets": 203420.0,
+            "drop_fraction": 0.25690689214433193,
+            "dropped_bytes": 75698204.0,
+            "arrival_bytes": 298575904.0,
+            "complete_window": true,
+            "last_log_s": 60.498,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9950319646717488,
+        "handoff_s": 0.40926611328125,
+        "post_handoff_drop_fraction": 0.2617776253694541,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2738,
+        "control_period_ms": {
+          "p50": 21.639,
+          "p95": 21.691,
+          "p99": 21.75163,
+          "max": 173.835
+        },
+        "wall_s": 64.58186196899987
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant42",
+            "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+            "capacity_mbps": 41.99168,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G42-R20",
+            "nominal_mbps": 42,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 350,
+            "queue_bytes": 526400,
+            "queue_bdp": 5.01432664756447
+          },
+          "group": "H0-reference",
+          "repeat": 0,
+          "run": "H0-reference-c15",
+          "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+          "model_sha256": {
+            ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+            ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+          },
+          "host": 4,
+          "port": 12079
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9942935923505214,
+            "departure_mbps": 41.7512608,
+            "capacity_mbps": 41.990877866666665,
+            "queue_mean_ms": 5.867850401755911,
+            "queue_p95_ms": 9.0,
+            "queue_p99_ms": 10.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 208226.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 313157016.0,
+            "complete_window": true,
+            "last_log_s": 60.333,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9823484615684782,
+            "departure_mbps": 41.245734399999996,
+            "capacity_mbps": 41.986867200000006,
+            "queue_mean_ms": 5.95380307979468,
+            "queue_p95_ms": 8.0,
+            "queue_p99_ms": 10.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 34316.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 51599280.0,
+            "complete_window": true,
+            "last_log_s": 60.333,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.996682344693044,
+            "departure_mbps": 41.852366079999996,
+            "capacity_mbps": 41.99168,
+            "queue_mean_ms": 5.850905285672395,
+            "queue_p95_ms": 9.0,
+            "queue_p99_ms": 11.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 173910.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 261557736.0,
+            "complete_window": true,
+            "last_log_s": 60.333,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0,
+        "handoff_s": 0.158589111328125,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "policy_sha256": "b580dc803e511d458d8d78d1248e2b572d0576475f91086ad9a0007e679bb3c8",
+        "valid": 2769,
+        "control_period_ms": {
+          "p50": 21.621,
+          "p95": 21.665,
+          "p99": 21.688,
+          "max": 22.761
+        },
+        "wall_s": 64.33118923300026
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant42",
+            "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+            "capacity_mbps": 41.99168,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G42-R50",
+            "nominal_mbps": 42,
+            "delay_ms": 25,
+            "base_rtt_ms": 50,
+            "queue_packets": 875,
+            "queue_bytes": 1316000,
+            "queue_bdp": 5.01432664756447
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c12",
+          "host": 4,
+          "port": 12084,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9952034788609834,
+            "departure_mbps": 41.78946773333333,
+            "capacity_mbps": 41.990877866666665,
+            "queue_mean_ms": 169.33510371733806,
+            "queue_p95_ms": 250.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 74657.0,
+            "arrival_packets": 288806.0,
+            "drop_fraction": 0.2585022471832303,
+            "dropped_bytes": 107431312.0,
+            "arrival_bytes": 421801960.0,
+            "complete_window": true,
+            "last_log_s": 60.507,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9712246785585374,
+            "departure_mbps": 40.7786816,
+            "capacity_mbps": 41.986867200000006,
+            "queue_mean_ms": 165.5106670889356,
+            "queue_p95_ms": 250.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 13300.0,
+            "arrival_packets": 48900.0,
+            "drop_fraction": 0.2719836400817996,
+            "dropped_bytes": 19113248.0,
+            "arrival_bytes": 71388584.0,
+            "complete_window": true,
+            "last_log_s": 60.507,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.999998689264159,
+            "departure_mbps": 41.99162496,
+            "capacity_mbps": 41.99168,
+            "queue_mean_ms": 170.07810717082447,
+            "queue_p95_ms": 250.0,
+            "queue_p99_ms": 251.0,
+            "dropped_packets": 61357.0,
+            "arrival_packets": 239906.0,
+            "drop_fraction": 0.2557543371153702,
+            "dropped_bytes": 88318064.0,
+            "arrival_bytes": 350413376.0,
+            "complete_window": true,
+            "last_log_s": 60.507,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0000068585014936,
+        "handoff_s": 0.366300048828125,
+        "post_handoff_drop_fraction": 0.2587620790528082,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2758,
+        "control_period_ms": {
+          "p50": 21.646,
+          "p95": 21.7,
+          "p99": 21.72943,
+          "max": 22.825
+        },
+        "wall_s": 64.99978119600019
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant42",
+            "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+            "capacity_mbps": 41.99168,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G42-R200",
+            "nominal_mbps": 42,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 3500,
+            "queue_bytes": 5264000,
+            "queue_bdp": 5.01432664756447
+          },
+          "group": "repaired-final6m",
+          "repeat": 0,
+          "run": "repaired-confirm-r0-c14",
+          "host": 4,
+          "port": 12089,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.976900036802914,
+            "departure_mbps": 41.02089013333333,
+            "capacity_mbps": 41.990877866666665,
+            "queue_mean_ms": 389.15176711265786,
+            "queue_p95_ms": 422.0,
+            "queue_p99_ms": 423.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 214168.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 309869356.0,
+            "complete_window": true,
+            "last_log_s": 60.873,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.8613885819992781,
+            "departure_mbps": 36.167008,
+            "capacity_mbps": 41.986867200000006,
+            "queue_mean_ms": 364.7431227957679,
+            "queue_p95_ms": 422.0,
+            "queue_p99_ms": 423.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 32669.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 47346416.0,
+            "complete_window": true,
+            "last_log_s": 60.873,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.999999679936597,
+            "departure_mbps": 41.991666560000006,
+            "capacity_mbps": 41.99168,
+            "queue_mean_ms": 393.3475598666262,
+            "queue_p95_ms": 422.0,
+            "queue_p99_ms": 423.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 181499.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 262522940.0,
+            "complete_window": true,
+            "last_log_s": 60.873,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9999936749375115,
+        "handoff_s": 4.594072021484375,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2575,
+        "control_period_ms": {
+          "p50": 21.631,
+          "p95": 21.678,
+          "p99": 21.71326,
+          "max": 22.045
+        },
+        "wall_s": 64.74423902499984
+      },
+      {
+        "job": {
+          "condition": {
+            "trace": "constant48",
+            "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+            "capacity_mbps": 47.995648,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G48-R20",
+            "nominal_mbps": 48,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 400,
+            "queue_bytes": 601600,
+            "queue_bdp": 5.013787916771121
+          },
+          "group": "repaired-final6m",
+          "repeat": 2,
+          "run": "repaired-confirm-r2-c16",
+          "host": 4,
+          "port": 12094,
+          "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+            ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+          }
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9977020865884977,
+            "departure_mbps": 47.88455786666667,
+            "capacity_mbps": 47.994845866666665,
+            "queue_mean_ms": 79.89152536725352,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 80784.0,
+            "arrival_packets": 321263.0,
+            "drop_fraction": 0.25145752856693737,
+            "dropped_bytes": 120501704.0,
+            "arrival_bytes": 480212608.0,
+            "complete_window": true,
+            "last_log_s": 60.391,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9885974228679396,
+            "departure_mbps": 47.443616,
+            "capacity_mbps": 47.99083520000001,
+            "queue_mean_ms": 81.2866323907455,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 13687.0,
+            "arrival_packets": 53722.0,
+            "drop_fraction": 0.25477458024645394,
+            "dropped_bytes": 20417136.0,
+            "arrival_bytes": 80258584.0,
+            "complete_window": true,
+            "last_log_s": 60.391,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9995228367371976,
+            "departure_mbps": 47.97274624,
+            "capacity_mbps": 47.995648,
+            "queue_mean_ms": 79.61532320435097,
+            "queue_p95_ms": 100.0,
+            "queue_p99_ms": 101.0,
+            "dropped_packets": 67097.0,
+            "arrival_packets": 267541.0,
+            "drop_fraction": 0.250791467476013,
+            "dropped_bytes": 100084568.0,
+            "arrival_bytes": 399954024.0,
+            "complete_window": true,
+            "last_log_s": 60.391,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 1.0000017334905031,
+        "handoff_s": 0.1560400390625,
+        "post_handoff_drop_fraction": 0.25160398161183023,
+        "model_sha256": {
+          ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+          ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+        },
+        "policy_sha256": "dd5fcd0f0d1f3f3326ccfc67b2d1f0770e738ff5999a71b35a19930eba1886c5",
+        "valid": 2762,
+        "control_period_ms": {
+          "p50": 21.642,
+          "p95": 21.698,
+          "p99": 21.74539,
+          "max": 79.257
+        },
+        "wall_s": 65.04001717900064
       }
-    ]
+    ],
+    "remote_files": {
+      "final-result.json": {
+        "mtime": 1794459172,
+        "bytes": 48929
+      },
+      "final-progress.json": {
+        "mtime": 1794459172,
+        "bytes": 48929
+      }
+    }
   }
 ]

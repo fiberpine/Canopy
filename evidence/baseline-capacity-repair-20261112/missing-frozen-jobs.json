@@ -1,0 +1,28 @@
+[
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R100",
+      "nominal_mbps": 12,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 500,
+      "queue_bytes": 752000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c02",
+    "host": 0,
+    "port": 12095,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  }
+]
