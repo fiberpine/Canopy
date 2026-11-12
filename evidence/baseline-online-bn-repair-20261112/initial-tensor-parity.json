@@ -1,0 +1,41 @@
+{
+  "status": "PASS_ALL108_INITIAL_VARIABLES_IDENTICAL",
+  "variables": 108,
+  "different": [],
+  "contract": {
+    "mode": "unique_online_BN_concurrent_with_actor",
+    "original_entries": 8,
+    "selected_entries": 4,
+    "statistics": [
+      {
+        "destination": "abstract_actor/abstract_actor/bn1/moving_mean",
+        "selected": "abstract_actor/abstract_actor/bn1/cond_1/Merge:0",
+        "discarded": [
+          "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/Merge:0"
+        ]
+      },
+      {
+        "destination": "abstract_actor/abstract_actor/bn1/moving_variance",
+        "selected": "abstract_actor/abstract_actor/bn1/cond_1/Merge_1:0",
+        "discarded": [
+          "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/Merge_1:0"
+        ]
+      },
+      {
+        "destination": "abstract_actor/abstract_actor/bn2/moving_mean",
+        "selected": "abstract_actor/abstract_actor/bn2/cond_1/Merge:0",
+        "discarded": [
+          "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/Merge:0"
+        ]
+      },
+      {
+        "destination": "abstract_actor/abstract_actor/bn2/moving_variance",
+        "selected": "abstract_actor/abstract_actor/bn2/cond_1/Merge_1:0",
+        "discarded": [
+          "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/Merge_1:0"
+        ]
+      }
+    ],
+    "semantics": "Original fetchable canonical Sonnet wrappers; one write per statistic; existing joint actor fetch retained. EMA multiplicity intentionally changes from duplicated writes to one."
+  }
+}

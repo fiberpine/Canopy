@@ -1,5 +1,5 @@
 {
-  "scope": "OnlineBN minimal dedup repair; realTF fourway and187offline checks pass;24actor admission/fresh6M/frozen pending",
+  "scope": "OnlineBN repair187offline checks and240k real admissionPASS;108initial variables identical; one learner24actor fresh6M active; final performance pending",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 14848,
-      "sha256": "8439910db72d2b58f8f5ff5031b5a61ba61f5602026d8527641294fcd0ae09cd"
+      "bytes": 14920,
+      "sha256": "2ee9d7267bf74e757e56f13237d5050256e979f209d30cc54a9aa080bd0f3611"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -64,8 +64,8 @@
     },
     {
       "path": "docs/BASELINE_ONLINE_BN_REPAIR_20261112.md",
-      "bytes": 2005,
-      "sha256": "19fa38acb2825ceef4456a3e5e49895348e1f426d61d513620dc87cbd0a2e062"
+      "bytes": 2389,
+      "sha256": "c554d8a637bc1d3e8b529098978f3cdc9208524dbb926437fcee75593fe72201"
     },
     {
       "path": "docs/BASELINE_RECOVERY_20261111.md",
@@ -7138,9 +7138,29 @@
       "sha256": "8a6e5d5a6dd36c370f62d80cab1a2cd6e5f7ef2004f5978fe408ee930351dda0"
     },
     {
+      "path": "evidence/baseline-online-bn-repair-20261112/admission-live-bn-contract.json",
+      "bytes": 1387,
+      "sha256": "cef14197ed4ba8ef17747b510c288d21ceb3ab9524c8ff51c202946eaa5f59ca"
+    },
+    {
       "path": "evidence/baseline-online-bn-repair-20261112/candidate-actual-contract.json",
       "bytes": 34154,
       "sha256": "f757ccd7cec323b4b9ec602afadc01d6c271e67d99b8bda8fbd808f7df1be7a7"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/capacity-selection.json",
+      "bytes": 176,
+      "sha256": "f7b9a5081ff2fb73753562f6f0ce4783371606e47ab60cb2ca209f346299117d"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/capacity24-bn-admit1-capacity-assessment.json",
+      "bytes": 46732,
+      "sha256": "b15350d773e4519a81736a5607a1df791b1c3897523a4b8347a20b227409f723"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/capacity24-bn-admit1-closure.json",
+      "bytes": 17271,
+      "sha256": "f802ce22c3a0fbca2d96f0de9a97cf560975f8cc8c2cca90afa363c57ae2718a"
     },
     {
       "path": "evidence/baseline-online-bn-repair-20261112/formal-source-manifest.json",
@@ -7171,6 +7191,16 @@
       "path": "evidence/baseline-online-bn-repair-20261112/fourway-step0.json",
       "bytes": 34482,
       "sha256": "77b4c620298c2feafe0b7e83bc7fb167ad2ff3790d8e909ef36cf5b735d776a0"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/frozen-plan-registration.json",
+      "bytes": 67071,
+      "sha256": "007aa844ac8d82ba30a16ac75d0db35df8a63ff8fc264f25c40e630e2aa4e7f7"
+    },
+    {
+      "path": "evidence/baseline-online-bn-repair-20261112/initial-tensor-parity.json",
+      "bytes": 1569,
+      "sha256": "12fbf509b194db4cb567ef03d906e754fc1603c0dc5fd67f4029c8ee4f2bcb44"
     },
     {
       "path": "evidence/baseline-online-bn-repair-20261112/registration.json",

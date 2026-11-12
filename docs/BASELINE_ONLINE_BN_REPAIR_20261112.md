@@ -11,3 +11,6 @@
 新增正常CLI参数--unique-online-bn-updates，默认路径不变。187离线检查通过，实际TF新selector检查通过。五机隔离部署相同；下一步真实240k/150k replay/live保存准入，通过才fresh6M；健康门与最终24格×3+H0全24各1次均保持，当前没有新训练/健康结论。
 
 [登记与小证据](../evidence/baseline-online-bn-repair-20261112/registration.json)；[真实候选检查](../evidence/baseline-online-bn-repair-20261112/candidate-actual-contract.json)。Claude本轮新复核尚未完成，不称已达成新共识；此前讨论与原全部负面保留。
+
+
+16:28进度：真实准入PASS，240000经验、22771完整更新、满回放/live保存/86.55秒稳态/全部清理通过；随机step0全部108变量与上轮一致。正式onlinebn-base-seed3-6m已启动，运行commit9bb1500eaf791bcb0e97724c63dcb725323dd5cd。只改在线BN重复写，尚无新性能结论。最终96评测计划已登记，训练后接续，当前不要关闭服务器。
