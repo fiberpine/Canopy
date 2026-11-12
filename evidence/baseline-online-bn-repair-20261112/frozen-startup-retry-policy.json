@@ -1,0 +1,22 @@
+{
+  "registered_epoch": 1794475373.135421,
+  "original_planned_measurements": 96,
+  "maximum_extra_execution_attempts": 4,
+  "purpose": "Only recover a demonstrably data-free startup failure; never rerun a valid low-performance measurement",
+  "eligibility": [
+    "Original run did not complete and recorded valid==0",
+    "No completed native control record exists",
+    "Original counters prove critic/actor/target/exploration==0",
+    "Original checkpoint index/data hashes remain identical to registered model",
+    "All original owned processes and IPC have ended"
+  ],
+  "constraints": [
+    "Same condition/repeat/checkpoint/native/measurement schema",
+    "Preserve original failed96-view and separate retries",
+    "At most one flow per host",
+    "No optimization, model update, score-based selection or deadline extension",
+    "Unknown eligibility is ineligible",
+    "Canonical completed view must retain original_run mapping"
+  ],
+  "action": "Policy only, no retry scheduled; original frozen evaluations not yet started"
+}

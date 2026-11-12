@@ -1,0 +1,690 @@
+{
+  "status": "FAIL",
+  "overall": {
+    "utilization": 0.968140393732896,
+    "queue_mean_ms": 16.787938278039853,
+    "queue_p95_ms": 23.083333333333332,
+    "queue_p99_ms": 25.52777777777778,
+    "drop_fraction": 0.0
+  },
+  "cells": {
+    "G12-R100": {
+      "medians": {
+        "utilization": 1.0000013871401439,
+        "queue_mean_ms": 16.640676402150365,
+        "queue_p95_ms": 19.0,
+        "queue_p99_ms": 20.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9238844725666361,
+        "queue_mean_ms": 18.438903789129697,
+        "queue_p95_ms": 22.666666666666668,
+        "queue_p99_ms": 24.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G12-R20": {
+      "medians": {
+        "utilization": 1.0000013871401439,
+        "queue_mean_ms": 7.615682419963091,
+        "queue_p95_ms": 11.0,
+        "queue_p99_ms": 12.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9995801233487698,
+        "queue_mean_ms": 7.6091746161553635,
+        "queue_p95_ms": 11.0,
+        "queue_p99_ms": 12.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G12-R200": {
+      "medians": {
+        "utilization": 0.32002144732068544,
+        "queue_mean_ms": 22.944468818552178,
+        "queue_p95_ms": 38.0,
+        "queue_p99_ms": 41.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.41668500181395246,
+        "queue_mean_ms": 21.48214103022228,
+        "queue_p95_ms": 37.333333333333336,
+        "queue_p99_ms": 45.333333333333336,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.019149957978148637,
+      "checks": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": false,
+        "post_handoff_drop": true
+      },
+      "pass_all": false
+    },
+    "G12-R50": {
+      "medians": {
+        "utilization": 0.9997412983631746,
+        "queue_mean_ms": 6.180256821829856,
+        "queue_p95_ms": 9.0,
+        "queue_p99_ms": 10.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.996992591248924,
+        "queue_mean_ms": 5.432930017990046,
+        "queue_p95_ms": 7.666666666666667,
+        "queue_p99_ms": 9.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 0.999501963336819,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G24-R100": {
+      "medians": {
+        "utilization": 1.0000006935700718,
+        "queue_mean_ms": 16.82795731279212,
+        "queue_p95_ms": 18.0,
+        "queue_p99_ms": 19.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 1.0000006935700718,
+        "queue_mean_ms": 16.991752087888575,
+        "queue_p95_ms": 18.333333333333332,
+        "queue_p99_ms": 19.333333333333332,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G24-R20": {
+      "medians": {
+        "utilization": 1.0000006935700718,
+        "queue_mean_ms": 8.070730777717598,
+        "queue_p95_ms": 10.0,
+        "queue_p99_ms": 11.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 1.0000006935700718,
+        "queue_mean_ms": 7.807934310913188,
+        "queue_p95_ms": 10.0,
+        "queue_p99_ms": 11.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G24-R200": {
+      "medians": {
+        "utilization": 0.999991010264837,
+        "queue_mean_ms": 42.73904234619165,
+        "queue_p95_ms": 54.0,
+        "queue_p99_ms": 57.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.999991010264837,
+        "queue_mean_ms": 42.57715325001839,
+        "queue_p95_ms": 54.333333333333336,
+        "queue_p99_ms": 57.333333333333336,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0000017339251799,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G24-R50": {
+      "medians": {
+        "utilization": 0.9788576100642352,
+        "queue_mean_ms": 2.063773758901583,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 5.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9792052042652781,
+        "queue_mean_ms": 2.0662431603176734,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 5.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 0.9791892966132439,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G36-R100": {
+      "medians": {
+        "utilization": 1.0000004622255092,
+        "queue_mean_ms": 26.48952554110239,
+        "queue_p95_ms": 35.0,
+        "queue_p99_ms": 37.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.999998388136686,
+        "queue_mean_ms": 25.963454256914833,
+        "queue_p95_ms": 31.666666666666668,
+        "queue_p99_ms": 33.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.000001155563773,
+      "post_handoff_drop": 0.002411977527428891,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G36-R20": {
+      "medians": {
+        "utilization": 0.9998600878939583,
+        "queue_mean_ms": 5.281593250479673,
+        "queue_p95_ms": 9.0,
+        "queue_p99_ms": 10.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9999002718834149,
+        "queue_mean_ms": 6.8567325042981935,
+        "queue_p95_ms": 10.0,
+        "queue_p99_ms": 11.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 0.9997337758846285,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G36-R200": {
+      "medians": {
+        "utilization": 0.9999937777335306,
+        "queue_mean_ms": 42.226402229931615,
+        "queue_p95_ms": 53.0,
+        "queue_p99_ms": 56.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9999937777335306,
+        "queue_mean_ms": 42.247130700997985,
+        "queue_p95_ms": 53.0,
+        "queue_p99_ms": 56.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G36-R50": {
+      "medians": {
+        "utilization": 0.971056843070884,
+        "queue_mean_ms": 2.188458678710104,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 5.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9720660472844843,
+        "queue_mean_ms": 2.2038513808827127,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 5.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 0.9713903743315508,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G42-R100": {
+      "medians": {
+        "utilization": 0.9988771870999208,
+        "queue_mean_ms": 15.452003690480966,
+        "queue_p95_ms": 22.0,
+        "queue_p99_ms": 27.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9958151710053039,
+        "queue_mean_ms": 14.41713064970144,
+        "queue_p95_ms": 23.0,
+        "queue_p99_ms": 27.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 0.9982234957020057,
+      "post_handoff_drop": 0.0008626865370450716,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G42-R20": {
+      "medians": {
+        "utilization": 0.9999201670426141,
+        "queue_mean_ms": 5.493263262861695,
+        "queue_p95_ms": 9.0,
+        "queue_p99_ms": 10.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9997903381495254,
+        "queue_mean_ms": 5.490716457933932,
+        "queue_p95_ms": 9.0,
+        "queue_p99_ms": 10.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G42-R200": {
+      "medians": {
+        "utilization": 0.9999946656099494,
+        "queue_mean_ms": 39.99248141844459,
+        "queue_p95_ms": 51.0,
+        "queue_p99_ms": 54.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9999947316547786,
+        "queue_mean_ms": 39.75835826041715,
+        "queue_p95_ms": 51.0,
+        "queue_p99_ms": 54.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G42-R50": {
+      "medians": {
+        "utilization": 0.9738974425409986,
+        "queue_mean_ms": 2.246487160778591,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 5.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9728887805076307,
+        "queue_mean_ms": 2.247881219263379,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 5.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 0.9735253459732975,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G48-R100": {
+      "medians": {
+        "utilization": 0.9999953329101838,
+        "queue_mean_ms": 21.559510857303298,
+        "queue_p95_ms": 32.0,
+        "queue_p99_ms": 35.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9999953329101838,
+        "queue_mean_ms": 21.654865940339565,
+        "queue_p95_ms": 31.666666666666668,
+        "queue_p99_ms": 35.333333333333336,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G48-R20": {
+      "medians": {
+        "utilization": 0.9999503821679833,
+        "queue_mean_ms": 5.230126697785421,
+        "queue_p95_ms": 8.0,
+        "queue_p99_ms": 10.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9999602941777832,
+        "queue_mean_ms": 5.2436369455025815,
+        "queue_p95_ms": 8.0,
+        "queue_p99_ms": 10.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 0.9999757978056677,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G48-R200": {
+      "medians": {
+        "utilization": 0.9999953329101838,
+        "queue_mean_ms": 38.089435052042596,
+        "queue_p95_ms": 50.0,
+        "queue_p99_ms": 55.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9999953906932006,
+        "queue_mean_ms": 37.96491353860505,
+        "queue_p95_ms": 50.333333333333336,
+        "queue_p99_ms": 55.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G48-R50": {
+      "medians": {
+        "utilization": 0.9744502568232853,
+        "queue_mean_ms": 2.253914188838066,
+        "queue_p95_ms": 4.0,
+        "queue_p99_ms": 5.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9801341054922313,
+        "queue_mean_ms": 4.139649924783472,
+        "queue_p95_ms": 7.333333333333333,
+        "queue_p99_ms": 8.666666666666666,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 0.9742049279134641,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G72-R100": {
+      "medians": {
+        "utilization": 0.9999968888667653,
+        "queue_mean_ms": 20.537102024719086,
+        "queue_p95_ms": 32.0,
+        "queue_p99_ms": 38.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.999871074638753,
+        "queue_mean_ms": 20.622506358190208,
+        "queue_p95_ms": 32.0,
+        "queue_p99_ms": 38.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G72-R20": {
+      "medians": {
+        "utilization": 0.999826549877688,
+        "queue_mean_ms": 5.26599610230285,
+        "queue_p95_ms": 8.0,
+        "queue_p99_ms": 10.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9997451448543634,
+        "queue_mean_ms": 5.292768706088223,
+        "queue_p95_ms": 8.0,
+        "queue_p99_ms": 10.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G72-R200": {
+      "medians": {
+        "utilization": 0.9999968888667653,
+        "queue_mean_ms": 37.986380393113656,
+        "queue_p95_ms": 52.0,
+        "queue_p99_ms": 56.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9999968888667653,
+        "queue_mean_ms": 37.876164629574546,
+        "queue_p95_ms": 51.666666666666664,
+        "queue_p99_ms": 56.0,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    },
+    "G72-R50": {
+      "medians": {
+        "utilization": 0.9998030385993856,
+        "queue_mean_ms": 8.80879705222642,
+        "queue_p95_ms": 14.0,
+        "queue_p99_ms": 16.0,
+        "drop_fraction": 0.0
+      },
+      "repeat_means": {
+        "utilization": 0.9988839209523267,
+        "queue_mean_ms": 8.524524936827966,
+        "queue_p95_ms": 14.0,
+        "queue_p99_ms": 15.666666666666666,
+        "drop_fraction": 0.0
+      },
+      "tail_utilization": 0.9998328877005348,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true
+    }
+  },
+  "failed_conditions": [
+    "G12-R200"
+  ],
+  "catastrophe": true,
+  "runs": 72,
+  "scope": "One training seed,24trained5BDP conditions,three fresh evaluation connections each; not multi-seed or shallow/dynamic validation"
+}

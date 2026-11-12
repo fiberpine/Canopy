@@ -1,0 +1,48 @@
+{
+  "status": "PASS_EXACT_SELECTED_BYTES",
+  "health": "FAIL",
+  "epoch": 1794479487.3423336,
+  "files": [
+    {
+      "source": "@RUN_ROOT@/runtime/orca-server-cloexec",
+      "bytes": 35368,
+      "sha256": "632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0e12fe1d",
+      "local": "selected-backup/orca-server-cloexec",
+      "copied_now": true
+    },
+    {
+      "source": "@RUN_ROOT@/frameworks/baseline/checkpoints/onlinebn-base-seed3-6m/step-6013196.index",
+      "bytes": 3854,
+      "sha256": "6521be2f6be89a679a64d98b06ce26e55b94eb2554fb69eb5695fb4f03c33b9d",
+      "local": "selected-backup/step-6013196.index",
+      "copied_now": true
+    },
+    {
+      "source": "@RUN_ROOT@/frameworks/baseline/checkpoints/onlinebn-base-seed3-6m/step-6013196.data-00000-of-00001",
+      "bytes": 4410456,
+      "sha256": "4545c09aa454aa1da8f38324fd129bf289879a8c7d7679cd43016234f4e15e63",
+      "local": "selected-backup/step-6013196.data-00000-of-00001",
+      "copied_now": true
+    },
+    {
+      "source": "@RUN_ROOT@/frameworks/baseline/checkpoints/onlinebn-base-seed3-6m/step-6013196.variables.json",
+      "bytes": 4452,
+      "sha256": "0ca725387f7fe026cc479f3619596fc9d7a0de932bcabf11184ec65fb53fdf95",
+      "local": "selected-backup/step-6013196.variables.json",
+      "copied_now": true
+    },
+    {
+      "source": "@RUN_ROOT@/frameworks/baseline/checkpoints/onlinebn-base-seed3-6m/step-0.meta",
+      "bytes": 512083,
+      "sha256": "ea68e9f5f0fd17088e03a8f0903236e3b4dd385c7c92c03ffbcd45a4aa61dba1",
+      "local": "selected-backup/step-0.meta",
+      "copied_now": true
+    }
+  ],
+  "bytes_copied_now": 4966213,
+  "full_model_included": true,
+  "full_model_reason": "Preserve the registered endpoint for transfer/forensics; near-healthy23-cell outcome is still FAIL, not a replacement baseline",
+  "replay_and_history_and_raw_packet_logs_copied": false,
+  "seamless_resume_supported": false,
+  "runtime_commit": "9bb1500eaf791bcb0e97724c63dcb725323dd5cd"
+}

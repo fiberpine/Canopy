@@ -1,0 +1,26 @@
+{
+  "status": "PASS_INDEPENDENT_NUMERICAL_AND_IDENTITY_VALIDATION",
+  "health": "FAIL",
+  "attempted_original_tasks": 96,
+  "completed_original_tasks": 95,
+  "candidate": 72,
+  "H0_reference_completed": 23,
+  "execution_failed_runs": [
+    "H0-reference-c03"
+  ],
+  "retries": 0,
+  "overall": {
+    "utilization": 0.968140393732896,
+    "queue_mean_ms": 16.787938278039853,
+    "queue_p95_ms": 23.083333333333332,
+    "queue_p99_ms": 25.52777777777778,
+    "drop_fraction": 0.0
+  },
+  "failed_conditions": [
+    "G12-R200"
+  ],
+  "catastrophe": true,
+  "candidate_model_and_policy_hashes_match": true,
+  "final_closure_all_five": true,
+  "scope": "Validates retained worker summaries. Worker source separately asserts zero optimization/exploration, control correspondence and source tensor hashes; raw packet/control logs remain cloud."
+}

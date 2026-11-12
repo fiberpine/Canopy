@@ -40,7 +40,7 @@ def analyze(folder):
     assert counters['critic_optimizer_ops'] == 2*counters['critic_iterations']
     assert done['global_optimizer_step'] == 3*counters['critic_iterations']
     return dict(status='TRAINING_ACCOUNTING_COMPLETE_FROZEN_PERFORMANCE_SEPARATE',
-        training_commit='667533e547ee66ec10b2e7193f06548bdf3790c6',
+        training_commit=done['config']['code_commit'],
         run=done['result'], final=done['final'], global_optimizer_step=done['global_optimizer_step'],
         training_rows=len(rows), finite_actor_gradient_records=len(valid), exact_zero_actor_gradient_records=len(zero),
         first_recorded_recovery_after_1m={k:recovered[k] for k in ('inserted','wall_s','actor_grad')},

@@ -1,0 +1,37 @@
+{
+  "status": "INCOMPLETE_REFERENCE",
+  "runs": 24,
+  "failures": [
+    {
+      "job": {
+        "condition": {
+          "trace": "constant12",
+          "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+          "capacity_mbps": 11.995904,
+          "packet_bytes": 1504,
+          "trace_period_ms": 1000,
+          "condition": "G12-R200",
+          "nominal_mbps": 12,
+          "delay_ms": 100,
+          "base_rtt_ms": 200,
+          "queue_packets": 1000,
+          "queue_bytes": 1504000,
+          "queue_bdp": 5.015045135406219
+        },
+        "group": "H0-reference",
+        "repeat": 0,
+        "run": "H0-reference-c03",
+        "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+        "model_sha256": {
+          ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+        },
+        "host": 4,
+        "port": 12044
+      },
+      "status": "EXECUTION_ERROR",
+      "reason": "AssertionError('no valid state within15s',)",
+      "traceback": "Traceback (most recent call last):\n  File \"@RUN_ROOT@/frameworks/baseline/frozen_worker.py\", line 94, in main\n    try:result=run(job,registration)\n  File \"@RUN_ROOT@/frameworks/baseline/frozen_worker.py\", line 49, in run\n    assert code==0 and result['status']=='COMPLETED',result.get('reason')\nAssertionError: no valid state within15s\n"
+    }
+  ]
+}
