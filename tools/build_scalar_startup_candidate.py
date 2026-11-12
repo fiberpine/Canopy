@@ -26,11 +26,13 @@ def prepare(framework, output, startup, audit=False, compiler='g++'):
     for path in inputs:
         if not path.is_file():
             raise ValueError('Required source missing: ' + str(path))
-    if startup not in ('legacy', 'first-feedback'):
+    if startup not in ('legacy', 'first-feedback', 'natural-cubic'):
         raise ValueError('Unknown startup mode: ' + startup)
     flags = ['-std=c++11', '-pthread']
     if startup == 'first-feedback':
         flags.append('-DORCA_FIRST_FEEDBACK_HANDOFF')
+    elif startup == 'natural-cubic':
+        flags.append('-DORCA_NATURAL_CUBIC_HANDOFF')
     if audit:
         flags.append('-DORCA_STARTUP_AUDIT')
     # Match the existing scalar build flags: no added optimization or ABI flags.
@@ -43,7 +45,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--framework', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--startup', choices=('legacy', 'first-feedback'), required=True)
+    parser.add_argument('--startup', choices=('legacy', 'first-feedback', 'natural-cubic'), required=True)
     parser.add_argument('--audit', action='store_true', help='Same one-shot handoff telemetry in both builds')
     parser.add_argument('--compiler', default='g++')
     parser.add_argument('--logical-source-path', help='Explicit #line filename to match archived __FILE__ diagnostics; actual source hashes remain recorded')

@@ -16,14 +16,15 @@ def default_startup_source(source):
     lines=[];parents=[];active=True
     for line in source.splitlines(keepends=True):
         directive=line.strip()
-        if directive.startswith('#ifdef ORCA_'):
-            if directive not in ('#ifdef ORCA_STARTUP_AUDIT','#ifdef ORCA_FIRST_FEEDBACK_HANDOFF'):
+        if directive.startswith(('#ifdef ORCA_','#ifndef ORCA_')):
+            if directive.split()[1] not in ('ORCA_STARTUP_AUDIT','ORCA_FIRST_FEEDBACK_HANDOFF','ORCA_NATURAL_CUBIC_HANDOFF'):
                 raise AssertionError('Unreviewed startup conditional: '+directive)
-            parents.append(active);active=False
+            condition=directive.startswith('#ifndef ')
+            parents.append((active,condition));active=active and condition
         elif directive=='#else' and parents:
-            active=parents[-1] and not active
+            parent,condition=parents[-1];active=parent and not condition
         elif directive=='#endif' and parents:
-            active=parents.pop()
+            active=parents.pop()[0]
         elif directive.startswith('#line '):
             if not directive.split()[1].isdigit():raise AssertionError('Unexpected line directive')
         elif active:

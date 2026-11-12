@@ -504,6 +504,8 @@ void* CntThread(void* information)
                         tcp_info_pre=orca_info;
                         t0=timestamp();
 
+#ifndef ORCA_NATURAL_CUBIC_HANDOFF
+#line 495
                         target_ratio=1.1*orca_info.cwnd;
                         ret1 = setsockopt(sock_for_cnt[i], IPPROTO_TCP,TCP_CWND, &target_ratio, sizeof(target_ratio));
                         if(ret1<0)
@@ -513,6 +515,7 @@ void* CntThread(void* information)
                         }
 #ifdef ORCA_STARTUP_AUDIT
                         startup_assist_writes++;
+#endif
 #endif
 #line 502
                         usleep(report_period*1000); // Keep slow-start assistance at the configured control cadence.
@@ -524,7 +527,11 @@ void* CntThread(void* information)
 #ifdef ORCA_FIRST_FEEDBACK_HANDOFF
                         const char *startup_mode="first-feedback";
 #else
+#ifdef ORCA_NATURAL_CUBIC_HANDOFF
+                        const char *startup_mode="natural-cubic";
+#else
                         const char *startup_mode="legacy";
+#endif
 #endif
                         fprintf(stderr,"ORCA_STARTUP_HANDOFF mode=%s time_us=%llu scheme=%s assist_writes=%lu cwnd=%u packets_out=%u max_packets_out=%u retrans_out=%u lost_bytes=%u avg_urtt=%u srtt_scaled8=%u min_rtt=%u mss=%u pacing_rate=%u ssthresh=%u\n",
                             startup_mode,(unsigned long long)t1,scheme?scheme:"default",startup_assist_writes,
