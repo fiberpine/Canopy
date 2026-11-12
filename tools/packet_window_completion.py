@@ -49,7 +49,8 @@ def start(path, seconds, stop_event, receipt):
     receipt = Path(receipt)
     if receipt.exists():
         raise ValueError('Existing completion receipt must be preserved')
-    def watch():
+    state = dict(error=None)
+    def observe():
         while not stop_event.is_set():
             try:
                 elapsed = progress(path)
@@ -64,6 +65,13 @@ def start(path, seconds, stop_event, receipt):
                 stop_event.set()
                 return
             stop_event.wait(.05)
+    def watch():
+        try:
+            observe()
+        except Exception as error:
+            state['error'] = repr(error)
+            stop_event.set()
     thread = threading.Thread(target=watch, name='complete-packet-window', daemon=True)
+    thread.completion_state = state
     thread.start()
     return thread

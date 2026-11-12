@@ -46,12 +46,17 @@ def main(argv=None):
     parser.add_argument('--startup', choices=('legacy', 'first-feedback'), required=True)
     parser.add_argument('--audit', action='store_true', help='Same one-shot handoff telemetry in both builds')
     parser.add_argument('--compiler', default='g++')
+    parser.add_argument('--logical-source-path', help='Explicit #line filename to match archived __FILE__ diagnostics; actual source hashes remain recorded')
     parser.add_argument('--dry-run', action='store_true', help='Print plan without compiling or writing files')
     args = parser.parse_args(argv)
     try:
         metadata, output, sidecar = prepare(args.framework, args.output, args.startup, args.audit, args.compiler)
     except ValueError as error:
         parser.error(str(error))
+    if args.logical_source_path:
+        if not args.logical_source_path.startswith('/') or '\n' in args.logical_source_path or '\r' in args.logical_source_path:
+            parser.error('Logical source path must be an absolute single-line POSIX path')
+        metadata['logical_source_path'] = args.logical_source_path
     if args.dry_run:
         metadata['status'] = 'PLAN_ONLY_NOT_COMPILED'
         print(json.dumps(metadata, indent=2))
@@ -64,6 +69,14 @@ def main(argv=None):
     with tempfile.TemporaryDirectory(prefix='orca-startup-', dir=str(output.parent)) as temporary:
         built = Path(temporary) / 'native'
         command = metadata['command'][:-1] + [str(built)]
+        if args.logical_source_path:
+            original_source = args.framework.resolve() / 'code/runtime/src/orca-server-control-log-safe.cc'
+            mapped_source = Path(temporary) / original_source.name
+            mapped_source.write_bytes(('#line 1 ' + json.dumps(args.logical_source_path) + '\n').encode() + original_source.read_bytes())
+            command = [command[0], '-I', str(original_source.parent)] + command[1:]
+            command[command.index(str(original_source))] = str(mapped_source)
+            metadata['compiled_source_sha256'] = digest(mapped_source)
+        metadata['executed_command'] = command
         subprocess.check_call(command)
         for name, expected in metadata['source_sha256'].items():
             if digest(args.framework.resolve() / 'code/runtime/src' / name) != expected:

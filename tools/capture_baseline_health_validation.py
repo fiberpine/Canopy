@@ -45,3 +45,6 @@ finally:
         reader.stop.set()
         reader.window_thread.join(timeout=1)
     raw_stream.close()
+    errors = [r.window_thread.completion_state['error'] for r in readers if r.window_thread.completion_state['error']]
+    if errors:
+        raise RuntimeError('Packet-clock completion observer failed: ' + repr(errors))
