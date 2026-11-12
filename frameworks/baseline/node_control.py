@@ -40,7 +40,7 @@ def status(run):
    recent=tail(R/'logs'/active/'states.csv',65536)[-200:]
    if recent:q['recent']=dict(step=int(recent[-1]['transition']),min_saturation=sum(float(x['action_no_noise'])<=-.99 for x in recent)/len(recent),cwnd_mean=sum(float(x['cwnd']) for x in recent)/len(recent),action_mean=sum(float(x['action_no_noise']) for x in recent)/len(recent),reward_mean=sum(float(x['reward']) for x in recent)/len(recent))
   entries.append(q)
- return dict(host=os.uname()[1],epoch=time.time(),load=list(os.getloadavg()),mem_available=psutil.virtual_memory().available,cpu_times=psutil.cpu_times()._asdict(),network=psutil.net_io_counters()._asdict(),entries=entries)
+ return dict(host=os.uname()[1],epoch=time.time(),load=list(os.getloadavg()),mem_available=psutil.virtual_memory().available,cpu_times=psutil.cpu_times()._asdict(),cpu_times_percpu=[x._asdict() for x in psutil.cpu_times(percpu=True)],network=psutil.net_io_counters()._asdict(),entries=entries)
 def signal_stop(run,reason):
  dump(R/'logs'/(run+'-stop.json'),dict(reason=reason,epoch=time.time()))
 def recent_network(run,index):

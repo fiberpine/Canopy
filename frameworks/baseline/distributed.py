@@ -23,6 +23,9 @@ def setup(cfg,role,index):
  if cfg.get('target_bn_consistent'):
   import consistent_target_bn
   consistent_target_bn.install(agent_v2)
+ if cfg.get('independent_critic_adam_v34'):
+  import independent_critic_v34
+  independent_critic_v34.install(agent_v2,cfg)
  random.seed(cfg['seed']+index*1009);np.random.seed(cfg['seed']+index*1009);tf.set_random_seed(cfg['seed'])
  cluster=tf.train.ClusterSpec({'learner':[cfg['learner_endpoint']]} if cfg.get('direct_actor_session',False) else {'learner':[cfg['learner_endpoint']],'actor':['127.0.0.1:%d'%(47101+i) for i in range(cfg['num_actors'])]})
  direct=role=='actor' and cfg.get('direct_actor_session',False)
@@ -31,6 +34,9 @@ def setup(cfg,role,index):
  with tf.device('/job:learner/task:0/cpu:0'):
   a=Agent(70,1,256,256,gamma=.995,batch_size=512,lr_a=.0001,lr_c=.001,tau=.001,mem_size=cfg['memsize'] if role=='learner' else 1,noise_type=3,noise_exp=50000,stddev=cfg.get('exploration_std',.2),PER=False,CDQ=True,LOSS_TYPE=cfg.get('LOSS_TYPE','MSE'),use_original=False,use_snt_model_wo_ibp=False)
   if cfg.get('target_bn_consistent'):consistent_target_bn.connect_statistics(a,.001)
+  if cfg.get('unique_critic_targets'):
+   import unique_critic_targets
+   unique_critic_targets.connect(a,.001)
   fifo=tf.FIFOQueue(10000,[tf.float32]*5+[tf.int32],shapes=[[70],[1],[1],[70],[1],[]],shared_name='rp_buf')
   ph=[tf.placeholder(tf.float32,x) for x in [[70],[1],[1],[70],[1]]]+[tf.placeholder(tf.int32,[])]
   enqueue=fifo.enqueue(ph);nph=tf.placeholder(tf.int32,[]);dequeue=fifo.dequeue_many(nph);size=fifo.size()

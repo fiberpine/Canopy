@@ -166,7 +166,7 @@ void start_server(int flow_num, int client_port)
         server_addr[i].sin_port=htons(client_port+i);
 
         //Init socket
-        if((sock[i]=socket(PF_INET,SOCK_STREAM,0))<0)
+        if((sock[i]=socket(PF_INET,SOCK_STREAM|SOCK_CLOEXEC,0))<0)
         {
             DBGMARK(0,0,"sockopt: %s\n",strerror(errno));
             return;

@@ -32,13 +32,13 @@ def doctor():
 def main():
  ap=argparse.ArgumentParser(description=__doc__);sp=ap.add_subparsers(dest='cmd');sp.add_parser('doctor')
  for cmd in ['evaluate','train','smoke-training','verify-training']:
-  p=sp.add_parser(cmd);p.add_argument('--variant',required=True);p.add_argument('--run-id');p.add_argument('--scenario',type=int,default=0);p.add_argument('--seconds',type=float,default=90 if cmd=='smoke-training' else 60);p.add_argument('--actors',type=int,default=1);p.add_argument('--samples',type=int,default=2400000);p.add_argument('--seconds-per-actor',type=float);p.add_argument('--cluster');p.add_argument('--port',type=int,default=23000);p.add_argument('--learner-port',type=int,default=25000);p.add_argument('--episode-seconds',type=float);p.add_argument('--replay-probe',action='store_true');p.add_argument('--seed',type=int,default=3);p.add_argument('--deadline-epoch',type=float);p.add_argument('--checkpoint-interval',type=int);p.add_argument('--performance-guard-policy',choices=['stop','warn']);p.add_argument('--target-bn-consistent',action='store_true')
+  p=sp.add_parser(cmd);p.add_argument('--variant',required=True);p.add_argument('--run-id');p.add_argument('--scenario',type=int,default=0);p.add_argument('--seconds',type=float,default=90 if cmd=='smoke-training' else 60);p.add_argument('--actors',type=int,default=1);p.add_argument('--samples',type=int,default=2400000);p.add_argument('--seconds-per-actor',type=float);p.add_argument('--cluster');p.add_argument('--port',type=int,default=23000);p.add_argument('--learner-port',type=int,default=25000);p.add_argument('--episode-seconds',type=float);p.add_argument('--replay-probe',action='store_true');p.add_argument('--seed',type=int,default=3);p.add_argument('--deadline-epoch',type=float);p.add_argument('--checkpoint-interval',type=int);p.add_argument('--performance-guard-policy',choices=['stop','warn']);p.add_argument('--target-bn-consistent',action='store_true');p.add_argument('--scalar-update-contract',action='store_true',help='Independent critic Adam, unique target pairs, and moving target BN');p.add_argument('--server-binary')
  a=ap.parse_args()
  if a.cmd=='doctor':return doctor()
  if not a.cmd:ap.print_help();return 2
  if a.episode_seconds is not None and (a.cmd not in ['train','smoke-training'] or a.variant!='baseline' or not 0<a.episode_seconds<float('inf')):raise ValueError('episode-seconds requires baseline training and a finite positive duration')
  if a.replay_probe and (a.variant!='baseline' or a.cmd!='train'):raise ValueError('replay-probe requires baseline train with the production replay capacity')
- if any((a.checkpoint_interval is not None,a.performance_guard_policy is not None,a.target_bn_consistent)) and (a.variant!='baseline' or a.cmd not in ['train','smoke-training']):raise ValueError('Baseline recovery controls require baseline training')
+ if any((a.checkpoint_interval is not None,a.performance_guard_policy is not None,a.target_bn_consistent,a.scalar_update_contract,a.server_binary is not None)) and (a.variant!='baseline' or a.cmd not in ['train','smoke-training']):raise ValueError('Baseline recovery controls require baseline training')
  if a.checkpoint_interval is not None and a.checkpoint_interval<=0:raise ValueError('checkpoint-interval must be positive')
  if a.deadline_epoch is not None and (a.cmd not in ['train','smoke-training'] or not time.time()+600<a.deadline_epoch<float('inf')):raise ValueError('deadline-epoch requires training with at least ten minutes remaining')
  if a.cmd in ['evaluate','verify-training']:
@@ -63,7 +63,9 @@ def main():
  if a.checkpoint_interval is not None:c['checkpoint_interval']=a.checkpoint_interval
  if a.performance_guard_policy is not None:c['performance_guard_policy']=a.performance_guard_policy
  if a.target_bn_consistent:c['target_bn_consistent']=True
- if a.variant=='baseline' and (a.replay_probe or a.episode_seconds is not None or a.target_bn_consistent):
+ if a.scalar_update_contract:c.update(target_bn_consistent=True,independent_critic_adam_v34=True,unique_critic_targets=True)
+ if a.server_binary:c['server_binary']=str(pathlib.Path(a.server_binary).resolve())
+ if a.variant=='baseline' and (a.replay_probe or a.episode_seconds is not None or a.target_bn_consistent or a.scalar_update_contract):
   c['verify_owned_cleanup']=True
   sys.path.insert(0,str(f));from baseline_admission import validate_ports
   ephemeral=list(map(int,pathlib.Path('/proc/sys/net/ipv4/ip_local_port_range').read_text().split()))

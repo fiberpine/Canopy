@@ -1,0 +1,112 @@
+[
+  {
+    "node": 0,
+    "source": {
+      "frameworks/baseline/distributed.py": "ec701d8fcfa1fc2cb4bece57cc5702ee5432e6b1f735a48af56cddb8c47cd768",
+      "frameworks/baseline/independent_critic_v34.py": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266",
+      "frameworks/baseline/unique_critic_targets.py": "535f527dfa5ed2379c17526459d380d8ac5e4547cfd5043edc05ae38e2e48124",
+      "tools/audit_scalar_update_contract.py": "c4d5177aba4c8b890ff95169b09110ecc956b19a4604143e7463358b21fd1845",
+      "runtime/orca-server-control-log-safe.cc": "cc12640de8c47da697dcf044c69534b7177172e698d5cb5c8dd3feb33d55ba31"
+    },
+    "binary_sha256": "632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0e12fe1d",
+    "compile_cmd": [
+      "g++",
+      "-std=c++11",
+      "-pthread",
+      "-I",
+      "@RUN_ROOT@/frameworks/baseline/code/runtime/src",
+      "@RUN_ROOT@/runtime/orca-server-control-log-safe.cc",
+      "@RUN_ROOT@/frameworks/baseline/code/runtime/src/flow.cc",
+      "-o",
+      "@RUN_ROOT@/runtime/orca-server-cloexec"
+    ]
+  },
+  {
+    "node": 1,
+    "source": {
+      "frameworks/baseline/distributed.py": "ec701d8fcfa1fc2cb4bece57cc5702ee5432e6b1f735a48af56cddb8c47cd768",
+      "frameworks/baseline/independent_critic_v34.py": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266",
+      "frameworks/baseline/unique_critic_targets.py": "535f527dfa5ed2379c17526459d380d8ac5e4547cfd5043edc05ae38e2e48124",
+      "tools/audit_scalar_update_contract.py": "c4d5177aba4c8b890ff95169b09110ecc956b19a4604143e7463358b21fd1845",
+      "runtime/orca-server-control-log-safe.cc": "cc12640de8c47da697dcf044c69534b7177172e698d5cb5c8dd3feb33d55ba31"
+    },
+    "binary_sha256": "632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0e12fe1d",
+    "compile_cmd": [
+      "g++",
+      "-std=c++11",
+      "-pthread",
+      "-I",
+      "@RUN_ROOT@/frameworks/baseline/code/runtime/src",
+      "@RUN_ROOT@/runtime/orca-server-control-log-safe.cc",
+      "@RUN_ROOT@/frameworks/baseline/code/runtime/src/flow.cc",
+      "-o",
+      "@RUN_ROOT@/runtime/orca-server-cloexec"
+    ]
+  },
+  {
+    "node": 2,
+    "source": {
+      "frameworks/baseline/distributed.py": "ec701d8fcfa1fc2cb4bece57cc5702ee5432e6b1f735a48af56cddb8c47cd768",
+      "frameworks/baseline/independent_critic_v34.py": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266",
+      "frameworks/baseline/unique_critic_targets.py": "535f527dfa5ed2379c17526459d380d8ac5e4547cfd5043edc05ae38e2e48124",
+      "tools/audit_scalar_update_contract.py": "c4d5177aba4c8b890ff95169b09110ecc956b19a4604143e7463358b21fd1845",
+      "runtime/orca-server-control-log-safe.cc": "cc12640de8c47da697dcf044c69534b7177172e698d5cb5c8dd3feb33d55ba31"
+    },
+    "binary_sha256": "632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0e12fe1d",
+    "compile_cmd": [
+      "g++",
+      "-std=c++11",
+      "-pthread",
+      "-I",
+      "@RUN_ROOT@/frameworks/baseline/code/runtime/src",
+      "@RUN_ROOT@/runtime/orca-server-control-log-safe.cc",
+      "@RUN_ROOT@/frameworks/baseline/code/runtime/src/flow.cc",
+      "-o",
+      "@RUN_ROOT@/runtime/orca-server-cloexec"
+    ]
+  },
+  {
+    "node": 3,
+    "source": {
+      "frameworks/baseline/distributed.py": "ec701d8fcfa1fc2cb4bece57cc5702ee5432e6b1f735a48af56cddb8c47cd768",
+      "frameworks/baseline/independent_critic_v34.py": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266",
+      "frameworks/baseline/unique_critic_targets.py": "535f527dfa5ed2379c17526459d380d8ac5e4547cfd5043edc05ae38e2e48124",
+      "tools/audit_scalar_update_contract.py": "c4d5177aba4c8b890ff95169b09110ecc956b19a4604143e7463358b21fd1845",
+      "runtime/orca-server-control-log-safe.cc": "cc12640de8c47da697dcf044c69534b7177172e698d5cb5c8dd3feb33d55ba31"
+    },
+    "binary_sha256": "632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0e12fe1d",
+    "compile_cmd": [
+      "g++",
+      "-std=c++11",
+      "-pthread",
+      "-I",
+      "@RUN_ROOT@/frameworks/baseline/code/runtime/src",
+      "@RUN_ROOT@/runtime/orca-server-control-log-safe.cc",
+      "@RUN_ROOT@/frameworks/baseline/code/runtime/src/flow.cc",
+      "-o",
+      "@RUN_ROOT@/runtime/orca-server-cloexec"
+    ]
+  },
+  {
+    "node": 4,
+    "source": {
+      "frameworks/baseline/distributed.py": "ec701d8fcfa1fc2cb4bece57cc5702ee5432e6b1f735a48af56cddb8c47cd768",
+      "frameworks/baseline/independent_critic_v34.py": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266",
+      "frameworks/baseline/unique_critic_targets.py": "535f527dfa5ed2379c17526459d380d8ac5e4547cfd5043edc05ae38e2e48124",
+      "tools/audit_scalar_update_contract.py": "c4d5177aba4c8b890ff95169b09110ecc956b19a4604143e7463358b21fd1845",
+      "runtime/orca-server-control-log-safe.cc": "cc12640de8c47da697dcf044c69534b7177172e698d5cb5c8dd3feb33d55ba31"
+    },
+    "binary_sha256": "632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0e12fe1d",
+    "compile_cmd": [
+      "g++",
+      "-std=c++11",
+      "-pthread",
+      "-I",
+      "@RUN_ROOT@/frameworks/baseline/code/runtime/src",
+      "@RUN_ROOT@/runtime/orca-server-control-log-safe.cc",
+      "@RUN_ROOT@/frameworks/baseline/code/runtime/src/flow.cc",
+      "-o",
+      "@RUN_ROOT@/runtime/orca-server-cloexec"
+    ]
+  }
+]

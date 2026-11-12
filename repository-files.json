@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-12 offline learner/actor capacity audit; current32/48 U010 admission NOT_RUN; no new training",
+  "scope": "2026-11-12 scalar update-contract repair/capacity qualification;24selected;fresh6M preregistered, not yet launched",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -6826,6 +6826,71 @@
       "path": "evidence/baseline-capacity-audit-20261112/validation.json",
       "bytes": 343,
       "sha256": "ac6f4be29cae4ddb75fa7e820ecd769553d1e750b65bf2fc7215206368d3d89a"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/capacity-selection.json",
+      "bytes": 333,
+      "sha256": "db78c9c336b4b50a7c0fb8f94a9beddf1f573e572a5b490bf058f4e833ab07a3"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/capacity24-capacity-assessment.json",
+      "bytes": 48184,
+      "sha256": "33469895555bc231e549204a7b7705047e1afc700bcfcd40a194490248fb0524"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/capacity32-capacity-assessment.json",
+      "bytes": 57933,
+      "sha256": "5c8c6ae39ad38a9f15b11a827c5668230dff54d0bbf877f4bdc10a5a7129f0a8"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/capacity48-capacity-assessment.json",
+      "bytes": 76546,
+      "sha256": "a6eb891d9a9675617e02bd704c918dba8fc75a402d41f4642c629fa3269d1565"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/claude-review.md",
+      "bytes": 1059,
+      "sha256": "346689d510b0e606e9b12ffb77bf01d9069a7b22b2818c4b1b05e6ed7e4b9f32"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/health-registration.json",
+      "bytes": 11622,
+      "sha256": "1eb18eb67cf6c4261be66725c563b6f84416e2f5df9646cb0bf84996a1b5be2c"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/initial-tensor-parity.json",
+      "bytes": 1260,
+      "sha256": "45192e422cb9cab9a3c2b90ca3b1065d638e1eaccae5df16cb2587fb4f2b54d5"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/registration.json",
+      "bytes": 730,
+      "sha256": "7bb2f54e786fbaaad38c1173d5e48d4295c0d8dd0586e33f758dfa67724aba5c"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/repair-deployment.json",
+      "bytes": 5390,
+      "sha256": "328933a72f4bc44aef96fa03ab9612fb0daec0f193eb3812150eba970b42e09f"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/summary.md",
+      "bytes": 3122,
+      "sha256": "46951936017e2e8e58c9accb63673d46d696cf7f005bcab56a1a6b2308cc973a"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/update-contract-late.json",
+      "bytes": 11071,
+      "sha256": "0e1f45d902b2d1b16529e1fbf06dd13421ad6cb9c44c23eddb5dcbc426eabb7c"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/update-contract-repaired.json",
+      "bytes": 15112,
+      "sha256": "8208bae0faccebbbd1ec02f99e0451f5dae12880a258af41abbe442f8d89bbb6"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/update-contract.json",
+      "bytes": 12193,
+      "sha256": "8a6e5d5a6dd36c370f62d80cab1a2cd6e5f7ef2004f5978fe408ee930351dda0"
     },
     {
       "path": "evidence/baseline-review-20261111/README.md",
@@ -18269,8 +18334,8 @@
     },
     {
       "path": "frameworks/baseline/code/runtime/src/orca-server-control-log-safe.cc",
-      "bytes": 26544,
-      "sha256": "7c9fde43ed07de6e475d026f89417c87af205077b7db38103d1d3d1adeec84a5"
+      "bytes": 26557,
+      "sha256": "c5d5a3f030a3fed576a58b9fcf10e0c56a341a9ae9a659a241c252c721a6625d"
     },
     {
       "path": "frameworks/baseline/code/runtime/src/orca-server-fast-handshake-probe.cc",
@@ -18338,8 +18403,8 @@
     },
     {
       "path": "frameworks/baseline/distributed.py",
-      "bytes": 21980,
-      "sha256": "66e5cff07c03b821c6ab4c99c52c958788fe1974e578ac0d79090f6f01e1f3f2"
+      "bytes": 22215,
+      "sha256": "ec701d8fcfa1fc2cb4bece57cc5702ee5432e6b1f735a48af56cddb8c47cd768"
     },
     {
       "path": "frameworks/baseline/episode_training.py",
@@ -18357,6 +18422,11 @@
       "sha256": "927c92be944ae93f8325e0f2424e13d1116e6df69f418b18275a009eef1e943b"
     },
     {
+      "path": "frameworks/baseline/independent_critic_v34.py",
+      "bytes": 3752,
+      "sha256": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266"
+    },
+    {
       "path": "frameworks/baseline/mahimahi_metrics.py",
       "bytes": 2899,
       "sha256": "b0dc674cf6e33a70f53971ff89542f384a8ea26c8c562b1453e5dccf7159aa80"
@@ -18368,8 +18438,8 @@
     },
     {
       "path": "frameworks/baseline/node_control.py",
-      "bytes": 11416,
-      "sha256": "6f1c5b73362c1276f57c2be9bdaf7a6ca1498cab125e3033d4270c321f77aa2c"
+      "bytes": 11486,
+      "sha256": "ff0ad0601ecd96a51510d1d510ce6196bcc56422f20f087385da50fbd764f4b3"
     },
     {
       "path": "frameworks/baseline/remote_frozen_evaluate.py",
@@ -18385,6 +18455,11 @@
       "path": "frameworks/baseline/timed_distributed.py",
       "bytes": 2153,
       "sha256": "cd8aa44def307ea5b4ec5cbb94ea5ba7d05db68f5f16a46cca1afd43a7a847f3"
+    },
+    {
+      "path": "frameworks/baseline/unique_critic_targets.py",
+      "bytes": 1052,
+      "sha256": "535f527dfa5ed2379c17526459d380d8ac5e4547cfd5043edc05ae38e2e48124"
     },
     {
       "path": "frameworks/baseline_ipc_audit/evaluate.py",
@@ -21161,8 +21236,8 @@
     },
     {
       "path": "run.py",
-      "bytes": 11136,
-      "sha256": "49434064072b746dbb0fc5a32e2249ae54139febfe22f8cbfe40b29cc47d91f1"
+      "bytes": 11597,
+      "sha256": "b6664dcb629caf8591bd93e6ba1519bd8a3e3331fbb764f0338c9b6cccfcb793"
     },
     {
       "path": "runtime/mahimahi/.gitignore",
@@ -22770,6 +22845,11 @@
       "sha256": "b83e31748b3a96c3c41ca6911f728819dfe8e7ed2c4eeea4f99b4362959c1895"
     },
     {
+      "path": "tools/audit_scalar_update_contract.py",
+      "bytes": 7199,
+      "sha256": "ed60ee9ff3b8f2e6798d045a2de897fd6db7d0e8f4615ac2eff6be26a283a8b5"
+    },
+    {
       "path": "tools/baseline_reproduction_check.py",
       "bytes": 5587,
       "sha256": "fbe42b6f14b68d9f63471351b88b000a1ad3aab91780593b81862ebdaf7bf61e"
@@ -23168,6 +23248,11 @@
       "path": "tools/test_scalar_exploration.py",
       "bytes": 3123,
       "sha256": "73afb15d3dcea163f6b8a907486ed7acb7a53b2cc8979b6938a6ddf1dac4c884"
+    },
+    {
+      "path": "tools/test_scalar_update_contract_cli.py",
+      "bytes": 2404,
+      "sha256": "61c95f25ed2cd58f30171d03f75b5d5f207520ccd572768b9db80dc8062a0d86"
     },
     {
       "path": "tools/test_scalar_verified_ipc.py",
