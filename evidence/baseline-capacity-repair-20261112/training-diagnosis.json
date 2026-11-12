@@ -1,0 +1,75 @@
+{
+  "status": "TRAINING_ACCOUNTING_COMPLETE_FROZEN_PERFORMANCE_SEPARATE",
+  "training_commit": "667533e547ee66ec10b2e7193f06548bdf3790c6",
+  "run": {
+    "run_id": "repaired-base-seed3-6m",
+    "status": "COMPLETED",
+    "reason": null,
+    "stop_reason": "SAMPLE_BUDGET_COMPLETE",
+    "wall_s": 6442.4358723163605,
+    "started_epoch": 1794451416.4915695,
+    "all_ready_epoch": 1794451448.9341986
+  },
+  "final": {
+    "status": "COMPLETED",
+    "reason": "",
+    "inserted": 6010470,
+    "counters": {
+      "critic_iterations": 599818,
+      "critic_optimizer_ops": 1199636,
+      "actor_updates": 599818,
+      "target_updates": 599818
+    },
+    "wall_s": 6406.933487798
+  },
+  "global_optimizer_step": 1799454,
+  "training_rows": 1281,
+  "finite_actor_gradient_records": 1271,
+  "exact_zero_actor_gradient_records": 543,
+  "first_recorded_recovery_after_1m": {
+    "inserted": "3980799",
+    "wall_s": "4443.925247045",
+    "actor_grad": "0.0013965257676318288"
+  },
+  "final_recorded_gradient": "0.23476926982402802",
+  "history_records": 893,
+  "maximum_recorded_debt": 2124.7000000000003,
+  "maximum_recorded_debt_after_100k": 2.8999999999941792,
+  "final_recorded_debt": 0.2000000000698492,
+  "maximum_recorded_FIFO": 17,
+  "sample_age_mean_record_max": 81399.501953125,
+  "per_actor_real_inserted": {
+    "minimum": 132439,
+    "maximum": 288423,
+    "mean": 250436.25
+  },
+  "per_actor_replay_rows_used": {
+    "minimum": 12796117,
+    "maximum": 12796118,
+    "spread": 1
+  },
+  "behavior": {
+    "rows": 6010470,
+    "lower_boundary_rows": 2886089,
+    "upper_boundary_rows": 2834860,
+    "exact_boundary_rows": 5062972,
+    "lower_to_positive": 1,
+    "upper_to_negative": 0,
+    "expected_sign_reversals_under_source_Gaussian": 1.6440130721283692,
+    "near_boundary_fraction": 0.9518305556803378,
+    "exact_boundary_fraction": 0.842358750646788
+  },
+  "native": {
+    "rows": 6010494,
+    "requested_min4": 2521101,
+    "requested_max2147483647": 2173263,
+    "before_max_and_percent_ge100": 2153768,
+    "violations_of_upper_clamp_alias": 0
+  },
+  "caveats": [
+    "Recorded diagnostic batches are not every optimizer step.",
+    "Boundary reversals are sign reversals of behavior actions, not measured TCP escape probabilities.",
+    "Weight/BN function swaps break their covariance and are not online causal interventions.",
+    "No frozen performance inference follows from gradient recovery or training utility."
+  ]
+}

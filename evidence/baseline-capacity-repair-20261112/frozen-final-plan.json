@@ -1,0 +1,2498 @@
+[
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R200",
+      "nominal_mbps": 48,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 4000,
+      "queue_bytes": 6016000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c19",
+    "host": 0,
+    "port": 12000,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R100",
+      "nominal_mbps": 12,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 500,
+      "queue_bytes": 752000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c02",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 1,
+    "port": 12001
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R100",
+      "nominal_mbps": 36,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1500,
+      "queue_bytes": 2256000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c08",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 2,
+    "port": 12002
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R50",
+      "nominal_mbps": 72,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 1500,
+      "queue_bytes": 2256000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c22",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 3,
+    "port": 12003
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R50",
+      "nominal_mbps": 24,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 500,
+      "queue_bytes": 752000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c06",
+    "host": 4,
+    "port": 12004,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R100",
+      "nominal_mbps": 42,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1750,
+      "queue_bytes": 2632000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c13",
+    "host": 0,
+    "port": 12005,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R20",
+      "nominal_mbps": 24,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 200,
+      "queue_bytes": 300800,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c05",
+    "host": 1,
+    "port": 12006,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R200",
+      "nominal_mbps": 36,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 3000,
+      "queue_bytes": 4512000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c09",
+    "host": 2,
+    "port": 12007,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R50",
+      "nominal_mbps": 48,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c17",
+    "host": 3,
+    "port": 12008,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R20",
+      "nominal_mbps": 42,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 350,
+      "queue_bytes": 526400,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c15",
+    "host": 4,
+    "port": 12009,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R50",
+      "nominal_mbps": 42,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 875,
+      "queue_bytes": 1316000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c12",
+    "host": 0,
+    "port": 12010,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R100",
+      "nominal_mbps": 12,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 500,
+      "queue_bytes": 752000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c02",
+    "host": 1,
+    "port": 12011,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R20",
+      "nominal_mbps": 24,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 200,
+      "queue_bytes": 300800,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c05",
+    "host": 2,
+    "port": 12012,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R200",
+      "nominal_mbps": 42,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 3500,
+      "queue_bytes": 5264000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c14",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 3,
+    "port": 12013
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R200",
+      "nominal_mbps": 36,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 3000,
+      "queue_bytes": 4512000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c09",
+    "host": 4,
+    "port": 12014,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R100",
+      "nominal_mbps": 36,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1500,
+      "queue_bytes": 2256000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c08",
+    "host": 0,
+    "port": 12015,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 3000,
+      "queue_bytes": 4512000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c23",
+    "host": 1,
+    "port": 12016,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R50",
+      "nominal_mbps": 72,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 1500,
+      "queue_bytes": 2256000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c22",
+    "host": 2,
+    "port": 12017,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R200",
+      "nominal_mbps": 72,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 6000,
+      "queue_bytes": 9024000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c20",
+    "host": 3,
+    "port": 12018,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R50",
+      "nominal_mbps": 24,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 500,
+      "queue_bytes": 752000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c06",
+    "host": 4,
+    "port": 12019,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R50",
+      "nominal_mbps": 42,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 875,
+      "queue_bytes": 1316000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c12",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 0,
+    "port": 12020
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R20",
+      "nominal_mbps": 12,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 100,
+      "queue_bytes": 150400,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c00",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 1,
+    "port": 12021
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R200",
+      "nominal_mbps": 72,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 6000,
+      "queue_bytes": 9024000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c20",
+    "host": 2,
+    "port": 12022,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R50",
+      "nominal_mbps": 72,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 1500,
+      "queue_bytes": 2256000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c22",
+    "host": 3,
+    "port": 12023,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R50",
+      "nominal_mbps": 12,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 250,
+      "queue_bytes": 376000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c01",
+    "host": 4,
+    "port": 12024,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R100",
+      "nominal_mbps": 42,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1750,
+      "queue_bytes": 2632000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c13",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 0,
+    "port": 12025
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R50",
+      "nominal_mbps": 12,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 250,
+      "queue_bytes": 376000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c01",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 1,
+    "port": 12026
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R50",
+      "nominal_mbps": 12,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 250,
+      "queue_bytes": 376000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c01",
+    "host": 2,
+    "port": 12027,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R200",
+      "nominal_mbps": 72,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 6000,
+      "queue_bytes": 9024000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c20",
+    "host": 3,
+    "port": 12028,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R200",
+      "nominal_mbps": 24,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 2000,
+      "queue_bytes": 3008000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c04",
+    "host": 4,
+    "port": 12029,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R200",
+      "nominal_mbps": 36,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 3000,
+      "queue_bytes": 4512000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c09",
+    "host": 0,
+    "port": 12030,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R200",
+      "nominal_mbps": 36,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 3000,
+      "queue_bytes": 4512000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c09",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 1,
+    "port": 12031
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R50",
+      "nominal_mbps": 24,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 500,
+      "queue_bytes": 752000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c06",
+    "host": 2,
+    "port": 12032,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 3000,
+      "queue_bytes": 4512000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c23",
+    "host": 3,
+    "port": 12033,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R20",
+      "nominal_mbps": 36,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 300,
+      "queue_bytes": 451200,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c10",
+    "host": 4,
+    "port": 12034,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R20",
+      "nominal_mbps": 36,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 300,
+      "queue_bytes": 451200,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c10",
+    "host": 0,
+    "port": 12035,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R100",
+      "nominal_mbps": 24,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c07",
+    "host": 1,
+    "port": 12036,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R20",
+      "nominal_mbps": 12,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 100,
+      "queue_bytes": 150400,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c00",
+    "host": 2,
+    "port": 12037,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R100",
+      "nominal_mbps": 36,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1500,
+      "queue_bytes": 2256000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c08",
+    "host": 3,
+    "port": 12038,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R200",
+      "nominal_mbps": 24,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 2000,
+      "queue_bytes": 3008000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c04",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 4,
+    "port": 12039
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R200",
+      "nominal_mbps": 42,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 3500,
+      "queue_bytes": 5264000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c14",
+    "host": 0,
+    "port": 12040,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R50",
+      "nominal_mbps": 48,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c17",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 1,
+    "port": 12041
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R20",
+      "nominal_mbps": 48,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 400,
+      "queue_bytes": 601600,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c16",
+    "host": 2,
+    "port": 12042,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R50",
+      "nominal_mbps": 36,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 750,
+      "queue_bytes": 1128000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c11",
+    "host": 3,
+    "port": 12043,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R200",
+      "nominal_mbps": 12,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c03",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 4,
+    "port": 12044
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R20",
+      "nominal_mbps": 72,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 600,
+      "queue_bytes": 902400,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c21",
+    "host": 0,
+    "port": 12045,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R200",
+      "nominal_mbps": 12,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c03",
+    "host": 1,
+    "port": 12046,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R50",
+      "nominal_mbps": 36,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 750,
+      "queue_bytes": 1128000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c11",
+    "host": 2,
+    "port": 12047,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R50",
+      "nominal_mbps": 12,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 250,
+      "queue_bytes": 376000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c01",
+    "host": 3,
+    "port": 12048,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R50",
+      "nominal_mbps": 24,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 500,
+      "queue_bytes": 752000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c06",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 4,
+    "port": 12049
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R50",
+      "nominal_mbps": 42,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 875,
+      "queue_bytes": 1316000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c12",
+    "host": 0,
+    "port": 12050,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R200",
+      "nominal_mbps": 24,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 2000,
+      "queue_bytes": 3008000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c04",
+    "host": 1,
+    "port": 12051,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R200",
+      "nominal_mbps": 12,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c03",
+    "host": 2,
+    "port": 12052,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R20",
+      "nominal_mbps": 36,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 300,
+      "queue_bytes": 451200,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c10",
+    "host": 3,
+    "port": 12053,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R50",
+      "nominal_mbps": 48,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c17",
+    "host": 4,
+    "port": 12054,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R100",
+      "nominal_mbps": 48,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 2000,
+      "queue_bytes": 3008000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c18",
+    "host": 0,
+    "port": 12055,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R20",
+      "nominal_mbps": 48,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 400,
+      "queue_bytes": 601600,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c16",
+    "host": 1,
+    "port": 12056,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R100",
+      "nominal_mbps": 36,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1500,
+      "queue_bytes": 2256000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c08",
+    "host": 2,
+    "port": 12057,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 3000,
+      "queue_bytes": 4512000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c23",
+    "host": 3,
+    "port": 12058,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R20",
+      "nominal_mbps": 36,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 300,
+      "queue_bytes": 451200,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c10",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 4,
+    "port": 12059
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R100",
+      "nominal_mbps": 42,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1750,
+      "queue_bytes": 2632000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c13",
+    "host": 0,
+    "port": 12060,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R100",
+      "nominal_mbps": 48,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 2000,
+      "queue_bytes": 3008000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c18",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 1,
+    "port": 12061
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R100",
+      "nominal_mbps": 48,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 2000,
+      "queue_bytes": 3008000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c18",
+    "host": 2,
+    "port": 12062,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R200",
+      "nominal_mbps": 72,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 6000,
+      "queue_bytes": 9024000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c20",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 3,
+    "port": 12063
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R200",
+      "nominal_mbps": 24,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 2000,
+      "queue_bytes": 3008000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c04",
+    "host": 4,
+    "port": 12064,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R20",
+      "nominal_mbps": 12,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 100,
+      "queue_bytes": 150400,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c00",
+    "host": 0,
+    "port": 12065,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R50",
+      "nominal_mbps": 48,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c17",
+    "host": 1,
+    "port": 12066,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R100",
+      "nominal_mbps": 42,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1750,
+      "queue_bytes": 2632000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c13",
+    "host": 2,
+    "port": 12067,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R100",
+      "nominal_mbps": 12,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 500,
+      "queue_bytes": 752000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c02",
+    "host": 3,
+    "port": 12068,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R50",
+      "nominal_mbps": 36,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 750,
+      "queue_bytes": 1128000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c11",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 4,
+    "port": 12069
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R200",
+      "nominal_mbps": 48,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 4000,
+      "queue_bytes": 6016000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c19",
+    "host": 0,
+    "port": 12070,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R20",
+      "nominal_mbps": 42,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 350,
+      "queue_bytes": 526400,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c15",
+    "host": 1,
+    "port": 12071,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R20",
+      "nominal_mbps": 48,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 400,
+      "queue_bytes": 601600,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c16",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 2,
+    "port": 12072
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R200",
+      "nominal_mbps": 48,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 4000,
+      "queue_bytes": 6016000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c19",
+    "host": 3,
+    "port": 12073,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant36",
+      "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+      "capacity_mbps": 35.999744,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G36-R50",
+      "nominal_mbps": 36,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 750,
+      "queue_bytes": 1128000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c11",
+    "host": 4,
+    "port": 12074,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R200",
+      "nominal_mbps": 42,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 3500,
+      "queue_bytes": 5264000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c14",
+    "host": 0,
+    "port": 12075,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R100",
+      "nominal_mbps": 48,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 2000,
+      "queue_bytes": 3008000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c18",
+    "host": 1,
+    "port": 12076,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R200",
+      "nominal_mbps": 12,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c03",
+    "host": 2,
+    "port": 12077,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R100",
+      "nominal_mbps": 24,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c07",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 3,
+    "port": 12078
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R20",
+      "nominal_mbps": 42,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 350,
+      "queue_bytes": 526400,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c15",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 4,
+    "port": 12079
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R20",
+      "nominal_mbps": 42,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 350,
+      "queue_bytes": 526400,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c15",
+    "host": 0,
+    "port": 12080,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R20",
+      "nominal_mbps": 24,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 200,
+      "queue_bytes": 300800,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c05",
+    "host": 1,
+    "port": 12081,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R20",
+      "nominal_mbps": 72,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 600,
+      "queue_bytes": 902400,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c21",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 2,
+    "port": 12082
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R20",
+      "nominal_mbps": 72,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 600,
+      "queue_bytes": 902400,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c21",
+    "host": 3,
+    "port": 12083,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R50",
+      "nominal_mbps": 42,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 875,
+      "queue_bytes": 1316000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c12",
+    "host": 4,
+    "port": 12084,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R50",
+      "nominal_mbps": 72,
+      "delay_ms": 25,
+      "base_rtt_ms": 50,
+      "queue_packets": 1500,
+      "queue_bytes": 2256000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c22",
+    "host": 0,
+    "port": 12085,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R20",
+      "nominal_mbps": 72,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 600,
+      "queue_bytes": 902400,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c21",
+    "host": 1,
+    "port": 12086,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R100",
+      "nominal_mbps": 24,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c07",
+    "host": 2,
+    "port": 12087,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R200",
+      "nominal_mbps": 48,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 4000,
+      "queue_bytes": 6016000,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c19",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 3,
+    "port": 12088
+  },
+  {
+    "condition": {
+      "trace": "constant42",
+      "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+      "capacity_mbps": 41.99168,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G42-R200",
+      "nominal_mbps": 42,
+      "delay_ms": 100,
+      "base_rtt_ms": 200,
+      "queue_packets": 3500,
+      "queue_bytes": 5264000,
+      "queue_bdp": 5.01432664756447
+    },
+    "group": "repaired-final6m",
+    "repeat": 0,
+    "run": "repaired-confirm-r0-c14",
+    "host": 4,
+    "port": 12089,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R20",
+      "nominal_mbps": 24,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 200,
+      "queue_bytes": 300800,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c05",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 0,
+    "port": 12090
+  },
+  {
+    "condition": {
+      "trace": "constant24",
+      "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+      "capacity_mbps": 23.991808,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G24-R100",
+      "nominal_mbps": 24,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 1000,
+      "queue_bytes": 1504000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c07",
+    "host": 1,
+    "port": 12091,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R20",
+      "nominal_mbps": 12,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 100,
+      "queue_bytes": 150400,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c00",
+    "host": 2,
+    "port": 12092,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant72",
+      "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+      "capacity_mbps": 71.999488,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G72-R100",
+      "nominal_mbps": 72,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 3000,
+      "queue_bytes": 4512000,
+      "queue_bdp": 5.0133689839572195
+    },
+    "group": "H0-reference",
+    "repeat": 0,
+    "run": "H0-reference-c23",
+    "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+    "model_sha256": {
+      ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+      ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+    },
+    "host": 3,
+    "port": 12093
+  },
+  {
+    "condition": {
+      "trace": "constant48",
+      "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+      "capacity_mbps": 47.995648,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G48-R20",
+      "nominal_mbps": 48,
+      "delay_ms": 10,
+      "base_rtt_ms": 20,
+      "queue_packets": 400,
+      "queue_bytes": 601600,
+      "queue_bdp": 5.013787916771121
+    },
+    "group": "repaired-final6m",
+    "repeat": 2,
+    "run": "repaired-confirm-r2-c16",
+    "host": 4,
+    "port": 12094,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  },
+  {
+    "condition": {
+      "trace": "constant12",
+      "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+      "capacity_mbps": 11.995904,
+      "packet_bytes": 1504,
+      "trace_period_ms": 1000,
+      "condition": "G12-R100",
+      "nominal_mbps": 12,
+      "delay_ms": 50,
+      "base_rtt_ms": 100,
+      "queue_packets": 500,
+      "queue_bytes": 752000,
+      "queue_bdp": 5.015045135406219
+    },
+    "group": "repaired-final6m",
+    "repeat": 1,
+    "run": "repaired-confirm-r1-c02",
+    "host": 0,
+    "port": 12095,
+    "checkpoint": "@RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+    "model_sha256": {
+      ".index": "340a3003426e4351d0b695e21298e0d580c970ccef7cf90d9a633fd5fa8cfc70",
+      ".data-00000-of-00001": "7ba94d679c32c6cdf202c2efffb307a6b6b62a1750813bed2f67b91936e5f135"
+    }
+  }
+]
