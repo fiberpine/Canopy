@@ -1,5 +1,7 @@
 # Canopy：baseline与两种MTP双动作实现
 
+[本轮RL源码调研与BN新实测](docs/BASELINE_RL_RESEARCH_20261112.md)：正式图确认4个BN统计各有2个未加锁写入，单次重复的动作差约.0032；唯一统计更新短检一致但尚未用于长训。约420万样本出现梯度恢复，终点性能待测。附TD3/CrossQ/DDPG原始资料及与当前配方的边界。
+
 [11月12日更新契约实测与容量准入](evidence/baseline-capacity-repair-20261112/summary.md)：已修复可复现的早期共享Adam竞争，24/32容量通过、48因更新积压未准入；24actor随机seed3的名义6M训练正在运行，最终24格×3与H0参照尚待完成，不能称新健康基座。上轮实际云端native与H0相同，已更正此前将本机缓存ELF差异当作实际运行差异的表述。
 
 [五机低利用率与actor扩容分析](docs/BASELINE_CAPACITY_AUDIT_20261112.md)：现有五台值得短测32/48，但低整机CPU不代表learner吞吐有同比余量。历史48actor在CPU约47%时已有更新积压；当前U=.1的更高并发仍待实测，本轮0云连接。

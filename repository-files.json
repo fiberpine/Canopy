@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-12 repair/capacity qualification;24actor fresh6M running;runtime native identity correction;final health pending",
+  "scope": "2026-11-12 live6M run; critic repair/capacity andactor BN contract evidence; late recovery observed; frozen health still pending",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -19,8 +19,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 13836,
-      "sha256": "a2c70360e50eaba2df36bb1c61a2dddc67535f122231b5847dc8f76e588f0d10"
+      "bytes": 14179,
+      "sha256": "b61477ec00fd197bbd2959a4e708a50db5cd7ff9aba37597df1e03e9c3de5983"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -61,6 +61,11 @@
       "path": "docs/BASELINE_RECOVERY_20261111.md",
       "bytes": 6097,
       "sha256": "8d1287be750ab79a18b19019bea2f9f59a2719957bbb4a31b62af0b9fc0f4053"
+    },
+    {
+      "path": "docs/BASELINE_RL_RESEARCH_20261112.md",
+      "bytes": 6535,
+      "sha256": "f819f4a955f79375e1b05f50590215ebc67c25b47fa3c407d8771cf11f4bf17f"
     },
     {
       "path": "docs/BASELINE_SCALE_AND_FAILURE_AUDIT_20261112.md",
@@ -6828,6 +6833,26 @@
       "sha256": "ac6f4be29cae4ddb75fa7e820ecd769553d1e750b65bf2fc7215206368d3d89a"
     },
     {
+      "path": "evidence/baseline-capacity-repair-20261112/BN-diagnostic-provenance.json",
+      "bytes": 4665,
+      "sha256": "b79ec9f93d65204721a570dbcc799e86543648b93945407a4008fc24d641bae0"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/BN-runtime-source-inspection.json",
+      "bytes": 3682,
+      "sha256": "d8e185d62d734231d68221189bc691e2715f3ff8553bbf244466632923844db8"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/actor-bn-contract-r2.json",
+      "bytes": 15315,
+      "sha256": "36d726150471c8c6c83e9628fd7efddc2995bf08e9d3f40915dbc41e562b2d03"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/actor-bn-contract-r3.json",
+      "bytes": 22936,
+      "sha256": "771499e45309cab6dd661fde5c4c8e51ce2f511e1034e8cddbb5e3146066f02b"
+    },
+    {
       "path": "evidence/baseline-capacity-repair-20261112/capacity-selection.json",
       "bytes": 333,
       "sha256": "db78c9c336b4b50a7c0fb8f94a9beddf1f573e572a5b490bf058f4e833ab07a3"
@@ -6863,9 +6888,29 @@
       "sha256": "45192e422cb9cab9a3c2b90ca3b1065d638e1eaccae5df16cb2587fb4f2b54d5"
     },
     {
+      "path": "evidence/baseline-capacity-repair-20261112/late-recovery-observation.json",
+      "bytes": 7878,
+      "sha256": "8c20f303bd9e2dcad916216f57a642c968ff629432707eefa30b9fb53e7fd041"
+    },
+    {
       "path": "evidence/baseline-capacity-repair-20261112/native-runtime-correction.json",
       "bytes": 1001,
       "sha256": "112e9db407c1570057f6be36138682f3700cb22da24bf20764e63a21f59d122c"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/plots/capacity-and-cpu.png",
+      "bytes": 158142,
+      "sha256": "cf048dd7cc6a371b0b4e5204cb9d6f4617bb44aaaf676be4dbeb0a4701f85906"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/plots/capacity-and-cpu.svg",
+      "bytes": 135812,
+      "sha256": "8ebfda6831a944755fc1736e8bb8e9b3fefba58af12cf7d8d8316cf86d5afbf9"
+    },
+    {
+      "path": "evidence/baseline-capacity-repair-20261112/plots/capacity-plot-data.json",
+      "bytes": 1470,
+      "sha256": "ef4bb08c3a2238ddb3ec9c10b577fdac69e6f103e8e9ef3f1fd877aa0dd11857"
     },
     {
       "path": "evidence/baseline-capacity-repair-20261112/registration.json",
@@ -22851,8 +22896,8 @@
     },
     {
       "path": "tools/audit_scalar_update_contract.py",
-      "bytes": 7199,
-      "sha256": "ed60ee9ff3b8f2e6798d045a2de897fd6db7d0e8f4615ac2eff6be26a283a8b5"
+      "bytes": 12983,
+      "sha256": "3e3854006e7e9ad425092837bb4dc3dee0163fe1f9eb41b8423b9d72d6e48171"
     },
     {
       "path": "tools/baseline_reproduction_check.py",

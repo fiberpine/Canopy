@@ -3,6 +3,7 @@
 Source checkpoints/replay are never written. This is not a network experiment.
 """
 import argparse
+import collections
 import hashlib
 import importlib
 import json
@@ -81,6 +82,82 @@ def audit(args):
     for op in a.critic_train_op:
         sess.run(op, fd)
     sequential_after = sess.run(list(beta)+[a.global_step])
+    actor_bn_contract = None
+    actor_bn_session_runs = 0
+    if args.with_actor_bn:
+        restore()
+        bn_entries_before_reference = [op.name for op in tf.get_collection(tf.GraphKeys.UPDATE_OPS)]
+        reference_loss = -tf.reduce_mean(a.critic_actor_out)
+        parameters = a.symbolic_actor.train_var()
+        reference_gradients = tf.gradients(reference_loss, parameters)
+        moving_gradients = tf.gradients(a.a_loss, parameters)
+        defined = [(v, ref, moving) for v, ref, moving in zip(parameters, reference_gradients, moving_gradients) if ref is not None and moving is not None]
+        comparison = {}
+        for training_flag in (True, False):
+            query = dict(fd)
+            query[a.is_training] = training_flag
+            moving, ref, moving_loss, original_loss = sess.run([a._moving_action, a.symbolic_actor_bound_lower, a.a_loss, reference_loss], query)
+            grad_ref, grad_moving = sess.run([[r for v,r,m in defined], [m for v,r,m in defined]], query)
+            comparison[str(training_flag)] = dict(action_max_error=float(np.max(np.abs(moving-ref))),
+                loss_max_error=float(abs(moving_loss-original_loss)),
+                gradient_max_error=max(float(np.max(np.abs(x-y))) for x,y in zip(grad_ref, grad_moving)),
+                compared_gradient_variables=[v.name for v,r,m in defined],
+                gradient_defined_mask_equal=all((r is None)==(m is None) for r,m in zip(reference_gradients,moving_gradients)))
+        # Exactly the runtime filter. These are separate temporary-memory tests.
+        bn = [op for op in tf.get_collection(tf.GraphKeys.UPDATE_OPS)
+              if 'actor' in op.name and 'target' not in op.name
+              and (not cfg.get('bn_relevant_only') or 'abstract_actor' in op.name)]
+        assert bn_entries_before_reference == [op.name for op in tf.get_collection(tf.GraphKeys.UPDATE_OPS)]
+        destinations = []
+        unique = {}
+        for entry in bn:
+            # Collections may hold Merge/NoOp wrappers, not assignments.
+            pending = [entry.op if hasattr(entry, 'op') else entry]
+            seen = set()
+            while pending:
+                op = pending.pop()
+                if op in seen:
+                    continue
+                seen.add(op)
+                if op.type in ('Assign', 'AssignSub', 'AssignAdd', 'AssignVariableOp', 'AssignSubVariableOp', 'AssignAddVariableOp'):
+                    variable = op.inputs[0].op
+                    while variable.type in ('Identity', 'Switch', 'RefSwitch', 'Enter', 'RefEnter'):
+                        variable = variable.inputs[0].op
+                    destination = variable.name
+                    if destination.startswith('abstract_actor/') and 'moving_' in destination:
+                        destinations.append(dict(collection_entry=entry.name, operation=op.name, type=op.type, destination=destination))
+                        unique.setdefault(destination, entry)
+                pending.extend(t.op for t in op.inputs)
+                pending.extend(op.control_inputs)
+        assert len(unique) == 4, ('Unexpected online moving-statistics layout', list(unique))
+        policy = [v for v in variables if v.name.startswith('abstract_actor/') and '/Adam' not in v.name]
+        cases = {}
+        for mode in ('runtime_concurrent', 'serial_all_BN_then_actor', 'serial_unique_BN_then_actor'):
+            results = []
+            post_actions = []
+            for repeat in range(24):
+                restore()
+                if mode == 'runtime_concurrent':
+                    sess.run([a.actor_train_op, bn], fd)
+                    actor_bn_session_runs += 1
+                else:
+                    sess.run(bn if mode == 'serial_all_BN_then_actor' else list(unique.values()), fd)
+                    sess.run(a.actor_train_op, fd)
+                    actor_bn_session_runs += 2
+                results.append(sess.run(policy))
+                post_actions.append(sess.run(a._moving_action, {a.s0:data['s0'][idx], a.is_training:False}))
+            digests_actor = [hashlib.sha256(b''.join(v.tobytes() for v in values)).hexdigest() for values in results]
+            cases[mode] = dict(unique_digests=len(set(digests_actor)),
+                max_policy_variable_spread=max(float(np.max(np.abs(x-y))) for values in results[1:] for x,y in zip(values,results[0])),
+                per_variable=[dict(name=v.name,reference_abs_max=float(np.max(np.abs(results[0][j]))),
+                    max_deviation_from_first=float(max(np.max(np.abs(values[j]-results[0][j])) for values in results[1:]))) for j,v in enumerate(policy)],
+                maximum_post_update_action_range=float(np.max(np.ptp(np.asarray(post_actions),axis=0))),
+                p95_post_update_action_range=float(np.percentile(np.ptp(np.asarray(post_actions),axis=0),95)))
+        actor_bn_contract = dict(cases=cases, moving_vs_original_zero_width_IBP=comparison, update_operations=destinations,
+            destination_multiplicity=dict(collections.Counter(d['destination'] for d in destinations)),
+            repeats=24, source_optimizer_state='Restored source actor moments/powers; no source writes',
+            unique_assignment_control='Executed fetchable collection wrappers: first original BN update per exact moving variable, before actor. This changes EMA multiplicity and ordering, not the active recipe.',
+            scope='The serial control changes update ordering. This is a diagnostic, not an authorized change to the active training recipe.')
     # Synthetic values isolate the effective tau of the exact runtime invocation.
     online = next(v for v in variables if v.name.startswith('critic2/') and v.name.endswith('/bias:0'))
     suffix = online.op.name.split('/', 1)[1]
@@ -114,6 +191,8 @@ def audit(args):
         online_BN_function_swaps=swaps, online_policy_variables=[v.name for v in online_vars],
         immutable_source_sha256=hashes, training_session_runs=24+len(a.critic_train_op),
         temporary_critic_minimizer_operations=50, new_TCP_flows=0,
+        actor_BN_contract=actor_bn_contract, temporary_actor_optimizer_operations=72 if args.with_actor_bn else 0,
+        actor_BN_training_session_runs=actor_bn_session_runs,
         interpretation='Retained endpoint replay states only. Function swaps are not causal online performance tests.')
     sess.close()
     return result
@@ -124,6 +203,7 @@ if __name__ == '__main__':
     for name in ('framework', 'config', 'checkpoint', 'replay', 'earlier', 'later', 'output'):
         p.add_argument('--'+name, required=True)
     p.add_argument('--repaired', action='store_true')
+    p.add_argument('--with-actor-bn', action='store_true')
     args = p.parse_args()
     result = audit(args)
     Path(args.output).write_text(json.dumps(result, indent=2, allow_nan=False)+'\n')

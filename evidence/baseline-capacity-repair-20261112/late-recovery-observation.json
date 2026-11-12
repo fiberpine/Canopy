@@ -1,0 +1,344 @@
+{
+  "epoch": 1794455894.0343513,
+  "controller_stage": "RUNNING",
+  "training": {
+    "wall_s": "4468.94302295",
+    "inserted": "4006932",
+    "replay_length": "150000",
+    "critic_iterations": "399464",
+    "critic_optimizer_ops": "798928",
+    "actor_updates": "399464",
+    "target_updates": "399464",
+    "whole_U": "0.09969323162958593",
+    "post_warmup_U": "0.09999989986592046",
+    "fifo_backlog": "6",
+    "sample_age_mean": "73580.345703125",
+    "critic_loss": "6.855098247528076",
+    "critic2_loss": "6.423228740692139",
+    "actor_loss": "-25.349140167236328",
+    "q_mean": "24.544071197509766",
+    "actor_grad": "0.0003964679781347513",
+    "critic_grad": "128.52000427246094",
+    "minimum_condition_inserted": "49450",
+    "active_conditions": "24",
+    "minimum_condition_sampled": "8521898",
+    "maximum_condition_sampled": "8521899"
+  },
+  "debt": 1.900000000023283,
+  "actors": [
+    {
+      "node": 1,
+      "index": 0,
+      "alive": true,
+      "recent": {
+        "step": 202086,
+        "min_saturation": 0.0,
+        "cwnd_mean": 150.075,
+        "action_mean": 1.0,
+        "reward_mean": -0.05202748610199714
+      },
+      "result_status": null
+    },
+    {
+      "node": 1,
+      "index": 4,
+      "alive": true,
+      "recent": {
+        "step": 201651,
+        "min_saturation": 0.0,
+        "cwnd_mean": 2147483647.0,
+        "action_mean": 1.0,
+        "reward_mean": 0.23617784569565475
+      },
+      "result_status": null
+    },
+    {
+      "node": 1,
+      "index": 8,
+      "alive": true,
+      "recent": {
+        "step": 90442,
+        "min_saturation": 0.0,
+        "cwnd_mean": 655864200.325,
+        "action_mean": 0.9999997422099114,
+        "reward_mean": 0.1309887435518203
+      },
+      "result_status": null
+    },
+    {
+      "node": 1,
+      "index": 12,
+      "alive": true,
+      "recent": {
+        "step": 170574,
+        "min_saturation": 0.0,
+        "cwnd_mean": 464099393.085,
+        "action_mean": 1.0,
+        "reward_mean": -0.1666884511824789
+      },
+      "result_status": null
+    },
+    {
+      "node": 1,
+      "index": 16,
+      "alive": true,
+      "recent": {
+        "step": 201240,
+        "min_saturation": 0.0,
+        "cwnd_mean": 34810553.745,
+        "action_mean": 1.0,
+        "reward_mean": -0.4510025687509836
+      },
+      "result_status": null
+    },
+    {
+      "node": 1,
+      "index": 20,
+      "alive": true,
+      "recent": {
+        "step": 194617,
+        "min_saturation": 0.0,
+        "cwnd_mean": 2147483647.0,
+        "action_mean": 1.0,
+        "reward_mean": 0.6895600903059039
+      },
+      "result_status": null
+    },
+    {
+      "node": 2,
+      "index": 1,
+      "alive": true,
+      "recent": {
+        "step": 167652,
+        "min_saturation": 0.0,
+        "cwnd_mean": 335.995,
+        "action_mean": 1.0,
+        "reward_mean": 0.0848171708122549
+      },
+      "result_status": null
+    },
+    {
+      "node": 2,
+      "index": 5,
+      "alive": true,
+      "recent": {
+        "step": 200493,
+        "min_saturation": 0.0,
+        "cwnd_mean": 156391.665,
+        "action_mean": 1.0,
+        "reward_mean": -0.707403533467581
+      },
+      "result_status": null
+    },
+    {
+      "node": 2,
+      "index": 9,
+      "alive": true,
+      "recent": {
+        "step": 200451,
+        "min_saturation": 0.0,
+        "cwnd_mean": 2147483647.0,
+        "action_mean": 1.0,
+        "reward_mean": 0.3508722577160334
+      },
+      "result_status": null
+    },
+    {
+      "node": 2,
+      "index": 13,
+      "alive": true,
+      "recent": {
+        "step": 89702,
+        "min_saturation": 0.0,
+        "cwnd_mean": 949659286.1,
+        "action_mean": 0.9997638455033302,
+        "reward_mean": 0.1980305191145602
+      },
+      "result_status": null
+    },
+    {
+      "node": 2,
+      "index": 17,
+      "alive": true,
+      "recent": {
+        "step": 170255,
+        "min_saturation": 0.0,
+        "cwnd_mean": 421784532.86,
+        "action_mean": 0.9999999985098839,
+        "reward_mean": -0.0722618193992677
+      },
+      "result_status": null
+    },
+    {
+      "node": 2,
+      "index": 21,
+      "alive": true,
+      "recent": {
+        "step": 200386,
+        "min_saturation": 0.0,
+        "cwnd_mean": 66221336.935,
+        "action_mean": 1.0,
+        "reward_mean": -0.24353575834325963
+      },
+      "result_status": null
+    },
+    {
+      "node": 3,
+      "index": 2,
+      "alive": true,
+      "recent": {
+        "step": 90015,
+        "min_saturation": 0.0,
+        "cwnd_mean": 436091607.16,
+        "action_mean": 0.9999957627058029,
+        "reward_mean": -0.5154062657965033
+      },
+      "result_status": null
+    },
+    {
+      "node": 3,
+      "index": 6,
+      "alive": true,
+      "recent": {
+        "step": 170420,
+        "min_saturation": 0.0,
+        "cwnd_mean": 112485345.05,
+        "action_mean": 1.0,
+        "reward_mean": -0.6150552537183951
+      },
+      "result_status": null
+    },
+    {
+      "node": 3,
+      "index": 10,
+      "alive": true,
+      "recent": {
+        "step": 200749,
+        "min_saturation": 0.0,
+        "cwnd_mean": 5860895.235,
+        "action_mean": 1.0,
+        "reward_mean": -0.39871020328274986
+      },
+      "result_status": null
+    },
+    {
+      "node": 3,
+      "index": 14,
+      "alive": true,
+      "recent": {
+        "step": 193944,
+        "min_saturation": 0.0,
+        "cwnd_mean": 2147483647.0,
+        "action_mean": 1.0,
+        "reward_mean": 0.401368486659768
+      },
+      "result_status": null
+    },
+    {
+      "node": 3,
+      "index": 18,
+      "alive": true,
+      "recent": {
+        "step": 199976,
+        "min_saturation": 0.0,
+        "cwnd_mean": 2147483647.0,
+        "action_mean": 1.0,
+        "reward_mean": 0.23070030863898297
+      },
+      "result_status": null
+    },
+    {
+      "node": 3,
+      "index": 22,
+      "alive": true,
+      "recent": {
+        "step": 169986,
+        "min_saturation": 0.0,
+        "cwnd_mean": 654940148.23,
+        "action_mean": 0.9999993109703064,
+        "reward_mean": 0.13656730562799016
+      },
+      "result_status": null
+    },
+    {
+      "node": 4,
+      "index": 3,
+      "alive": true,
+      "recent": {
+        "step": 49511,
+        "min_saturation": 0.0,
+        "cwnd_mean": 517093530.215,
+        "action_mean": 1.0,
+        "reward_mean": -0.031891276808368854
+      },
+      "result_status": null
+    },
+    {
+      "node": 4,
+      "index": 7,
+      "alive": true,
+      "recent": {
+        "step": 90763,
+        "min_saturation": 0.0,
+        "cwnd_mean": 435282003.005,
+        "action_mean": 1.0,
+        "reward_mean": -0.007041466051789179
+      },
+      "result_status": null
+    },
+    {
+      "node": 4,
+      "index": 11,
+      "alive": true,
+      "recent": {
+        "step": 170360,
+        "min_saturation": 0.0,
+        "cwnd_mean": 442553732.77,
+        "action_mean": 1.0,
+        "reward_mean": -0.21030847247830536
+      },
+      "result_status": null
+    },
+    {
+      "node": 4,
+      "index": 15,
+      "alive": true,
+      "recent": {
+        "step": 196244,
+        "min_saturation": 0.0,
+        "cwnd_mean": 24594672.195,
+        "action_mean": 1.0,
+        "reward_mean": -0.5396240698750651
+      },
+      "result_status": null
+    },
+    {
+      "node": 4,
+      "index": 19,
+      "alive": true,
+      "recent": {
+        "step": 189640,
+        "min_saturation": 0.0,
+        "cwnd_mean": 2147483647.0,
+        "action_mean": 1.0,
+        "reward_mean": 0.4566962617106806
+      },
+      "result_status": null
+    },
+    {
+      "node": 4,
+      "index": 23,
+      "alive": true,
+      "recent": {
+        "step": 195533,
+        "min_saturation": 0.0,
+        "cwnd_mean": 2147483647.0,
+        "action_mean": 1.0,
+        "reward_mean": 0.3474260546974879
+      },
+      "result_status": null
+    }
+  ],
+  "result": null,
+  "learner_disk_free": 40448712704
+}

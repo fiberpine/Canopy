@@ -1,0 +1,94 @@
+{
+  "versions": {
+    "tensorflow-1.14.0.dist-info": "Version: 1.14.0",
+    "dm_sonnet-1.34.dist-info": "Version: 1.34"
+  },
+  "source_files": {
+    "sonnet/python/modules/batch_norm.py": {
+      "sha256": "398779a91d99db95da3e9e0638042e8f55ca295928727bf81c3b681ca0401b92"
+    },
+    "tensorflow/python/training/moving_averages.py": {
+      "sha256": "84e1d345b2dec2ff28b0f7af44f146a77d2f0ecb4eee009a67a630a61dc67a95"
+    },
+    "tensorflow/python/ops/state_ops.py": {
+      "sha256": "71a9c35c8e424d5c54015648fa31a22dcb5f2f810394ca64f304f4debaf3c727"
+    }
+  },
+  "actual_formal_graph_BN_writers": [
+    {
+      "name": "abstract_actor/abstract_actor/bn1/cond_1/update_moving_mean",
+      "operation": "AssignSub",
+      "use_locking": false,
+      "inputs": [
+        "abstract_actor/abstract_actor/bn1/cond_1/update_moving_mean/Switch:1",
+        "abstract_actor/abstract_actor/bn1/cond_1/update_moving_mean/mul"
+      ]
+    },
+    {
+      "name": "abstract_actor/abstract_actor/bn1/cond_1/update_moving_variance",
+      "operation": "AssignSub",
+      "use_locking": false,
+      "inputs": [
+        "abstract_actor/abstract_actor/bn1/cond_1/update_moving_variance/Switch:1",
+        "abstract_actor/abstract_actor/bn1/cond_1/update_moving_variance/mul"
+      ]
+    },
+    {
+      "name": "abstract_actor/abstract_actor/bn2/cond_1/update_moving_mean",
+      "operation": "AssignSub",
+      "use_locking": false,
+      "inputs": [
+        "abstract_actor/abstract_actor/bn2/cond_1/update_moving_mean/Switch:1",
+        "abstract_actor/abstract_actor/bn2/cond_1/update_moving_mean/mul"
+      ]
+    },
+    {
+      "name": "abstract_actor/abstract_actor/bn2/cond_1/update_moving_variance",
+      "operation": "AssignSub",
+      "use_locking": false,
+      "inputs": [
+        "abstract_actor/abstract_actor/bn2/cond_1/update_moving_variance/Switch:1",
+        "abstract_actor/abstract_actor/bn2/cond_1/update_moving_variance/mul"
+      ]
+    },
+    {
+      "name": "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/update_moving_mean",
+      "operation": "AssignSub",
+      "use_locking": false,
+      "inputs": [
+        "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/update_moving_mean/Switch:1",
+        "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/update_moving_mean/mul"
+      ]
+    },
+    {
+      "name": "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/update_moving_variance",
+      "operation": "AssignSub",
+      "use_locking": false,
+      "inputs": [
+        "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/update_moving_variance/Switch:1",
+        "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/update_moving_variance/mul"
+      ]
+    },
+    {
+      "name": "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/update_moving_mean",
+      "operation": "AssignSub",
+      "use_locking": false,
+      "inputs": [
+        "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/update_moving_mean/Switch:1",
+        "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/update_moving_mean/mul"
+      ]
+    },
+    {
+      "name": "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/update_moving_variance",
+      "operation": "AssignSub",
+      "use_locking": false,
+      "inputs": [
+        "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/update_moving_variance/Switch:1",
+        "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/update_moving_variance/mul"
+      ]
+    }
+  ],
+  "meta_sha256": "c3af868cabe60e272135fc89d6377cce45361365b1a3810039abf6ce87bced62",
+  "network_flows": 0,
+  "optimizer_operations": 0
+}

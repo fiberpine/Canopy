@@ -1,0 +1,36 @@
+{
+  "kind": "Auxiliary temporary-memory diagnostics, not additional online training",
+  "failed_r1": {
+    "status": "FAILED_AUXILIARY_DIAGNOSTIC",
+    "code": 1,
+    "error": "layers.core.Dense object at 0x7f0100b81e48>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f0100b81e48>>: AttributeError: module 'gast' has no attribute 'Index'\nWARNING:tensorflow:From @CLOUD_HOME@/orca-capacity-repair-20261112/audit-actor-bn-during-run.py:44: The name tf.train.NewCheckpointReader is deprecated. Please use tf.compat.v1.train.NewCheckpointReader instead.\n\nWARNING:tensorflow:From @CLOUD_HOME@/orca-capacity-repair-20261112/audit-actor-bn-during-run.py:44: The name tf.train.NewCheckpointReader is deprecated. Please use tf.compat.v1.train.NewCheckpointReader instead.\n\nWARNING:tensorflow:From @CLOUD_HOME@/orca-capacity-repair-20261112/audit-actor-bn-during-run.py:45: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.\n\nWARNING:tensorflow:From @CLOUD_HOME@/orca-capacity-repair-20261112/audit-actor-bn-during-run.py:45: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.\n\nWARNING:tensorflow:From @CLOUD_HOME@/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.\nInstructions for updating:\nUse standard file APIs to check for files with this prefix.\nWARNING:tensorflow:From @CLOUD_HOME@/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.\nInstructions for updating:\nUse standard file APIs to check for files with this prefix.\nTraceback (most recent call last):\n  File \"@CLOUD_HOME@/orca-capacity-repair-20261112/audit-actor-bn-during-run.py\", line 199, in <module>\n    result = audit(args)\n  File \"@CLOUD_HOME@/orca-capacity-repair-20261112/audit-actor-bn-during-run.py\", line 141, in audit\n    sess.run(bn if mode == 'serial_all_BN_then_actor' else list(unique.values()), fd)\n  File \"@CLOUD_HOME@/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py\", line 950, in run\n    run_metadata_ptr)\n  File \"@CLOUD_HOME@/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py\", line 1158, in _run\n    self._graph, fetches, feed_dict_tensor, feed_handles=feed_handles)\n  File \"@CLOUD_HOME@/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py\", line 483, in __init__\n    self._assert_fetchable(graph, fetch)\n  File \"@CLOUD_HOME@/venv/lib/python3.6/site-packages/tensorflow/python/client/session.py\", line 500, in _assert_fetchable\n    'Operation %r has been marked as not fetchable.' % op.name)\nValueError: Operation 'abstract_actor/abstract_actor/bn1/cond_1/update_moving_mean' has been marked as not fetchable.\n",
+    "start_epoch": 1794455899.525221,
+    "end_epoch": 1794455904.2963984
+  },
+  "intervals": [
+    {
+      "start_epoch": 1794455897.4292605,
+      "end_epoch": 1794455903.8136015,
+      "source_sha256": "4d2ae3a98211732f374c6deaa25babe4ca3ad96c0e9e5240154d5fcc647fc962",
+      "reason": "Short isolated check of full actor/BN update and actual training-flag moving-vs-IBP semantics; no recipe changes",
+      "already_paid_window": true
+    },
+    {
+      "start_epoch": 1794455977.1280713,
+      "end_epoch": 1794455985.203262,
+      "source_sha256": "13fd19e0754d44699793dbfc6dcb3e011b85df506ba5f037d90b43d9daac7b59",
+      "reason": "Short isolated check of full actor/BN update and actual training-flag moving-vs-IBP semantics; no recipe changes",
+      "already_paid_window": true
+    },
+    {
+      "start_epoch": 1794456169.2478418,
+      "end_epoch": 1794456178.119381,
+      "source_sha256": "3e3854006e7e9ad425092837bb4dc3dee0163fe1f9eb41b8423b9d72d6e48171",
+      "reason": "Short isolated check of full actor/BN update and actual training-flag moving-vs-IBP semantics; no recipe changes",
+      "already_paid_window": true
+    }
+  ],
+  "source_sha256": "3e3854006e7e9ad425092837bb4dc3dee0163fe1f9eb41b8423b9d72d6e48171",
+  "active_training_recipe_changed": false,
+  "discussion_status": "New Claude UI attempt stopped by physical Escape; new BN evidence not sent in that attempt. Earlier5point discussion completed separately."
+}
