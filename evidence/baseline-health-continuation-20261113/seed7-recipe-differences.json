@@ -1,0 +1,48 @@
+{
+  "status": "PASS_SEED_AND_OPERATIONAL_METADATA_ONLY",
+  "differences": {
+    "timeout_s": {
+      "old": 10951,
+      "new": 9853
+    },
+    "model_source": {
+      "old": "random initialization seed3",
+      "new": "random initialization seed7"
+    },
+    "actor_port_base": {
+      "old": 9800,
+      "new": 10800
+    },
+    "stop_file": {
+      "old": "@CONTINUATION_ROOT@/frameworks/baseline/logs/onlinebn-base-seed3-6m-stop.json",
+      "new": "@CONTINUATION_ROOT@/frameworks/baseline/logs/onlinebn-base-seed7-6m-stop.json"
+    },
+    "configuration_notes": {
+      "old": "Fresh seed3; same repaired6M recipe plus unique canonical online BN writes, retaining concurrent actor fetch. Raw reward/state/replay/U/noise/singleconnection unchanged. Admission uses neutral executed action with real inference/optimization; drains all integer update credit.",
+      "new": "Exact executed seed3 learning recipe with only the seed changed; run/paths/ports/deadline/provenance relocated. Legacy native for training, natural CUBIC for frozen deployment. No model restore."
+    },
+    "learner_endpoint": {
+      "old": "@HOST_ADDRESS@:19080",
+      "new": "@HOST_ADDRESS@:19180"
+    },
+    "absolute_deadline_epoch": {
+      "old": 1794483010.0960433,
+      "new": 1794568419.1613498
+    },
+    "model_id": {
+      "old": "onlinebn-base-seed3-6m",
+      "new": "onlinebn-base-seed7-6m"
+    },
+    "run_id": {
+      "old": "onlinebn-base-seed3-6m",
+      "new": "onlinebn-base-seed7-6m"
+    },
+    "seed": {
+      "old": 3,
+      "new": 7
+    }
+  },
+  "learning_core_commit": "9bb1500eaf791bcb0e97724c63dcb725323dd5cd",
+  "controller_repository_commit": "0188bbb784f527227c4d10cbe3c50d62b7b36c3a",
+  "no_model_restore": true
+}

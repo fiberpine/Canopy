@@ -1,5 +1,5 @@
 {
-  "scope": "2026-11-12 one learner24actor onlineBN repair; fresh6M final endpoint,96 original frozen measurements,health FAIL,five-host final closure PASS; original51models preserved",
+  "scope": "Current provisional healthy seed3 natural-CUBIC baseline: independent24x3 PASS and24 H0 reference; seed7 user-stopped partial; original51 models preserved; training repeatability unverified",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -13,14 +13,19 @@
       "sha256": "55991c124e6e15b93adc5363b628c77033451aa5598c518553708676e8eed3e4"
     },
     {
+      "path": "CURRENT_BASELINE.json",
+      "bytes": 2703,
+      "sha256": "66c5ff82cae4d6b29d6d8016b0d4cbea989e46489a9ff5614e9ba7111b148a72"
+    },
+    {
       "path": "EXPLORATION_HISTORY.md",
       "bytes": 20583,
       "sha256": "87927b5e82ecf66e48105876066ad5089b28e0f44a30000cac7f2cea832b1ec8"
     },
     {
       "path": "README.md",
-      "bytes": 16428,
-      "sha256": "38df7c99292b6a6b1d838b70c4be2464b0ae9927cb48d3495d7fc4b17436d0eb"
+      "bytes": 2121,
+      "sha256": "47780e80cb921d95be68ef8b96d150f24bcda737132e219a3f624bd37b43357b"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -29,8 +34,8 @@
     },
     {
       "path": "build_native.py",
-      "bytes": 863,
-      "sha256": "569c580fd6fbcbf4414178ba8cc5e684ffa0be608d7b1e74f4c8a080c9a32e7a"
+      "bytes": 1121,
+      "sha256": "a8c4213d83ecaeead1df17bd3a046fa5ee80e2cf90ce41679ff9c35247aa2d60"
     },
     {
       "path": "configs/cluster.example.json",
@@ -64,8 +69,8 @@
     },
     {
       "path": "docs/BASELINE_HEALTH_CONTINUATION_20261113.md",
-      "bytes": 2780,
-      "sha256": "e7a959ee142782a9382e20c28f5e6f515538c71e5172fbda6ed25690336c37e1"
+      "bytes": 4853,
+      "sha256": "886f6f14c99db83e4da797926bc87f7bb486bd1dbdd9783e4809da9d8a77d2d1"
     },
     {
       "path": "docs/BASELINE_HEALTH_VALIDATION_PLAN_20261112.md",
@@ -126,6 +131,16 @@
       "path": "docs/COMMON_PERIOD_D0_20261103.md",
       "bytes": 6088,
       "sha256": "c84756441f0ea77c82b6b7701dbb73fd5f78b69ab63526d8bd1a263f60a02ea4"
+    },
+    {
+      "path": "docs/CURRENT_BASELINE.md",
+      "bytes": 4672,
+      "sha256": "1befbd03e576deb3d62199d71c97dff361633b8a48db332e6995c46ec8cb7ba2"
+    },
+    {
+      "path": "docs/HISTORY_STATUS_20261113.md",
+      "bytes": 16670,
+      "sha256": "c9cbba0968a022e4b71d4fd8286343a0178a1c91d24383c23fbf187b54d22ecf"
     },
     {
       "path": "docs/MODELS.md",
@@ -7203,14 +7218,39 @@
       "sha256": "07b3d077288cd2b99eef352905ce3d19e9e9bb9f5be79807fb3a9591ac49cae3"
     },
     {
-      "path": "evidence/baseline-health-continuation-20261113/file-integrity.json",
+      "path": "evidence/baseline-health-continuation-20261113/closure-seed3-full.json",
       "bytes": 2112,
-      "sha256": "b8cb4ae07a016627d8eededef5938f679d8490794d56580c22b65cea7a6d4f25"
+      "sha256": "82e9a2da7ae25caf51b6cfebeee17f882e60be896e950be4be759ec7469d5858"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/closure-user-stop.json",
+      "bytes": 2295,
+      "sha256": "6920d1393db4c25938b356d1ed91a9d0ecee656aea5489b7ea605666f63872bd"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/condition-metrics.csv",
+      "bytes": 2153,
+      "sha256": "8f9606301577caf179c801b627fddcbc19afd8bcb95340d508a696e93e5e95f2"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/file-integrity.json",
+      "bytes": 4410,
+      "sha256": "7e11d7e097bfa93b7b53bb89c480615b10d20d0b986a81296dbd400eb4c4e6f9"
     },
     {
       "path": "evidence/baseline-health-continuation-20261113/frozen-deployment.json",
       "bytes": 3185,
       "sha256": "04f6b251d9d326f26ebe263771d037a95b5d8eb26ccb3e308e18548756b1a091"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/full-seed3-admission.json",
+      "bytes": 397,
+      "sha256": "a7850a1f50fad117fc3fb7719eb2a13d4e7db53f06a78200e6b21539160a5ee9"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/full-seed3-latest.json",
+      "bytes": 406553,
+      "sha256": "7f9f8a145abebf853a3c2dccb62a4b55e92e4d63b6f91e93b78ee12658b5432b"
     },
     {
       "path": "evidence/baseline-health-continuation-20261113/full-seed3-launch.json",
@@ -7223,9 +7263,34 @@
       "sha256": "dc1695e5f1ee6caecd9ad3abd68a3bbe644a8075490838ce5c64f23198c1e37e"
     },
     {
+      "path": "evidence/baseline-health-continuation-20261113/full-seed3-score/H0-reference-assessment.json",
+      "bytes": 257,
+      "sha256": "4b598e012d7f2b3e90e807a4eee7bfefa4b756b207ed2f6b3b152960a4c7102a"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/full-seed3-score/health-assessment.json",
+      "bytes": 18770,
+      "sha256": "289ab5353c219b36ad0c2615d2cc14a9a32ec63e804ccb243025c8b3726669c6"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/full-seed3-source-and-handoff-audit.json",
+      "bytes": 1198594,
+      "sha256": "cb4ba7d2fa78ebc47097602088ed736d4b2d51d9af8cff58192f988c85b389ae"
+    },
+    {
       "path": "evidence/baseline-health-continuation-20261113/interruption-cause-user-confirmed.json",
       "bytes": 515,
       "sha256": "e1949e4b9202a6a3db6816ae141130365e8145bbbf7a8acdc446b58c77d582c3"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/lossless-archive-cumulative-summary.json",
+      "bytes": 342,
+      "sha256": "36f519d7f96edcf2176391f74e48427d8adceeff9689558a0f2dca1ba2a6f39d"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/lossless-capacity-archive.json",
+      "bytes": 26023,
+      "sha256": "5b3ca3aa4b14568ce922880dccc171e1b625601da8e2a5720a624c8a8589ef74"
     },
     {
       "path": "evidence/baseline-health-continuation-20261113/recovery-screen-assessment.json",
@@ -7263,6 +7328,26 @@
       "sha256": "93957261e2da070e34ad9986a9186d1e6c827f52790f41975c31e25fe14bbcb6"
     },
     {
+      "path": "evidence/baseline-health-continuation-20261113/seed7-initial-contract.json",
+      "bytes": 1922,
+      "sha256": "a32ebc7a81d2f8947a8fcbb4f3613d24784498e0680b6db716b4edf23acf0a62"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/seed7-recipe-differences.json",
+      "bytes": 1724,
+      "sha256": "e70158d13ec3e9bc57b401a1ac6f42f4358a7c3a8d1155a1c3a2c3b7bd0c8998"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/seed7-user-stop-final-ledger.json",
+      "bytes": 756,
+      "sha256": "de10987474f35c9509367f04aa782920c13267520b29989dabc17e3d40b6eeef"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/seed7-user-stop-request.json",
+      "bytes": 423,
+      "sha256": "43a32ec43d7eae3879bad95ec38fd101d4ecc119bccc08e87c78fd1a0d9fa978"
+    },
+    {
       "path": "evidence/baseline-health-continuation-20261113/sender-settings-0,1.json",
       "bytes": 1075,
       "sha256": "1a53a7933b01903db8fa42d28544e7fa33dbb5dd7490429ff2cbb6c4f7bb64d3"
@@ -7271,6 +7356,16 @@
       "path": "evidence/baseline-health-continuation-20261113/sender-settings-2,3,4.json",
       "bytes": 1611,
       "sha256": "177b086ccc8966a90ece182637dfc8075510e106363134f776e80bc77ae719c4"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/training-deploy-learner-only-key-fix.json",
+      "bytes": 321,
+      "sha256": "9f8bb7658a828970b20fcf63e69ed55d10d99378a44f11608daf9475a8c47ec0"
+    },
+    {
+      "path": "evidence/baseline-health-continuation-20261113/user-stop-retraining.json",
+      "bytes": 608,
+      "sha256": "7a6db6cd1580262fd2461567d2d741a95f74369ae31acc555118b4993415aa55"
     },
     {
       "path": "evidence/baseline-health-validation-20261112/adaptive-natural-registration.json",
@@ -17743,6 +17838,36 @@
       "sha256": "8ada9f93119a4ed9a231555c700b76d040d2270cd2107bf06b9ab644c1925b4e"
     },
     {
+      "path": "evidence/upstream-orca-source/README.md",
+      "bytes": 388,
+      "sha256": "00e80736d64c7db6be383f9d96bd419fac821d97575aca6e0d6b24071b8c96db"
+    },
+    {
+      "path": "evidence/upstream-orca-source/copyright",
+      "bytes": 1089,
+      "sha256": "38a581281251afd8868838e5e41ccd2e36f52b2f0f6efdcc1818e2aade586693"
+    },
+    {
+      "path": "evidence/upstream-orca-source/rl-module/agent.py",
+      "bytes": 17262,
+      "sha256": "07b2bfb04fd137a3b5070608eb01f1f7b9851a40ed0db95c76f8d5d260da8fb6"
+    },
+    {
+      "path": "evidence/upstream-orca-source/rl-module/d5.py",
+      "bytes": 16708,
+      "sha256": "eddef78dd08483cbbfa918b2b0a4ca0bda0a6839fa134746ade0cb8378f1b91a"
+    },
+    {
+      "path": "evidence/upstream-orca-source/rl-module/envwrapper.py",
+      "bytes": 14869,
+      "sha256": "0896a709632caa48b09b119218e89b5bf168f5784da3841f32450ba72de405ba"
+    },
+    {
+      "path": "evidence/upstream-orca-source/rl-module/utils.py",
+      "bytes": 7984,
+      "sha256": "8d07243a46e44ffc560ab41c26adb27816f4d346fbeeb68f57b16c32a1732071"
+    },
+    {
       "path": "evidence/v38-followup/results.json",
       "bytes": 9926,
       "sha256": "d786809361266b68c91fa85e015b99884d41f18b7c6cefad78f6ba43f2ed4a0e"
@@ -17916,6 +18041,11 @@
       "path": "frameworks/baseline/baseline_admission.py",
       "bytes": 3816,
       "sha256": "27533939b7f239909a5d48598ef64611c4b67d0a097a8ed28ce305c26e29171e"
+    },
+    {
+      "path": "frameworks/baseline/capture_frozen.py",
+      "bytes": 1758,
+      "sha256": "7c3bdf49dbcce782509e503d52ab024a56d11ce3dd27cf17799747d3c17dc19b"
     },
     {
       "path": "frameworks/baseline/cluster_control.py",
@@ -19128,6 +19258,11 @@
       "sha256": "0e6d3f49566ff6c92672d7237f40c1641b6b18946aaacc696ac6a5a72a1733dd"
     },
     {
+      "path": "frameworks/baseline/code/runtime/orca-server-cloexec",
+      "bytes": 35368,
+      "sha256": "632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0e12fe1d"
+    },
+    {
       "path": "frameworks/baseline/code/runtime/orca-server-control-log-safe",
       "bytes": 35368,
       "sha256": "88c32e6ab8f910a8136709269a68908768ca84caca713d8529bf295a67cf3bcd"
@@ -19156,6 +19291,11 @@
       "path": "frameworks/baseline/code/runtime/orca-server-legacy-protocol",
       "bytes": 31008,
       "sha256": "5f1d1e16313bab2a34c4ad12a21fdffe3261611d299f6d720e1107d7593d35bb"
+    },
+    {
+      "path": "frameworks/baseline/code/runtime/orca-server-natural-cubic",
+      "bytes": 35368,
+      "sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
     },
     {
       "path": "frameworks/baseline/code/runtime/src/client.c",
@@ -19277,6 +19417,11 @@
       "sha256": "927c92be944ae93f8325e0f2424e13d1116e6df69f418b18275a009eef1e943b"
     },
     {
+      "path": "frameworks/baseline/frozen_startup_contract.py",
+      "bytes": 2418,
+      "sha256": "59bb38880509ba04ee2dccb6ef02181697f08d6d0bb2ebda3fcfb281d3e35818"
+    },
+    {
       "path": "frameworks/baseline/independent_critic_v34.py",
       "bytes": 3752,
       "sha256": "b583deabda7aa3b271025b1704eae4fba04fcfd23e214f74a591087c92687266"
@@ -19295,6 +19440,11 @@
       "path": "frameworks/baseline/node_control.py",
       "bytes": 11486,
       "sha256": "ff0ad0601ecd96a51510d1d510ce6196bcc56422f20f087385da50fbd764f4b3"
+    },
+    {
+      "path": "frameworks/baseline/packet_window_completion.py",
+      "bytes": 2856,
+      "sha256": "6feed42b0f22e2e95e98b0110c6adc0f738ade032facb9fbadd741ac335de46e"
     },
     {
       "path": "frameworks/baseline/remote_frozen_evaluate.py",
@@ -21985,6 +22135,36 @@
       "sha256": "6977274f8cff45da3555577255f65acab16f74f9cc505c06e66b996c63876ed3"
     },
     {
+      "path": "models/healthy-baseline-seed3/policy/model.data-00000-of-00001",
+      "bytes": 343044,
+      "sha256": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+    },
+    {
+      "path": "models/healthy-baseline-seed3/policy/model.index",
+      "bytes": 514,
+      "sha256": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48"
+    },
+    {
+      "path": "models/healthy-baseline-seed3/training/step-0.meta",
+      "bytes": 512083,
+      "sha256": "ea68e9f5f0fd17088e03a8f0903236e3b4dd385c7c92c03ffbcd45a4aa61dba1"
+    },
+    {
+      "path": "models/healthy-baseline-seed3/training/step-6013196.data-00000-of-00001",
+      "bytes": 4410456,
+      "sha256": "4545c09aa454aa1da8f38324fd129bf289879a8c7d7679cd43016234f4e15e63"
+    },
+    {
+      "path": "models/healthy-baseline-seed3/training/step-6013196.index",
+      "bytes": 3854,
+      "sha256": "6521be2f6be89a679a64d98b06ce26e55b94eb2554fb69eb5695fb4f03c33b9d"
+    },
+    {
+      "path": "models/healthy-baseline-seed3/training/step-6013196.variables.json",
+      "bytes": 4452,
+      "sha256": "0ca725387f7fe026cc479f3619596fc9d7a0de932bcabf11184ec65fb53fdf95"
+    },
+    {
       "path": "models/mtp20/model.counters.json",
       "bytes": 1227519,
       "sha256": "45f1a7c04d78b8eb98f6d1b80febf5abd08d25ec1028eeae3400e2e59e2fc8a2"
@@ -22096,8 +22276,8 @@
     },
     {
       "path": "run.py",
-      "bytes": 12522,
-      "sha256": "4b660193fa94730c4de098c6982cdf63177a01e201ef35934c237a214a893603"
+      "bytes": 13189,
+      "sha256": "40e7aba6cb7da89bdc1b0ad70682d2e5c0e2450ed940af5cb1bfeb8f3b41cf52"
     },
     {
       "path": "runtime/mahimahi/.gitignore",
@@ -23601,13 +23781,13 @@
     },
     {
       "path": "templates/baseline-eval.json",
-      "bytes": 12015,
-      "sha256": "156be5ed01eeab1a19a9729a2c5ff2fbda01b8424cc6d9748d6431c395e82fd0"
+      "bytes": 10858,
+      "sha256": "d15e74ff0413d8968f66ce85f2dc12ca0f1012fedaf686a56b0774bb24ad7e48"
     },
     {
       "path": "templates/baseline-train.json",
-      "bytes": 11942,
-      "sha256": "0cf6293d02fce5f59a01322adcd8fcad8291c8e02714d43874857e04bda800de"
+      "bytes": 12109,
+      "sha256": "466c73527a1e054bcd88e2304635a50d6bf4658d30c94b7c2ae37816b40b92b1"
     },
     {
       "path": "templates/cubic-eval.json",
@@ -23740,6 +23920,11 @@
       "sha256": "fbe42b6f14b68d9f63471351b88b000a1ad3aab91780593b81862ebdaf7bf61e"
     },
     {
+      "path": "tools/build_current_baseline.py",
+      "bytes": 1938,
+      "sha256": "ac754cbe5823fadca7815a24d4334d08ef13396828fd1759eed49b53d0e39a62"
+    },
+    {
       "path": "tools/build_scalar_startup_candidate.py",
       "bytes": 5175,
       "sha256": "d24d312149aaa9c2ee84c4a80df3e90380f246915aa71f794a8907f549b22064"
@@ -23867,7 +24052,7 @@
     {
       "path": "tools/scalar_audit/audit.py",
       "bytes": 11661,
-      "sha256": "5a57dc2e3185ec03899a276bd39eca155b1fd1667b7358f7521c2579218ae53f"
+      "sha256": "b9c8e287221d1850bf8bdd9e8863c699db1a02e33c299095c816f3941a0ea312"
     },
     {
       "path": "tools/scalar_audit/checkpoint_direction_audit.py",
@@ -24165,6 +24350,11 @@
       "sha256": "18f42cf0ee260eb070fdfb79c85a185e74f74da439dd882a9b029dc785e060a1"
     },
     {
+      "path": "tools/test_current_baseline_contract.py",
+      "bytes": 4744,
+      "sha256": "e2df4519de31885b147748bb065360f64d4b1c33aa4b598588358d7022acb034"
+    },
+    {
       "path": "tools/test_exploration_check.py",
       "bytes": 6166,
       "sha256": "d9e406be7f9c18a52f50881bd4c29c7c4100e01ea163ea8cf1298b8bf27d3b86"
@@ -24196,8 +24386,8 @@
     },
     {
       "path": "tools/test_scalar_update_contract_cli.py",
-      "bytes": 2735,
-      "sha256": "b539183563980012043e01ab50b3dab9f3dc391a93b6f83e76de7bf8a54233e7"
+      "bytes": 3030,
+      "sha256": "b1810b2de9ea4210ed317c81f5513d0c67342adb7905f8846eeb09f4701d757d"
     },
     {
       "path": "tools/test_scalar_verified_ipc.py",

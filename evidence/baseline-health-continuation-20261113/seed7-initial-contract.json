@@ -1,0 +1,48 @@
+{
+  "status": "PASS_FRESH_SEED7_AND_ACTUAL_BN_CONTRACT",
+  "seed": 7,
+  "variables": 108,
+  "global_step": 0,
+  "step0_data_sha256": "70b1fab98d1e4eee9486d58a38daa7336c667218f34302daad43d97b93510ead",
+  "seed3_step0_data_sha256": "7787176927cf21ba03ee5c0d86d598e9f9ac93b8faf12deae79f4378246138d3",
+  "different_random_initialization": true,
+  "model_restore": false,
+  "bn": {
+    "mode": "unique_online_BN_concurrent_with_actor",
+    "original_entries": 8,
+    "selected_entries": 4,
+    "statistics": [
+      {
+        "destination": "abstract_actor/abstract_actor/bn1/moving_mean",
+        "selected": "abstract_actor/abstract_actor/bn1/cond_1/Merge:0",
+        "discarded": [
+          "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/Merge:0"
+        ]
+      },
+      {
+        "destination": "abstract_actor/abstract_actor/bn1/moving_variance",
+        "selected": "abstract_actor/abstract_actor/bn1/cond_1/Merge_1:0",
+        "discarded": [
+          "verifiable_predictor/abstract_actor/abstract_actor/bn1/cond_1/Merge_1:0"
+        ]
+      },
+      {
+        "destination": "abstract_actor/abstract_actor/bn2/moving_mean",
+        "selected": "abstract_actor/abstract_actor/bn2/cond_1/Merge:0",
+        "discarded": [
+          "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/Merge:0"
+        ]
+      },
+      {
+        "destination": "abstract_actor/abstract_actor/bn2/moving_variance",
+        "selected": "abstract_actor/abstract_actor/bn2/cond_1/Merge_1:0",
+        "discarded": [
+          "verifiable_predictor/abstract_actor/abstract_actor/bn2/cond_1/Merge_1:0"
+        ]
+      }
+    ],
+    "semantics": "Original fetchable canonical Sonnet wrappers; one write per statistic; existing joint actor fetch retained. EMA multiplicity intentionally changes from duplicated writes to one."
+  },
+  "learning_commit": "9bb1500eaf791bcb0e97724c63dcb725323dd5cd",
+  "new_TF_queries": 0
+}

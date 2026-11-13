@@ -21,6 +21,8 @@ class ScalarContractCLI(unittest.TestCase):
             (m.P/'templates').mkdir()
             (m.P/'frameworks/baseline').mkdir(parents=True)
             old = json.loads((ROOT/'templates/baseline-train.json').read_text())
+            for key in ('target_bn_consistent','independent_critic_adam_v34','unique_critic_targets','unique_online_bn_updates'):old[key]=False
+            cluster=m.P/'cluster.json';cluster.write_text(json.dumps(dict(nodes=[dict(ip='127.0.0.1') for _ in range(5)])))
             (m.P/'templates/baseline-train.json').write_text(json.dumps(old))
             read = Path.read_text
             def reading(path, *a, **kw):
@@ -29,7 +31,7 @@ class ScalarContractCLI(unittest.TestCase):
                 return read(path, *a, **kw)
             argv = ['run.py', 'train', '--variant', 'baseline', '--run-id', 'contract',
                     '--actors', '24', '--scalar-update-contract', '--port', '10000',
-                    '--learner-port', '20000', '--server-binary', str(m.P/'native')]
+                    '--learner-port', '20000', '--server-binary', str(m.P/'native'), '--cluster', str(cluster)]
             if online:argv.append('--unique-online-bn-updates')
             with mock.patch.object(sys, 'argv', argv), mock.patch.object(Path, 'read_text', reading), mock.patch.object(m, 'call', side_effect=RuntimeError('before any launch')):
                 with self.assertRaisesRegex(RuntimeError, 'before any launch'):

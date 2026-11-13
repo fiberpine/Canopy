@@ -1,4 +1,14 @@
-# 自然接管筛查通过，独立全网格确认进行中
+# 当前模型健康门通过，按用户要求停止重训并归档清理
+
+**最终更新：96/96完成、0执行错误。** 当前seed3在24条件×3次的原健康门全部PASS：trim10条件等权利用率99.745330%、mean queue12.738410ms、条件P95均值18.069444ms、P9919.791667ms、零丢包；最差单次利用率97.463494%。源/模型、接管≤10秒、动作映射、优化/探索0与五机清理均通过。[逐run](../evidence/baseline-health-continuation-20261113/full-seed3-latest.json)、[原评分](../evidence/baseline-health-continuation-20261113/full-seed3-score/health-assessment.json)、[源/接管审计](../evidence/baseline-health-continuation-20261113/full-seed3-source-and-handoff-audit.json)可复算。
+
+用户随后要求暂不重训，先采用当前版本为健康基座并清理三地。新消息前seed7已于约16:29启动，收到后立即安全停止：165396真实经验、15310完整critic/actor/target更新、30620critic优化器操作，24路generated/enqueued/inserted一致且整数信用排空。整个计划标USER_STOPPED_PARTIAL_NOT_6M_COMPLETION；底层干净COMPLETED不等于完成6M，无seed7性能结论，预登记78次没有执行。[停止账本](../evidence/baseline-health-continuation-20261113/seed7-user-stop-final-ledger.json)与[五机终检](../evidence/baseline-health-continuation-20261113/closure-user-stop.json)保留。
+
+**当前仅确认这一权重在明确静态网格和自然部署协议下健康；训练配方的重复成功尚未验证。** 用户的新决定取代“两个完整seed后才采用/清理”的原阶段条件。归档入口见[当前基座](CURRENT_BASELINE.md)，旧失败不覆盖。
+
+训练前仅对结束容量测试的42个指定文件无损gzip，原SHA与解压SHA逐一相同，累计节省1224715861个payload字节；没有改动正式训练日志、模型或源码。最初部署检查误要求actor具有仅learner需要的SSH文件，已修正检查范围、保留辅助记录，未改变算法，也未传私钥内容。
+
+下文保留此前事前计划和中途状态；“进行中/尚未训练”仅为当时记录。
 
 北京时间2026-11-13新窗口15:54:39—19:54:39，用户已明确同意240分钟上限和按门槛继续；末10分钟收尾。用户另确认上轮是助手额度耗尽后自行关闭服务器，属于外部中断，不计为算法或实验执行失败。[明确原因记录](../evidence/baseline-health-continuation-20261113/interruption-cause-user-confirmed.json)补充先前只知道重启、尚不知原因的历史报告，原部分日志仍保留。
 

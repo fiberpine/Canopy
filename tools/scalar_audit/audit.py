@@ -4,7 +4,7 @@ import numpy as np
 
 HERE=pathlib.Path(__file__).resolve().parent
 ROOT=pathlib.Path(__file__).resolve().parents[2]
-VENDOR=ROOT/'frameworks/baseline/code/orca'
+VENDOR=ROOT/'evidence/upstream-orca-source'
 FRAME=ROOT/'frameworks/canopy_single'
 RUN=ROOT/'evidence/scalar-20261025'
 SMALL=RUN

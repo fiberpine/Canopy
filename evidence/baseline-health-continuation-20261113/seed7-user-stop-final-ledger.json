@@ -1,0 +1,25 @@
+{
+  "overall_status": "USER_STOPPED_PARTIAL_NOT_6M_COMPLETION",
+  "raw_process_status": "COMPLETED",
+  "final": {
+    "status": "COMPLETED",
+    "reason": "",
+    "inserted": 165396,
+    "counters": {
+      "critic_iterations": 15310,
+      "critic_optimizer_ops": 30620,
+      "actor_updates": 15310,
+      "target_updates": 15310
+    },
+    "wall_s": 178.24279708799986
+  },
+  "selected_partial_checkpoint": "@CONTINUATION_ROOT@/frameworks/baseline/checkpoints/onlinebn-base-seed7-6m/step-165396",
+  "variables": 108,
+  "global_step": 45930,
+  "actors": 24,
+  "generated_enqueued_inserted_match": true,
+  "all_integer_update_credit_drained": true,
+  "nominal6m_complete": false,
+  "performance_evaluation_done": false,
+  "resume_is_not_seamless": true
+}

@@ -2,6 +2,11 @@
 import pathlib,subprocess,json,hashlib
 P=pathlib.Path(__file__).resolve().parent;proof=[]
 for name in ['baseline','mtp20','mtpjoint']:
+ if name=='baseline':
+  import sys
+  subprocess.check_call([sys.executable,str(P/'tools/build_current_baseline.py')])
+  proof.append(dict(variant='baseline',contract='CURRENT_BASELINE.json: accepted legacy training and natural-CUBIC deployment'))
+  continue
  f=P/'frameworks'/name;s=f/'code/runtime/src';out=f/'code/runtime'
  target=(f/'native-v28/orca-server-joint-mtp') if name=='mtpjoint' else out/('orca-server-control-log-safe' if name=='baseline' else 'orca-server-joint-mtp')
  target.parent.mkdir(exist_ok=True);source=s/('orca-server-control-log-safe.cc' if name=='baseline' else 'orca-server-joint-mtp.cc')
