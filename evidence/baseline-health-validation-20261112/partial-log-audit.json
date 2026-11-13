@@ -1,0 +1,129 @@
+{
+  "registration": {
+    "registered_epoch": 1794555237.2775383,
+    "runs": [
+      "natural-02",
+      "natural-08"
+    ],
+    "window_start_s": 10,
+    "window_end_s": 49,
+    "purpose": "Descriptive existing partial-log audit before any clean rerun, not a replacement60s endpoint",
+    "conditional_negative_reporting": "If any utilization<.5 preserve as observed weak recovery, never erase with later clean rerun",
+    "new_TCP": 0,
+    "new_TF": 0
+  },
+  "rows": [
+    {
+      "node": 0,
+      "run": "natural-02",
+      "descriptive_only": true,
+      "new_TCP": 0,
+      "new_TF": 0,
+      "windows": [
+        {
+          "window": "full",
+          "start_s": 0,
+          "end_s": 49,
+          "departure_mbps": 46.161406693877545,
+          "capacity_mbps": 47.994665795918365,
+          "utilization": 0.9618028572209222,
+          "queue_mean_ms": 25.773198014904175,
+          "queue_p95_ms": 38.0,
+          "dropped_packets": 0.0,
+          "arrival_packets": 188109.0,
+          "drop_fraction": 0.0,
+          "last_log_s": 49.594,
+          "complete_window": true
+        },
+        {
+          "window": "trim10",
+          "start_s": 10,
+          "end_s": 49,
+          "departure_mbps": 47.99566933333334,
+          "capacity_mbps": 47.995648,
+          "utilization": 1.0000004444847443,
+          "queue_mean_ms": 26.27325435647574,
+          "queue_p95_ms": 38.0,
+          "dropped_packets": 0.0,
+          "arrival_packets": 155572.0,
+          "drop_fraction": 0.0,
+          "last_log_s": 49.594,
+          "complete_window": true
+        }
+      ],
+      "current_sender_sysctl": {
+        "tcp_congestion_control": "cubic",
+        "tcp_no_metrics_save": "1",
+        "tcp_rmem": "4096\t87380\t6291456",
+        "tcp_wmem": "4096\t32768\t4194304"
+      },
+      "current_cubic_parameters": {
+        "initial_ssthresh": "0",
+        "hystart": "1",
+        "beta": "717",
+        "tcp_friendliness": "1",
+        "hystart_ack_delta": "2",
+        "bic_scale": "41",
+        "hystart_detect": "3",
+        "fast_convergence": "1",
+        "hystart_low_window": "16"
+      }
+    },
+    {
+      "node": 1,
+      "run": "natural-08",
+      "descriptive_only": true,
+      "new_TCP": 0,
+      "new_TF": 0,
+      "windows": [
+        {
+          "window": "full",
+          "start_s": 0,
+          "end_s": 49,
+          "departure_mbps": 46.15772342857142,
+          "capacity_mbps": 47.994665795918365,
+          "utilization": 0.9617261139986277,
+          "queue_mean_ms": 25.776089708808104,
+          "queue_p95_ms": 38.0,
+          "dropped_packets": 0.0,
+          "arrival_packets": 188072.0,
+          "drop_fraction": 0.0,
+          "last_log_s": 51.873,
+          "complete_window": true
+        },
+        {
+          "window": "trim10",
+          "start_s": 10,
+          "end_s": 49,
+          "departure_mbps": 47.99566933333334,
+          "capacity_mbps": 47.995648,
+          "utilization": 1.0000004444847443,
+          "queue_mean_ms": 26.253424437402376,
+          "queue_p95_ms": 38.0,
+          "dropped_packets": 0.0,
+          "arrival_packets": 155613.0,
+          "drop_fraction": 0.0,
+          "last_log_s": 51.873,
+          "complete_window": true
+        }
+      ],
+      "current_sender_sysctl": {
+        "tcp_congestion_control": "cubic",
+        "tcp_no_metrics_save": "1",
+        "tcp_rmem": "4096\t87380\t6291456",
+        "tcp_wmem": "4096\t32768\t4194304"
+      },
+      "current_cubic_parameters": {
+        "initial_ssthresh": "0",
+        "hystart": "1",
+        "beta": "717",
+        "tcp_friendliness": "1",
+        "hystart_ack_delta": "2",
+        "bic_scale": "41",
+        "hystart_detect": "3",
+        "fast_convergence": "1",
+        "hystart_low_window": "16"
+      }
+    }
+  ]
+}

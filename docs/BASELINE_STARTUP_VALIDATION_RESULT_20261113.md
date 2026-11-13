@@ -34,6 +34,8 @@
 
 四次均真实进入RL闭环，原逐格门在这个已观察子集上通过；没有把全程Cubic当作RL表现。两个G48-R200尝试只有49.594、51.873秒包日志且缺result，保留为中断部分日志，不填成成功、失败分数或60秒结果。其他六项未开始。整个12项**尚不能评分为PASS**，不估计故障率，不进入独立96次确认或seed7重训。
 
+复核后、任何重做之前，另行固定读取这两个原部分日志的共同10—49秒窗口：利用率都约100.0000%，排队26.273/26.253ms、P95均38ms、零丢包。只描述已有39秒区间，仍不是两次完整60秒验收，缺失结尾的性能和正常结束证据没有补造。[事先登记与部分窗口结果](../evidence/baseline-health-validation-20261112/partial-log-audit.json)保留，未来重做不能覆盖原尝试。
+
 自然组是看到原40结果后追加的探索臂，旧组只是前轮描述性参照，不是同期随机因果对照。四次也包含两次事前工程门，不能包装成四次独立确认。[完整状态与可复算指标](../evidence/baseline-health-validation-20261112/startup-validation-assessment.json)、[四次工程审计](../evidence/baseline-health-validation-20261112/natural-completed-source-and-handoff-audit.json)明确保留这些限制。
 
 ## 现在能解释什么，不能解释什么
@@ -58,6 +60,8 @@
 
 [下一窗口草案](../evidence/baseline-health-validation-20261112/continuation-plan.draft.json)仅离线准备、未授权也未运行：先两机补齐8个缺失重复槽，两个中断尝试保留并用新run ID重做；选择依据只有完成性，不按成绩。合并原4项后按原12项与原门评分。若通过，通知开启其余三台，独立完成自然接管当前24×3＋同启动H0全24×1，筛查数据不复用。只有完整确认PASS且余量≥150分钟才最多一次seed7 fresh6M及72＋6参照，末10分钟收尾，不自动第二次长训。
 
+补齐的8项与重启前4项分组报告，不把跨重启的混合筛查包装成新一批完整独立试验。完整确认前固定每次实际接管≤10秒、原predicate、辅助写窗0、整个trim10均由策略闭环；记录发送端CUBIC、HyStart全部可读参数、tcp_no_metrics_save和缓冲设置，H0使用同一自然ELF，顺序/主机分配在结果前冻结。当前两机只读观察tcp_no_metrics_save=1、HyStart=1及initial_ssthresh=0，不擅自修改或倒推旧现场所有设置。
+
 尚未满足归档/清理前提，本轮没有删除其他基座代码、覆盖H0或启动双动作训练。保留当前候选、原FAIL、中断证据、所有模型与历史。自然候选的native默认重建与原632bca97逐字节相同，首反馈控制重建也相同；新自然ELF SHA为`3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8`，构建源码commit`80d993d`，并非学习core版本变化。
 
 恢复后两机[当前终检](../evidence/baseline-health-validation-20261112/closure-post-interruption.json)通过：本轮进程/登记共享内存/端口均0，旧51模型/core/sysctl及已用模型、native、helper未变。重启后的终检不倒推中断前清理成功。没有连接其他三台，也未下载大checkpoint、replay或完整逐包日志；只取已有结果与云端聚合小摘要。
@@ -68,4 +72,6 @@
 python tools/analyze_baseline_startup_validation.py evidence/baseline-health-validation-20261112 --output /tmp/startup-assessment.json
 ```
 
-Claude上一轮只独立核对仓库内核补丁三处，未直接读运行内核树或本轮新native/raw数据；自然接管建议来自那次讨论。当前4/12中断结果是否已再发对方，以后续明确的复核记录为准，不预先宣称双方达成健康结论。
+Claude本轮已实际复核报告全文、中断文件清单/时间戳及续接草案主体；没有独立读取逐run评分、反馈摘要、自然四次工程审计、内核JSON或图，没有运行代码，性能数字来自报告和发给它的事实摘要。[复核范围与四点建议](../evidence/baseline-health-validation-20261112/claude-review-20261113.json)明确区分。
+
+采纳的关键限制是：**原辅助启动异常已见证据，首反馈失败同时暴露小窗口爬升的策略弱点；自然接管可能避开该状态，没有证明已修好它。**若今后通过，结论限于这一静态网格和自然接管协议；连接中途重置、大带宽突变、留出条件和双动作仍需另证。对完整确认通过后保持legacy训练native复跑seed7，现有证据不足以否决；seed7同时改变初始化、探索和抽样的随机流，是另一次训练端点检验，两个seed过门仍不能估计稳定成功概率。没有因对方认可而放松原健康门。

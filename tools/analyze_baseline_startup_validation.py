@@ -81,10 +81,20 @@ def analyze(folder):
             metrics=window(r),handoff_s=p['handoff_s'],startup=p['startup'],first10_controls=a['first10_controls']))
     closure=load('closure-post-interruption.json')
     assert len(closure)==2 and all(x['status']=='PASS_CURRENT_CLOSURE' for x in closure)
+    partial=load('partial-log-audit.json')
+    assert partial['registration']['window_start_s']==10 and partial['registration']['window_end_s']==49
+    partial_values=[]
+    for row in partial['rows']:
+        value=window(row)
+        assert value['complete_window'] and value['start_s']==10 and value['end_s']==49
+        assert next(s for s in statuses if s['run']==row['run'])['status']=='INTERRUPTED_PARTIAL_LOG'
+        partial_values.append(dict(run=row['run'],descriptive_only=True,metrics=value,
+            full60_status='INCOMPLETE',observed_segment_below50=value['utilization']<.5))
     result=dict(status='INCOMPLETE_INTERRUPTED',performance_confirmation_go=False,training_go=False,
         registered_natural_runs=12,counts=dict(counts),natural_run_statuses=statuses,
         screen40_status='FAIL',screen40_execution_errors=0,screen40_cells=cells,
         natural_cells_descriptive_only=natural_cells,completed_natural_runs=details,
+        partial_log_descriptive_window=partial_values,
         original_seed3_legacy_FAIL_unchanged=True,independent_full96_started=False,seed7_started=False,
         current_two_host_closure='PASS',new_experiments_on_recovery=0,
         limits=['Four completed natural runs cannot estimate a failure rate or establish all-grid health.',

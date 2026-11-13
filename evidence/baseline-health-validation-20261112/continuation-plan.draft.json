@@ -280,5 +280,29 @@
     "any screen or full performance/provenance failure blocks fresh training",
     "new jobs stop before fixed task cutoff; last10minutes cleanup",
     "insufficient150minutes prevents long training; no automatic extension"
-  ]
+  ],
+  "reviewed_engineering_requirements": {
+    "handoff_predicate": "ssthresh<cwnd",
+    "handoff_max_seconds": 10,
+    "prepolicy_cwnd_writes": 0,
+    "full_trim10_under_policy": true,
+    "source_and_model_hashes_fixed": true,
+    "sender_settings": [
+      "CUBIC",
+      "all readable tcp_cubic module parameters",
+      "tcp_no_metrics_save=1",
+      "tcp_rmem",
+      "tcp_wmem"
+    ],
+    "no_silent_host_settings_change": true,
+    "same_natural_ELF_for_H0_and_candidate": true,
+    "order_and_host_assignment_frozen_before_results": true,
+    "new_three_host_indicator_reported": true,
+    "partial_originals_never_overwritten": true,
+    "report_pre_reboot4_and_post_reboot8_separately": true,
+    "independent_full96_still_required": true,
+    "only_valid0_startup_execution_retry_eligible": true,
+    "existing_partial10_49_reported_before_rerun": true,
+    "success_scope": "same policy under natural-CUBIC deployment on this static grid; not recovery/generalization proof"
+  }
 }

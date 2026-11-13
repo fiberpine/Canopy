@@ -1165,6 +1165,50 @@
       ]
     }
   ],
+  "partial_log_descriptive_window": [
+    {
+      "run": "natural-02",
+      "descriptive_only": true,
+      "metrics": {
+        "window": "trim10",
+        "start_s": 10,
+        "end_s": 49,
+        "departure_mbps": 47.99566933333334,
+        "capacity_mbps": 47.995648,
+        "utilization": 1.0000004444847443,
+        "queue_mean_ms": 26.27325435647574,
+        "queue_p95_ms": 38.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 155572.0,
+        "drop_fraction": 0.0,
+        "last_log_s": 49.594,
+        "complete_window": true
+      },
+      "full60_status": "INCOMPLETE",
+      "observed_segment_below50": false
+    },
+    {
+      "run": "natural-08",
+      "descriptive_only": true,
+      "metrics": {
+        "window": "trim10",
+        "start_s": 10,
+        "end_s": 49,
+        "departure_mbps": 47.99566933333334,
+        "capacity_mbps": 47.995648,
+        "utilization": 1.0000004444847443,
+        "queue_mean_ms": 26.253424437402376,
+        "queue_p95_ms": 38.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 155613.0,
+        "drop_fraction": 0.0,
+        "last_log_s": 51.873,
+        "complete_window": true
+      },
+      "full60_status": "INCOMPLETE",
+      "observed_segment_below50": false
+    }
+  ],
   "original_seed3_legacy_FAIL_unchanged": true,
   "independent_full96_started": false,
   "seed7_started": false,
