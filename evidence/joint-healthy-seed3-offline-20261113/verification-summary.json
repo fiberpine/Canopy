@@ -1,0 +1,42 @@
+{
+  "status": "PASS_OFFLINE_IMPLEMENTATION_ONLY",
+  "tests": {
+    "candidate_unittest": 32,
+    "existing_tools_unittest": 200,
+    "scalar_audit_unittest": 7
+  },
+  "actual_TF1_14_checkpoint_model_check": "PASS",
+  "actual_TF1_synthetic_learner_pipeline": "PASS",
+  "native_protocol_host_execution": "PASS_WINDOWS_ONLY",
+  "native_crosscompile": "PASS_NOT_LINUX_EXECUTED",
+  "cloud_connections": 0,
+  "new_TCP": 0,
+  "performance_claim": false,
+  "pending": [
+    "TCP compatibility G0",
+    "scheduled20 G1",
+    "ACK counter G2",
+    "real reward alias audit",
+    "real calibration",
+    "distributed capacity",
+    "joint/fixed learning",
+    "frozen performance",
+    "CPU repeatability"
+  ],
+  "local_test_toolchain": {
+    "python": "3.6.8 Windows isolated",
+    "tensorflow": "1.14.0",
+    "sonnet": "1.34",
+    "numpy": "1.19.5",
+    "zig": "0.13.0"
+  },
+  "offline_fixes": [
+    "source checkpoint BN shape(1,256) respected",
+    "Clang std::bind ambiguity qualified",
+    "fixed controls never explore other periods",
+    "baseline window target smoothing retained",
+    "both critics checked on holdout TD and contiguous short returns",
+    "bounded stop and PARTIAL exposure labeling"
+  ],
+  "no_large_experiment_artifacts_published": true
+}

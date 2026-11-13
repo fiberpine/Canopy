@@ -1,0 +1,39 @@
+{
+  "status": "COMPILED_NOT_TCP_VALIDATED",
+  "sha256": "08b6b90b89a76d293fae07069b2487c2f169763f529319037d5bd71949e67472",
+  "source_sha256": {
+    "frameworks/joint_healthy/native/orca-server-joint-healthy.cc": "4405f185959e121d20ce48fb156bf4174e79480982b5f8789171acf46b5a5c98",
+    "frameworks/joint_healthy/native/joint_protocol.h": "6c967350bdceabe0347b86bee86f0ef9126a00e57624d290cbf6aa79b5107e38",
+    "frameworks/baseline/code/runtime/src/flow.cc": "d7f1f2c32cfa123a6a0c4251ba535f66e38a2731d2edde470906349825f5852a",
+    "frameworks/baseline/code/runtime/src/flow.h": "ad46f1853ae31680469f5ac0c75947cd1280e638754ee660d84bf976c5a96750",
+    "frameworks/baseline/code/runtime/src/define_v2.h": "97a9ce508cfcf2ad3dd6b158f4fba4aac3a120d3545f17aa796430f8659f92cd",
+    "frameworks/baseline/code/runtime/src/common.h": "7b628edc25fc856101a99515029f2fef4e7074ad6a6285c56047500c89315b97",
+    "frameworks/baseline/code/runtime/src/util.h": "a9982aa98b5441d5d8ee5692ebc94526c1c7f384702e150ae184554836fc58c7"
+  },
+  "command": [
+    "@LOCAL_TEST_TOOLS@\\zig-windows-x86_64-0.13.0\\zig.exe",
+    "c++",
+    "-target",
+    "x86_64-linux-gnu.2.27",
+    "-std=c++11",
+    "-pthread",
+    "-DORCA_NATURAL_CUBIC_HANDOFF",
+    "-DORCA_STARTUP_AUDIT",
+    "-I",
+    "@PACKAGE@\\frameworks\\joint_healthy\\native",
+    "-I",
+    "@PACKAGE@\\frameworks\\baseline\\code\\runtime\\src",
+    "@PACKAGE@\\frameworks\\joint_healthy\\native\\orca-server-joint-healthy.cc",
+    "@PACKAGE@\\frameworks\\baseline\\code\\runtime\\src\\flow.cc",
+    "-o",
+    "@TEMP_OUTPUT@"
+  ],
+  "startup": "natural-cubic",
+  "new_TCP": 0,
+  "executed_on_linux": false,
+  "build_host": "Windows x86_64",
+  "target": "x86_64-linux-gnu.2.27",
+  "compiler": "Zig0.13.0/Clang",
+  "target_GCC75_validated": false,
+  "not_installed_in_deployment_path": true
+}

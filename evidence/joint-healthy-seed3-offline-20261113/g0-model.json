@@ -1,0 +1,89 @@
+{
+  "status": "PASS_REAL_CHECKPOINT_G0_NUMERICAL_ONLY",
+  "tf_version": "1.14.0",
+  "sonnet_version": "1.34",
+  "source_checkpoint": "models/healthy-baseline-seed3/training/step-6013196",
+  "test_rows": 512,
+  "new_TCP": 0,
+  "physical_experience": 0,
+  "synthetic_optimizer_checks": true,
+  "window_max_error": 0.0,
+  "migrated_critic_old_input_max_error": 0.0001220703125,
+  "canonical_sonnet_ema_max_error": 0.0,
+  "four_unique_online_BN_writers": 4,
+  "target_pairs": 30,
+  "target_batch_context_max_error": 0.0,
+  "critic_beta1_powers_after12": [
+    0.2541864812374115,
+    0.2541864812374115
+  ],
+  "frozen_window_and_target_bitwise": true,
+  "independent_critic_optimizer_accumulators": true,
+  "post_joint_target_context_max_error": 0.0,
+  "baseline_target_window_smoothing_retained": true,
+  "time_target_not_smoothed": true,
+  "actor_rejected_during_calibration": true,
+  "forward_only_window_bitwise": true,
+  "joint_gradients": [
+    4.701140403747559,
+    0.03393608704209328
+  ],
+  "both_action_branches_updated": true,
+  "optimizer_counters_fresh": true,
+  "provenance": {
+    "source": "@PACKAGE@/models/healthy-baseline-seed3/training/step-6013196",
+    "source_state_dim": 70,
+    "source_action_dim": 1,
+    "state_dim": 82,
+    "new_inputs_zero": true,
+    "optimizer_replay_counters_fresh": true,
+    "complete_resume": false,
+    "critics": "approximate_initialization_needs_calibration",
+    "targets": "hard_copy_of_migrated_online",
+    "copied": [
+      "abstract_actor/abstract_actor/bn1/beta",
+      "abstract_actor/abstract_actor/bn1/moving_mean",
+      "abstract_actor/abstract_actor/bn1/moving_variance",
+      "abstract_actor/abstract_actor/bn2/beta",
+      "abstract_actor/abstract_actor/bn2/moving_mean",
+      "abstract_actor/abstract_actor/bn2/moving_variance",
+      "abstract_actor/abstract_actor/fc1/b",
+      "abstract_actor/abstract_actor/fc1/w",
+      "abstract_actor/abstract_actor/fc1_1/b",
+      "abstract_actor/abstract_actor/fc1_1/w",
+      "abstract_actor/abstract_actor/fc2/b",
+      "abstract_actor/abstract_actor/fc2/w",
+      "critic/dense/bias",
+      "critic/dense/kernel",
+      "critic/fc1/bias",
+      "critic/fc1/kernel",
+      "critic/fc2/bias",
+      "critic/fc2/kernel",
+      "critic2/dense/bias",
+      "critic2/dense/kernel",
+      "critic2/fc1/bias",
+      "critic2/fc1/kernel",
+      "critic2/fc2/bias",
+      "critic2/fc2/kernel"
+    ]
+  },
+  "checkpoint_inference_roundtrip_bitwise": true,
+  "incompatible_measurement_checkpoint_rejected": true,
+  "independent_fixed_control_checks": [
+    {
+      "period_ms": 20,
+      "time_gradient": 0.0,
+      "time_weights_unchanged": true
+    },
+    {
+      "period_ms": 80,
+      "time_gradient": 0.0,
+      "time_weights_unchanged": true
+    },
+    {
+      "period_ms": 160,
+      "time_gradient": 0.0,
+      "time_weights_unchanged": true
+    }
+  ]
+}

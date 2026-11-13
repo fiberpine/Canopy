@@ -9,6 +9,7 @@
 - [三地清理、独立交付与恢复记录](docs/BASELINE_RETIREMENT_20261113.md)
 - [模型与native逐文件校验](CURRENT_BASELINE.json)
 - [历史问题、失败和修复索引](docs/HISTORY_STATUS_20261113.md)
+- [从健康基座迁移的双动作候选：离线实现与待验阶段](docs/JOINT_HEALTHY_SEED3_V1.md)（独立入口，尚无新TCP性能结论）
 
 ## 当前入口
 
@@ -29,6 +30,7 @@ baseline默认评测使用当前权重、自然接管native及完整60秒包时�
 |位置|内容|
 |---|---|
 |`frameworks/baseline`|当前基座训练、推理、协议与原生源码|
+|`frameworks/joint_healthy`、`joint_healthy.py`|当前健康窗口迁移的新双动作离线候选，82维/两动作，无性质约束|
 |`templates/baseline-*.json`|实际执行配方的便携配置|
 |`models/healthy-baseline-seed3`|当前策略及选定完整tensor|
 |`docs`、`evidence`|结果、问题、修复及校验记录|

@@ -1,0 +1,229 @@
+{
+  "status": "PASS_SYNTHETIC_LEARNER_PIPELINE_ONLY",
+  "reason": "",
+  "counters": {
+    "critic_iterations": 39,
+    "critic_optimizer_ops": 78,
+    "actor_updates": 35,
+    "target_updates": 39
+  },
+  "phase": 2,
+  "credit": {
+    "inserted": 400,
+    "physical_seconds": 8.0,
+    "warmup_seconds": 0.16,
+    "warmup_inserted": 8,
+    "per_actor": [
+      200,
+      200
+    ],
+    "per_actor_seconds": [
+      4.000000000000003,
+      4.000000000000003
+    ],
+    "update_limit": 39,
+    "updates_per_base20ms": 0.1
+  },
+  "producer_done": {
+    "0": 200,
+    "1": 200
+  },
+  "update_debt": 0,
+  "no_complete_resume": true,
+  "performance_verified": false,
+  "gates": [
+    {
+      "phase": 0,
+      "iterations": 1,
+      "admitted": false,
+      "reasons": [
+        "minimum_critic_calibration"
+      ],
+      "holdout": [
+        {
+          "period": 0,
+          "rows": 39,
+          "normalized_td_rmse": 0.09079331694872467,
+          "twin_errors": [
+            0.09079331694872467,
+            0.028679333978162812
+          ]
+        }
+      ],
+      "short_returns": [
+        {
+          "period": 0,
+          "blocks": 2,
+          "normalized_return_rmse": 0.09082318417202793,
+          "twin_errors": [
+            0.09082318417202793,
+            0.028711411488816573
+          ],
+          "bootstrap_tail_not_full_MC": true,
+          "target_mean": 136.66790112457466
+        }
+      ],
+      "coverage": [
+        [
+          180,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "phase": 0,
+      "iterations": 2,
+      "admitted": true,
+      "reasons": [],
+      "holdout": [
+        {
+          "period": 0,
+          "rows": 39,
+          "normalized_td_rmse": 0.053675310491233405,
+          "twin_errors": [
+            0.0231121644940031,
+            0.053675310491233405
+          ]
+        }
+      ],
+      "short_returns": [
+        {
+          "period": 0,
+          "blocks": 2,
+          "normalized_return_rmse": 0.053675627740418334,
+          "twin_errors": [
+            0.02311237235236814,
+            0.053675627740418334
+          ],
+          "bootstrap_tail_not_full_MC": true,
+          "target_mean": 136.66093809336746
+        }
+      ],
+      "coverage": [
+        [
+          180,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "phase": 1,
+      "iterations": 3,
+      "admitted": false,
+      "reasons": [
+        "minimum_critic_calibration"
+      ],
+      "holdout": [
+        {
+          "period": 0,
+          "rows": 39,
+          "normalized_td_rmse": 0.04237976967449733,
+          "twin_errors": [
+            0.04237976967449733,
+            0.03349198636625763
+          ]
+        }
+      ],
+      "short_returns": [
+        {
+          "period": 0,
+          "blocks": 2,
+          "normalized_return_rmse": 0.04235698890791239,
+          "twin_errors": [
+            0.04235698890791239,
+            0.033512888391952315
+          ],
+          "bootstrap_tail_not_full_MC": true,
+          "target_mean": 136.6676519213525
+        }
+      ],
+      "coverage": [
+        [
+          180,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "phase": 1,
+      "iterations": 4,
+      "admitted": true,
+      "reasons": [],
+      "holdout": [
+        {
+          "period": 0,
+          "rows": 39,
+          "normalized_td_rmse": 0.06781456832018407,
+          "twin_errors": [
+            0.06781456832018407,
+            0.0005227666269302461
+          ]
+        }
+      ],
+      "short_returns": [
+        {
+          "period": 0,
+          "blocks": 2,
+          "normalized_return_rmse": 0.0678327135862262,
+          "twin_errors": [
+            0.0678327135862262,
+            0.0005395267831380823
+          ],
+          "bootstrap_tail_not_full_MC": true,
+          "target_mean": 136.67293649556342
+        }
+      ],
+      "coverage": [
+        [
+          180,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "no_server_or_socket_created": true,
+  "new_TCP": 0,
+  "measured_physical_experience": 0,
+  "fixture_exposure_is_synthetic": true,
+  "reduced_thresholds_are_fixture_only": true
+}
