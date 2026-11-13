@@ -1,5 +1,5 @@
 {
-  "scope": "Current provisional healthy seed3 natural-CUBIC baseline: independent24x3 PASS and24 H0 reference; seed7 user-stopped partial; original51 models preserved; training repeatability unverified",
+  "scope": "2026-11-13 provisional healthy seed3 natural-CUBIC engineering baseline; independent96 frozen tests PASS (72 current+24 H0), one training seed; seed7 USER_STOPPED_PARTIAL; verified conservative retirement120 files/13 clean worktrees/five cloud nodes; original51models preserved; no new training or TCP during cleanup",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 288,
-      "sha256": "55991c124e6e15b93adc5363b628c77033451aa5598c518553708676e8eed3e4"
+      "bytes": 1619,
+      "sha256": "6a5ae7684e95ee921e5341c438d9b6ccedfc9212b255b6d55b1e04b985a00ee7"
     },
     {
       "path": "CURRENT_BASELINE.json",
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2121,
-      "sha256": "47780e80cb921d95be68ef8b96d150f24bcda737132e219a3f624bd37b43357b"
+      "bytes": 2207,
+      "sha256": "bbfec38cfb0eb4f375e98670f6f38df8b8f01c5bfdbd644c7d8f13e641c35fb3"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -91,6 +91,11 @@
       "path": "docs/BASELINE_RECOVERY_20261111.md",
       "bytes": 6097,
       "sha256": "8d1287be750ab79a18b19019bea2f9f59a2719957bbb4a31b62af0b9fc0f4053"
+    },
+    {
+      "path": "docs/BASELINE_RETIREMENT_20261113.md",
+      "bytes": 5134,
+      "sha256": "4b391ee3e41749e649472fbb6f8cf28bf6f041adebd58c36daa162e1cf7a2921"
     },
     {
       "path": "docs/BASELINE_RL_RESEARCH_20261112.md",
@@ -7821,6 +7826,66 @@
       "path": "evidence/baseline-online-bn-repair-20261112/weak-existing-log-audit.json",
       "bytes": 174775,
       "sha256": "4ac9d1b574151228a8c2d9ae25bc052de2f2d743d93cea4a80c62b47946e4555"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/closure-after-retirement.json",
+      "bytes": 9962,
+      "sha256": "dbf3d608d62cdbbc16ba148e0957a7e5d99f5dd8d917c173b73ec77d1535c37e"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/cloud-code-retirement-applied.json",
+      "bytes": 517986,
+      "sha256": "5b43c3aabd16cc1fd46344ad22e848256a3fe503d1f67fdad8e84e8c12096cd7"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/cloud-current-capsule-build-and-environment.json",
+      "bytes": 5449,
+      "sha256": "3903b50369a669458a5661fc3fedbd22ce1900ea27ee74af0fc73eed40af0f0b"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/cloud-current-capsule.json",
+      "bytes": 1912,
+      "sha256": "206d4f6918da4032ba5ea0d3d9b16db2bbf8f203c93c4bd2dd1cee6c61d69889"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/current-capsule-delivery.json",
+      "bytes": 585,
+      "sha256": "336f6dc48d68a8f3f748140eb3785a348b0d9c04aaeeca1123d4a49c95d2fdb3"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/file-integrity.json",
+      "bytes": 1616,
+      "sha256": "a6d6aec2f8c18617c70881276b76d4d8b1aa554c6892259d9a35400d617b62a9"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/github-branch-archives.json",
+      "bytes": 481,
+      "sha256": "4f9216e0d5d6284a6559fe3ee6e5ec9f0c6b4e841a452fa39ff22833a36de8b1"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/local-checkout-retirement.json",
+      "bytes": 7985,
+      "sha256": "4269b7eeea84d7a7c4ad20304b97cbf4f3ba115da7c53fc3576f2bc9f9437232"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/mahimahi-generated-artifacts.json",
+      "bytes": 5838,
+      "sha256": "1bfe92658d52cdc6124285c6e73ce00fc5fc0593e911cf130664b83922e9cd1a"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/main-retirement-backup.json",
+      "bytes": 15833,
+      "sha256": "c94a45e75f0f63ecc4602be80bc437c196788127ff2446d0f5cec819fbc2abbd"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/main-source-retirement.json",
+      "bytes": 15833,
+      "sha256": "c94a45e75f0f63ecc4602be80bc437c196788127ff2446d0f5cec819fbc2abbd"
+    },
+    {
+      "path": "evidence/baseline-retirement-20261113/summary.json",
+      "bytes": 1283,
+      "sha256": "27209ba14114b05f6c201be204d5bcc272f15fdaf76c1b64d293b4adce06268f"
     },
     {
       "path": "evidence/baseline-review-20261111/README.md",
@@ -17839,13 +17904,18 @@
     },
     {
       "path": "evidence/upstream-orca-source/README.md",
-      "bytes": 388,
-      "sha256": "00e80736d64c7db6be383f9d96bd419fac821d97575aca6e0d6b24071b8c96db"
+      "bytes": 629,
+      "sha256": "75d9699cedb605c688da7b59a104a29f3840c6edc4315c7323cf97817b677467"
     },
     {
       "path": "evidence/upstream-orca-source/copyright",
       "bytes": 1089,
       "sha256": "38a581281251afd8868838e5e41ccd2e36f52b2f0f6efdcc1818e2aade586693"
+    },
+    {
+      "path": "evidence/upstream-orca-source/params_base_eval.json",
+      "bytes": 2875,
+      "sha256": "67493b28f70f41a0ea9cc26bc330e37ae63a424f08ad46d2a3457fe0a3055bd9"
     },
     {
       "path": "evidence/upstream-orca-source/rl-module/agent.py",
@@ -18053,231 +18123,6 @@
       "sha256": "fa314d5f30dd8fdc3e9935b215e587be6e0723de621165000db61116111ce416"
     },
     {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/INSTALLER",
-      "bytes": 4,
-      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/LICENSE",
-      "bytes": 1548,
-      "sha256": "b89c063b3786e28e0c0a38f1931db61fed35e69dd2a2966fbecffee0f46c8d10"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/METADATA",
-      "bytes": 21837,
-      "sha256": "19f679f9f89daead325ce0a0c8de1fba70a554793a47fcdf273fb714ac742a35"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/RECORD",
-      "bytes": 4619,
-      "sha256": "2d983d5c16ce35cc833ca9e8323e3cb4a0260d5493ef88e385874dca0689f58d"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/REQUESTED",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/WHEEL",
-      "bytes": 221,
-      "sha256": "ae0a550668e3bdb20d7862829161067777f8d151cc4ec0e4423d4b82297cdb31"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil-5.9.8.dist-info/top_level.txt",
-      "bytes": 7,
-      "sha256": "8023619f9ef0ce4b038d20084a680c2746a25f342e964d062616f6f81032620c"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/__init__.py",
-      "bytes": 89169,
-      "sha256": "6167ff8b6663b89a842d17cd97a9d7d2766ea22d3d197a8c64f255b0c24c0904"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_common.py",
-      "bytes": 29393,
-      "sha256": "053c07c5d6094329eb9f98bc20eb3a5c5c4ba3d2f5120e5c8030aae986b2a6bd"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_compat.py",
-      "bytes": 15349,
-      "sha256": "00e174bd209695efec6c9d46c3e086c7468423dca4e6eef46213d838f837287b"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psaix.py",
-      "bytes": 18749,
-      "sha256": "d5ba84c2393a206dd8fb3ac36a32a2f283d262fab736baa93d441e0d1a385208"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psbsd.py",
-      "bytes": 31956,
-      "sha256": "16bb80272fc6ae98c07c72e96f873721519fcb65e28bc6f50479c88f151f6db2"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_pslinux.py",
-      "bytes": 88043,
-      "sha256": "41823ac874ef44c619955c41d3af3154010c10018645253d13bfac243df5eb9a"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psosx.py",
-      "bytes": 16209,
-      "sha256": "77f28c4b39a32fabc0610c757d0379edbdf16b3246753b78ac8cac383075af68"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psposix.py",
-      "bytes": 8235,
-      "sha256": "5fdadded61ca43a994027da285bd373029f3ac1b50b2b3d1902a2e1319ae6a04"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_pssunos.py",
-      "bytes": 25559,
-      "sha256": "671e9e2d8fb435150514828fed2c9c92d803a28b6d767940f5a5fccb87bbe1d6"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psutil_linux.abi3.so",
-      "bytes": 115304,
-      "sha256": "a27c26f015a7e9ac5b2a33ea076eb72479baadb0dc12f32770a6218696eee48e"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_psutil_posix.abi3.so",
-      "bytes": 71624,
-      "sha256": "c4d54acb52dd29c9e28047bf0696977d8120e2a69df4c91e74bc24621e016819"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/_pswindows.py",
-      "bytes": 37734,
-      "sha256": "057828012a484ba71cc398d3c7857e1f67ccb08712bff350e84a33b3116063ed"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/__init__.py",
-      "bytes": 64753,
-      "sha256": "81ceb6d55be08f635ac6eb01ff31b07eac0ffe7a77a9a090a899723eba750f49"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/__main__.py",
-      "bytes": 269,
-      "sha256": "7f5618e9265e6dcb5de47c1bd629f8d2715285f270e3303614b89db1d83f798f"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/runner.py",
-      "bytes": 11464,
-      "sha256": "5ad4672d9e604b7f60232b0b0a4795f7d870e4bbe8755c0119eb287a7f4830db"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_aix.py",
-      "bytes": 4585,
-      "sha256": "f122a3170edc4776f2052865bd60334123938e38b90699e4f09c9492c4740102"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_bsd.py",
-      "bytes": 21245,
-      "sha256": "91f3572ec675a7e5681ad557e00b7da8c392ff337c38c54ff7279cb87116682e"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_connections.py",
-      "bytes": 21642,
-      "sha256": "0872fae6ad886316fc12bb4901487ced1c8a48259ec309808385452bcd1aacef"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_contracts.py",
-      "bytes": 12998,
-      "sha256": "fd301637b95d6e0a8921d87ab4c9110e2bd73e81fa4f78ca606e3bfcacc3bed1"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_linux.py",
-      "bytes": 92530,
-      "sha256": "2cfbe110f50f490e0c7710650113dc4784e1b1dff036a2a4aa3d09aa52a4642a"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_memleaks.py",
-      "bytes": 15012,
-      "sha256": "a73c043146b3e9787c02637faa20a6613536cb3a2dfddc2c75b4df15d2bcf559"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_misc.py",
-      "bytes": 35117,
-      "sha256": "268bd830935286edb20b7b76b1f905639b96f7a4cbecae609305e78ce476e5a4"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_osx.py",
-      "bytes": 6603,
-      "sha256": "310b1ea4edb94e57f275a3b18ea80404ce16ae2f529c2524a412c48909cabf64"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_posix.py",
-      "bytes": 17387,
-      "sha256": "b036a6f6f749256b9835d768be1c62d5cdcafb3e007d3003d1f432c9a783f186"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_process.py",
-      "bytes": 61535,
-      "sha256": "94eab79cec9042f2912516934443b4181d04ace40665eab11ec11b9f9aacf0fe"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_process_all.py",
-      "bytes": 16112,
-      "sha256": "aa42d79e4555604a8cd88861203d02cc45560260f821bee2d04e26523a3c27f6"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_sunos.py",
-      "bytes": 1310,
-      "sha256": "36166c1c00492a30840f3180ed92fadace8d96aa49c29a03c9b68f076066f471"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_system.py",
-      "bytes": 37044,
-      "sha256": "adfcc63ff66e307c73b93cf70ae5719fcfb35cd7b9ffd6029b5679253297a93f"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_testutils.py",
-      "bytes": 14828,
-      "sha256": "9816ec4416d47f85660eb2936ef952795aa8ff91d333d87879313f559ff97977"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_unicode.py",
-      "bytes": 12549,
-      "sha256": "94acadcf1340ef665d861cfa8e75e35519bedfeefd8f5cde9623ced5231255a1"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/_deps/psutil/tests/test_windows.py",
-      "bytes": 35298,
-      "sha256": "0ff7ca761a7caec5c317b3ab0572d13d2ed7329a97033a89cdbae33ea94be691"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/agent.py",
-      "bytes": 17262,
-      "sha256": "07b2bfb04fd137a3b5070608eb01f1f7b9851a40ed0db95c76f8d5d260da8fb6"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/baseline.py",
-      "bytes": 19458,
-      "sha256": "6a4f0a9cbf79bdcc3a06e7d5b0093a874909dd0012c8dea33afc27f60d5f9561"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/client",
-      "bytes": 13808,
-      "sha256": "aa6a1385e134e0bf888c4d86d881d097fc86567ebf4a3b1439053739ddb92b0b"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/envwrapper.py",
-      "bytes": 14869,
-      "sha256": "0896a709632caa48b09b119218e89b5bf168f5784da3841f32450ba72de405ba"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/orca-server",
-      "bytes": 31000,
-      "sha256": "82d35044871d3a726c233788d66d782c2245a12f6684ca3f71e26e2ea7d43895"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/tcp-native",
-      "bytes": 26664,
-      "sha256": "c32a44e05f3fb665a261df7842373ebc81d26a21838a069a4cfa87ff9fe330ed"
-    },
-    {
-      "path": "frameworks/baseline/code/baseline/utils.py",
-      "bytes": 7984,
-      "sha256": "8d07243a46e44ffc560ab41c26adb27816f4d346fbeeb68f57b16c32a1732071"
-    },
-    {
       "path": "frameworks/baseline/code/canopy/.gitignore",
       "bytes": 26,
       "sha256": "af15647a775cc3c305da9f6822947665748ac0f37f1141ec52f86119693c6a23"
@@ -18458,11 +18303,6 @@
       "sha256": "c9d2df517d331a8ad13152b8faabb374269ad8cadd4fb30a0678b33c8cb2a75c"
     },
     {
-      "path": "frameworks/baseline/code/canopy/rl-module/agent_v0.py",
-      "bytes": 27727,
-      "sha256": "8d2a0d890a34f95d4808f478cdfca30560ddf641e42b3207d096094780bb19e4"
-    },
-    {
       "path": "frameworks/baseline/code/canopy/rl-module/agent_v2.py",
       "bytes": 30421,
       "sha256": "6d4c76e0686091fe5c3a6276bcba2e3da12370e128ed7a746aa05597d342f6f8"
@@ -18478,19 +18318,9 @@
       "sha256": "b15bd24c364eb51a03be93ef28f659f8b9cd542e5bbb589b402a7e8de926912e"
     },
     {
-      "path": "frameworks/baseline/code/canopy/rl-module/d5_v0.py",
-      "bytes": 35082,
-      "sha256": "b89cb9d24e0f394a3ffb016f015e09da08a495faadbb117ecccd2ee3c7c5d741"
-    },
-    {
       "path": "frameworks/baseline/code/canopy/rl-module/d5_v2.py",
       "bytes": 46524,
       "sha256": "710e703d944ad35873cd3ada12d3375d32ea517c3e0f25af8a617fe444afe1f8"
-    },
-    {
-      "path": "frameworks/baseline/code/canopy/rl-module/envwrapper_v0.py",
-      "bytes": 15133,
-      "sha256": "15b455a8f40925ca994367bb128b08a446903e9c7d39a75c0d1516ba548caaa7"
     },
     {
       "path": "frameworks/baseline/code/canopy/rl-module/envwrapper_v2.py",
@@ -18536,11 +18366,6 @@
       "path": "frameworks/baseline/code/canopy/rl-module/test_model.py",
       "bytes": 2445,
       "sha256": "e8422140efdb29617c534f1df8a5f80af9297db0d3f9ef2ba56d6e98ef5dc2a5"
-    },
-    {
-      "path": "frameworks/baseline/code/canopy/rl-module/utils_v0.py",
-      "bytes": 8781,
-      "sha256": "2a492860490ffb6fe949cb04788d1e07315b95403eef638223adce392b72e55d"
     },
     {
       "path": "frameworks/baseline/code/canopy/rl-module/utils_v2.py",
@@ -18866,196 +18691,6 @@
       "path": "frameworks/baseline/code/canopy/traces/wired96",
       "bytes": 16,
       "sha256": "39b91b42dd694d226a663bed065ac3e26b6ef04066a5d42870e8cb75be245d21"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/README.md",
-      "bytes": 4543,
-      "sha256": "89484c7d3a878f179969c274400e5236be1f78510e490fadd34ad992f637f4fd"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/actor.sh",
-      "bytes": 1314,
-      "sha256": "acd01bce7b72ea0f30bb7fd9e801f87eb81a0eba2390e4c982fff401a4cbcc44"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/build.sh",
-      "bytes": 231,
-      "sha256": "54b6dea8f8fea301bddb7acd30896ee4f84c196f573d681d51aa5d2991d364fa"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/client",
-      "bytes": 14496,
-      "sha256": "30ff199de922e15b2b01cec9c1383c14ed2c29457956b736ab5f45f57272d00c"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/copyright",
-      "bytes": 1089,
-      "sha256": "38a581281251afd8868838e5e41ccd2e36f52b2f0f6efdcc1818e2aade586693"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/learner.sh",
-      "bytes": 564,
-      "sha256": "42dc0b8d2221e412dd77ab43a882117aa1f75cc7bac3bc3f881f36e7e8c449b2"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/linux/copyright",
-      "bytes": 1073,
-      "sha256": "8d74f6a79d768a75996de13ec5af8ca436f58359423a967de1ee1915f83805e5"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/linux/linux-4-13-1-orca-0521+c2tcp.patch",
-      "bytes": 39879,
-      "sha256": "65bc32116439b3e1f6a6f1b6732ea768f42aaea36cb92d0e358dd035880cd7a6"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/orca-standalone-emulation.sh",
-      "bytes": 1690,
-      "sha256": "730744410169203bf5783ce82b2650fd83d8eb1de19aa83497c1d9bdfba66e91"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/orca.sh",
-      "bytes": 3722,
-      "sha256": "23116bce6773728269df411dc5fe42fd425786e950f3213997e17a31c2e986b0"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/params_base.json",
-      "bytes": 2860,
-      "sha256": "a0e4f2cb6bbbfd2f5cc7c287d82f068a4d42b34102492626ef2edcd441da3f99"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/params_base_eval.json",
-      "bytes": 2875,
-      "sha256": "67493b28f70f41a0ea9cc26bc330e37ae63a424f08ad46d2a3457fe0a3055bd9"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/rl-module/agent.py",
-      "bytes": 17262,
-      "sha256": "07b2bfb04fd137a3b5070608eb01f1f7b9851a40ed0db95c76f8d5d260da8fb6"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/rl-module/client",
-      "bytes": 14496,
-      "sha256": "30ff199de922e15b2b01cec9c1383c14ed2c29457956b736ab5f45f57272d00c"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/rl-module/d5.py",
-      "bytes": 16708,
-      "sha256": "eddef78dd08483cbbfa918b2b0a4ca0bda0a6839fa134746ade0cb8378f1b91a"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/rl-module/envwrapper.py",
-      "bytes": 14869,
-      "sha256": "0896a709632caa48b09b119218e89b5bf168f5784da3841f32450ba72de405ba"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/rl-module/mm-del-file",
-      "bytes": 6714,
-      "sha256": "c5a2272b1922d3a431173507d4439651cf7b5e76b55e54474c85ff5877fe40bd"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/rl-module/mm-thr",
-      "bytes": 7395,
-      "sha256": "8765864c347ad80c706749f94fcf8415e7d1752eb7ebed1f7406fba5b3a73309"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/rl-module/mm-thr-file",
-      "bytes": 5253,
-      "sha256": "14e95a790ec0a80231f96a86f9b94fd4696c5e039ea69cf355855beb1dc32ec0"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/rl-module/orca-server-mahimahi",
-      "bytes": 34888,
-      "sha256": "6660beba8b52da72554ee4837f8e3e4f06783fc629b13a95dcb366dd40deeea8"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/rl-module/params.json",
-      "bytes": 2860,
-      "sha256": "a0e4f2cb6bbbfd2f5cc7c287d82f068a4d42b34102492626ef2edcd441da3f99"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/rl-module/utils.py",
-      "bytes": 7984,
-      "sha256": "8d07243a46e44ffc560ab41c26adb27816f4d346fbeeb68f57b16c32a1732071"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/setup.sh",
-      "bytes": 477,
-      "sha256": "656448e5ae9086b512996a67994f239b1cb133acbbbc6bd482526f792eeef2b1"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/src/client.c",
-      "bytes": 7388,
-      "sha256": "cd5420d05896e70ec070f8206664b497c7fddc982b5a1fe4968cd2b94f7ce5c4"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/src/common.h",
-      "bytes": 8935,
-      "sha256": "7b628edc25fc856101a99515029f2fef4e7074ad6a6285c56047500c89315b97"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/src/define.h",
-      "bytes": 6842,
-      "sha256": "f7a78f25713f52ac9646a3c39a05146e9bc89d904f2a89bf9a7a877c1bffb31b"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/src/flow.cc",
-      "bytes": 2432,
-      "sha256": "d7f1f2c32cfa123a6a0c4251ba535f66e38a2731d2edde470906349825f5852a"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/src/flow.h",
-      "bytes": 2601,
-      "sha256": "ad46f1853ae31680469f5ac0c75947cd1280e638754ee660d84bf976c5a96750"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/src/orca-server-mahimahi.cc",
-      "bytes": 24534,
-      "sha256": "62133eb43fb61d6347f2747788cdc2ca4f7b350a4ef7d28db2bfd2d2bfbcbf9c"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/src/util.h",
-      "bytes": 2171,
-      "sha256": "a9982aa98b5441d5d8ee5692ebc94526c1c7f384702e150ae184554836fc58c7"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/step-10s-3-level",
-      "bytes": 196296,
-      "sha256": "5636a172ec6f9014a209dbff882b04d1e13f02609953872558675f29d2521dd5"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired12",
-      "bytes": 2,
-      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired192",
-      "bytes": 32,
-      "sha256": "3ff41cf22d4c4544514802ce2aecc08eea6c0989c3fa2e735c545f1054b26b88"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired24",
-      "bytes": 4,
-      "sha256": "ad0fadf63cc7cd779ce475e345bf4063565b63a3c2efef1eebc89790aaa6acba"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired300",
-      "bytes": 50,
-      "sha256": "8d62c939abc65069a90e348b81888038410b08ddf81ef5c642ada8634a676b3d"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired48",
-      "bytes": 43555584,
-      "sha256": "13267a13d09eb72073a63c4506f63c9fa53a4d743e59351173069d6e225494b5"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired6",
-      "bytes": 5444453,
-      "sha256": "83b9a79ebbd8e0fd310dd0057476154f63b585eda00fe194ca8d04b52b01861c"
-    },
-    {
-      "path": "frameworks/baseline/code/orca/traces/wired96",
-      "bytes": 87111184,
-      "sha256": "4f08be35986baf50e1f5466ec74e8f742078ccfd96b626507a7f68e0bff95d79"
     },
     {
       "path": "frameworks/baseline/code/runtime/_deps/psutil-5.9.8.dist-info/INSTALLER",
@@ -22290,11 +21925,6 @@
       "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
     },
     {
-      "path": "runtime/mahimahi/Makefile",
-      "bytes": 26526,
-      "sha256": "71c6a04d06a44856b46f081ae4006f68eb49676cbcb6f5c4c1d41cd99f2f332a"
-    },
-    {
       "path": "runtime/mahimahi/Makefile.am",
       "bytes": 57,
       "sha256": "64ed3fffce4f81bd69a5816de400b4d6f984119d2d489b236812225f23c01cd7"
@@ -22335,24 +21965,9 @@
       "sha256": "19c12bb2ca19e68724c2854ed0512469518df19b0710cc2011a5ca540810979c"
     },
     {
-      "path": "runtime/mahimahi/config.h",
-      "bytes": 6063,
-      "sha256": "7bcb832264cdbc1e032e037f24147daf9911fb13f79933331cbe40b0639d87f7"
-    },
-    {
       "path": "runtime/mahimahi/config.h.in",
       "bytes": 5379,
       "sha256": "7b99be07ec4af7c324f04c5a3944cefe35aaeecc3f3b383a183145ef88c8ffe4"
-    },
-    {
-      "path": "runtime/mahimahi/config.log",
-      "bytes": 52236,
-      "sha256": "6bede7916b02a7bae85d7dab5f9e1b3b31e47d8c6983c2728a40306ae73d4f0b"
-    },
-    {
-      "path": "runtime/mahimahi/config.status",
-      "bytes": 70517,
-      "sha256": "10a30af1741f116491ef520f1d08c807ab993956cf40520de8801780bc27b917"
     },
     {
       "path": "runtime/mahimahi/config.sub",
@@ -22440,11 +22055,6 @@
       "sha256": "fb968adf6c7fa83071ad294c8a5a13a63c92a8f109f78bae51a80d6eee59990d"
     },
     {
-      "path": "runtime/mahimahi/libtool",
-      "bytes": 345327,
-      "sha256": "1ad67e4792f1a8b4d8e25a113c141711af027735260bf1a6df52d1c74706948b"
-    },
-    {
       "path": "runtime/mahimahi/ltmain.sh",
       "bytes": 324412,
       "sha256": "cd1ff57339d0c757dd9cbe04de126d4645167db629c787d5cb885a2cd033deea"
@@ -22478,11 +22088,6 @@
       "path": "runtime/mahimahi/m4/lt~obsolete.m4",
       "bytes": 6140,
       "sha256": "26fa3285c35dd6ab00ed1e466ba92a17e4655e01897731ec18a587a4cf5e4f8d"
-    },
-    {
-      "path": "runtime/mahimahi/man/Makefile",
-      "bytes": 16523,
-      "sha256": "3fdff9fae6c3ec3e2d85363e137af2cb4a5c7582165cae8a055d1b53aba76740"
     },
     {
       "path": "runtime/mahimahi/man/Makefile.am",
@@ -22560,11 +22165,6 @@
       "sha256": "b1a337b731bbb58846d31ca2f5143c293a455fa41b481e236e89a9016d96b034"
     },
     {
-      "path": "runtime/mahimahi/scripts/Makefile",
-      "bytes": 16164,
-      "sha256": "052ba84e3fbf533973158a6e8f9484a9672f6918968c24f795c5b0c930728b36"
-    },
-    {
       "path": "runtime/mahimahi/scripts/Makefile.am",
       "bytes": 54,
       "sha256": "2d6e0f0622f37c8bb85524dbdfb41bb57d3c3f96ac32636ef078368be5847377"
@@ -22590,11 +22190,6 @@
       "sha256": "461cd35db52e082d4254deb3271dd88d1320c271935fda9bf8281558ac2c35ec"
     },
     {
-      "path": "runtime/mahimahi/src/Makefile",
-      "bytes": 19593,
-      "sha256": "4bc70fd8bf1825c95e7ad6d67f06f3234ecb643e8e78c9d899bbc6fae8948bdf"
-    },
-    {
       "path": "runtime/mahimahi/src/Makefile.am",
       "bytes": 72,
       "sha256": "7582db7647c8d3091e633a7455ed31a54c56d8a2ef0e98e3b2a32712ee5b09e9"
@@ -22603,11 +22198,6 @@
       "path": "runtime/mahimahi/src/Makefile.in",
       "bytes": 19205,
       "sha256": "859adc26a72837ad940acf42dd8849cbf0021fae6a18b61f42468dbb3d36a793"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/Makefile",
-      "bytes": 36448,
-      "sha256": "ec54c98c3552c7f4093c4d5001a7fc11efe397142fd313e0545f90949bf0e95f"
     },
     {
       "path": "runtime/mahimahi/src/frontend/Makefile.am",
@@ -22685,51 +22275,6 @@
       "sha256": "55e3f7e5d619f2b6910fb18c3fee61788ca97002f3eb853a91d46d87102d189f"
     },
     {
-      "path": "runtime/mahimahi/src/frontend/mm-delay",
-      "bytes": 2767256,
-      "sha256": "a6202d741459ea10dbc2cf31e56b591ed2c175037a02dfc976feb83eced970a6"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-intermittent",
-      "bytes": 2828080,
-      "sha256": "dddf81d37766e95cdf09e094d50840f45c6f074684a260a65a4ba536b1f161d1"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-link",
-      "bytes": 4693984,
-      "sha256": "9aef2f1d56b6300ab1529218b29fbe9663f144bc6c8aa4dc6345017acef2b4c2"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-loss",
-      "bytes": 2815320,
-      "sha256": "18d0903e4ec6bba3de7322ce79754686eae1c8e48d9ed1f1c30ce8f8db4716d3"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-meter",
-      "bytes": 3978144,
-      "sha256": "864029593849ccb9860d2a11c3d1036ed103aaeac78df76eaea2272926f00bc6"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-onoff",
-      "bytes": 2828728,
-      "sha256": "eadc5874fef254f7a6fed7a089d5e223b030fc5944f3230d8a897a07f473f3e8"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-replayserver",
-      "bytes": 1861784,
-      "sha256": "dcb228ad6883931f725e09bb336c299bd61bdf7fd609fd06760da8aad63fd0cd"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-webrecord",
-      "bytes": 4608104,
-      "sha256": "42ecf9ea6d5b397a4f7cfe1a657b2cd483c61920663c9a7393fdfdce90b4e79e"
-    },
-    {
-      "path": "runtime/mahimahi/src/frontend/mm-webreplay",
-      "bytes": 2967720,
-      "sha256": "3c3e0bdc76617249d393977d87583e66e7da928299f4e8481f73762e8e3d6e60"
-    },
-    {
       "path": "runtime/mahimahi/src/frontend/mod_deepcgi.c",
       "bytes": 4925,
       "sha256": "afbe2f6eec3516833d4bbfa9f30b34a2eac755cdfd962a035ee5cac930e22663"
@@ -22768,11 +22313,6 @@
       "path": "runtime/mahimahi/src/frontend/web_server.hh",
       "bytes": 826,
       "sha256": "548cbdf30a97feaf8765a6f7cce76d9d0683cbfdff333bee86e83642a1f9bd53"
-    },
-    {
-      "path": "runtime/mahimahi/src/graphing/Makefile",
-      "bytes": 19405,
-      "sha256": "fd7e1029701199486e57c55938047b6b12027cf73f3991c3a302cb8bb028c463"
     },
     {
       "path": "runtime/mahimahi/src/graphing/Makefile.am",
@@ -22823,16 +22363,6 @@
       "path": "runtime/mahimahi/src/graphing/graph.hh",
       "bytes": 2350,
       "sha256": "0bbfac59b2ff9d0f513457809feaf15646cabd2941b591137af0c5730afbbdda"
-    },
-    {
-      "path": "runtime/mahimahi/src/graphing/libgraph.a",
-      "bytes": 2439788,
-      "sha256": "38333d7d7d647e00f684bb183c4c4d628eef12d97681fc8de425b260ab8e103b"
-    },
-    {
-      "path": "runtime/mahimahi/src/http/Makefile",
-      "bytes": 19896,
-      "sha256": "cd9b4b89fec458e9f95dfc03cd321e591c78069ce386e647f660c83eee2a377c"
     },
     {
       "path": "runtime/mahimahi/src/http/Makefile.am",
@@ -22930,11 +22460,6 @@
       "sha256": "7a294e372fe352c91b90df5abdda8687656f9491b3297eeae3d2cd5d7056e0bd"
     },
     {
-      "path": "runtime/mahimahi/src/http/libhttp.a",
-      "bytes": 2603476,
-      "sha256": "f0219d07ddab8587505a2d6000a034dfcfcc51d623802cd143c89dc92b148785"
-    },
-    {
       "path": "runtime/mahimahi/src/http/mime_type.cc",
       "bytes": 483,
       "sha256": "5b88dc5274154ca3f532eee62e0b4fa378fa5033796dcf57e045c8a9c705f2a0"
@@ -22948,11 +22473,6 @@
       "path": "runtime/mahimahi/src/http/tokenize.hh",
       "bytes": 1031,
       "sha256": "1d6401708a867c97754d5f7cdac088a598d3d767cbf78c4d231a66780d2aac97"
-    },
-    {
-      "path": "runtime/mahimahi/src/httpserver/Makefile",
-      "bytes": 19384,
-      "sha256": "fb3682e169a206650a4c5728ef723ed1ab165cec1e186a994a8eeb55bcf3325b"
     },
     {
       "path": "runtime/mahimahi/src/httpserver/Makefile.am",
@@ -22985,11 +22505,6 @@
       "sha256": "069e1933c5e136efa75e79ce3a58f0b167a32491851f9477b57655a681334b8b"
     },
     {
-      "path": "runtime/mahimahi/src/httpserver/libhttpserver.a",
-      "bytes": 2013700,
-      "sha256": "65de0cc18c9dd7b04bd4522ac0ae58b7352e87d7efd47e65b3e5192f0c24596f"
-    },
-    {
       "path": "runtime/mahimahi/src/httpserver/secure_socket.cc",
       "bytes": 5051,
       "sha256": "004680d647e200ec020cd7e99c84e264200fc5b355c068b94daea79effa322ae"
@@ -22998,11 +22513,6 @@
       "path": "runtime/mahimahi/src/httpserver/secure_socket.hh",
       "bytes": 1029,
       "sha256": "610c12da28531996d9801af687e637e52b5bdeec6c2aed556067dea2ba545c97"
-    },
-    {
-      "path": "runtime/mahimahi/src/packet/Makefile",
-      "bytes": 19686,
-      "sha256": "789321b6b834ef05dd342998128065434e9656219aa511e0a05a4f2e71127561"
     },
     {
       "path": "runtime/mahimahi/src/packet/Makefile.am",
@@ -23060,11 +22570,6 @@
       "sha256": "6bb04adc9fe7c2dd2653a21a348e294dced5f6f0acd16a59dabd5888e540501a"
     },
     {
-      "path": "runtime/mahimahi/src/packet/libpacket.a",
-      "bytes": 929682,
-      "sha256": "d18c9bec17a23f9cd7eef856a1d3c3d3215e02c9d14015c4ee6b91581eb2f119"
-    },
-    {
       "path": "runtime/mahimahi/src/packet/packetshell.cc",
       "bytes": 8319,
       "sha256": "5af74838d2c2e526079310ad07d3888f06bf3973d64359c1fddaaf22fd6b5daa"
@@ -23088,11 +22593,6 @@
       "path": "runtime/mahimahi/src/packet/queued_packet.hh",
       "bytes": 426,
       "sha256": "f1b3aa79e53fe5251cec756149e0ca827bec8d83c411429dac582b9103a74de8"
-    },
-    {
-      "path": "runtime/mahimahi/src/protobufs/Makefile",
-      "bytes": 19994,
-      "sha256": "8d4f487f63384ff4d0f13b2dbb4c6091914a007fb62aaded4054187a1bebb4ef"
     },
     {
       "path": "runtime/mahimahi/src/protobufs/Makefile.am",
@@ -23120,16 +22620,6 @@
       "sha256": "cf981de9d584c0bd0d0f0268d530c4b928bd2490147ad922a82e4cfbf9717417"
     },
     {
-      "path": "runtime/mahimahi/src/protobufs/libhttprecordprotos.a",
-      "bytes": 843480,
-      "sha256": "3b80e9d664aec10d6b2a0f318da881e20528f0d3bdf964a5a07ffa8717af39a1"
-    },
-    {
-      "path": "runtime/mahimahi/src/tests/Makefile",
-      "bytes": 13391,
-      "sha256": "3a3e57fb0b63203da575b3d773aca933a6d765ca3a94935b365ed741eeeb4f7d"
-    },
-    {
       "path": "runtime/mahimahi/src/tests/Makefile.am",
       "bytes": 87,
       "sha256": "6f644e57b7d14fc2093081ece29d2614f4149b82a7cde8530cce456321ed7345"
@@ -23143,11 +22633,6 @@
       "path": "runtime/mahimahi/src/tests/packetshell-test",
       "bytes": 977,
       "sha256": "7fed6a29d54e4042d95d56285c015888148054b93f9842c3a60432d9743d9f5b"
-    },
-    {
-      "path": "runtime/mahimahi/src/util/Makefile",
-      "bytes": 20899,
-      "sha256": "9e62de89cda5ebb4c49843c0d6ef5cad4a6fe668057f60f49ad9f93ddc4e47d4"
     },
     {
       "path": "runtime/mahimahi/src/util/Makefile.am",
@@ -23255,11 +22740,6 @@
       "sha256": "643508cb128952e6bbce274233cff22c1c4a3bc9438b4f853d7eaf45273f358a"
     },
     {
-      "path": "runtime/mahimahi/src/util/libutil.a",
-      "bytes": 6215760,
-      "sha256": "3831f01caf7f2fc0c5c0bf6108c62fe0b57ff05ba2fb31eb105fdf09f11c3a07"
-    },
-    {
       "path": "runtime/mahimahi/src/util/nat.cc",
       "bytes": 2204,
       "sha256": "ffd926bec100ade02aa248895e90bfab2e1bd44f3751973790742e460c1c7611"
@@ -23360,11 +22840,6 @@
       "sha256": "0bbac1ab5551e11aaef599e9e3e79e3f92519b9a0761b067aedcbc997e3ee040"
     },
     {
-      "path": "runtime/mahimahi/stamp-h1",
-      "bytes": 23,
-      "sha256": "24fdde0aee1f49666fc7a5bd7f422dc0118e4db128bc1f606f7f047c9b245bb4"
-    },
-    {
       "path": "runtime/mahimahi/traces/ATT-LTE-driving-2016.down",
       "bytes": 271440,
       "sha256": "24a40538340de991e0a6595aefc381b11a3da0446176e69b51750707a57b0344"
@@ -23383,11 +22858,6 @@
       "path": "runtime/mahimahi/traces/ATT-LTE-driving.up",
       "bytes": 483248,
       "sha256": "d58a640b9bccd131a421bff6eaf727aba324d9258b35009655bbf68e087b9b29"
-    },
-    {
-      "path": "runtime/mahimahi/traces/Makefile",
-      "bytes": 15894,
-      "sha256": "f82ef177af663c03d82136be696f2329f487d3df30e7df6fb81f117ae5e4d36a"
     },
     {
       "path": "runtime/mahimahi/traces/Makefile.am",

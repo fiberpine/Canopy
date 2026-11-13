@@ -1,0 +1,105 @@
+{
+  "status": "PASS_REBUILD_ACCEPTED_BYTES_AND_EXISTING_ENVIRONMENT",
+  "native_rebuild": [
+    {
+      "startup": "legacy",
+      "audit": false,
+      "command": [
+        "g++",
+        "-std=c++11",
+        "-pthread",
+        "@CLOUD_HOME@/canopy-healthy-seed3-natural-20261113/frameworks/baseline/code/runtime/src/orca-server-control-log-safe.cc",
+        "@CLOUD_HOME@/canopy-healthy-seed3-natural-20261113/frameworks/baseline/code/runtime/src/flow.cc",
+        "-o",
+        "/tmp/canopy-native-2vpe9ww4/native"
+      ],
+      "source_sha256": {
+        "orca-server-control-log-safe.cc": "07660cedf8539c8b403ceaeda88a36cf5f51eab488623b279f41294200306947",
+        "flow.cc": "d7f1f2c32cfa123a6a0c4251ba535f66e38a2731d2edde470906349825f5852a",
+        "define_v2.h": "97a9ce508cfcf2ad3dd6b158f4fba4aac3a120d3545f17aa796430f8659f92cd",
+        "flow.h": "ad46f1853ae31680469f5ac0c75947cd1280e638754ee660d84bf976c5a96750",
+        "common.h": "7b628edc25fc856101a99515029f2fef4e7074ad6a6285c56047500c89315b97",
+        "util.h": "a9982aa98b5441d5d8ee5692ebc94526c1c7f384702e150ae184554836fc58c7"
+      },
+      "logical_source_path": "@CLOUD_HOME@/orca-capacity-repair-20261112/runtime/orca-server-control-log-safe.cc",
+      "compiler_version": "g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0",
+      "compiled_source_sha256": "6b0922f8b46bf50aa55bd25ab7e9c92f29d8158268814fef3b43eda9d290630d",
+      "executed_command": [
+        "g++",
+        "-I",
+        "@CLOUD_HOME@/canopy-healthy-seed3-natural-20261113/frameworks/baseline/code/runtime/src",
+        "-std=c++11",
+        "-pthread",
+        "/tmp/canopy-native-2vpe9ww4/orca-startup-gczcf0kq/orca-server-control-log-safe.cc",
+        "@CLOUD_HOME@/canopy-healthy-seed3-natural-20261113/frameworks/baseline/code/runtime/src/flow.cc",
+        "-o",
+        "/tmp/canopy-native-2vpe9ww4/orca-startup-gczcf0kq/native"
+      ],
+      "binary_sha256": "632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0e12fe1d",
+      "status": "BUILT_NOT_NETWORK_VALIDATED",
+      "delivered_path": "frameworks/baseline/code/runtime/orca-server-cloexec"
+    },
+    {
+      "startup": "natural-cubic",
+      "audit": true,
+      "command": [
+        "g++",
+        "-std=c++11",
+        "-pthread",
+        "-DORCA_NATURAL_CUBIC_HANDOFF",
+        "-DORCA_STARTUP_AUDIT",
+        "@CLOUD_HOME@/canopy-healthy-seed3-natural-20261113/frameworks/baseline/code/runtime/src/orca-server-control-log-safe.cc",
+        "@CLOUD_HOME@/canopy-healthy-seed3-natural-20261113/frameworks/baseline/code/runtime/src/flow.cc",
+        "-o",
+        "/tmp/canopy-native-p93x2w0r/native"
+      ],
+      "source_sha256": {
+        "orca-server-control-log-safe.cc": "07660cedf8539c8b403ceaeda88a36cf5f51eab488623b279f41294200306947",
+        "flow.cc": "d7f1f2c32cfa123a6a0c4251ba535f66e38a2731d2edde470906349825f5852a",
+        "define_v2.h": "97a9ce508cfcf2ad3dd6b158f4fba4aac3a120d3545f17aa796430f8659f92cd",
+        "flow.h": "ad46f1853ae31680469f5ac0c75947cd1280e638754ee660d84bf976c5a96750",
+        "common.h": "7b628edc25fc856101a99515029f2fef4e7074ad6a6285c56047500c89315b97",
+        "util.h": "a9982aa98b5441d5d8ee5692ebc94526c1c7f384702e150ae184554836fc58c7"
+      },
+      "logical_source_path": "@CLOUD_HOME@/orca-capacity-repair-20261112/runtime/orca-server-control-log-safe.cc",
+      "compiler_version": "g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0",
+      "compiled_source_sha256": "6b0922f8b46bf50aa55bd25ab7e9c92f29d8158268814fef3b43eda9d290630d",
+      "executed_command": [
+        "g++",
+        "-I",
+        "@CLOUD_HOME@/canopy-healthy-seed3-natural-20261113/frameworks/baseline/code/runtime/src",
+        "-std=c++11",
+        "-pthread",
+        "-DORCA_NATURAL_CUBIC_HANDOFF",
+        "-DORCA_STARTUP_AUDIT",
+        "/tmp/canopy-native-p93x2w0r/orca-startup-4y5knob6/orca-server-control-log-safe.cc",
+        "@CLOUD_HOME@/canopy-healthy-seed3-natural-20261113/frameworks/baseline/code/runtime/src/flow.cc",
+        "-o",
+        "/tmp/canopy-native-p93x2w0r/orca-startup-4y5knob6/native"
+      ],
+      "binary_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+      "status": "BUILT_NOT_NETWORK_VALIDATED",
+      "delivered_path": "frameworks/baseline/code/runtime/orca-server-natural-cubic"
+    }
+  ],
+  "doctor": {
+    "package": "@CLOUD_HOME@/canopy-healthy-seed3-natural-20261113",
+    "python": "@CLOUD_HOME@/venv/bin/python",
+    "kernel": "4.13.1-0521-learner",
+    "tools": {
+      "g++": "/usr/bin/g++",
+      "mm-link": "/usr/local/bin/mm-link",
+      "mm-delay": "/usr/local/bin/mm-delay",
+      "sudo": "/usr/bin/sudo",
+      "ip": "/sbin/ip"
+    },
+    "tun": true,
+    "runtime_imports": true,
+    "runtime_detail": "3.6.9 (default, Mar 10 2023, 16:46:00) \n[GCC 8.4.0]\n1.14.0\n",
+    "runtime_error": "getters/restore_initializer.py:27: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.\n\nWARNING:tensorflow:\nThe TensorFlow contrib module will not be included in TensorFlow 2.0.\nFor more information, please see:\n  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md\n  * https://github.com/tensorflow/addons\n  * https://github.com/tensorflow/io (for I/O related ops)\nIf you depend on functionality not listed there, please file an issue.\n\n",
+    "kernel_required": "4.13.1-0521-learner custom TCP ABI",
+    "compatible_kernel": true
+  },
+  "new_TCP": 0,
+  "optimizer_updates": 0
+}

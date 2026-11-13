@@ -6,6 +6,7 @@
 
 - [当前基座：结果、执行契约、使用和限制](docs/CURRENT_BASELINE.md)
 - [完整96次测试及用户停止seed7的记录](docs/BASELINE_HEALTH_CONTINUATION_20261113.md)
+- [三地清理、独立交付与恢复记录](docs/BASELINE_RETIREMENT_20261113.md)
 - [模型与native逐文件校验](CURRENT_BASELINE.json)
 - [历史问题、失败和修复索引](docs/HISTORY_STATUS_20261113.md)
 
