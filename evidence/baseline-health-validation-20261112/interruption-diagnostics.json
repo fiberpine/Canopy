@@ -1,0 +1,488 @@
+[
+  {
+    "node": 0,
+    "epoch": 1794554283.530993,
+    "boot_epoch": 1794553888,
+    "uptime_s": 394.93,
+    "logs": [
+      {
+        "run": "natural-01",
+        "files": [
+          {
+            "name": "result.json",
+            "exists": true,
+            "bytes": 2518,
+            "mtime": 1794495467.4026701,
+            "tail": null
+          },
+          {
+            "name": "ownership.json",
+            "exists": true,
+            "bytes": 691,
+            "mtime": 1794495406.4869738,
+            "tail": null
+          },
+          {
+            "name": "server.log",
+            "exists": true,
+            "bytes": 1297,
+            "mtime": 1794495466.598674,
+            "tail": null
+          },
+          {
+            "name": "down.log",
+            "exists": true,
+            "bytes": 14587182,
+            "mtime": 1794495466.9066725,
+            "tail": null
+          },
+          {
+            "name": "natural-01.stdout",
+            "exists": true,
+            "bytes": 29058,
+            "mtime": 1794495467.4026701,
+            "tail": "0, \"queue_bytes\": 902400, \"queue_bdp\": 5.0133689839572195, \"method\": \"canopy\", \"run_id\": \"natural-01\", \"group\": \"onlinebn-final6m\", \"seconds\": 60, \"port\": 12901, \"seed\": 3, \"checkpoint\": \"@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model\", \"backend\": \"moving_stats\", \"code_commit\": \"source-manifest-formal.json\", \"control_period_ms\": 20, \"history_frames\": 10, \"use_normalizer\": false, \"no_training\": true, \"absolute_deadline_epoch\": 1794496632.3245234, \"timeout_s\": 105, \"stop_file\": \"@VALIDATION_ROOT@/frameworks/baseline/logs/natural-01-stop.json\", \"server_binary\": \"@VALIDATION_ROOT@/runtime/orca-natural-cubic-audit\", \"minimum_valid_feedback_samples\": 5, \"feedback_completion_rule\": \"At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure\"}, \"status\": \"COMPLETED\", \"reason\": \"\", \"counters\": {\"valid\": 2769, \"critic_iterations\": 0, \"critic_optimizer_ops\": 0, \"actor_updates\": 0, \"target_updates\": 0, \"exploration_calls\": 0}, \"inserted\": 0, \"wall_s\": 61.47138220099987, \"policy_sha256_before\": \"631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0\", \"policy_sha256_after\": \"631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0\", \"policy_variables\": [\"abstract_actor/abstract_actor/fc1/w:0\", \"abstract_actor/abstract_actor/fc1/b:0\", \"abstract_actor/abstract_actor/bn1/moving_mean:0\", \"abstract_actor/abstract_actor/bn1/moving_variance:0\", \"abstract_actor/abstract_actor/bn1/beta:0\", \"abstract_actor/abstract_actor/fc2/w:0\", \"abstract_actor/abstract_actor/fc2/b:0\", \"abstract_actor/abstract_actor/bn2/moving_mean:0\", \"abstract_actor/abstract_actor/bn2/moving_variance:0\", \"abstract_actor/abstract_actor/bn2/beta:0\", \"abstract_actor/abstract_actor/fc1_1/w:0\", \"abstract_actor/abstract_actor/fc1_1/b:0\"], \"server_returncode\": 1}\n"
+          },
+          {
+            "name": "natural-01-owned.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          }
+        ]
+      },
+      {
+        "run": "natural-02",
+        "files": [
+          {
+            "name": "result.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "ownership.json",
+            "exists": true,
+            "bytes": 693,
+            "mtime": 1794495472.4466457,
+            "tail": null
+          },
+          {
+            "name": "server.log",
+            "exists": true,
+            "bytes": 1308,
+            "mtime": 1794495522.1824105,
+            "tail": null
+          },
+          {
+            "name": "down.log",
+            "exists": true,
+            "bytes": 7982830,
+            "mtime": 1794495522.1824105,
+            "tail": null
+          },
+          {
+            "name": "natural-02.stdout",
+            "exists": true,
+            "bytes": 26769,
+            "mtime": 1794495472.4186459,
+            "tail": "NG:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f53e49ceda0>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f53e49ceda0>>: AttributeError: module 'gast' has no attribute 'Index'\nWARNING:tensorflow:From @VALIDATION_ROOT@/frameworks/baseline/evaluate.py:61: The name tf.train.NewCheckpointReader is deprecated. Please use tf.compat.v1.train.NewCheckpointReader instead.\n\nWARNING:tensorflow:From @VALIDATION_ROOT@/frameworks/baseline/evaluate.py:61: The name tf.train.NewCheckpointReader is deprecated. Please use tf.compat.v1.train.NewCheckpointReader instead.\n\nWARNING:tensorflow:From @VALIDATION_ROOT@/frameworks/baseline/evaluate.py:64: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.\n\nWARNING:tensorflow:From @VALIDATION_ROOT@/frameworks/baseline/evaluate.py:64: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.\n\nWARNING:tensorflow:From @CLOUD_HOME@/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.\nInstructions for updating:\nUse standard file APIs to check for files with this prefix.\nWARNING:tensorflow:From @CLOUD_HOME@/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.\nInstructions for updating:\nUse standard file APIs to check for files with this prefix.\n"
+          },
+          {
+            "name": "natural-02-owned.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          }
+        ]
+      },
+      {
+        "run": "natural-03",
+        "files": [
+          {
+            "name": "result.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "ownership.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "server.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "down.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-03.stdout",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-03-owned.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          }
+        ]
+      },
+      {
+        "run": "natural-04",
+        "files": [
+          {
+            "name": "result.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "ownership.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "server.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "down.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-04.stdout",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-04-owned.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          }
+        ]
+      },
+      {
+        "run": "natural-05",
+        "files": [
+          {
+            "name": "result.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "ownership.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "server.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "down.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-05.stdout",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-05-owned.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "node": 1,
+    "epoch": 1794554283.535064,
+    "boot_epoch": 1794553887,
+    "uptime_s": 395.96,
+    "logs": [
+      {
+        "run": "natural-07",
+        "files": [
+          {
+            "name": "result.json",
+            "exists": true,
+            "bytes": 2522,
+            "mtime": 1794495467.3717723,
+            "tail": null
+          },
+          {
+            "name": "ownership.json",
+            "exists": true,
+            "bytes": 693,
+            "mtime": 1794495406.4641192,
+            "tail": null
+          },
+          {
+            "name": "server.log",
+            "exists": true,
+            "bytes": 1609,
+            "mtime": 1794495468.2917664,
+            "tail": null
+          },
+          {
+            "name": "down.log",
+            "exists": true,
+            "bytes": 2449357,
+            "mtime": 1794495468.2237668,
+            "tail": null
+          },
+          {
+            "name": "natural-07.stdout",
+            "exists": true,
+            "bytes": 29062,
+            "mtime": 1794495467.3717723,
+            "tail": "0, \"queue_bytes\": 1504000, \"queue_bdp\": 5.015045135406219, \"method\": \"canopy\", \"run_id\": \"natural-07\", \"group\": \"onlinebn-final6m\", \"seconds\": 60, \"port\": 12907, \"seed\": 3, \"checkpoint\": \"@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model\", \"backend\": \"moving_stats\", \"code_commit\": \"source-manifest-formal.json\", \"control_period_ms\": 20, \"history_frames\": 10, \"use_normalizer\": false, \"no_training\": true, \"absolute_deadline_epoch\": 1794496632.3245234, \"timeout_s\": 105, \"stop_file\": \"@VALIDATION_ROOT@/frameworks/baseline/logs/natural-07-stop.json\", \"server_binary\": \"@VALIDATION_ROOT@/runtime/orca-natural-cubic-audit\", \"minimum_valid_feedback_samples\": 5, \"feedback_completion_rule\": \"At least 5 valid feedback samples, unchanged 15s watchdog and fixed wall-clock duration; a low ACK-limited sample rate is measured performance rather than automatically a process failure\"}, \"status\": \"COMPLETED\", \"reason\": \"\", \"counters\": {\"valid\": 2620, \"critic_iterations\": 0, \"critic_optimizer_ops\": 0, \"actor_updates\": 0, \"target_updates\": 0, \"exploration_calls\": 0}, \"inserted\": 0, \"wall_s\": 61.45964397900025, \"policy_sha256_before\": \"631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0\", \"policy_sha256_after\": \"631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0\", \"policy_variables\": [\"abstract_actor/abstract_actor/fc1/w:0\", \"abstract_actor/abstract_actor/fc1/b:0\", \"abstract_actor/abstract_actor/bn1/moving_mean:0\", \"abstract_actor/abstract_actor/bn1/moving_variance:0\", \"abstract_actor/abstract_actor/bn1/beta:0\", \"abstract_actor/abstract_actor/fc2/w:0\", \"abstract_actor/abstract_actor/fc2/b:0\", \"abstract_actor/abstract_actor/bn2/moving_mean:0\", \"abstract_actor/abstract_actor/bn2/moving_variance:0\", \"abstract_actor/abstract_actor/bn2/beta:0\", \"abstract_actor/abstract_actor/fc1_1/w:0\", \"abstract_actor/abstract_actor/fc1_1/b:0\"], \"server_returncode\": 1}\n"
+          },
+          {
+            "name": "natural-07-owned.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          }
+        ]
+      },
+      {
+        "run": "natural-08",
+        "files": [
+          {
+            "name": "result.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "ownership.json",
+            "exists": true,
+            "bytes": 693,
+            "mtime": 1794495470.2277536,
+            "tail": null
+          },
+          {
+            "name": "server.log",
+            "exists": true,
+            "bytes": 1308,
+            "mtime": 1794495522.1914284,
+            "tail": null
+          },
+          {
+            "name": "down.log",
+            "exists": true,
+            "bytes": 8364215,
+            "mtime": 1794495522.1914284,
+            "tail": null
+          },
+          {
+            "name": "natural-08.stdout",
+            "exists": true,
+            "bytes": 26769,
+            "mtime": 1794495470.1997538,
+            "tail": "NG:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f64b1c506d8>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f64b1c506d8>>: AttributeError: module 'gast' has no attribute 'Index'\nWARNING:tensorflow:From @VALIDATION_ROOT@/frameworks/baseline/evaluate.py:61: The name tf.train.NewCheckpointReader is deprecated. Please use tf.compat.v1.train.NewCheckpointReader instead.\n\nWARNING:tensorflow:From @VALIDATION_ROOT@/frameworks/baseline/evaluate.py:61: The name tf.train.NewCheckpointReader is deprecated. Please use tf.compat.v1.train.NewCheckpointReader instead.\n\nWARNING:tensorflow:From @VALIDATION_ROOT@/frameworks/baseline/evaluate.py:64: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.\n\nWARNING:tensorflow:From @VALIDATION_ROOT@/frameworks/baseline/evaluate.py:64: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.\n\nWARNING:tensorflow:From @CLOUD_HOME@/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.\nInstructions for updating:\nUse standard file APIs to check for files with this prefix.\nWARNING:tensorflow:From @CLOUD_HOME@/venv/lib/python3.6/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.\nInstructions for updating:\nUse standard file APIs to check for files with this prefix.\n"
+          },
+          {
+            "name": "natural-08-owned.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          }
+        ]
+      },
+      {
+        "run": "natural-09",
+        "files": [
+          {
+            "name": "result.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "ownership.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "server.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "down.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-09.stdout",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-09-owned.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          }
+        ]
+      },
+      {
+        "run": "natural-10",
+        "files": [
+          {
+            "name": "result.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "ownership.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "server.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "down.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-10.stdout",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-10-owned.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          }
+        ]
+      },
+      {
+        "run": "natural-11",
+        "files": [
+          {
+            "name": "result.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "ownership.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "server.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "down.log",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-11.stdout",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          },
+          {
+            "name": "natural-11-owned.json",
+            "exists": false,
+            "bytes": null,
+            "mtime": null,
+            "tail": null
+          }
+        ]
+      }
+    ]
+  }
+]

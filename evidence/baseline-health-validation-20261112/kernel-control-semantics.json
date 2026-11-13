@@ -1,0 +1,36 @@
+[
+  {
+    "path": "net/ipv4/tcp_deepcc.c",
+    "sha256": "0a3cc97426a02d54662dd4cf9a77f2c33c9caae1a95c92d7e368414173bdf172",
+    "excerpts": [
+      {
+        "line": 92,
+        "text": "}\n\nvoid deepcc_update_cwnd(struct sock *sk)\n{\n\tstruct tcp_sock *tp = tcp_sk(sk);\n\ttp->snd_cwnd = max(tp->snd_cwnd,tp->cwnd_min);\n\ttp->snd_cwnd =min(tp->snd_cwnd,tp->snd_cwnd_clamp);\n\tif(tp->deepcc_enable>1)\n\t\tdeepcc_update_pacing_rate(sk);\n}\n\nvoid deepcc_get_rate_sample(struct sock *sk, const struct rate_sample *rs)\n{\n\tstruct tcp_sock *tp = tcp_sk(sk);\n\tu64 bw;\n\tif (rs->delivered < 0 || rs->interval_us <= 0)\n\t\treturn; /* Not a valid observation */\n\n\tbw = (u64)rs->delivered * THR_UNIT_DEEPCC;\n\tdo_div(bw, rs->interval_us);\n\ttp->deepcc_api.avg_thr=tp->deepcc_api.avg_thr*tp->deepcc_api.thr_cnt+bw;\n\ttp->deepcc_api.thr_cnt=tp->deepcc_api.thr_cnt+1;\n\tdo_div(tp->deepcc_api.avg_thr,tp->deepcc_api.thr_cnt);\n}\n\nvoid deepcc_pkts_acked(struct sock *sk, const struct ack_sample *sample)\n{\n\tstruct tcp_sock *tp = tcp_sk(sk);\n\n\t/* Some calls are for duplicates without timetamps */\n\tif (sample->rtt_us < 0)\n\t\treturn;\n\n\tif(tp->deepcc_api.min_urtt==0 || tp->deepcc_api.min_urtt>sample->rtt_us)\n\t\t\ttp->deepcc_api.min_urtt=sample->rtt_us;\n\tif(sample->rtt_us>0)\n\t{\n\t\tu64 tmp_avg=0;\n\t\tu64 tmp2_avg=0;\n\t\ttmp_avg=(tp->deepcc_api.cnt)*tp->deepcc_api.avg_urtt+sample->rtt_us;\n\t\ttp->deepcc_api.cnt++;\n\t\ttmp2_avg=tp->deepcc_api.cnt;\n\t\ttmp2_avg=tmp_avg/tp->deepcc_api.cnt;\n\t\ttp->deepcc_api.avg_urtt=(u32)(tmp2_avg);\n\t}\n}\n//END"
+      }
+    ]
+  },
+  {
+    "path": "net/ipv4/tcp_cubic.c",
+    "sha256": "7b53ef4708606c7ea2a35182a5612a0c3fe7afc8327854b1456159a877b58f91",
+    "excerpts": [
+      {
+        "line": 515,
+        "text": "}\n\nstatic void bictcp_cong_avoid(struct sock *sk, u32 ack, u32 acked)\n{\n\tstruct tcp_sock *tp = tcp_sk(sk);\n\tstruct bictcp *ca = inet_csk_ca(sk);\n\n\tif (!tcp_is_cwnd_limited(sk))\n\t\treturn;\n\n\tif (tcp_in_slow_start(tp)) {\n\t\tif (hystart && after(ack, ca->end_seq))\n\t\t\tbictcp_hystart_reset(sk);\n\t\tacked = tcp_slow_start(tp, acked);\n\t\tif (!acked)\n\t\t\treturn;\n\t}\n\tbictcp_update(ca, tp->snd_cwnd, acked);\n\ttcp_cong_avoid_ai(tp, ca->cnt, acked);\n}\n\nstatic u32 bictcp_recalc_ssthresh(struct sock *sk)\n{\n\tconst struct tcp_sock *tp = tcp_sk(sk);\n\tstruct bictcp *ca = inet_csk_ca(sk);\n\n\tca->epoch_start = 0;\t/* end of epoch */\n\n\t/* Wmax and fast convergence */\n\tif (tp->snd_cwnd < ca->last_max_cwnd && fast_convergence)\n\t\tca->last_max_cwnd = (tp->snd_cwnd * (BICTCP_BETA_SCALE + beta))\n\t\t\t/ (2 * BICTCP_BETA_SCALE);\n\telse\n\t\tca->last_max_cwnd = tp->snd_cwnd;\n\n\tca->loss_cwnd = tp->snd_cwnd;\n\n\treturn max((tp->snd_cwnd * beta) / BICTCP_BETA_SCALE, 2U);\n}\n\nstatic u32 bictcp_undo_cwnd(struct sock *sk)\n{\n\tstruct bictcp *ca = inet_csk_ca(sk);\n\n\treturn max(tcp_sk(sk)->snd_cwnd, ca->loss_cwnd);\n}\n"
+      }
+    ]
+  },
+  {
+    "path": "include/uapi/linux/tcp.h",
+    "sha256": "e734cc8097aeb44608d93f0f7c8606281a837f71b32450f69f42cbe7ecb44748",
+    "excerpts": [
+      {
+        "line": 137,
+        "text": "#define TCP_CWND_CLAMP 42\n#define TCP_CWND 43\n#define TCP_DEEPCC_ENABLE 44\n#define TCP_CWND_CAP 45\n\n#define TCP_DEEPCC_INFO\t\t46\t/* Get Congestion Control (optional) DeepCC info */\n#define TCP_CWND_MIN\t\t47\n\n/*C2TCP*/\n#define  TCP_C2TCP_ENABLE 50\n#define  TCP_C2TCP_ALPHA 51\n\n/*\n * End of Custom Socket Defines\n*/\n\nstruct tcp_repair_opt {\n\t__u32\topt_code;\n\t__u32\topt_val;\n};\n\nstruct tcp_repair_window {\n\t__u32\tsnd_wl1;\n\t__u32\tsnd_wnd;\n\t__u32\tmax_window;\n\n\t__u32\trcv_wnd;\n\t__u32\trcv_wup;\n};\n\nenum {\n\tTCP_NO_QUEUE,\n\tTCP_RECV_QUEUE,\n\tTCP_SEND_QUEUE,\n\tTCP_QUEUES_NR,\n};\n\n/* for TCP_INFO socket option */\n#define TCPI_OPT_TIMESTAMPS\t1\n#define TCPI_OPT_SACK\t\t2\n#define TCPI_OPT_WSCALE\t\t4\n#define TCPI_OPT_ECN\t\t8 /* ECN was negociated at TCP session init */\n#define TCPI_OPT_ECN_SEEN\t16 /* we received at least one packet with ECT */\n#define TCPI_OPT_SYN_DATA\t32 /* SYN-ACK acked data in SYN sent or rcvd */\n\nenum tcp_ca_state {\n\tTCP_CA_Open = 0,"
+      },
+      {
+        "line": 140,
+        "text": "#define TCP_CWND_CAP 45\n\n#define TCP_DEEPCC_INFO\t\t46\t/* Get Congestion Control (optional) DeepCC info */\n#define TCP_CWND_MIN\t\t47\n\n/*C2TCP*/\n#define  TCP_C2TCP_ENABLE 50\n#define  TCP_C2TCP_ALPHA 51\n\n/*\n * End of Custom Socket Defines\n*/\n\nstruct tcp_repair_opt {\n\t__u32\topt_code;\n\t__u32\topt_val;\n};\n\nstruct tcp_repair_window {\n\t__u32\tsnd_wl1;\n\t__u32\tsnd_wnd;\n\t__u32\tmax_window;\n\n\t__u32\trcv_wnd;\n\t__u32\trcv_wup;\n};\n\nenum {\n\tTCP_NO_QUEUE,\n\tTCP_RECV_QUEUE,\n\tTCP_SEND_QUEUE,\n\tTCP_QUEUES_NR,\n};\n\n/* for TCP_INFO socket option */\n#define TCPI_OPT_TIMESTAMPS\t1\n#define TCPI_OPT_SACK\t\t2\n#define TCPI_OPT_WSCALE\t\t4\n#define TCPI_OPT_ECN\t\t8 /* ECN was negociated at TCP session init */\n#define TCPI_OPT_ECN_SEEN\t16 /* we received at least one packet with ECT */\n#define TCPI_OPT_SYN_DATA\t32 /* SYN-ACK acked data in SYN sent or rcvd */\n\nenum tcp_ca_state {\n\tTCP_CA_Open = 0,\n#define TCPF_CA_Open\t(1<<TCP_CA_Open)\n\tTCP_CA_Disorder = 1,\n#define TCPF_CA_Disorder (1<<TCP_CA_Disorder)"
+      }
+    ]
+  }
+]

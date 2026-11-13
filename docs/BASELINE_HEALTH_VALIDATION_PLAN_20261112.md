@@ -1,5 +1,7 @@
 # 弱场景重测、训练复现与条件归档
 
+> 11月13日续接更新：[实际执行与中断结果](BASELINE_STARTUP_VALIDATION_RESULT_20261113.md)。40次完整完成且首反馈FAIL；自然12项完成4项、2项中断、6项未开始。原窗口已结束，未启动独立96或seed7。下文保留事前计划及各准备阶段当时的状态。
+
 用户已同意整体最多240分钟、五台保守20机时，先开learner与actor1。首次连接为北京时间2026-11-12 22:17:42，硬截止11月13日02:17:42，末10分钟收尾。两台严格SSH、主机/内核、原51模型、旧core和sysctl核查通过；其余三台尚未连接。新独立现场`orca-baseline-health-validation-20261112`，不覆盖前轮代码或模型。
 
 本页为事前执行与验收方案，不是新性能结果。[机器可读阶段方案](../evidence/baseline-health-validation-plan-20261112/stage-plan.draft.json)、[两机40次草案](../evidence/baseline-health-validation-plan-20261112/two-host-screen.draft.json)、[独立seed7配置](../evidence/baseline-health-validation-plan-20261112/seed7-config.draft.json)仍需绑定实际二进制/主机/截止和helper哈希才可执行；文件的OFFLINE/未授权字段是生成时状态，当前费用授权以本页和独立现场registration为准，不复用旧窗口。

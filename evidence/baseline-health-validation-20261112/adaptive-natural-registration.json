@@ -1,0 +1,40 @@
+{
+  "status": "REGISTERED_ADAPTIVE_WITHIN_APPROVED_OVERALL_WINDOW_NOT_YET_RUN",
+  "registered_epoch": 1794494952.5534353,
+  "authorization_basis": [
+    "\u5982\u679c\u662f\u610f\u5916\u5931\u8d25\uff0c\u6216\u8005\u53d1\u73b0\u4fee\u6b63\u65b9\u6cd5\u53ef\u4ee5\u91cd\u65b0\u8bad\u7ec3\uff0c\u53ef\u4ee5\u8ffd\u52a0\u5b9e\u9a8c\u3002\u6211\u4eec\u76ee\u7684\u662f\u8bad\u51fa\u5065\u5eb7\u57fa\u5ea7\uff0c\u6765\u5b9e\u73b0\u53cc\u52a8\u4f5c\u521b\u65b0",
+    "\u540c\u610f\u6574\u4f53\u4e0a\u9650\uff0c\u5148\u5f00\u4e24\u53f0"
+  ],
+  "reason": "First-feedback candidate produced a catastrophic G48-R200 run; remove artificial assistance while restoring the original natural slow-start exit handoff",
+  "original40_plan_unchanged": true,
+  "original40_result_preserved": true,
+  "extra_network_runs_maximum": 12,
+  "extra_training_runs": 0,
+  "total_training_runs_maximum_still": 1,
+  "overall_deadline_epoch": 1794507462.3245234,
+  "overall_budget_unchanged": true,
+  "adaptive_phase_cutoff_epoch": 1794496662.3245234,
+  "host_nodes": [
+    0,
+    1
+  ],
+  "run_conditions": {
+    "G12-R200": 6,
+    "G48-R200": 4,
+    "G72-R20": 2
+  },
+  "first_two_protocol_gate": true,
+  "protocol_runs_included_in_12": true,
+  "candidate_policy_sha256": "631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0",
+  "mode": "natural-cubic",
+  "configuration": "same legacy ssthresh<cwnd handoff and telemetry reads; no pre-policy TCP_CWND write; no QC or fallback",
+  "static_source": {
+    "sha256": "07660cedf8539c8b403ceaeda88a36cf5f51eab488623b279f41294200306947",
+    "same_post_handoff_source": true,
+    "same_legacy_handoff_predicate": true,
+    "prepolicy_CWND_write_removed": true
+  },
+  "reference_from_original40": "legacy/first-feedback descriptive only, not a concurrent causal control",
+  "screen_gates": "all natural candidate cells pass original absolute cell gates and no run utilization<.5; startup condition median >= old legacy median minus.05; actual handoff within10s and engineering identity complete",
+  "acceptance": "Screen alone cannot establish health; fresh independent full24x3 plus matched H0 required; one seed7 recipe repetition still conditional on full PASS and remaining>=150minutes"
+}

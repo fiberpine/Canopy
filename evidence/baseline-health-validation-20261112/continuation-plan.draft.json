@@ -1,0 +1,284 @@
+{
+  "status": "OFFLINE_DRAFT_NOT_AUTHORIZED_NOT_STARTED",
+  "proposed_wall_minutes": 240,
+  "conservative_machine_hours": 20,
+  "cleanup_reserve_minutes": 10,
+  "initial_nodes": [
+    0,
+    1
+  ],
+  "registration_starts_only_after_new_user_approval": true,
+  "old_deadline_unchanged": true,
+  "no_remaining_budget_auto_resume": true,
+  "screen_completion_jobs": [
+    {
+      "original_run": "natural-02",
+      "original_status": "INTERRUPTED_PARTIAL_LOG",
+      "new_run": "recovery-natural-02",
+      "host": 0,
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "repeat": 1,
+      "startup": "natural-cubic",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+      "original_partial_log_retained": true,
+      "completion_only_selection": true
+    },
+    {
+      "original_run": "natural-03",
+      "original_status": "NOT_STARTED",
+      "new_run": "recovery-natural-03",
+      "host": 0,
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "repeat": 2,
+      "startup": "natural-cubic",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+      "original_partial_log_retained": true,
+      "completion_only_selection": true
+    },
+    {
+      "original_run": "natural-04",
+      "original_status": "NOT_STARTED",
+      "new_run": "recovery-natural-04",
+      "host": 0,
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "repeat": 1,
+      "startup": "natural-cubic",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+      "original_partial_log_retained": true,
+      "completion_only_selection": true
+    },
+    {
+      "original_run": "natural-05",
+      "original_status": "NOT_STARTED",
+      "new_run": "recovery-natural-05",
+      "host": 0,
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "repeat": 0,
+      "startup": "natural-cubic",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+      "original_partial_log_retained": true,
+      "completion_only_selection": true
+    },
+    {
+      "original_run": "natural-08",
+      "original_status": "INTERRUPTED_PARTIAL_LOG",
+      "new_run": "recovery-natural-08",
+      "host": 1,
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "repeat": 3,
+      "startup": "natural-cubic",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+      "original_partial_log_retained": true,
+      "completion_only_selection": true
+    },
+    {
+      "original_run": "natural-09",
+      "original_status": "NOT_STARTED",
+      "new_run": "recovery-natural-09",
+      "host": 1,
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "repeat": 1,
+      "startup": "natural-cubic",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+      "original_partial_log_retained": true,
+      "completion_only_selection": true
+    },
+    {
+      "original_run": "natural-10",
+      "original_status": "NOT_STARTED",
+      "new_run": "recovery-natural-10",
+      "host": 1,
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "repeat": 4,
+      "startup": "natural-cubic",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+      "original_partial_log_retained": true,
+      "completion_only_selection": true
+    },
+    {
+      "original_run": "natural-11",
+      "original_status": "NOT_STARTED",
+      "new_run": "recovery-natural-11",
+      "host": 1,
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "repeat": 5,
+      "startup": "natural-cubic",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+      "original_partial_log_retained": true,
+      "completion_only_selection": true
+    }
+  ],
+  "completed4_retained_without_performance_selection": true,
+  "stage_order": [
+    "preflight two enabled hosts and unchanged kernel/native/models/helpers",
+    "eight missing clean runs with new IDs; retain both partial original attempts",
+    "all12 original natural repeat slots and original gates plus handoff<=10s",
+    "if screen PASS, power on remaining three and independent96 natural-cubic frozen confirmation",
+    "if full PASS and remaining>=150minutes, at most one fresh seed7 nominal6M and72+6 frozen",
+    "only both training seeds healthy plus training stability and archival verification allow baseline retirement"
+  ],
+  "independent_full_confirmation": {
+    "candidate_conditions": 24,
+    "candidate_repeats": 3,
+    "H0_conditions": 24,
+    "H0_repeats": 1,
+    "startup": "natural-cubic",
+    "reuse_screen_for_acceptance": false,
+    "performance_retries": false
+  },
+  "fresh_seed7": {
+    "max_runs": 1,
+    "learning_commit": "9bb1500eaf791bcb0e97724c63dcb725323dd5cd",
+    "learner_count": 1,
+    "actor_count": 24,
+    "nominal_samples": 6000000,
+    "update_ratio": 0.1,
+    "training_native": "legacy",
+    "deployment_native": "natural-cubic",
+    "seed_is_only_learning_recipe_change": true,
+    "evaluation_candidate_runs": 72,
+    "H0_sentinels": 6,
+    "no_second_long_training": true
+  },
+  "stopping": [
+    "any screen or full performance/provenance failure blocks fresh training",
+    "new jobs stop before fixed task cutoff; last10minutes cleanup",
+    "insufficient150minutes prevents long training; no automatic extension"
+  ]
+}

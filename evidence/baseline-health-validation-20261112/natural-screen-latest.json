@@ -1,0 +1,244 @@
+[
+  {
+    "node": 0,
+    "finished": false,
+    "rows": [
+      {
+        "job": {
+          "condition": {
+            "trace": "constant72",
+            "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+            "capacity_mbps": 71.999488,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G72-R20",
+            "nominal_mbps": 72,
+            "delay_ms": 10,
+            "base_rtt_ms": 20,
+            "queue_packets": 600,
+            "queue_bytes": 902400,
+            "queue_bdp": 5.0133689839572195
+          },
+          "group": "onlinebn-final6m",
+          "startup": "natural-cubic",
+          "repeat": 0,
+          "host_slot": 0,
+          "host": 0,
+          "stage": "natural-screen",
+          "run": "natural-01",
+          "port": 12901,
+          "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+            ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+          },
+          "native": "@VALIDATION_ROOT@/runtime/orca-natural-cubic-audit",
+          "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.9971343613637492,
+            "departure_mbps": 71.79196373333333,
+            "capacity_mbps": 71.9982848,
+            "queue_mean_ms": 5.3926612218448335,
+            "queue_p95_ms": 8.0,
+            "queue_p99_ms": 10.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 358066.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 538514928.0,
+            "complete_window": true,
+            "last_log_s": 60.328,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.9851433825072061,
+            "departure_mbps": 70.9227072,
+            "capacity_mbps": 71.99226879999999,
+            "queue_mean_ms": 5.775740407775554,
+            "queue_p95_ms": 8.0,
+            "queue_p99_ms": 14.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 58972.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 88680456.0,
+            "complete_window": true,
+            "last_log_s": 60.328,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.9995323166742519,
+            "departure_mbps": 71.96581504000001,
+            "capacity_mbps": 71.999488,
+            "queue_mean_ms": 5.3171449398452495,
+            "queue_p95_ms": 8.0,
+            "queue_p99_ms": 10.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 299094.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 449834472.0,
+            "complete_window": true,
+            "last_log_s": 60.328,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9999164438502673,
+        "handoff_s": 0.177448974609375,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+          ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+        },
+        "policy_sha256": "631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0",
+        "valid": 2769,
+        "control_period_ms": {
+          "p50": 21.603,
+          "p95": 21.644,
+          "p99": 21.663,
+          "max": 23.962
+        },
+        "wall_s": 65.41015604899985,
+        "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+        "packet_window_completion": {
+          "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+          "observed_packet_seconds": 60.018,
+          "required_seconds": 60,
+          "requested_epoch": 1794495466.604239,
+          "metric_or_health_override": false
+        }
+      }
+    ],
+    "stdout_tail": ""
+  },
+  {
+    "node": 1,
+    "finished": false,
+    "rows": [
+      {
+        "job": {
+          "condition": {
+            "trace": "constant12",
+            "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+            "capacity_mbps": 11.995904,
+            "packet_bytes": 1504,
+            "trace_period_ms": 1000,
+            "condition": "G12-R200",
+            "nominal_mbps": 12,
+            "delay_ms": 100,
+            "base_rtt_ms": 200,
+            "queue_packets": 1000,
+            "queue_bytes": 1504000,
+            "queue_bdp": 5.015045135406219
+          },
+          "group": "onlinebn-final6m",
+          "startup": "natural-cubic",
+          "repeat": 3,
+          "host_slot": 1,
+          "host": 1,
+          "stage": "natural-screen",
+          "run": "natural-07",
+          "port": 12907,
+          "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+          "model_sha256": {
+            ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+            ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+          },
+          "native": "@VALIDATION_ROOT@/runtime/orca-natural-cubic-audit",
+          "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "utilization": 0.945737994012434,
+            "departure_mbps": 11.344792533333333,
+            "capacity_mbps": 11.995703466666667,
+            "queue_mean_ms": 18.515561210964425,
+            "queue_p95_ms": 25.0,
+            "queue_p99_ms": 267.1800000000003,
+            "dropped_packets": 0.0,
+            "arrival_packets": 56594.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 85102488.0,
+            "complete_window": true,
+            "last_log_s": 61.367,
+            "start_s": 0,
+            "end_s": 60
+          },
+          {
+            "window": "startup0_10",
+            "utilization": 0.6971644011328736,
+            "departure_mbps": 8.362278400000001,
+            "capacity_mbps": 11.9947008,
+            "queue_mean_ms": 56.22607070997413,
+            "queue_p95_ms": 393.0,
+            "queue_p99_ms": 547.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 6976.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 10479920.0,
+            "complete_window": true,
+            "last_log_s": 61.367,
+            "start_s": 0,
+            "end_s": 10
+          },
+          {
+            "window": "trim10",
+            "utilization": 0.995447726157195,
+            "departure_mbps": 11.94129536,
+            "capacity_mbps": 11.995904,
+            "queue_mean_ms": 13.228110831234257,
+            "queue_p95_ms": 24.0,
+            "queue_p99_ms": 26.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 49618.0,
+            "drop_fraction": 0.0,
+            "dropped_bytes": 0.0,
+            "arrival_bytes": 74622568.0,
+            "complete_window": true,
+            "last_log_s": 61.367,
+            "start_s": 10,
+            "end_s": 60
+          }
+        ],
+        "tail_utilization": 0.9950852557673019,
+        "handoff_s": 2.149287109375,
+        "post_handoff_drop_fraction": 0.0,
+        "model_sha256": {
+          ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+          ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+        },
+        "policy_sha256": "631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0",
+        "valid": 2620,
+        "control_period_ms": {
+          "p50": 21.602,
+          "p95": 21.652,
+          "p99": 21.701430000000002,
+          "max": 206.644
+        },
+        "wall_s": 63.19732229700003,
+        "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+        "packet_window_completion": {
+          "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+          "observed_packet_seconds": 60.011,
+          "required_seconds": 60,
+          "requested_epoch": 1794495466.571049,
+          "metric_or_health_override": false
+        }
+      }
+    ],
+    "stdout_tail": ""
+  }
+]

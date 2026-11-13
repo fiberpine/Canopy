@@ -1,0 +1,1179 @@
+{
+  "status": "INCOMPLETE_INTERRUPTED",
+  "performance_confirmation_go": false,
+  "training_go": false,
+  "registered_natural_runs": 12,
+  "counts": {
+    "COMPLETED": 4,
+    "INTERRUPTED_PARTIAL_LOG": 2,
+    "NOT_STARTED": 6
+  },
+  "natural_run_statuses": [
+    {
+      "run": "natural-00",
+      "condition": "G12-R200",
+      "repeat": 0,
+      "host": 0,
+      "status": "COMPLETED",
+      "last_packet_log_elapsed_s": 61.624
+    },
+    {
+      "run": "natural-01",
+      "condition": "G72-R20",
+      "repeat": 0,
+      "host": 0,
+      "status": "COMPLETED",
+      "last_packet_log_elapsed_s": 60.328
+    },
+    {
+      "run": "natural-02",
+      "condition": "G48-R200",
+      "repeat": 1,
+      "host": 0,
+      "status": "INTERRUPTED_PARTIAL_LOG",
+      "last_packet_log_elapsed_s": 49.594
+    },
+    {
+      "run": "natural-03",
+      "condition": "G12-R200",
+      "repeat": 2,
+      "host": 0,
+      "status": "NOT_STARTED",
+      "last_packet_log_elapsed_s": null
+    },
+    {
+      "run": "natural-04",
+      "condition": "G12-R200",
+      "repeat": 1,
+      "host": 0,
+      "status": "NOT_STARTED",
+      "last_packet_log_elapsed_s": null
+    },
+    {
+      "run": "natural-05",
+      "condition": "G48-R200",
+      "repeat": 0,
+      "host": 0,
+      "status": "NOT_STARTED",
+      "last_packet_log_elapsed_s": null
+    },
+    {
+      "run": "natural-06",
+      "condition": "G48-R200",
+      "repeat": 2,
+      "host": 1,
+      "status": "COMPLETED",
+      "last_packet_log_elapsed_s": 60.531
+    },
+    {
+      "run": "natural-07",
+      "condition": "G12-R200",
+      "repeat": 3,
+      "host": 1,
+      "status": "COMPLETED",
+      "last_packet_log_elapsed_s": 61.668
+    },
+    {
+      "run": "natural-08",
+      "condition": "G48-R200",
+      "repeat": 3,
+      "host": 1,
+      "status": "INTERRUPTED_PARTIAL_LOG",
+      "last_packet_log_elapsed_s": 51.873
+    },
+    {
+      "run": "natural-09",
+      "condition": "G72-R20",
+      "repeat": 1,
+      "host": 1,
+      "status": "NOT_STARTED",
+      "last_packet_log_elapsed_s": null
+    },
+    {
+      "run": "natural-10",
+      "condition": "G12-R200",
+      "repeat": 4,
+      "host": 1,
+      "status": "NOT_STARTED",
+      "last_packet_log_elapsed_s": null
+    },
+    {
+      "run": "natural-11",
+      "condition": "G12-R200",
+      "repeat": 5,
+      "host": 1,
+      "status": "NOT_STARTED",
+      "last_packet_log_elapsed_s": null
+    }
+  ],
+  "screen40_status": "FAIL",
+  "screen40_execution_errors": 0,
+  "screen40_cells": [
+    {
+      "group": "H0-reference",
+      "startup": "first-feedback",
+      "condition": "G12-R200",
+      "repeats": 3,
+      "utilizations": [
+        0.9689890415928637,
+        0.9389388911415096,
+        0.8551468234490707
+      ],
+      "startup_utilization_median": 0.17945951598892737,
+      "startup_drop_median": 0.0,
+      "medians": {
+        "utilization": 0.9389388911415096,
+        "queue_mean_ms": 10.820846418423807,
+        "queue_p95_ms": 22.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    },
+    {
+      "group": "H0-reference",
+      "startup": "legacy",
+      "condition": "G12-R200",
+      "repeats": 3,
+      "utilizations": [
+        0.6737225506306153,
+        0.8048559508312171,
+        0.721646321944557
+      ],
+      "startup_utilization_median": 0.5464188985856154,
+      "startup_drop_median": 0.2120101494220468,
+      "medians": {
+        "utilization": 0.721646321944557,
+        "queue_mean_ms": 12.941099621970203,
+        "queue_p95_ms": 24.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": false
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G12-R100",
+      "repeats": 3,
+      "utilizations": [
+        0.9999813269596022,
+        0.9999813269596022,
+        0.9999813269596022
+      ],
+      "startup_utilization_median": 0.6930516516093507,
+      "startup_drop_median": 0.0,
+      "medians": {
+        "utilization": 0.9999813269596022,
+        "queue_mean_ms": 23.215542316101985,
+        "queue_p95_ms": 30.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G12-R200",
+      "repeats": 6,
+      "utilizations": [
+        0.537474497961971,
+        0.5169321795172752,
+        0.5956483279626112,
+        0.7001618685844768,
+        0.2740642672698948,
+        0.4972337757954715
+      ],
+      "startup_utilization_median": 0.09575001654063768,
+      "startup_drop_median": 0.0,
+      "medians": {
+        "utilization": 0.5272033387396231,
+        "queue_mean_ms": 4.28748495179501,
+        "queue_p95_ms": 9.5,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": false,
+        "no_catastrophe": false,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": false
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G24-R50",
+      "repeats": 2,
+      "utilizations": [
+        0.999619896924817,
+        0.9994590686954481
+      ],
+      "startup_utilization_median": 0.5763883997840114,
+      "startup_drop_median": 0.0,
+      "medians": {
+        "utilization": 0.9995394828101325,
+        "queue_mean_ms": 9.763629027757197,
+        "queue_p95_ms": 15.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G36-R100",
+      "repeats": 2,
+      "utilizations": [
+        0.9999940088462851,
+        0.9999937777335306
+      ],
+      "startup_utilization_median": 0.42653113329857995,
+      "startup_drop_median": 0.0,
+      "medians": {
+        "utilization": 0.9999938932899078,
+        "queue_mean_ms": 21.63032120159481,
+        "queue_p95_ms": 29.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G48-R200",
+      "repeats": 2,
+      "utilizations": [
+        0.7813843255121797,
+        0.17739335033042997
+      ],
+      "startup_utilization_median": 0.027403898984446097,
+      "startup_drop_median": 0.0,
+      "medians": {
+        "utilization": 0.4793888379213048,
+        "queue_mean_ms": 9.691513602518581,
+        "queue_p95_ms": 23.5,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": false,
+        "no_catastrophe": false,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": false
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G72-R20",
+      "repeats": 2,
+      "utilizations": [
+        0.999796354107407,
+        0.9999769509472067
+      ],
+      "startup_utilization_median": 0.9050628725288902,
+      "startup_drop_median": 0.0,
+      "medians": {
+        "utilization": 0.9998866525273069,
+        "queue_mean_ms": 5.314504163173444,
+        "queue_p95_ms": 8.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G12-R100",
+      "repeats": 3,
+      "utilizations": [
+        1.0000020807102157,
+        1.0000013871401439,
+        1.0000013871401439
+      ],
+      "startup_utilization_median": 0.9371082269930401,
+      "startup_drop_median": 0.0,
+      "medians": {
+        "utilization": 1.0000013871401439,
+        "queue_mean_ms": 15.973421860269191,
+        "queue_p95_ms": 18.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G12-R200",
+      "repeats": 6,
+      "utilizations": [
+        0.033683123839603916,
+        0.3169121193367336,
+        0.13394321261657313,
+        0.18818594080112677,
+        0.0336021895473655,
+        0.02126587208433812
+      ],
+      "startup_utilization_median": 0.5295325082222977,
+      "startup_drop_median": 0.20980804625594068,
+      "medians": {
+        "utilization": 0.08381316822808853,
+        "queue_mean_ms": 10.81118397077179,
+        "queue_p95_ms": 30.5,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": false,
+        "no_catastrophe": false,
+        "post_handoff_drop": false
+      },
+      "pass_observed_subset": false
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G24-R50",
+      "repeats": 2,
+      "utilizations": [
+        0.9752965812330608,
+        0.9793189942166927
+      ],
+      "startup_utilization_median": 0.9436017612044145,
+      "startup_drop_median": 0.0,
+      "medians": {
+        "utilization": 0.9773077877248768,
+        "queue_mean_ms": 2.06046965583875,
+        "queue_p95_ms": 4.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G36-R100",
+      "repeats": 2,
+      "utilizations": [
+        1.0000004622255092,
+        1.0000004622255092
+      ],
+      "startup_utilization_median": 0.8733689804202975,
+      "startup_drop_median": 0.031739448113910565,
+      "medians": {
+        "utilization": 1.0000004622255092,
+        "queue_mean_ms": 29.400034758893597,
+        "queue_p95_ms": 35.5,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G48-R200",
+      "repeats": 2,
+      "utilizations": [
+        0.9999953329101838,
+        0.9999953329101838
+      ],
+      "startup_utilization_median": 0.8127835874796361,
+      "startup_drop_median": 0.0,
+      "medians": {
+        "utilization": 0.9999953329101838,
+        "queue_mean_ms": 38.37230447578604,
+        "queue_p95_ms": 51.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G72-R20",
+      "repeats": 2,
+      "utilizations": [
+        0.999676033251792,
+        0.9998063808453749
+      ],
+      "startup_utilization_median": 0.9828951855452568,
+      "startup_drop_median": 0.0,
+      "medians": {
+        "utilization": 0.9997412070485834,
+        "queue_mean_ms": 5.521921976800538,
+        "queue_p95_ms": 9.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    }
+  ],
+  "natural_cells_descriptive_only": [
+    {
+      "condition": "G12-R200",
+      "completed": 2,
+      "registered": 6,
+      "descriptive_only": true,
+      "startup_median": 0.7133144663350002,
+      "startup_minus_earlier_legacy": 0.18378195811270248,
+      "startup_descriptive_gate": true,
+      "medians": {
+        "utilization": 0.9952671845323204,
+        "queue_mean_ms": 13.262723950299733,
+        "queue_p95_ms": 24.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    },
+    {
+      "condition": "G48-R200",
+      "completed": 1,
+      "registered": 4,
+      "descriptive_only": true,
+      "startup_median": 0.8125164698113027,
+      "startup_minus_earlier_legacy": -0.00026711766833342754,
+      "startup_descriptive_gate": true,
+      "medians": {
+        "utilization": 1.0000003466981007,
+        "queue_mean_ms": 26.315649880673043,
+        "queue_p95_ms": 38.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    },
+    {
+      "condition": "G72-R20",
+      "completed": 1,
+      "registered": 2,
+      "descriptive_only": true,
+      "startup_median": 0.9851433825072061,
+      "startup_minus_earlier_legacy": 0.0022481969619493336,
+      "startup_descriptive_gate": true,
+      "medians": {
+        "utilization": 0.9995323166742519,
+        "queue_mean_ms": 5.3171449398452495,
+        "queue_p95_ms": 8.0,
+        "drop_fraction": 0.0
+      },
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_observed_subset": true
+    }
+  ],
+  "completed_natural_runs": [
+    {
+      "run": "natural-00",
+      "condition": "G12-R200",
+      "repeat": 0,
+      "metrics": {
+        "window": "trim10",
+        "utilization": 0.9950866429074458,
+        "departure_mbps": 11.93696384,
+        "capacity_mbps": 11.995904,
+        "queue_mean_ms": 13.297337069365211,
+        "queue_p95_ms": 24.0,
+        "queue_p99_ms": 26.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 49610.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 74610536.0,
+        "complete_window": true,
+        "last_log_s": 61.319,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "handoff_s": 2.149883056640625,
+      "startup": {
+        "mode": "natural-cubic",
+        "time_us": "2227814",
+        "scheme": "cubic",
+        "assist_writes": "0",
+        "cwnd": "759",
+        "packets_out": "758",
+        "max_packets_out": "758",
+        "retrans_out": "0",
+        "lost_bytes": "0",
+        "avg_urtt": "348992",
+        "srtt_scaled8": "2777748",
+        "min_rtt": "201080",
+        "mss": "1448",
+        "pacing_rate": "3278919",
+        "ssthresh": "758"
+      },
+      "first10_controls": [
+        {
+          "time_us": "1794495300048883",
+          "state_id": "657",
+          "action_id": "657",
+          "percent": "25",
+          "cwnd_before": "759",
+          "cwnd_requested": "189",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300070485",
+          "state_id": "658",
+          "action_id": "658",
+          "percent": "25",
+          "cwnd_before": "211",
+          "cwnd_requested": "52",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300092074",
+          "state_id": "659",
+          "action_id": "659",
+          "percent": "25",
+          "cwnd_before": "72",
+          "cwnd_requested": "18",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300113651",
+          "state_id": "660",
+          "action_id": "660",
+          "percent": "25",
+          "cwnd_before": "40",
+          "cwnd_requested": "10",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300135240",
+          "state_id": "661",
+          "action_id": "661",
+          "percent": "26",
+          "cwnd_before": "30",
+          "cwnd_requested": "7",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300156846",
+          "state_id": "662",
+          "action_id": "662",
+          "percent": "28",
+          "cwnd_before": "29",
+          "cwnd_requested": "8",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300179031",
+          "state_id": "663",
+          "action_id": "663",
+          "percent": "30",
+          "cwnd_before": "30",
+          "cwnd_requested": "9",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300200628",
+          "state_id": "664",
+          "action_id": "664",
+          "percent": "39",
+          "cwnd_before": "31",
+          "cwnd_requested": "12",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300222217",
+          "state_id": "665",
+          "action_id": "665",
+          "percent": "75",
+          "cwnd_before": "33",
+          "cwnd_requested": "24",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300243800",
+          "state_id": "666",
+          "action_id": "666",
+          "percent": "75",
+          "cwnd_before": "44",
+          "cwnd_requested": "33",
+          "return_code": "0",
+          "socket": "4"
+        }
+      ]
+    },
+    {
+      "run": "natural-01",
+      "condition": "G72-R20",
+      "repeat": 0,
+      "metrics": {
+        "window": "trim10",
+        "utilization": 0.9995323166742519,
+        "departure_mbps": 71.96581504000001,
+        "capacity_mbps": 71.999488,
+        "queue_mean_ms": 5.3171449398452495,
+        "queue_p95_ms": 8.0,
+        "queue_p99_ms": 10.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 299094.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 449834472.0,
+        "complete_window": true,
+        "last_log_s": 60.328,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "handoff_s": 0.177448974609375,
+      "startup": {
+        "mode": "natural-cubic",
+        "time_us": "254504",
+        "scheme": "cubic",
+        "assist_writes": "0",
+        "cwnd": "97",
+        "packets_out": "92",
+        "max_packets_out": "96",
+        "retrans_out": "0",
+        "lost_bytes": "0",
+        "avg_urtt": "22031",
+        "srtt_scaled8": "176445",
+        "min_rtt": "21085",
+        "mss": "1448",
+        "pacing_rate": "6597143",
+        "ssthresh": "94"
+      },
+      "first10_controls": [
+        {
+          "time_us": "1794495406762449",
+          "state_id": "657",
+          "action_id": "657",
+          "percent": "353",
+          "cwnd_before": "97",
+          "cwnd_requested": "342",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495406784091",
+          "state_id": "658",
+          "action_id": "658",
+          "percent": "25",
+          "cwnd_before": "342",
+          "cwnd_requested": "85",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495406805714",
+          "state_id": "659",
+          "action_id": "659",
+          "percent": "188",
+          "cwnd_before": "94",
+          "cwnd_requested": "176",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495406827317",
+          "state_id": "660",
+          "action_id": "660",
+          "percent": "27",
+          "cwnd_before": "176",
+          "cwnd_requested": "47",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495406848966",
+          "state_id": "661",
+          "action_id": "661",
+          "percent": "399",
+          "cwnd_before": "98",
+          "cwnd_requested": "391",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495406870606",
+          "state_id": "662",
+          "action_id": "662",
+          "percent": "28",
+          "cwnd_before": "392",
+          "cwnd_requested": "109",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495406892237",
+          "state_id": "663",
+          "action_id": "663",
+          "percent": "308",
+          "cwnd_before": "109",
+          "cwnd_requested": "335",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495406913857",
+          "state_id": "664",
+          "action_id": "664",
+          "percent": "57",
+          "cwnd_before": "335",
+          "cwnd_requested": "190",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495406935470",
+          "state_id": "665",
+          "action_id": "665",
+          "percent": "161",
+          "cwnd_before": "190",
+          "cwnd_requested": "305",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495406957110",
+          "state_id": "666",
+          "action_id": "666",
+          "percent": "61",
+          "cwnd_before": "305",
+          "cwnd_requested": "186",
+          "return_code": "0",
+          "socket": "4"
+        }
+      ]
+    },
+    {
+      "run": "natural-06",
+      "condition": "G48-R200",
+      "repeat": 2,
+      "metrics": {
+        "window": "trim10",
+        "utilization": 1.0000003466981007,
+        "departure_mbps": 47.99566464,
+        "capacity_mbps": 47.995648,
+        "queue_mean_ms": 26.315649880673043,
+        "queue_p95_ms": 38.0,
+        "queue_p99_ms": 42.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 199504.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 300051112.0,
+        "complete_window": true,
+        "last_log_s": 60.531,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "handoff_s": 2.228220947265625,
+      "startup": {
+        "mode": "natural-cubic",
+        "time_us": "2304730",
+        "scheme": "cubic",
+        "assist_writes": "0",
+        "cwnd": "982",
+        "packets_out": "978",
+        "max_packets_out": "982",
+        "retrans_out": "0",
+        "lost_bytes": "0",
+        "avg_urtt": "203749",
+        "srtt_scaled8": "1636421",
+        "min_rtt": "201059",
+        "mss": "1448",
+        "pacing_rate": "7201102",
+        "ssthresh": "978"
+      },
+      "first10_controls": [
+        {
+          "time_us": "1794495300173221",
+          "state_id": "657",
+          "action_id": "657",
+          "percent": "25",
+          "cwnd_before": "982",
+          "cwnd_requested": "245",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300194860",
+          "state_id": "658",
+          "action_id": "658",
+          "percent": "68",
+          "cwnd_before": "326",
+          "cwnd_requested": "221",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300216465",
+          "state_id": "659",
+          "action_id": "659",
+          "percent": "76",
+          "cwnd_before": "301",
+          "cwnd_requested": "228",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300238062",
+          "state_id": "660",
+          "action_id": "660",
+          "percent": "96",
+          "cwnd_before": "315",
+          "cwnd_requested": "302",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300259668",
+          "state_id": "661",
+          "action_id": "661",
+          "percent": "61",
+          "cwnd_before": "381",
+          "cwnd_requested": "232",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300281271",
+          "state_id": "662",
+          "action_id": "662",
+          "percent": "39",
+          "cwnd_before": "313",
+          "cwnd_requested": "122",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300302878",
+          "state_id": "663",
+          "action_id": "663",
+          "percent": "72",
+          "cwnd_before": "203",
+          "cwnd_requested": "146",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300324494",
+          "state_id": "664",
+          "action_id": "664",
+          "percent": "202",
+          "cwnd_before": "229",
+          "cwnd_requested": "462",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300346112",
+          "state_id": "665",
+          "action_id": "665",
+          "percent": "128",
+          "cwnd_before": "545",
+          "cwnd_requested": "697",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495300367749",
+          "state_id": "666",
+          "action_id": "666",
+          "percent": "156",
+          "cwnd_before": "776",
+          "cwnd_requested": "1210",
+          "return_code": "0",
+          "socket": "4"
+        }
+      ]
+    },
+    {
+      "run": "natural-07",
+      "condition": "G12-R200",
+      "repeat": 3,
+      "metrics": {
+        "window": "trim10",
+        "utilization": 0.995447726157195,
+        "departure_mbps": 11.94129536,
+        "capacity_mbps": 11.995904,
+        "queue_mean_ms": 13.228110831234257,
+        "queue_p95_ms": 24.0,
+        "queue_p99_ms": 26.0,
+        "dropped_packets": 0.0,
+        "arrival_packets": 49618.0,
+        "drop_fraction": 0.0,
+        "dropped_bytes": 0.0,
+        "arrival_bytes": 74622568.0,
+        "complete_window": true,
+        "last_log_s": 61.367,
+        "start_s": 10,
+        "end_s": 60
+      },
+      "handoff_s": 2.149287109375,
+      "startup": {
+        "mode": "natural-cubic",
+        "time_us": "2226206",
+        "scheme": "cubic",
+        "assist_writes": "0",
+        "cwnd": "758",
+        "packets_out": "758",
+        "max_packets_out": "758",
+        "retrans_out": "0",
+        "lost_bytes": "0",
+        "avg_urtt": "349973",
+        "srtt_scaled8": "2786428",
+        "min_rtt": "201055",
+        "mss": "1448",
+        "pacing_rate": "3264399",
+        "ssthresh": "757"
+      },
+      "first10_controls": [
+        {
+          "time_us": "1794495408708287",
+          "state_id": "657",
+          "action_id": "657",
+          "percent": "25",
+          "cwnd_before": "758",
+          "cwnd_requested": "189",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495408730068",
+          "state_id": "658",
+          "action_id": "658",
+          "percent": "25",
+          "cwnd_before": "209",
+          "cwnd_requested": "52",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495408751741",
+          "state_id": "659",
+          "action_id": "659",
+          "percent": "25",
+          "cwnd_before": "74",
+          "cwnd_requested": "18",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495408773440",
+          "state_id": "660",
+          "action_id": "660",
+          "percent": "25",
+          "cwnd_before": "38",
+          "cwnd_requested": "9",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495408795128",
+          "state_id": "661",
+          "action_id": "661",
+          "percent": "27",
+          "cwnd_before": "29",
+          "cwnd_requested": "7",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495408816785",
+          "state_id": "662",
+          "action_id": "662",
+          "percent": "29",
+          "cwnd_before": "27",
+          "cwnd_requested": "7",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495408838501",
+          "state_id": "663",
+          "action_id": "663",
+          "percent": "32",
+          "cwnd_before": "27",
+          "cwnd_requested": "8",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495408860192",
+          "state_id": "664",
+          "action_id": "664",
+          "percent": "39",
+          "cwnd_before": "28",
+          "cwnd_requested": "10",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495408881894",
+          "state_id": "665",
+          "action_id": "665",
+          "percent": "65",
+          "cwnd_before": "29",
+          "cwnd_requested": "18",
+          "return_code": "0",
+          "socket": "4"
+        },
+        {
+          "time_us": "1794495408903583",
+          "state_id": "666",
+          "action_id": "666",
+          "percent": "88",
+          "cwnd_before": "39",
+          "cwnd_requested": "34",
+          "return_code": "0",
+          "socket": "4"
+        }
+      ]
+    }
+  ],
+  "original_seed3_legacy_FAIL_unchanged": true,
+  "independent_full96_started": false,
+  "seed7_started": false,
+  "current_two_host_closure": "PASS",
+  "new_experiments_on_recovery": 0,
+  "limits": [
+    "Four completed natural runs cannot estimate a failure rate or establish all-grid health.",
+    "Two partial runs are not 60-second measurements and are never imputed as zero or pass.",
+    "Current post-reboot closure cannot prove cleanup before the interruption.",
+    "Earlier legacy/first-feedback and adaptive natural observations are not concurrent causal controls."
+  ]
+}

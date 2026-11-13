@@ -1,0 +1,74 @@
+{
+  "jobs": [
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "startup": "natural-cubic",
+      "repeat": 0,
+      "host_slot": 0,
+      "host": 0,
+      "stage": "natural-protocol",
+      "run": "natural-00",
+      "port": 12900,
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@VALIDATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "startup": "natural-cubic",
+      "repeat": 2,
+      "host_slot": 1,
+      "host": 1,
+      "stage": "natural-protocol",
+      "run": "natural-06",
+      "port": 12906,
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@VALIDATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    }
+  ],
+  "registered_epoch": 1794495289.660165,
+  "run_cutoff": 1794496647.3245234,
+  "candidate_frozen_policy": "631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0",
+  "duration_seconds": 60,
+  "performance_retries": false,
+  "packet_window_completion": "same in both modes; only stop after complete60s log",
+  "phase": "natural-protocol",
+  "slots_per_host": 1
+}

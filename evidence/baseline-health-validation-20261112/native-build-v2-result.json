@@ -1,0 +1,128 @@
+{
+  "status": "MAPPED_FILENAME_BUILDS_COMPLETE",
+  "records": [
+    {
+      "startup": "legacy",
+      "audit": false,
+      "command": [
+        "g++",
+        "-std=c++11",
+        "-pthread",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src/orca-server-control-log-safe.cc",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src/flow.cc",
+        "-o",
+        "@VALIDATION_ROOT@/runtime/orca-legacy-mapped"
+      ],
+      "source_sha256": {
+        "orca-server-control-log-safe.cc": "ae2fa1e2c999809b2c0d25dbd64cecb3f459cf92bdae33f1c9279a9db2c10bd4",
+        "flow.cc": "3b9e2e0046f48166234de3dda445ff3a7a3c412304d5e68261c566b1de8de5ee",
+        "define_v2.h": "97a9ce508cfcf2ad3dd6b158f4fba4aac3a120d3545f17aa796430f8659f92cd",
+        "flow.h": "249c44560675a68488a66ba8f81ac9c2ea0c7510c5310b695c3c9327b5fe2919",
+        "common.h": "909d49b8df910973a662d374a6b4f9b99e60118541667a8203169de4b2e5c6f2",
+        "util.h": "c6a79c0fdbeed14351e275a360c86e694964a862f2546a9c5675fa8ab37d0594"
+      },
+      "logical_source_path": "@CLOUD_HOME@/orca-capacity-repair-20261112/runtime/orca-server-control-log-safe.cc",
+      "compiler_version": "g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0",
+      "compiled_source_sha256": "e3fedca5742138c2e9ba6681191c3b792241cd0e7de2da35876d63a6b0143f47",
+      "executed_command": [
+        "g++",
+        "-I",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src",
+        "-std=c++11",
+        "-pthread",
+        "@VALIDATION_ROOT@/runtime/orca-startup-lf7b8dv2/orca-server-control-log-safe.cc",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src/flow.cc",
+        "-o",
+        "@VALIDATION_ROOT@/runtime/orca-startup-lf7b8dv2/native"
+      ],
+      "binary_sha256": "632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0e12fe1d",
+      "status": "BUILT_NOT_NETWORK_VALIDATED",
+      "name": "orca-legacy-mapped"
+    },
+    {
+      "startup": "legacy",
+      "audit": true,
+      "command": [
+        "g++",
+        "-std=c++11",
+        "-pthread",
+        "-DORCA_STARTUP_AUDIT",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src/orca-server-control-log-safe.cc",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src/flow.cc",
+        "-o",
+        "@VALIDATION_ROOT@/runtime/orca-legacy-audit-v2"
+      ],
+      "source_sha256": {
+        "orca-server-control-log-safe.cc": "ae2fa1e2c999809b2c0d25dbd64cecb3f459cf92bdae33f1c9279a9db2c10bd4",
+        "flow.cc": "3b9e2e0046f48166234de3dda445ff3a7a3c412304d5e68261c566b1de8de5ee",
+        "define_v2.h": "97a9ce508cfcf2ad3dd6b158f4fba4aac3a120d3545f17aa796430f8659f92cd",
+        "flow.h": "249c44560675a68488a66ba8f81ac9c2ea0c7510c5310b695c3c9327b5fe2919",
+        "common.h": "909d49b8df910973a662d374a6b4f9b99e60118541667a8203169de4b2e5c6f2",
+        "util.h": "c6a79c0fdbeed14351e275a360c86e694964a862f2546a9c5675fa8ab37d0594"
+      },
+      "logical_source_path": "@CLOUD_HOME@/orca-capacity-repair-20261112/runtime/orca-server-control-log-safe.cc",
+      "compiler_version": "g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0",
+      "compiled_source_sha256": "e3fedca5742138c2e9ba6681191c3b792241cd0e7de2da35876d63a6b0143f47",
+      "executed_command": [
+        "g++",
+        "-I",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src",
+        "-std=c++11",
+        "-pthread",
+        "-DORCA_STARTUP_AUDIT",
+        "@VALIDATION_ROOT@/runtime/orca-startup-t3lb4uom/orca-server-control-log-safe.cc",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src/flow.cc",
+        "-o",
+        "@VALIDATION_ROOT@/runtime/orca-startup-t3lb4uom/native"
+      ],
+      "binary_sha256": "039210b445a946ea91c84946789627b77980b30413adb3770929bcd2cb224de4",
+      "status": "BUILT_NOT_NETWORK_VALIDATED",
+      "name": "orca-legacy-audit-v2"
+    },
+    {
+      "startup": "first-feedback",
+      "audit": true,
+      "command": [
+        "g++",
+        "-std=c++11",
+        "-pthread",
+        "-DORCA_FIRST_FEEDBACK_HANDOFF",
+        "-DORCA_STARTUP_AUDIT",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src/orca-server-control-log-safe.cc",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src/flow.cc",
+        "-o",
+        "@VALIDATION_ROOT@/runtime/orca-first-feedback-audit-v2"
+      ],
+      "source_sha256": {
+        "orca-server-control-log-safe.cc": "ae2fa1e2c999809b2c0d25dbd64cecb3f459cf92bdae33f1c9279a9db2c10bd4",
+        "flow.cc": "3b9e2e0046f48166234de3dda445ff3a7a3c412304d5e68261c566b1de8de5ee",
+        "define_v2.h": "97a9ce508cfcf2ad3dd6b158f4fba4aac3a120d3545f17aa796430f8659f92cd",
+        "flow.h": "249c44560675a68488a66ba8f81ac9c2ea0c7510c5310b695c3c9327b5fe2919",
+        "common.h": "909d49b8df910973a662d374a6b4f9b99e60118541667a8203169de4b2e5c6f2",
+        "util.h": "c6a79c0fdbeed14351e275a360c86e694964a862f2546a9c5675fa8ab37d0594"
+      },
+      "logical_source_path": "@CLOUD_HOME@/orca-capacity-repair-20261112/runtime/orca-server-control-log-safe.cc",
+      "compiler_version": "g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0",
+      "compiled_source_sha256": "e3fedca5742138c2e9ba6681191c3b792241cd0e7de2da35876d63a6b0143f47",
+      "executed_command": [
+        "g++",
+        "-I",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src",
+        "-std=c++11",
+        "-pthread",
+        "-DORCA_FIRST_FEEDBACK_HANDOFF",
+        "-DORCA_STARTUP_AUDIT",
+        "@VALIDATION_ROOT@/runtime/orca-startup-89mgwygx/orca-server-control-log-safe.cc",
+        "@VALIDATION_ROOT@/build-inputs/code/runtime/src/flow.cc",
+        "-o",
+        "@VALIDATION_ROOT@/runtime/orca-startup-89mgwygx/native"
+      ],
+      "binary_sha256": "26c626c394684d581229bf31422b1cdd205e36e0b05aa57b4e1bb1bc6215df49",
+      "status": "BUILT_NOT_NETWORK_VALIDATED",
+      "name": "orca-first-feedback-audit-v2"
+    }
+  ],
+  "default_rebuild_identical": true,
+  "new_TCP": 0,
+  "new_TF": 0
+}

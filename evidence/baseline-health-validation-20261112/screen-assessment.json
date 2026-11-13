@@ -1,0 +1,477 @@
+{
+  "status": "FAIL",
+  "performance_confirmation_go": false,
+  "performance_gates_pass": false,
+  "source_and_process_audit_required": false,
+  "original_health_gates": {
+    "cell_utilization": 0.9,
+    "queue_rtt_factor": 0.25,
+    "queue_margin_ms": 10,
+    "p95_rtt_factor": 0.5,
+    "p95_margin_ms": 20,
+    "trim_drop": 0.01,
+    "tail_utilization": 0.85,
+    "catastrophe_utilization": 0.5,
+    "post_handoff_drop": 0.05,
+    "overall_utilization": 0.95,
+    "overall_queue_ms": 20
+  },
+  "cells": [
+    {
+      "group": "H0-reference",
+      "startup": "first-feedback",
+      "condition": "G12-R200",
+      "repeats": 3,
+      "medians": {
+        "utilization": 0.9389388911415096,
+        "queue_mean_ms": 10.820846418423807,
+        "queue_p95_ms": 22.0,
+        "drop_fraction": 0.0
+      },
+      "tail": 0.9899699097291875,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true,
+      "utilizations": [
+        0.9689890415928637,
+        0.9389388911415096,
+        0.8551468234490707
+      ]
+    },
+    {
+      "group": "H0-reference",
+      "startup": "legacy",
+      "condition": "G12-R200",
+      "repeats": 3,
+      "medians": {
+        "utilization": 0.721646321944557,
+        "queue_mean_ms": 12.941099621970203,
+        "queue_p95_ms": 24.0,
+        "drop_fraction": 0.0
+      },
+      "tail": 0.9851554663991976,
+      "post_handoff_drop": 0.011661886465717843,
+      "checks": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": false,
+      "utilizations": [
+        0.6737225506306153,
+        0.8048559508312171,
+        0.721646321944557
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G12-R100",
+      "repeats": 3,
+      "medians": {
+        "utilization": 0.9999813269596022,
+        "queue_mean_ms": 23.215542316101985,
+        "queue_p95_ms": 30.0,
+        "drop_fraction": 0.0
+      },
+      "tail": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true,
+      "utilizations": [
+        0.9999813269596022,
+        0.9999813269596022,
+        0.9999813269596022
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G12-R200",
+      "repeats": 6,
+      "medians": {
+        "utilization": 0.5272033387396231,
+        "queue_mean_ms": 4.28748495179501,
+        "queue_p95_ms": 9.5,
+        "drop_fraction": 0.0
+      },
+      "tail": 0.6986960882647943,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": false,
+        "no_catastrophe": false,
+        "post_handoff_drop": true
+      },
+      "pass_all": false,
+      "utilizations": [
+        0.537474497961971,
+        0.5169321795172752,
+        0.5956483279626112,
+        0.7001618685844768,
+        0.2740642672698948,
+        0.4972337757954715
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G24-R50",
+      "repeats": 2,
+      "medians": {
+        "utilization": 0.9995394828101325,
+        "queue_mean_ms": 9.763629027757197,
+        "queue_p95_ms": 15.0,
+        "drop_fraction": 0.0
+      },
+      "tail": 0.9989727827098316,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true,
+      "utilizations": [
+        0.999619896924817,
+        0.9994590686954481
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G36-R100",
+      "repeats": 2,
+      "medians": {
+        "utilization": 0.9999938932899078,
+        "queue_mean_ms": 21.63032120159481,
+        "queue_p95_ms": 29.0,
+        "drop_fraction": 0.0
+      },
+      "tail": 1.0000005777818863,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true,
+      "utilizations": [
+        0.9999940088462851,
+        0.9999937777335306
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G48-R200",
+      "repeats": 2,
+      "medians": {
+        "utilization": 0.4793888379213048,
+        "queue_mean_ms": 9.691513602518581,
+        "queue_p95_ms": 23.5,
+        "drop_fraction": 0.0
+      },
+      "tail": 0.8364761738397615,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": false,
+        "no_catastrophe": false,
+        "post_handoff_drop": true
+      },
+      "pass_all": false,
+      "utilizations": [
+        0.7813843255121797,
+        0.17739335033042997
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "first-feedback",
+      "condition": "G72-R20",
+      "repeats": 2,
+      "medians": {
+        "utilization": 0.9998866525273069,
+        "queue_mean_ms": 5.314504163173444,
+        "queue_p95_ms": 8.0,
+        "drop_fraction": 0.0
+      },
+      "tail": 0.9999752220460234,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true,
+      "utilizations": [
+        0.999796354107407,
+        0.9999769509472067
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G12-R100",
+      "repeats": 3,
+      "medians": {
+        "utilization": 1.0000013871401439,
+        "queue_mean_ms": 15.973421860269191,
+        "queue_p95_ms": 18.0,
+        "drop_fraction": 0.0
+      },
+      "tail": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true,
+      "utilizations": [
+        1.0000020807102157,
+        1.0000013871401439,
+        1.0000013871401439
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G12-R200",
+      "repeats": 6,
+      "medians": {
+        "utilization": 0.08381316822808853,
+        "queue_mean_ms": 10.81118397077179,
+        "queue_p95_ms": 30.5,
+        "drop_fraction": 0.0
+      },
+      "tail": 0.2672517552657974,
+      "post_handoff_drop": 0.0867279571672807,
+      "checks": {
+        "utilization": false,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": false,
+        "no_catastrophe": false,
+        "post_handoff_drop": false
+      },
+      "pass_all": false,
+      "utilizations": [
+        0.033683123839603916,
+        0.3169121193367336,
+        0.13394321261657313,
+        0.18818594080112677,
+        0.0336021895473655,
+        0.02126587208433812
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G24-R50",
+      "repeats": 2,
+      "medians": {
+        "utilization": 0.9773077877248768,
+        "queue_mean_ms": 2.06046965583875,
+        "queue_p95_ms": 4.0,
+        "drop_fraction": 0.0
+      },
+      "tail": 0.9774080886275849,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true,
+      "utilizations": [
+        0.9752965812330608,
+        0.9793189942166927
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G36-R100",
+      "repeats": 2,
+      "medians": {
+        "utilization": 1.0000004622255092,
+        "queue_mean_ms": 29.400034758893597,
+        "queue_p95_ms": 35.5,
+        "drop_fraction": 0.0
+      },
+      "tail": 1.0,
+      "post_handoff_drop": 0.0025336492221976793,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true,
+      "utilizations": [
+        1.0000004622255092,
+        1.0000004622255092
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G48-R200",
+      "repeats": 2,
+      "medians": {
+        "utilization": 0.9999953329101838,
+        "queue_mean_ms": 38.37230447578604,
+        "queue_p95_ms": 51.0,
+        "drop_fraction": 0.0
+      },
+      "tail": 1.0,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true,
+      "utilizations": [
+        0.9999953329101838,
+        0.9999953329101838
+      ]
+    },
+    {
+      "group": "onlinebn-final6m",
+      "startup": "legacy",
+      "condition": "G72-R20",
+      "repeats": 2,
+      "medians": {
+        "utilization": 0.9997412070485834,
+        "queue_mean_ms": 5.521921976800538,
+        "queue_p95_ms": 9.0,
+        "drop_fraction": 0.0
+      },
+      "tail": 0.9995738636363636,
+      "post_handoff_drop": 0.0,
+      "checks": {
+        "utilization": true,
+        "mean_queue": true,
+        "p95": true,
+        "trim_drop": true,
+        "tail": true,
+        "no_catastrophe": true,
+        "post_handoff_drop": true
+      },
+      "pass_all": true,
+      "utilizations": [
+        0.999676033251792,
+        0.9998063808453749
+      ]
+    }
+  ],
+  "startup_paired_checks": [
+    {
+      "group": "H0-reference",
+      "condition": "G12-R200",
+      "median_normal_minus_legacy": -0.3672234992305935,
+      "pass_all": false
+    },
+    {
+      "group": "onlinebn-final6m",
+      "condition": "G12-R100",
+      "median_normal_minus_legacy": -0.2440565753836894,
+      "pass_all": false
+    },
+    {
+      "group": "onlinebn-final6m",
+      "condition": "G12-R200",
+      "median_normal_minus_legacy": -0.43484589461372813,
+      "pass_all": false
+    },
+    {
+      "group": "onlinebn-final6m",
+      "condition": "G24-R50",
+      "median_normal_minus_legacy": -0.36721336142040323,
+      "pass_all": false
+    },
+    {
+      "group": "onlinebn-final6m",
+      "condition": "G36-R100",
+      "median_normal_minus_legacy": -0.4468378471217176,
+      "pass_all": false
+    },
+    {
+      "group": "onlinebn-final6m",
+      "condition": "G48-R200",
+      "median_normal_minus_legacy": -0.78537968849519,
+      "pass_all": false
+    },
+    {
+      "group": "onlinebn-final6m",
+      "condition": "G72-R20",
+      "median_normal_minus_legacy": -0.07783231301636656,
+      "pass_all": false
+    }
+  ],
+  "weak_catastrophes": {
+    "legacy": 6,
+    "first-feedback": 2
+  },
+  "mechanism": "LEGACY_FAILURE_REPRODUCED",
+  "original_seed3_legacy_FAIL_unchanged": true,
+  "screen_not_full_grid_health": true,
+  "source_and_process_audit": "PASS"
+}

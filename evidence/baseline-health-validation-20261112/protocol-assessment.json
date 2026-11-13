@@ -1,0 +1,206 @@
+{
+  "status": "PASS",
+  "scope": "build/model/counters/action/startup mode/complete window/cleanup; not performance selection",
+  "proof": [
+    {
+      "node": 0,
+      "records": [
+        {
+          "run": "protocol-00-legacy",
+          "startup": "legacy",
+          "first_control": {
+            "time_us": "1794493605614008",
+            "state_id": "657",
+            "action_id": "657",
+            "percent": "25",
+            "cwnd_before": "3546486",
+            "cwnd_requested": "886621",
+            "return_code": "0",
+            "socket": "4"
+          },
+          "startup_fields": {
+            "mode": "legacy",
+            "time_us": "5335321",
+            "scheme": "cubic",
+            "assist_writes": "217",
+            "cwnd": "3546486",
+            "packets_out": "2048",
+            "max_packets_out": "2074",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "649985",
+            "srtt_scaled8": "5536538",
+            "min_rtt": "201033",
+            "mss": "1448",
+            "pacing_rate": "4294967295",
+            "ssthresh": "3224079"
+          },
+          "counters": {
+            "valid": 1483,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "model_unchanged": true,
+          "packet_completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.009,
+            "required_seconds": 60,
+            "requested_epoch": 1794493660.4490232,
+            "metric_or_health_override": false
+          }
+        },
+        {
+          "run": "protocol-01-first-feedback",
+          "startup": "first-feedback",
+          "first_control": {
+            "time_us": "1794493664617941",
+            "state_id": "657",
+            "action_id": "657",
+            "percent": "25",
+            "cwnd_before": "12",
+            "cwnd_requested": "4",
+            "return_code": "0",
+            "socket": "4"
+          },
+          "startup_fields": {
+            "mode": "first-feedback",
+            "time_us": "602367",
+            "scheme": "cubic",
+            "assist_writes": "0",
+            "cwnd": "12",
+            "packets_out": "10",
+            "max_packets_out": "11",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "204259",
+            "srtt_scaled8": "1621653",
+            "min_rtt": "204254",
+            "mss": "1448",
+            "pacing_rate": "88798",
+            "ssthresh": "2147483647"
+          },
+          "counters": {
+            "valid": 2723,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "model_unchanged": true,
+          "packet_completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.006,
+            "required_seconds": 60,
+            "requested_epoch": 1794493724.0990493,
+            "metric_or_health_override": false
+          }
+        }
+      ],
+      "no_owned_processes": true
+    },
+    {
+      "node": 1,
+      "records": [
+        {
+          "run": "protocol-02-legacy",
+          "startup": "legacy",
+          "first_control": {
+            "time_us": "1794493602934847",
+            "state_id": "657",
+            "action_id": "657",
+            "percent": "25",
+            "cwnd_before": "3843302",
+            "cwnd_requested": "960825",
+            "return_code": "0",
+            "socket": "4"
+          },
+          "startup_fields": {
+            "mode": "legacy",
+            "time_us": "5271602",
+            "scheme": "cubic",
+            "assist_writes": "217",
+            "cwnd": "3843302",
+            "packets_out": "2042",
+            "max_packets_out": "2074",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "663930",
+            "srtt_scaled8": "5537974",
+            "min_rtt": "201117",
+            "mss": "1448",
+            "pacing_rate": "4294967295",
+            "ssthresh": "3493911"
+          },
+          "counters": {
+            "valid": 885,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "model_unchanged": true,
+          "packet_completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.048,
+            "required_seconds": 60,
+            "requested_epoch": 1794493657.8314128,
+            "metric_or_health_override": false
+          }
+        },
+        {
+          "run": "protocol-03-first-feedback",
+          "startup": "first-feedback",
+          "first_control": {
+            "time_us": "1794493661878490",
+            "state_id": "657",
+            "action_id": "657",
+            "percent": "25",
+            "cwnd_before": "11",
+            "cwnd_requested": "4",
+            "return_code": "0",
+            "socket": "4"
+          },
+          "startup_fields": {
+            "mode": "first-feedback",
+            "time_us": "602812",
+            "scheme": "cubic",
+            "assist_writes": "0",
+            "cwnd": "11",
+            "packets_out": "11",
+            "max_packets_out": "11",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "202042",
+            "srtt_scaled8": "1620116",
+            "min_rtt": "202042",
+            "mss": "1448",
+            "pacing_rate": "81475",
+            "ssthresh": "2147483647"
+          },
+          "counters": {
+            "valid": 2737,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "model_unchanged": true,
+          "packet_completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.001,
+            "required_seconds": 60,
+            "requested_epoch": 1794493721.3567138,
+            "metric_or_health_override": false
+          }
+        }
+      ],
+      "no_owned_processes": true
+    }
+  ]
+}
