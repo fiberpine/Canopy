@@ -1,0 +1,2899 @@
+{
+  "phase": "full-seed3",
+  "jobs": [
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R50",
+        "nominal_mbps": 48,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-000",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13100,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R20",
+        "nominal_mbps": 12,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 100,
+        "queue_bytes": 150400,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-001",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13101,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-002",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13102,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-003",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13103,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R50",
+        "nominal_mbps": 42,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 875,
+        "queue_bytes": 1316000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-004",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13104,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R20",
+        "nominal_mbps": 36,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 300,
+        "queue_bytes": 451200,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-005",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13105,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R200",
+        "nominal_mbps": 72,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 6000,
+        "queue_bytes": 9024000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-006",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13106,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R200",
+        "nominal_mbps": 72,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 6000,
+        "queue_bytes": 9024000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-007",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13107,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R100",
+        "nominal_mbps": 48,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 2000,
+        "queue_bytes": 3008000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-008",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13108,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-009",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13109,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R50",
+        "nominal_mbps": 12,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 250,
+        "queue_bytes": 376000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-010",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13110,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R20",
+        "nominal_mbps": 24,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 200,
+        "queue_bytes": 300800,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-011",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13111,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-012",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13112,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R100",
+        "nominal_mbps": 36,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-013",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13113,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R50",
+        "nominal_mbps": 72,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-014",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13114,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R50",
+        "nominal_mbps": 24,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-015",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13115,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R50",
+        "nominal_mbps": 24,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-016",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13116,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R200",
+        "nominal_mbps": 42,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 3500,
+        "queue_bytes": 5264000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-017",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13117,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R50",
+        "nominal_mbps": 36,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 750,
+        "queue_bytes": 1128000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-018",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13118,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R50",
+        "nominal_mbps": 36,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 750,
+        "queue_bytes": 1128000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-019",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13119,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R20",
+        "nominal_mbps": 36,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 300,
+        "queue_bytes": 451200,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-020",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13120,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R200",
+        "nominal_mbps": 42,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 3500,
+        "queue_bytes": 5264000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-021",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13121,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R20",
+        "nominal_mbps": 12,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 100,
+        "queue_bytes": 150400,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-022",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13122,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R50",
+        "nominal_mbps": 42,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 875,
+        "queue_bytes": 1316000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-023",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13123,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R100",
+        "nominal_mbps": 24,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-024",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13124,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-025",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13125,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R200",
+        "nominal_mbps": 24,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 2000,
+        "queue_bytes": 3008000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-026",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13126,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R100",
+        "nominal_mbps": 48,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 2000,
+        "queue_bytes": 3008000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-027",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13127,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R100",
+        "nominal_mbps": 42,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1750,
+        "queue_bytes": 2632000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-028",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13128,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R50",
+        "nominal_mbps": 12,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 250,
+        "queue_bytes": 376000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-029",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13129,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R50",
+        "nominal_mbps": 12,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 250,
+        "queue_bytes": 376000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-030",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13130,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R50",
+        "nominal_mbps": 48,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-031",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13131,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R100",
+        "nominal_mbps": 36,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-032",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13132,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R100",
+        "nominal_mbps": 72,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 3000,
+        "queue_bytes": 4512000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-033",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13133,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R50",
+        "nominal_mbps": 48,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-034",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13134,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R200",
+        "nominal_mbps": 72,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 6000,
+        "queue_bytes": 9024000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-035",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13135,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-036",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13136,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-037",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13137,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R100",
+        "nominal_mbps": 48,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 2000,
+        "queue_bytes": 3008000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-038",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13138,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R200",
+        "nominal_mbps": 72,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 6000,
+        "queue_bytes": 9024000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-039",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13139,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R100",
+        "nominal_mbps": 72,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 3000,
+        "queue_bytes": 4512000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-040",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13140,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-041",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13141,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R50",
+        "nominal_mbps": 42,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 875,
+        "queue_bytes": 1316000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-042",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13142,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R100",
+        "nominal_mbps": 24,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-043",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13143,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R200",
+        "nominal_mbps": 36,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 3000,
+        "queue_bytes": 4512000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-044",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13144,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R20",
+        "nominal_mbps": 48,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 400,
+        "queue_bytes": 601600,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-045",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13145,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R100",
+        "nominal_mbps": 24,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-046",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13146,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R200",
+        "nominal_mbps": 36,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 3000,
+        "queue_bytes": 4512000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-047",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13147,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R200",
+        "nominal_mbps": 42,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 3500,
+        "queue_bytes": 5264000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-048",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13148,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R200",
+        "nominal_mbps": 24,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 2000,
+        "queue_bytes": 3008000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-049",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13149,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R20",
+        "nominal_mbps": 42,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 350,
+        "queue_bytes": 526400,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-050",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13150,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R200",
+        "nominal_mbps": 36,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 3000,
+        "queue_bytes": 4512000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-051",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13151,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R200",
+        "nominal_mbps": 36,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 3000,
+        "queue_bytes": 4512000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-052",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13152,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R20",
+        "nominal_mbps": 48,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 400,
+        "queue_bytes": 601600,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-053",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13153,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-054",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13154,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R50",
+        "nominal_mbps": 48,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-055",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13155,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R20",
+        "nominal_mbps": 24,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 200,
+        "queue_bytes": 300800,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-056",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13156,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R50",
+        "nominal_mbps": 36,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 750,
+        "queue_bytes": 1128000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-057",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13157,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R200",
+        "nominal_mbps": 24,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 2000,
+        "queue_bytes": 3008000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-058",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13158,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R50",
+        "nominal_mbps": 72,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-059",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13159,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R50",
+        "nominal_mbps": 12,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 250,
+        "queue_bytes": 376000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-060",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13160,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R50",
+        "nominal_mbps": 42,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 875,
+        "queue_bytes": 1316000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-061",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13161,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R200",
+        "nominal_mbps": 42,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 3500,
+        "queue_bytes": 5264000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-062",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13162,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R100",
+        "nominal_mbps": 72,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 3000,
+        "queue_bytes": 4512000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-063",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13163,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R20",
+        "nominal_mbps": 42,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 350,
+        "queue_bytes": 526400,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-064",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13164,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R100",
+        "nominal_mbps": 42,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1750,
+        "queue_bytes": 2632000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-065",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13165,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-066",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13166,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R20",
+        "nominal_mbps": 24,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 200,
+        "queue_bytes": 300800,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-067",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13167,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R20",
+        "nominal_mbps": 12,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 100,
+        "queue_bytes": 150400,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-068",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13168,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R100",
+        "nominal_mbps": 72,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 3000,
+        "queue_bytes": 4512000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-069",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13169,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-070",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13170,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R100",
+        "nominal_mbps": 48,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 2000,
+        "queue_bytes": 3008000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-071",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13171,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R50",
+        "nominal_mbps": 36,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 750,
+        "queue_bytes": 1128000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-072",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13172,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R20",
+        "nominal_mbps": 36,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 300,
+        "queue_bytes": 451200,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-073",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13173,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R100",
+        "nominal_mbps": 42,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1750,
+        "queue_bytes": 2632000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-074",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13174,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R200",
+        "nominal_mbps": 24,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 2000,
+        "queue_bytes": 3008000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-075",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13175,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R20",
+        "nominal_mbps": 36,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 300,
+        "queue_bytes": 451200,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-076",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13176,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-077",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13177,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R20",
+        "nominal_mbps": 12,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 100,
+        "queue_bytes": 150400,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-078",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13178,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-079",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13179,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R50",
+        "nominal_mbps": 24,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-080",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13180,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R20",
+        "nominal_mbps": 24,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 200,
+        "queue_bytes": 300800,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-081",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13181,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R20",
+        "nominal_mbps": 42,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 350,
+        "queue_bytes": 526400,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-082",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13182,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-083",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13183,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R100",
+        "nominal_mbps": 24,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-084",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13184,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R50",
+        "nominal_mbps": 72,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-085",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13185,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R100",
+        "nominal_mbps": 36,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-086",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13186,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-087",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13187,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R20",
+        "nominal_mbps": 42,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 350,
+        "queue_bytes": 526400,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-088",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13188,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R20",
+        "nominal_mbps": 48,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 400,
+        "queue_bytes": 601600,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-089",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13189,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R20",
+        "nominal_mbps": 48,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 400,
+        "queue_bytes": 601600,
+        "queue_bdp": 5.013787916771121
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-090",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13190,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R100",
+        "nominal_mbps": 42,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1750,
+        "queue_bytes": 2632000,
+        "queue_bdp": 5.01432664756447
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-091",
+      "host": 1,
+      "host_slot": 1,
+      "port": 13191,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "H0-reference",
+      "repeat": 0,
+      "run": "full-natural-092",
+      "host": 2,
+      "host_slot": 2,
+      "port": 13192,
+      "startup": "natural-cubic",
+      "checkpoint": "@CLOUD_HOME@/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694",
+      "model_sha256": {
+        ".index": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+        ".data-00000-of-00001": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R50",
+        "nominal_mbps": 72,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 2,
+      "run": "full-natural-093",
+      "host": 3,
+      "host_slot": 3,
+      "port": 13193,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R50",
+        "nominal_mbps": 24,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 1,
+      "run": "full-natural-094",
+      "host": 4,
+      "host_slot": 4,
+      "port": 13194,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    },
+    {
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R100",
+        "nominal_mbps": 36,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "group": "onlinebn-final6m",
+      "repeat": 0,
+      "run": "full-natural-095",
+      "host": 0,
+      "host_slot": 0,
+      "port": 13195,
+      "startup": "natural-cubic",
+      "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+      "model_sha256": {
+        ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+        ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+      },
+      "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+      "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    }
+  ],
+  "registered_epoch": 1794557123.416199,
+  "run_cutoff": 1794559223.4161983,
+  "duration_seconds": 60,
+  "slots_per_host": 1,
+  "performance_retries": false,
+  "startup_mode": "natural-cubic",
+  "handoff_max_seconds": 10,
+  "helper_contract": "same matched capture and packet-clock completion as prior original40",
+  "original_partial_attempts_preserved": true,
+  "new_three_host_indicator": [
+    2,
+    3,
+    4
+  ]
+}

@@ -1,0 +1,3405 @@
+{
+  "status": "PASS",
+  "phase": "recovery-screen",
+  "proof": [
+    {
+      "node": 0,
+      "records": [
+        {
+          "job": {
+            "condition": {
+              "trace": "constant48",
+              "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+              "capacity_mbps": 47.995648,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G48-R200",
+              "nominal_mbps": 48,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 4000,
+              "queue_bytes": 6016000,
+              "queue_bdp": 5.013787916771121
+            },
+            "group": "onlinebn-final6m",
+            "startup": "natural-cubic",
+            "repeat": 1,
+            "host_slot": 0,
+            "host": 0,
+            "stage": "recovery-screen",
+            "run": "recovery-natural-02",
+            "port": 13002,
+            "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+            "model_sha256": {
+              ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+              ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+            },
+            "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+            "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+            "original_run": "natural-02",
+            "original_status": "INTERRUPTED_PARTIAL_LOG"
+          },
+          "status": "COMPLETED",
+          "engineering_pass": true,
+          "handoff_s": 2.248833984375,
+          "startup": {
+            "mode": "natural-cubic",
+            "time_us": "2414822",
+            "scheme": "cubic",
+            "assist_writes": "0",
+            "cwnd": "980",
+            "packets_out": "980",
+            "max_packets_out": "980",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "203102",
+            "srtt_scaled8": "1629425",
+            "min_rtt": "201079",
+            "mss": "1448",
+            "pacing_rate": "7217274",
+            "ssthresh": "976"
+          },
+          "first_controls": [
+            {
+              "time_us": "1794556656675834",
+              "state_id": "657",
+              "action_id": "657",
+              "percent": "25",
+              "cwnd_before": "980",
+              "cwnd_requested": "245",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556656697441",
+              "state_id": "658",
+              "action_id": "658",
+              "percent": "339",
+              "cwnd_before": "329",
+              "cwnd_requested": "1115",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556656718989",
+              "state_id": "659",
+              "action_id": "659",
+              "percent": "25",
+              "cwnd_before": "1119",
+              "cwnd_requested": "279",
+              "return_code": "0",
+              "socket": "4"
+            }
+          ],
+          "mapping_error_count": 0,
+          "first_raw15": [
+            {
+              "packet_elapsed_s": 2.212725341796875,
+              "time_us": 1794556656639725.2,
+              "state_id": 657,
+              "raw": [
+                203.102,
+                4672689.0,
+                40.0,
+                0.020058,
+                50.0,
+                980.0,
+                7217274.0,
+                0.0,
+                203.678,
+                976.0,
+                980.0,
+                0.0,
+                980.0,
+                1448.0,
+                201.079
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.269088134765625,
+              "time_us": 1794556656696088.2,
+              "state_id": 658,
+              "raw": [
+                208.236,
+                5066942.0,
+                159.0,
+                0.056434,
+                50.0,
+                329.0,
+                6387132.0,
+                0.0,
+                212.067,
+                976.0,
+                903.0,
+                0.0,
+                987.0,
+                1448.0,
+                201.079
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.29089990234375,
+              "time_us": 1794556656717900.0,
+              "state_id": 659,
+              "raw": [
+                214.245,
+                5325605.0,
+                87.0,
+                0.021591,
+                50.0,
+                1119.0,
+                7761813.0,
+                0.0,
+                216.251,
+                976.0,
+                927.0,
+                0.0,
+                987.0,
+                1448.0,
+                201.079
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.312268310546875,
+              "time_us": 1794556656739268.2,
+              "state_id": 660,
+              "raw": [
+                218.345,
+                5432281.0,
+                72.0,
+                0.021544,
+                50.0,
+                358.0,
+                5790742.0,
+                0.0,
+                219.92,
+                976.0,
+                849.0,
+                0.0,
+                987.0,
+                1448.0,
+                201.079
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.3341396484375,
+              "time_us": 1794556656761139.8,
+              "state_id": 661,
+              "raw": [
+                222.896,
+                5556910.0,
+                23.0,
+                0.021583,
+                50.0,
+                192.0,
+                5087196.0,
+                0.0,
+                224.092,
+                976.0,
+                760.0,
+                0.0,
+                987.0,
+                1448.0,
+                201.079
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.355430908203125,
+              "time_us": 1794556656782431.0,
+              "state_id": 662,
+              "raw": [
+                226.142,
+                5642699.0,
+                21.0,
+                0.021571,
+                50.0,
+                152.0,
+                4484068.0,
+                0.0,
+                227.472,
+                976.0,
+                680.0,
+                0.0,
+                987.0,
+                1448.0,
+                201.079
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.377241455078125,
+              "time_us": 1794556656804241.5,
+              "state_id": 663,
+              "raw": [
+                230.777,
+                5701475.0,
+                23.0,
+                0.021561,
+                50.0,
+                164.0,
+                3808928.0,
+                0.0,
+                231.955,
+                976.0,
+                589.0,
+                0.0,
+                987.0,
+                1448.0,
+                201.079
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.39846240234375,
+              "time_us": 1794556656825462.5,
+              "state_id": 664,
+              "raw": [
+                234.818,
+                5742989.0,
+                21.0,
+                0.021576,
+                50.0,
+                211.0,
+                3216142.0,
+                0.0,
+                235.997,
+                976.0,
+                506.0,
+                0.0,
+                987.0,
+                1448.0,
+                201.079
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.4202626953125,
+              "time_us": 1794556656847262.8,
+              "state_id": 665,
+              "raw": [
+                239.357,
+                5761976.0,
+                24.0,
+                0.021548,
+                50.0,
+                366.0,
+                2599837.0,
+                0.0,
+                240.592,
+                976.0,
+                417.0,
+                0.0,
+                987.0,
+                1448.0,
+                201.079
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.4420830078125,
+              "time_us": 1794556656869083.0,
+              "state_id": 666,
+              "raw": [
+                243.179,
+                5769571.0,
+                27.0,
+                0.021585,
+                50.0,
+                673.0,
+                4133618.0,
+                0.0,
+                244.217,
+                976.0,
+                383.0,
+                0.0,
+                987.0,
+                1448.0,
+                201.079
+              ]
+            }
+          ],
+          "first10_packet_clock_bins": {
+            "0": {
+              "rows": 32,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 152.0,
+                "mean": 921.03125,
+                "max": 2105.0
+              },
+              "packets_out": {
+                "min": 383.0,
+                "mean": 734.125,
+                "max": 980.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 2599837.0,
+                "mean": 7109823.25,
+                "max": 14620627.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "3": {
+              "rows": 92,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 610.0,
+                "mean": 1234.1630434782608,
+                "max": 2201.0
+              },
+              "packets_out": {
+                "min": 818.0,
+                "mean": 898.945652173913,
+                "max": 968.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 5340235.0,
+                "mean": 8759639.413043479,
+                "max": 14635281.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "5": {
+              "rows": 231,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 687.0,
+                "mean": 1253.0562770562772,
+                "max": 2121.0
+              },
+              "packets_out": {
+                "min": 852.0,
+                "mean": 906.7748917748918,
+                "max": 971.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 5392905.0,
+                "mean": 8785303.497835498,
+                "max": 14186721.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            }
+          },
+          "counters": {
+            "valid": 2657,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "headers": [
+            "# mahimahi mm-link (Downlink) [@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant48] > @CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-02/down.log",
+            "# command line: 'mm-link' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant192' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant48' '--downlink-log=@CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-02/down.log' '--uplink-queue=droptail' '--uplink-queue-args=packets=4000' '--downlink-queue=droptail' '--downlink-queue-args=packets=4000' '--' 'sh' '-c' 'sudo -u `whoami` @CONTINUATION_ROOT@/frameworks/baseline/code/runtime/client $MAHIMAHI_BASE 1 13002'",
+            "# queue: droptail [packets=4000]",
+            "# init timestamp: 1794556654395",
+            "# base timestamp: 32",
+            "# mahimahi config: [delay 100 ms]"
+          ],
+          "policy_hash_unchanged": true,
+          "completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.049,
+            "required_seconds": 60,
+            "requested_epoch": 1794556714.477728,
+            "metric_or_health_override": false
+          }
+        },
+        {
+          "job": {
+            "condition": {
+              "trace": "constant12",
+              "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+              "capacity_mbps": 11.995904,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G12-R200",
+              "nominal_mbps": 12,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 1000,
+              "queue_bytes": 1504000,
+              "queue_bdp": 5.015045135406219
+            },
+            "group": "onlinebn-final6m",
+            "startup": "natural-cubic",
+            "repeat": 2,
+            "host_slot": 0,
+            "host": 0,
+            "stage": "recovery-screen",
+            "run": "recovery-natural-03",
+            "port": 13003,
+            "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+            "model_sha256": {
+              ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+              ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+            },
+            "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+            "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+            "original_run": "natural-03",
+            "original_status": "NOT_STARTED"
+          },
+          "status": "COMPLETED",
+          "engineering_pass": true,
+          "handoff_s": 2.168324951171875,
+          "startup": {
+            "mode": "natural-cubic",
+            "time_us": "2244796",
+            "scheme": "cubic",
+            "assist_writes": "0",
+            "cwnd": "764",
+            "packets_out": "764",
+            "max_packets_out": "764",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "357508",
+            "srtt_scaled8": "2847407",
+            "min_rtt": "201181",
+            "mss": "1448",
+            "pacing_rate": "3219779",
+            "ssthresh": "763"
+          },
+          "first_controls": [
+            {
+              "time_us": "1794556721694325",
+              "state_id": "657",
+              "action_id": "657",
+              "percent": "25",
+              "cwnd_before": "764",
+              "cwnd_requested": "191",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556721716037",
+              "state_id": "658",
+              "action_id": "658",
+              "percent": "25",
+              "cwnd_before": "213",
+              "cwnd_requested": "53",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556721737720",
+              "state_id": "659",
+              "action_id": "659",
+              "percent": "25",
+              "cwnd_before": "75",
+              "cwnd_requested": "18",
+              "return_code": "0",
+              "socket": "4"
+            }
+          ],
+          "mapping_error_count": 0,
+          "first_raw15": [
+            {
+              "packet_elapsed_s": 2.1534853515625,
+              "time_us": 1794556721679485.2,
+              "state_id": 657,
+              "raw": [
+                357.508,
+                1444270.0,
+                10.0,
+                0.020057,
+                50.0,
+                764.0,
+                3219779.0,
+                0.0,
+                355.925,
+                763.0,
+                764.0,
+                0.0,
+                764.0,
+                1448.0,
+                201.181
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.18878857421875,
+              "time_us": 1794556721714788.5,
+              "state_id": 658,
+              "raw": [
+                372.91,
+                1442285.0,
+                18.0,
+                0.035481,
+                50.0,
+                213.0,
+                2975372.0,
+                0.0,
+                374.575,
+                763.0,
+                743.0,
+                0.0,
+                765.0,
+                1448.0,
+                201.181
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.210355224609375,
+              "time_us": 1794556721736355.2,
+              "state_id": 659,
+              "raw": [
+                388.151,
+                1443407.0,
+                11.0,
+                0.021702,
+                50.0,
+                75.0,
+                2797892.0,
+                0.0,
+                386.541,
+                763.0,
+                721.0,
+                0.0,
+                765.0,
+                1448.0,
+                201.181
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.232282470703125,
+              "time_us": 1794556721758282.5,
+              "state_id": 660,
+              "raw": [
+                399.491,
+                1442975.0,
+                10.0,
+                0.021678,
+                50.0,
+                38.0,
+                2644231.0,
+                0.0,
+                397.658,
+                763.0,
+                701.0,
+                0.0,
+                765.0,
+                1448.0,
+                201.181
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.2535029296875,
+              "time_us": 1794556721779503.0,
+              "state_id": 661,
+              "raw": [
+                410.906,
+                1443493.0,
+                11.0,
+                0.021691,
+                50.0,
+                29.0,
+                2488115.0,
+                0.0,
+                409.346,
+                763.0,
+                679.0,
+                0.0,
+                765.0,
+                1448.0,
+                201.181
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.27550390625,
+              "time_us": 1794556721801504.0,
+              "state_id": 662,
+              "raw": [
+                423.57,
+                1442802.0,
+                11.0,
+                0.021671,
+                50.0,
+                29.0,
+                2338771.0,
+                0.0,
+                421.375,
+                763.0,
+                657.0,
+                0.0,
+                765.0,
+                1448.0,
+                201.181
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.297226318359375,
+              "time_us": 1794556721823226.2,
+              "state_id": 663,
+              "raw": [
+                435.649,
+                1443061.0,
+                11.0,
+                0.021665,
+                50.0,
+                28.0,
+                2195813.0,
+                0.0,
+                433.78,
+                763.0,
+                635.0,
+                0.0,
+                765.0,
+                1448.0,
+                201.181
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.318948974609375,
+              "time_us": 1794556721844949.0,
+              "state_id": 664,
+              "raw": [
+                448.58,
+                1444701.0,
+                14.0,
+                0.021658,
+                50.0,
+                29.0,
+                2048229.0,
+                0.0,
+                448.192,
+                763.0,
+                612.0,
+                0.0,
+                765.0,
+                1448.0,
+                201.181
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.340294677734375,
+              "time_us": 1794556721866294.8,
+              "state_id": 665,
+              "raw": [
+                460.173,
+                1443320.0,
+                21.0,
+                0.021671,
+                50.0,
+                31.0,
+                1920077.0,
+                0.0,
+                461.7,
+                763.0,
+                591.0,
+                0.0,
+                765.0,
+                1448.0,
+                201.181
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.362048828125,
+              "time_us": 1794556721888048.8,
+              "state_id": 666,
+              "raw": [
+                471.652,
+                1443924.0,
+                20.0,
+                0.021669,
+                50.0,
+                41.0,
+                1810506.0,
+                0.0,
+                473.072,
+                763.0,
+                571.0,
+                0.0,
+                765.0,
+                1448.0,
+                201.181
+              ]
+            }
+          ],
+          "first10_packet_clock_bins": {
+            "0": {
+              "rows": 38,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 7.0,
+                "mean": 73.0,
+                "max": 764.0
+              },
+              "packets_out": {
+                "min": 4.0,
+                "mean": 366.1842105263158,
+                "max": 764.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 13617.0,
+                "mean": 1140539.7368421052,
+                "max": 3219779.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "3": {
+              "rows": 47,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 4.0,
+                "mean": 214.9787234042553,
+                "max": 499.0
+              },
+              "packets_out": {
+                "min": 0.0,
+                "mean": 136.25531914893617,
+                "max": 236.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 12855.0,
+                "mean": 1515100.914893617,
+                "max": 3535496.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "5": {
+              "rows": 231,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 186.0,
+                "mean": 318.7012987012987,
+                "max": 491.0
+              },
+              "packets_out": {
+                "min": 199.0,
+                "mean": 213.75324675324674,
+                "max": 233.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 1336294.0,
+                "mean": 2255847.658008658,
+                "max": 3298582.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            }
+          },
+          "counters": {
+            "valid": 2629,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "headers": [
+            "# mahimahi mm-link (Downlink) [@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant12] > @CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-03/down.log",
+            "# command line: 'mm-link' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant192' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant12' '--downlink-log=@CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-03/down.log' '--uplink-queue=droptail' '--uplink-queue-args=packets=1000' '--downlink-queue=droptail' '--downlink-queue-args=packets=1000' '--' 'sh' '-c' 'sudo -u `whoami` @CONTINUATION_ROOT@/frameworks/baseline/code/runtime/client $MAHIMAHI_BASE 1 13003'",
+            "# queue: droptail [packets=1000]",
+            "# init timestamp: 1794556719494",
+            "# base timestamp: 32",
+            "# mahimahi config: [delay 100 ms]"
+          ],
+          "policy_hash_unchanged": true,
+          "completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.015,
+            "required_seconds": 60,
+            "requested_epoch": 1794556779.5424616,
+            "metric_or_health_override": false
+          }
+        },
+        {
+          "job": {
+            "condition": {
+              "trace": "constant12",
+              "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+              "capacity_mbps": 11.995904,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G12-R200",
+              "nominal_mbps": 12,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 1000,
+              "queue_bytes": 1504000,
+              "queue_bdp": 5.015045135406219
+            },
+            "group": "onlinebn-final6m",
+            "startup": "natural-cubic",
+            "repeat": 1,
+            "host_slot": 0,
+            "host": 0,
+            "stage": "recovery-screen",
+            "run": "recovery-natural-04",
+            "port": 13004,
+            "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+            "model_sha256": {
+              ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+              ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+            },
+            "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+            "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+            "original_run": "natural-04",
+            "original_status": "NOT_STARTED"
+          },
+          "status": "COMPLETED",
+          "engineering_pass": true,
+          "handoff_s": 2.14906005859375,
+          "startup": {
+            "mode": "natural-cubic",
+            "time_us": "2224964",
+            "scheme": "cubic",
+            "assist_writes": "0",
+            "cwnd": "756",
+            "packets_out": "756",
+            "max_packets_out": "756",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "347851",
+            "srtt_scaled8": "2762164",
+            "min_rtt": "201202",
+            "mss": "1448",
+            "pacing_rate": "3284386",
+            "ssthresh": "755"
+          },
+          "first_controls": [
+            {
+              "time_us": "1794556785385060",
+              "state_id": "657",
+              "action_id": "657",
+              "percent": "25",
+              "cwnd_before": "756",
+              "cwnd_requested": "189",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556785406694",
+              "state_id": "658",
+              "action_id": "658",
+              "percent": "25",
+              "cwnd_before": "211",
+              "cwnd_requested": "52",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556785428304",
+              "state_id": "659",
+              "action_id": "659",
+              "percent": "25",
+              "cwnd_before": "74",
+              "cwnd_requested": "18",
+              "return_code": "0",
+              "socket": "4"
+            }
+          ],
+          "mapping_error_count": 0,
+          "first_raw15": [
+            {
+              "packet_elapsed_s": 2.13402001953125,
+              "time_us": 1794556785370020.0,
+              "state_id": 657,
+              "raw": [
+                347.851,
+                1442543.0,
+                10.0,
+                0.020056,
+                50.0,
+                756.0,
+                3284386.0,
+                0.0,
+                345.27,
+                755.0,
+                756.0,
+                0.0,
+                756.0,
+                1448.0,
+                201.202
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.169172607421875,
+              "time_us": 1794556785405172.5,
+              "state_id": 658,
+              "raw": [
+                362.365,
+                1443579.0,
+                18.0,
+                0.035403,
+                50.0,
+                211.0,
+                3019789.0,
+                0.0,
+                364.595,
+                755.0,
+                734.0,
+                0.0,
+                756.0,
+                1448.0,
+                201.202
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.1913203125,
+              "time_us": 1794556785427320.2,
+              "state_id": 659,
+              "raw": [
+                377.494,
+                1442975.0,
+                11.0,
+                0.021645,
+                50.0,
+                74.0,
+                2838326.0,
+                0.0,
+                376.278,
+                755.0,
+                712.0,
+                0.0,
+                756.0,
+                1448.0,
+                201.202
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.21255029296875,
+              "time_us": 1794556785448550.2,
+              "state_id": 660,
+              "raw": [
+                389.425,
+                1442975.0,
+                10.0,
+                0.021587,
+                50.0,
+                38.0,
+                2681879.0,
+                0.0,
+                387.042,
+                755.0,
+                692.0,
+                0.0,
+                756.0,
+                1448.0,
+                201.202
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.234288818359375,
+              "time_us": 1794556785470288.8,
+              "state_id": 661,
+              "raw": [
+                401.071,
+                1442543.0,
+                11.0,
+                0.021626,
+                50.0,
+                29.0,
+                2518670.0,
+                0.0,
+                399.02,
+                755.0,
+                670.0,
+                0.0,
+                756.0,
+                1448.0,
+                201.202
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.256048828125,
+              "time_us": 1794556785492048.8,
+              "state_id": 662,
+              "raw": [
+                412.654,
+                1442975.0,
+                11.0,
+                0.021581,
+                50.0,
+                27.0,
+                2363859.0,
+                0.0,
+                411.192,
+                755.0,
+                648.0,
+                0.0,
+                756.0,
+                1448.0,
+                201.202
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.277234619140625,
+              "time_us": 1794556785513234.5,
+              "state_id": 663,
+              "raw": [
+                424.806,
+                1443234.0,
+                11.0,
+                0.021587,
+                50.0,
+                29.0,
+                2217509.0,
+                0.0,
+                423.448,
+                755.0,
+                626.0,
+                0.0,
+                756.0,
+                1448.0,
+                201.202
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.2988955078125,
+              "time_us": 1794556785534895.5,
+              "state_id": 664,
+              "raw": [
+                437.396,
+                1443061.0,
+                11.0,
+                0.021578,
+                50.0,
+                30.0,
+                2080391.0,
+                0.0,
+                435.495,
+                755.0,
+                604.0,
+                0.0,
+                756.0,
+                1448.0,
+                201.202
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.32055859375,
+              "time_us": 1794556785556558.5,
+              "state_id": 665,
+              "raw": [
+                450.299,
+                1443493.0,
+                15.0,
+                0.021583,
+                50.0,
+                32.0,
+                1944776.0,
+                0.0,
+                449.666,
+                755.0,
+                583.0,
+                0.0,
+                756.0,
+                1448.0,
+                201.202
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.342205322265625,
+              "time_us": 1794556785578205.2,
+              "state_id": 666,
+              "raw": [
+                461.057,
+                1443148.0,
+                21.0,
+                0.021594,
+                50.0,
+                38.0,
+                1821721.0,
+                0.0,
+                462.749,
+                755.0,
+                562.0,
+                0.0,
+                756.0,
+                1448.0,
+                201.202
+              ]
+            }
+          ],
+          "first10_packet_clock_bins": {
+            "0": {
+              "rows": 37,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 14.0,
+                "mean": 74.05405405405405,
+                "max": 756.0
+              },
+              "packets_out": {
+                "min": 2.0,
+                "mean": 368.56756756756755,
+                "max": 756.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 67440.0,
+                "mean": 1178793.8378378379,
+                "max": 3284386.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "3": {
+              "rows": 27,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 6.0,
+                "mean": 141.03703703703704,
+                "max": 413.0
+              },
+              "packets_out": {
+                "min": 0.0,
+                "mean": 78.55555555555556,
+                "max": 207.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 13072.0,
+                "mean": 927875.4814814815,
+                "max": 2985081.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "5": {
+              "rows": 232,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 150.0,
+                "mean": 318.53879310344826,
+                "max": 500.0
+              },
+              "packets_out": {
+                "min": 186.0,
+                "mean": 213.9698275862069,
+                "max": 237.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 1337597.0,
+                "mean": 2256878.974137931,
+                "max": 3509757.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            }
+          },
+          "counters": {
+            "valid": 2608,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "headers": [
+            "# mahimahi mm-link (Downlink) [@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant12] > @CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-04/down.log",
+            "# command line: 'mm-link' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant192' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant12' '--downlink-log=@CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-04/down.log' '--uplink-queue=droptail' '--uplink-queue-args=packets=1000' '--downlink-queue=droptail' '--downlink-queue-args=packets=1000' '--' 'sh' '-c' 'sudo -u `whoami` @CONTINUATION_ROOT@/frameworks/baseline/code/runtime/client $MAHIMAHI_BASE 1 13004'",
+            "# queue: droptail [packets=1000]",
+            "# init timestamp: 1794556783205",
+            "# base timestamp: 31",
+            "# mahimahi config: [delay 100 ms]"
+          ],
+          "policy_hash_unchanged": true,
+          "completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.014,
+            "required_seconds": 60,
+            "requested_epoch": 1794556843.2505116,
+            "metric_or_health_override": false
+          }
+        },
+        {
+          "job": {
+            "condition": {
+              "trace": "constant48",
+              "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+              "capacity_mbps": 47.995648,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G48-R200",
+              "nominal_mbps": 48,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 4000,
+              "queue_bytes": 6016000,
+              "queue_bdp": 5.013787916771121
+            },
+            "group": "onlinebn-final6m",
+            "startup": "natural-cubic",
+            "repeat": 0,
+            "host_slot": 0,
+            "host": 0,
+            "stage": "recovery-screen",
+            "run": "recovery-natural-05",
+            "port": 13005,
+            "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+            "model_sha256": {
+              ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+              ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+            },
+            "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+            "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+            "original_run": "natural-05",
+            "original_status": "NOT_STARTED"
+          },
+          "status": "COMPLETED",
+          "engineering_pass": true,
+          "handoff_s": 2.228089111328125,
+          "startup": {
+            "mode": "natural-cubic",
+            "time_us": "2303949",
+            "scheme": "cubic",
+            "assist_writes": "0",
+            "cwnd": "980",
+            "packets_out": "979",
+            "max_packets_out": "979",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "203385",
+            "srtt_scaled8": "1631557",
+            "min_rtt": "201123",
+            "mss": "1448",
+            "pacing_rate": "7207860",
+            "ssthresh": "976"
+          },
+          "first_controls": [
+            {
+              "time_us": "1794556849203089",
+              "state_id": "657",
+              "action_id": "657",
+              "percent": "25",
+              "cwnd_before": "980",
+              "cwnd_requested": "245",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556849225787",
+              "state_id": "658",
+              "action_id": "658",
+              "percent": "77",
+              "cwnd_before": "326",
+              "cwnd_requested": "251",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556849247442",
+              "state_id": "659",
+              "action_id": "659",
+              "percent": "76",
+              "cwnd_before": "335",
+              "cwnd_requested": "254",
+              "return_code": "0",
+              "socket": "4"
+            }
+          ],
+          "mapping_error_count": 0,
+          "first_raw15": [
+            {
+              "packet_elapsed_s": 2.213075927734375,
+              "time_us": 1794556849188076.0,
+              "state_id": 657,
+              "raw": [
+                203.385,
+                4675623.0,
+                40.0,
+                0.020059,
+                50.0,
+                980.0,
+                7207860.0,
+                0.0,
+                203.944,
+                976.0,
+                979.0,
+                0.0,
+                979.0,
+                1448.0,
+                201.123
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.2487470703125,
+              "time_us": 1794556849223747.0,
+              "state_id": 658,
+              "raw": [
+                206.534,
+                4970623.0,
+                100.0,
+                0.03541,
+                50.0,
+                326.0,
+                6486618.0,
+                0.0,
+                208.352,
+                976.0,
+                901.0,
+                0.0,
+                982.0,
+                1448.0,
+                201.123
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.271286865234375,
+              "time_us": 1794556849246286.8,
+              "state_id": 659,
+              "raw": [
+                210.717,
+                5186478.0,
+                92.0,
+                0.0227,
+                50.0,
+                335.0,
+                5716318.0,
+                0.0,
+                212.287,
+                976.0,
+                809.0,
+                0.0,
+                982.0,
+                1448.0,
+                201.123
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.292768798828125,
+              "time_us": 1794556849267768.8,
+              "state_id": 660,
+              "raw": [
+                214.961,
+                5341054.0,
+                87.0,
+                0.021655,
+                50.0,
+                337.0,
+                4997554.0,
+                0.0,
+                216.706,
+                976.0,
+                722.0,
+                0.0,
+                982.0,
+                1448.0,
+                201.123
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.314578369140625,
+              "time_us": 1794556849289578.2,
+              "state_id": 661,
+              "raw": [
+                218.725,
+                5435993.0,
+                46.0,
+                0.021571,
+                50.0,
+                313.0,
+                4345338.0,
+                0.0,
+                220.236,
+                976.0,
+                638.0,
+                0.0,
+                982.0,
+                1448.0,
+                201.123
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.3357392578125,
+              "time_us": 1794556849310739.2,
+              "state_id": 662,
+              "raw": [
+                223.177,
+                5563037.0,
+                28.0,
+                0.021588,
+                50.0,
+                275.0,
+                3699153.0,
+                0.0,
+                224.646,
+                976.0,
+                554.0,
+                0.0,
+                982.0,
+                1448.0,
+                201.123
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.35746337890625,
+              "time_us": 1794556849332463.5,
+              "state_id": 663,
+              "raw": [
+                227.028,
+                5647619.0,
+                24.0,
+                0.021592,
+                50.0,
+                224.0,
+                3058933.0,
+                0.0,
+                228.511,
+                976.0,
+                466.0,
+                0.0,
+                982.0,
+                1448.0,
+                201.123
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.379218017578125,
+              "time_us": 1794556849354218.0,
+              "state_id": 664,
+              "raw": [
+                231.489,
+                5706912.0,
+                22.0,
+                0.021597,
+                50.0,
+                241.0,
+                2475119.0,
+                0.0,
+                232.716,
+                976.0,
+                384.0,
+                0.0,
+                982.0,
+                1448.0,
+                201.123
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.400947265625,
+              "time_us": 1794556849375947.2,
+              "state_id": 665,
+              "raw": [
+                235.561,
+                5744801.0,
+                23.0,
+                0.021604,
+                50.0,
+                492.0,
+                3117673.0,
+                0.0,
+                236.715,
+                976.0,
+                330.0,
+                0.0,
+                982.0,
+                1448.0,
+                201.123
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.422679443359375,
+              "time_us": 1794556849397679.5,
+              "state_id": 666,
+              "raw": [
+                239.905,
+                5761545.0,
+                22.0,
+                0.021589,
+                50.0,
+                777.0,
+                4833632.0,
+                0.0,
+                241.123,
+                976.0,
+                312.0,
+                0.0,
+                982.0,
+                1448.0,
+                201.123
+              ]
+            }
+          ],
+          "first10_packet_clock_bins": {
+            "0": {
+              "rows": 33,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 224.0,
+                "mean": 903.060606060606,
+                "max": 2430.0
+              },
+              "packets_out": {
+                "min": 312.0,
+                "mean": 725.1515151515151,
+                "max": 987.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 2475119.0,
+                "mean": 6802124.515151516,
+                "max": 16775125.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "3": {
+              "rows": 92,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 579.0,
+                "mean": 1237.2391304347825,
+                "max": 2156.0
+              },
+              "packets_out": {
+                "min": 829.0,
+                "mean": 899.7717391304348,
+                "max": 970.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 5128923.0,
+                "mean": 8741548.608695652,
+                "max": 14229207.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "5": {
+              "rows": 230,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 685.0,
+                "mean": 1253.1260869565217,
+                "max": 2131.0
+              },
+              "packets_out": {
+                "min": 847.0,
+                "mean": 906.4608695652174,
+                "max": 978.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 5337226.0,
+                "mean": 8785974.973913044,
+                "max": 14038814.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            }
+          },
+          "counters": {
+            "valid": 2658,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "headers": [
+            "# mahimahi mm-link (Downlink) [@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant48] > @CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-05/down.log",
+            "# command line: 'mm-link' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant192' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant48' '--downlink-log=@CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-05/down.log' '--uplink-queue=droptail' '--uplink-queue-args=packets=4000' '--downlink-queue=droptail' '--downlink-queue-args=packets=4000' '--' 'sh' '-c' 'sudo -u `whoami` @CONTINUATION_ROOT@/frameworks/baseline/code/runtime/client $MAHIMAHI_BASE 1 13005'",
+            "# queue: droptail [packets=4000]",
+            "# init timestamp: 1794556846944",
+            "# base timestamp: 31",
+            "# mahimahi config: [delay 100 ms]"
+          ],
+          "policy_hash_unchanged": true,
+          "completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.013,
+            "required_seconds": 60,
+            "requested_epoch": 1794556906.9889045,
+            "metric_or_health_override": false
+          }
+        }
+      ],
+      "remaining": [],
+      "models_unchanged": true
+    },
+    {
+      "node": 1,
+      "records": [
+        {
+          "job": {
+            "condition": {
+              "trace": "constant48",
+              "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+              "capacity_mbps": 47.995648,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G48-R200",
+              "nominal_mbps": 48,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 4000,
+              "queue_bytes": 6016000,
+              "queue_bdp": 5.013787916771121
+            },
+            "group": "onlinebn-final6m",
+            "startup": "natural-cubic",
+            "repeat": 3,
+            "host_slot": 1,
+            "host": 1,
+            "stage": "recovery-screen",
+            "run": "recovery-natural-08",
+            "port": 13008,
+            "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+            "model_sha256": {
+              ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+              ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+            },
+            "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+            "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+            "original_run": "natural-08",
+            "original_status": "INTERRUPTED_PARTIAL_LOG"
+          },
+          "status": "COMPLETED",
+          "engineering_pass": true,
+          "handoff_s": 2.235968017578125,
+          "startup": {
+            "mode": "natural-cubic",
+            "time_us": "2356364",
+            "scheme": "cubic",
+            "assist_writes": "0",
+            "cwnd": "985",
+            "packets_out": "984",
+            "max_packets_out": "984",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "203303",
+            "srtt_scaled8": "1631750",
+            "min_rtt": "201058",
+            "mss": "1448",
+            "pacing_rate": "7243783",
+            "ssthresh": "982"
+          },
+          "first_controls": [
+            {
+              "time_us": "1794556653254968",
+              "state_id": "657",
+              "action_id": "657",
+              "percent": "25",
+              "cwnd_before": "985",
+              "cwnd_requested": "246",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556653276547",
+              "state_id": "658",
+              "action_id": "658",
+              "percent": "188",
+              "cwnd_before": "327",
+              "cwnd_requested": "614",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556653298106",
+              "state_id": "659",
+              "action_id": "659",
+              "percent": "28",
+              "cwnd_before": "698",
+              "cwnd_requested": "195",
+              "return_code": "0",
+              "socket": "4"
+            }
+          ],
+          "mapping_error_count": 0,
+          "first_raw15": [
+            {
+              "packet_elapsed_s": 2.211770263671875,
+              "time_us": 1794556653230770.2,
+              "state_id": 657,
+              "raw": [
+                203.303,
+                4664058.0,
+                37.0,
+                0.020057,
+                50.0,
+                985.0,
+                7243783.0,
+                0.0,
+                203.968,
+                982.0,
+                984.0,
+                0.0,
+                984.0,
+                1448.0,
+                201.058
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.256464599609375,
+              "time_us": 1794556653275464.5,
+              "state_id": 658,
+              "raw": [
+                207.115,
+                4999449.0,
+                126.0,
+                0.044811,
+                50.0,
+                327.0,
+                6489263.0,
+                0.0,
+                209.654,
+                982.0,
+                907.0,
+                0.0,
+                990.0,
+                1448.0,
+                201.058
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.27814208984375,
+              "time_us": 1794556653297142.0,
+              "state_id": 659,
+              "raw": [
+                212.135,
+                5236795.0,
+                88.0,
+                0.021568,
+                50.0,
+                698.0,
+                5742962.0,
+                0.0,
+                213.914,
+                982.0,
+                819.0,
+                0.0,
+                990.0,
+                1448.0,
+                201.058
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.299453857421875,
+              "time_us": 1794556653318453.8,
+              "state_id": 660,
+              "raw": [
+                216.353,
+                5374369.0,
+                83.0,
+                0.021554,
+                50.0,
+                274.0,
+                5065056.0,
+                0.0,
+                217.964,
+                982.0,
+                736.0,
+                0.0,
+                990.0,
+                1448.0,
+                201.058
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.321316650390625,
+              "time_us": 1794556653340316.8,
+              "state_id": 661,
+              "raw": [
+                219.972,
+                5471551.0,
+                37.0,
+                0.021566,
+                50.0,
+                403.0,
+                4411207.0,
+                0.0,
+                221.708,
+                982.0,
+                652.0,
+                0.0,
+                990.0,
+                1448.0,
+                201.058
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.342685302734375,
+              "time_us": 1794556653361685.2,
+              "state_id": 662,
+              "raw": [
+                224.588,
+                5594194.0,
+                23.0,
+                0.021545,
+                50.0,
+                248.0,
+                3724720.0,
+                0.0,
+                225.923,
+                982.0,
+                561.0,
+                0.0,
+                990.0,
+                1448.0,
+                201.058
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.3640439453125,
+              "time_us": 1794556653383044.0,
+              "state_id": 663,
+              "raw": [
+                229.128,
+                5667038.0,
+                24.0,
+                0.021553,
+                50.0,
+                204.0,
+                3099536.0,
+                0.0,
+                230.357,
+                982.0,
+                476.0,
+                0.0,
+                990.0,
+                1448.0,
+                201.058
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.385843994140625,
+              "time_us": 1794556653404844.0,
+              "state_id": 664,
+              "raw": [
+                233.271,
+                5715025.0,
+                24.0,
+                0.021546,
+                50.0,
+                298.0,
+                2519181.0,
+                0.0,
+                234.6,
+                982.0,
+                394.0,
+                0.0,
+                990.0,
+                1448.0,
+                201.058
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.407535400390625,
+              "time_us": 1794556653426535.5,
+              "state_id": 665,
+              "raw": [
+                237.533,
+                5750066.0,
+                23.0,
+                0.021534,
+                50.0,
+                674.0,
+                4231789.0,
+                0.0,
+                238.906,
+                982.0,
+                360.0,
+                0.0,
+                990.0,
+                1448.0,
+                201.058
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.428689697265625,
+              "time_us": 1794556653447689.8,
+              "state_id": 666,
+              "raw": [
+                241.773,
+                5762321.0,
+                23.0,
+                0.021581,
+                50.0,
+                892.0,
+                5507442.0,
+                0.0,
+                242.944,
+                982.0,
+                349.0,
+                0.0,
+                990.0,
+                1448.0,
+                201.058
+              ]
+            }
+          ],
+          "first10_packet_clock_bins": {
+            "0": {
+              "rows": 33,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 204.0,
+                "mean": 900.5757575757576,
+                "max": 1979.0
+              },
+              "packets_out": {
+                "min": 349.0,
+                "mean": 724.8484848484849,
+                "max": 984.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 2519181.0,
+                "mean": 6856848.2727272725,
+                "max": 13991205.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "3": {
+              "rows": 92,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 583.0,
+                "mean": 1231.4891304347825,
+                "max": 2021.0
+              },
+              "packets_out": {
+                "min": 824.0,
+                "mean": 896.2282608695652,
+                "max": 957.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 5296418.0,
+                "mean": 8783786.402173912,
+                "max": 13369685.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "5": {
+              "rows": 230,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 687.0,
+                "mean": 1257.2434782608696,
+                "max": 2148.0
+              },
+              "packets_out": {
+                "min": 847.0,
+                "mean": 907.204347826087,
+                "max": 975.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 5386429.0,
+                "mean": 8798981.586956521,
+                "max": 14347163.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            }
+          },
+          "counters": {
+            "valid": 2658,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "headers": [
+            "# mahimahi mm-link (Downlink) [@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant48] > @CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-08/down.log",
+            "# command line: 'mm-link' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant192' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant48' '--downlink-log=@CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-08/down.log' '--uplink-queue=droptail' '--uplink-queue-args=packets=4000' '--downlink-queue=droptail' '--downlink-queue-args=packets=4000' '--' 'sh' '-c' 'sudo -u `whoami` @CONTINUATION_ROOT@/frameworks/baseline/code/runtime/client $MAHIMAHI_BASE 1 13008'",
+            "# queue: droptail [packets=4000]",
+            "# init timestamp: 1794556650987",
+            "# base timestamp: 32",
+            "# mahimahi config: [delay 100 ms]"
+          ],
+          "policy_hash_unchanged": true,
+          "completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.007,
+            "required_seconds": 60,
+            "requested_epoch": 1794556711.0275328,
+            "metric_or_health_override": false
+          }
+        },
+        {
+          "job": {
+            "condition": {
+              "trace": "constant72",
+              "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+              "capacity_mbps": 71.999488,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G72-R20",
+              "nominal_mbps": 72,
+              "delay_ms": 10,
+              "base_rtt_ms": 20,
+              "queue_packets": 600,
+              "queue_bytes": 902400,
+              "queue_bdp": 5.0133689839572195
+            },
+            "group": "onlinebn-final6m",
+            "startup": "natural-cubic",
+            "repeat": 1,
+            "host_slot": 1,
+            "host": 1,
+            "stage": "recovery-screen",
+            "run": "recovery-natural-09",
+            "port": 13009,
+            "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+            "model_sha256": {
+              ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+              ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+            },
+            "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+            "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+            "original_run": "natural-09",
+            "original_status": "NOT_STARTED"
+          },
+          "status": "COMPLETED",
+          "engineering_pass": true,
+          "handoff_s": 0.18031689453125,
+          "startup": {
+            "mode": "natural-cubic",
+            "time_us": "254763",
+            "scheme": "cubic",
+            "assist_writes": "0",
+            "cwnd": "91",
+            "packets_out": "85",
+            "max_packets_out": "90",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "21780",
+            "srtt_scaled8": "172578",
+            "min_rtt": "21057",
+            "mss": "1448",
+            "pacing_rate": "6327646",
+            "ssthresh": "88"
+          },
+          "first_controls": [
+            {
+              "time_us": "1794556716399317",
+              "state_id": "657",
+              "action_id": "657",
+              "percent": "365",
+              "cwnd_before": "91",
+              "cwnd_requested": "332",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556716421156",
+              "state_id": "658",
+              "action_id": "658",
+              "percent": "25",
+              "cwnd_before": "332",
+              "cwnd_requested": "83",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556716442940",
+              "state_id": "659",
+              "action_id": "659",
+              "percent": "146",
+              "cwnd_before": "88",
+              "cwnd_requested": "128",
+              "return_code": "0",
+              "socket": "4"
+            }
+          ],
+          "mapping_error_count": 0,
+          "first_raw15": [
+            {
+              "packet_elapsed_s": 0.1643095703125,
+              "time_us": 1794556716383309.5,
+              "state_id": 657,
+              "raw": [
+                21.78,
+                3998282.0,
+                51.0,
+                0.020059,
+                50.0,
+                91.0,
+                6327646.0,
+                0.0,
+                21.572,
+                88.0,
+                85.0,
+                0.0,
+                90.0,
+                1448.0,
+                21.057
+              ]
+            },
+            {
+              "packet_elapsed_s": 0.200822509765625,
+              "time_us": 1794556716419822.5,
+              "state_id": 658,
+              "raw": [
+                21.892,
+                5506765.0,
+                105.0,
+                0.03666,
+                50.0,
+                332.0,
+                22245052.0,
+                0.0,
+                22.387,
+                88.0,
+                300.0,
+                0.0,
+                305.0,
+                1448.0,
+                21.057
+              ]
+            },
+            {
+              "packet_elapsed_s": 0.222416015625,
+              "time_us": 1794556716441416.0,
+              "state_id": 659,
+              "raw": [
+                27.916,
+                6379161.0,
+                63.0,
+                0.021832,
+                50.0,
+                88.0,
+                9301760.0,
+                0.0,
+                32.897,
+                88.0,
+                204.0,
+                0.0,
+                330.0,
+                1448.0,
+                21.057
+              ]
+            },
+            {
+              "packet_elapsed_s": 0.2443701171875,
+              "time_us": 1794556716463370.0,
+              "state_id": 660,
+              "raw": [
+                40.755,
+                7690000.0,
+                63.0,
+                0.021775,
+                50.0,
+                128.0,
+                4202416.0,
+                0.0,
+                45.688,
+                88.0,
+                104.0,
+                0.0,
+                330.0,
+                1448.0,
+                21.057
+              ]
+            },
+            {
+              "packet_elapsed_s": 0.266380615234375,
+              "time_us": 1794556716485380.5,
+              "state_id": 661,
+              "raw": [
+                39.921,
+                6565154.0,
+                64.0,
+                0.021765,
+                50.0,
+                88.0,
+                5687203.0,
+                0.0,
+                23.21,
+                88.0,
+                43.0,
+                0.0,
+                47.0,
+                1448.0,
+                21.057
+              ]
+            },
+            {
+              "packet_elapsed_s": 0.2877734375,
+              "time_us": 1794556716506773.5,
+              "state_id": 662,
+              "raw": [
+                21.855,
+                2414280.0,
+                43.0,
+                0.021744,
+                50.0,
+                277.0,
+                18846101.0,
+                0.0,
+                22.047,
+                88.0,
+                240.0,
+                0.0,
+                243.0,
+                1448.0,
+                21.057
+              ]
+            },
+            {
+              "packet_elapsed_s": 0.30970849609375,
+              "time_us": 1794556716528708.5,
+              "state_id": 663,
+              "raw": [
+                25.404,
+                4811989.0,
+                112.0,
+                0.021723,
+                50.0,
+                88.0,
+                6956176.0,
+                0.0,
+                30.189,
+                88.0,
+                140.0,
+                0.0,
+                252.0,
+                1448.0,
+                21.057
+              ]
+            },
+            {
+              "packet_elapsed_s": 0.33152587890625,
+              "time_us": 1794556716550526.0,
+              "state_id": 664,
+              "raw": [
+                36.368,
+                7553462.0,
+                136.0,
+                0.021706,
+                50.0,
+                301.0,
+                10774627.0,
+                0.0,
+                41.904,
+                88.0,
+                176.0,
+                0.0,
+                252.0,
+                1448.0,
+                21.057
+              ]
+            },
+            {
+              "packet_elapsed_s": 0.352821044921875,
+              "time_us": 1794556716571821.0,
+              "state_id": 665,
+              "raw": [
+                25.589,
+                6020295.0,
+                121.0,
+                0.021696,
+                50.0,
+                161.0,
+                8757932.0,
+                0.0,
+                27.575,
+                88.0,
+                152.0,
+                0.0,
+                160.0,
+                1448.0,
+                21.057
+              ]
+            },
+            {
+              "packet_elapsed_s": 0.374689208984375,
+              "time_us": 1794556716593689.2,
+              "state_id": 666,
+              "raw": [
+                27.35,
+                7464133.0,
+                63.0,
+                0.021696,
+                50.0,
+                192.0,
+                11039558.0,
+                0.0,
+                26.088,
+                88.0,
+                179.0,
+                0.0,
+                180.0,
+                1448.0,
+                21.057
+              ]
+            }
+          ],
+          "first10_packet_clock_bins": {
+            "0": {
+              "rows": 131,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 88.0,
+                "mean": 168.75572519083968,
+                "max": 332.0
+              },
+              "packets_out": {
+                "min": 43.0,
+                "mean": 161.76335877862596,
+                "max": 300.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 4202416.0,
+                "mean": 9505133.458015267,
+                "max": 22245052.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "3": {
+              "rows": 92,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 157.0,
+                "mean": 168.09782608695653,
+                "max": 176.0
+              },
+              "packets_out": {
+                "min": 149.0,
+                "mean": 162.04347826086956,
+                "max": 172.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 8622844.0,
+                "mean": 9431959.5,
+                "max": 10066707.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "5": {
+              "rows": 232,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 151.0,
+                "mean": 169.45258620689654,
+                "max": 217.0
+              },
+              "packets_out": {
+                "min": 140.0,
+                "mean": 160.93534482758622,
+                "max": 188.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 8063108.0,
+                "mean": 9638056.293103449,
+                "max": 11256925.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            }
+          },
+          "counters": {
+            "valid": 2768,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "headers": [
+            "# mahimahi mm-link (Downlink) [@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant72] > @CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-09/down.log",
+            "# command line: 'mm-link' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant192' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant72' '--downlink-log=@CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-09/down.log' '--uplink-queue=droptail' '--uplink-queue-args=packets=600' '--downlink-queue=droptail' '--downlink-queue-args=packets=600' '--' 'sh' '-c' 'sudo -u `whoami` @CONTINUATION_ROOT@/frameworks/baseline/code/runtime/client $MAHIMAHI_BASE 1 13009'",
+            "# queue: droptail [packets=600]",
+            "# init timestamp: 1794556716188",
+            "# base timestamp: 31",
+            "# mahimahi config: [delay 10 ms]"
+          ],
+          "policy_hash_unchanged": true,
+          "completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.023,
+            "required_seconds": 60,
+            "requested_epoch": 1794556776.243032,
+            "metric_or_health_override": false
+          }
+        },
+        {
+          "job": {
+            "condition": {
+              "trace": "constant12",
+              "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+              "capacity_mbps": 11.995904,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G12-R200",
+              "nominal_mbps": 12,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 1000,
+              "queue_bytes": 1504000,
+              "queue_bdp": 5.015045135406219
+            },
+            "group": "onlinebn-final6m",
+            "startup": "natural-cubic",
+            "repeat": 4,
+            "host_slot": 1,
+            "host": 1,
+            "stage": "recovery-screen",
+            "run": "recovery-natural-10",
+            "port": 13010,
+            "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+            "model_sha256": {
+              ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+              ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+            },
+            "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+            "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+            "original_run": "natural-10",
+            "original_status": "NOT_STARTED"
+          },
+          "status": "COMPLETED",
+          "engineering_pass": true,
+          "handoff_s": 2.1494189453125,
+          "startup": {
+            "mode": "natural-cubic",
+            "time_us": "2225585",
+            "scheme": "cubic",
+            "assist_writes": "0",
+            "cwnd": "758",
+            "packets_out": "758",
+            "max_packets_out": "758",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "347735",
+            "srtt_scaled8": "2760860",
+            "min_rtt": "201198",
+            "mss": "1448",
+            "pacing_rate": "3294630",
+            "ssthresh": "757"
+          },
+          "first_controls": [
+            {
+              "time_us": "1794556784483419",
+              "state_id": "657",
+              "action_id": "657",
+              "percent": "25",
+              "cwnd_before": "758",
+              "cwnd_requested": "189",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556784505140",
+              "state_id": "658",
+              "action_id": "658",
+              "percent": "25",
+              "cwnd_before": "211",
+              "cwnd_requested": "52",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556784526805",
+              "state_id": "659",
+              "action_id": "659",
+              "percent": "25",
+              "cwnd_before": "72",
+              "cwnd_requested": "18",
+              "return_code": "0",
+              "socket": "4"
+            }
+          ],
+          "mapping_error_count": 0,
+          "first_raw15": [
+            {
+              "packet_elapsed_s": 2.134415283203125,
+              "time_us": 1794556784468415.2,
+              "state_id": 657,
+              "raw": [
+                347.735,
+                1442802.0,
+                10.0,
+                0.020059,
+                50.0,
+                758.0,
+                3294630.0,
+                0.0,
+                345.107,
+                757.0,
+                758.0,
+                0.0,
+                758.0,
+                1448.0,
+                201.198
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.169591552734375,
+              "time_us": 1794556784503591.5,
+              "state_id": 658,
+              "raw": [
+                362.331,
+                1443148.0,
+                18.0,
+                0.035446,
+                50.0,
+                211.0,
+                3028316.0,
+                0.0,
+                364.559,
+                757.0,
+                736.0,
+                0.0,
+                758.0,
+                1448.0,
+                201.198
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.19166357421875,
+              "time_us": 1794556784525663.5,
+              "state_id": 659,
+              "raw": [
+                377.487,
+                1443752.0,
+                11.0,
+                0.021719,
+                50.0,
+                72.0,
+                2846193.0,
+                0.0,
+                376.292,
+                757.0,
+                714.0,
+                0.0,
+                758.0,
+                1448.0,
+                201.198
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.213083740234375,
+              "time_us": 1794556784547083.8,
+              "state_id": 660,
+              "raw": [
+                389.787,
+                1444183.0,
+                11.0,
+                0.021658,
+                50.0,
+                40.0,
+                2676223.0,
+                0.0,
+                387.86,
+                757.0,
+                692.0,
+                0.0,
+                758.0,
+                1448.0,
+                201.198
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.23489892578125,
+              "time_us": 1794556784568899.0,
+              "state_id": 661,
+              "raw": [
+                402.16,
+                1442371.0,
+                11.0,
+                0.021635,
+                50.0,
+                32.0,
+                2512933.0,
+                0.0,
+                399.931,
+                757.0,
+                670.0,
+                0.0,
+                758.0,
+                1448.0,
+                201.198
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.2565703125,
+              "time_us": 1794556784590570.2,
+              "state_id": 662,
+              "raw": [
+                413.847,
+                1442630.0,
+                11.0,
+                0.021596,
+                50.0,
+                30.0,
+                2357392.0,
+                0.0,
+                412.32,
+                757.0,
+                648.0,
+                0.0,
+                758.0,
+                1448.0,
+                201.198
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.27825927734375,
+              "time_us": 1794556784612259.2,
+              "state_id": 663,
+              "raw": [
+                425.433,
+                1442802.0,
+                10.0,
+                0.021589,
+                50.0,
+                28.0,
+                2224294.0,
+                0.0,
+                423.505,
+                757.0,
+                628.0,
+                0.0,
+                758.0,
+                1448.0,
+                201.198
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.299658447265625,
+              "time_us": 1794556784633658.5,
+              "state_id": 664,
+              "raw": [
+                438.172,
+                1442975.0,
+                16.0,
+                0.0216,
+                50.0,
+                28.0,
+                2074409.0,
+                0.0,
+                438.197,
+                757.0,
+                606.0,
+                0.0,
+                758.0,
+                1448.0,
+                201.198
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.32105712890625,
+              "time_us": 1794556784655057.2,
+              "state_id": 665,
+              "raw": [
+                449.444,
+                1443061.0,
+                22.0,
+                0.021635,
+                50.0,
+                35.0,
+                1941123.0,
+                0.0,
+                451.285,
+                757.0,
+                584.0,
+                0.0,
+                758.0,
+                1448.0,
+                201.198
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.34318408203125,
+              "time_us": 1794556784677184.0,
+              "state_id": 666,
+              "raw": [
+                461.633,
+                1443061.0,
+                21.0,
+                0.021684,
+                50.0,
+                45.0,
+                1822745.0,
+                0.0,
+                463.312,
+                757.0,
+                563.0,
+                0.0,
+                758.0,
+                1448.0,
+                201.198
+              ]
+            }
+          ],
+          "first10_packet_clock_bins": {
+            "0": {
+              "rows": 38,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 5.0,
+                "mean": 72.23684210526316,
+                "max": 758.0
+              },
+              "packets_out": {
+                "min": 3.0,
+                "mean": 360.13157894736844,
+                "max": 758.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 9802.0,
+                "mean": 1149271.3157894737,
+                "max": 3294630.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "3": {
+              "rows": 49,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 4.0,
+                "mean": 219.9591836734694,
+                "max": 503.0
+              },
+              "packets_out": {
+                "min": 0.0,
+                "mean": 147.81632653061226,
+                "max": 235.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 12886.0,
+                "mean": 1512706.8775510204,
+                "max": 3433853.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "5": {
+              "rows": 231,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 185.0,
+                "mean": 320.9264069264069,
+                "max": 502.0
+              },
+              "packets_out": {
+                "min": 199.0,
+                "mean": 214.98701298701297,
+                "max": 237.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 1355508.0,
+                "mean": 2259324.0865800865,
+                "max": 3488743.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            }
+          },
+          "counters": {
+            "valid": 2631,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "headers": [
+            "# mahimahi mm-link (Downlink) [@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant12] > @CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-10/down.log",
+            "# command line: 'mm-link' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant192' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant12' '--downlink-log=@CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-10/down.log' '--uplink-queue=droptail' '--uplink-queue-args=packets=1000' '--downlink-queue=droptail' '--downlink-queue-args=packets=1000' '--' 'sh' '-c' 'sudo -u `whoami` @CONTINUATION_ROOT@/frameworks/baseline/code/runtime/client $MAHIMAHI_BASE 1 13010'",
+            "# queue: droptail [packets=1000]",
+            "# init timestamp: 1794556782303",
+            "# base timestamp: 31",
+            "# mahimahi config: [delay 100 ms]"
+          ],
+          "policy_hash_unchanged": true,
+          "completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.013,
+            "required_seconds": 60,
+            "requested_epoch": 1794556842.3486366,
+            "metric_or_health_override": false
+          }
+        },
+        {
+          "job": {
+            "condition": {
+              "trace": "constant12",
+              "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+              "capacity_mbps": 11.995904,
+              "packet_bytes": 1504,
+              "trace_period_ms": 1000,
+              "condition": "G12-R200",
+              "nominal_mbps": 12,
+              "delay_ms": 100,
+              "base_rtt_ms": 200,
+              "queue_packets": 1000,
+              "queue_bytes": 1504000,
+              "queue_bdp": 5.015045135406219
+            },
+            "group": "onlinebn-final6m",
+            "startup": "natural-cubic",
+            "repeat": 5,
+            "host_slot": 1,
+            "host": 1,
+            "stage": "recovery-screen",
+            "run": "recovery-natural-11",
+            "port": 13011,
+            "checkpoint": "@SEED3_RUN_ROOT@/frameworks/baseline/checkpoints/frozen-final/model",
+            "model_sha256": {
+              ".index": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48",
+              ".data-00000-of-00001": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+            },
+            "native": "@CONTINUATION_ROOT@/runtime/orca-natural-cubic-audit",
+            "native_sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8",
+            "original_run": "natural-11",
+            "original_status": "NOT_STARTED"
+          },
+          "status": "COMPLETED",
+          "engineering_pass": true,
+          "handoff_s": 2.14723291015625,
+          "startup": {
+            "mode": "natural-cubic",
+            "time_us": "2224221",
+            "scheme": "cubic",
+            "assist_writes": "0",
+            "cwnd": "760",
+            "packets_out": "760",
+            "max_packets_out": "760",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "347345",
+            "srtt_scaled8": "2758823",
+            "min_rtt": "201212",
+            "mss": "1448",
+            "pacing_rate": "3305765",
+            "ssthresh": "759"
+          },
+          "first_controls": [
+            {
+              "time_us": "1794556848257233",
+              "state_id": "657",
+              "action_id": "657",
+              "percent": "25",
+              "cwnd_before": "760",
+              "cwnd_requested": "190",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556848278851",
+              "state_id": "658",
+              "action_id": "658",
+              "percent": "25",
+              "cwnd_before": "210",
+              "cwnd_requested": "52",
+              "return_code": "0",
+              "socket": "4"
+            },
+            {
+              "time_us": "1794556848300499",
+              "state_id": "659",
+              "action_id": "659",
+              "percent": "25",
+              "cwnd_before": "72",
+              "cwnd_requested": "18",
+              "return_code": "0",
+              "socket": "4"
+            }
+          ],
+          "mapping_error_count": 0,
+          "first_raw15": [
+            {
+              "packet_elapsed_s": 2.13213818359375,
+              "time_us": 1794556848242138.2,
+              "state_id": 657,
+              "raw": [
+                347.345,
+                1443148.0,
+                10.0,
+                0.020057,
+                50.0,
+                760.0,
+                3305765.0,
+                0.0,
+                344.852,
+                759.0,
+                760.0,
+                0.0,
+                760.0,
+                1448.0,
+                201.212
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.167907470703125,
+              "time_us": 1794556848277907.5,
+              "state_id": 658,
+              "raw": [
+                361.802,
+                1442889.0,
+                18.0,
+                0.035441,
+                50.0,
+                210.0,
+                3054385.0,
+                0.0,
+                363.903,
+                759.0,
+                741.0,
+                0.0,
+                761.0,
+                1448.0,
+                201.212
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.1893642578125,
+              "time_us": 1794556848299364.2,
+              "state_id": 659,
+              "raw": [
+                377.067,
+                1443752.0,
+                11.0,
+                0.021607,
+                50.0,
+                72.0,
+                2869755.0,
+                0.0,
+                375.816,
+                759.0,
+                719.0,
+                0.0,
+                761.0,
+                1448.0,
+                201.212
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.210804931640625,
+              "time_us": 1794556848320805.0,
+              "state_id": 660,
+              "raw": [
+                389.127,
+                1442716.0,
+                11.0,
+                0.021648,
+                50.0,
+                38.0,
+                2699360.0,
+                0.0,
+                387.314,
+                759.0,
+                697.0,
+                0.0,
+                761.0,
+                1448.0,
+                201.212
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.23256640625,
+              "time_us": 1794556848342566.5,
+              "state_id": 661,
+              "raw": [
+                401.267,
+                1443061.0,
+                11.0,
+                0.021587,
+                50.0,
+                31.0,
+                2536494.0,
+                0.0,
+                399.173,
+                759.0,
+                675.0,
+                0.0,
+                761.0,
+                1448.0,
+                201.212
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.2539384765625,
+              "time_us": 1794556848363938.5,
+              "state_id": 662,
+              "raw": [
+                412.934,
+                1443924.0,
+                11.0,
+                0.021721,
+                50.0,
+                30.0,
+                2380911.0,
+                0.0,
+                411.397,
+                759.0,
+                653.0,
+                0.0,
+                761.0,
+                1448.0,
+                201.212
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.275792724609375,
+              "time_us": 1794556848385792.8,
+              "state_id": 663,
+              "raw": [
+                425.059,
+                1443320.0,
+                11.0,
+                0.021643,
+                50.0,
+                30.0,
+                2233955.0,
+                0.0,
+                423.688,
+                759.0,
+                631.0,
+                0.0,
+                761.0,
+                1448.0,
+                201.212
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.29758251953125,
+              "time_us": 1794556848407582.5,
+              "state_id": 664,
+              "raw": [
+                437.039,
+                1443493.0,
+                10.0,
+                0.021604,
+                50.0,
+                29.0,
+                2108646.0,
+                0.0,
+                434.639,
+                759.0,
+                611.0,
+                0.0,
+                761.0,
+                1448.0,
+                201.212
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.3193466796875,
+              "time_us": 1794556848429346.8,
+              "state_id": 665,
+              "raw": [
+                449.682,
+                1443148.0,
+                19.0,
+                0.021611,
+                50.0,
+                32.0,
+                1958172.0,
+                0.0,
+                450.42,
+                759.0,
+                588.0,
+                0.0,
+                761.0,
+                1448.0,
+                201.212
+              ]
+            },
+            {
+              "packet_elapsed_s": 2.34055859375,
+              "time_us": 1794556848450558.5,
+              "state_id": 666,
+              "raw": [
+                461.256,
+                1442889.0,
+                21.0,
+                0.021601,
+                50.0,
+                42.0,
+                1836702.0,
+                0.0,
+                463.058,
+                759.0,
+                567.0,
+                0.0,
+                761.0,
+                1448.0,
+                201.212
+              ]
+            }
+          ],
+          "first10_packet_clock_bins": {
+            "0": {
+              "rows": 38,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 7.0,
+                "mean": 72.42105263157895,
+                "max": 760.0
+              },
+              "packets_out": {
+                "min": 4.0,
+                "mean": 364.13157894736844,
+                "max": 760.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 13686.0,
+                "mean": 1161554.0,
+                "max": 3305765.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "3": {
+              "rows": 49,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 4.0,
+                "mean": 214.89795918367346,
+                "max": 477.0
+              },
+              "packets_out": {
+                "min": 0.0,
+                "mean": 141.20408163265307,
+                "max": 237.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 11813.0,
+                "mean": 1524844.2040816327,
+                "max": 3287810.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            },
+            "5": {
+              "rows": 231,
+              "coverage": "OBSERVED",
+              "cwnd": {
+                "min": 186.0,
+                "mean": 320.42424242424244,
+                "max": 495.0
+              },
+              "packets_out": {
+                "min": 200.0,
+                "mean": 214.7099567099567,
+                "max": 234.0
+              },
+              "retrans_out": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              },
+              "pacing_rate": {
+                "min": 1360015.0,
+                "mean": 2261169.8181818184,
+                "max": 3374018.0
+              },
+              "lost_rate": {
+                "min": 0.0,
+                "mean": 0.0,
+                "max": 0.0
+              }
+            }
+          },
+          "counters": {
+            "valid": 2631,
+            "critic_iterations": 0,
+            "critic_optimizer_ops": 0,
+            "actor_updates": 0,
+            "target_updates": 0,
+            "exploration_calls": 0
+          },
+          "headers": [
+            "# mahimahi mm-link (Downlink) [@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant12] > @CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-11/down.log",
+            "# command line: 'mm-link' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant192' '@CONTINUATION_ROOT@/frameworks/baseline/configs/traces/constant12' '--downlink-log=@CONTINUATION_ROOT@/frameworks/baseline/logs/recovery-natural-11/down.log' '--uplink-queue=droptail' '--uplink-queue-args=packets=1000' '--downlink-queue=droptail' '--downlink-queue-args=packets=1000' '--' 'sh' '-c' 'sudo -u `whoami` @CONTINUATION_ROOT@/frameworks/baseline/code/runtime/client $MAHIMAHI_BASE 1 13011'",
+            "# queue: droptail [packets=1000]",
+            "# init timestamp: 1794556846078",
+            "# base timestamp: 32",
+            "# mahimahi config: [delay 100 ms]"
+          ],
+          "policy_hash_unchanged": true,
+          "completion": {
+            "status": "COMPLETE_PACKET_WINDOW_REQUESTED_CLEAN_STOP",
+            "observed_packet_seconds": 60.017,
+            "required_seconds": 60,
+            "requested_epoch": 1794556906.127636,
+            "metric_or_health_override": false
+          }
+        }
+      ],
+      "remaining": [],
+      "models_unchanged": true
+    }
+  ],
+  "audit_source_sha256": "e8a5bb92160a3bd40d140acefdd80b8e85e4b5f60c04538b1016b5b1cf472200"
+}

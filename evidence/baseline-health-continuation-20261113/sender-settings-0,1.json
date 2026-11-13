@@ -1,0 +1,44 @@
+[
+  {
+    "node": 0,
+    "kernel": "4.13.1-0521-learner",
+    "sender_sysctl": {
+      "tcp_congestion_control": "cubic",
+      "tcp_no_metrics_save": "1",
+      "tcp_rmem": "4096\t87380\t6291456",
+      "tcp_wmem": "4096\t32768\t4194304"
+    },
+    "cubic_parameters": {
+      "initial_ssthresh": "0",
+      "hystart": "1",
+      "beta": "717",
+      "tcp_friendliness": "1",
+      "hystart_ack_delta": "2",
+      "bic_scale": "41",
+      "hystart_detect": "3",
+      "fast_convergence": "1",
+      "hystart_low_window": "16"
+    }
+  },
+  {
+    "node": 1,
+    "kernel": "4.13.1-0521-learner",
+    "sender_sysctl": {
+      "tcp_congestion_control": "cubic",
+      "tcp_no_metrics_save": "1",
+      "tcp_rmem": "4096\t87380\t6291456",
+      "tcp_wmem": "4096\t32768\t4194304"
+    },
+    "cubic_parameters": {
+      "initial_ssthresh": "0",
+      "hystart": "1",
+      "beta": "717",
+      "tcp_friendliness": "1",
+      "hystart_ack_delta": "2",
+      "bic_scale": "41",
+      "hystart_detect": "3",
+      "fast_convergence": "1",
+      "hystart_low_window": "16"
+    }
+  }
+]
