@@ -5,9 +5,21 @@ import tempfile
 import unittest
 from unittest import mock
 from frameworks.joint_healthy import identity
+from frameworks.joint_healthy.configuration import configuration
 
 
 class NativeProvenance(unittest.TestCase):
+    def test_failed_g1_g2_cannot_be_relabelled_as_g3_admission(self):
+        cfg=configuration('g3');impl={'fixture':True}
+        receipt=dict(status='PASS_PREREGISTERED_G0_G3_FULL_GRID',implementation=impl,registration='registered.json',evidence='actual-results.json',
+            rate_mode='acked_legacy_peak',utility_normalization='legacy_delivery_peak',
+            validation=dict(conditions=24,repeats=3,candidate_runs=72,paired_base_runs=72,health_pass=True,g0_mechanism_pass=True))
+        with mock.patch.object(identity,'implementation_identity',return_value=impl):
+            identity.check_admission(receipt,cfg)
+            with self.assertRaises(ValueError):identity.check_admission(dict(receipt,status='SCREEN_PERFORMANCE_FAIL'),cfg)
+            with self.assertRaises(ValueError):identity.check_admission(dict(receipt,validation=dict(receipt['validation'],health_pass=False)),cfg)
+            with self.assertRaises(ValueError):identity.check_admission(receipt,dict(cfg,decision_cost=.02))
+
     def test_binary_and_all_build_sources_must_still_match(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td); binary=root/'frameworks/joint_healthy/native/orca-server-joint-healthy'

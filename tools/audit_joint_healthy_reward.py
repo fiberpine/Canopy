@@ -15,7 +15,9 @@ ROOT = Path(__file__).resolve().parents[1]; sys.path.insert(0, str(ROOT))
 from frameworks.joint_healthy.core import interval_return
 
 
-def audit(feedback_path, boundaries_path):
+def audit(feedback_path, boundaries_path, normalization='acked_peak'):
+    if normalization not in ('acked_peak','legacy_endpoint_proxy','fixed_legacy_reference'):
+        raise ValueError('Explicit supported counterfactual normalizer required')
     frames = [json.loads(x) for x in Path(feedback_path).read_text().splitlines() if x.strip()]
     with Path(boundaries_path).open() as stream: boundaries = list(csv.DictReader(stream))
     if len(frames) < 9 or len(boundaries) < len(frames): raise ValueError('At least9 complete, paired boundaries required')
@@ -28,20 +30,25 @@ def audit(feedback_path, boundaries_path):
         if not math.isclose(dt, raw[3], rel_tol=1e-6, abs_tol=1e-7): raise ValueError('Native duration mismatch')
         if not math.isclose(acked / dt, raw[1], rel_tol=2e-6, abs_tol=1e-6):
             raise ValueError('These are not ACKed-byte rate observations; legacy averages cannot reconstruct byte delivery')
-        rows.append(dict(dt=dt, acked=acked, loss_bytes=raw[7]*dt, minimum=raw[14], srtt=raw[8], rate=raw[1]))
+        legacy=float(boundary.get('delivery_sample_mean',raw[1]))
+        rows.append(dict(dt=dt, acked=acked, loss_bytes=raw[7]*dt, minimum=raw[14], srtt=raw[8], rate=raw[1],legacy=legacy))
     if rows[0]['rate'] <= 0: raise ValueError('Invalid initial normalization reference')
     results = []
     # The initial feedback is bootstrap; only subsequent action intervals enter
     # returns, exactly as in the actor/replay transition ledger.
     intervals = rows[1:]
     for group in (1, 2, 4, 8):
-        peak = rows[0]['rate']; total_reward = 0.; discount = 1.; seconds = 0.; durations = []; weighted_u = 0.
+        peak = rows[0]['rate'] if normalization=='acked_peak' else rows[0]['legacy']
+        if normalization=='fixed_legacy_reference':peak=max(x['legacy'] for x in rows)
+        total_reward = 0.; discount = 1.; seconds = 0.; durations = []; weighted_u = 0.
         for start in range(0, len(intervals), group):
             part = intervals[start:start+group]; dt = math.fsum(x['dt'] for x in part)
             rate = sum(x['acked'] for x in part) / dt
             loss = math.fsum(x['loss_bytes'] for x in part) / dt
-            peak = max(peak, rate)
             endpoint = part[-1]
+            if normalization=='acked_peak':peak=max(peak,rate)
+            elif normalization=='legacy_endpoint_proxy':peak=max(peak,endpoint['legacy'])
+            if peak<=0:raise ValueError('Invalid normalization reference')
             u = (rate - 5*loss) / peak * min(1., 1.25*endpoint['minimum']/endpoint['srtt'])
             reward, d = interval_return(u, dt)
             total_reward += discount*reward; discount *= d; seconds += dt; weighted_u += u*dt; durations.append(dt)
@@ -52,6 +59,9 @@ def audit(feedback_path, boundaries_path):
     for result in results:
         result['relative_return_change_same_trajectory'] = (result['discounted_return'] - base['discounted_return'])/max(1e-9, abs(base['discounted_return']))
     return dict(status='OFFLINE_MEASUREMENT_ALIAS_AUDIT_NOT_POLICY_PERFORMANCE', input_frames=len(frames),
+                normalization_counterfactual=normalization,
+                exact_variable_period_kernel_estimator_reconstructed=False,
+                fixed_reference_uses_future_trajectory_only_as_diagnostic=normalization=='fixed_legacy_reference',
                 return_increase_without_changed_TCP_trajectory=any(x['relative_return_change_same_trajectory']>.02 for x in results[1:]),
                 nonlinear_interval_utility_is_approximate=True, p95_p99_reconstructed=False,
                 no_fixed_control_training_performed=True, results=results)
@@ -59,7 +69,8 @@ def audit(feedback_path, boundaries_path):
 
 if __name__ == '__main__':
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--feedback',required=True);ap.add_argument('--boundaries',required=True);ap.add_argument('--output',required=True)
-    args=ap.parse_args();result=audit(args.feedback,args.boundaries)
+    ap.add_argument('--normalization',choices=['acked_peak','legacy_endpoint_proxy','fixed_legacy_reference'],default='acked_peak')
+    args=ap.parse_args();result=audit(args.feedback,args.boundaries,args.normalization)
     path=Path(args.output)
     if path.exists():raise ValueError('Preserve an existing audit result')
     path.write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result,indent=2))

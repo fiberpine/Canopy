@@ -1,0 +1,19 @@
+{
+  "status": "ACTUAL_SUMMARY_DISCUSSION_COMPLETED_NOT_CODE_REVIEW",
+  "participant": "Claude",
+  "source": "Existing user-authorized Claude conversation",
+  "scope": "Numerical results and implementation contract supplied by Codex; no repository/code inspection by Claude",
+  "recommendations": [
+    "Test ACK numerator against common legacy-estimator observed peak before training",
+    "Do not adapt directly to demonstrably aliased ACK-only peak reward",
+    "Do not split state and reward into distinct normalizers",
+    "Preserve G1 negative result and stratify repeat differences",
+    "Recognize 300k replay as recipe change and retain real coverage/holdout gates"
+  ],
+  "independent_decisions": [
+    "Old G1/G2 failures unchanged",
+    "Frozen full24x3 G3 versus matched baseline before release",
+    "No independent fixed-MTP training per user instruction",
+    "No retrospective performance-gate relaxation"
+  ]
+}

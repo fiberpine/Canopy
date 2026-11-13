@@ -74,7 +74,24 @@ def verify(output):
                 prediction = sess.run(model.action, {model.s: joint_states})
                 migrated_q = sess.run([model.q1, model.q2], {model.s: joint_states, model.executed: actions})
                 q_error = max(float(np.max(np.abs(a-b))) for a,b in zip(reference_q, migrated_q))
-                for a,b in zip(reference_q,migrated_q): np.testing.assert_allclose(a,b,rtol=1e-6,atol=1e-5)
+                # Padding changes float32 GEMM reduction order across TF/CPU builds.
+                # Independently check the actual source/migrated weights in float64
+                # before accepting that numerical envelope; this is not Q calibration.
+                def q64(state, action, tensors, prefix):
+                    def dense(x, name):
+                        return np.dot(x, np.asarray(tensors[prefix+'/'+name+'/kernel'],np.float64))+np.asarray(tensors[prefix+'/'+name+'/bias'],np.float64)
+                    def leaky(x): return np.maximum(x,.2*x)
+                    return dense(leaky(dense(np.c_[leaky(dense(np.asarray(state,np.float64),'fc1')),action],'fc2')),'dense')
+                source_tensors={name:reader.get_tensor(name) for name in reader.get_variable_to_shape_map() if name.startswith(('critic/','critic2/')) and '/Adam' not in name}
+                migrated_vars=model._variables('critic')+model._variables('critic2')
+                migrated_tensors={v.op.name:x for v,x in zip(migrated_vars,sess.run(migrated_vars))}
+                double_error=0.
+                for name in ('critic','critic2'):
+                    old=q64(states,actions[:,:1],source_tensors,name)
+                    new=q64(joint_states,actions,migrated_tensors,name)
+                    double_error=max(double_error,float(np.max(np.abs(old-new))))
+                    np.testing.assert_allclose(old,new,rtol=1e-12,atol=1e-10)
+                for a,b in zip(reference_q,migrated_q): np.testing.assert_allclose(a,b,rtol=2e-6,atol=2e-5)
                 error = float(np.max(np.abs(prediction[:, :1] - reference)))
                 assert error < 3e-6, ('Migrated window differs from frozen runtime', error)
                 assert np.all(prediction[:, 1] == -1.)
@@ -136,7 +153,7 @@ def verify(output):
                 model.save_manifest(prefix, cfg, dict(critic_iterations=15, actor_updates=1))
                 expected = sess.run(model.action, {model.s: joint_states})
                 expected_digest = model.digest(sess)
-                result.update(window_max_error=error, migrated_critic_old_input_max_error=q_error, canonical_sonnet_ema_max_error=ema_error, four_unique_online_BN_writers=4,
+                result.update(window_max_error=error, migrated_critic_old_input_max_error=q_error, migration_critic_float64_max_error=double_error, canonical_sonnet_ema_max_error=ema_error, four_unique_online_BN_writers=4,
                     target_pairs=len(destinations), target_batch_context_max_error=float(np.max(np.abs(one[0] - many[0]))),
                     critic_beta1_powers_after12=powers, frozen_window_and_target_bitwise=True,
                     independent_critic_optimizer_accumulators=True, post_joint_target_context_max_error=post_context_error,

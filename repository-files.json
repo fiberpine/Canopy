@@ -1,5 +1,5 @@
 {
-  "scope": "Frozen healthy seed3 baseline unchanged; independent joint82 offline candidate, no new TCP/cloud deployment/training; verified selected models retained",
+  "scope": "Frozen healthy seed3 baseline preserved; independent joint82 online measurement/capacity/admission evidence, training status in online report",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2498,
-      "sha256": "c1f401d709cd20f9cb76f6e69abc7a98b026940963b788941cacbdf77890bf51"
+      "bytes": 2675,
+      "sha256": "bf4bdd67918c88eff68a5934b21cac238228054b7a9a90fcb26a19f70c2ab0ae"
     },
     {
       "path": "bootstrap_runtime.py",
@@ -146,6 +146,11 @@
       "path": "docs/HISTORY_STATUS_20261113.md",
       "bytes": 16670,
       "sha256": "c9cbba0968a022e4b71d4fd8286343a0178a1c91d24383c23fbf187b54d22ecf"
+    },
+    {
+      "path": "docs/JOINT_HEALTHY_SEED3_ONLINE_20261113.md",
+      "bytes": 5962,
+      "sha256": "09777d72673e7bab64aa284f82d7e236caedd49d799e02e7fb6b97cae8ede2bb"
     },
     {
       "path": "docs/JOINT_HEALTHY_SEED3_V1.md",
@@ -14173,6 +14178,51 @@
       "sha256": "0a5bec97240925681c8ba85ec2e45086a16bc688c74e6ca83774de1a37af370b"
     },
     {
+      "path": "evidence/joint-healthy-seed3-online-20261113/batch-fullg3.json",
+      "bytes": 21766,
+      "sha256": "8779563d27d281926c3c9bb7479f12edac0871a13c0745a781a4aa7e36f8263f"
+    },
+    {
+      "path": "evidence/joint-healthy-seed3-online-20261113/batch-fullg3cont.json",
+      "bytes": 21648,
+      "sha256": "52eabc302493e09bce8ab88bbda7c5d9ff79d2ba35ce705f4928b13a2a8ec550"
+    },
+    {
+      "path": "evidence/joint-healthy-seed3-online-20261113/claude-review.json",
+      "bytes": 928,
+      "sha256": "6b857f5dba5ea7a380e0643d08e3647e41aacbb05aa28f3aeaa03d5d23437596"
+    },
+    {
+      "path": "evidence/joint-healthy-seed3-online-20261113/full-g3-postprocessing-source-bridge.json",
+      "bytes": 4321,
+      "sha256": "81e3e2df5ccd375bd126d6eb77c5b4793446236ea5ca6cafad2d691bced84ca2"
+    },
+    {
+      "path": "evidence/joint-healthy-seed3-online-20261113/g3-screen-assessment.json",
+      "bytes": 6109,
+      "sha256": "9372c7abc0bba421fb9e8ce68da673fc92326b5c745ddfd362c4d9e2980981e6"
+    },
+    {
+      "path": "evidence/joint-healthy-seed3-online-20261113/joint-capacity-admission.json",
+      "bytes": 557,
+      "sha256": "03375412cfc0fbd893b4f3d1a7c24356bff6fadfd7aede24e44fda93258e6f72"
+    },
+    {
+      "path": "evidence/joint-healthy-seed3-online-20261113/joint-capacity-audit.json",
+      "bytes": 11823,
+      "sha256": "3f31678e58b68680e5b4e573fde37d03ab1e167162af8c6b5d9f5996008cfdd0"
+    },
+    {
+      "path": "evidence/joint-healthy-seed3-online-20261113/real-fixed20-reward-alias.json",
+      "bytes": 14056,
+      "sha256": "3c99023e95889a41b173da99eb4690502d002ed5e65920fd92290a959582bacf"
+    },
+    {
+      "path": "evidence/joint-healthy-seed3-online-20261113/screen-assessment.json",
+      "bytes": 3946,
+      "sha256": "01414292eebd96dbf07784979a75f361c618e7acd5ae30fae668537f138e4341"
+    },
+    {
       "path": "evidence/mtp20/audit/depth-probe-ownership.json",
       "bytes": 71,
       "sha256": "824221543f72ee01f003e900031b739ea9012eeb348124a4b1f35de20caca712"
@@ -19385,8 +19435,8 @@
     },
     {
       "path": "frameworks/joint_healthy/README.md",
-      "bytes": 453,
-      "sha256": "e4f5b5818c9fcca825c7cd7ebe1c8d3896ea45187e1ea2c5e2117310c11d2639"
+      "bytes": 688,
+      "sha256": "2d9b730e9424dff1e1f835c81b01e3a772451e77d0fa9ab9423b0de5243c66d0"
     },
     {
       "path": "frameworks/joint_healthy/__init__.py",
@@ -19395,38 +19445,38 @@
     },
     {
       "path": "frameworks/joint_healthy/audit.py",
-      "bytes": 4753,
-      "sha256": "e18df64003d62815ca4e2742ec690a3cb5050ee08c1eb5a522c4c0b032907576"
+      "bytes": 5992,
+      "sha256": "b04887755ef52ef14f3aa9ac4065e9145385442000d158a2594e1142cce447ed"
     },
     {
       "path": "frameworks/joint_healthy/backend.py",
-      "bytes": 17132,
-      "sha256": "5062f1aa209888da947fa8ec1daf653ad7c84648413f50d8fd60adf1814cb60d"
+      "bytes": 18156,
+      "sha256": "45a43b89582ab85ddf91da361073d2239ccb53d466e31f3a6b261ec2ccea6143"
     },
     {
       "path": "frameworks/joint_healthy/configuration.py",
-      "bytes": 4452,
-      "sha256": "62b2fc1d7881b7a336238ff80731432f3c4de3dfba64fcee05696efe0c68f795"
+      "bytes": 4574,
+      "sha256": "8d016f719baed036f8acae28ff472fba3701a5b5a906ce800f12d89f632ddc36"
     },
     {
       "path": "frameworks/joint_healthy/controller.py",
-      "bytes": 4799,
-      "sha256": "3d447d175023d218fbfa4059ec241929433ae48971acaf105512eb3813a6779e"
+      "bytes": 4971,
+      "sha256": "ccd317cd375f11db801673121fbf965625a2631761c797780ec6f97755d1c92a"
     },
     {
       "path": "frameworks/joint_healthy/core.py",
-      "bytes": 9245,
-      "sha256": "6e51b45a02a5b97102fefe53f90736a658fe37604c2d64dc103364ee570b2e59"
+      "bytes": 9915,
+      "sha256": "7a974cd8c68e4112cc5da0f2585e67a2f099247e1068cf6346a984650118d92e"
     },
     {
       "path": "frameworks/joint_healthy/flow.py",
-      "bytes": 10676,
-      "sha256": "007377101f98efcda009f4949e7625cc5ab000c7f77598823aa5e11f66062777"
+      "bytes": 11488,
+      "sha256": "54304bca06bb30d44956d9b798b785e5b26dec0d3587b47b436595c5056fcf47"
     },
     {
       "path": "frameworks/joint_healthy/identity.py",
-      "bytes": 2444,
-      "sha256": "6ed7b9c922bdd18346aad1429797c2394025df7256af771465258750c7481b6c"
+      "bytes": 3243,
+      "sha256": "01004b4994aa50afe7fff9af8837e30f89c5946067b3e42f45854d57721a1a32"
     },
     {
       "path": "frameworks/joint_healthy/metrics.py",
@@ -19435,8 +19485,8 @@
     },
     {
       "path": "frameworks/joint_healthy/model.py",
-      "bytes": 14325,
-      "sha256": "68a0debb2f35d674e7c18059ab134941d72f54c750c6ca5a8bfdf476d3e82910"
+      "bytes": 14350,
+      "sha256": "8ec5c487f4a8edd935bb8096cb028ecaf404b52eecd4f13f4c9bebe37c87fbcc"
     },
     {
       "path": "frameworks/joint_healthy/native/joint_protocol.h",
@@ -19445,8 +19495,13 @@
     },
     {
       "path": "frameworks/joint_healthy/native/orca-server-joint-healthy.cc",
-      "bytes": 29136,
-      "sha256": "4405f185959e121d20ce48fb156bf4174e79480982b5f8789171acf46b5a5c98"
+      "bytes": 29483,
+      "sha256": "87e07dbc9ffff74168419bfbf69748258cc4f9e6faceffe3d963d1ed28fb4998"
+    },
+    {
+      "path": "frameworks/joint_healthy/ownership.py",
+      "bytes": 1785,
+      "sha256": "95676f53a72675312b705d3b8276230d94f0b452d2e8a96fadb524a9acf93ded"
     },
     {
       "path": "frameworks/joint_healthy/replay.py",
@@ -21747,8 +21802,8 @@
     },
     {
       "path": "joint_healthy.py",
-      "bytes": 7589,
-      "sha256": "4fb90cfd630d68de8de83bf54a0dcccaad71d7b015cea9fb808d6d1ad33592d9"
+      "bytes": 7599,
+      "sha256": "42ed9c365c93a9dc234a73982c7c44f6b93272e8ce35515476eaba4ac5966e54"
     },
     {
       "path": "manifest.json",
@@ -23517,18 +23572,18 @@
     },
     {
       "path": "tests/joint_healthy/test_audit.py",
-      "bytes": 2843,
-      "sha256": "dc4ca3508f6cdd7c9b92c0e43eacedb7158c100eeaca07eab28898422683f394"
+      "bytes": 3640,
+      "sha256": "ea16585987f9903fdbea1317db2251e58155060ea3cf6d49dd53e87b174740b7"
     },
     {
       "path": "tests/joint_healthy/test_contract.py",
-      "bytes": 11817,
-      "sha256": "f490ee731e9e91eb409b626bd1f2be7f00cd50a05544563e776a25e4e8f63fb1"
+      "bytes": 12627,
+      "sha256": "a7d41ab70604cb8ada7c64e2aa590bdcab2cf1e8b287305363000d9069caa997"
     },
     {
       "path": "tests/joint_healthy/test_identity.py",
-      "bytes": 1370,
-      "sha256": "fc5c47f00e21679022483c4797cadc59edfbed5e3e2819897d01d15ae1e8575e"
+      "bytes": 2445,
+      "sha256": "6e08d64d174a0464ff27fd89dad693efa885275873affae74e90b5300c67687e"
     },
     {
       "path": "tests/joint_healthy/test_metrics.py",
@@ -23536,9 +23591,19 @@
       "sha256": "e235098ddafe545db60d1cbc5a1410f5138527d6cc11c5cd52e93ba9d5d57d84"
     },
     {
+      "path": "tests/joint_healthy/test_ownership.py",
+      "bytes": 823,
+      "sha256": "77635c853713abfab57277f060616b2dd70f0631d2dca9430d54c833320cc570"
+    },
+    {
       "path": "tests/joint_healthy/test_reward_alias.py",
       "bytes": 2061,
       "sha256": "a0b1bc880de7e2d663e190e97927fa0d9eda2ac1f2d5ab324c06943246143cfa"
+    },
+    {
+      "path": "tests/joint_healthy/test_workers.py",
+      "bytes": 926,
+      "sha256": "b5137faf8dba8b67dffd5ca45ba0db4cdf04316e1f9085d7467e3f5be3558045"
     },
     {
       "path": "tools/analyze_baseline_candidate_comparison.py",
@@ -23582,8 +23647,8 @@
     },
     {
       "path": "tools/audit_joint_healthy_reward.py",
-      "bytes": 4072,
-      "sha256": "ac745f131bfd833ad18e1d7516971e611fafae059bd0239d1e40def47a3ee6a5"
+      "bytes": 5098,
+      "sha256": "e79afd4b82a8f814360aa01c232b335c5533dcd5f56452eed0986c20bf01948a"
     },
     {
       "path": "tools/audit_scalar_bn_fourway.py",
@@ -24142,8 +24207,8 @@
     },
     {
       "path": "tools/verify_joint_healthy_model.py",
-      "bytes": 12894,
-      "sha256": "e6bda7b5de23f228b837c92764032436d9da1b29ccfea357bb4fef6c8e8118cc"
+      "bytes": 14383,
+      "sha256": "42d68ef68a380dcaf5a3830fe6e0d299f161920dbb1002e79fb1b93350e6677f"
     },
     {
       "path": "tools/verify_joint_healthy_pipeline.py",

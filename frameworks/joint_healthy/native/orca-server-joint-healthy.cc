@@ -290,8 +290,6 @@ void start_server(int flow_num, int client_port)
     DBGPRINT(0,0,"RL Module is Ready. Let's Start ...\n\n");
     usleep(actor_id*10000+10000);
     //Now its time to start the server-client app and tune C2TCP socket.
-    system(final_cmd);
-
     //Start listen
     int maxfdp=-1;
     fd_set rset;
@@ -311,6 +309,10 @@ void start_server(int flow_num, int client_port)
     struct timeval timeout;
     timeout.tv_sec  = 60 * 60;
     timeout.tv_usec = 0;
+    // The client may run immediately under concurrent namespace startup. Make
+    // every listener ready before launching it; a failed first connect leaves
+    // the legacy client's reused socket in an unspecified retry state.
+    system(final_cmd);
     int rc = select(maxfdp, &rset, NULL, NULL, &timeout);
     /**********************************************************/
     /* Check to see if the select call failed.                */
@@ -474,7 +476,8 @@ void* CntThread(void* information)
     const char *rate_mode=getenv("CANOPY_JOINT_RATE");
     if(!clock_mode || !rate_mode) abort();
     const bool scheduled=strcmp(clock_mode,"scheduled")==0;
-    const bool acked_rate=strcmp(rate_mode,"acked_bytes")==0;
+    const bool legacy_peak=strcmp(rate_mode,"acked_legacy_peak")==0;
+    const bool acked_rate=strcmp(rate_mode,"acked_bytes")==0 || legacy_peak;
     if(!scheduled && strcmp(clock_mode,"legacy_feedback")!=0) abort();
     if(!acked_rate && strcmp(rate_mode,"legacy")!=0) abort();
     unsigned next_wait_us=20000; bool initialized=false;uint64_t kernel_queries=0;
@@ -582,7 +585,7 @@ void* CntThread(void* information)
                     // Send message to RL-Module
                     sprintf(message,"%d %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f %.7f",
                             msg_id,delay,measured_rate,(double)orca_info.cnt,(double)time_delta,
-                            (double)target,(double)orca_info.cwnd, pacing_rate,lost_rate,srtt_ms,snd_ssthresh,packets_out
+                            legacy_peak?double(orca_info.thr):(double)target,(double)orca_info.cwnd, pacing_rate,lost_rate,srtt_ms,snd_ssthresh,packets_out
                             ,retrans_out,max_packets_out,(double)orca_info.mss,min_rtt_);
                     fprintf(boundary_log,"%d,%llu,%llu,%llu,%llu,%.12g,%.12g,%u,%d,%llu\n",msg_id,
                         (unsigned long long)now_mono,(unsigned long long)(now_mono-previous_mono),

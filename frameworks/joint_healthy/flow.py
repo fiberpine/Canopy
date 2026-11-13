@@ -10,6 +10,7 @@ import time
 import numpy as np
 from .configuration import ROOT
 from .core import Observation, interval_return, period_ms, wire
+from .ownership import acquire_namespace_lock,release_namespace_lock,collect_orphans
 
 R = Path(__file__).resolve().parent
 
@@ -72,8 +73,12 @@ def run_flow(cfg, condition, action_fn, stop, actor=0, episode=0, transition=Non
                                               machine_cpu=psutil.cpu_times()._asdict()))
                     last = time.monotonic()
             except psutil.Error: pass
-    thread = None
+    thread = None;namespace_lock=None
     try:
+        # Mahimahi chooses unused outer addresses by scanning interfaces without
+        # reserving them. Concurrent construction can choose the same pair.
+        # Hold a host-local lock through first feedback; flows run concurrently.
+        namespace_lock=acquire_namespace_lock(R/'control/namespace-start.lock',stop,cfg['deadline_epoch']-cfg.get('stop_reserve_s',60))
         shared_r = sysv_ipc.SharedMemory(None, sysv_ipc.IPC_CREX, mode=0o600, size=2048)
         shared_w = sysv_ipc.SharedMemory(None, sysv_ipc.IPC_CREX, mode=0o600, size=2048)
         shared_r.write(b'\0' * 2048); shared_w.write(b'99999 99999\0')
@@ -90,7 +95,7 @@ def run_flow(cfg, condition, action_fn, stop, actor=0, episode=0, transition=Non
         if frozen_seconds:
             watcher = packet_watch(folder / 'down.log', frozen_seconds, flow_stop, folder / 'packet-window-completion.json')
         reader = StateReader(shared_r, server, flow_stop)
-        observe = Observation(); planned = 20.
+        observe = Observation(cfg['rate_mode']); planned = 20.
         reader.read(); state, utility, metadata = observe.observe(reader.last_raw, planned)
         raw_file.write(json.dumps(dict(state_id=reader.last_id, raw=reader.last_raw.tolist(), **metadata)) + '\n')
         action, info = action_fn(state); action = np.asarray(action, np.float32)
@@ -99,6 +104,7 @@ def run_flow(cfg, condition, action_fn, stop, actor=0, episode=0, transition=Non
         exploration += int(info.get('explored', False))
         actions_file.write(json.dumps(dict(time_us=time.time()*1e6, state_id=reader.last_id, action=action.tolist(), planned_ms=planned, **info)) + '\n')
         dump(folder / 'flow-ready.json', dict(epoch=time.time(), first_state=reader.last_id))
+        release_namespace_lock(namespace_lock);namespace_lock=None
         while not flow_stop.is_set():
             # Sleep through the commanded interval instead of repeatedly reading
             # unchanged shared memory. Native remains the observation clock;
@@ -145,7 +151,11 @@ def run_flow(cfg, condition, action_fn, stop, actor=0, episode=0, transition=Non
                     if any(len(x.split(',')) == 8 and x.split(',')[1:3] == [str(last_decision_id)]*2 for x in lines[-3:]): break
                 except FileNotFoundError: pass
                 time.sleep(.005)
+        if server:
+            collect_orphans(psutil,owned,folder,b/'client',port,server.created)
+            dump(folder/'owned-processes.json',{str(k):v for k,v in owned.items()})
         cleanup(server, owned)
+        release_namespace_lock(namespace_lock);namespace_lock=None
         for shm in (shared_r, shared_w):
             if shm:
                 try: shm.remove(); shm.detach()

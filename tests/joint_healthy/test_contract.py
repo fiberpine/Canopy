@@ -30,6 +30,20 @@ def row(period=20., terminal=0., dt=None):
 
 
 class NumericalContract(unittest.TestCase):
+    def test_ack_numerator_uses_declared_legacy_estimator_peak(self):
+        o=Observation('acked_legacy_peak')
+        first=raw();first[4]=1000.;o.observe(first)
+        burst=raw(rate=2000.);burst[4]=1000.
+        state,utility,meta=o.observe(burst)
+        self.assertEqual(meta['max_bw'],1000.)
+        self.assertEqual(float(state[63]),2.)
+        self.assertEqual(utility,2.)
+        self.assertEqual(meta['normalization_source'],'acked_legacy_peak')
+        missing=raw();missing[4]=0.
+        with self.assertRaises(ValueError):Observation('acked_legacy_peak').observe(missing)
+        self.assertEqual(validate(configuration('g3'))['utility_normalization'],'legacy_delivery_peak')
+        with self.assertRaises(ValueError):validate(dict(configuration('g3'),utility_normalization='observed_peak'))
+
     def test_fixed_controls_never_probe_a_different_period(self):
         rng = np.random.RandomState(31)
         for period in (20, 80, 160):

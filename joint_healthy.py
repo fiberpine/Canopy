@@ -79,7 +79,7 @@ def main():
             if not args.gate_receipt: raise ValueError('G1/G2/G0 admission receipt required before actor release')
             receipt = json.loads(Path(args.gate_receipt).read_text())
             from frameworks.joint_healthy.identity import check_admission
-            check_admission(receipt)
+            check_admission(receipt,cfg)
             cfg['gate_receipt_sha256'] = hashlib.sha256(Path(args.gate_receipt).read_bytes()).hexdigest()
         from frameworks.joint_healthy.controller import execute
         print(json.dumps(execute(cfg, auth), indent=2)); return 0
@@ -101,7 +101,7 @@ def main():
         sess.run(tf.global_variables_initializer())
         if args.checkpoint: model.restore(sess, args.checkpoint)
         else:
-            if cfg['profile'] not in ('g0', 'g1', 'g2'):
+            if cfg['profile'] not in ('g0', 'g1', 'g2', 'g3'):
                 raise ValueError('A joint/fixed candidate needs its own trained checkpoint; baseline initialization is only a frozen G0/G1/G2 diagnostic')
             model.initialize_baseline(sess, cfg['baseline_checkpoint'])
         before = model.digest(sess)

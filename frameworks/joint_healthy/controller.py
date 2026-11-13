@@ -21,7 +21,9 @@ def execute(cfg, authorization):
     key = Path(authorization['ssh_key_path']).resolve()
     known = Path(authorization['known_hosts_path']).resolve()
     if not key.is_file() or not known.is_file(): raise ValueError('Provide verified SSH key and known_hosts files')
-    cfg = dict(cfg, learner_endpoint=hosts[0]['ip'] + ':' + str(authorization.get('learner_port', 25000)),
+    endpoint_ip=authorization.get('learner_endpoint_ip',hosts[0]['ip'])
+    if not re.fullmatch(r'[A-Za-z0-9_.:-]+',endpoint_ip): raise ValueError('Invalid learner endpoint')
+    cfg = dict(cfg, learner_endpoint=endpoint_ip + ':' + str(authorization.get('learner_port', 25000)),
                deadline_epoch=authorization['deadline_epoch'])
     folder = R / 'control' / cfg['run_id']; folder.mkdir(parents=True, exist_ok=False)
     config = folder / 'config.json'; dump(config, cfg)

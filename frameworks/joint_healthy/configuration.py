@@ -30,10 +30,11 @@ def configuration(profile='joint'):
         baseline_checkpoint=str(ROOT / 'models/healthy-baseline-seed3/training/step-6013196'),
         source_policy_sha256='631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0',
         candidate_status='OFFLINE_ONLY_NOT_TCP_VALIDATED', tf_threads=4)
-    if profile in ('g0', 'g1', 'g2'):
+    if profile in ('g0', 'g1', 'g2', 'g3'):
         cfg['fixed_mtp_ms'] = 20.
         if profile == 'g0': cfg.update(clock_mode='legacy_feedback', rate_mode='legacy')
         if profile == 'g1': cfg['rate_mode'] = 'legacy'
+        if profile == 'g3': cfg.update(rate_mode='acked_legacy_peak', utility_normalization='legacy_delivery_peak')
     elif profile.startswith('fixed') and profile[5:] in ('20', '40', '80', '120', '160'):
         cfg['fixed_mtp_ms'] = float(profile[5:])
     elif profile != 'joint': raise ValueError('Unknown candidate profile')

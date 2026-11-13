@@ -10,6 +10,18 @@ from frameworks.joint_healthy.audit import audit_flow
 
 
 class ExecutionAudit(unittest.TestCase):
+    def test_real_float32_tanh_overshoot_uses_serialized_clip(self):
+        with tempfile.TemporaryDirectory() as td:
+            p=Path(td);self.fixture(p)
+            decisions=[json.loads(x) for x in (p/'decisions.jsonl').read_text().splitlines()]
+            decisions[2]['action'][0]=-1.0000001192092896
+            (p/'decisions.jsonl').write_text('\n'.join(json.dumps(x) for x in decisions))
+            with (p/'control.csv').open() as f:rows=list(csv.DictReader(f))
+            rows[2].update(percent='25',cwnd_before='47',cwnd_requested='11')
+            with (p/'control.csv').open('w',newline='') as f:
+                w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+            self.assertEqual(audit_flow(p)['status'],'PASS_EXECUTION_CONTRACT_ONLY')
+
     def fixture(self, folder):
         (folder/'result.json').write_text(json.dumps(dict(status='COMPLETED')))
         (folder/'config.json').write_text(json.dumps(dict(cfg=dict(clock_mode='scheduled'))))

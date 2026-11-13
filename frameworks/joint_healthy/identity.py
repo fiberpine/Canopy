@@ -29,10 +29,19 @@ def implementation_identity(require_binary=False):
                 native_sha256=hashlib.sha256(binary.read_bytes()).hexdigest() if binary.is_file() else None)
 
 
-def check_admission(receipt):
-    if receipt.get('status') != 'PASS_PREREGISTERED_G0_G1_G2':
-        raise ValueError('Registered G0/G1/G2 admission is missing')
+def check_admission(receipt,cfg=None):
+    g3=bool(cfg and cfg.get('rate_mode')=='acked_legacy_peak')
+    expected='PASS_PREREGISTERED_G0_G3_FULL_GRID' if g3 else 'PASS_PREREGISTERED_G0_G1_G2'
+    if receipt.get('status') != expected:
+        raise ValueError('Registered admission for this measurement contract is missing')
     if receipt.get('implementation') != implementation_identity(require_binary=True):
         raise ValueError('Admission record does not match the current source/native')
     if not receipt.get('registration') or not receipt.get('evidence'):
         raise ValueError('Admission requires the preregistration and result references')
+    if g3:
+        required=dict(conditions=24,repeats=3,candidate_runs=72,paired_base_runs=72,health_pass=True,g0_mechanism_pass=True)
+        if any(receipt.get('validation',{}).get(k)!=v for k,v in required.items()):
+            raise ValueError('G3 needs its own full24x3 matched frozen admission')
+        if (receipt.get('rate_mode')!='acked_legacy_peak' or receipt.get('utility_normalization')!='legacy_delivery_peak'
+                or cfg.get('utility_normalization')!='legacy_delivery_peak' or cfg.get('decision_cost')!=0.):
+            raise ValueError('G3 admission is only for the declared zero-cost legacy-peak contract')

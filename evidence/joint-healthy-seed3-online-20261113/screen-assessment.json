@@ -1,0 +1,134 @@
+{
+  "status": "NO_JOINT_TRAINING_ADMISSION",
+  "complete": 24,
+  "network_failures": 0,
+  "summary": {
+    "base": {
+      "cells": [
+        {
+          "scenario": 3,
+          "condition": "G12-R200",
+          "utilization": 0.9954212104398301,
+          "queue_mean_ms": 13.11375030823722,
+          "queue_p95_ms": 24.0,
+          "queue_p99_ms": 26.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 5,
+          "condition": "G24-R20",
+          "utilization": 0.9999941224382367,
+          "queue_mean_ms": 7.3290542933919856,
+          "queue_p95_ms": 10.333333333333334,
+          "queue_p99_ms": 11.333333333333334,
+          "dropped_packets": 0.0
+        }
+      ],
+      "overall": {
+        "utilization": 0.9977076664390334,
+        "queue_mean_ms": 10.221402300814603,
+        "queue_p95_ms": 17.166666666666668,
+        "queue_p99_ms": 18.666666666666668
+      }
+    },
+    "g0": {
+      "cells": [
+        {
+          "scenario": 3,
+          "condition": "G12-R200",
+          "utilization": 0.9950665827269041,
+          "queue_mean_ms": 13.193876364719344,
+          "queue_p95_ms": 24.0,
+          "queue_p99_ms": 26.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 5,
+          "condition": "G24-R20",
+          "utilization": 0.999990663479801,
+          "queue_mean_ms": 6.151926114835899,
+          "queue_p95_ms": 9.333333333333334,
+          "queue_p99_ms": 10.666666666666666,
+          "dropped_packets": 0.0
+        }
+      ],
+      "overall": {
+        "utilization": 0.9975286231033526,
+        "queue_mean_ms": 9.672901239777621,
+        "queue_p95_ms": 16.666666666666668,
+        "queue_p99_ms": 18.333333333333332
+      },
+      "status": "SCREEN_PASS_NOT_FULL_GRID",
+      "reasons": []
+    },
+    "g1": {
+      "cells": [
+        {
+          "scenario": 3,
+          "condition": "G12-R200",
+          "utilization": 0.9703799519124751,
+          "queue_mean_ms": 13.227653405775955,
+          "queue_p95_ms": 24.0,
+          "queue_p99_ms": 27.666666666666668,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 5,
+          "condition": "G24-R20",
+          "utilization": 1.0000009247600958,
+          "queue_mean_ms": 7.979652806919371,
+          "queue_p95_ms": 11.0,
+          "queue_p99_ms": 12.0,
+          "dropped_packets": 0.0
+        }
+      ],
+      "overall": {
+        "utilization": 0.9851904383362855,
+        "queue_mean_ms": 10.603653106347663,
+        "queue_p95_ms": 17.5,
+        "queue_p99_ms": 19.833333333333336
+      },
+      "status": "SCREEN_PERFORMANCE_FAIL",
+      "reasons": [
+        "overall_utilization_loss_above1pp_on_screen_conditions"
+      ]
+    },
+    "g2": {
+      "cells": [
+        {
+          "scenario": 3,
+          "condition": "G12-R200",
+          "utilization": 0.9960165603192557,
+          "queue_mean_ms": 54.67615644762194,
+          "queue_p95_ms": 70.33333333333333,
+          "queue_p99_ms": 77.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 5,
+          "condition": "G24-R20",
+          "utilization": 0.9999840923479658,
+          "queue_mean_ms": 8.575920228985947,
+          "queue_p95_ms": 11.666666666666666,
+          "queue_p99_ms": 12.666666666666666,
+          "dropped_packets": 0.0
+        }
+      ],
+      "overall": {
+        "utilization": 0.9980003263336108,
+        "queue_mean_ms": 31.626038338303943,
+        "queue_p95_ms": 41.0,
+        "queue_p99_ms": 44.833333333333336
+      },
+      "status": "SCREEN_PERFORMANCE_FAIL",
+      "reasons": [
+        "G12-R200:queue_disaster_guard",
+        "queue_mean_ms:above120percent_paired_base",
+        "queue_p95_ms:above120percent_paired_base"
+      ]
+    }
+  },
+  "source_differences": "G0/G1/G2 same frozen seed3 weight; clock and rate modes differ explicitly",
+  "fixed20_migration_is_preapproved_failure_branch": true,
+  "remaining_full_grid_not_started": true
+}

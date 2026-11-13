@@ -1,0 +1,54 @@
+{
+  "status": "POSTPROCESSOR_ONLY_EQUIVALENCE_BRIDGE",
+  "original": {
+    "base_commit": "c67717de585692bf6a79d1c0545ace92e66347d2",
+    "source_hash_mode": "LF_normalized",
+    "sources": {
+      "joint_healthy.py": "42ed9c365c93a9dc234a73982c7c44f6b93272e8ce35515476eaba4ac5966e54",
+      "frameworks/joint_healthy/__init__.py": "03df514d320960f83a0ebe76c13d6807a749fe3d9d25134165657607a98cd7be",
+      "frameworks/joint_healthy/audit.py": "bb0ace5ef3053302706a4542a39b90fe3c0fbd5b8933590a3c3744ad036e5555",
+      "frameworks/joint_healthy/backend.py": "45a43b89582ab85ddf91da361073d2239ccb53d466e31f3a6b261ec2ccea6143",
+      "frameworks/joint_healthy/configuration.py": "8d016f719baed036f8acae28ff472fba3701a5b5a906ce800f12d89f632ddc36",
+      "frameworks/joint_healthy/controller.py": "ccd317cd375f11db801673121fbf965625a2631761c797780ec6f97755d1c92a",
+      "frameworks/joint_healthy/core.py": "7a974cd8c68e4112cc5da0f2585e67a2f099247e1068cf6346a984650118d92e",
+      "frameworks/joint_healthy/flow.py": "54304bca06bb30d44956d9b798b785e5b26dec0d3587b47b436595c5056fcf47",
+      "frameworks/joint_healthy/identity.py": "01004b4994aa50afe7fff9af8837e30f89c5946067b3e42f45854d57721a1a32",
+      "frameworks/joint_healthy/metrics.py": "d1415f30988f460c19ea1fa2780d51c454c8d52ba9d4bab6dcf5e739c44bc6a8",
+      "frameworks/joint_healthy/model.py": "8ec5c487f4a8edd935bb8096cb028ecaf404b52eecd4f13f4c9bebe37c87fbcc",
+      "frameworks/joint_healthy/ownership.py": "95676f53a72675312b705d3b8276230d94f0b452d2e8a96fadb524a9acf93ded",
+      "frameworks/joint_healthy/replay.py": "aa09a5c671851eae7148e4bfd539906f67e895add5ee59cdef616a3c473bfed4",
+      "frameworks/joint_healthy/native/orca-server-joint-healthy.cc": "87e07dbc9ffff74168419bfbf69748258cc4f9e6faceffe3d963d1ed28fb4998",
+      "frameworks/joint_healthy/native/joint_protocol.h": "6c967350bdceabe0347b86bee86f0ef9126a00e57624d290cbf6aa79b5107e38"
+    },
+    "native_sha256": "0174f0a772b984249f43ef664adb249f476fe86c6b216922d553f73cf98d6197"
+  },
+  "current": {
+    "base_commit": "c67717de585692bf6a79d1c0545ace92e66347d2",
+    "source_hash_mode": "LF_normalized",
+    "sources": {
+      "joint_healthy.py": "42ed9c365c93a9dc234a73982c7c44f6b93272e8ce35515476eaba4ac5966e54",
+      "frameworks/joint_healthy/__init__.py": "03df514d320960f83a0ebe76c13d6807a749fe3d9d25134165657607a98cd7be",
+      "frameworks/joint_healthy/audit.py": "b04887755ef52ef14f3aa9ac4065e9145385442000d158a2594e1142cce447ed",
+      "frameworks/joint_healthy/backend.py": "45a43b89582ab85ddf91da361073d2239ccb53d466e31f3a6b261ec2ccea6143",
+      "frameworks/joint_healthy/configuration.py": "8d016f719baed036f8acae28ff472fba3701a5b5a906ce800f12d89f632ddc36",
+      "frameworks/joint_healthy/controller.py": "ccd317cd375f11db801673121fbf965625a2631761c797780ec6f97755d1c92a",
+      "frameworks/joint_healthy/core.py": "7a974cd8c68e4112cc5da0f2585e67a2f099247e1068cf6346a984650118d92e",
+      "frameworks/joint_healthy/flow.py": "54304bca06bb30d44956d9b798b785e5b26dec0d3587b47b436595c5056fcf47",
+      "frameworks/joint_healthy/identity.py": "01004b4994aa50afe7fff9af8837e30f89c5946067b3e42f45854d57721a1a32",
+      "frameworks/joint_healthy/metrics.py": "d1415f30988f460c19ea1fa2780d51c454c8d52ba9d4bab6dcf5e739c44bc6a8",
+      "frameworks/joint_healthy/model.py": "8ec5c487f4a8edd935bb8096cb028ecaf404b52eecd4f13f4c9bebe37c87fbcc",
+      "frameworks/joint_healthy/ownership.py": "95676f53a72675312b705d3b8276230d94f0b452d2e8a96fadb524a9acf93ded",
+      "frameworks/joint_healthy/replay.py": "aa09a5c671851eae7148e4bfd539906f67e895add5ee59cdef616a3c473bfed4",
+      "frameworks/joint_healthy/native/orca-server-joint-healthy.cc": "87e07dbc9ffff74168419bfbf69748258cc4f9e6faceffe3d963d1ed28fb4998",
+      "frameworks/joint_healthy/native/joint_protocol.h": "6c967350bdceabe0347b86bee86f0ef9126a00e57624d290cbf6aa79b5107e38"
+    },
+    "native_sha256": "0174f0a772b984249f43ef664adb249f476fe86c6b216922d553f73cf98d6197"
+  },
+  "changed_sources": [
+    "frameworks/joint_healthy/audit.py"
+  ],
+  "actual_sender_model_normalizer_and_native_unchanged": true,
+  "performance_criteria_unchanged": true,
+  "original_full_flow_recovered_without_TCP_rerun": "postprocessing-recovered-original-run.json",
+  "fullg3cont_manifest_inherits_original_registration_actual_source_is_this_bridge": true
+}

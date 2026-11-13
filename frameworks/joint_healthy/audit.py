@@ -1,9 +1,10 @@
 """Post-run identity/timing/action checks; cannot affect the live controller."""
 import csv
 import json
+import math
 from pathlib import Path
 import numpy as np
-from .core import period_ms
+from .core import period_ms, wire
 from .flow import dump
 
 
@@ -25,13 +26,16 @@ def audit_flow(folder, frozen_seconds=None):
     for (control, timing), decision in zip(applied, decisions):
         if int(control['state_id']) != decision['state_id'] or control['state_id'] != control['action_id'] or control['state_id'] != timing['state_id']:
             raise ValueError('Decision/state ID binding mismatch')
-        percent = int(100 * 4 ** float(decision['action'][0]))
+        # TF1 tanh may overshoot an endpoint by one float32 ULP. The sender
+        # already validates then clips; audit the exact serialized command.
+        percent = int(wire(decision['state_id'],decision['action']).split()[1])
         requested = min(2147483647, max(4, percent * int(control['cwnd_before']) // 100))
         if percent != int(control['percent']) or requested != int(control['cwnd_requested']) or int(control['return_code']) != 0:
             raise ValueError('Native integer action mapping/application error')
         if abs(int(timing['planned_wait_us']) - period_ms(decision['action'][1]) * 1000) > .501:
             raise ValueError('Native scheduled period mismatch')
     if len(boundaries) < len(feedback): raise ValueError('Missing real observation endpoint records')
+    normalization_peak=0.
     for index, item in enumerate(feedback):
         if int(boundaries[index]['state_id']) != item['state_id']: raise ValueError('Feedback/native boundary mismatch')
         if bool(item['fresh_rtt']) != (float(item['raw'][2]) > 0): raise ValueError('Fabricated RTT freshness')
@@ -41,6 +45,17 @@ def audit_flow(folder, frozen_seconds=None):
             raise ValueError('Feedback ID gap')
         if index and cfg['clock_mode'] == 'scheduled' and int(boundaries[index]['kernel_queries']) - int(boundaries[index - 1]['kernel_queries']) != 1:
             raise ValueError('Unexpected socket telemetry read between scheduled boundaries')
+        if cfg.get('rate_mode')=='acked_legacy_peak':
+            boundary=boundaries[index];raw=item['raw'];dt=int(boundary['dt_us'])/1e6
+            if not math.isclose(float(raw[1]),int(boundary['delta_bytes'])/dt,rel_tol=2e-6,abs_tol=1e-6):
+                raise ValueError('ACK numerator does not match its real counter interval')
+            estimator=float(boundary['delivery_sample_mean'])
+            if not math.isclose(float(raw[4]),estimator,rel_tol=1e-7,abs_tol=1e-5):
+                raise ValueError('Legacy peak estimator is not bound to the same native snapshot')
+            normalization_peak=max(normalization_peak,estimator)
+            utility=(float(raw[1])-5*float(raw[7]))/normalization_peak*min(1.,1.25*float(raw[14])/float(raw[8]))
+            if not math.isclose(item['max_bw'],normalization_peak,rel_tol=1e-7) or not math.isclose(item['original_utility'],utility,rel_tol=1e-7,abs_tol=1e-7):
+                raise ValueError('Reward/state normalizer does not match declared legacy estimator peak')
     lines = [l for l in (folder / 'server.log').read_text().splitlines() if 'ORCA_STARTUP_HANDOFF ' in l]
     if len(lines) != 1: raise ValueError('Missing/duplicate natural handoff')
     startup = dict(x.split('=', 1) for x in lines[0].split('ORCA_STARTUP_HANDOFF ', 1)[1].split())

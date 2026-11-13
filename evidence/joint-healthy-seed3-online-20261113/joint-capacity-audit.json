@@ -1,0 +1,408 @@
+[
+  {
+    "node": 0,
+    "flows": [],
+    "result": {
+      "status": "PARTIAL_CALIBRATION_ONLY",
+      "reason": "",
+      "counters": {
+        "critic_iterations": 4925,
+        "critic_optimizer_ops": 9850,
+        "actor_updates": 0,
+        "target_updates": 4925
+      },
+      "phase": 0,
+      "credit": {
+        "inserted": 50057,
+        "physical_seconds": 1440.615483,
+        "warmup_seconds": 455.440278,
+        "warmup_inserted": 16018,
+        "per_actor": [
+          2113,
+          2131,
+          2136,
+          2077,
+          2100,
+          2090,
+          2082,
+          2092,
+          2091,
+          2060,
+          2038,
+          2004,
+          2124,
+          2125,
+          2082,
+          2029,
+          2118,
+          2077,
+          2124,
+          2031,
+          2106,
+          2109,
+          2085,
+          2033
+        ],
+        "per_actor_seconds": [
+          60.00275099999997,
+          60.016670999999874,
+          60.019247999999806,
+          60.02813399999999,
+          60.132307000000054,
+          60.06960699999983,
+          60.03362699999995,
+          60.015776999999964,
+          60.0055310000001,
+          60.0205019999999,
+          60.11301800000005,
+          60.011852999999945,
+          60.007515999999946,
+          60.01335700000006,
+          60.012999999999984,
+          60.01882400000002,
+          60.00638400000006,
+          60.02171499999998,
+          60.01826200000006,
+          60.004658999999904,
+          60.01615399999996,
+          60.010525,
+          60.01018600000006,
+          60.00587499999994
+        ],
+        "update_limit": 4925,
+        "updates_per_base20ms": 0.1
+      },
+      "producer_done": {
+        "16": 2118,
+        "15": 2029,
+        "0": 2113,
+        "17": 2077,
+        "2": 2136,
+        "10": 2038,
+        "8": 2091,
+        "3": 2077,
+        "9": 2060,
+        "21": 2109,
+        "5": 2090,
+        "7": 2092,
+        "14": 2082,
+        "4": 2100,
+        "12": 2124,
+        "13": 2125,
+        "18": 2124,
+        "1": 2131,
+        "6": 2082,
+        "22": 2085,
+        "19": 2031,
+        "11": 2004,
+        "20": 2106,
+        "23": 2033
+      },
+      "endpoint": "@RUN@/frameworks/joint_healthy/checkpoints/capacity-joint-g3-60-serial-start/step-50057",
+      "update_debt": 0,
+      "exposure_complete": true,
+      "trained_joint_endpoint": false,
+      "no_complete_resume": true,
+      "performance_verified": false
+    },
+    "replay_discount_error": 2.9798441159023525e-08,
+    "frozen_online_and_target_window_variables": [
+      "abstract_actor/abstract_actor/bn1/moving_mean",
+      "abstract_actor/abstract_actor/fc2/b",
+      "abstract_actor/abstract_actor/bn2/moving_variance",
+      "abstract_actor/abstract_actor/fc1_1/b",
+      "abstract_actor/abstract_actor/bn2/beta",
+      "abstract_actor/abstract_actor/bn1/moving_variance",
+      "abstract_actor/abstract_actor/bn2/moving_mean",
+      "abstract_actor/abstract_actor/bn1/beta",
+      "abstract_actor/abstract_actor/fc1/w",
+      "abstract_actor/abstract_actor/fc1_1/w",
+      "abstract_actor/abstract_actor/fc1/b",
+      "abstract_actor/abstract_actor/fc2/w"
+    ]
+  },
+  {
+    "node": 1,
+    "flows": [
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor0-ep0",
+        "seconds": 60.00275099999997,
+        "transitions": 2113,
+        "calls": 2113,
+        "start": 1794581620.6938398,
+        "wall": 60.79732499000011,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor12-ep0",
+        "seconds": 60.007515999999946,
+        "transitions": 2124,
+        "calls": 2124,
+        "start": 1794581624.6076164,
+        "wall": 64.72156436700016,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor16-ep0",
+        "seconds": 60.00638400000006,
+        "transitions": 2118,
+        "calls": 2118,
+        "start": 1794581620.43,
+        "wall": 60.730338270000175,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor20-ep0",
+        "seconds": 60.01615399999996,
+        "transitions": 2106,
+        "calls": 2106,
+        "start": 1794581626.9626975,
+        "wall": 67.06400781899993,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.008068343616516375,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor4-ep0",
+        "seconds": 60.132307000000054,
+        "transitions": 2100,
+        "calls": 2100,
+        "start": 1794581624.045865,
+        "wall": 64.3464042149999,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0038077106139933364,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor8-ep0",
+        "seconds": 60.0055310000001,
+        "transitions": 2091,
+        "calls": 2091,
+        "start": 1794581621.8000715,
+        "wall": 61.99541284199995,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0,
+        "cleanup": "PASS"
+      }
+    ]
+  },
+  {
+    "node": 2,
+    "flows": [
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor1-ep0",
+        "seconds": 60.016670999999874,
+        "transitions": 2131,
+        "calls": 2131,
+        "start": 1794581625.19146,
+        "wall": 65.35894353699996,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0028142589118198874,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor13-ep0",
+        "seconds": 60.01335700000006,
+        "transitions": 2125,
+        "calls": 2125,
+        "start": 1794581624.680223,
+        "wall": 64.85156979400017,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.008466603951081843,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor17-ep0",
+        "seconds": 60.02171499999998,
+        "transitions": 2077,
+        "calls": 2077,
+        "start": 1794581620.7434766,
+        "wall": 60.997418085999925,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0009624639076034649,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor21-ep0",
+        "seconds": 60.010525,
+        "transitions": 2109,
+        "calls": 2109,
+        "start": 1794581623.2786689,
+        "wall": 63.4592743889998,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0009478672985781991,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor5-ep0",
+        "seconds": 60.06960699999983,
+        "transitions": 2090,
+        "calls": 2090,
+        "start": 1794581623.5472565,
+        "wall": 63.747811919000014,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor9-ep0",
+        "seconds": 60.0205019999999,
+        "transitions": 2060,
+        "calls": 2060,
+        "start": 1794581623.0163152,
+        "wall": 63.12640887999987,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.00048520135856380397,
+        "cleanup": "PASS"
+      }
+    ]
+  },
+  {
+    "node": 3,
+    "flows": [
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor10-ep0",
+        "seconds": 60.11301800000005,
+        "transitions": 2038,
+        "calls": 2038,
+        "start": 1794581621.4801834,
+        "wall": 61.75499279199994,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor14-ep0",
+        "seconds": 60.012999999999984,
+        "transitions": 2082,
+        "calls": 2082,
+        "start": 1794581623.7829518,
+        "wall": 64.08589380100011,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.00048007681228996637,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor18-ep0",
+        "seconds": 60.01826200000006,
+        "transitions": 2124,
+        "calls": 2124,
+        "start": 1794581624.9240706,
+        "wall": 65.17666733999977,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.02258823529411765,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor2-ep0",
+        "seconds": 60.019247999999806,
+        "transitions": 2136,
+        "calls": 2136,
+        "start": 1794581621.2116907,
+        "wall": 61.591298599999845,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.007487131492746842,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor22-ep0",
+        "seconds": 60.01018600000006,
+        "transitions": 2085,
+        "calls": 2085,
+        "start": 1794581626.0367472,
+        "wall": 66.2199637990002,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.00047938638542665386,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor6-ep0",
+        "seconds": 60.03362699999995,
+        "transitions": 2082,
+        "calls": 2082,
+        "start": 1794581625.4578164,
+        "wall": 65.6437396020001,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.00048007681228996637,
+        "cleanup": "PASS"
+      }
+    ]
+  },
+  {
+    "node": 4,
+    "flows": [
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor11-ep0",
+        "seconds": 60.011852999999945,
+        "transitions": 2004,
+        "calls": 2004,
+        "start": 1794581626.6038544,
+        "wall": 66.77530065200017,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0004987531172069825,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor15-ep0",
+        "seconds": 60.01882400000002,
+        "transitions": 2029,
+        "calls": 2029,
+        "start": 1794581620.3833218,
+        "wall": 60.711862868000026,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor19-ep0",
+        "seconds": 60.004658999999904,
+        "transitions": 2031,
+        "calls": 2031,
+        "start": 1794581626.063112,
+        "wall": 66.36332214000004,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0024606299212598425,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor23-ep0",
+        "seconds": 60.00587499999994,
+        "transitions": 2033,
+        "calls": 2033,
+        "start": 1794581627.7519429,
+        "wall": 67.9138607130003,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0009832841691248771,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor3-ep0",
+        "seconds": 60.02813399999999,
+        "transitions": 2077,
+        "calls": 2077,
+        "start": 1794581622.6364183,
+        "wall": 62.904162257999815,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.002406159769008662,
+        "cleanup": "PASS"
+      },
+      {
+        "flow": "capacity-joint-g3-60-serial-start-actor7-ep0",
+        "seconds": 60.015776999999964,
+        "transitions": 2092,
+        "calls": 2092,
+        "start": 1794581623.7354088,
+        "wall": 63.98518713900012,
+        "audit": "PASS_EXECUTION_CONTRACT_ONLY",
+        "empty": 0.0019111323459149545,
+        "cleanup": "PASS"
+      }
+    ]
+  }
+]

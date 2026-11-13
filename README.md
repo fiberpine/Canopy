@@ -10,6 +10,7 @@
 - [模型与native逐文件校验](CURRENT_BASELINE.json)
 - [历史问题、失败和修复索引](docs/HISTORY_STATUS_20261113.md)
 - [从健康基座迁移的双动作候选：离线实现与待验阶段](docs/JOINT_HEALTHY_SEED3_V1.md)（独立入口，尚无新TCP性能结论）
+- [双动作上线：计量修复、容量与完整性能准入进展](docs/JOINT_HEALTHY_SEED3_ONLINE_20261113.md)（进行中，只调双动作，无独立固定MTP训练）
 
 ## 当前入口
 

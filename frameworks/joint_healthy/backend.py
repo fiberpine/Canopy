@@ -16,6 +16,13 @@ from .replay import Replay, CalibrationGate
 R = Path(__file__).resolve().parent
 
 
+def completed_worker(result, cfg):
+    if result['status']=='COMPLETED': return True
+    return (result['status']=='PARTIAL_CALIBRATION_ONLY' and not cfg.get('release_joint',False)
+            and result.get('exposure_complete') is True
+            and len(result.get('producer_done',{}))==cfg['num_actors'])
+
+
 def setup(cfg, learner):
     import tensorflow as tf
     from .model import Model
@@ -24,7 +31,7 @@ def setup(cfg, learner):
     options = tf.ConfigProto(intra_op_parallelism_threads=cfg.get('tf_threads', 4), inter_op_parallelism_threads=cfg.get('tf_threads', 4), operation_timeout_in_ms=10000)
     server = tf.train.Server(spec, job_name='learner', task_index=0, config=options) if learner else None
     with tf.device('/job:learner/task:0/cpu:0'):
-        model = Model(cfg, training=True)
+        model = Model(cfg, training=learner)
         dtypes = [tf.float32] * 7 + [tf.int32, tf.int64, tf.int64]
         dtypes[5] = tf.float64
         shapes = [[82], [2], [1], [82], [1], [1], [1], [], [], []]
@@ -83,10 +90,13 @@ def run_learner(cfg):
     dump(folder / 'ready.json', dict(epoch=time.time(), initial_checkpoint=initial))
     training = (folder / 'training.jsonl').open('x', buffering=65536)
     last_report = 0.; last_gate = -1; next_checkpoint = cfg.get('checkpoint_updates', 10000)
-    reason = ''; status = 'RUNNING'; latest_gradients = [0., 0.]; stop_seen = None; endpoint = initial
+    ready_epoch=time.time()
+    reason = ''; status = 'RUNNING'; latest_gradients = [0., 0.]; stop_seen = None; endpoint = initial; complete_exposure=False
     try:
         while True:
             if errors: raise RuntimeError(errors[0])
+            if replay.credit.inserted==0 and time.time()-ready_epoch>120:
+                raise RuntimeError('No real actor experience within120s; inspect RPC/actor failures')
             if time.time() >= cfg['deadline_epoch'] - 15: raise RuntimeError('Checkpoint/drain deadline reached')
             with lock: limit = replay.credit.limit; all_done = len(done) == cfg['num_actors']
             if (folder / 'stop.json').exists():
@@ -163,6 +173,7 @@ def run_learner(cfg):
         result = dict(status=status, reason=reason, counters=counters, phase=gate.phase,
                       credit=replay.credit.record(), producer_done=done, endpoint=endpoint,
                       update_debt=max(0, replay.credit.limit - counters['critic_iterations']),
+                      exposure_complete=complete_exposure, trained_joint_endpoint=counters['actor_updates']>0,
                       no_complete_resume=True, performance_verified=False)
         dump(folder / 'result.json', result); dump(folder / 'finished.json', dict(status=status))
     return result
@@ -171,6 +182,9 @@ def run_learner(cfg):
 def run_actor(cfg, index):
     folder = R / 'logs' / ('%s-producer%d' % (cfg['run_id'], index)); folder.mkdir(parents=True, exist_ok=False)
     tf, model, sess, ph, enq, number, deq, size = setup(cfg, False)
+    # Establish the shared-variable RPC before opening a real TCP connection.
+    # Graph registration is allowed a startup reserve; live decisions stay bounded.
+    sess.run(model.phase,options=tf.RunOptions(timeout_in_ms=30000))
     local = queue.Queue(maxsize=4096); stop = threading.Event(); finished = threading.Event()
     counts = dict(generated=0, enqueued=0, policy_calls=0, exploration_calls=0)
     errors = []; rng = np.random.RandomState(cfg['seed'] + index * 1009)
@@ -256,10 +270,11 @@ def worker_main():
         for child, stream, index in children:
             child.wait(); stream.close()
         rows = [json.loads((R / 'logs' / ('%s-producer%d' % (cfg['run_id'], index)) / 'producer.json').read_text()) for _, _, index in children]
-        print(json.dumps(dict(status='COMPLETED' if all(x['status'] == 'COMPLETED' for x in rows) else 'FAILED', actors=rows)), flush=True)
-        return
+        succeeded=all(x['status']=='COMPLETED' for x in rows) and all(child.returncode==0 for child,_,_ in children)
+        print(json.dumps(dict(status='COMPLETED' if succeeded else 'FAILED',actors=rows)),flush=True)
+        sys.stdout.flush();sys.stderr.flush();os._exit(0 if succeeded else 2)
     result = run_learner(cfg) if args.role == 'learner' else run_actor(cfg, args.index)
     print(json.dumps(result), flush=True)
     # TF1 shared-server session shutdown can otherwise hang after a peer exits.
     # All files, flow processes, IPC and producer queues were already closed.
-    sys.stdout.flush(); sys.stderr.flush(); os._exit(0 if result['status'] == 'COMPLETED' else 2)
+    sys.stdout.flush(); sys.stderr.flush(); os._exit(0 if completed_worker(result,cfg) else 2)

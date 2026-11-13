@@ -205,7 +205,7 @@ class Model:
         tf = self.tf
         record = json.loads(Path(str(prefix) + '.joint.json').read_text())
         if record['schema'] != SCHEMA: raise ValueError('Checkpoint schema mismatch')
-        for key in ('rate_mode', 'clock_mode', 'decision_cost', 'fixed_mtp_ms'):
+        for key in ('rate_mode', 'clock_mode', 'utility_normalization', 'decision_cost', 'fixed_mtp_ms'):
             if record['cfg'].get(key) != self.cfg.get(key): raise ValueError('Checkpoint semantics mismatch: ' + key)
         selected = tf.global_variables() if self.training else self.online_vars + [self.phase, self.schema, self.rate_schema, self.clock_schema]
         tf.train.Saver(var_list=selected).restore(session, str(prefix))

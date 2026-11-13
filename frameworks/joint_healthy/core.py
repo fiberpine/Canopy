@@ -12,7 +12,7 @@ CALIBRATION, FORWARD_ONLY, JOINT = 0, 1, 2
 
 def validate(cfg):
     required = dict(schema=SCHEMA, state_dim=82, action_dim=2,
-                    reward_mode='raw', utility_normalization='observed_peak',
+                    reward_mode='raw',
                     reward_semantics='observed_interval_orca_density',
                     base_period_s=.02, gamma=.995, tau=.001, updates_per_base20ms=.1,
                     critic_loss='MSE', target_window_noise_std=.1, target_window_noise_clip=.2, target_time_noise_std=0.)
@@ -25,8 +25,10 @@ def validate(cfg):
         raise ValueError('Properties, QC, fallback and capacity oracle are disabled')
     if cfg.get('clock_mode') not in ('legacy_feedback', 'scheduled'):
         raise ValueError('Explicit observation clock required')
-    if cfg.get('rate_mode') not in ('legacy', 'acked_bytes'):
+    if cfg.get('rate_mode') not in ('legacy', 'acked_bytes', 'acked_legacy_peak'):
         raise ValueError('Explicit rate measurement required')
+    normalization = 'legacy_delivery_peak' if cfg['rate_mode'] == 'acked_legacy_peak' else 'observed_peak'
+    if cfg.get('utility_normalization') != normalization: raise ValueError('Rate/normalizer contract mismatch')
     fixed = cfg.get('fixed_mtp_ms')
     if fixed is not None and float(fixed) not in PERIODS: raise ValueError('Unsupported fixed period')
     if cfg['clock_mode'] == 'legacy_feedback' and fixed != 20:
@@ -108,7 +110,9 @@ class Observation:
     Prefix throughput semantics are deliberately selected by the native mode.
     An empty RTT interval never becomes a fabricated fresh measurement.
     """
-    def __init__(self):
+    def __init__(self, rate_mode='legacy'):
+        if rate_mode not in ('legacy','acked_bytes','acked_legacy_peak'): raise ValueError('Observation rate schema')
+        self.rate_mode = rate_mode
         self.max_bw = 0.
         self.history = np.zeros((10, 7), np.float32)
         self.gaps = np.zeros(10, np.float32)
@@ -123,7 +127,9 @@ class Observation:
         if min(dt, cwnd, srtt, minimum) <= 0 or min(rate, count, loss, pacing) < 0:
             raise ValueError('Invalid feedback units/ranges')
         if not self.frames and count <= 0: raise ValueError('Bootstrap needs a real RTT sample')
-        self.max_bw = max(self.max_bw, rate)
+        normalization_rate = x[4] if self.rate_mode == 'acked_legacy_peak' else rate
+        if normalization_rate < 0: raise ValueError('Negative normalization estimator')
+        self.max_bw = max(self.max_bw, normalization_rate)
         if self.max_bw <= 0: raise ValueError('No observed bandwidth for reward normalization')
         penalty = min(1., 1.25 * minimum / srtt)
         utility = (rate - 5 * loss) / self.max_bw * penalty
@@ -140,7 +146,8 @@ class Observation:
         metadata = dict(fresh_rtt=bool(count > 0), rtt_age_lower_s=self.age_lower,
                         rtt_age_upper_s=self.age_upper, actual_dt_s=dt, max_bw=self.max_bw,
                         original_utility=utility, throughput_term=rate / self.max_bw,
-                        loss_term=5 * loss / self.max_bw, delay_term=penalty)
+                        loss_term=5 * loss / self.max_bw, delay_term=penalty,
+                        normalization_sample=float(normalization_rate), normalization_source=self.rate_mode)
         return state, float(utility), metadata
 
 
