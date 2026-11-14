@@ -1,0 +1,22 @@
+{
+  "status": "PREREGISTERED_OPERATIONAL_AMENDMENT_BEFORE_ANY_FINAL_SLOTS",
+  "epoch": 1794655854.335909,
+  "reason": "Sustained joint updates slower than60sec critic-only admission. Overlap independent local-inference references with learner-only credit drain after24producers cleanly stop.",
+  "machine_assignment": "Four actor hosts only; each scenario/repeat assigned identical host across all3groups; node0 reserved for learner drain",
+  "sequence": "Complete all producer exposure and cleanup;144 reference slots first on idle actor hosts;72 endpoint slots afterward, once training audited and references ended",
+  "unchanged": [
+    "216 unique slot identities",
+    "24conditions x3repeats pergroup",
+    "all seeds",
+    "duration60sec",
+    "health thresholds",
+    "unique1800sec endpoint",
+    "one flow/host",
+    "no independent fixed training"
+  ],
+  "limitations": [
+    "Groups are staged in wall time rather than fully interleaved; document potential temporal confounding",
+    "Reference execution overlaps remote learner drain; no learner process on any evaluation host and no inference RPC to learner"
+  ],
+  "previous_assignment_preserved": "batch-finalg4-before-phased-schedule.json"
+}

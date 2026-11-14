@@ -1,0 +1,19 @@
+{
+  "status": "ACTUAL_EXISTING_CLAUDE_THREAD_REVIEW_READ_20261114_1922",
+  "scope": "Read our factual summary only; explicitly did not open public report, new code, raw logs or run tests",
+  "facts_shared": "Full G4 admission150 PASS; real capacity49109 PASS; unique1800sec run underway;120ms holdout TD near.06 versus.05; timed resets use terminal=True without remaining-time observation",
+  "points": [
+    "A single Q-sized error among256 rows can give normalized RMSE near.0625. This is a clue, not identification of an outlier or proof of causality.",
+    "Inspect per-row error distributions and terminal/truncation membership. Broad error increases and isolated heavy-tail samples imply different interventions.",
+    "For continuing TCP control, artificial180sec reconnects should separate physical episode boundaries from Bellman termination masks; final real observation can bootstrap without crossing into the new connection.",
+    "Keep current run unchanged and complete within registered budget; no threshold relaxation or hot mask change. If calibration naturally passes, continue while retaining terminal handling as a known defect and interpreting results with that limitation.",
+    "Post-run analyze retained replay and checkpoint errors including/excluding terminal rows. Original heldout rows are not saved, so later replay diagnostics cannot reconstruct the exact admission statistic."
+  ],
+  "our_followup_facts": "At25500 critic iterations phase0 admitted without threshold changes, phase1 admitted26500, phase2 observed26706 with206 actor updates; window/time gradients .33973/.00607088",
+  "decision": "Continue the one registered run without hot changes; separate final independent frozen performance from a reproducible-training-method claim; audit timed terminal impact afterward",
+  "primary_sources_checked_independently": [
+    "https://gymnasium.farama.org/v0.26.3/tutorials/handling_time_limits/",
+    "https://spinningup.openai.com/en/latest/_modules/spinup/algos/pytorch/ddpg/ddpg.html"
+  ],
+  "not_claimed": "No proof that terminal rows uniquely caused the gate delay or later performance; no additional training or protocol fix approved by this review"
+}
