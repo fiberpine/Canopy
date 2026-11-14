@@ -9,7 +9,7 @@ import time
 import traceback
 import numpy as np
 from .configuration import ROOT
-from .core import JOINT, calibration_period, period_action
+from .core import JOINT, calibration_period, period_action, period_ms
 from .flow import dump, run_flow
 from .replay import Replay, CalibrationGate
 
@@ -204,7 +204,7 @@ def run_actor(cfg, index):
         value = value[0]; pure = value.copy(); explored = False
         if phase < JOINT:
             # The window and its statistics remain frozen and unperturbed.
-            ms, explored = calibration_period(cfg, int(phase), rng)
+            ms, explored = calibration_period(cfg, int(phase), rng,period_ms(pure[1]))
             value[1] = period_action(ms)
         else:
             noise = rng.normal(0., cfg['exploration_std'], 2)

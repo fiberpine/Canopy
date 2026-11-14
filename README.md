@@ -9,8 +9,9 @@
 - [三地清理、独立交付与恢复记录](docs/BASELINE_RETIREMENT_20261113.md)
 - [模型与native逐文件校验](CURRENT_BASELINE.json)
 - [历史问题、失败和修复索引](docs/HISTORY_STATUS_20261113.md)
-- [从健康基座迁移的双动作候选：离线实现与待验阶段](docs/JOINT_HEALTHY_SEED3_V1.md)（独立入口，尚无新TCP性能结论）
-- [双动作上线：计量修复、容量与完整性能准入进展](docs/JOINT_HEALTHY_SEED3_ONLINE_20261113.md)（进行中，只调双动作，无独立固定MTP训练）
+- [从健康基座迁移的双动作候选：初次离线实现](docs/JOINT_HEALTHY_SEED3_V1.md)（历史契约）
+- [双动作首次上线：计量修复、容量与完整性能失败](docs/JOINT_HEALTHY_SEED3_ONLINE_20261113.md)
+- [当前双动作续接：反馈时延诊断与G4初始化准入](docs/JOINT_HEALTHY_RECOVERY_20261114.md)（尚无完成的新联合训练，不训练独立固定MTP组）
 
 ## 当前入口
 

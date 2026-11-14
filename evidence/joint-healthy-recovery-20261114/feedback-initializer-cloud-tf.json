@@ -1,0 +1,35 @@
+{
+  "status": "PASS_REAL_TF_FEEDBACK_INITIALIZER",
+  "schema": "healthy-seed3-joint82-rtt-v2",
+  "tf_version": "1.14.0",
+  "periods_ms": [
+    20.5,
+    40.0,
+    20.5,
+    49.999996185302734,
+    20.5,
+    100.0,
+    20.5,
+    120.0
+  ],
+  "expected_ms": [
+    20.5,
+    40.0,
+    20.5,
+    50.0,
+    20.5,
+    100.0,
+    20.5,
+    120.0
+  ],
+  "maximum_period_error_ms": 3.814697265625e-06,
+  "gradients": [
+    68.12943267822266,
+    0.0017392277950420976
+  ],
+  "context_parity": true,
+  "window_extension_invariance": true,
+  "target_parity": true,
+  "learned_full_range": true,
+  "new_tcp": 0
+}

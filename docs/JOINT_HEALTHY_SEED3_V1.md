@@ -1,5 +1,7 @@
 # 从健康 seed3 迁移的双动作候选：离线实现
 
+> 本文保留2026-11-13离线实现的历史契约。当前源码已进入RTT特征v2和G4反馈覆盖初始化验证，最新状态见[续接记录](JOINT_HEALTHY_RECOVERY_20261114.md)。下文旧schema、10gap及固定40ms初值不代表当前G4。
+
 2026-11-13。用户已批准按两轮 Claude 讨论后的方案先离线实现。独立分支 `innovation/joint-cwnd-mtp-healthy-seed3-v1`，起点为 `baseline-healthy-seed3-natural-20261113`（`c67717d`）。**本版只有离线证据，没有新 TCP 测试、云端部署、训练模型或性能收益。** 当前可用健康基座仍由 `CURRENT_BASELINE.json` 指定。
 
 ## 实现与入口

@@ -4,7 +4,7 @@
 
 从仓库根目录使用 `joint_healthy.py`。完整设计、验证、阶段门和限制见 [实施记录](../../docs/JOINT_HEALTHY_SEED3_V1.md)。
 
-上线计量修复、负面结果、容量检查及当前门槛见 [在线记录](../../docs/JOINT_HEALTHY_SEED3_ONLINE_20261113.md)。新 G3 需要自己的完整网格回执；不能拿 G0 的机制检查代替性能准入。
+旧计量修复、负面结果和容量检查见 [在线记录](../../docs/JOINT_HEALTHY_SEED3_ONLINE_20261113.md)。当前G4与RTT状态schema见 [续接记录](../../docs/JOINT_HEALTHY_RECOVERY_20261114.md)，需要自己的完整网格回执；不能拿G0或失败G3代替性能准入。
 
 - 不导入旧V31管线，不改原baseline文件。
 - 默认成本0，无Canopy性质奖励、QC、fallback或容量oracle。

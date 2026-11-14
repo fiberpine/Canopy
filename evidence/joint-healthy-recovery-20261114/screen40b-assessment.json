@@ -1,0 +1,148 @@
+{
+  "status": "PERFORMANCE_FAIL",
+  "batch": "screen40b",
+  "groups": {
+    "base": {
+      "cells": [
+        {
+          "scenario": 0,
+          "utilization": 1.0000013871401439,
+          "queue_mean_ms": 7.555029554146942,
+          "queue_p95_ms": 10.666666666666666,
+          "queue_p99_ms": 12.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 3,
+          "utilization": 0.9948929590189006,
+          "queue_mean_ms": 13.128135368590785,
+          "queue_p95_ms": 24.0,
+          "queue_p99_ms": 26.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 5,
+          "utilization": 1.0000008091650838,
+          "queue_mean_ms": 8.20046621788343,
+          "queue_p95_ms": 11.0,
+          "queue_p99_ms": 12.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 12,
+          "utilization": 0.9959985520941291,
+          "queue_mean_ms": 8.980645324262435,
+          "queue_p95_ms": 14.666666666666666,
+          "queue_p99_ms": 16.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 20,
+          "utilization": 0.9979414075833428,
+          "queue_mean_ms": 15.7462708602062,
+          "queue_p95_ms": 27.0,
+          "queue_p99_ms": 29.666666666666668,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 21,
+          "utilization": 0.9998966600058786,
+          "queue_mean_ms": 5.336681268404459,
+          "queue_p95_ms": 8.0,
+          "queue_p99_ms": 10.0,
+          "dropped_packets": 0.0
+        }
+      ],
+      "overall": {
+        "utilization": 0.9981219625012465,
+        "queue_mean_ms": 9.824538098915708,
+        "queue_p95_ms": 15.88888888888889,
+        "queue_p99_ms": 17.61111111111111,
+        "dropped_packets": 0.0
+      }
+    },
+    "g340": {
+      "cells": [
+        {
+          "scenario": 0,
+          "utilization": 0.9994332465481551,
+          "queue_mean_ms": 18.31910068751349,
+          "queue_p95_ms": 28.0,
+          "queue_p99_ms": 31.333333333333332,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 3,
+          "utilization": 0.9999949316033205,
+          "queue_mean_ms": 42.80517275040563,
+          "queue_p95_ms": 46.0,
+          "queue_p99_ms": 47.666666666666664,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 5,
+          "utilization": 0.9991749983994537,
+          "queue_mean_ms": 24.53471293697976,
+          "queue_p95_ms": 33.666666666666664,
+          "queue_p99_ms": 36.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 12,
+          "utilization": 0.9994006533357719,
+          "queue_mean_ms": 15.989152357994923,
+          "queue_p95_ms": 23.333333333333332,
+          "queue_p99_ms": 27.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 20,
+          "utilization": 0.9999900384476808,
+          "queue_mean_ms": 38.353402510069536,
+          "queue_p95_ms": 61.333333333333336,
+          "queue_p99_ms": 72.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 21,
+          "utilization": 0.9980718322145106,
+          "queue_mean_ms": 20.585145615307397,
+          "queue_p95_ms": 42.333333333333336,
+          "queue_p99_ms": 47.0,
+          "dropped_packets": 0.0
+        }
+      ],
+      "overall": {
+        "utilization": 0.9993442834248154,
+        "queue_mean_ms": 26.76444780971179,
+        "queue_p95_ms": 39.111111111111114,
+        "queue_p99_ms": 43.5,
+        "dropped_packets": 0.0
+      }
+    }
+  },
+  "reasons": [
+    "c0:queue_disaster",
+    "c3:queue_disaster",
+    "c5:queue_disaster",
+    "c20:queue_disaster",
+    "c21:queue_disaster",
+    "r14-screen40b-g340-c00-r1:full_or_trim_drops",
+    "r14-screen40b-g340-c05-r0:full_or_trim_drops",
+    "r14-screen40b-g340-c00-r0:full_or_trim_drops",
+    "r14-screen40b-g340-c00-r2:full_or_trim_drops",
+    "r14-screen40b-g340-c05-r1:full_or_trim_drops",
+    "queue_mean_ms:above120percent",
+    "queue_p95_ms:above120percent"
+  ],
+  "completed": 36,
+  "execution_failures": 0,
+  "criteria": {
+    "minimum_condition_mean_utilization": 0.95,
+    "maximum_overall_utilization_loss_pp": 1.0,
+    "maximum_mean_queue_ratio": 1.2,
+    "maximum_p95_ratio": 1.2,
+    "full_and_trim_dropped_packets": 0,
+    "per_condition_queue_guard": "max(2*paired_base,paired_base+10ms)"
+  }
+}

@@ -22,7 +22,8 @@ def configuration(profile='joint'):
         calibration_rows_per_actor_period=128, minimum_holdout_per_period=16,
         holdout_rows_per_period=256, maximum_normalized_td_rmse=.25, relative_td_limit=2.,
         short_return_blocks_per_period=64, minimum_short_return_blocks=4, maximum_normalized_short_return_rmse=.35,
-        time_init_ms=40., period_probe_probability=.1, clock_mode='scheduled', rate_mode='acked_bytes',
+        time_init_ms=40., time_initializer='constant', calibration_main_mode='constant',
+        period_probe_probability=.1, clock_mode='scheduled', rate_mode='acked_bytes',
         fixed_mtp_ms=None, physical_seconds_per_actor=600., connection_reset_seconds=0.,
         exploration_std=.2, checkpoint_updates=10000, stop_reserve_s=60,
         run_id='new-joint-healthy-run', learner_endpoint='@LEARNER_IP@:25000', actor_port_base=23000,
@@ -30,7 +31,10 @@ def configuration(profile='joint'):
         baseline_checkpoint=str(ROOT / 'models/healthy-baseline-seed3/training/step-6013196'),
         source_policy_sha256='631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0',
         candidate_status='OFFLINE_ONLY_NOT_TCP_VALIDATED', tf_threads=4)
-    if profile in ('g0', 'g1', 'g2', 'g3'):
+    if profile=='g4':
+        cfg.update(rate_mode='acked_legacy_peak', utility_normalization='legacy_delivery_peak',
+                   time_initializer='feedback_coverage_v1',calibration_main_mode='policy_initializer')
+    elif profile in ('g0', 'g1', 'g2', 'g3'):
         cfg['fixed_mtp_ms'] = 20.
         if profile == 'g0': cfg.update(clock_mode='legacy_feedback', rate_mode='legacy')
         if profile == 'g1': cfg['rate_mode'] = 'legacy'

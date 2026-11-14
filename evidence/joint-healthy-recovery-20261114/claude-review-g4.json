@@ -1,0 +1,23 @@
+{
+  "status": "ACTUAL_SUMMARY_REVIEW_COMPLETED",
+  "date_local": "2026-11-14 16:49",
+  "scope": "Claude read the supplied factual summary and proposed G4 contract; no source/kernel/raw-log inspection; no independent experiment",
+  "recommendations": [
+    "Feedback-aware initialization is a reasonable explicit approximation to the legacy implicit feedback gate, but120ms can still cause repeated actions during a250ms feedback gap",
+    "Minimum RTT can underestimate actual feedback delay; sparse ACKs can also slow recovery from low windows",
+    "Report G4 frozen initialization as a prior-only control; compare learned endpoint to both it and original baseline",
+    "Inspect consecutive stale positive actions and their compounded multiplier, plus packets_out relative to trace pipe plus buffer; zero drops alone has weak power",
+    "Preregister six extra G12-R200 frozen candidate repetitions, preserving every primary full-grid slot and all failures",
+    "Small softsign derivatives near20.5ms are not alone a rejection reason; monitor critic time gradients, logit movement and observed probe returns on fixed states, stratified by freshness",
+    "If clipping locks the time head despite sustained critic gradients and probe evidence, consider a separately registered initializer change; do not blindly replace algorithms",
+    "Keep the original full24x3 health gates; only after confirmation and capacity admission proceed to the unique bounded1800s/actor joint run",
+    "A cost-zero longer period with worse tails is measurement aliasing or regression, not benefit; no claim of adaptive superiority without independent fixed training"
+  ],
+  "independent_decisions": [
+    "Retain every G3/40ms failure and unchanged full+trim zero-drop criterion",
+    "Keep the first G4 initializer unchanged while testing, rather than selecting initial periods by partial scores",
+    "Register extra failure-condition repeats separately from the equally weighted primary24x3 grid",
+    "No independent fixed-MTP training per user instruction"
+  ],
+  "new_method_verified": false
+}

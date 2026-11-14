@@ -30,6 +30,15 @@ def row(period=20., terminal=0., dt=None):
 
 
 class NumericalContract(unittest.TestCase):
+    def test_joint_calibration_can_use_its_validated40ms_initializer(self):
+        cfg=dict(configuration(),calibration_main_ms=40.,period_probe_probability=0.)
+        validate(cfg);rng=np.random.RandomState(7)
+        for phase in (CALIBRATION,FORWARD_ONLY):
+            self.assertEqual(calibration_period(cfg,phase,rng),(40.,False))
+        default=dict(configuration(),period_probe_probability=0.)
+        self.assertEqual(calibration_period(default,CALIBRATION,rng),(20.,False))
+        with self.assertRaises(ValueError):validate(dict(cfg,calibration_main_ms=42.))
+
     def test_ack_numerator_uses_declared_legacy_estimator_peak(self):
         o=Observation('acked_legacy_peak')
         first=raw();first[4]=1000.;o.observe(first)
@@ -85,7 +94,21 @@ class NumericalContract(unittest.TestCase):
     def test_actual_gap_is_preserved_instead_of_planned_time(self):
         state, _, _ = Observation().observe(raw(dt=.087123), 40.)
         self.assertAlmostEqual(float(state[70]), math.log1p(.087123 / .02), places=6)
-        self.assertAlmostEqual(float(state[-1]), math.log1p(.087123 / .02), places=6)
+        self.assertAlmostEqual(float(state[78]), math.log1p(.087123 / .02), places=6)
+        self.assertAlmostEqual(float(state[79]),math.log1p(20./20.),places=6)
+        self.assertAlmostEqual(float(state[80]),math.log1p(25./20.),places=6)
+        self.assertAlmostEqual(float(state[81]),math.log1p(.087123/.02),places=6)
+
+    def test_feedback_prior_calibration_follows_actual_frozen_policy(self):
+        from frameworks.joint_healthy.core import feedback_initial_period
+        cfg=dict(configuration('g4'),period_probe_probability=0.)
+        rng=np.random.RandomState(3)
+        for fresh,minimum,expected in ((True,200,20.5),(False,20,40),(False,100,100),(False,200,120)):
+            self.assertEqual(feedback_initial_period(fresh,minimum),expected)
+            for phase in (CALIBRATION,FORWARD_ONLY):
+                self.assertEqual(calibration_period(cfg,phase,rng,expected),(expected,False))
+        with self.assertRaises(ValueError):calibration_period(cfg,CALIBRATION,rng)
+        with self.assertRaises(ValueError):validate(dict(cfg,calibration_main_mode='constant'))
 
     def test_period_roundtrip_and_finite_initialization(self):
         for p in PERIODS: self.assertAlmostEqual(period_ms(period_action(p)), p)

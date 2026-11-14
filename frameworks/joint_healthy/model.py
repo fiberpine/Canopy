@@ -128,11 +128,24 @@ class Model:
         z = tf.nn.leaky_relu(self._linear(z, t + '/fc2', 64))
         with tf.variable_scope(t + '/output', reuse=tf.AUTO_REUSE):
             w = tf.get_variable('kernel', (64, 1), initializer=tf.zeros_initializer())
-            b = tf.get_variable('bias', (1,), initializer=tf.constant_initializer(softsign_inverse(period_action(self.cfg.get('time_init_ms', 40.)))))
-        learned_time = tf.nn.softsign(tf.matmul(z, w) + b)
+            coverage=self.cfg.get('time_initializer')=='feedback_coverage_v1'
+            initial=0. if coverage else softsign_inverse(period_action(self.cfg.get('time_init_ms',40.)))
+            b = tf.get_variable('bias', (1,), initializer=tf.constant_initializer(initial))
+        residual=tf.matmul(z,w)+b
+        if coverage:
+            # Absolute minRTT lives at79 in the versioned state; no capacity,
+            # trace identity, future signal, action mask or window fallback.
+            minimum_ms=tf.expm1(tf.clip_by_value(state[:,79:80],0.,20.))*20.
+            prior_ms=tf.where(state[:,66:67]>0.,tf.ones_like(minimum_ms)*20.5,
+                              tf.clip_by_value(minimum_ms,40.,120.))
+            prior_action=2.*tf.log(prior_ms/20.)/np.log(8.)-1.
+            residual=residual+prior_action/(1.-tf.abs(prior_action))
+        learned_time = tf.nn.softsign(residual)
         fixed = self.cfg.get('fixed_mtp_ms')
         if fixed is not None:
             timing = tf.ones_like(learned_time) * period_action(float(fixed))
+        elif coverage:
+            timing=learned_time
         else:
             timing = tf.cond(tf.greater_equal(self.phase, FORWARD_ONLY), lambda: learned_time,
                              lambda: tf.ones_like(learned_time) * -1.)
@@ -205,7 +218,8 @@ class Model:
         tf = self.tf
         record = json.loads(Path(str(prefix) + '.joint.json').read_text())
         if record['schema'] != SCHEMA: raise ValueError('Checkpoint schema mismatch')
-        for key in ('rate_mode', 'clock_mode', 'utility_normalization', 'decision_cost', 'fixed_mtp_ms'):
+        for key in ('rate_mode', 'clock_mode', 'utility_normalization', 'decision_cost', 'fixed_mtp_ms',
+                    'time_initializer','calibration_main_mode'):
             if record['cfg'].get(key) != self.cfg.get(key): raise ValueError('Checkpoint semantics mismatch: ' + key)
         selected = tf.global_variables() if self.training else self.online_vars + [self.phase, self.schema, self.rate_schema, self.clock_schema]
         tf.train.Saver(var_list=selected).restore(session, str(prefix))

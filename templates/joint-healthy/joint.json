@@ -1,5 +1,5 @@
 {
-  "schema": "healthy-seed3-joint82-v1",
+  "schema": "healthy-seed3-joint82-rtt-v2",
   "base_commit": "c67717de585692bf6a79d1c0545ace92e66347d2",
   "state_dim": 82,
   "action_dim": 2,
@@ -398,5 +398,7 @@
   "baseline_checkpoint": "@PACKAGE@/models/healthy-baseline-seed3/training/step-6013196",
   "source_policy_sha256": "631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0",
   "candidate_status": "OFFLINE_ONLY_NOT_TCP_VALIDATED",
-  "tf_threads": 4
+  "tf_threads": 4,
+  "time_initializer": "constant",
+  "calibration_main_mode": "constant"
 }

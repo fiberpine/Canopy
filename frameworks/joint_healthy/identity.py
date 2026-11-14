@@ -32,6 +32,7 @@ def implementation_identity(require_binary=False):
 def check_admission(receipt,cfg=None):
     g3=bool(cfg and cfg.get('rate_mode')=='acked_legacy_peak')
     expected='PASS_PREREGISTERED_G0_G3_FULL_GRID' if g3 else 'PASS_PREREGISTERED_G0_G1_G2'
+    if cfg and cfg.get('time_initializer')=='feedback_coverage_v1':expected='PASS_PREREGISTERED_G0_G4_FULL_GRID'
     if receipt.get('status') != expected:
         raise ValueError('Registered admission for this measurement contract is missing')
     if receipt.get('implementation') != implementation_identity(require_binary=True):
@@ -45,3 +46,15 @@ def check_admission(receipt,cfg=None):
         if (receipt.get('rate_mode')!='acked_legacy_peak' or receipt.get('utility_normalization')!='legacy_delivery_peak'
                 or cfg.get('utility_normalization')!='legacy_delivery_peak' or cfg.get('decision_cost')!=0.):
             raise ValueError('G3 admission is only for the declared zero-cost legacy-peak contract')
+        initializer=cfg.get('time_initializer','constant')
+        if receipt.get('validated_time_initializer','constant')!=initializer:
+            raise ValueError('Initializer differs from the frozen full-grid validation')
+        if initializer=='feedback_coverage_v1':
+            if cfg.get('calibration_main_mode')!='policy_initializer':
+                raise ValueError('Calibration must preserve the validated state-dependent initializer')
+        else:
+            initial=float(receipt.get('validated_initial_period_ms',20.))
+            if initial!=float(cfg.get('calibration_main_ms',20.)):
+                raise ValueError('Calibration main period differs from the validated initializer')
+            if initial!=20. and initial!=float(cfg['time_init_ms']):
+                raise ValueError('Forward calibration must use the validated initializer')

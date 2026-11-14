@@ -1,0 +1,527 @@
+{
+  "status": "FULL_GRID_PERFORMANCE_FAIL",
+  "reasons": [
+    "fullg3-g3-c03-r0:full_or_trim_drops"
+  ],
+  "results": {
+    "base": {
+      "cells": [
+        {
+          "scenario": 0,
+          "condition": "G12-R20",
+          "repeats": 3,
+          "utilization": 1.0000016183301679,
+          "queue_mean_ms": 7.606424326713885,
+          "queue_p95_ms": 11.0,
+          "queue_p99_ms": 12.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 1,
+          "condition": "G12-R50",
+          "repeats": 3,
+          "utilization": 0.9925791203397426,
+          "queue_mean_ms": 3.2179396228860884,
+          "queue_p95_ms": 6.0,
+          "queue_p99_ms": 7.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 2,
+          "condition": "G12-R100",
+          "repeats": 3,
+          "utilization": 1.0000013871401439,
+          "queue_mean_ms": 15.845689908796706,
+          "queue_p95_ms": 18.0,
+          "queue_p99_ms": 19.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 3,
+          "condition": "G12-R200",
+          "repeats": 3,
+          "utilization": 0.995160428092789,
+          "queue_mean_ms": 13.171257510524555,
+          "queue_p95_ms": 24.0,
+          "queue_p99_ms": 26.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 4,
+          "condition": "G24-R200",
+          "repeats": 3,
+          "utilization": 0.9997770350057263,
+          "queue_mean_ms": 14.416797934260275,
+          "queue_p95_ms": 25.0,
+          "queue_p99_ms": 26.333333333333332,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 5,
+          "condition": "G24-R20",
+          "repeats": 3,
+          "utilization": 0.9999875513064015,
+          "queue_mean_ms": 6.292087509640118,
+          "queue_p95_ms": 9.666666666666666,
+          "queue_p99_ms": 10.666666666666666,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 6,
+          "condition": "G24-R50",
+          "repeats": 3,
+          "utilization": 0.9793855147001288,
+          "queue_mean_ms": 2.075806158160009,
+          "queue_p95_ms": 4.0,
+          "queue_p99_ms": 5.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 7,
+          "condition": "G24-R100",
+          "repeats": 3,
+          "utilization": 1.0000008091650838,
+          "queue_mean_ms": 15.549632598382098,
+          "queue_p95_ms": 17.0,
+          "queue_p99_ms": 18.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 8,
+          "condition": "G36-R100",
+          "repeats": 3,
+          "utilization": 1.000000539263094,
+          "queue_mean_ms": 20.17510145629254,
+          "queue_p95_ms": 25.333333333333332,
+          "queue_p99_ms": 27.333333333333332,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 9,
+          "condition": "G36-R200",
+          "repeats": 3,
+          "utilization": 1.000000616300679,
+          "queue_mean_ms": 28.504917277155922,
+          "queue_p95_ms": 39.0,
+          "queue_p99_ms": 41.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 10,
+          "condition": "G36-R20",
+          "repeats": 3,
+          "utilization": 0.9999917036447074,
+          "queue_mean_ms": 8.000335971860757,
+          "queue_p95_ms": 10.0,
+          "queue_p99_ms": 11.666666666666666,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 11,
+          "condition": "G36-R50",
+          "repeats": 3,
+          "utilization": 1.000000539263094,
+          "queue_mean_ms": 9.253722769460962,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 15.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 12,
+          "condition": "G42-R50",
+          "repeats": 3,
+          "utilization": 0.9829498414924099,
+          "queue_mean_ms": 4.641871644788642,
+          "queue_p95_ms": 7.333333333333333,
+          "queue_p99_ms": 8.666666666666666,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 13,
+          "condition": "G42-R100",
+          "repeats": 3,
+          "utilization": 1.0000003962689752,
+          "queue_mean_ms": 17.541254541495228,
+          "queue_p95_ms": 21.333333333333332,
+          "queue_p99_ms": 22.666666666666668,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 14,
+          "condition": "G42-R200",
+          "repeats": 3,
+          "utilization": 1.0000004623138044,
+          "queue_mean_ms": 27.334453933030765,
+          "queue_p95_ms": 38.0,
+          "queue_p99_ms": 40.333333333333336,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 15,
+          "condition": "G42-R20",
+          "repeats": 3,
+          "utilization": 1.0000004623138044,
+          "queue_mean_ms": 5.824428282155666,
+          "queue_p95_ms": 8.666666666666666,
+          "queue_p99_ms": 10.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 16,
+          "condition": "G48-R20",
+          "repeats": 3,
+          "utilization": 0.9998533911519089,
+          "queue_mean_ms": 5.186077333097047,
+          "queue_p95_ms": 8.0,
+          "queue_p99_ms": 10.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 17,
+          "condition": "G48-R50",
+          "repeats": 3,
+          "utilization": 0.9923560491706803,
+          "queue_mean_ms": 7.901253084921942,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 15.666666666666666,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 18,
+          "condition": "G48-R100",
+          "repeats": 3,
+          "utilization": 1.0000004044811175,
+          "queue_mean_ms": 18.163887821203815,
+          "queue_p95_ms": 21.666666666666668,
+          "queue_p99_ms": 23.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 19,
+          "condition": "G48-R200",
+          "repeats": 3,
+          "utilization": 1.0000003466981007,
+          "queue_mean_ms": 26.359759073193885,
+          "queue_p95_ms": 38.0,
+          "queue_p99_ms": 42.333333333333336,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 20,
+          "condition": "G72-R200",
+          "repeats": 3,
+          "utilization": 0.9982043309345014,
+          "queue_mean_ms": 16.380948421397274,
+          "queue_p95_ms": 27.333333333333332,
+          "queue_p99_ms": 30.333333333333332,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 21,
+          "condition": "G72-R20",
+          "repeats": 3,
+          "utilization": 0.9990622896281337,
+          "queue_mean_ms": 5.335289493022976,
+          "queue_p95_ms": 8.0,
+          "queue_p99_ms": 10.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 22,
+          "condition": "G72-R50",
+          "repeats": 3,
+          "utilization": 0.9948276254408921,
+          "queue_mean_ms": 8.145363991834241,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 16.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 23,
+          "condition": "G72-R100",
+          "repeats": 3,
+          "utilization": 1.0000002696315469,
+          "queue_mean_ms": 22.027662504182214,
+          "queue_p95_ms": 29.0,
+          "queue_p99_ms": 31.0,
+          "dropped_packets": 0.0
+        }
+      ],
+      "overall": {
+        "utilization": 0.9972559471699014,
+        "queue_mean_ms": 12.872998465352401,
+        "queue_p95_ms": 18.26388888888889,
+        "queue_p99_ms": 19.958333333333332,
+        "dropped_packets": 0.0
+      }
+    },
+    "g3": {
+      "cells": [
+        {
+          "scenario": 0,
+          "condition": "G12-R20",
+          "repeats": 3,
+          "utilization": 0.9998810260568941,
+          "queue_mean_ms": 8.117299055036597,
+          "queue_p95_ms": 11.0,
+          "queue_p99_ms": 12.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 1,
+          "condition": "G12-R50",
+          "repeats": 3,
+          "utilization": 0.9903861051238823,
+          "queue_mean_ms": 3.197043387861673,
+          "queue_p95_ms": 6.0,
+          "queue_p99_ms": 7.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 2,
+          "condition": "G12-R100",
+          "repeats": 3,
+          "utilization": 1.0000016183301679,
+          "queue_mean_ms": 16.218264912220196,
+          "queue_p95_ms": 18.333333333333332,
+          "queue_p99_ms": 19.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 3,
+          "condition": "G12-R200",
+          "repeats": 3,
+          "utilization": 0.9905666467487569,
+          "queue_mean_ms": 12.251428888249976,
+          "queue_p95_ms": 22.666666666666668,
+          "queue_p99_ms": 24.666666666666668,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 4,
+          "condition": "G24-R200",
+          "repeats": 3,
+          "utilization": 0.9998804480818341,
+          "queue_mean_ms": 18.541371748988357,
+          "queue_p95_ms": 29.0,
+          "queue_p99_ms": 31.333333333333332,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 5,
+          "condition": "G24-R20",
+          "repeats": 3,
+          "utilization": 0.9999974658016603,
+          "queue_mean_ms": 6.925996135149412,
+          "queue_p95_ms": 10.0,
+          "queue_p99_ms": 11.666666666666666,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 6,
+          "condition": "G24-R50",
+          "repeats": 3,
+          "utilization": 0.9775803296414065,
+          "queue_mean_ms": 2.078284312045544,
+          "queue_p95_ms": 4.0,
+          "queue_p99_ms": 5.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 7,
+          "condition": "G24-R100",
+          "repeats": 3,
+          "utilization": 1.0000009247600958,
+          "queue_mean_ms": 15.942438717889996,
+          "queue_p95_ms": 18.0,
+          "queue_p99_ms": 18.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 8,
+          "condition": "G36-R100",
+          "repeats": 3,
+          "utilization": 1.000000539263094,
+          "queue_mean_ms": 15.713154912796854,
+          "queue_p95_ms": 17.0,
+          "queue_p99_ms": 18.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 9,
+          "condition": "G36-R200",
+          "repeats": 3,
+          "utilization": 1.0000004622255092,
+          "queue_mean_ms": 28.480358996983107,
+          "queue_p95_ms": 39.0,
+          "queue_p99_ms": 40.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 10,
+          "condition": "G36-R20",
+          "repeats": 3,
+          "utilization": 0.9999960829351083,
+          "queue_mean_ms": 8.180677925271869,
+          "queue_p95_ms": 11.0,
+          "queue_p99_ms": 12.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 11,
+          "condition": "G36-R50",
+          "repeats": 3,
+          "utilization": 0.9999983110991012,
+          "queue_mean_ms": 8.980182959099517,
+          "queue_p95_ms": 14.0,
+          "queue_p99_ms": 15.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 12,
+          "condition": "G42-R50",
+          "repeats": 3,
+          "utilization": 0.999190529171493,
+          "queue_mean_ms": 10.390826969427465,
+          "queue_p95_ms": 15.333333333333334,
+          "queue_p99_ms": 17.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 13,
+          "condition": "G42-R100",
+          "repeats": 3,
+          "utilization": 1.0000004623138044,
+          "queue_mean_ms": 18.365664677751678,
+          "queue_p95_ms": 21.666666666666668,
+          "queue_p99_ms": 23.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 14,
+          "condition": "G42-R200",
+          "repeats": 3,
+          "utilization": 1.0000004623138044,
+          "queue_mean_ms": 27.363219286825547,
+          "queue_p95_ms": 38.0,
+          "queue_p99_ms": 40.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 15,
+          "condition": "G42-R20",
+          "repeats": 3,
+          "utilization": 0.9999509286919059,
+          "queue_mean_ms": 6.046929270281917,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 11.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 16,
+          "condition": "G48-R20",
+          "repeats": 3,
+          "utilization": 0.9998582893737922,
+          "queue_mean_ms": 5.657627424897716,
+          "queue_p95_ms": 9.0,
+          "queue_p99_ms": 10.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 17,
+          "condition": "G48-R50",
+          "repeats": 3,
+          "utilization": 0.9987804405377199,
+          "queue_mean_ms": 10.076552333952625,
+          "queue_p95_ms": 15.0,
+          "queue_p99_ms": 17.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 18,
+          "condition": "G48-R100",
+          "repeats": 3,
+          "utilization": 1.0000003466981007,
+          "queue_mean_ms": 16.051537880459126,
+          "queue_p95_ms": 18.0,
+          "queue_p99_ms": 18.333333333333332,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 19,
+          "condition": "G48-R200",
+          "repeats": 3,
+          "utilization": 1.0000004044811175,
+          "queue_mean_ms": 26.68409144711003,
+          "queue_p95_ms": 38.0,
+          "queue_p99_ms": 42.333333333333336,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 20,
+          "condition": "G72-R200",
+          "repeats": 3,
+          "utilization": 0.9977977295245951,
+          "queue_mean_ms": 15.966273673452084,
+          "queue_p95_ms": 27.0,
+          "queue_p99_ms": 30.333333333333332,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 21,
+          "condition": "G72-R20",
+          "repeats": 3,
+          "utilization": 0.9910876136600675,
+          "queue_mean_ms": 4.434510842384026,
+          "queue_p95_ms": 8.0,
+          "queue_p99_ms": 9.523333333335662,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 22,
+          "condition": "G72-R50",
+          "repeats": 3,
+          "utilization": 0.9986009826440247,
+          "queue_mean_ms": 10.055250264318168,
+          "queue_p95_ms": 15.0,
+          "queue_p99_ms": 17.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 23,
+          "condition": "G72-R100",
+          "repeats": 3,
+          "utilization": 0.9999991940683429,
+          "queue_mean_ms": 23.856687002614933,
+          "queue_p95_ms": 30.333333333333332,
+          "queue_p99_ms": 32.666666666666664,
+          "dropped_packets": 0.0
+        }
+      ],
+      "overall": {
+        "utilization": 0.9976482226477617,
+        "queue_mean_ms": 13.315653042711183,
+        "queue_p95_ms": 18.51388888888889,
+        "queue_p99_ms": 20.07736111111121,
+        "dropped_packets": 0.0
+      }
+    }
+  },
+  "completed": 144,
+  "network_failures": 0,
+  "original_slots": 43,
+  "continuation_slots": 101,
+  "postprocessor_recovered_original": 1,
+  "criteria": {
+    "minimum_condition_mean_utilization": 0.95,
+    "maximum_overall_utilization_loss_pp": 1.0,
+    "maximum_mean_queue_ratio": 1.2,
+    "maximum_p95_ratio": 1.2,
+    "static_dropped_packets": 0,
+    "per_condition_queue_guard": "<=max(2*paired_base,paired_base+10ms)",
+    "p99": "report every condition; no retrospective favorable omission"
+  },
+  "source_bridge": "full-g3-postprocessing-source-bridge.json",
+  "original_g1_g2_failures_not_changed": true,
+  "one_training_seed_only": true
+}

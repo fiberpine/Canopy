@@ -1,0 +1,137 @@
+{
+  "status": "SCREEN_PASS_NOT_FULL_GRID",
+  "batch": "g4screen",
+  "groups": {
+    "base": {
+      "cells": [
+        {
+          "scenario": 0,
+          "utilization": 1.0000018495201917,
+          "queue_mean_ms": 7.569779142628833,
+          "queue_p95_ms": 10.666666666666666,
+          "queue_p99_ms": 12.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 3,
+          "utilization": 0.9947926581161926,
+          "queue_mean_ms": 13.120769627256813,
+          "queue_p95_ms": 24.0,
+          "queue_p99_ms": 26.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 5,
+          "utilization": 1.0000008091650838,
+          "queue_mean_ms": 8.099680125786174,
+          "queue_p95_ms": 11.0,
+          "queue_p99_ms": 12.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 12,
+          "utilization": 0.9963251336137698,
+          "queue_mean_ms": 9.046505089787368,
+          "queue_p95_ms": 14.666666666666666,
+          "queue_p99_ms": 16.666666666666668,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 20,
+          "utilization": 0.9974290069025676,
+          "queue_mean_ms": 16.031842554151076,
+          "queue_p95_ms": 27.333333333333332,
+          "queue_p99_ms": 30.333333333333332,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 21,
+          "utilization": 0.9999089534266318,
+          "queue_mean_ms": 5.3190963720400495,
+          "queue_p95_ms": 8.0,
+          "queue_p99_ms": 10.0,
+          "dropped_packets": 0.0
+        }
+      ],
+      "overall": {
+        "utilization": 0.9980764017907395,
+        "queue_mean_ms": 9.864612151941719,
+        "queue_p95_ms": 15.944444444444445,
+        "queue_p99_ms": 17.833333333333332,
+        "dropped_packets": 0.0
+      }
+    },
+    "g4": {
+      "cells": [
+        {
+          "scenario": 0,
+          "utilization": 0.9999349822517197,
+          "queue_mean_ms": 8.46936570815762,
+          "queue_p95_ms": 11.333333333333334,
+          "queue_p99_ms": 13.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 3,
+          "utilization": 0.9932480242144874,
+          "queue_mean_ms": 12.487646537134399,
+          "queue_p95_ms": 23.0,
+          "queue_p99_ms": 25.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 5,
+          "utilization": 0.9999538864821415,
+          "queue_mean_ms": 8.50134439703826,
+          "queue_p95_ms": 11.666666666666666,
+          "queue_p99_ms": 12.666666666666666,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 12,
+          "utilization": 0.990134243735902,
+          "queue_mean_ms": 8.060748395324357,
+          "queue_p95_ms": 12.0,
+          "queue_p99_ms": 13.666666666666666,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 20,
+          "utilization": 0.9970691198989267,
+          "queue_mean_ms": 15.612228621376442,
+          "queue_p95_ms": 27.0,
+          "queue_p99_ms": 30.0,
+          "dropped_packets": 0.0
+        },
+        {
+          "scenario": 21,
+          "utilization": 0.9846248625175409,
+          "queue_mean_ms": 4.03134088910188,
+          "queue_p95_ms": 7.666666666666667,
+          "queue_p99_ms": 9.333333333333334,
+          "dropped_packets": 0.0
+        }
+      ],
+      "overall": {
+        "utilization": 0.994160853183453,
+        "queue_mean_ms": 9.527112424688827,
+        "queue_p95_ms": 15.444444444444445,
+        "queue_p99_ms": 17.27777777777778,
+        "dropped_packets": 0.0
+      }
+    }
+  },
+  "reasons": [],
+  "completed": 36,
+  "execution_failures": 0,
+  "criteria": {
+    "minimum_condition_mean_utilization": 0.95,
+    "maximum_overall_utilization_loss_pp": 1.0,
+    "maximum_mean_queue_ratio": 1.2,
+    "maximum_p95_ratio": 1.2,
+    "full_and_trim_dropped_packets": 0,
+    "per_condition_queue_guard": "max(2*paired_base,paired_base+10ms)"
+  },
+  "primary_completed": 36,
+  "extra_confirmations": []
+}

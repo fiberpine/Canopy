@@ -3,7 +3,7 @@ import math
 import re
 import numpy as np
 
-SCHEMA = 'healthy-seed3-joint82-v1'
+SCHEMA = 'healthy-seed3-joint82-rtt-v2'
 BASE_COMMIT = 'c67717de585692bf6a79d1c0545ace92e66347d2'
 STATE_DIM, ACTION_DIM, BASE_S = 82, 2, .02
 PERIODS = (20., 40., 80., 120., 160.)
@@ -43,6 +43,14 @@ def validate(cfg):
         raise ValueError('Run ID must remain a safe single directory component')
     if not 0 <= float(cfg.get('period_probe_probability', .1)) <= .2:
         raise ValueError('Calibration probes must be bounded')
+    if float(cfg.get('calibration_main_ms',20.)) not in PERIODS:
+        raise ValueError('Calibration main period must be explicitly supported')
+    if cfg.get('time_initializer','constant') not in ('constant','feedback_coverage_v1'):
+        raise ValueError('Unknown time initializer')
+    if cfg.get('calibration_main_mode','constant') not in ('constant','policy_initializer'):
+        raise ValueError('Unknown calibration main mode')
+    if cfg.get('time_initializer')=='feedback_coverage_v1' and cfg.get('calibration_main_mode')!='policy_initializer':
+        raise ValueError('Feedback coverage initialization needs matching calibration')
     if cfg.get('connection_reset_seconds', 0) and cfg['connection_reset_seconds'] < 30:
         raise ValueError('Connection reset interval must be >=30s')
     return cfg
@@ -64,14 +72,30 @@ def softsign_inverse(action):
     return float(action) / (1. - abs(float(action)))
 
 
-def calibration_period(cfg, phase, rng):
+def calibration_period(cfg, phase, rng, policy_ms=None):
     """An independently trained fixed-period control never explores its clock."""
     fixed = cfg.get('fixed_mtp_ms')
     if fixed is not None: return float(fixed), False
-    nominal = 20. if phase == CALIBRATION else cfg['time_init_ms']
+    nominal = float(cfg.get('calibration_main_ms',20.)) if phase == CALIBRATION else cfg['time_init_ms']
+    if cfg.get('calibration_main_mode')=='policy_initializer':
+        if policy_ms is None or not 20. <= float(policy_ms) <= 160.:
+            raise ValueError('A real initialized policy period is required')
+        nominal=float(policy_ms)
     if rng.random_sample() < cfg['period_probe_probability']:
         return float(rng.choice(PERIODS)), True
     return nominal, False
+
+
+def feedback_initial_period(fresh, minimum_ms):
+    """An explicit learnable policy prior, never a runtime bound on an action.
+
+    Fresh feedback preserves the short-clock teacher. Empty feedback waits for
+    TCP's physical response rather than repeatedly multiplying an old signal.
+    The residual time network remains free to choose the entire20--160ms range.
+    """
+    if not math.isfinite(float(minimum_ms)) or minimum_ms<=0:
+        raise ValueError('Positive measured minimum RTT required')
+    return 20.5 if fresh else min(120.,max(40.,float(minimum_ms)))
 
 
 def wire(state_id, action, apply=True):
@@ -139,7 +163,11 @@ class Observation:
         self.gaps = np.concatenate((self.gaps[1:], np.array([dt], np.float32)))
         if count > 0: self.age_lower, self.age_upper = 0., dt
         else: self.age_lower += dt; self.age_upper += dt
-        extra = np.r_[math.log1p(dt / BASE_S), period_action(previous_planned_ms), np.log1p(self.gaps / BASE_S)]
+        # Seven history gaps leave three physical feedback features. The first
+        #70 values are unchanged; the schema prevents loading older82D models.
+        extra = np.r_[math.log1p(dt / BASE_S), period_action(previous_planned_ms),
+                      np.log1p(self.gaps[-7:] / BASE_S), math.log1p(minimum/20.),
+                      math.log1p(srtt/20.), math.log1p(self.age_upper/BASE_S)]
         state = np.r_[self.history.reshape(-1), extra].astype(np.float32)
         assert state.shape == (82,) and np.isfinite(state).all()
         self.frames += 1

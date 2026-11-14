@@ -19,6 +19,13 @@ class NativeProvenance(unittest.TestCase):
             with self.assertRaises(ValueError):identity.check_admission(dict(receipt,status='SCREEN_PERFORMANCE_FAIL'),cfg)
             with self.assertRaises(ValueError):identity.check_admission(dict(receipt,validation=dict(receipt['validation'],health_pass=False)),cfg)
             with self.assertRaises(ValueError):identity.check_admission(receipt,dict(cfg,decision_cost=.02))
+            forty=dict(cfg,calibration_main_ms=40.)
+            with self.assertRaises(ValueError):identity.check_admission(receipt,forty)
+            identity.check_admission(dict(receipt,validated_initial_period_ms=40.),forty)
+            with self.assertRaises(ValueError):identity.check_admission(dict(receipt,validated_initial_period_ms=40.),dict(forty,time_init_ms=80.))
+            coverage=configuration('g4')
+            with self.assertRaises(ValueError):identity.check_admission(receipt,coverage)
+            identity.check_admission(dict(receipt,status='PASS_PREREGISTERED_G0_G4_FULL_GRID',validated_time_initializer='feedback_coverage_v1'),coverage)
 
     def test_binary_and_all_build_sources_must_still_match(self):
         with tempfile.TemporaryDirectory() as td:
