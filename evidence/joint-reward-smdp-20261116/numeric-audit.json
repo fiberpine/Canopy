@@ -1,0 +1,250 @@
+{
+  "status": "PASS_ARITHMETIC_WITH_EXPLICIT_MODELING_GAPS",
+  "runtime_commit": "59076959520728f6e26182128c9cb347c00868b8",
+  "actual_run_cost": 0.0,
+  "period_table": [
+    {
+      "duration_ms": 20,
+      "reward": 0.9999999999999998,
+      "direct_geometric_sum": 1.0,
+      "discount": 0.995,
+      "zero_cost_constant_utility_value": 199.99999999999977,
+      "cost002_constant_utility_value": 195.99999999999977
+    },
+    {
+      "duration_ms": 40,
+      "reward": 1.9949999999999999,
+      "direct_geometric_sum": 1.995,
+      "discount": 0.990025,
+      "zero_cost_constant_utility_value": 200.00000000000088,
+      "cost002_constant_utility_value": 197.99498746867255
+    },
+    {
+      "duration_ms": 80,
+      "reward": 3.9700998749999994,
+      "direct_geometric_sum": 3.970099875,
+      "discount": 0.980149500625,
+      "zero_cost_constant_utility_value": 199.99999999999943,
+      "cost002_constant_utility_value": 198.99246867183606
+    },
+    {
+      "duration_ms": 120,
+      "reward": 5.925498128746874,
+      "direct_geometric_sum": 5.925498128746875,
+      "discount": 0.9703725093562656,
+      "zero_cost_constant_utility_value": 199.99999999999994,
+      "cost002_constant_utility_value": 199.3249512677095
+    },
+    {
+      "duration_ms": 160,
+      "reward": 7.861391284912625,
+      "direct_geometric_sum": 7.861391284912624,
+      "discount": 0.9606930435754368,
+      "zero_cost_constant_utility_value": 199.9999999999998,
+      "cost002_constant_utility_value": 199.49118421217906
+    }
+  ],
+  "illustrative_critic_bias": [
+    {
+      "continuation_value": 195.0,
+      "targets": [
+        {
+          "duration_ms": 20,
+          "target": 195.025
+        },
+        {
+          "duration_ms": 80,
+          "target": 195.09925249687498
+        },
+        {
+          "duration_ms": 160,
+          "target": 195.1965347821228
+        }
+      ],
+      "selected_duration_ms": 160,
+      "interpretation": "Illustration with a duration-independent biased continuation value, not the measured final critic"
+    },
+    {
+      "continuation_value": 200.0,
+      "targets": [
+        {
+          "duration_ms": 20,
+          "target": 200.0
+        },
+        {
+          "duration_ms": 80,
+          "target": 199.99999999999997
+        },
+        {
+          "duration_ms": 160,
+          "target": 200.0
+        }
+      ],
+      "selected_duration_ms": "indifferent",
+      "interpretation": "Illustration with a duration-independent biased continuation value, not the measured final critic"
+    },
+    {
+      "continuation_value": 205.0,
+      "targets": [
+        {
+          "duration_ms": 20,
+          "target": 204.975
+        },
+        {
+          "duration_ms": 80,
+          "target": 204.900747503125
+        },
+        {
+          "duration_ms": 160,
+          "target": 204.80346521787718
+        }
+      ],
+      "selected_duration_ms": 20,
+      "interpretation": "Illustration with a duration-independent biased continuation value, not the measured final critic"
+    }
+  ],
+  "illustrative_delay_plateau": [
+    {
+      "min_rtt_ms": 20.0,
+      "illustrative_queue_ms": 1.5,
+      "srtt_ms": 21.5,
+      "delay_factor": 1.0,
+      "not_actual_measured_srtt": true
+    },
+    {
+      "min_rtt_ms": 20.0,
+      "illustrative_queue_ms": 5.0,
+      "srtt_ms": 25.0,
+      "delay_factor": 1.0,
+      "not_actual_measured_srtt": true
+    },
+    {
+      "min_rtt_ms": 20.0,
+      "illustrative_queue_ms": 6.0,
+      "srtt_ms": 26.0,
+      "delay_factor": 0.9615384615384616,
+      "not_actual_measured_srtt": true
+    },
+    {
+      "min_rtt_ms": 20.0,
+      "illustrative_queue_ms": 16.0,
+      "srtt_ms": 36.0,
+      "delay_factor": 0.6944444444444444,
+      "not_actual_measured_srtt": true
+    },
+    {
+      "min_rtt_ms": 200.0,
+      "illustrative_queue_ms": 1.5,
+      "srtt_ms": 201.5,
+      "delay_factor": 1.0,
+      "not_actual_measured_srtt": true
+    },
+    {
+      "min_rtt_ms": 200.0,
+      "illustrative_queue_ms": 5.0,
+      "srtt_ms": 205.0,
+      "delay_factor": 1.0,
+      "not_actual_measured_srtt": true
+    },
+    {
+      "min_rtt_ms": 200.0,
+      "illustrative_queue_ms": 16.0,
+      "srtt_ms": 216.0,
+      "delay_factor": 1.0,
+      "not_actual_measured_srtt": true
+    },
+    {
+      "min_rtt_ms": 200.0,
+      "illustrative_queue_ms": 46.0,
+      "srtt_ms": 246.0,
+      "delay_factor": 1.0,
+      "not_actual_measured_srtt": true
+    }
+  ],
+  "synthetic_fixed_peak_delay_aggregation_counterexample": {
+    "status": "OFFLINE_MEASUREMENT_ALIAS_AUDIT_NOT_POLICY_PERFORMANCE",
+    "input_frames": 65,
+    "normalization_counterfactual": "fixed_legacy_reference",
+    "exact_variable_period_kernel_estimator_reconstructed": false,
+    "fixed_reference_uses_future_trajectory_only_as_diagnostic": true,
+    "return_increase_without_changed_TCP_trajectory": true,
+    "nonlinear_interval_utility_is_approximate": true,
+    "p95_p99_reconstructed": false,
+    "no_fixed_control_training_performed": true,
+    "results": [
+      {
+        "group_original_decisions": 1,
+        "actual_mean_interval_ms": 20.0,
+        "measured_seconds": 1.2800000000000007,
+        "final_observed_peak": 1000.0,
+        "discounted_return": 34.30445756878974,
+        "time_weighted_utility": 0.625,
+        "intervals": 64,
+        "relative_return_change_same_trajectory": 0.0
+      },
+      {
+        "group_original_decisions": 2,
+        "actual_mean_interval_ms": 40.0,
+        "measured_seconds": 1.2800000000000005,
+        "final_observed_peak": 1000.0,
+        "discounted_return": 34.20102912242048,
+        "time_weighted_utility": 0.6249999999999999,
+        "intervals": 32,
+        "relative_return_change_same_trajectory": -0.003015014773571691
+      },
+      {
+        "group_original_decisions": 4,
+        "actual_mean_interval_ms": 80.0,
+        "measured_seconds": 1.28,
+        "final_observed_peak": 1000.0,
+        "discounted_return": 54.886718396278106,
+        "time_weighted_utility": 1.0,
+        "intervals": 16,
+        "relative_return_change_same_trajectory": 0.5999879399409055
+      },
+      {
+        "group_original_decisions": 8,
+        "actual_mean_interval_ms": 160.0,
+        "measured_seconds": 1.28,
+        "final_observed_peak": 1000.0,
+        "discounted_return": 54.88671839627812,
+        "time_weighted_utility": 1.0,
+        "intervals": 8,
+        "relative_return_change_same_trajectory": 0.5999879399409059
+      }
+    ]
+  },
+  "discount_e_folding_seconds": 3.9899916457671227,
+  "discount_half_life_seconds": 2.765651459721217,
+  "continuous_density_normalization_note": {
+    "discrete20ms_match": true,
+    "versus_density_u_per_base_second_scale": 1.0025083647088564,
+    "interpretation": "Global constant utility scaling when cost0, not a duration preference"
+  },
+  "previous_real_replay_audit": {
+    "status": "PASS_TRAINING_EXECUTION_ONLY_NOT_FROZEN_PERFORMANCE",
+    "counters": {
+      "critic_iterations": 429699,
+      "critic_optimizer_ops": 859398,
+      "actor_updates": 400199,
+      "target_updates": 429699
+    },
+    "inserted": 3470420,
+    "physical_seconds": 86400.281157,
+    "actor_exposure_and_ledger_pass": true,
+    "period_coverage_and_value_gates_pass": true,
+    "performance_verified": false,
+    "retained_replay_rows": 300000,
+    "discount_error": 2.9801701662002245e-08,
+    "reward_error": 4.945523723876022e-07
+  },
+  "limitations": [
+    "The counterexample is synthetic, not a measured reward bias of the final model",
+    "Internal reward/discount reconstruction is not validation against a full physical utility integral",
+    "Critic target/ranking correctness and state sufficiency are not proved by these tests"
+  ],
+  "new_ssh_connections": 0,
+  "new_tcp_runs": 0,
+  "optimizer_updates": 0,
+  "runtime_files_modified": false
+}
