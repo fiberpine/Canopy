@@ -8,7 +8,7 @@ import hashlib
 import json
 from pathlib import Path
 import numpy as np
-from .core import SCHEMA, STATE_DIM, CALIBRATION, FORWARD_ONLY, JOINT, period_action, softsign_inverse
+from .core import SCHEMA, STATE_DIM, CALIBRATION, FORWARD_ONLY, JOINT, period_action, softsign_inverse, bootstrap_terminal
 
 WINDOW = 'abstract_actor/abstract_actor'
 TARGET_WINDOW = 'target_actor/target_actor'
@@ -201,7 +201,7 @@ class Model:
 
     def feed(self, batch):
         return dict(zip((self.s, self.executed, self.reward, self.s1, self.terminal, self.discount),
-                        (batch[0], batch[1], batch[2], batch[3], batch[4], batch[6])))
+                        (batch[0], batch[1], batch[2], batch[3], bootstrap_terminal(self.cfg, batch[4]), batch[6])))
 
     def digest(self, session, window_only=False):
         h = hashlib.sha256()
@@ -218,6 +218,9 @@ class Model:
         tf = self.tf
         record = json.loads(Path(str(prefix) + '.joint.json').read_text())
         if record['schema'] != SCHEMA: raise ValueError('Checkpoint schema mismatch')
+        time_limit_default = 'physical_end_is_terminal_legacy'
+        if record['cfg'].get('time_limit_handling', time_limit_default) != self.cfg.get('time_limit_handling', time_limit_default):
+            raise ValueError('Checkpoint semantics mismatch: time_limit_handling')
         for key in ('rate_mode', 'clock_mode', 'utility_normalization', 'decision_cost', 'fixed_mtp_ms',
                     'time_initializer','calibration_main_mode'):
             if record['cfg'].get(key) != self.cfg.get(key): raise ValueError('Checkpoint semantics mismatch: ' + key)

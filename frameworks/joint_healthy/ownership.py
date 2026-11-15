@@ -5,6 +5,53 @@ import re
 import time
 
 
+def sysv_segments():
+    """Read kernel object identities without attaching to another flow's memory."""
+    rows = Path('/proc/sysvipc/shm').read_text().splitlines()
+    if not rows: raise RuntimeError('Missing Linux shared-memory identity table')
+    names = rows[0].split()
+    return [dict(zip(names, line.split())) for line in rows[1:] if line.strip()]
+
+
+def cleanup_flow_report(owned, port, shared_objects, timeout_seconds=3.):
+    """A recycled key is not a leaked object; only the recorded shmid is owned."""
+    from frameworks.baseline.baseline_admission import cleanup_report
+    start = time.monotonic(); checks = []
+    while True:
+        report = cleanup_report(owned, port, [], None, timeout_seconds=0.)
+        segments = sysv_segments()
+        owned_ids = {int(row['id']) for row in shared_objects}
+        keys = {int(row['key']) for row in shared_objects}
+        remaining = [dict(key=int(row['key']), id=int(row['shmid'])) for row in segments
+                     if int(row['shmid']) in owned_ids]
+        reused = [dict(key=int(row['key']), id=int(row['shmid'])) for row in segments
+                  if int(row['key']) in keys and int(row['shmid']) not in owned_ids]
+        report.pop('checks', None)
+        report.update(remaining_shm_objects=remaining, recycled_keys_not_owned=reused,
+                      shared_object_identities=shared_objects)
+        if remaining: report['status'] = 'FAIL'
+        checks.append(dict(elapsed_s=time.monotonic()-start, **report))
+        if report['status'] == 'PASS' or time.monotonic()-start >= timeout_seconds:
+            return dict(report, checks=checks, teardown_wait_s=time.monotonic()-start)
+        time.sleep(min(.05, max(0., timeout_seconds-(time.monotonic()-start))))
+
+
+def supervise_children(children, drain_seconds=45.):
+    """Observe every direct child, including failures behind a slow first child."""
+    failed = False; stopping = None
+    while any(child.poll() is None for child in children):
+        if not failed and any(child.poll() not in (None, 0) for child in children):
+            failed = True; stopping = time.monotonic()
+            for child in children:
+                if child.poll() is None: child.terminate()
+        if stopping is not None and time.monotonic()-stopping >= drain_seconds:
+            for child in children:
+                if child.poll() is None: child.kill()
+        time.sleep(.05)
+    for child in children: child.wait()
+    return not failed and all(child.returncode == 0 for child in children)
+
+
 def matches_flow(command, folder, client, port):
     command=[str(arg).replace('\\','/') for arg in command]
     folder=str(folder).replace('\\','/');client=str(client).replace('\\','/')

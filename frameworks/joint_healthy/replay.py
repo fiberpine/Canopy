@@ -2,7 +2,30 @@
 import math
 import random
 import numpy as np
-from .core import PhysicalCredit, PERIODS, CALIBRATION, FORWARD_ONLY, JOINT
+from .core import PhysicalCredit, PERIODS, CALIBRATION, FORWARD_ONLY, JOINT, bootstrap_terminal
+
+
+class IndexPool:
+    """Uniform sampling without sorting the entire actor pool on every update."""
+    def __init__(self):
+        self.values = []; self.positions = {}
+
+    def __len__(self): return len(self.values)
+
+    def __iter__(self): return iter(self.values)
+
+    def add(self, index):
+        if index not in self.positions:
+            self.positions[index] = len(self.values); self.values.append(index)
+
+    def discard(self, index):
+        position = self.positions.pop(index, None)
+        if position is None: return
+        last = self.values.pop()
+        if position < len(self.values):
+            self.values[position] = last; self.positions[last] = position
+
+    def sample(self, rng, quota): return rng.sample(self.values, quota)
 
 
 class Replay:
@@ -14,7 +37,7 @@ class Replay:
         self.arrays = [np.zeros((self.size, n), np.float64 if i == 5 else np.float32) for i, n in enumerate((82, 2, 1, 82, 1, 1, 1))]
         self.actor_ids = np.full(self.size, -1, np.int32)
         self.period_ids = np.full(self.size, -1, np.int32)
-        self.birth = np.zeros(self.size, np.int64); self.pools = [set() for _ in range(self.actors)]
+        self.birth = np.zeros(self.size, np.int64); self.pools = [IndexPool() for _ in range(self.actors)]
         self.coverage = np.zeros((self.actors, 5), np.int64)
         self.last = {}; self.sample_calls = 0; self.sampled = np.zeros(self.actors, np.int64)
         self.holdout = [[] for _ in range(5)]; self.holdout_seen = np.zeros(5, np.int64)
@@ -78,11 +101,13 @@ class Replay:
     def sample(self):
         base, remainder = divmod(self.batch_size, self.actors)
         extra = {(self.sample_calls * remainder + j) % self.actors for j in range(remainder)}
+        quotas = [base + int(actor in extra) for actor in range(self.actors)]
+        for actor, (pool, quota) in enumerate(zip(self.pools, quotas)):
+            if len(pool) < quota:
+                raise ValueError('Insufficient retained actor samples: actor=%d retained=%d required=%d' % (actor, len(pool), quota))
         indices = []
-        for actor, pool in enumerate(self.pools):
-            quota = base + int(actor in extra)
-            if len(pool) < quota: raise ValueError('Insufficient retained actor samples')
-            selected = self.rng.sample(sorted(pool), quota); indices.extend(selected); self.sampled[actor] += quota
+        for actor, (pool, quota) in enumerate(zip(self.pools, quotas)):
+            selected = pool.sample(self.rng, quota); indices.extend(selected); self.sampled[actor] += quota
         self.sample_calls += 1
         index = np.asarray(indices, dtype=np.int64)
         assert np.all(self.birth[index] % 17 != 0)
@@ -102,7 +127,7 @@ class Replay:
         for block in blocks:
             total = 0.; weight = 1.
             for row in block:
-                total += weight * float(row[2][0]); weight *= float(row[6][0])*(1.-float(row[4][0]))
+                total += weight * float(row[2][0]); weight *= float(row[6][0])*(1.-float(bootstrap_terminal(self.cfg,row[4])[0]))
             rewards.append([total]); continuation.append([weight])
         return first, last, np.array(rewards), np.array(continuation)
 

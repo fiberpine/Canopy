@@ -1,0 +1,298 @@
+[
+  {
+    "node": 0,
+    "epoch": 1794656524.4850285,
+    "bad": [],
+    "ipcs": "\n------ Shared Memory Segment Creators/Owners --------\nshmid      perms      cuid       cgid       uid        gid       \n0          644        root       root       root       root      \n32769      644        root       root       root       root      \n65538      644        root       root       root       root      \n\n"
+  },
+  {
+    "node": 1,
+    "epoch": 1794656524.2992842,
+    "bad": [
+      {
+        "flow": "joint-g4-seed3-1800-actor4-ep4",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [],
+          "accessible_shm_keys": [
+            20666
+          ],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 11,
+          "teardown_wait_s": 3.0104846310005087
+        },
+        "ownership": {
+          "pid": 5472,
+          "started": 1794655506.17,
+          "shm_keys": [
+            20666,
+            23624
+          ],
+          "port": 23004
+        },
+        "result": {
+          "status": "FAILED",
+          "reason": "Owned resource cleanup failed",
+          "run_id": "joint-g4-seed3-1800-actor4-ep4",
+          "actor": 4,
+          "episode": 4,
+          "python_pid": 30382,
+          "native_pid": 5472,
+          "logical_cpus": 8,
+          "physical_seconds": 180.00755599999954,
+          "transitions": 7301,
+          "policy_calls": 7301,
+          "exploration_calls": 7301,
+          "source_sha256": {
+            "native": "0174f0a772b984249f43ef664adb249f476fe86c6b216922d553f73cf98d6197",
+            "trace": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633"
+          },
+          "folder": "@RUN@/frameworks/joint_healthy/logs/joint-g4-seed3-1800-actor4-ep4",
+          "wall_s": 185.73073279799974,
+          "reward_is_boundary_approximation": true,
+          "property_reward": false
+        },
+        "cleanup_mtime": 1794655692.2312517,
+        "matching_keys": [
+          {
+            "flow": "joint-g4-seed3-1800-actor4-ep4",
+            "created": 1794655506.5603318,
+            "keys": [
+              20666,
+              23624
+            ],
+            "ownership": {
+              "pid": 5472,
+              "started": 1794655506.17,
+              "shm_keys": [
+                20666,
+                23624
+              ],
+              "port": 23004
+            }
+          },
+          {
+            "flow": "joint-g4-seed3-1800-actor16-ep6",
+            "created": 1794655871.3942037,
+            "keys": [
+              23624
+            ],
+            "ownership": {
+              "pid": 9201,
+              "started": 1794655871.01,
+              "shm_keys": [
+                23624,
+                1632
+              ],
+              "port": 23016
+            }
+          },
+          {
+            "flow": "joint-g4-seed3-1800-actor16-ep5",
+            "created": 1794655689.1872694,
+            "keys": [
+              20666
+            ],
+            "ownership": {
+              "pid": 7321,
+              "started": 1794655688.8,
+              "shm_keys": [
+                2930,
+                20666
+              ],
+              "port": 23016
+            }
+          }
+        ]
+      }
+    ],
+    "ipcs": "\n------ Shared Memory Segment Creators/Owners --------\nshmid      perms      cuid       cgid       uid        gid       \n0          644        root       root       root       root      \n32769      644        root       root       root       root      \n65538      644        root       root       root       root      \n\n"
+  },
+  {
+    "node": 2,
+    "epoch": 1794656524.5247593,
+    "bad": [
+      {
+        "flow": "joint-g4-seed3-1800-actor21-ep4",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [],
+          "accessible_shm_keys": [
+            23114,
+            25019
+          ],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 11,
+          "teardown_wait_s": 3.0087169830003404
+        },
+        "ownership": {
+          "pid": 5300,
+          "started": 1794655495.9,
+          "shm_keys": [
+            23114,
+            25019
+          ],
+          "port": 23021
+        },
+        "result": {
+          "status": "FAILED",
+          "reason": "Owned resource cleanup failed",
+          "run_id": "joint-g4-seed3-1800-actor21-ep4",
+          "actor": 21,
+          "episode": 4,
+          "python_pid": 30495,
+          "native_pid": 5300,
+          "logical_cpus": 8,
+          "physical_seconds": 180.0052799999994,
+          "transitions": 7503,
+          "policy_calls": 7503,
+          "exploration_calls": 7503,
+          "source_sha256": {
+            "native": "0174f0a772b984249f43ef664adb249f476fe86c6b216922d553f73cf98d6197",
+            "trace": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05"
+          },
+          "folder": "@RUN@/frameworks/joint_healthy/logs/joint-g4-seed3-1800-actor21-ep4",
+          "wall_s": 184.18660401600027,
+          "reward_is_boundary_approximation": true,
+          "property_reward": false
+        },
+        "cleanup_mtime": 1794655679.7946606,
+        "matching_keys": [
+          {
+            "flow": "joint-g4-seed3-1800-actor17-ep5",
+            "created": 1794655676.5386884,
+            "keys": [
+              23114,
+              25019
+            ],
+            "ownership": {
+              "pid": 7226,
+              "started": 1794655676.33,
+              "shm_keys": [
+                23114,
+                25019
+              ],
+              "port": 23017
+            }
+          },
+          {
+            "flow": "joint-g4-seed3-1800-actor21-ep4",
+            "created": 1794655496.1122346,
+            "keys": [
+              23114,
+              25019
+            ],
+            "ownership": {
+              "pid": 5300,
+              "started": 1794655495.9,
+              "shm_keys": [
+                23114,
+                25019
+              ],
+              "port": 23021
+            }
+          }
+        ]
+      }
+    ],
+    "ipcs": "\n------ Shared Memory Segment Creators/Owners --------\nshmid      perms      cuid       cgid       uid        gid       \n0          644        root       root       root       root      \n32769      644        root       root       root       root      \n65538      644        root       root       root       root      \n\n"
+  },
+  {
+    "node": 3,
+    "epoch": 1794656524.5246959,
+    "bad": [],
+    "ipcs": "\n------ Shared Memory Segment Creators/Owners --------\nshmid      perms      cuid       cgid       uid        gid       \n0          644        root       root       root       root      \n32769      644        root       root       root       root      \n65538      644        root       root       root       root      \n\n"
+  },
+  {
+    "node": 4,
+    "epoch": 1794656524.5233505,
+    "bad": [
+      {
+        "flow": "joint-g4-seed3-1800-actor15-ep4",
+        "audit": {
+          "status": "FAIL",
+          "remaining": [],
+          "listeners": [],
+          "accessible_shm_keys": [
+            484,
+            2930
+          ],
+          "listener_check_returncode": 0,
+          "actor_fd_count": 11,
+          "teardown_wait_s": 3.0092892209995625
+        },
+        "ownership": {
+          "pid": 5423,
+          "started": 1794655506.64,
+          "shm_keys": [
+            484,
+            2930
+          ],
+          "port": 23015
+        },
+        "result": {
+          "status": "FAILED",
+          "reason": "Owned resource cleanup failed",
+          "run_id": "joint-g4-seed3-1800-actor15-ep4",
+          "actor": 15,
+          "episode": 4,
+          "python_pid": 30407,
+          "native_pid": 5423,
+          "logical_cpus": 8,
+          "physical_seconds": 180.00126700000018,
+          "transitions": 7480,
+          "policy_calls": 7480,
+          "exploration_calls": 7480,
+          "source_sha256": {
+            "native": "0174f0a772b984249f43ef664adb249f476fe86c6b216922d553f73cf98d6197",
+            "trace": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a"
+          },
+          "folder": "@RUN@/frameworks/joint_healthy/logs/joint-g4-seed3-1800-actor15-ep4",
+          "wall_s": 184.05183982199924,
+          "reward_is_boundary_approximation": true,
+          "property_reward": false
+        },
+        "cleanup_mtime": 1794655691.2042062,
+        "matching_keys": [
+          {
+            "flow": "joint-g4-seed3-1800-actor19-ep5",
+            "created": 1794655687.9522302,
+            "keys": [
+              484,
+              2930
+            ],
+            "ownership": {
+              "pid": 7246,
+              "started": 1794655687.09,
+              "shm_keys": [
+                484,
+                2930
+              ],
+              "port": 23019
+            }
+          },
+          {
+            "flow": "joint-g4-seed3-1800-actor15-ep4",
+            "created": 1794655507.509558,
+            "keys": [
+              484,
+              2930
+            ],
+            "ownership": {
+              "pid": 5423,
+              "started": 1794655506.64,
+              "shm_keys": [
+                484,
+                2930
+              ],
+              "port": 23015
+            }
+          }
+        ]
+      }
+    ],
+    "ipcs": "\n------ Shared Memory Segment Creators/Owners --------\nshmid      perms      cuid       cgid       uid        gid       \n0          644        root       root       root       root      \n32769      644        root       root       root       root      \n65538      644        root       root       root       root      \n\n"
+  }
+]

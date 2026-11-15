@@ -1,0 +1,31 @@
+{
+  "status": "PASS_ACTUAL_DENSE_POOL_MUTATION_AND_BALANCED_SAMPLING_MICROBENCHMARK",
+  "node": 0,
+  "source_sha256": "27c22a19ed1bb04e9cc9bd0ff42baeac07ba321bdcf02512cd239f175f3000fa",
+  "rows": 300000,
+  "actors": 24,
+  "batch_size": 512,
+  "measurements": {
+    "sort_each_iteration": {
+      "mean_ms": 11.569503236690556,
+      "p95_ms": 11.708865948821769,
+      "iterations": 300
+    },
+    "dense_pool_with_mutations": {
+      "mean_ms": 0.3031552666410183,
+      "p95_ms": 0.3533809996042691,
+      "iterations": 300
+    }
+  },
+  "speedup": 38.16362276955129,
+  "exact_actor_quota_preserved": true,
+  "uniform_without_replacement": true,
+  "same_seed_exact_old_draw_sequence": false,
+  "new_tcp": 0,
+  "optimizer_updates": 0,
+  "production_source_modified": false,
+  "limitations": [
+    "Synthetic balanced membership and mutation rate; not sustained joint RPC capacity",
+    "Storage order changes the exact RNG trajectory; no bitwise old-run reproducibility claim"
+  ]
+}

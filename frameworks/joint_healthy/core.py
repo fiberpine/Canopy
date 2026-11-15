@@ -10,7 +10,21 @@ PERIODS = (20., 40., 80., 120., 160.)
 CALIBRATION, FORWARD_ONLY, JOINT = 0, 1, 2
 
 
+def bootstrap_terminal(cfg, physical_end):
+    """run_flow's boundary is an artificial reconnect, not TCP task termination.
+
+    Keep that boundary in replay for trajectory validation and short-block
+    splitting. New runs bootstrap from its last REAL pre-reset observation.
+    Missing metadata preserves the meaning of historical checkpoint manifests.
+    """
+    mode = cfg.get('time_limit_handling', 'physical_end_is_terminal_legacy')
+    if mode == 'bootstrap_last_observation': return np.zeros_like(physical_end)
+    if mode == 'physical_end_is_terminal_legacy': return physical_end
+    raise ValueError('Unknown time-limit bootstrap semantics')
+
+
 def validate(cfg):
+    bootstrap_terminal(cfg, np.array([0., 1.], np.float32))
     required = dict(schema=SCHEMA, state_dim=82, action_dim=2,
                     reward_mode='raw',
                     reward_semantics='observed_interval_orca_density',

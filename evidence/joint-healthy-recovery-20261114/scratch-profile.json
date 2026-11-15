@@ -1,0 +1,70 @@
+{
+  "status": "SCRATCH_TIMING_ONLY_NOT_ONLINE_CAPACITY",
+  "source_run_status": "FAILED",
+  "operations": {
+    "critic": {
+      "mean_ms": 2.15557905001333,
+      "p95_ms": 2.39270240008409
+    },
+    "actor_gradients": {
+      "mean_ms": 1.7493996899247577,
+      "p95_ms": 1.9350549998307542
+    },
+    "actor_and_bn": {
+      "mean_ms": 2.0060480598840513,
+      "p95_ms": 2.216359450812888
+    },
+    "target": {
+      "mean_ms": 0.4634660199553764,
+      "p95_ms": 0.49812089946499327
+    }
+  },
+  "operation_sum_ms": 6.374492819777515,
+  "sampler": {
+    "sort_each_iteration": {
+      "mean_ms": 11.225173020065995,
+      "p95_ms": 11.312495549736921
+    },
+    "prebuilt_sequence_upper_bound": {
+      "mean_ms": 0.17593813996427343,
+      "p95_ms": 0.18814949862644426
+    }
+  },
+  "retained_rows_by_actor": [
+    12627,
+    13015,
+    12972,
+    13011,
+    482,
+    13263,
+    13018,
+    13045,
+    12703,
+    13034,
+    13176,
+    13018,
+    12722,
+    13085,
+    12974,
+    459,
+    12644,
+    13160,
+    12926,
+    13088,
+    12715,
+    19,
+    13161,
+    13018
+  ],
+  "measured_complete_scratch_updates": 100,
+  "warmup_updates": 10,
+  "cpu_cores_equivalent": 3.1621301318859487,
+  "new_tcp": 0,
+  "source_checkpoint_modified": false,
+  "scratch_optimizer_updates": 110,
+  "limitations": [
+    "Local isolated Session omits actor RPC/receiver contention and checkpoint overhead",
+    "Fixed real input batch is a timing probe, not a newly trained model",
+    "Prebuilt sampler is an upper bound; no production cache or changed sampling distribution deployed"
+  ]
+}

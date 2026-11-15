@@ -267,10 +267,15 @@ def worker_main():
             child = subprocess.Popen([sys.executable, str(ROOT / 'joint_healthy.py'), '_worker', 'actor', '--config', str(path), '--index', str(index)],
                                      stdout=stream, stderr=subprocess.STDOUT)
             children.append((child, stream, index))
-        for child, stream, index in children:
-            child.wait(); stream.close()
-        rows = [json.loads((R / 'logs' / ('%s-producer%d' % (cfg['run_id'], index)) / 'producer.json').read_text()) for _, _, index in children]
-        succeeded=all(x['status']=='COMPLETED' for x in rows) and all(child.returncode==0 for child,_,_ in children)
+        from .ownership import supervise_children
+        children_ok = supervise_children([child for child, _, _ in children])
+        for child, stream, index in children: stream.close()
+        rows = []
+        for _, _, index in children:
+            producer = R / 'logs' / ('%s-producer%d' % (cfg['run_id'], index)) / 'producer.json'
+            rows.append(json.loads(producer.read_text()) if producer.exists() else
+                        dict(index=index, status='FAILED', errors=['Producer exited without a result record']))
+        succeeded=children_ok and all(x['status']=='COMPLETED' for x in rows)
         print(json.dumps(dict(status='COMPLETED' if succeeded else 'FAILED',actors=rows)),flush=True)
         sys.stdout.flush();sys.stderr.flush();os._exit(0 if succeeded else 2)
     result = run_learner(cfg) if args.role == 'learner' else run_actor(cfg, args.index)

@@ -1,0 +1,72 @@
+{
+  "status": "RETAINED_REPLAY_TIME_LIMIT_DIAGNOSTIC_NOT_ORIGINAL_HOLDOUT",
+  "run": "joint-g4-seed3-1800",
+  "endpoint": "step-1094782",
+  "retained_rows": 300000,
+  "physical_end_rows": 42,
+  "period_counts": [
+    {
+      "period_ms": 20,
+      "total_rows": 285600,
+      "physical_end_rows": 38
+    },
+    {
+      "period_ms": 40,
+      "total_rows": 14400,
+      "physical_end_rows": 4
+    },
+    {
+      "period_ms": 80,
+      "total_rows": 0,
+      "physical_end_rows": 0
+    },
+    {
+      "period_ms": 120,
+      "total_rows": 0,
+      "physical_end_rows": 0
+    },
+    {
+      "period_ms": 160,
+      "total_rows": 0,
+      "physical_end_rows": 0
+    }
+  ],
+  "diagnostic_rows": 8234,
+  "physical_end": {
+    "rows": 42,
+    "q1_mean": 166.76768493652344,
+    "q2_mean": 166.8556671142578,
+    "label_mean": 1.105324387550354,
+    "counterfactual_continuing_label_mean": 168.28604125976562,
+    "residual_p50": 169.62212371826172,
+    "residual_p95": 173.10682067871096,
+    "residual_max": 173.5208282470703,
+    "worst_twin_normalized_rmse": 147.1106744550838
+  },
+  "other": {
+    "rows": 8192,
+    "q1_mean": 168.615234375,
+    "q2_mean": 168.55348205566406,
+    "label_mean": 168.3103790283203,
+    "counterfactual_continuing_label_mean": 168.3103790283203,
+    "residual_p50": 0.8872528076171875,
+    "residual_p95": 2.650563812255859,
+    "residual_max": 22.980178833007812,
+    "worst_twin_normalized_rmse": 0.008089978862409176
+  },
+  "physical_end_semantics": "run_flow sets terminal=True on physical_limit including180sec reconnect; model bootstrap and short-return continuation both masked",
+  "no_remaining_episode_time_in_state": true,
+  "no_cross_connection_transition_generated": true,
+  "sources": [
+    "https://gymnasium.farama.org/v0.26.3/tutorials/handling_time_limits/",
+    "https://spinningup.openai.com/en/latest/_modules/spinup/algos/pytorch/ddpg/ddpg.html"
+  ],
+  "limitations": [
+    "Original holdout reservoir and its rows were not saved; this does not identify the specific admission outlier",
+    "Includes all retained end rows and a random sample, so diagnostic means are not deployment-distribution estimates",
+    "Counterfactual bootstrap labels use final critic and sampled target-window smoothing, not a new trained model",
+    "No claim this is the unique cause of any performance failure"
+  ],
+  "optimizer_updates": 0,
+  "new_tcp": 0
+}

@@ -10,7 +10,7 @@ import time
 import numpy as np
 from .configuration import ROOT
 from .core import Observation, interval_return, period_ms, wire
-from .ownership import acquire_namespace_lock,release_namespace_lock,collect_orphans
+from .ownership import acquire_namespace_lock,release_namespace_lock,collect_orphans,cleanup_flow_report
 
 R = Path(__file__).resolve().parent
 
@@ -35,7 +35,6 @@ def run_flow(cfg, condition, action_fn, stop, actor=0, episode=0, transition=Non
     import psutil
     from frameworks.baseline.evaluate import StateReader, EndOfRun, cleanup
     from frameworks.baseline.packet_window_completion import start as packet_watch
-    from frameworks.baseline.baseline_admission import cleanup_report
     name = '%s-actor%d-ep%d' % (cfg['run_id'], actor, episode)
     folder = R / 'logs' / name; folder.mkdir(parents=True, exist_ok=False)
     dump(folder / 'config.json', dict(cfg=cfg, condition=condition, actor=actor, episode=episode))
@@ -49,6 +48,7 @@ def run_flow(cfg, condition, action_fn, stop, actor=0, episode=0, transition=Non
     source_hashes = dict(native=hashlib.sha256(binary.read_bytes()).hexdigest(), trace=hashlib.sha256(trace.read_bytes()).hexdigest())
     port = cfg['actor_port_base'] + actor
     shared_r = shared_w = server = watcher = None
+    shared_objects = []
     owned = {}; resource_rows = []; failure = ''; status = 'RUNNING'; model_calls = 0
     elapsed = 0.; sequence = 0; exploration = 0; last_decision_id = None
     monitor_stop = threading.Event(); flow_stop = threading.Event()
@@ -80,7 +80,9 @@ def run_flow(cfg, condition, action_fn, stop, actor=0, episode=0, transition=Non
         # Hold a host-local lock through first feedback; flows run concurrently.
         namespace_lock=acquire_namespace_lock(R/'control/namespace-start.lock',stop,cfg['deadline_epoch']-cfg.get('stop_reserve_s',60))
         shared_r = sysv_ipc.SharedMemory(None, sysv_ipc.IPC_CREX, mode=0o600, size=2048)
+        shared_objects.append(dict(key=shared_r.key, id=shared_r.id))
         shared_w = sysv_ipc.SharedMemory(None, sysv_ipc.IPC_CREX, mode=0o600, size=2048)
+        shared_objects.append(dict(key=shared_w.key, id=shared_w.id))
         shared_r.write(b'\0' * 2048); shared_w.write(b'99999 99999\0')
         env = dict(os.environ, C3_TRACE_DIR=str(ROOT / 'traces'), ORCA_SHM_R=str(shared_r.key), ORCA_SHM_W=str(shared_w.key),
                    ORCA_CONTROL_LOG=str(folder / 'control.csv'), CANOPY_JOINT_CLOCK=cfg['clock_mode'], CANOPY_JOINT_RATE=cfg['rate_mode'],
@@ -90,7 +92,8 @@ def run_flow(cfg, condition, action_fn, stop, actor=0, episode=0, transition=Non
                    '0', 'pretrained', '0', '0', '200000', '0', '0', '0', '1', '0', '0', '0', '0', 'none', 'raw', '0', '-1']
         server = subprocess.Popen(command, env=env, stdout=log_file, stderr=subprocess.STDOUT, start_new_session=True)
         server.created = psutil.Process(server.pid).create_time()
-        dump(folder / 'ownership.json', dict(pid=server.pid, started=server.created, shm_keys=[shared_r.key, shared_w.key], port=port))
+        dump(folder / 'ownership.json', dict(pid=server.pid, started=server.created,
+                                           shm_keys=[shared_r.key, shared_w.key], shm_objects=shared_objects, port=port))
         thread = threading.Thread(target=monitor, daemon=True); thread.start()
         if frozen_seconds:
             watcher = packet_watch(folder / 'down.log', frozen_seconds, flow_stop, folder / 'packet-window-completion.json')
@@ -161,7 +164,7 @@ def run_flow(cfg, condition, action_fn, stop, actor=0, episode=0, transition=Non
                 try: shm.remove(); shm.detach()
                 except sysv_ipc.Error: pass
         raw_file.close(); actions_file.close(); log_file.close()
-        audit = cleanup_report(owned, port, [x.key for x in (shared_r, shared_w) if x], sysv_ipc)
+        audit = cleanup_flow_report(owned, port, shared_objects)
         dump(folder / 'cleanup-audit.json', audit); dump(folder / 'resources.json', resource_rows)
         if audit['status'] != 'PASS': status = 'FAILED'; failure = 'Owned resource cleanup failed'
         result = dict(status=status, reason=failure, run_id=name, actor=actor, episode=episode,

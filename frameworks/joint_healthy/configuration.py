@@ -25,6 +25,7 @@ def configuration(profile='joint'):
         time_init_ms=40., time_initializer='constant', calibration_main_mode='constant',
         period_probe_probability=.1, clock_mode='scheduled', rate_mode='acked_bytes',
         fixed_mtp_ms=None, physical_seconds_per_actor=600., connection_reset_seconds=0.,
+        time_limit_handling='bootstrap_last_observation',
         exploration_std=.2, checkpoint_updates=10000, stop_reserve_s=60,
         run_id='new-joint-healthy-run', learner_endpoint='@LEARNER_IP@:25000', actor_port_base=23000,
         conditions=copy.deepcopy(source['conditions']), profile=profile,

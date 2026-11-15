@@ -237,9 +237,19 @@ class RealReplayAndGate(unittest.TestCase):
         expected,discount=interval_return(.9,.16)
         self.assertAlmostEqual(float(reward[0,0]),expected,places=5)
         self.assertAlmostEqual(float(continuation[0,0]),discount,places=6)
-        replay=Replay(self.cfg())
+        replay=Replay(self.cfg(time_limit_handling='physical_end_is_terminal_legacy'))
         replay.append(row(),0,0,1);replay.append(row(terminal=1),0,0,2)
         self.assertEqual(float(replay.short_return_batch(0)[3][0,0]),0.)
+
+    def test_time_limit_bootstraps_last_real_state_but_never_joins_connections(self):
+        replay=Replay(self.cfg(time_limit_handling='bootstrap_last_observation'))
+        replay.append(row(),0,0,1);replay.append(row(terminal=1),0,0,2)
+        first,last,reward,continuation=replay.short_return_batch(0)
+        self.assertAlmostEqual(float(continuation[0,0]),.995**2,places=6)
+        self.assertEqual(float(last[4][0,0]),1.)
+        replay.append(row(),0,1,1)
+        self.assertEqual(replay.last[0],(1,1,False))
+        self.assertEqual(len(replay.short_returns[0][0]),2)
 
 
 if __name__ == '__main__': unittest.main()
