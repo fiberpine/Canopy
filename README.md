@@ -11,7 +11,7 @@
 - [历史问题、失败和修复索引](docs/HISTORY_STATUS_20261113.md)
 - [从健康基座迁移的双动作候选：初次离线实现](docs/JOINT_HEALTHY_SEED3_V1.md)（历史契约）
 - [双动作首次上线：计量修复、容量与完整性能失败](docs/JOINT_HEALTHY_SEED3_ONLINE_20261113.md)
-- [当前两小时续接：一次3600秒联合训练与独立终点评测](docs/JOINT_HEALTHY_TWOHOUR_20261115.md)（进行中，不训练独立固定MTP组）
+- [当前两小时续接：一次3600秒联合训练与独立终点评测](docs/JOINT_HEALTHY_TWOHOUR_20261115.md)（完成：新联合模型健康门FAIL，未替换原基座）
 - [上轮四小时：修复、启动覆盖和联合容量门槛](docs/JOINT_HEALTHY_RESTART_20261115.md)
 - [上轮G4初始化准入、正式训练执行失败与修复证据](docs/JOINT_HEALTHY_RECOVERY_20261114.md)
 
@@ -34,7 +34,7 @@ baseline默认评测使用当前权重、自然接管native及完整60秒包时�
 |位置|内容|
 |---|---|
 |`frameworks/baseline`|当前基座训练、推理、协议与原生源码|
-|`frameworks/joint_healthy`、`joint_healthy.py`|当前健康窗口迁移的新双动作离线候选，82维/两动作，无性质约束|
+|`frameworks/joint_healthy`、`joint_healthy.py`|健康窗口迁移的双动作实现，82维/两动作，无性质约束；本轮完整训练后性能门FAIL|
 |`templates/baseline-*.json`|实际执行配方的便携配置|
 |`models/healthy-baseline-seed3`|当前策略及选定完整tensor|
 |`docs`、`evidence`|结果、问题、修复及校验记录|

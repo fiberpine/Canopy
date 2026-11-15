@@ -1,0 +1,4655 @@
+{
+  "status": "DESCRIPTIVE_ALL_REGISTERED_RESULTS_NO_RUN_SELECTION",
+  "original_health_status": "PERFORMANCE_FAIL",
+  "cells": [
+    {
+      "scenario": 0,
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R20",
+        "nominal_mbps": 12,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 100,
+        "queue_bytes": 150400,
+        "queue_bdp": 5.015045135406219
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c00-r0",
+            "r15-g4full-base-c00-r2",
+            "r15-g4full-base-c00-r1"
+          ],
+          "utilization": {
+            "mean": 0.9999949316033206,
+            "std": 1.1181317768001345e-05,
+            "minimum": 0.9999820205296741,
+            "maximum": 1.0000013871401439,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 7.310064457460751,
+            "std": 0.5676834186469983,
+            "minimum": 6.654637727673915,
+            "maximum": 7.646513680494263,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 10.333333333333334,
+            "std": 1.1547005383792515,
+            "minimum": 9.0,
+            "maximum": 11.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c00-r2",
+            "r15-g4full-g4-c00-r1",
+            "r15-g4full-g4-c00-r0"
+          ],
+          "utilization": {
+            "mean": 0.999881488436942,
+            "std": 0.00020827158371814305,
+            "minimum": 0.9996409974604665,
+            "maximum": 1.0000020807102157,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 8.087461084449162,
+            "std": 0.9072487605778992,
+            "minimum": 7.048339520417377,
+            "maximum": 8.722217764583165,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 11.0,
+            "std": 1.0,
+            "minimum": 10.0,
+            "maximum": 12.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.346666666666664,
+            "std": 0.2722743714221628,
+            "minimum": 45.04,
+            "maximum": 45.56,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063042,
+            "std": 1.479112654199449e-14,
+            "minimum": 20.49999912906303,
+            "maximum": 20.49999912906306,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c00-r0",
+            "r15-f2156-joint-c00-r2",
+            "r15-f2156-joint-c00-r1"
+          ],
+          "utilization": {
+            "mean": 0.9697439481565263,
+            "std": 0.01149842712578981,
+            "minimum": 0.96180680338889,
+            "maximum": 0.9829301734992211,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 3.6214767002225794,
+            "std": 1.3133036858363212,
+            "minimum": 2.8444773504630017,
+            "maximum": 5.137793106263137,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 7.666666666666667,
+            "std": 2.8867513459481287,
+            "minimum": 6.0,
+            "maximum": 11.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.48,
+            "std": 0.019999999999999574,
+            "minimum": 46.46,
+            "maximum": 46.5,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.04901208528084,
+            "std": 0.0017644626228753434,
+            "minimum": 20.047974523537093,
+            "maximum": 20.05104939424546,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -3.0250983446794333,
+      "joint_minus_base_queue_ms": -3.6885877572381713
+    },
+    {
+      "scenario": 1,
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R50",
+        "nominal_mbps": 12,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 250,
+        "queue_bytes": 376000,
+        "queue_bdp": 5.015045135406219
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c01-r0",
+            "r15-g4full-base-c01-r2",
+            "r15-g4full-base-c01-r1"
+          ],
+          "utilization": {
+            "mean": 0.9921181985673332,
+            "std": 0.0006493414476120248,
+            "minimum": 0.9916563520348279,
+            "maximum": 0.9928606564373973,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 3.187586859780662,
+            "std": 0.031361257837908475,
+            "minimum": 3.163484100655393,
+            "maximum": 3.2230438208376264,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 6.0,
+            "std": 0.0,
+            "minimum": 6.0,
+            "maximum": 6.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c01-r0",
+            "r15-g4full-g4-c01-r1",
+            "r15-g4full-g4-c01-r2"
+          ],
+          "utilization": {
+            "mean": 0.9889484588517325,
+            "std": 0.0028239678065710887,
+            "minimum": 0.986942903177618,
+            "maximum": 0.9921779167289101,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 3.187418636495874,
+            "std": 0.26101097729057277,
+            "minimum": 3.023598700243704,
+            "maximum": 3.4884153491569285,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 5.666666666666667,
+            "std": 0.5773502691896257,
+            "minimum": 5.0,
+            "maximum": 6.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.413333333333334,
+            "std": 0.15534906930307926,
+            "minimum": 45.24,
+            "maximum": 45.54,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.49999912906304,
+            "std": 8.940800023621815e-15,
+            "minimum": 20.49999912906303,
+            "maximum": 20.49999912906305,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c01-r0",
+            "r15-f2156-joint-c01-r2",
+            "r15-f2156-joint-c01-r1"
+          ],
+          "utilization": {
+            "mean": 0.9997009468120674,
+            "std": 8.728195740613674e-05,
+            "minimum": 0.9996008770993833,
+            "maximum": 0.9997613585437163,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 5.020132179002984,
+            "std": 0.08195092389792813,
+            "minimum": 4.949820428964106,
+            "maximum": 5.110134633519934,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 8.0,
+            "std": 0.0,
+            "minimum": 8.0,
+            "maximum": 8.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.46666666666666,
+            "std": 0.02309401076758454,
+            "minimum": 46.44,
+            "maximum": 46.48,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.052943289506562,
+            "std": 4.168869963717046e-06,
+            "minimum": 20.052939429765523,
+            "maximum": 20.052947710616955,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0001434308663224326,
+            "std": 0.00024842954784407305,
+            "minimum": 0.0,
+            "maximum": 0.0004302925989672978,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 0.7582748244734261,
+      "joint_minus_base_queue_ms": 1.8325453192223224
+    },
+    {
+      "scenario": 2,
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R100",
+        "nominal_mbps": 12,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c02-r1",
+            "r15-g4full-base-c02-r0",
+            "r15-g4full-base-c02-r2"
+          ],
+          "utilization": {
+            "mean": 1.0000018495201917,
+            "std": 4.0043286766664766e-07,
+            "minimum": 1.0000013871401439,
+            "maximum": 1.0000020807102157,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 15.762847889809064,
+            "std": 0.20518356699488138,
+            "minimum": 15.555352737046919,
+            "maximum": 15.965638978597076,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 18.0,
+            "std": 0.0,
+            "minimum": 18.0,
+            "maximum": 18.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c02-r1",
+            "r15-g4full-g4-c02-r0",
+            "r15-g4full-g4-c02-r2"
+          ],
+          "utilization": {
+            "mean": 1.0000013871401439,
+            "std": 0.0,
+            "minimum": 1.0000013871401439,
+            "maximum": 1.0000013871401439,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 15.719984487416085,
+            "std": 0.04136082925217603,
+            "minimum": 15.679952659873225,
+            "maximum": 15.762557169220894,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 18.0,
+            "std": 0.0,
+            "minimum": 18.0,
+            "maximum": 18.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.50666666666667,
+            "std": 0.06110100926608044,
+            "minimum": 45.44,
+            "maximum": 45.56,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063035,
+            "std": 3.552713678800501e-15,
+            "minimum": 20.49999912906303,
+            "maximum": 20.49999912906304,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c02-r1",
+            "r15-f2156-joint-c02-r0",
+            "r15-f2156-joint-c02-r2"
+          ],
+          "utilization": {
+            "mean": 0.9954209792498061,
+            "std": 4.1758595776645265e-05,
+            "minimum": 0.9953875456155701,
+            "maximum": 0.9954677863377366,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 14.955269139732732,
+            "std": 0.06845679611358542,
+            "minimum": 14.879771069283786,
+            "maximum": 15.013300284142433,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 25.0,
+            "std": 0.0,
+            "minimum": 25.0,
+            "maximum": 25.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.38,
+            "std": 0.03464101615137476,
+            "minimum": 46.34,
+            "maximum": 46.4,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.056287218176358,
+            "std": 3.106003162104462e-05,
+            "minimum": 20.0562553691629,
+            "maximum": 20.056317423993274,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -0.4580870270385562,
+      "joint_minus_base_queue_ms": -0.807578750076333
+    },
+    {
+      "scenario": 3,
+      "condition": {
+        "trace": "constant12",
+        "trace_sha256": "71451a348c28985014fc1b06d72149cacf05472d71597540df0c4781f4164dcb",
+        "capacity_mbps": 11.995904,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G12-R200",
+        "nominal_mbps": 12,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c03-r2",
+            "r15-g4full-base-c03-r1",
+            "r15-g4full-base-c03-r0"
+          ],
+          "utilization": {
+            "mean": 0.9949132503894663,
+            "std": 0.0006717339555470115,
+            "minimum": 0.9941846283531446,
+            "maximum": 0.9955079066988198,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 13.135983401044166,
+            "std": 0.07359585236816958,
+            "minimum": 13.084256400944252,
+            "maximum": 13.220238574997985,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 24.0,
+            "std": 0.0,
+            "minimum": 24.0,
+            "maximum": 24.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c03-r1",
+            "r15-g4full-g4-c03-r2",
+            "r15-g4full-g4-c03-r0"
+          ],
+          "utilization": {
+            "mean": 0.9928938588816094,
+            "std": 0.0008628880614892216,
+            "minimum": 0.992018128854649,
+            "maximum": 0.9937433043812288,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 12.530026494284185,
+            "std": 0.18022370330313964,
+            "minimum": 12.389546051966434,
+            "maximum": 12.733231061141277,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 23.0,
+            "std": 0.0,
+            "minimum": 23.0,
+            "maximum": 23.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.18666666666667,
+            "std": 0.20132891827388613,
+            "minimum": 45.0,
+            "maximum": 45.4,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063053,
+            "std": 1.2476720400955252e-14,
+            "minimum": 20.49999912906304,
+            "maximum": 20.499999129063063,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c03-r1",
+            "r15-f2156-joint-c03-r2",
+            "r15-f2156-joint-c03-r0"
+          ],
+          "utilization": {
+            "mean": 1.0000013871401439,
+            "std": 0.0,
+            "minimum": 1.0000013871401439,
+            "maximum": 1.0000013871401439,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 31.87563855679478,
+            "std": 0.09233872619315886,
+            "minimum": 31.76909652571612,
+            "maximum": 31.93252025996951,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 41.0,
+            "std": 0.0,
+            "minimum": 41.0,
+            "maximum": 41.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.42,
+            "std": 0.03464101615137886,
+            "minimum": 46.4,
+            "maximum": 46.46,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.058250467219104,
+            "std": 1.7001898202628013e-05,
+            "minimum": 20.058232502692892,
+            "maximum": 20.05826630669673,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 0.5088136750677541,
+      "joint_minus_base_queue_ms": 18.73965515575061
+    },
+    {
+      "scenario": 4,
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R200",
+        "nominal_mbps": 24,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 2000,
+        "queue_bytes": 3008000,
+        "queue_bdp": 5.015045135406219
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c04-r0",
+            "r15-g4full-base-c04-r2",
+            "r15-g4full-base-c04-r1"
+          ],
+          "utilization": {
+            "mean": 0.9998070096815269,
+            "std": 9.081329380627414e-05,
+            "minimum": 0.9997402580080668,
+            "maximum": 0.9999104227576346,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 14.963332976966289,
+            "std": 0.6108106306997413,
+            "minimum": 14.59408890717016,
+            "maximum": 15.668371901738336,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 25.333333333333332,
+            "std": 0.5773502691896257,
+            "minimum": 25.0,
+            "maximum": 26.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c04-r1",
+            "r15-g4full-g4-c04-r2",
+            "r15-g4full-g4-c04-r0"
+          ],
+          "utilization": {
+            "mean": 0.9992153499505609,
+            "std": 0.00020292866473413805,
+            "minimum": 0.999088302140464,
+            "maximum": 0.9994493853902132,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 14.165160027124777,
+            "std": 0.22391651657031933,
+            "minimum": 13.9945488495362,
+            "maximum": 14.41871387283237,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 24.333333333333332,
+            "std": 0.5773502691896257,
+            "minimum": 24.0,
+            "maximum": 25.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.46666666666667,
+            "std": 0.041633319989321196,
+            "minimum": 45.42,
+            "maximum": 45.5,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063035,
+            "std": 2.0511601988091347e-15,
+            "minimum": 20.499999129063035,
+            "maximum": 20.49999912906304,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c04-r0",
+            "r15-f2156-joint-c04-r1",
+            "r15-f2156-joint-c04-r2"
+          ],
+          "utilization": {
+            "mean": 1.0000008091650838,
+            "std": 2.0021643389742257e-07,
+            "minimum": 1.0000006935700718,
+            "maximum": 1.0000010403551078,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 34.03542224578764,
+            "std": 0.17618936949061417,
+            "minimum": 33.88380373513069,
+            "maximum": 34.228711560450144,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 43.333333333333336,
+            "std": 0.5773502691896257,
+            "minimum": 43.0,
+            "maximum": 44.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.42666666666667,
+            "std": 0.041633319989321196,
+            "minimum": 46.38,
+            "maximum": 46.46,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.0584991616537,
+            "std": 2.2576977096290412e-05,
+            "minimum": 20.05847978422007,
+            "maximum": 20.05852395355542,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 0.019379948355691123,
+      "joint_minus_base_queue_ms": 19.072089268821355
+    },
+    {
+      "scenario": 5,
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R20",
+        "nominal_mbps": 24,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 200,
+        "queue_bytes": 300800,
+        "queue_bdp": 5.015045135406219
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c05-r0",
+            "r15-g4full-base-c05-r1",
+            "r15-g4full-base-c05-r2"
+          ],
+          "utilization": {
+            "mean": 0.9999874357113895,
+            "std": 1.547312052783081e-05,
+            "minimum": 0.9999706032992595,
+            "maximum": 1.0000010403551078,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 6.333489521346567,
+            "std": 1.6275967498674622,
+            "minimum": 5.323764531239029,
+            "maximum": 8.211091162576103,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 9.666666666666666,
+            "std": 1.1547005383792515,
+            "minimum": 9.0,
+            "maximum": 11.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c05-r0",
+            "r15-g4full-g4-c05-r2",
+            "r15-g4full-g4-c05-r1"
+          ],
+          "utilization": {
+            "mean": 1.0000006935700718,
+            "std": 0.0,
+            "minimum": 1.0000006935700718,
+            "maximum": 1.0000006935700718,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 7.33718815403235,
+            "std": 1.8081561023328083,
+            "minimum": 6.275551142404365,
+            "maximum": 9.424966399871618,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 10.666666666666666,
+            "std": 1.1547005383792515,
+            "minimum": 10.0,
+            "maximum": 12.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.473333333333336,
+            "std": 0.04618802153516908,
+            "minimum": 45.42,
+            "maximum": 45.5,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063035,
+            "std": 2.0511601988091347e-15,
+            "minimum": 20.499999129063035,
+            "maximum": 20.49999912906304,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c05-r0",
+            "r15-f2156-joint-c05-r1",
+            "r15-f2156-joint-c05-r2"
+          ],
+          "utilization": {
+            "mean": 0.9876703692638198,
+            "std": 0.020646117552551288,
+            "minimum": 0.9638321880535222,
+            "maximum": 0.9998502422160097,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 4.414158552587147,
+            "std": 1.565351990448076,
+            "minimum": 2.609525890775891,
+            "maximum": 5.40480704605415,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 9.333333333333334,
+            "std": 2.8867513459481287,
+            "minimum": 6.0,
+            "maximum": 11.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.29333333333333,
+            "std": 0.27153882472555213,
+            "minimum": 45.98,
+            "maximum": 46.46,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.048972025241955,
+            "std": 0.0014476122063736495,
+            "minimum": 20.047316360151015,
+            "maximum": 20.049999008308454,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -1.2317066447569691,
+      "joint_minus_base_queue_ms": -1.9193309687594198
+    },
+    {
+      "scenario": 6,
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R50",
+        "nominal_mbps": 24,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 500,
+        "queue_bytes": 752000,
+        "queue_bdp": 5.015045135406219
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c06-r0",
+            "r15-g4full-base-c06-r2",
+            "r15-g4full-base-c06-r1"
+          ],
+          "utilization": {
+            "mean": 0.9799775212161307,
+            "std": 0.00044912443296766917,
+            "minimum": 0.9794794756610257,
+            "maximum": 0.9803517467295504,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 2.0618588118984555,
+            "std": 0.0007089719772280288,
+            "minimum": 2.0613547773242074,
+            "maximum": 2.062669491091804,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 4.0,
+            "std": 0.0,
+            "minimum": 4.0,
+            "maximum": 4.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c06-r1",
+            "r15-g4full-g4-c06-r2",
+            "r15-g4full-g4-c06-r0"
+          ],
+          "utilization": {
+            "mean": 0.9756877547536226,
+            "std": 8.20998272003319e-05,
+            "minimum": 0.9756175441217269,
+            "maximum": 0.9757780255660599,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 2.029163707588717,
+            "std": 0.002364743422628503,
+            "minimum": 2.0269864605072425,
+            "maximum": 2.031679463854369,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 4.0,
+            "std": 0.0,
+            "minimum": 4.0,
+            "maximum": 4.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.49333333333333,
+            "std": 0.01154700538379432,
+            "minimum": 45.48,
+            "maximum": 45.5,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063035,
+            "std": 0.0,
+            "minimum": 20.499999129063035,
+            "maximum": 20.499999129063035,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c06-r0",
+            "r15-f2156-joint-c06-r1",
+            "r15-f2156-joint-c06-r2"
+          ],
+          "utilization": {
+            "mean": 0.9999941224382366,
+            "std": 1.138153420177057e-05,
+            "minimum": 0.9999809801745663,
+            "maximum": 1.0000006935700718,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 5.57425999982752,
+            "std": 0.054704682186978056,
+            "minimum": 5.511454133317286,
+            "maximum": 5.611508410146338,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 8.0,
+            "std": 0.0,
+            "minimum": 8.0,
+            "maximum": 8.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.43333333333333,
+            "std": 0.011547005383790217,
+            "minimum": 46.42,
+            "maximum": 46.44,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.052665476908405,
+            "std": 5.793040081104099e-06,
+            "minimum": 20.05265901764129,
+            "maximum": 20.05267021243526,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 2.001660122210591,
+      "joint_minus_base_queue_ms": 3.5124011879290644
+    },
+    {
+      "scenario": 7,
+      "condition": {
+        "trace": "constant24",
+        "trace_sha256": "eeff70164b42d0170506ee1bdd6c80fe7a945a3208073600a00c86f6f8531633",
+        "capacity_mbps": 23.991808,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G24-R100",
+        "nominal_mbps": 24,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.015045135406219
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c07-r0",
+            "r15-g4full-base-c07-r1",
+            "r15-g4full-base-c07-r2"
+          ],
+          "utilization": {
+            "mean": 1.0000010403551078,
+            "std": 0.0,
+            "minimum": 1.0000010403551078,
+            "maximum": 1.0000010403551078,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 15.549976764323374,
+            "std": 0.1560820085948141,
+            "minimum": 15.43248447890234,
+            "maximum": 15.727079425894908,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 17.0,
+            "std": 0.0,
+            "minimum": 17.0,
+            "maximum": 17.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c07-r0",
+            "r15-g4full-g4-c07-r1",
+            "r15-g4full-g4-c07-r2"
+          ],
+          "utilization": {
+            "mean": 0.9999372852600353,
+            "std": 0.0001098264146052049,
+            "minimum": 0.9998104686399625,
+            "maximum": 1.0000006935700718,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 15.349461394353272,
+            "std": 0.06209583162617014,
+            "minimum": 15.277767746077606,
+            "maximum": 15.3862610579527,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 17.0,
+            "std": 0.0,
+            "minimum": 17.0,
+            "maximum": 17.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.39333333333333,
+            "std": 0.23692474191889354,
+            "minimum": 45.12,
+            "maximum": 45.54,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063042,
+            "std": 1.3450356907185972e-14,
+            "minimum": 20.49999912906303,
+            "maximum": 20.499999129063056,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c07-r0",
+            "r15-f2156-joint-c07-r1",
+            "r15-f2156-joint-c07-r2"
+          ],
+          "utilization": {
+            "mean": 0.99721255966481,
+            "std": 0.0006820187068970688,
+            "minimum": 0.9964500416142044,
+            "maximum": 0.9977643302247167,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 15.069890308773678,
+            "std": 0.09343914258938359,
+            "minimum": 14.978679131483716,
+            "maximum": 15.165408463179933,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 25.0,
+            "std": 0.0,
+            "minimum": 25.0,
+            "maximum": 25.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.406666666666666,
+            "std": 0.02309401076758454,
+            "minimum": 46.38,
+            "maximum": 46.42,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.056160981468615,
+            "std": 3.5556399961145796e-05,
+            "minimum": 20.056128277791853,
+            "maximum": 20.05619883004449,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -0.2788480690297801,
+      "joint_minus_base_queue_ms": -0.48008645554969576
+    },
+    {
+      "scenario": 8,
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R100",
+        "nominal_mbps": 36,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c08-r0",
+            "r15-g4full-base-c08-r2",
+            "r15-g4full-base-c08-r1"
+          ],
+          "utilization": {
+            "mean": 1.000000539263094,
+            "std": 1.3343301101773524e-07,
+            "minimum": 1.0000004622255092,
+            "maximum": 1.0000006933382637,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 15.389713083460617,
+            "std": 0.035518293252941494,
+            "minimum": 15.36239488776888,
+            "maximum": 15.42986437437752,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 17.0,
+            "std": 0.0,
+            "minimum": 17.0,
+            "maximum": 17.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c08-r2",
+            "r15-g4full-g4-c08-r0",
+            "r15-g4full-g4-c08-r1"
+          ],
+          "utilization": {
+            "mean": 1.000000539263094,
+            "std": 1.3343301101773524e-07,
+            "minimum": 1.0000004622255092,
+            "maximum": 1.0000006933382637,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 16.94172134487795,
+            "std": 3.597516519567008,
+            "minimum": 14.810090706737164,
+            "maximum": 21.09529284367856,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 20.0,
+            "std": 6.082762530298219,
+            "minimum": 16.0,
+            "maximum": 27.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.13333333333333,
+            "std": 0.1803699901129156,
+            "minimum": 44.96,
+            "maximum": 45.32,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063056,
+            "std": 8.940800023621815e-15,
+            "minimum": 20.499999129063045,
+            "maximum": 20.499999129063063,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c08-r0",
+            "r15-f2156-joint-c08-r2",
+            "r15-f2156-joint-c08-r1"
+          ],
+          "utilization": {
+            "mean": 0.9999871702791369,
+            "std": 1.7554492911842224e-05,
+            "minimum": 0.9999672708783707,
+            "maximum": 1.0000004622255092,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 21.836034723530155,
+            "std": 6.438718056777612,
+            "minimum": 18.054158478054518,
+            "maximum": 29.270450929800404,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 33.0,
+            "std": 10.392304845413264,
+            "minimum": 27.0,
+            "maximum": 45.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.4,
+            "std": 0.019999999999999574,
+            "minimum": 46.38,
+            "maximum": 46.42,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.058282110224315,
+            "std": 0.0019696396528369286,
+            "minimum": 20.057136004576336,
+            "maximum": 20.06055643073588,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -0.001336898395709607,
+      "joint_minus_base_queue_ms": 6.446321640069538
+    },
+    {
+      "scenario": 9,
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R200",
+        "nominal_mbps": 36,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 3000,
+        "queue_bytes": 4512000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c09-r0",
+            "r15-g4full-base-c09-r2",
+            "r15-g4full-base-c09-r1"
+          ],
+          "utilization": {
+            "mean": 1.000000539263094,
+            "std": 1.3343301101773524e-07,
+            "minimum": 1.0000004622255092,
+            "maximum": 1.0000006933382637,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 29.05326304419882,
+            "std": 1.0164061488127532,
+            "minimum": 28.43114396866352,
+            "maximum": 30.226185303770645,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 39.666666666666664,
+            "std": 1.1547005383792515,
+            "minimum": 39.0,
+            "maximum": 41.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c09-r2",
+            "r15-g4full-g4-c09-r0",
+            "r15-g4full-g4-c09-r1"
+          ],
+          "utilization": {
+            "mean": 1.0000004622255092,
+            "std": 0.0,
+            "minimum": 1.0000004622255092,
+            "maximum": 1.0000004622255092,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 30.46541935713872,
+            "std": 0.0575699173777735,
+            "minimum": 30.431545032820416,
+            "maximum": 30.531891284875872,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 41.0,
+            "std": 0.0,
+            "minimum": 41.0,
+            "maximum": 41.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.32,
+            "std": 0.03464101615137886,
+            "minimum": 45.3,
+            "maximum": 45.36,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063045,
+            "std": 2.0511601988091347e-15,
+            "minimum": 20.499999129063042,
+            "maximum": 20.499999129063045,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c09-r0",
+            "r15-f2156-joint-c09-r2",
+            "r15-f2156-joint-c09-r1"
+          ],
+          "utilization": {
+            "mean": 1.000000616300679,
+            "std": 1.3343301101773524e-07,
+            "minimum": 1.0000004622255092,
+            "maximum": 1.0000006933382637,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 38.2395585034603,
+            "std": 0.21453649761876775,
+            "minimum": 38.01237951364286,
+            "maximum": 38.43869441120833,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 43.666666666666664,
+            "std": 0.5773502691896257,
+            "minimum": 43.0,
+            "maximum": 44.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.22,
+            "std": 0.19078784028339027,
+            "minimum": 46.0,
+            "maximum": 46.34,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.061598202697446,
+            "std": 2.4407055120337844e-05,
+            "minimum": 20.0615703533467,
+            "maximum": 20.06161587097895,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 7.703758497790147e-06,
+      "joint_minus_base_queue_ms": 9.18629545926148
+    },
+    {
+      "scenario": 10,
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R20",
+        "nominal_mbps": 36,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 300,
+        "queue_bytes": 451200,
+        "queue_bdp": 5.0133689839572195
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c10-r1",
+            "r15-g4full-base-c10-r2",
+            "r15-g4full-base-c10-r0"
+          ],
+          "utilization": {
+            "mean": 0.9999315432168999,
+            "std": 0.00011977152355166813,
+            "minimum": 0.9997932429741723,
+            "maximum": 1.0000006933382637,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 7.024894728085063,
+            "std": 1.5563513119662036,
+            "minimum": 5.249313035280903,
+            "maximum": 8.152918056456087,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 9.666666666666666,
+            "std": 0.5773502691896257,
+            "minimum": 9.0,
+            "maximum": 10.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c10-r2",
+            "r15-g4full-g4-c10-r1",
+            "r15-g4full-g4-c10-r0"
+          ],
+          "utilization": {
+            "mean": 1.000000539263094,
+            "std": 1.3343301101773524e-07,
+            "minimum": 1.0000004622255092,
+            "maximum": 1.0000006933382637,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 8.479071070789097,
+            "std": 0.5184704087500788,
+            "minimum": 7.999184502880977,
+            "maximum": 9.02900342907562,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 11.0,
+            "std": 0.0,
+            "minimum": 11.0,
+            "maximum": 11.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.46666666666667,
+            "std": 0.09451631252505216,
+            "minimum": 45.36,
+            "maximum": 45.54,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063035,
+            "std": 5.426859785202775e-15,
+            "minimum": 20.49999912906303,
+            "maximum": 20.499999129063042,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c10-r1",
+            "r15-f2156-joint-c10-r2",
+            "r15-f2156-joint-c10-r0"
+          ],
+          "utilization": {
+            "mean": 0.9923580138051352,
+            "std": 0.0021988858379550554,
+            "minimum": 0.9898534034019797,
+            "maximum": 0.9939712815735579,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 6.21827725614457,
+            "std": 0.05380842832864195,
+            "minimum": 6.159576830671701,
+            "maximum": 6.265263851621711,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 12.0,
+            "std": 0.0,
+            "minimum": 12.0,
+            "maximum": 12.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.35333333333334,
+            "std": 0.02309401076758454,
+            "minimum": 46.34,
+            "maximum": 46.38,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.05084221353892,
+            "std": 0.00010436887493010717,
+            "minimum": 20.05075867778794,
+            "maximum": 20.050959209040887,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -0.7573529411764701,
+      "joint_minus_base_queue_ms": -0.806617471940493
+    },
+    {
+      "scenario": 11,
+      "condition": {
+        "trace": "constant36",
+        "trace_sha256": "943a7b09f58ffa7da0df88aaecae58ed0fa8a2fe2d34ee753e2eca76f4011525",
+        "capacity_mbps": 35.999744,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G36-R50",
+        "nominal_mbps": 36,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 750,
+        "queue_bytes": 1128000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c11-r2",
+            "r15-g4full-base-c11-r0",
+            "r15-g4full-base-c11-r1"
+          ],
+          "utilization": {
+            "mean": 0.9822754946998141,
+            "std": 0.015449490109458687,
+            "minimum": 0.9716649007281829,
+            "maximum": 1.0000004622255092,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 4.524168228252532,
+            "std": 3.9652517070397635,
+            "minimum": 2.213389927285485,
+            "maximum": 9.102779374607291,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 7.333333333333333,
+            "std": 5.773502691896257,
+            "minimum": 4.0,
+            "maximum": 14.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c11-r2",
+            "r15-g4full-g4-c11-r0",
+            "r15-g4full-g4-c11-r1"
+          ],
+          "utilization": {
+            "mean": 0.9998935873914363,
+            "std": 0.0001270358236030482,
+            "minimum": 0.9997531360223006,
+            "maximum": 1.0000004622255092,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 11.350916303035978,
+            "std": 0.19951283656005567,
+            "minimum": 11.199429113856356,
+            "maximum": 11.5769732223448,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 16.0,
+            "std": 0.0,
+            "minimum": 16.0,
+            "maximum": 16.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.093333333333334,
+            "std": 0.041633319989322334,
+            "minimum": 45.06,
+            "maximum": 45.14,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063056,
+            "std": 3.552713678800501e-15,
+            "minimum": 20.499999129063053,
+            "maximum": 20.49999912906306,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c11-r2",
+            "r15-f2156-joint-c11-r0",
+            "r15-f2156-joint-c11-r1"
+          ],
+          "utilization": {
+            "mean": 1.000000539263094,
+            "std": 1.3343301101773524e-07,
+            "minimum": 1.0000004622255092,
+            "maximum": 1.0000006933382637,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 14.570704126387952,
+            "std": 0.08367879050183047,
+            "minimum": 14.490661889546931,
+            "maximum": 14.6575981604524,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 17.0,
+            "std": 0.0,
+            "minimum": 17.0,
+            "maximum": 17.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.333333333333336,
+            "std": 0.18583146486355354,
+            "minimum": 46.12,
+            "maximum": 46.46,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.057439753643703,
+            "std": 9.039761459927117e-05,
+            "minimum": 20.05734072394899,
+            "maximum": 20.057517844152013,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 1.7725044563279835,
+      "joint_minus_base_queue_ms": 10.04653589813542
+    },
+    {
+      "scenario": 12,
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R50",
+        "nominal_mbps": 42,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 875,
+        "queue_bytes": 1316000,
+        "queue_bdp": 5.01432664756447
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c12-r1",
+            "r15-g4full-base-c12-r0",
+            "r15-g4full-base-c12-r2"
+          ],
+          "utilization": {
+            "mean": 0.9952745788372046,
+            "std": 0.0016665624221855546,
+            "minimum": 0.993410138389319,
+            "maximum": 0.9966195055782479,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 8.87918451752435,
+            "std": 0.32433842348014924,
+            "minimum": 8.505324426600213,
+            "maximum": 9.08526886423277,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 15.0,
+            "std": 0.0,
+            "minimum": 15.0,
+            "maximum": 15.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c12-r1",
+            "r15-g4full-g4-c12-r2",
+            "r15-g4full-g4-c12-r0"
+          ],
+          "utilization": {
+            "mean": 0.9998610823223394,
+            "std": 2.7117195070667767e-05,
+            "minimum": 0.9998401359507407,
+            "maximum": 0.9998917118819728,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 11.224256193648147,
+            "std": 0.1708328826076863,
+            "minimum": 11.052961876160564,
+            "maximum": 11.394623871614845,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 16.0,
+            "std": 0.0,
+            "minimum": 16.0,
+            "maximum": 16.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.480000000000004,
+            "std": 0.03464101615137886,
+            "minimum": 45.46,
+            "maximum": 45.52,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.49999912906304,
+            "std": 2.0511601988091347e-15,
+            "minimum": 20.499999129063035,
+            "maximum": 20.49999912906304,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c12-r0",
+            "r15-f2156-joint-c12-r1",
+            "r15-f2156-joint-c12-r2"
+          ],
+          "utilization": {
+            "mean": 1.0000004623138044,
+            "std": 1.1439299968435562e-07,
+            "minimum": 1.0000003962689752,
+            "maximum": 1.0000005944034627,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 11.972677246687066,
+            "std": 5.140978597937153,
+            "minimum": 6.04719716679465,
+            "maximum": 15.245538733080423,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 14.333333333333334,
+            "std": 5.507570547286102,
+            "minimum": 8.0,
+            "maximum": 18.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.42,
+            "std": 0.019999999999999574,
+            "minimum": 46.4,
+            "maximum": 46.44,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.055974110576187,
+            "std": 0.002902893922011803,
+            "minimum": 20.052628026876583,
+            "maximum": 20.057819158323795,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 0.4725883476599746,
+      "joint_minus_base_queue_ms": 3.0934927291627172
+    },
+    {
+      "scenario": 13,
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R100",
+        "nominal_mbps": 42,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 1750,
+        "queue_bytes": 2632000,
+        "queue_bdp": 5.01432664756447
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c13-r2",
+            "r15-g4full-base-c13-r0",
+            "r15-g4full-base-c13-r1"
+          ],
+          "utilization": {
+            "mean": 1.0000004623138044,
+            "std": 1.1439299968435562e-07,
+            "minimum": 1.0000003962689752,
+            "maximum": 1.0000005944034627,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 17.523566918401514,
+            "std": 3.510346346647414,
+            "minimum": 15.466699522068515,
+            "maximum": 21.57681529830433,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 20.666666666666668,
+            "std": 6.3508529610858835,
+            "minimum": 17.0,
+            "maximum": 28.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c13-r1",
+            "r15-g4full-g4-c13-r2",
+            "r15-g4full-g4-c13-r0"
+          ],
+          "utilization": {
+            "mean": 0.9999736531935215,
+            "std": 4.632036543644713e-05,
+            "minimum": 0.9999201670426141,
+            "maximum": 1.0000003962689752,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 17.49216145199286,
+            "std": 4.413906422585972,
+            "minimum": 14.819506212461603,
+            "maximum": 22.586847142153097,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 21.0,
+            "std": 6.928203230275509,
+            "minimum": 17.0,
+            "maximum": 29.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.373333333333335,
+            "std": 0.21939310229205927,
+            "minimum": 45.12,
+            "maximum": 45.5,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063042,
+            "std": 1.2306961192854808e-14,
+            "minimum": 20.499999129063035,
+            "maximum": 20.499999129063056,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c13-r0",
+            "r15-f2156-joint-c13-r2",
+            "r15-f2156-joint-c13-r1"
+          ],
+          "utilization": {
+            "mean": 1.0000003962689752,
+            "std": 0.0,
+            "minimum": 1.0000003962689752,
+            "maximum": 1.0000003962689752,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 28.308859879351907,
+            "std": 3.6571553772130025,
+            "minimum": 24.088864311010763,
+            "maximum": 30.554922006624565,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 41.666666666666664,
+            "std": 8.386497083606082,
+            "minimum": 32.0,
+            "maximum": 47.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.406666666666666,
+            "std": 0.030550504633036733,
+            "minimum": 46.38,
+            "maximum": 46.44,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.060235009336118,
+            "std": 0.0011598218947155932,
+            "minimum": 20.05889629416893,
+            "maximum": 20.060937048769727,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -6.604482916117149e-06,
+      "joint_minus_base_queue_ms": 10.785292960950393
+    },
+    {
+      "scenario": 14,
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R200",
+        "nominal_mbps": 42,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 3500,
+        "queue_bytes": 5264000,
+        "queue_bdp": 5.01432664756447
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c14-r1",
+            "r15-g4full-base-c14-r0",
+            "r15-g4full-base-c14-r2"
+          ],
+          "utilization": {
+            "mean": 1.0000005283586335,
+            "std": 1.1439299968435562e-07,
+            "minimum": 1.0000003962689752,
+            "maximum": 1.0000005944034627,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 27.491822711704057,
+            "std": 0.16949326114153124,
+            "minimum": 27.298722658063184,
+            "maximum": 27.615981478722308,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 38.0,
+            "std": 0.0,
+            "minimum": 38.0,
+            "maximum": 38.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c14-r1",
+            "r15-g4full-g4-c14-r2",
+            "r15-g4full-g4-c14-r0"
+          ],
+          "utilization": {
+            "mean": 1.0000005283586335,
+            "std": 1.1439299968435562e-07,
+            "minimum": 1.0000003962689752,
+            "maximum": 1.0000005944034627,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 27.717427956414266,
+            "std": 2.15386922787058,
+            "minimum": 25.23061494644791,
+            "maximum": 28.992034475249568,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 38.666666666666664,
+            "std": 1.5275252316519468,
+            "minimum": 37.0,
+            "maximum": 40.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.18,
+            "std": 0.22538855339169125,
+            "minimum": 44.92,
+            "maximum": 45.32,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063053,
+            "std": 1.2306961192854808e-14,
+            "minimum": 20.499999129063045,
+            "maximum": 20.499999129063067,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c14-r1",
+            "r15-f2156-joint-c14-r0",
+            "r15-f2156-joint-c14-r2"
+          ],
+          "utilization": {
+            "mean": 1.0000004623138044,
+            "std": 1.1439299968435562e-07,
+            "minimum": 1.0000003962689752,
+            "maximum": 1.0000005944034627,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 54.64139573593119,
+            "std": 1.2721226657816689,
+            "minimum": 53.48386560689501,
+            "maximum": 56.00335239710719,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 75.33333333333333,
+            "std": 0.5773502691896257,
+            "minimum": 75.0,
+            "maximum": 76.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.3,
+            "std": 0.019999999999999574,
+            "minimum": 46.28,
+            "maximum": 46.32,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.064889052216923,
+            "std": 0.000191779395589582,
+            "minimum": 20.064727296361678,
+            "maximum": 20.065100909604933,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -6.604482916117149e-06,
+      "joint_minus_base_queue_ms": 27.149573024227134
+    },
+    {
+      "scenario": 15,
+      "condition": {
+        "trace": "constant42",
+        "trace_sha256": "420db1a5914edc33b839a361e95c3308e1c05b8cf8b0fc3452992ff02d7c397a",
+        "capacity_mbps": 41.99168,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G42-R20",
+        "nominal_mbps": 42,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 350,
+        "queue_bytes": 526400,
+        "queue_bdp": 5.01432664756447
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c15-r0",
+            "r15-g4full-base-c15-r2",
+            "r15-g4full-base-c15-r1"
+          ],
+          "utilization": {
+            "mean": 0.9998954002316649,
+            "std": 9.328266657220256e-05,
+            "minimum": 0.9998227458391757,
+            "maximum": 1.0000005944034627,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 5.601705309193732,
+            "std": 0.30741135670260694,
+            "minimum": 5.4189005622710935,
+            "maximum": 5.956619656968648,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 8.666666666666666,
+            "std": 0.5773502691896257,
+            "minimum": 8.0,
+            "maximum": 9.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c15-r1",
+            "r15-g4full-g4-c15-r0",
+            "r15-g4full-g4-c15-r2"
+          ],
+          "utilization": {
+            "mean": 0.9998552856184845,
+            "std": 0.00025133901936936196,
+            "minimum": 0.9995650643175029,
+            "maximum": 1.0000003962689752,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 6.584584609191438,
+            "std": 0.044719108472218085,
+            "minimum": 6.5345554778741795,
+            "maximum": 6.620672258308633,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 10.0,
+            "std": 0.0,
+            "minimum": 10.0,
+            "maximum": 10.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.18666666666667,
+            "std": 0.30615900008546576,
+            "minimum": 44.84,
+            "maximum": 45.42,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063053,
+            "std": 1.67894698188768e-14,
+            "minimum": 20.49999912906304,
+            "maximum": 20.49999912906307,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c15-r0",
+            "r15-f2156-joint-c15-r2",
+            "r15-f2156-joint-c15-r1"
+          ],
+          "utilization": {
+            "mean": 0.8980959732975675,
+            "std": 0.0031959744204171714,
+            "minimum": 0.8960290495641041,
+            "maximum": 0.9017770987014571,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 1.521033330165382,
+            "std": 0.015872717741653684,
+            "minimum": 1.5086040476099158,
+            "maximum": 1.538913213398321,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 3.0,
+            "std": 0.0,
+            "minimum": 3.0,
+            "maximum": 3.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.46,
+            "std": 0.019999999999999574,
+            "minimum": 46.44,
+            "maximum": 46.48,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.048746827014423,
+            "std": 1.6695621537526696e-05,
+            "minimum": 20.048728310012773,
+            "maximum": 20.04876073140224,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -10.179942693409739,
+      "joint_minus_base_queue_ms": -4.08067197902835
+    },
+    {
+      "scenario": 16,
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R20",
+        "nominal_mbps": 48,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 400,
+        "queue_bytes": 601600,
+        "queue_bdp": 5.013787916771121
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c16-r2",
+            "r15-g4full-base-c16-r0",
+            "r15-g4full-base-c16-r1"
+          ],
+          "utilization": {
+            "mean": 0.9993703384662432,
+            "std": 0.0008789076773048701,
+            "minimum": 0.9983608380493165,
+            "maximum": 0.9999654235317336,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 5.300969738368846,
+            "std": 0.055423844790796754,
+            "minimum": 5.23992899016594,
+            "maximum": 5.348143126177025,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 8.0,
+            "std": 0.0,
+            "minimum": 8.0,
+            "maximum": 8.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c16-r2",
+            "r15-g4full-g4-c16-r1",
+            "r15-g4full-g4-c16-r0"
+          ],
+          "utilization": {
+            "mean": 0.9999118853442712,
+            "std": 5.266751090594733e-05,
+            "minimum": 0.9998601339854813,
+            "maximum": 0.9999654235317336,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 6.090821824746907,
+            "std": 0.012733658478415387,
+            "minimum": 6.079424772105058,
+            "maximum": 6.104565626175254,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 9.0,
+            "std": 0.0,
+            "minimum": 9.0,
+            "maximum": 9.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.46,
+            "std": 0.0916515138991164,
+            "minimum": 45.36,
+            "maximum": 45.54,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063035,
+            "std": 5.426859785202775e-15,
+            "minimum": 20.49999912906303,
+            "maximum": 20.499999129063042,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c16-r0",
+            "r15-f2156-joint-c16-r2",
+            "r15-f2156-joint-c16-r1"
+          ],
+          "utilization": {
+            "mean": 0.9494513369212142,
+            "std": 0.034511290591958635,
+            "minimum": 0.9105242875354033,
+            "maximum": 0.9763001712155236,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 2.4725057352834297,
+            "std": 0.7597955881773012,
+            "minimum": 1.6154642467759877,
+            "maximum": 3.0635049428681476,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 5.666666666666667,
+            "std": 2.309401076758503,
+            "minimum": 3.0,
+            "maximum": 7.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.03333333333333,
+            "std": 0.3177000681985011,
+            "minimum": 45.84,
+            "maximum": 46.4,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.04857107178943,
+            "std": 0.00013547904701931076,
+            "minimum": 20.048460648724145,
+            "maximum": 20.048722250150565,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -4.991900154502904,
+      "joint_minus_base_queue_ms": -2.8284640030854167
+    },
+    {
+      "scenario": 17,
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R50",
+        "nominal_mbps": 48,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 1000,
+        "queue_bytes": 1504000,
+        "queue_bdp": 5.013787916771121
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c17-r0",
+            "r15-g4full-base-c17-r1",
+            "r15-g4full-base-c17-r2"
+          ],
+          "utilization": {
+            "mean": 0.9906179360261997,
+            "std": 0.0011883571029437086,
+            "minimum": 0.9894212541937135,
+            "maximum": 0.9917977896662631,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 7.356517976904663,
+            "std": 0.2455235597529498,
+            "minimum": 7.156955234456057,
+            "maximum": 7.630692158369394,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 14.0,
+            "std": 0.0,
+            "minimum": 14.0,
+            "maximum": 14.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c17-r2",
+            "r15-g4full-g4-c17-r0",
+            "r15-g4full-g4-c17-r1"
+          ],
+          "utilization": {
+            "mean": 0.9997045909940279,
+            "std": 7.869859395610164e-05,
+            "minimum": 0.9996144583775596,
+            "maximum": 0.9997596848780956,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 11.140922757236247,
+            "std": 0.283825983715347,
+            "minimum": 10.85668285049354,
+            "maximum": 11.424332998996992,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 16.0,
+            "std": 0.0,
+            "minimum": 16.0,
+            "maximum": 16.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.32,
+            "std": 0.2306512518934144,
+            "minimum": 45.06,
+            "maximum": 45.5,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063045,
+            "std": 1.3450356907185972e-14,
+            "minimum": 20.499999129063035,
+            "maximum": 20.49999912906306,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c17-r0",
+            "r15-f2156-joint-c17-r1",
+            "r15-f2156-joint-c17-r2"
+          ],
+          "utilization": {
+            "mean": 0.9999369542838551,
+            "std": 0.00010994904113251275,
+            "minimum": 0.9998099961063136,
+            "maximum": 1.000000520047151,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 14.797748054391624,
+            "std": 0.15822797965776061,
+            "minimum": 14.629130205852118,
+            "maximum": 14.94298406140795,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 17.333333333333332,
+            "std": 0.5773502691896257,
+            "minimum": 17.0,
+            "maximum": 18.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.406666666666666,
+            "std": 0.01154700538379432,
+            "minimum": 46.4,
+            "maximum": 46.42,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.057585745081276,
+            "std": 7.12266767014348e-05,
+            "minimum": 20.057504692898387,
+            "maximum": 20.05763836030878,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 0.9319018257655354,
+      "joint_minus_base_queue_ms": 7.441230077486961
+    },
+    {
+      "scenario": 18,
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R100",
+        "nominal_mbps": 48,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 2000,
+        "queue_bytes": 3008000,
+        "queue_bdp": 5.013787916771121
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c18-r2",
+            "r15-g4full-base-c18-r1",
+            "r15-g4full-base-c18-r0"
+          ],
+          "utilization": {
+            "mean": 1.0000003466981007,
+            "std": 0.0,
+            "minimum": 1.0000003466981007,
+            "maximum": 1.0000003466981007,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 17.79684836451878,
+            "std": 3.7644252325217495,
+            "minimum": 15.618569881475242,
+            "maximum": 22.143628542205644,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 21.333333333333332,
+            "std": 7.505553499465135,
+            "minimum": 17.0,
+            "maximum": 30.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c18-r2",
+            "r15-g4full-g4-c18-r0",
+            "r15-g4full-g4-c18-r1"
+          ],
+          "utilization": {
+            "mean": 0.9968651157704965,
+            "std": 0.005430379260071622,
+            "minimum": 0.9905946539152883,
+            "maximum": 1.0000003466981007,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 17.54759614182817,
+            "std": 3.842838719031011,
+            "minimum": 15.277761065318973,
+            "maximum": 21.984527605639453,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 25.0,
+            "std": 6.928203230275509,
+            "minimum": 17.0,
+            "maximum": 29.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.3,
+            "std": 0.22000000000000242,
+            "minimum": 45.08,
+            "maximum": 45.52,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063045,
+            "std": 1.0658141036401503e-14,
+            "minimum": 20.499999129063035,
+            "maximum": 20.499999129063056,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c18-r2",
+            "r15-f2156-joint-c18-r1",
+            "r15-f2156-joint-c18-r0"
+          ],
+          "utilization": {
+            "mean": 1.000000462264134,
+            "std": 1.000831208113826e-07,
+            "minimum": 1.0000003466981007,
+            "maximum": 1.000000520047151,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 30.33048566139464,
+            "std": 0.365775969704373,
+            "minimum": 30.06986643402924,
+            "maximum": 30.748632509914618,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 45.666666666666664,
+            "std": 0.5773502691896257,
+            "minimum": 45.0,
+            "maximum": 46.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.29333333333333,
+            "std": 0.18475208614068042,
+            "minimum": 46.08,
+            "maximum": 46.4,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.060814954849665,
+            "std": 0.0001668209391422438,
+            "minimum": 20.06065327267726,
+            "maximum": 20.06098647880129,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 1.1556603340956428e-05,
+      "joint_minus_base_queue_ms": 12.53363729687586
+    },
+    {
+      "scenario": 19,
+      "condition": {
+        "trace": "constant48",
+        "trace_sha256": "b135701a37d6ae8bef306308afbe280977115a3e34a76cd80357bd4cc05e3f85",
+        "capacity_mbps": 47.995648,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G48-R200",
+        "nominal_mbps": 48,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 4000,
+        "queue_bytes": 6016000,
+        "queue_bdp": 5.013787916771121
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c19-r2",
+            "r15-g4full-base-c19-r1",
+            "r15-g4full-base-c19-r0"
+          ],
+          "utilization": {
+            "mean": 0.999786540646352,
+            "std": 0.0003704730794147567,
+            "minimum": 0.9993587551938042,
+            "maximum": 1.000000520047151,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 25.890125073151395,
+            "std": 0.23730223120652633,
+            "minimum": 25.627036247334754,
+            "maximum": 26.088006136814872,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 37.333333333333336,
+            "std": 0.5773502691896257,
+            "minimum": 37.0,
+            "maximum": 38.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c19-r2",
+            "r15-g4full-g4-c19-r0",
+            "r15-g4full-g4-c19-r1"
+          ],
+          "utilization": {
+            "mean": 0.9999552803898665,
+            "std": 7.820730828165131e-05,
+            "minimum": 0.9998649744243479,
+            "maximum": 1.000000520047151,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 24.389417186401086,
+            "std": 1.4168990735932334,
+            "minimum": 22.75407295975931,
+            "maximum": 25.249983705434364,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 36.333333333333336,
+            "std": 1.1547005383792515,
+            "minimum": 35.0,
+            "maximum": 37.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.16,
+            "std": 0.3464101615137763,
+            "minimum": 44.76,
+            "maximum": 45.36,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.499999129063053,
+            "std": 1.8460441789282214e-14,
+            "minimum": 20.499999129063042,
+            "maximum": 20.499999129063074,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c19-r2",
+            "r15-f2156-joint-c19-r0",
+            "r15-f2156-joint-c19-r1"
+          ],
+          "utilization": {
+            "mean": 1.0000003466981007,
+            "std": 0.0,
+            "minimum": 1.0000003466981007,
+            "maximum": 1.0000003466981007,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 47.0135855577616,
+            "std": 1.7171648368918306,
+            "minimum": 45.03115536570203,
+            "maximum": 48.03846038144516,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 55.666666666666664,
+            "std": 0.5773502691896257,
+            "minimum": 55.0,
+            "maximum": 56.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.126666666666665,
+            "std": 0.23180451534285065,
+            "minimum": 45.86,
+            "maximum": 46.28,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.063051226844404,
+            "std": 0.0004482091814855961,
+            "minimum": 20.062533679466398,
+            "maximum": 20.063310063841914,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 0.02138060517486995,
+      "joint_minus_base_queue_ms": 21.123460484610206
+    },
+    {
+      "scenario": 20,
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R200",
+        "nominal_mbps": 72,
+        "delay_ms": 100,
+        "base_rtt_ms": 200,
+        "queue_packets": 6000,
+        "queue_bytes": 9024000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c20-r2",
+            "r15-g4full-base-c20-r0",
+            "r15-g4full-base-c20-r1"
+          ],
+          "utilization": {
+            "mean": 0.9977297705228125,
+            "std": 0.001047180214729794,
+            "minimum": 0.9965309797758561,
+            "maximum": 0.9984661402036636,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 15.99686837500697,
+            "std": 0.4907565062738896,
+            "minimum": 15.437779208757597,
+            "maximum": 16.356453114222766,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 27.0,
+            "std": 0.0,
+            "minimum": 27.0,
+            "maximum": 27.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c20-r2",
+            "r15-g4full-g4-c20-r1",
+            "r15-g4full-g4-c20-r0"
+          ],
+          "utilization": {
+            "mean": 0.9986143901467743,
+            "std": 0.0019300373469233105,
+            "minimum": 0.9963906054443054,
+            "maximum": 0.9998532878456025,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 17.70682232650062,
+            "std": 1.8133530112971075,
+            "minimum": 15.760839522074855,
+            "maximum": 19.34922566260751,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 28.666666666666668,
+            "std": 1.5275252316519468,
+            "minimum": 27.0,
+            "maximum": 30.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.22666666666667,
+            "std": 0.08082903768654617,
+            "minimum": 45.14,
+            "maximum": 45.3,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.49999912906305,
+            "std": 3.552713678800501e-15,
+            "minimum": 20.499999129063045,
+            "maximum": 20.499999129063053,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c20-r2",
+            "r15-f2156-joint-c20-r0",
+            "r15-f2156-joint-c20-r1"
+          ],
+          "utilization": {
+            "mean": 1.0000002696315469,
+            "std": 6.671650557296638e-08,
+            "minimum": 1.0000002311127545,
+            "maximum": 1.0000003466691318,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 45.989356616365036,
+            "std": 2.703580115529502,
+            "minimum": 42.86757775683318,
+            "maximum": 47.56501104601224,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 57.0,
+            "std": 4.358898943540674,
+            "minimum": 52.0,
+            "maximum": 60.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.260000000000005,
+            "std": 0.13856406460551132,
+            "minimum": 46.1,
+            "maximum": 46.34,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.062791155595324,
+            "std": 0.0007696710511101116,
+            "minimum": 20.061902448005664,
+            "maximum": 20.063242039472584,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 0.22704991087343362,
+      "joint_minus_base_queue_ms": 29.992488241358068
+    },
+    {
+      "scenario": 21,
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R20",
+        "nominal_mbps": 72,
+        "delay_ms": 10,
+        "base_rtt_ms": 20,
+        "queue_packets": 600,
+        "queue_bytes": 902400,
+        "queue_bdp": 5.0133689839572195
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c21-r1",
+            "r15-g4full-base-c21-r2",
+            "r15-g4full-base-c21-r0"
+          ],
+          "utilization": {
+            "mean": 0.9998209794677059,
+            "std": 0.00013846475110393334,
+            "minimum": 0.9997296247439982,
+            "maximum": 0.999980293193196,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 5.315086009814759,
+            "std": 0.05852275818742635,
+            "minimum": 5.250450474544428,
+            "maximum": 5.3644800449315,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 8.0,
+            "std": 0.0,
+            "minimum": 8.0,
+            "maximum": 8.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c21-r0",
+            "r15-g4full-g4-c21-r2",
+            "r15-g4full-g4-c21-r1"
+          ],
+          "utilization": {
+            "mean": 0.992406725262639,
+            "std": 0.004410634243750989,
+            "minimum": 0.9875371113750142,
+            "maximum": 0.9961333680595063,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 5.139722586613003,
+            "std": 0.40440769142955535,
+            "minimum": 4.694216750035536,
+            "maximum": 5.483673661112714,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 8.666666666666666,
+            "std": 0.5773502691896257,
+            "minimum": 8.0,
+            "maximum": 9.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.446666666666665,
+            "std": 0.01154700538379432,
+            "minimum": 45.44,
+            "maximum": 45.46,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.49999912906304,
+            "std": 0.0,
+            "minimum": 20.49999912906304,
+            "maximum": 20.49999912906304,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c21-r1",
+            "r15-f2156-joint-c21-r2",
+            "r15-f2156-joint-c21-r0"
+          ],
+          "utilization": {
+            "mean": 0.9030394853178215,
+            "std": 0.005225665228405534,
+            "minimum": 0.8983992952838775,
+            "maximum": 0.908700097422915,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 1.50987485882867,
+            "std": 0.022174132707969748,
+            "minimum": 1.489150046688467,
+            "maximum": 1.5332585468120712,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 3.0,
+            "std": 0.0,
+            "minimum": 3.0,
+            "maximum": 3.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.42,
+            "std": 0.0,
+            "minimum": 46.42,
+            "maximum": 46.42,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.048660824032275,
+            "std": 2.0043140510391084e-05,
+            "minimum": 20.04864184329817,
+            "maximum": 20.048681782890124,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -9.678149414988436,
+      "joint_minus_base_queue_ms": -3.805211150986089
+    },
+    {
+      "scenario": 22,
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R50",
+        "nominal_mbps": 72,
+        "delay_ms": 25,
+        "base_rtt_ms": 50,
+        "queue_packets": 1500,
+        "queue_bytes": 2256000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c22-r1",
+            "r15-g4full-base-c22-r2",
+            "r15-g4full-base-c22-r0"
+          ],
+          "utilization": {
+            "mean": 0.9941457687402814,
+            "std": 0.0005828311425931395,
+            "minimum": 0.9936098567812037,
+            "maximum": 0.9947662738935033,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 7.560243515680636,
+            "std": 0.40076253030518116,
+            "minimum": 7.183807064614392,
+            "maximum": 7.981554650647099,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 14.0,
+            "std": 0.0,
+            "minimum": 14.0,
+            "maximum": 14.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c22-r0",
+            "r15-g4full-g4-c22-r2",
+            "r15-g4full-g4-c22-r1"
+          ],
+          "utilization": {
+            "mean": 0.9998621234639891,
+            "std": 4.4574069309686554e-05,
+            "minimum": 0.9998331188132893,
+            "maximum": 0.99991344827341,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 11.390278000947875,
+            "std": 0.057186678718419426,
+            "minimum": 11.350194032295263,
+            "maximum": 11.455765258027638,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 16.0,
+            "std": 0.0,
+            "minimum": 16.0,
+            "maximum": 16.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.21333333333333,
+            "std": 0.2500666577801473,
+            "minimum": 45.04,
+            "maximum": 45.5,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.49999912906305,
+            "std": 1.3450356907185972e-14,
+            "minimum": 20.499999129063035,
+            "maximum": 20.49999912906306,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c22-r1",
+            "r15-f2156-joint-c22-r2",
+            "r15-f2156-joint-c22-r0"
+          ],
+          "utilization": {
+            "mean": 1.0000002696315469,
+            "std": 6.671650557296638e-08,
+            "minimum": 1.0000002311127545,
+            "maximum": 1.0000003466691318,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 14.865036750580622,
+            "std": 0.19338140890739178,
+            "minimum": 14.69649267050354,
+            "maximum": 15.076159250272392,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 17.333333333333332,
+            "std": 0.5773502691896257,
+            "minimum": 17.0,
+            "maximum": 18.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.300000000000004,
+            "std": 0.1743559577416273,
+            "minimum": 46.1,
+            "maximum": 46.42,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.05760348952071,
+            "std": 0.0001076163321227951,
+            "minimum": 20.05753693966077,
+            "maximum": 20.05772764685847,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": 0.5854500891265491,
+      "joint_minus_base_queue_ms": 7.304793234899986
+    },
+    {
+      "scenario": 23,
+      "condition": {
+        "trace": "constant72",
+        "trace_sha256": "4660560a1fdb896d32e34e34adfdf227b4f80fc28595ac266138a1f0e8224f05",
+        "capacity_mbps": 71.999488,
+        "packet_bytes": 1504,
+        "trace_period_ms": 1000,
+        "condition": "G72-R100",
+        "nominal_mbps": 72,
+        "delay_ms": 50,
+        "base_rtt_ms": 100,
+        "queue_packets": 3000,
+        "queue_bytes": 4512000,
+        "queue_bdp": 5.0133689839572195
+      },
+      "groups": {
+        "base": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-base-c23-r2",
+            "r15-g4full-base-c23-r1",
+            "r15-g4full-base-c23-r0"
+          ],
+          "utilization": {
+            "mean": 1.0000003081503395,
+            "std": 6.671650557296638e-08,
+            "minimum": 1.0000002311127545,
+            "maximum": 1.0000003466691318,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 22.259653867632345,
+            "std": 0.5189635195009984,
+            "minimum": 21.670354241100522,
+            "maximum": 22.64847160112566,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 30.0,
+            "std": 1.0,
+            "minimum": 29.0,
+            "maximum": 31.0,
+            "repeats": 3
+          }
+        },
+        "g4": {
+          "completed": 3,
+          "run_ids": [
+            "r15-g4full-g4-c23-r0",
+            "r15-g4full-g4-c23-r2",
+            "r15-g4full-g4-c23-r1"
+          ],
+          "utilization": {
+            "mean": 0.9999913569755755,
+            "std": 1.5470639118156326e-05,
+            "minimum": 0.9999734931448402,
+            "maximum": 1.0000003466691318,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 20.872168073778603,
+            "std": 0.7136239651478967,
+            "minimum": 20.148572498111594,
+            "maximum": 21.575383854386,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 27.666666666666668,
+            "std": 0.5773502691896257,
+            "minimum": 27.0,
+            "maximum": 28.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 45.20666666666667,
+            "std": 0.21385353243127317,
+            "minimum": 44.96,
+            "maximum": 45.34,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.49999912906305,
+            "std": 1.1420376657384844e-14,
+            "minimum": 20.499999129063042,
+            "maximum": 20.499999129063063,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        },
+        "joint": {
+          "completed": 3,
+          "run_ids": [
+            "r15-f2156-joint-c23-r2",
+            "r15-f2156-joint-c23-r1",
+            "r15-f2156-joint-c23-r0"
+          ],
+          "utilization": {
+            "mean": 1.0000002696315469,
+            "std": 6.671650557296638e-08,
+            "minimum": 1.0000002311127545,
+            "maximum": 1.0000003466691318,
+            "repeats": 3
+          },
+          "queue_mean_ms": {
+            "mean": 30.46151433926053,
+            "std": 0.5239000406797572,
+            "minimum": 29.959993716640543,
+            "maximum": 31.005240606680438,
+            "repeats": 3
+          },
+          "queue_p95_ms": {
+            "mean": 45.333333333333336,
+            "std": 0.5773502691896257,
+            "minimum": 45.0,
+            "maximum": 46.0,
+            "repeats": 3
+          },
+          "policy_calls_per_s": {
+            "mean": 46.306666666666665,
+            "std": 0.01154700538379432,
+            "minimum": 46.3,
+            "maximum": 46.32,
+            "repeats": 3
+          },
+          "mean_planned_ms": {
+            "mean": 20.060916389455535,
+            "std": 0.00016964295134039731,
+            "minimum": 20.06074524689903,
+            "maximum": 20.06108449193973,
+            "repeats": 3
+          },
+          "window_low_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          },
+          "time_high_boundary_fraction": {
+            "mean": 0.0,
+            "std": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "repeats": 3
+          }
+        }
+      },
+      "joint_minus_base_util_pp": -3.851879259997304e-06,
+      "joint_minus_base_queue_ms": 8.201860471628184
+    }
+  ],
+  "training": {
+    "final_result": {
+      "status": "COMPLETED",
+      "reason": "",
+      "counters": {
+        "critic_iterations": 429699,
+        "critic_optimizer_ops": 859398,
+        "actor_updates": 400199,
+        "target_updates": 429699
+      },
+      "phase": 2,
+      "credit": {
+        "inserted": 3470420,
+        "physical_seconds": 86400.281157,
+        "warmup_seconds": 460.39988,
+        "warmup_inserted": 15757,
+        "per_actor": [
+          145174,
+          144917,
+          145121,
+          142973,
+          141864,
+          145329,
+          145842,
+          145162,
+          144151,
+          141674,
+          146265,
+          146381,
+          144971,
+          144155,
+          142667,
+          146651,
+          145393,
+          145138,
+          145267,
+          142869,
+          141758,
+          145130,
+          145998,
+          145570
+        ],
+        "per_actor_seconds": [
+          3600.0031259999905,
+          3600.007514999922,
+          3600.0056949999866,
+          3600.0145809999935,
+          3600.0264899999725,
+          3600.0032279999655,
+          3600.0219290000173,
+          3600.0195390000576,
+          3600.001670999983,
+          3600.033322999932,
+          3600.0335710000686,
+          3600.0019069999958,
+          3600.009218000017,
+          3600.0037059999763,
+          3600.009432999912,
+          3600.021885000015,
+          3600.011387999946,
+          3600.0038969999496,
+          3600.0105399999784,
+          3600.014381000036,
+          3600.0002089999202,
+          3600.0142379999907,
+          3600.002199000026,
+          3600.0074880000125
+        ],
+        "update_limit": 429699,
+        "updates_per_base20ms": 0.1
+      },
+      "producer_done": {
+        "22": 145998,
+        "12": 144971,
+        "7": 145162,
+        "4": 141864,
+        "9": 141674,
+        "3": 142973,
+        "15": 146651,
+        "21": 145130,
+        "14": 142667,
+        "1": 144917,
+        "10": 146265,
+        "23": 145570,
+        "2": 145121,
+        "11": 146381,
+        "13": 144155,
+        "5": 145329,
+        "17": 145138,
+        "18": 145267,
+        "6": 145842,
+        "20": 141758,
+        "19": 142869,
+        "0": 145174,
+        "16": 145393,
+        "8": 144151
+      },
+      "endpoint": "@RUN@/frameworks/joint_healthy/checkpoints/joint-g4-startcoverage-seed3-3600-2156/step-3470420-final",
+      "update_debt": 0,
+      "exposure_complete": true,
+      "trained_joint_endpoint": true,
+      "no_complete_resume": true,
+      "performance_verified": false
+    },
+    "calibration_admissions": [
+      {
+        "phase": 0,
+        "iterations": 28500,
+        "admitted": true,
+        "reasons": [],
+        "holdout": [
+          {
+            "period": 0,
+            "rows": 256,
+            "normalized_td_rmse": 0.003795720953652289,
+            "twin_errors": [
+              0.003777590657381131,
+              0.003795720953652289
+            ]
+          },
+          {
+            "period": 1,
+            "rows": 256,
+            "normalized_td_rmse": 0.005774020943169095,
+            "twin_errors": [
+              0.005659030967300176,
+              0.005774020943169095
+            ]
+          },
+          {
+            "period": 2,
+            "rows": 256,
+            "normalized_td_rmse": 0.007935522923734941,
+            "twin_errors": [
+              0.007830981666417934,
+              0.007935522923734941
+            ]
+          },
+          {
+            "period": 3,
+            "rows": 256,
+            "normalized_td_rmse": 0.011841820253745952,
+            "twin_errors": [
+              0.011368819052004044,
+              0.011841820253745952
+            ]
+          },
+          {
+            "period": 4,
+            "rows": 256,
+            "normalized_td_rmse": 0.014841031901406844,
+            "twin_errors": [
+              0.014595863915637244,
+              0.014841031901406844
+            ]
+          }
+        ],
+        "short_returns": [
+          {
+            "period": 0,
+            "blocks": 64,
+            "normalized_return_rmse": 0.015892457180161433,
+            "twin_errors": [
+              0.015892457180161433,
+              0.015483913284660785
+            ],
+            "bootstrap_tail_not_full_MC": true,
+            "target_mean": 166.9519587635246
+          },
+          {
+            "period": 1,
+            "blocks": 16,
+            "normalized_return_rmse": 0.01789558354321536,
+            "twin_errors": [
+              0.01789558354321536,
+              0.01691325342760639
+            ],
+            "bootstrap_tail_not_full_MC": true,
+            "target_mean": 165.25979328242144
+          },
+          {
+            "period": 2,
+            "blocks": 14,
+            "normalized_return_rmse": 0.011833587324766096,
+            "twin_errors": [
+              0.011833587324766096,
+              0.009300750620059153
+            ],
+            "bootstrap_tail_not_full_MC": true,
+            "target_mean": 164.50953340695813
+          },
+          {
+            "period": 3,
+            "blocks": 16,
+            "normalized_return_rmse": 0.014670853122131896,
+            "twin_errors": [
+              0.013794259695750025,
+              0.014670853122131896
+            ],
+            "bootstrap_tail_not_full_MC": true,
+            "target_mean": 165.9064886241785
+          },
+          {
+            "period": 4,
+            "blocks": 18,
+            "normalized_return_rmse": 0.03614227654662011,
+            "twin_errors": [
+              0.03614227654662011,
+              0.033942758299024336
+            ],
+            "bootstrap_tail_not_full_MC": true,
+            "target_mean": 164.8806493476361
+          }
+        ],
+        "coverage": [
+          [
+            7359,
+            134,
+            151,
+            147,
+            171
+          ],
+          [
+            7382,
+            177,
+            131,
+            156,
+            165
+          ],
+          [
+            7428,
+            158,
+            155,
+            159,
+            138
+          ],
+          [
+            7449,
+            168,
+            160,
+            161,
+            170
+          ],
+          [
+            7575,
+            147,
+            166,
+            146,
+            144
+          ],
+          [
+            7531,
+            151,
+            142,
+            151,
+            160
+          ],
+          [
+            7377,
+            164,
+            164,
+            158,
+            158
+          ],
+          [
+            7397,
+            166,
+            156,
+            183,
+            169
+          ],
+          [
+            7282,
+            153,
+            144,
+            162,
+            165
+          ],
+          [
+            7355,
+            150,
+            168,
+            171,
+            159
+          ],
+          [
+            7440,
+            160,
+            154,
+            161,
+            168
+          ],
+          [
+            7253,
+            174,
+            165,
+            161,
+            176
+          ],
+          [
+            7518,
+            177,
+            161,
+            148,
+            165
+          ],
+          [
+            7223,
+            163,
+            164,
+            166,
+            162
+          ],
+          [
+            7336,
+            176,
+            163,
+            163,
+            162
+          ],
+          [
+            7383,
+            178,
+            167,
+            141,
+            176
+          ],
+          [
+            7180,
+            159,
+            154,
+            132,
+            190
+          ],
+          [
+            7523,
+            151,
+            139,
+            153,
+            157
+          ],
+          [
+            7296,
+            144,
+            151,
+            187,
+            162
+          ],
+          [
+            7090,
+            155,
+            148,
+            180,
+            177
+          ],
+          [
+            7263,
+            140,
+            147,
+            179,
+            164
+          ],
+          [
+            7324,
+            171,
+            156,
+            161,
+            164
+          ],
+          [
+            7549,
+            180,
+            175,
+            177,
+            137
+          ],
+          [
+            7518,
+            141,
+            142,
+            159,
+            160
+          ]
+        ]
+      },
+      {
+        "phase": 1,
+        "iterations": 29500,
+        "admitted": true,
+        "reasons": [],
+        "holdout": [
+          {
+            "period": 0,
+            "rows": 256,
+            "normalized_td_rmse": 0.0038324537851154865,
+            "twin_errors": [
+              0.0038324537851154865,
+              0.003579757470197102
+            ]
+          },
+          {
+            "period": 1,
+            "rows": 256,
+            "normalized_td_rmse": 0.005881930185878342,
+            "twin_errors": [
+              0.005881930185878342,
+              0.005869249850090699
+            ]
+          },
+          {
+            "period": 2,
+            "rows": 256,
+            "normalized_td_rmse": 0.008305683244137746,
+            "twin_errors": [
+              0.008305683244137746,
+              0.008080544600995781
+            ]
+          },
+          {
+            "period": 3,
+            "rows": 256,
+            "normalized_td_rmse": 0.01120823721904617,
+            "twin_errors": [
+              0.011006676890983965,
+              0.01120823721904617
+            ]
+          },
+          {
+            "period": 4,
+            "rows": 256,
+            "normalized_td_rmse": 0.01446527828610743,
+            "twin_errors": [
+              0.01446527828610743,
+              0.014434245644136963
+            ]
+          }
+        ],
+        "short_returns": [
+          {
+            "period": 0,
+            "blocks": 64,
+            "normalized_return_rmse": 0.014442445216694667,
+            "twin_errors": [
+              0.014442445216694667,
+              0.01419562700892703
+            ],
+            "bootstrap_tail_not_full_MC": true,
+            "target_mean": 167.29293260989616
+          },
+          {
+            "period": 1,
+            "blocks": 16,
+            "normalized_return_rmse": 0.017255245112318993,
+            "twin_errors": [
+              0.017255245112318993,
+              0.016310165251696866
+            ],
+            "bootstrap_tail_not_full_MC": true,
+            "target_mean": 165.30871837376475
+          },
+          {
+            "period": 2,
+            "blocks": 14,
+            "normalized_return_rmse": 0.013066815839944101,
+            "twin_errors": [
+              0.013066815839944101,
+              0.012051712193381638
+            ],
+            "bootstrap_tail_not_full_MC": true,
+            "target_mean": 164.48714777893275
+          },
+          {
+            "period": 3,
+            "blocks": 16,
+            "normalized_return_rmse": 0.015616546515572356,
+            "twin_errors": [
+              0.01516340139608855,
+              0.015616546515572356
+            ],
+            "bootstrap_tail_not_full_MC": true,
+            "target_mean": 165.9630521595829
+          },
+          {
+            "period": 4,
+            "blocks": 19,
+            "normalized_return_rmse": 0.03583763080951813,
+            "twin_errors": [
+              0.03583763080951813,
+              0.03438978877172727
+            ],
+            "bootstrap_tail_not_full_MC": true,
+            "target_mean": 165.11034045485397
+          }
+        ],
+        "coverage": [
+          [
+            7560,
+            140,
+            159,
+            154,
+            180
+          ],
+          [
+            7588,
+            183,
+            135,
+            163,
+            172
+          ],
+          [
+            7661,
+            160,
+            164,
+            162,
+            146
+          ],
+          [
+            7714,
+            174,
+            163,
+            162,
+            175
+          ],
+          [
+            7822,
+            153,
+            174,
+            151,
+            146
+          ],
+          [
+            7803,
+            156,
+            147,
+            152,
+            166
+          ],
+          [
+            7600,
+            171,
+            170,
+            162,
+            167
+          ],
+          [
+            7659,
+            170,
+            160,
+            187,
+            173
+          ],
+          [
+            7519,
+            156,
+            151,
+            165,
+            172
+          ],
+          [
+            7589,
+            156,
+            170,
+            179,
+            166
+          ],
+          [
+            7680,
+            166,
+            156,
+            166,
+            176
+          ],
+          [
+            7499,
+            179,
+            169,
+            167,
+            179
+          ],
+          [
+            7756,
+            183,
+            164,
+            154,
+            168
+          ],
+          [
+            7458,
+            169,
+            171,
+            171,
+            167
+          ],
+          [
+            7590,
+            183,
+            166,
+            168,
+            167
+          ],
+          [
+            7615,
+            181,
+            174,
+            147,
+            181
+          ],
+          [
+            7445,
+            161,
+            157,
+            136,
+            192
+          ],
+          [
+            7753,
+            155,
+            145,
+            161,
+            162
+          ],
+          [
+            7559,
+            150,
+            153,
+            192,
+            166
+          ],
+          [
+            7335,
+            159,
+            156,
+            184,
+            182
+          ],
+          [
+            7492,
+            145,
+            153,
+            184,
+            171
+          ],
+          [
+            7552,
+            175,
+            161,
+            166,
+            168
+          ],
+          [
+            7797,
+            187,
+            181,
+            180,
+            142
+          ],
+          [
+            7702,
+            146,
+            150,
+            169,
+            169
+          ]
+        ]
+      }
+    ],
+    "observed_snapshots": 824,
+    "maximum_recorded_credit_debt": 54966,
+    "maximum_recorded_fifo_backlog": 16,
+    "maximum_recorded_replay_sample_contribution_spread": 1,
+    "joint_gradient_snapshots": 769,
+    "window_gradient": {
+      "mean": 0.4427412108982028,
+      "std": 0.26862682091812307,
+      "minimum": 0.03587903454899788,
+      "maximum": 2.1229658126831055,
+      "repeats": 769
+    },
+    "time_gradient": {
+      "mean": 0.7764598369478725,
+      "std": 5.175224449216216,
+      "minimum": 9.362623565323247e-09,
+      "maximum": 67.92547607421875,
+      "repeats": 769
+    },
+    "exact_zero_window_gradient_snapshots": 0,
+    "exact_zero_time_gradient_snapshots": 0,
+    "limitations": [
+      "Sampled training telemetry is not a complete gradient history",
+      "Counters do not establish policy health or exclude transient bad behavior",
+      "No exact wall timestamps in training.jsonl; physical-experience axis only"
+    ]
+  },
+  "full_or_trim_nonzero_drops": [],
+  "limitations": [
+    "Three frozen repetitions are not independent training seeds",
+    "References are reused rather than simultaneously randomized with the endpoint",
+    "Per-condition standard deviations are descriptive; no significance or superiority claim",
+    "Zero decision cost provides no explicit optimization target for reducing calls"
+  ],
+  "overhead_description": {
+    "reductions_percent_vs_base": {
+      "trim10_executed_policy_calls_per_s": -0.2927298410122292,
+      "python_core_equivalents": 24.547723283413212,
+      "native_core_equivalents": -1.524527281477872,
+      "observed_tree_core_equivalents": 16.934382643458356
+    },
+    "joint_condition_mean_planned_ms": 20.056283035078007,
+    "conditions_with_mean_plan_at_most22ms": 24,
+    "independent_fixed_training": false,
+    "causal_overhead_superiority_established": false,
+    "research_goal": "PARTIAL_SINGLE_SEED_STATIC_GRID_NO_MATCHED_INDEPENDENT_FIXED_TRAINING"
+  }
+}

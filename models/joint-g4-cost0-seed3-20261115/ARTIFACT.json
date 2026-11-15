@@ -1,0 +1,30 @@
+{
+  "status": "ONE_UNIQUE_FINAL_INFERENCE_EXPORT_NOT_BASELINE_REPLACEMENT",
+  "health": "PERFORMANCE_FAIL",
+  "selected_checkpoint": "step-3470420-final",
+  "runtime_source_commit": "59076959520728f6e26182128c9cb347c00868b8",
+  "files": {
+    "endpoint.data-00000-of-00001": {
+      "bytes": 393553,
+      "sha256": "257b03f3dd53f7b1daf0fee49e3140f42c9d1866129fb97d154d1c1f6a8200ed",
+      "tensor_bytes_unchanged": true
+    },
+    "endpoint.index": {
+      "bytes": 840,
+      "sha256": "8377fda6c4b6ccf163874afd9c1e283167838fdc324630f5990e9e603334a922",
+      "tensor_bytes_unchanged": true
+    },
+    "endpoint.joint.json": {
+      "bytes": 13626,
+      "sha256": "61f864e31f5174a36899c965ebfc970b596d25083b055a841b8b49f32bd50400",
+      "tensor_bytes_unchanged": false
+    },
+    "evaluation.json": {
+      "bytes": 12876,
+      "sha256": "200e397e2a672f3d0ab0052c611b844a21dccd77c21b21bd45e62393b5978ab6"
+    }
+  },
+  "metadata": "Portable known configuration keys; runtime private routes omitted; tensor data/index unchanged",
+  "complete_resume": false,
+  "training_seeds": 1
+}

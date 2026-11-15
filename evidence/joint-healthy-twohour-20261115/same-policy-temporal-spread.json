@@ -1,0 +1,24 @@
+{
+  "status": "SAME_INITIAL_POLICIES_TWO_TEMPORAL_ROUNDS_DESCRIPTIVE_NOT_CONFIDENCE_INTERVAL",
+  "groups": {
+    "base": {
+      "overall_utilization_delta_pp": -0.07654399499824605,
+      "overall_queue_delta_ms": -0.5352336479055229,
+      "overall_p95_delta_ms": -0.8472222222222214,
+      "maximum_absolute_condition_mean_util_delta_pp": 1.7720665272878966,
+      "maximum_absolute_condition_mean_queue_delta_ms": 4.6062374636343515
+    },
+    "g4": {
+      "overall_utilization_delta_pp": 0.026203732450780226,
+      "overall_queue_delta_ms": 0.18249075813361415,
+      "overall_p95_delta_ms": 0.09722222222222143,
+      "maximum_absolute_condition_mean_util_delta_pp": 0.4331512283346606,
+      "maximum_absolute_condition_mean_queue_delta_ms": 2.2937951362636735
+    }
+  },
+  "limitations": [
+    "Two time periods are not independent training seeds",
+    "No significance or statistical equivalence claim",
+    "Does not isolate host scheduling or startup stochasticity causes"
+  ]
+}

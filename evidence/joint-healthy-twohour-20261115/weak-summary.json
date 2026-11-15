@@ -1,0 +1,1517 @@
+{
+  "status": "DESCRIPTIVE_WEAK_CONDITIONS_PACKET_CLOCK_NOT_CAUSAL",
+  "cells": [
+    {
+      "scenario": 3,
+      "condition": "G12-R200",
+      "groups": {
+        "base": {
+          "repeats": [
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.9940511250062244,
+              "mean_util_seconds35_59": 0.9943042958663224,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 301.89796800691744,
+              "feedback": null
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.995321603107194,
+              "mean_util_seconds35_59": 0.9949061012825711,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 302.0851707738867,
+              "feedback": null
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.9957228067180264,
+              "mean_util_seconds35_59": 0.9953059177532598,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 302.1961123110151,
+              "feedback": null
+            }
+          ]
+        },
+        "g4": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.9928475141737269,
+              "mean_util_seconds35_59": 0.9929789368104313,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 302.4712134632418,
+              "feedback": {
+                "rows": 2571,
+                "fresh_rtt_fraction": 0.9961104628549202,
+                "observed_legacy_peak_mbps": {
+                  "mean": 11.568637613380007,
+                  "minimum": 11.547944,
+                  "maximum": 11.569344,
+                  "p05": 11.569344,
+                  "p50": 11.569344,
+                  "p95": 11.569344
+                },
+                "original_utility": {
+                  "mean": 0.9732935732215059,
+                  "minimum": 0.0,
+                  "maximum": 1.1733947849507802,
+                  "p05": 0.8994895531709318,
+                  "p50": 0.9918889370707968,
+                  "p95": 1.0822068501100148
+                },
+                "last_observed_legacy_peak_mbps": 11.569344,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.9938505232008081,
+              "mean_util_seconds35_59": 0.9937024904500736,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 303.1191111111111,
+              "feedback": {
+                "rows": 2560,
+                "fresh_rtt_fraction": 0.99609375,
+                "observed_legacy_peak_mbps": {
+                  "mean": 11.579609803125,
+                  "minimum": 11.536208,
+                  "maximum": 11.580392,
+                  "p05": 11.580392,
+                  "p50": 11.580392,
+                  "p95": 11.580392
+                },
+                "original_utility": {
+                  "mean": 0.9735128048680366,
+                  "minimum": 0.0,
+                  "maximum": 1.2301793618937944,
+                  "p05": 0.8984296399573348,
+                  "p50": 0.9907641970478375,
+                  "p95": 1.0809309980676993
+                },
+                "last_observed_legacy_peak_mbps": 11.580392,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.9918445051466456,
+              "mean_util_seconds35_59": 0.9921377963678268,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 301.33920704845815,
+              "feedback": {
+                "rows": 2586,
+                "fresh_rtt_fraction": 0.9965197215777262,
+                "observed_legacy_peak_mbps": {
+                  "mean": 11.552775999999998,
+                  "minimum": 11.552776,
+                  "maximum": 11.552776,
+                  "p05": 11.552776,
+                  "p50": 11.552776,
+                  "p95": 11.552776
+                },
+                "original_utility": {
+                  "mean": 0.9757919969159246,
+                  "minimum": 0.0,
+                  "maximum": 1.1146301736354274,
+                  "p05": 0.9024414787443642,
+                  "p50": 0.9945205353556582,
+                  "p95": 1.0849314931152132
+                },
+                "last_observed_legacy_peak_mbps": 11.552776,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        },
+        "joint": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 1.0000023119002397,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 318.78275862068966,
+              "feedback": {
+                "rows": 2686,
+                "fresh_rtt_fraction": 0.9970215934475056,
+                "observed_legacy_peak_mbps": {
+                  "mean": 11.593025295606852,
+                  "minimum": 11.542416,
+                  "maximum": 11.596968,
+                  "p05": 11.5728,
+                  "p50": 11.595584,
+                  "p95": 11.596968
+                },
+                "original_utility": {
+                  "mean": 0.9811280800475559,
+                  "minimum": 0.0,
+                  "maximum": 1.1331895252870747,
+                  "p05": 0.9181805563727237,
+                  "p50": 1.0109020734107053,
+                  "p95": 1.100592574464231
+                },
+                "last_observed_legacy_peak_mbps": 11.596968,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 1.0000023119002397,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 318.93706896551726,
+              "feedback": {
+                "rows": 2687,
+                "fresh_rtt_fraction": 0.9962783773725344,
+                "observed_legacy_peak_mbps": {
+                  "mean": 11.594013570524748,
+                  "minimum": 11.54656,
+                  "maximum": 11.601112,
+                  "p05": 11.579704,
+                  "p50": 11.599728,
+                  "p95": 11.601112
+                },
+                "original_utility": {
+                  "mean": 0.9784146120470317,
+                  "minimum": 0.0,
+                  "maximum": 1.1349840672114382,
+                  "p05": 0.9176537779152889,
+                  "p50": 1.0110524774518161,
+                  "p95": 1.0408031789143635
+                },
+                "last_observed_legacy_peak_mbps": 11.601112,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 1.0000023119002397,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 318.97115798536373,
+              "feedback": {
+                "rows": 2688,
+                "fresh_rtt_fraction": 0.9962797619047619,
+                "observed_legacy_peak_mbps": {
+                  "mean": 11.593525877976193,
+                  "minimum": 11.539656,
+                  "maximum": 11.603176,
+                  "p05": 11.592824,
+                  "p50": 11.5942,
+                  "p95": 11.603176
+                },
+                "original_utility": {
+                  "mean": 0.9778272981036503,
+                  "minimum": 0.0,
+                  "maximum": 1.1337135489132197,
+                  "p05": 0.9184162272093648,
+                  "p50": 1.0114414455715444,
+                  "p95": 1.1017472388204288
+                },
+                "last_observed_legacy_peak_mbps": 11.603176,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scenario": 4,
+      "condition": "G24-R200",
+      "groups": {
+        "base": {
+          "repeats": [
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.9994327841681071,
+              "mean_util_seconds35_59": 0.9998602723062805,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 589.8685689580631,
+              "feedback": null
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.9999342886816478,
+              "mean_util_seconds35_59": 0.9996797306814059,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 589.4354211663067,
+              "feedback": null
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.9999342886816478,
+              "mean_util_seconds35_59": 0.9998796389167502,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 592.6728608470181,
+              "feedback": null
+            }
+          ]
+        },
+        "g4": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.999232182362691,
+              "mean_util_seconds35_59": 0.9990779252651572,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 592.4780123131046,
+              "feedback": {
+                "rows": 2625,
+                "fresh_rtt_fraction": 0.9996190476190476,
+                "observed_legacy_peak_mbps": {
+                  "mean": 23.130794151619043,
+                  "minimum": 22.634664,
+                  "maximum": 23.131104,
+                  "p05": 23.131104,
+                  "p50": 23.131104,
+                  "p95": 23.131104
+                },
+                "original_utility": {
+                  "mean": 0.9890909053406812,
+                  "minimum": 0.0,
+                  "maximum": 1.1359633136245637,
+                  "p05": 0.9259390833928896,
+                  "p50": 0.9937803543382625,
+                  "p95": 1.0634902134595288
+                },
+                "last_observed_legacy_peak_mbps": 23.131104,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.999265615996927,
+              "mean_util_seconds35_59": 0.9989375040013658,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 591.9265934065934,
+              "feedback": {
+                "rows": 2633,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 23.125724985947592,
+                  "minimum": 22.699568,
+                  "maximum": 23.126272,
+                  "p05": 23.126272,
+                  "p50": 23.126272,
+                  "p95": 23.126272
+                },
+                "original_utility": {
+                  "mean": 0.9915195798446349,
+                  "minimum": 0.15669706126140842,
+                  "maximum": 1.1131674853148141,
+                  "p05": 0.9273390306440744,
+                  "p50": 0.9940776602636516,
+                  "p95": 1.0594282389767689
+                },
+                "last_observed_legacy_peak_mbps": 23.126272,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.9994996514365793,
+              "mean_util_seconds35_59": 0.9994590686954481,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 593.332892998679,
+              "feedback": {
+                "rows": 2621,
+                "fresh_rtt_fraction": 0.9992369324685234,
+                "observed_legacy_peak_mbps": {
+                  "mean": 23.139011073636023,
+                  "minimum": 22.6464,
+                  "maximum": 23.14008,
+                  "p05": 23.14008,
+                  "p50": 23.14008,
+                  "p95": 23.14008
+                },
+                "original_utility": {
+                  "mean": 0.9922970648175652,
+                  "minimum": 0.0,
+                  "maximum": 1.1124002383676808,
+                  "p05": 0.9264855082967043,
+                  "p50": 0.9933500685441711,
+                  "p95": 1.0637357254452708
+                },
+                "last_observed_legacy_peak_mbps": 23.14008,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        },
+        "joint": {
+          "repeats": [
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 1.0000011559501198,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 633.8094006037085,
+              "feedback": {
+                "rows": 2685,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 23.15628310763501,
+                  "minimum": 22.6464,
+                  "maximum": 23.157344,
+                  "p05": 23.157344,
+                  "p50": 23.157344,
+                  "p95": 23.157344
+                },
+                "original_utility": {
+                  "mean": 0.9946263982361057,
+                  "minimum": 0.5148453843680154,
+                  "maximum": 1.105175538688651,
+                  "p05": 0.9222813248125125,
+                  "p50": 0.9928483192833859,
+                  "p95": 1.0586879961882676
+                },
+                "last_observed_legacy_peak_mbps": 23.157344,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 1.0000011559501198,
+              "mean_util_seconds35_59": 1.0000006935700718,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 634.0150732127477,
+              "feedback": {
+                "rows": 2687,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 23.143644742835875,
+                  "minimum": 22.720968,
+                  "maximum": 23.1456,
+                  "p05": 23.143527999999996,
+                  "p50": 23.143528,
+                  "p95": 23.1456
+                },
+                "original_utility": {
+                  "mean": 0.9954042610755984,
+                  "minimum": 0.48172738916804103,
+                  "maximum": 1.1096156886432325,
+                  "p05": 0.923636427356854,
+                  "p50": 0.9936758097178616,
+                  "p95": 1.0600046701744075
+                },
+                "last_observed_legacy_peak_mbps": 23.1456,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 1.0000011559501198,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 634.2294446835988,
+              "feedback": {
+                "rows": 2689,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 23.141586106359245,
+                  "minimum": 22.63052,
+                  "maximum": 23.142152,
+                  "p05": 23.142152,
+                  "p50": 23.142152,
+                  "p95": 23.142152
+                },
+                "original_utility": {
+                  "mean": 0.9954428483872182,
+                  "minimum": 0.5064053901582151,
+                  "maximum": 1.1076344343579803,
+                  "p05": 0.9237867584350289,
+                  "p50": 0.9939228149268055,
+                  "p95": 1.0601146053026356
+                },
+                "last_observed_legacy_peak_mbps": 23.142152,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scenario": 11,
+      "condition": "G36-R50",
+      "groups": {
+        "base": {
+          "repeats": [
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.9722824103045473,
+              "mean_util_seconds35_59": 0.9708288770053476,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 143.02860858257478,
+              "feedback": null
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.9757360644934957,
+              "mean_util_seconds35_59": 0.9748801413698942,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 143.56914433880726,
+              "feedback": null
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 1.0000007703758487,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 203.62359550561797,
+              "feedback": null
+            }
+          ]
+        },
+        "g4": {
+          "repeats": [
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.9999784887359199,
+              "mean_util_seconds35_59": 0.9998801413698942,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 200.35936113575866,
+              "feedback": {
+                "rows": 2685,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 34.83287961266295,
+                  "minimum": 27.03704,
+                  "maximum": 34.841312,
+                  "p05": 34.841312,
+                  "p50": 34.841312,
+                  "p95": 34.841312
+                },
+                "original_utility": {
+                  "mean": 0.9827427292594545,
+                  "minimum": 0.27374089550030295,
+                  "maximum": 1.2602077281416604,
+                  "p05": 0.927032944931355,
+                  "p50": 0.9872157647652848,
+                  "p95": 1.0459633331736302
+                },
+                "last_observed_legacy_peak_mbps": 34.841312,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 1.0000007703758487,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 201.08905626938414,
+              "feedback": {
+                "rows": 2691,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 34.822726008175394,
+                  "minimum": 27.117824,
+                  "maximum": 34.833712,
+                  "p05": 34.791592,
+                  "p50": 34.833712,
+                  "p95": 34.833712
+                },
+                "original_utility": {
+                  "mean": 0.982530807516276,
+                  "minimum": 0.10948437512420175,
+                  "maximum": 1.2778130951511448,
+                  "p05": 0.9292928127071982,
+                  "p50": 0.9872733376861357,
+                  "p95": 1.0432604490906696
+                },
+                "last_observed_legacy_peak_mbps": 34.833712,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 1.0000007703758487,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 197.73203194321206,
+              "feedback": {
+                "rows": 2686,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 34.883464923306036,
+                  "minimum": 27.112984,
+                  "maximum": 34.927616,
+                  "p05": 34.8344,
+                  "p50": 34.897232,
+                  "p95": 34.927616
+                },
+                "original_utility": {
+                  "mean": 0.9816587982453775,
+                  "minimum": 0.1473942538211389,
+                  "maximum": 1.2565525759115264,
+                  "p05": 0.926691420973652,
+                  "p50": 0.9855814167946505,
+                  "p95": 1.0438982862324098
+                },
+                "last_observed_legacy_peak_mbps": 34.927616,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        },
+        "joint": {
+          "repeats": [
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 1.0000007703758487,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 201.66854663774404,
+              "feedback": {
+                "rows": 2748,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 34.882645860262016,
+                  "minimum": 26.979728,
+                  "maximum": 34.896544,
+                  "p05": 34.858568,
+                  "p50": 34.896544,
+                  "p95": 34.896544
+                },
+                "original_utility": {
+                  "mean": 0.9623228859428905,
+                  "minimum": 0.6441832254064147,
+                  "maximum": 1.2626958917344162,
+                  "p05": 0.8993311457159462,
+                  "p50": 0.9642665875041048,
+                  "p95": 1.0110144787788145
+                },
+                "last_observed_legacy_peak_mbps": 34.896544,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 1.0000007703758487,
+              "mean_util_seconds35_59": 1.0000004622255092,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 201.84015510555795,
+              "feedback": {
+                "rows": 2765,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 34.873078154068715,
+                  "minimum": 26.919656,
+                  "maximum": 34.958,
+                  "p05": 34.735664,
+                  "p50": 34.855808,
+                  "p95": 34.958
+                },
+                "original_utility": {
+                  "mean": 0.9637375264342802,
+                  "minimum": 0.6327851544372023,
+                  "maximum": 1.2440642509251083,
+                  "p05": 0.9056453136012464,
+                  "p50": 0.9653267403122088,
+                  "p95": 1.017687320367394
+                },
+                "last_observed_legacy_peak_mbps": 34.958,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 1.0000007703758487,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 202.22686181661643,
+              "feedback": {
+                "rows": 2768,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 34.929778843930634,
+                  "minimum": 27.175816,
+                  "maximum": 34.952472,
+                  "p05": 34.78124,
+                  "p50": 34.952472,
+                  "p95": 34.952472
+                },
+                "original_utility": {
+                  "mean": 0.958969875030989,
+                  "minimum": 0.646703215203225,
+                  "maximum": 1.2750862980233602,
+                  "p05": 0.8986651176169426,
+                  "p50": 0.9614626802350201,
+                  "p95": 1.0083655155281366
+                },
+                "last_observed_legacy_peak_mbps": 34.952472,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scenario": 15,
+      "condition": "G42-R20",
+      "groups": {
+        "base": {
+          "repeats": [
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.9997332296937552,
+              "mean_util_seconds35_59": 0.9999312320916905,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 95.41410644742535,
+              "feedback": null
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 1.000000660448292,
+              "mean_util_seconds35_59": 1.0000003962689752,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 95.55925605536332,
+              "feedback": null
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.999847842874271,
+              "mean_util_seconds35_59": 0.9998968481375358,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 95.3329009943796,
+              "feedback": null
+            }
+          ]
+        },
+        "g4": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.9997523318905078,
+              "mean_util_seconds35_59": 0.9993814850941901,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 99.36262265834077,
+              "feedback": {
+                "rows": 2683,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 40.62163172269848,
+                  "minimum": 28.982064,
+                  "maximum": 40.672248,
+                  "p05": 40.463728,
+                  "p50": 40.672248,
+                  "p95": 40.672248
+                },
+                "original_utility": {
+                  "mean": 0.9469894932406282,
+                  "minimum": 0.3249530529675852,
+                  "maximum": 1.3347087919612626,
+                  "p05": 0.8580769079581999,
+                  "p50": 0.9538540489051068,
+                  "p95": 1.023583432600647
+                },
+                "last_observed_legacy_peak_mbps": 40.672248,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 1.000000660448292,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 98.66050198150594,
+              "feedback": {
+                "rows": 2720,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 40.615214758823534,
+                  "minimum": 28.368936,
+                  "maximum": 40.712984,
+                  "p05": 40.574888,
+                  "p50": 40.578344,
+                  "p95": 40.712984
+                },
+                "original_utility": {
+                  "mean": 0.9551077361020364,
+                  "minimum": 0.5591222955671117,
+                  "maximum": 1.3841829178989864,
+                  "p05": 0.874291479227709,
+                  "p50": 0.9601664367402816,
+                  "p95": 1.0235021574486192
+                },
+                "last_observed_legacy_peak_mbps": 40.712984,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 1.000000660448292,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 99.11081677704195,
+              "feedback": {
+                "rows": 2710,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 40.60365711291513,
+                  "minimum": 30.46448,
+                  "maximum": 40.664648,
+                  "p05": 40.281448,
+                  "p50": 40.664648,
+                  "p95": 40.664648
+                },
+                "original_utility": {
+                  "mean": 0.9521689355690466,
+                  "minimum": 0.2814764059070628,
+                  "maximum": 1.2513084977792892,
+                  "p05": 0.8675171291606109,
+                  "p50": 0.9589348516408502,
+                  "p95": 1.0249927805651826
+                },
+                "last_observed_legacy_peak_mbps": 40.664648,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        },
+        "joint": {
+          "repeats": [
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.8986826088723607,
+              "mean_util_seconds35_59": 0.9036107114552216,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 72.49074472664658,
+              "feedback": {
+                "rows": 2780,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 39.17911513093525,
+                  "minimum": 24.649424,
+                  "maximum": 40.202728,
+                  "p05": 29.193344,
+                  "p50": 40.159232,
+                  "p95": 40.202728
+                },
+                "original_utility": {
+                  "mean": 0.9088789523308144,
+                  "minimum": 0.47788756207582733,
+                  "maximum": 1.263373121865088,
+                  "p05": 0.7900530981742883,
+                  "p50": 0.9251772637649365,
+                  "p95": 1.0105752537447332
+                },
+                "last_observed_legacy_peak_mbps": 40.202728,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.8848335162267065,
+              "mean_util_seconds35_59": 0.902487106017192,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 71.87855297157623,
+              "feedback": {
+                "rows": 2782,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 38.3870425248023,
+                  "minimum": 17.24976,
+                  "maximum": 40.259352,
+                  "p05": 25.8384,
+                  "p50": 40.184088,
+                  "p95": 40.259352
+                },
+                "original_utility": {
+                  "mean": 0.9095917503312511,
+                  "minimum": 0.3985345279897655,
+                  "maximum": 1.4396480073015276,
+                  "p05": 0.7734453495931211,
+                  "p50": 0.9194500179107679,
+                  "p95": 1.0185002745747602
+                },
+                "last_observed_legacy_peak_mbps": 40.259352,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.8885966489869739,
+              "mean_util_seconds35_59": 0.9004699140401146,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 71.96213425129088,
+              "feedback": {
+                "rows": 2783,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 38.5553833905857,
+                  "minimum": 24.960824,
+                  "maximum": 40.202728,
+                  "p05": 29.354912,
+                  "p50": 39.91136,
+                  "p95": 40.202728
+                },
+                "original_utility": {
+                  "mean": 0.9100136790154738,
+                  "minimum": 0.5078620802876775,
+                  "maximum": 1.3260865920095628,
+                  "p05": 0.7749891587048322,
+                  "p50": 0.9105943873353534,
+                  "p95": 1.0184130014267962
+                },
+                "last_observed_legacy_peak_mbps": 40.202728,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scenario": 16,
+      "condition": "G48-R20",
+      "groups": {
+        "base": {
+          "repeats": [
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.9999838652037785,
+              "mean_util_seconds35_59": 0.9999398345449988,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 109.13362255965293,
+              "feedback": null
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.9999838652037785,
+              "mean_util_seconds35_59": 0.9987164702933066,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 109.60729800173762,
+              "feedback": null
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 1.0000005778301677,
+              "mean_util_seconds35_59": 0.9999401812430994,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 109.03329009943796,
+              "feedback": null
+            }
+          ]
+        },
+        "g4": {
+          "repeats": [
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.999950439951,
+              "mean_util_seconds35_59": 0.9999903191222671,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 112.43755496921723,
+              "feedback": {
+                "rows": 2722,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 46.505189763409255,
+                  "minimum": 28.330272,
+                  "maximum": 46.66544,
+                  "p05": 46.19524,
+                  "p50": 46.396848,
+                  "p95": 46.665440000000004
+                },
+                "original_utility": {
+                  "mean": 0.9622044957272368,
+                  "minimum": 0.40453738049226134,
+                  "maximum": 1.365756666204038,
+                  "p05": 0.8836779903401321,
+                  "p50": 0.9669671253176289,
+                  "p95": 1.02913460277439
+                },
+                "last_observed_legacy_peak_mbps": 46.66544,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 1.0000005778301677,
+              "mean_util_seconds35_59": 0.9999502088189329,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 112.61992945326278,
+              "feedback": {
+                "rows": 2714,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 46.400728719233605,
+                  "minimum": 18.690064,
+                  "maximum": 46.48868,
+                  "p05": 46.247024,
+                  "p50": 46.4514,
+                  "p95": 46.48868
+                },
+                "original_utility": {
+                  "mean": 0.9609146047629082,
+                  "minimum": 0.3588132406370473,
+                  "maximum": 1.29786964826068,
+                  "p05": 0.8776134864609935,
+                  "p50": 0.968313132003151,
+                  "p95": 1.032902881157859
+                },
+                "last_observed_legacy_peak_mbps": 46.48868,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 1.0000005778301677,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 112.44312692138779,
+              "feedback": {
+                "rows": 2724,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 46.51958322173275,
+                  "minimum": 41.453152,
+                  "maximum": 46.749672,
+                  "p05": 46.247024,
+                  "p50": 46.532184,
+                  "p95": 46.749672
+                },
+                "original_utility": {
+                  "mean": 0.9607331324407784,
+                  "minimum": 0.3605121327884763,
+                  "maximum": 1.1695879994381706,
+                  "p05": 0.8797585793910109,
+                  "p50": 0.9675872056723365,
+                  "p95": 1.0311570784085096
+                },
+                "last_observed_legacy_peak_mbps": 46.749672,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        },
+        "joint": {
+          "repeats": [
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.9758174074449417,
+              "mean_util_seconds35_59": 0.975903735271998,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 98.38961605584642,
+              "feedback": {
+                "rows": 2746,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 45.93266681427531,
+                  "minimum": 28.8854,
+                  "maximum": 45.953576,
+                  "p05": 45.953576,
+                  "p50": 45.953576,
+                  "p95": 45.953576
+                },
+                "original_utility": {
+                  "mean": 0.9814159506115853,
+                  "minimum": 0.5774510720026141,
+                  "maximum": 1.4394725282559908,
+                  "p05": 0.9241809193044779,
+                  "p50": 0.9911723767187998,
+                  "p95": 1.019290924577861
+                },
+                "last_observed_legacy_peak_mbps": 45.953576,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.9617119507724256,
+              "mean_util_seconds35_59": 0.9630985209325645,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 96.66855647623201,
+              "feedback": {
+                "rows": 2746,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 45.779609555717414,
+                  "minimum": 40.934616,
+                  "maximum": 45.88384,
+                  "p05": 44.839176,
+                  "p50": 45.88384,
+                  "p95": 45.88384
+                },
+                "original_utility": {
+                  "mean": 0.9672043093965522,
+                  "minimum": 0.4062381307120284,
+                  "maximum": 1.073491608688438,
+                  "p05": 0.9013256028921555,
+                  "p50": 0.9715477115061337,
+                  "p95": 1.020726018676219
+                },
+                "last_observed_legacy_peak_mbps": 45.88384,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.9066271341935002,
+              "mean_util_seconds35_59": 0.9133617447981951,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 84.06508620689655,
+              "feedback": {
+                "rows": 2779,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 45.06421970492983,
+                  "minimum": 18.58028,
+                  "maximum": 46.176592,
+                  "p05": 44.318568,
+                  "p50": 45.843104,
+                  "p95": 46.176592
+                },
+                "original_utility": {
+                  "mean": 0.9147398534590429,
+                  "minimum": 0.358370123943759,
+                  "maximum": 1.349622884629648,
+                  "p05": 0.7787351736873163,
+                  "p50": 0.9268777748345914,
+                  "p95": 1.0170482244682362
+                },
+                "last_observed_legacy_peak_mbps": 46.176592,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scenario": 20,
+      "condition": "G72-R200",
+      "groups": {
+        "base": {
+          "repeats": [
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.9963907595194751,
+              "mean_util_seconds35_59": 0.9965975935828877,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 1762.2117903930132,
+              "feedback": null
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.9980618825141275,
+              "mean_util_seconds35_59": 0.9985628342245989,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 1750.0343030829354,
+              "feedback": null
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.9980284600542345,
+              "mean_util_seconds35_59": 0.9987301776368187,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 1744.481980026053,
+              "feedback": null
+            }
+          ]
+        },
+        "g4": {
+          "repeats": [
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.9996995830488868,
+              "mean_util_seconds35_59": 0.9994855252304017,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 1774.0154525386313,
+              "feedback": {
+                "rows": 2609,
+                "fresh_rtt_fraction": 0.9992334227673438,
+                "observed_legacy_peak_mbps": {
+                  "mean": 69.6515842453047,
+                  "minimum": 37.781288,
+                  "maximum": 69.813808,
+                  "p05": 69.813808,
+                  "p50": 69.813808,
+                  "p95": 69.813808
+                },
+                "original_utility": {
+                  "mean": 0.9905776053602178,
+                  "minimum": 0.0,
+                  "maximum": 1.293937896340749,
+                  "p05": 0.9317557350948683,
+                  "p50": 0.9891662552065116,
+                  "p95": 1.0550098811364652
+                },
+                "last_observed_legacy_peak_mbps": 69.813808,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.9963573370595821,
+              "mean_util_seconds35_59": 0.9962032085561497,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 1771.4572441293753,
+              "feedback": {
+                "rows": 2595,
+                "fresh_rtt_fraction": 0.9988439306358381,
+                "observed_legacy_peak_mbps": {
+                  "mean": 69.14583687707132,
+                  "minimum": 37.74124,
+                  "maximum": 69.351888,
+                  "p05": 69.351888,
+                  "p50": 69.351888,
+                  "p95": 69.351888
+                },
+                "original_utility": {
+                  "mean": 0.9945562445466611,
+                  "minimum": 0.0,
+                  "maximum": 1.3159918757533986,
+                  "p05": 0.9325073445318011,
+                  "p50": 0.9909327368243412,
+                  "p95": 1.0612495717238417
+                },
+                "last_observed_legacy_peak_mbps": 69.351888,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.9998889769882808,
+              "mean_util_seconds35_59": 0.9998197498293321,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 1787.5627763041557,
+              "feedback": {
+                "rows": 2607,
+                "fresh_rtt_fraction": 0.9992328346758726,
+                "observed_legacy_peak_mbps": {
+                  "mean": 69.87735234062139,
+                  "minimum": 37.708096,
+                  "maximum": 70.052704,
+                  "p05": 70.052704,
+                  "p50": 70.052704,
+                  "p95": 70.052704
+                },
+                "original_utility": {
+                  "mean": 0.9880747559651081,
+                  "minimum": 0.0,
+                  "maximum": 1.332983268927276,
+                  "p05": 0.9285615473420447,
+                  "p50": 0.9817252817164402,
+                  "p95": 1.0512715898638327
+                },
+                "last_observed_legacy_peak_mbps": 70.052704,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        },
+        "joint": {
+          "repeats": [
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 1.0000003851879242,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 1760.6702819956615,
+              "feedback": {
+                "rows": 2664,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 69.18145911411413,
+                  "minimum": 37.816504,
+                  "maximum": 69.371224,
+                  "p05": 69.321512,
+                  "p50": 69.359488,
+                  "p95": 69.359488
+                },
+                "original_utility": {
+                  "mean": 0.9991450005063397,
+                  "minimum": 0.2563566759190448,
+                  "maximum": 1.3224030395027915,
+                  "p05": 0.9500729932315739,
+                  "p50": 1.0045818885188975,
+                  "p95": 1.0583970252542974
+                },
+                "last_observed_legacy_peak_mbps": 69.371224,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 1.0000003851879242,
+              "mean_util_seconds35_59": 1.0,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 1723.0811394044022,
+              "feedback": {
+                "rows": 2680,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 69.20868517910448,
+                  "minimum": 37.645264,
+                  "maximum": 69.398152,
+                  "p05": 69.329792,
+                  "p50": 69.381584,
+                  "p95": 69.398152
+                },
+                "original_utility": {
+                  "mean": 0.9938426801717833,
+                  "minimum": 0.30176830872674937,
+                  "maximum": 1.4359869388066795,
+                  "p05": 0.9389411304114885,
+                  "p50": 0.9963062071448079,
+                  "p95": 1.049721551887
+                },
+                "last_observed_legacy_peak_mbps": 69.398152,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 1.0000003851879242,
+              "mean_util_seconds35_59": 1.0000002311127545,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 1723.9741044454036,
+              "feedback": {
+                "rows": 2679,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 69.2243524091079,
+                  "minimum": 37.773,
+                  "maximum": 69.427152,
+                  "p05": 69.347056,
+                  "p50": 69.400912,
+                  "p95": 69.400912
+                },
+                "original_utility": {
+                  "mean": 0.992331104959785,
+                  "minimum": 0.36440703957986753,
+                  "maximum": 1.3315475487876902,
+                  "p05": 0.9370873436842864,
+                  "p50": 0.9931148588231347,
+                  "p95": 1.0492596469592779
+                },
+                "last_observed_legacy_peak_mbps": 69.427152,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "scenario": 21,
+      "condition": "G72-R20",
+      "groups": {
+        "base": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.9999781035479955,
+              "mean_util_seconds35_59": 0.9999734931448402,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 164.08862948551663,
+              "feedback": null
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.9998444137084234,
+              "mean_util_seconds35_59": 0.9999734931448402,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 163.94682230869,
+              "feedback": null
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.99998924436796,
+              "mean_util_seconds35_59": 0.9999801776368188,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 163.67863321799308,
+              "feedback": null
+            }
+          ]
+        },
+        "g4": {
+          "repeats": [
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.9944076935658209,
+              "mean_util_seconds35_59": 0.9964507658721129,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 167.07174295774647,
+              "feedback": {
+                "rows": 2721,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 69.56352307239985,
+                  "minimum": 31.756336,
+                  "maximum": 69.687456,
+                  "p05": 69.2352,
+                  "p50": 69.687456,
+                  "p95": 69.687456
+                },
+                "original_utility": {
+                  "mean": 0.9658199328099598,
+                  "minimum": 0.4777695444689185,
+                  "maximum": 1.3630770727459993,
+                  "p05": 0.8848114711498911,
+                  "p50": 0.9726247762326102,
+                  "p95": 1.0341004938486031
+                },
+                "last_observed_legacy_peak_mbps": 69.687456,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.9888595652235749,
+              "mean_util_seconds35_59": 0.9983689839572193,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 165.90360915492957,
+              "feedback": {
+                "rows": 2720,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 69.5064765,
+                  "minimum": 44.536752,
+                  "maximum": 69.766168,
+                  "p05": 69.539008,
+                  "p50": 69.539008,
+                  "p95": 69.568696
+                },
+                "original_utility": {
+                  "mean": 0.9652273209052804,
+                  "minimum": 0.6171018319934545,
+                  "maximum": 1.0918640220105615,
+                  "p05": 0.8859552829781117,
+                  "p50": 0.971255647118004,
+                  "p95": 1.0341892868448994
+                },
+                "last_observed_legacy_peak_mbps": 69.766168,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.9678814012307051,
+              "mean_util_seconds35_59": 0.997012263198316,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 163.35943686757588,
+              "feedback": {
+                "rows": 2722,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 69.13413043938279,
+                  "minimum": 29.999112,
+                  "maximum": 69.7206,
+                  "p05": 68.69526399999998,
+                  "p50": 69.247632,
+                  "p95": 69.7206
+                },
+                "original_utility": {
+                  "mean": 0.9701363088980597,
+                  "minimum": 0.4699814561441675,
+                  "maximum": 1.4437837001532579,
+                  "p05": 0.8955503106910119,
+                  "p50": 0.9766093488611083,
+                  "p95": 1.0338857650394107
+                },
+                "last_observed_legacy_peak_mbps": 69.7206,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        },
+        "joint": {
+          "repeats": [
+            {
+              "repeat": 1,
+              "mean_util_seconds10_24": 0.9078880857226836,
+              "mean_util_seconds35_59": 0.9090775401069519,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 125.06893580353297,
+              "feedback": {
+                "rows": 2779,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 66.80447513494062,
+                  "minimum": 32.324584,
+                  "maximum": 69.114376,
+                  "p05": 44.00648,
+                  "p50": 69.114376,
+                  "p95": 69.114376
+                },
+                "original_utility": {
+                  "mean": 0.9133261044174641,
+                  "minimum": 0.4618735957313656,
+                  "maximum": 1.3507528128433257,
+                  "p05": 0.7916929509447542,
+                  "p50": 0.9238320517990875,
+                  "p95": 1.0171896670816067
+                },
+                "last_observed_legacy_peak_mbps": 69.114376,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 2,
+              "mean_util_seconds10_24": 0.8954772122823984,
+              "mean_util_seconds35_59": 0.9010762032085562,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 123.4808272296424,
+              "feedback": {
+                "rows": 2779,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 65.86261837207631,
+                  "minimum": 32.536552,
+                  "maximum": 68.532312,
+                  "p05": 44.54504,
+                  "p50": 68.172584,
+                  "p95": 68.532312
+                },
+                "original_utility": {
+                  "mean": 0.9135367477076815,
+                  "minimum": 0.47933573028977045,
+                  "maximum": 1.2957530939366901,
+                  "p05": 0.7873327879755274,
+                  "p50": 0.9190209302965526,
+                  "p95": 1.026926429609832
+                },
+                "last_observed_legacy_peak_mbps": 68.532312,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            },
+            {
+              "repeat": 0,
+              "mean_util_seconds10_24": 0.8909874618367657,
+              "mean_util_seconds35_59": 0.9068250974229151,
+              "minimum_requested_window_fraction": 0.0,
+              "cwnd_mean": 124.11676001723396,
+              "feedback": {
+                "rows": 2779,
+                "fresh_rtt_fraction": 1.0,
+                "observed_legacy_peak_mbps": {
+                  "mean": 66.6620574077006,
+                  "minimum": 32.293512,
+                  "maximum": 69.017704,
+                  "p05": 50.049384,
+                  "p50": 68.77812,
+                  "p95": 69.017704
+                },
+                "original_utility": {
+                  "mean": 0.9122983812810547,
+                  "minimum": 0.46345711273666246,
+                  "maximum": 1.3399394338958346,
+                  "p05": 0.7889258665227551,
+                  "p50": 0.9197201205441781,
+                  "p95": 1.0190506789965994
+                },
+                "last_observed_legacy_peak_mbps": 69.017704,
+                "caution": "Full feedback flow; peak is a payload estimator, not exact trace capacity and not a causal diagnosis"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

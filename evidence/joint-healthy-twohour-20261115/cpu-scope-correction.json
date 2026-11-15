@@ -1,0 +1,18 @@
+{
+  "status": "CORRECTED_EXPLANATION_BEFORE_FINAL_CPU_RESULTS_NO_WINDOW_CHANGE",
+  "epoch": 1794756504.2062974,
+  "source": {
+    "sha256": "41dd8700380d7421c640b3e84dcb25966e33c4335c309ebca5c4c90e2bede198",
+    "model_call": 6414,
+    "monitor_start": 9852
+  },
+  "corrected_statement": "Baseline and joint resource counters start after model loading; first-to-last counter deltas exclude earlier loading CPU. Earlier description of model-loading contamination was inaccurate.",
+  "unchanged_main": "Nominal25-50sec steady sampled counter delta",
+  "unchanged_auxiliary": "Nominal0-50sec sampled counter delta",
+  "source_reference": "frameworks/baseline/evaluate.py: model(cfg) before monitor thread.start()",
+  "scope_limitations_unchanged": [
+    "Different25sec versus2sec sample cadence",
+    "No full detached emulator coverage",
+    "Earlier reused references and temporal confounding"
+  ]
+}

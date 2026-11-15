@@ -1,0 +1,14 @@
+{
+  "status": "PASS_PHYSICAL_BOUNDARY_PRESERVED_REAL_OBSERVATION_BOOTSTRAP",
+  "retained_rows": 300000,
+  "retained_physical_boundaries": 48,
+  "bellman_terminal_masks_nonzero": 0,
+  "optimizer_eligible_rows": 273587,
+  "no_cross_connection_policy": "Replay append validates actor/episode/sequence; audit_formal_joint checks complete episodes",
+  "limitations": [
+    "Retained replay is the final ring, not the entire training history",
+    "This is a data/semantics audit, not a TCP performance or convergence guarantee"
+  ],
+  "new_tcp_runs": 0,
+  "new_optimizer_updates": 0
+}
