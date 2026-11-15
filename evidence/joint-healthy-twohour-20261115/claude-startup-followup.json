@@ -1,0 +1,15 @@
+{
+  "status": "CLAUDE_STARTUP_SPLIT_AND_FOLLOWUP_READ_COMPLETELY",
+  "evidence_boundary": "Summary and supplied code fragments, no independent full code/raw audit",
+  "recommendations": [
+    "Separate startup/nonstartup residuals; rotating split changes validation distribution",
+    "Holdout rows are excluded from optimizer, but10-frame histories overlap, so rows are not statistically independent",
+    "Evaluate8-step residual on a no-further-probe subset when diagnosing offpolicy contribution; never relax registered gate",
+    "Zero-cost3600s run can answer engineering stability, window preservation and leakage, not long-period benefit",
+    "Capacity590.25s projected drain is close to600s limit; inspect real final debt, do not backfill counts",
+    "Reference reuse requires explicit temporal/host caveats; small deltas do not establish superiority",
+    "Use same steady CPU window across groups, preserve startup-inclusive auxiliary scope"
+  ],
+  "corrected_peer_error": "Claude accepted calibration behavior window/BN/exploration are frozen; only time probes vary. Its earlier claim of behavior window noise was wrong. Target-window smoothing remains separately active.",
+  "no_new_algorithm_change_requested": true
+}

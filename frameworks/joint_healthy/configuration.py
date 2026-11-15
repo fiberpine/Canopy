@@ -21,6 +21,7 @@ def configuration(profile='joint'):
         calibration_updates=5000, forward_calibration_updates=1000, calibration_check_updates=500,
         calibration_rows_per_actor_period=128, minimum_holdout_per_period=16,
         holdout_rows_per_period=256, maximum_normalized_td_rmse=.25, relative_td_limit=2.,
+        holdout_layout='episode_rotated_blocks_v1',
         short_return_blocks_per_period=64, minimum_short_return_blocks=4, maximum_normalized_short_return_rmse=.35,
         time_init_ms=40., time_initializer='constant', calibration_main_mode='constant',
         period_probe_probability=.1, clock_mode='scheduled', rate_mode='acked_bytes',

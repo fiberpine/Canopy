@@ -11,7 +11,9 @@
 - [历史问题、失败和修复索引](docs/HISTORY_STATUS_20261113.md)
 - [从健康基座迁移的双动作候选：初次离线实现](docs/JOINT_HEALTHY_SEED3_V1.md)（历史契约）
 - [双动作首次上线：计量修复、容量与完整性能失败](docs/JOINT_HEALTHY_SEED3_ONLINE_20261113.md)
-- [当前双动作续接：反馈时延诊断与G4初始化准入](docs/JOINT_HEALTHY_RECOVERY_20261114.md)（尚无完成的新联合训练，不训练独立固定MTP组）
+- [当前两小时续接：一次3600秒联合训练与独立终点评测](docs/JOINT_HEALTHY_TWOHOUR_20261115.md)（进行中，不训练独立固定MTP组）
+- [上轮四小时：修复、启动覆盖和联合容量门槛](docs/JOINT_HEALTHY_RESTART_20261115.md)
+- [上轮G4初始化准入、正式训练执行失败与修复证据](docs/JOINT_HEALTHY_RECOVERY_20261114.md)
 
 ## 当前入口
 

@@ -21,7 +21,7 @@ def verify(output):
     import tensorflow as tf
     from frameworks.joint_healthy import backend
     from frameworks.joint_healthy.configuration import configuration
-    from frameworks.joint_healthy.core import interval_return
+    from frameworks.joint_healthy.core import interval_return, bootstrap_terminal
     from frameworks.joint_healthy.model import Model
     cfg = configuration('fixed20')
     cfg.update(run_id='synthetic-pipeline', num_actors=2, memsize=512, batch_size=8,
@@ -50,7 +50,8 @@ def verify(output):
         for i in range(1,201):
             for actor in range(2):
                 terminal = i == 200
-                row = [state, action, [q if terminal else q*(1-discount)], state, [float(terminal)], [.02], [discount], actor, 0, i]
+                absorbing = bool(bootstrap_terminal(cfg, np.array([float(terminal)]))[0])
+                row = [state, action, [q if absorbing else q*(1-discount)], state, [float(terminal)], [.02], [discount], actor, 0, i]
                 session.run(enq, dict(zip(ph,row)))
         for actor in range(2):
             row = [np.zeros(n) for n in (82,2,1,82,1,1,1)]+[actor,-1,200]

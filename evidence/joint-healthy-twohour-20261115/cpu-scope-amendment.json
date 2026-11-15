@@ -1,0 +1,14 @@
+{
+  "status": "PREREGISTERED_BEFORE_ANY_FINAL216_DATA",
+  "epoch": 1794733965.9133213,
+  "reason": "Baseline monitor starts before model initialization; joint monitor starts after model creation. Initial0-50s CPU would mix setup with inference asymmetrically",
+  "primary": "Steady nominal25-50s counter deltas; report actual observed offsets and span",
+  "previous": "First nominal0-50s remains auxiliary diagnostic; no CPU number has been selected",
+  "limitations": [
+    "Not exact packettrim10",
+    "Baseline25s vsjoint2s sampling",
+    "Detached emulator coverage not established"
+  ],
+  "traffic_performance_gates_unchanged": true,
+  "final216_slots_unchanged": true
+}

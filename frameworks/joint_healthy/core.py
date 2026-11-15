@@ -23,8 +23,18 @@ def bootstrap_terminal(cfg, physical_end):
     raise ValueError('Unknown time-limit bootstrap semantics')
 
 
+def heldout_position(cfg, actor, episode, sequence):
+    """Rotate whole held-out blocks; never reserve every connection's startup."""
+    mode = cfg.get('holdout_layout', 'connection_start_fixed_legacy')
+    if mode == 'connection_start_fixed_legacy': offset = 0
+    elif mode == 'episode_rotated_blocks_v1': offset = (int(actor)*67 + int(episode)*97 + int(cfg['seed'])*31) % 257
+    else: raise ValueError('Unknown holdout layout')
+    return (int(sequence)-1-offset) % 257
+
+
 def validate(cfg):
     bootstrap_terminal(cfg, np.array([0., 1.], np.float32))
+    heldout_position(cfg, 0, 0, 1)
     required = dict(schema=SCHEMA, state_dim=82, action_dim=2,
                     reward_mode='raw',
                     reward_semantics='observed_interval_orca_density',

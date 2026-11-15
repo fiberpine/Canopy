@@ -1,0 +1,25 @@
+{
+  "status": "PASS_FULL_REPLAY_JOINT_CAPACITY_AND_RESET",
+  "run": "capacity-g4-startcoverage-seed3-720",
+  "counters": {
+    "critic_iterations": 84133,
+    "critic_optimizer_ops": 168266,
+    "actor_updates": 39633,
+    "target_updates": 84133
+  },
+  "inserted": 645308,
+  "physical_seconds": 17280.290307,
+  "final_update_debt": 0,
+  "full_replay_joint_measured_wall_seconds": 174.35127663612366,
+  "complete_updates_per_wall_second": 103.09646334000963,
+  "credit_updates_per_wall_second": 107.77093441773468,
+  "projected_extra_3600s_drain_seconds": 590.2504315329857,
+  "nominal_all24_credit_updates_per_second": 120.00000000000001,
+  "all24_generated_enqueued_inserted_equal": true,
+  "minimum_connections_per_actor": 24,
+  "all_protocol_and_cleanup_audits_pass": true,
+  "independent_fixed_training": false,
+  "diagnostic_not_formal_model": true,
+  "time_limit_handling": "bootstrap_last_observation",
+  "formal_initialization": "Fresh from healthy window; do not load capacity weights"
+}

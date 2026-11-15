@@ -1,0 +1,154 @@
+[
+  {
+    "node": 0,
+    "status": "PASS_STRICT_SSH_KERNEL_PROTECTED_CAPSULE_AND_NO_OWNED_TASKS",
+    "epoch": 1794751159.7581828,
+    "protected_files": 99,
+    "settings": {
+      "/proc/sys/net/ipv4/tcp_congestion_control": "cubic",
+      "/proc/sys/net/ipv4/tcp_no_metrics_save": "1",
+      "/sys/module/tcp_cubic/parameters/hystart": "1",
+      "/sys/module/tcp_cubic/parameters/initial_ssthresh": "0"
+    },
+    "active": [],
+    "free_disk_bytes": 36368084992,
+    "old_failed_result": {
+      "status": "FAILED",
+      "reason": "Insufficient retained actor samples",
+      "counters": {
+        "critic_iterations": 45287,
+        "critic_optimizer_ops": 90574,
+        "actor_updates": 18787,
+        "target_updates": 45287
+      },
+      "phase": 2,
+      "credit": {
+        "inserted": 1094796,
+        "physical_seconds": 28671.476537,
+        "warmup_seconds": 437.261775,
+        "warmup_inserted": 15082,
+        "per_actor": [
+          46517,
+          47679,
+          47401,
+          47659,
+          33067,
+          48390,
+          47400,
+          47335,
+          46624,
+          47480,
+          48018,
+          47208,
+          46576,
+          47617,
+          47275,
+          33859,
+          46603,
+          48067,
+          47341,
+          47381,
+          46390,
+          33683,
+          48012,
+          47214
+        ],
+        "per_actor_seconds": [
+          1233.2318929999894,
+          1233.064827999979,
+          1233.8697090000082,
+          1236.2221650000024,
+          900.0216369999962,
+          1250.034336000003,
+          1232.4097540000082,
+          1235.0343879999966,
+          1233.7406939999926,
+          1233.788655999999,
+          1250.045259000009,
+          1230.1605320000056,
+          1232.7175440000183,
+          1243.4184939999861,
+          1235.132527000011,
+          900.0708970000061,
+          1233.4820039999954,
+          1246.904085000008,
+          1232.8161450000166,
+          1231.8676829999968,
+          1234.8311129999986,
+          900.0392159999959,
+          1247.8542390000046,
+          1230.718739000002
+        ],
+        "update_limit": 141171,
+        "updates_per_base20ms": 0.1
+      },
+      "producer_done": {},
+      "endpoint": "@PREVIOUS_RUN@/frameworks/joint_healthy/checkpoints/joint-g4-seed3-1800/step-1094782",
+      "update_debt": 95884,
+      "exposure_complete": false,
+      "trained_joint_endpoint": true,
+      "no_complete_resume": true,
+      "performance_verified": false
+    }
+  },
+  {
+    "node": 1,
+    "status": "PASS_STRICT_SSH_KERNEL_PROTECTED_CAPSULE_AND_NO_OWNED_TASKS",
+    "epoch": 1794751159.7445242,
+    "protected_files": 99,
+    "settings": {
+      "/proc/sys/net/ipv4/tcp_congestion_control": "cubic",
+      "/proc/sys/net/ipv4/tcp_no_metrics_save": "1",
+      "/sys/module/tcp_cubic/parameters/hystart": "1",
+      "/sys/module/tcp_cubic/parameters/initial_ssthresh": "0"
+    },
+    "active": [],
+    "free_disk_bytes": 5664321536,
+    "old_failed_result": null
+  },
+  {
+    "node": 2,
+    "status": "PASS_STRICT_SSH_KERNEL_PROTECTED_CAPSULE_AND_NO_OWNED_TASKS",
+    "epoch": 1794751159.763219,
+    "protected_files": 99,
+    "settings": {
+      "/proc/sys/net/ipv4/tcp_congestion_control": "cubic",
+      "/proc/sys/net/ipv4/tcp_no_metrics_save": "1",
+      "/sys/module/tcp_cubic/parameters/hystart": "1",
+      "/sys/module/tcp_cubic/parameters/initial_ssthresh": "0"
+    },
+    "active": [],
+    "free_disk_bytes": 5520343040,
+    "old_failed_result": null
+  },
+  {
+    "node": 3,
+    "status": "PASS_STRICT_SSH_KERNEL_PROTECTED_CAPSULE_AND_NO_OWNED_TASKS",
+    "epoch": 1794751159.7705915,
+    "protected_files": 99,
+    "settings": {
+      "/proc/sys/net/ipv4/tcp_congestion_control": "cubic",
+      "/proc/sys/net/ipv4/tcp_no_metrics_save": "1",
+      "/sys/module/tcp_cubic/parameters/hystart": "1",
+      "/sys/module/tcp_cubic/parameters/initial_ssthresh": "0"
+    },
+    "active": [],
+    "free_disk_bytes": 5171658752,
+    "old_failed_result": null
+  },
+  {
+    "node": 4,
+    "status": "PASS_STRICT_SSH_KERNEL_PROTECTED_CAPSULE_AND_NO_OWNED_TASKS",
+    "epoch": 1794751159.7406414,
+    "protected_files": 99,
+    "settings": {
+      "/proc/sys/net/ipv4/tcp_congestion_control": "cubic",
+      "/proc/sys/net/ipv4/tcp_no_metrics_save": "1",
+      "/sys/module/tcp_cubic/parameters/hystart": "1",
+      "/sys/module/tcp_cubic/parameters/initial_ssthresh": "0"
+    },
+    "active": [],
+    "free_disk_bytes": 5262774272,
+    "old_failed_result": null
+  }
+]

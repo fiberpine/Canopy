@@ -1,0 +1,27 @@
+{
+  "status": "PASS_FOR_ZERO_COST_MECHANISM_TRAINING_NOT_OVERHEAD_OPTIMUM",
+  "epoch": 1794751229.9394126,
+  "evidence": [
+    "g4full-assessment.json",
+    "initialization-source-bridge.json",
+    "joint-capacity-admission.json",
+    "model-regression.json"
+  ],
+  "constant_utility_duration_accounting_test_pass": true,
+  "artificial_terminal_bootstrap_fixed": true,
+  "startup_optimizer_coverage_exclusion_repaired": true,
+  "registered_value_and_coverage_gates_passed_naturally_in_capacity": true,
+  "historical_probe_fresh_24actor_1sec_delta_vs20": {
+    "ms40": 0.0401,
+    "ms80": -0.3845,
+    "ms120": -1.513,
+    "ms160": -2.8555
+  },
+  "interpretation": "Cost0 favors or is consistent with short periods; not forcing a long-period outcome",
+  "cautions": [
+    "One-second partial return is not full Q",
+    "Empty-RTT evidence sparse",
+    "Rotating split changes validation distribution; lower error alone cannot establish generalization",
+    "No CPU/health conclusion until new endpoint frozen evaluation"
+  ]
+}

@@ -169,6 +169,7 @@ class NumericalContract(unittest.TestCase):
 class RealReplayAndGate(unittest.TestCase):
     def cfg(self, **kw):
         return dict(configuration(), **dict(dict(num_actors=2, memsize=64, batch_size=8, warmup=4,
+            holdout_layout='connection_start_fixed_legacy',
             minimum_enqueued_per_actor=2, warmup_physical_seconds=.08, calibration_rows_per_actor_period=2,
             minimum_holdout_per_period=2, calibration_updates=5, forward_calibration_updates=3), **kw))
 

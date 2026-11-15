@@ -2,7 +2,7 @@
 import math
 import random
 import numpy as np
-from .core import PhysicalCredit, PERIODS, CALIBRATION, FORWARD_ONLY, JOINT, bootstrap_terminal
+from .core import PhysicalCredit, PERIODS, CALIBRATION, FORWARD_ONLY, JOINT, bootstrap_terminal, heldout_position
 
 
 class IndexPool:
@@ -72,11 +72,15 @@ class Replay:
         self.credit.insert(actor, dt); birth = self.credit.inserted
         self.actor_ids[index], self.period_ids[index], self.birth[index] = actor, period, birth
         for array, value in zip(self.arrays, row): array[index] = value
-        sequence_holdout = (sequence - 1) % 257 < 8
+        position = heldout_position(self.cfg, actor, episode, sequence)
+        sequence_holdout = position < 8
         if sequence_holdout:
-            if (sequence - 1) % 257 == 0: self.pending_returns[actor] = []
-            block = self.pending_returns[actor]; block.append(row)
-            if len(block) == 8 or bool(row[4][0]):
+            if position == 0: self.pending_returns[actor] = []
+            # A block that starts before this physical connection is never
+            # continued across its reset. Its rows still enter one-step holdout.
+            block = self.pending_returns.get(actor)
+            if block is not None: block.append(row)
+            if block is not None and (len(block) == 8 or bool(row[4][0])):
                 start_period = min(range(5), key=lambda i: abs(math.log((20.*8.**((float(block[0][1][1])+1.)/2.))/PERIODS[i])))
                 self.short_seen[start_period] += 1; bucket = self.short_returns[start_period]
                 cap = self.cfg.get('short_return_blocks_per_period', 64)
