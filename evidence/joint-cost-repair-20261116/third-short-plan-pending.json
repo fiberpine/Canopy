@@ -1,0 +1,45 @@
+{
+  "status": "PENDING_USER_SCOPE_AMENDMENT_NO_NEW_TCP",
+  "epoch": 1794792201.6107097,
+  "run": "short3-cost001-coverage-seed3-600",
+  "seconds_per_actor": 600,
+  "reset_seconds": 30,
+  "decision_cost": 0.01,
+  "changes": [
+    "Joint-phase explicit10% period exploration, five equally probable periods",
+    "time_actor_lr1e-3, unchanged unit-L2 time feature normalization"
+  ],
+  "justification": [
+    "End replay has only8/300000 samples>=80ms",
+    "Exact constructed-value capability task at5000 updates20.56ms versus137.77ms, not actualTCP values"
+  ],
+  "preserved_criteria": {
+    "all24_complete": true,
+    "final_debt": 0,
+    "minimum_connections_per_actor": 24,
+    "finite_both_action_gradients": true,
+    "both_branches_change": true,
+    "frozen_bn_unchanged": true,
+    "minimum_joint_measured_seconds": 90,
+    "maximum_extra_formal_drain_seconds": 600,
+    "short_frozen_conditions": 24,
+    "repeats": 1,
+    "per_cell_minimum_utilization": 0.95,
+    "overall_utilization_loss_limit": 0.01,
+    "overall_mean_and_p95_queue_ratio_limit": 1.2,
+    "per_cell_disaster": "max(2*reference_mean,reference_mean+10ms)",
+    "full_and_trim_drop_packets": 0,
+    "minimum_policy_call_reduction": 0.2
+  },
+  "additional_coverage_gate": {
+    "minimum_actual_retained_per_actor_per_probe_period": 128
+  },
+  "first_two_short_failures_retained": true,
+  "maximum_total_short_runs_if_approved": 3,
+  "maximum_total_formal_runs": 1,
+  "no_window_extension": true,
+  "original_deadline": 1794801237.3321252,
+  "formal_latest_start": 1794793437.3321252,
+  "formal_minimum_remaining_seconds": 6600,
+  "independent_fixed_training": false
+}

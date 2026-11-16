@@ -9,7 +9,7 @@ import time
 import traceback
 import numpy as np
 from .configuration import ROOT
-from .core import JOINT, calibration_period, period_action, period_ms
+from .core import JOINT, calibration_period, period_action, period_ms, joint_exploration
 from .flow import dump, run_flow
 from .replay import Replay, CalibrationGate
 
@@ -207,17 +207,15 @@ def run_actor(cfg, index):
     writing = threading.Thread(target=writer, daemon=True); writing.start()
     def action(state):
         value, phase = sess.run([model.action, model.phase], {model.s: state[None, :]}, options=tf.RunOptions(timeout_in_ms=10000))
-        value = value[0]; pure = value.copy(); explored = False
+        value = value[0]; pure = value.copy(); explored = False;period_probe=False
         if phase < JOINT:
             # The window and its statistics remain frozen and unperturbed.
             ms, explored = calibration_period(cfg, int(phase), rng,period_ms(pure[1]))
             value[1] = period_action(ms)
         else:
-            noise = rng.normal(0., cfg['exploration_std'], 2)
-            if cfg.get('fixed_mtp_ms') is not None: noise[1] = 0.
-            value = np.clip(value + noise, -1., 1.); explored = bool(np.any(noise))
+            value,explored,period_probe=joint_exploration(cfg,pure,rng)
         counts['policy_calls'] += 1; counts['exploration_calls'] += int(explored)
-        return value, dict(phase=int(phase), pure_action=pure.tolist(), explored=explored)
+        return value, dict(phase=int(phase), pure_action=pure.tolist(), explored=explored,joint_period_probe=period_probe)
     def transition(values, episode, sequence):
         if errors: raise RuntimeError(errors[0])
         local.put_nowait((values, episode, sequence)); counts['generated'] += 1

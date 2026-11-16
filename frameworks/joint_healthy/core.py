@@ -43,6 +43,9 @@ def validate(cfg):
         raise ValueError('Unknown teacher clock weighting')
     if cfg.get('time_feature_normalization','none') not in ('none','unit_l2_v1'):
         raise ValueError('Unknown time feature normalization')
+    probe=float(cfg.get('joint_period_probe_probability',0.))
+    if not math.isfinite(probe) or not 0<=probe<=.2:
+        raise ValueError('Joint period probes must be bounded by0.2')
     reference=float(cfg.get('critic_initial_cost_reference_s',0.))
     if not math.isfinite(reference) or reference<0 or (reference>0 and not .02<=reference<=.16):
         raise ValueError('Cost initialization reference must be zero or a supported physical duration')
@@ -108,6 +111,22 @@ def period_ms(action):
 def period_action(ms):
     if not math.isfinite(float(ms)) or not 20 <= ms <= 160: raise ValueError('Invalid MTP')
     return 2. * math.log(float(ms) / 20.) / math.log(8.) - 1.
+
+
+def joint_exploration(cfg, pure, rng):
+    """Explore all periods after calibration; never changes frozen inference.
+
+    Zero probability consumes exactly the legacy Gaussian RNG sequence.
+    This is behavior exploration, not an independently trained fixed-period group.
+    """
+    noise=rng.normal(0.,cfg['exploration_std'],2)
+    fixed=cfg.get('fixed_mtp_ms') is not None
+    if fixed:noise[1]=0.
+    action=np.clip(np.asarray(pure)+noise,-1.,1.)
+    probability=float(cfg.get('joint_period_probe_probability',0.))
+    probe=bool(not fixed and probability>0 and rng.random_sample()<probability)
+    if probe:action[1]=period_action(float(rng.choice(PERIODS)))
+    return action,bool(np.any(noise) or probe),probe
 
 
 def softsign_inverse(action):
