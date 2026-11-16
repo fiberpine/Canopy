@@ -57,7 +57,7 @@
   "exploration_std": 0.2,
   "checkpoint_updates": 10000,
   "stop_reserve_s": 60,
-  "run_id": "new-cost-preserve-run",
+  "run_id": "new-cost001-conditioned-run",
   "learner_endpoint": "@LEARNER_IP@:25000",
   "actor_port_base": 23000,
   "conditions": [
@@ -401,7 +401,7 @@
   "profile": "joint",
   "baseline_checkpoint": "@PACKAGE@/models/healthy-baseline-seed3/training/step-6013196",
   "source_policy_sha256": "631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0",
-  "candidate_status": "OFFLINE_FIX_PENDING_SHORT_ADMISSION",
+  "candidate_status": "SECOND_AND_LAST_SHORT_ADMISSION",
   "tf_threads": 4,
   "window_bn_statistics": "frozen_migrated",
   "actor_recipe": "cost_preserve_v2",
@@ -409,5 +409,7 @@
   "time_actor_lr": 0.0001,
   "teacher_anchor_weight": 10.0,
   "teacher_anchor_delta": 0.1,
-  "teacher_anchor_clock_weighting": "base_over_planned_squared_stopgrad"
+  "teacher_anchor_clock_weighting": "base_over_planned_squared_stopgrad",
+  "time_feature_normalization": "unit_l2_v1",
+  "critic_initial_cost_reference_s": 0.0216
 }

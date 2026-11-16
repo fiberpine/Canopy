@@ -41,6 +41,11 @@ def validate(cfg):
         raise ValueError('Unknown actor training recipe')
     if cfg.get('teacher_anchor_clock_weighting','constant') not in ('constant','base_over_planned_squared_stopgrad'):
         raise ValueError('Unknown teacher clock weighting')
+    if cfg.get('time_feature_normalization','none') not in ('none','unit_l2_v1'):
+        raise ValueError('Unknown time feature normalization')
+    reference=float(cfg.get('critic_initial_cost_reference_s',0.))
+    if not math.isfinite(reference) or reference<0 or (reference>0 and not .02<=reference<=.16):
+        raise ValueError('Cost initialization reference must be zero or a supported physical duration')
     for name, default in (('teacher_anchor_weight',0.),('teacher_anchor_delta',.1),
                           ('window_actor_lr',cfg.get('lr_a',.0001)),('time_actor_lr',cfg.get('lr_a',.0001))):
         value=float(cfg.get(name,default))

@@ -46,3 +46,16 @@ class SameStateTeacherCache(unittest.TestCase):
         for key,value in (('window_bn_statistics','restore_final_later'),('teacher_anchor_clock_weighting','learn_to_hide_loss'),('window_actor_lr',0.)):
             cfg=self.config();cfg[key]=value
             with self.assertRaises(ValueError):validate(cfg)
+
+    def test_time_conditioning_contract_rejects_invalid_reference(self):
+        for key,value in (('time_feature_normalization','clip_action'),('critic_initial_cost_reference_s',-.02),('critic_initial_cost_reference_s',float('nan')),('critic_initial_cost_reference_s',.001)):
+            cfg=self.config();cfg[key]=value
+            with self.assertRaises(ValueError):validate(cfg)
+
+    def test_constant_period_cost_initialization_bellman_advantage(self):
+        reference=.0216;cost=.01;gamma=.995
+        shift=cost/(1-gamma**(reference/.02))
+        def residual(dt):return shift*(1-gamma**(dt/.02))-cost
+        self.assertAlmostEqual(residual(reference),0.,places=14)
+        self.assertGreater(residual(.08),0.)
+        self.assertLess(residual(.02),0.)

@@ -23,6 +23,16 @@ def verify(config,output,states_file=None):
             teacher,action=sess.run([model.teacher_output,model.action],{model.s:states})
             parity=float(np.max(np.abs(teacher[:,0]-action[:,0])));assert parity<1e-5,parity
             old_stats=sess.run(stats+target_stats);window_before=sess.run(model.window_vars);time_before=sess.run(model.time_vars)
+            features=sess.run(model.time_features,{model.s:states})
+            if cfg.get('time_feature_normalization')=='unit_l2_v1':
+                assert np.max(np.linalg.norm(features,axis=1))<=1.000001
+            if cfg.get('critic_initial_cost_reference_s',0)>0:
+                rd=tf.train.NewCheckpointReader(cfg['baseline_checkpoint'])
+                offset=cfg['decision_cost']/(1-cfg['gamma']**(cfg['critic_initial_cost_reference_s']/cfg['base_period_s']))
+                for scope in ('critic','critic2','target_critic','target_critic2'):
+                    source=scope.replace('target_','')+'/dense/bias'
+                    value=sess.run(next(v for v in model._variables(scope) if v.op.name==scope+'/dense/bias'))
+                    assert np.max(np.abs(value-(rd.get_tensor(source)-offset)))<1e-6
             durations=np.resize(np.array([.02,.04,.08,.16],np.float64),len(states))[:,None]
             returns=[interval_return(.9,float(t),cfg['decision_cost']) for t in durations[:,0]]
             rewards=np.array([v[0] for v in returns],np.float32)[:,None];discounts=np.array([v[1] for v in returns],np.float32)[:,None]
@@ -51,6 +61,8 @@ def verify(config,output,states_file=None):
                 sess.run(tf.global_variables_initializer());model.restore(sess,prefix)
                 restore_error=float(np.max(np.abs(expected-sess.run(model.action,{model.s:states}))));assert restore_error==0
     result=dict(status='PASS_ACTUAL_TF1_COST_PRESERVATION_GRAPH_NOT_TCP_HEALTH',fixed_inputs=len(states),initial_teacher_window_error=parity,
+        time_feature_normalization=cfg.get('time_feature_normalization','none'),initial_time_feature_max_norm=float(np.max(np.linalg.norm(features,axis=1))),
+        critic_initial_cost_reference_s=cfg.get('critic_initial_cost_reference_s',0.),
         both_branches_changed=True,window_parameter_max_change=window_change,time_parameter_max_change=time_change,
         all_online_and_target_bn_statistics_bitwise_unchanged=True,teacher_prediction_bitwise_unchanged=True,
         teacher_loss_time_parameter_gradients_exactly_zero=True,independent_actor_optimizer_slots=True,

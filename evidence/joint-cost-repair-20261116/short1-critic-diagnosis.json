@@ -1,0 +1,79 @@
+{
+  "status": "SHORT_FROZEN_LEARNED_Q_SENSITIVITY_NOT_TRUE_Q",
+  "rows": 512,
+  "period_mean": 20.000165939331055,
+  "period_min": 20.00014305114746,
+  "period_max": 20.000396728515625,
+  "softsign_derivative_median": 6.284395226430206e-11,
+  "softsign_derivative_min": 4.6984638402136625e-11,
+  "time_exact_boundary_fraction": 0.0,
+  "window_teacher_rmse": 0.07657700777053833,
+  "window_drift_by_period": [
+    {
+      "period_range_ms": [
+        20,
+        30
+      ],
+      "rows": 512,
+      "window_teacher_rmse": 0.07657700777053833
+    },
+    {
+      "period_range_ms": [
+        30,
+        60
+      ],
+      "rows": 0,
+      "window_teacher_rmse": null
+    },
+    {
+      "period_range_ms": [
+        60,
+        100
+      ],
+      "rows": 0,
+      "window_teacher_rmse": null
+    },
+    {
+      "period_range_ms": [
+        100,
+        161
+      ],
+      "rows": 0,
+      "window_teacher_rmse": null
+    }
+  ],
+  "queries": [
+    {
+      "ms": 20,
+      "mean_min_q": 172.099365234375,
+      "mean_time_q_gradient": 0.03968777507543564,
+      "positive_time_q_gradient_fraction": 0.69140625
+    },
+    {
+      "ms": 40,
+      "mean_min_q": 172.07052612304688,
+      "mean_time_q_gradient": -0.09124964475631714,
+      "positive_time_q_gradient_fraction": 0.486328125
+    },
+    {
+      "ms": 80,
+      "mean_min_q": 171.76705932617188,
+      "mean_time_q_gradient": -0.6819772720336914,
+      "positive_time_q_gradient_fraction": 0.361328125
+    },
+    {
+      "ms": 120,
+      "mean_min_q": 171.1621551513672,
+      "mean_time_q_gradient": -2.3028526306152344,
+      "positive_time_q_gradient_fraction": 0.330078125
+    },
+    {
+      "ms": 160,
+      "mean_min_q": 170.28578186035156,
+      "mean_time_q_gradient": -3.4055252075195312,
+      "positive_time_q_gradient_fraction": 0.25390625
+    }
+  ],
+  "optimizer_updates": 0,
+  "tcp_runs": 0
+}

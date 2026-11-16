@@ -154,6 +154,9 @@ class Model:
         t = 'target_mtp_actor' if target else 'mtp_actor'
         z = tf.nn.leaky_relu(self._linear(state, t + '/fc1', 64))
         z = tf.nn.leaky_relu(self._linear(z, t + '/fc2', 64))
+        if self.cfg.get('time_feature_normalization','none')=='unit_l2_v1':
+            z=tf.nn.l2_normalize(z,axis=1,epsilon=1e-12)
+        if not target:self.time_features=z
         with tf.variable_scope(t + '/output', reuse=tf.AUTO_REUSE):
             w = tf.get_variable('kernel', (64, 1), initializer=tf.zeros_initializer())
             coverage=self.cfg.get('time_initializer')=='feedback_coverage_v1'
@@ -233,11 +236,17 @@ class Model:
         for var in variables:
             if var.op.name not in names: raise ValueError('Missing source tensor: ' + var.op.name)
             value = migrate_array(var.op.name, rd.get_tensor(var.op.name), var.shape.as_list())
+            reference=float(self.cfg.get('critic_initial_cost_reference_s',0.))
+            if reference>0 and var.op.name in ('critic/dense/bias','critic2/dense/bias'):
+                # Constant-period cost prior only; the actual reward/TD still use
+                # each real duration and every later policy may change period.
+                value=value-float(self.cfg['decision_cost'])/(1.-float(self.cfg['gamma'])**(reference/float(self.cfg['base_period_s'])))
             if not np.isfinite(value).all(): raise ValueError('Nonfinite source tensor')
             assignments.append(tf.assign(var, value))
         session.run(assignments)
         if self.training: session.run(self.target_init)
         return dict(source=str(checkpoint), source_state_dim=70, source_action_dim=1, state_dim=82,
+                    critic_initial_cost_reference_s=float(self.cfg.get('critic_initial_cost_reference_s',0.)),
                     new_inputs_zero=True, optimizer_replay_counters_fresh=True, complete_resume=False,
                     critics='approximate_initialization_needs_calibration' if self.training and initialize_critics else 'not_restored',
                     targets='hard_copy_of_migrated_online', copied=[v.op.name for v in variables])
@@ -268,7 +277,8 @@ class Model:
         if record['cfg'].get('time_limit_handling', time_limit_default) != self.cfg.get('time_limit_handling', time_limit_default):
             raise ValueError('Checkpoint semantics mismatch: time_limit_handling')
         for key,default in (('window_bn_statistics','adaptive_moving'),('actor_recipe','legacy_joint'),
-                            ('teacher_anchor_weight',0.),('teacher_anchor_delta',.1),('teacher_anchor_clock_weighting','constant')):
+                            ('teacher_anchor_weight',0.),('teacher_anchor_delta',.1),('teacher_anchor_clock_weighting','constant'),
+                            ('time_feature_normalization','none'),('critic_initial_cost_reference_s',0.)):
             if record['cfg'].get(key,default)!=self.cfg.get(key,default):raise ValueError('Checkpoint semantics mismatch: '+key)
         if self.training and self.cfg.get('actor_recipe')=='cost_preserve_v2':
             for key in ('window_actor_lr','time_actor_lr'):
