@@ -1,0 +1,11 @@
+{
+  "epoch": 1794788405.804402,
+  "status": "BEFORE_ANY_NEW_TCP_OR_CANDIDATE_LEARNING_RESULT",
+  "amendment": "Reference loss weighted by stop_gradient((20/planned_ms)^2); preserves near20 compatibility but weakens a20ms teacher at long periods",
+  "cost": 0.01,
+  "base_anchor_weight": 10.0,
+  "huber_delta": 0.1,
+  "old_constant_weight_record_preserved": true,
+  "time_head_trained_only_by_policy_Q_objective": true,
+  "reason": "Teacher action frequency differs at long periods; avoid a learned short-period loophole caused by the reference penalty"
+}

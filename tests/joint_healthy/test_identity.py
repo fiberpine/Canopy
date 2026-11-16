@@ -9,6 +9,24 @@ from frameworks.joint_healthy.configuration import configuration
 
 
 class NativeProvenance(unittest.TestCase):
+    def test_cost_repair_needs_its_explicit_initialization_bridge(self):
+        cfg=configuration('g4');cfg.update(actor_recipe='cost_preserve_v2',decision_cost=.01,
+            window_bn_statistics='frozen_migrated',teacher_anchor_weight=10.,
+            teacher_anchor_clock_weighting='base_over_planned_squared_stopgrad')
+        impl={'fixture':True}
+        receipt=dict(status='PASS_PREREGISTERED_G0_G4_COST_PRESERVE_INITIALIZATION',implementation=impl,
+            registration='registered.json',evidence='prior-full-grid-and-real-input-parity.json',
+            rate_mode='acked_legacy_peak',utility_normalization='legacy_delivery_peak',validated_time_initializer='feedback_coverage_v1',
+            validated_decision_cost=.01,
+            validation=dict(conditions=24,repeats=3,candidate_runs=72,paired_base_runs=72,health_pass=True,g0_mechanism_pass=True),
+            training_only_initialization_bridge=dict(initial_policy_function_unchanged=True,observation_and_action_mapping_unchanged=True,
+              native_unchanged=True,same_real_input_parity_pass=True,prior_full_grid_witness_retained=True))
+        with mock.patch.object(identity,'implementation_identity',return_value=impl):
+            identity.check_admission(receipt,cfg)
+            with self.assertRaises(ValueError):identity.check_admission(dict(receipt,validated_decision_cost=.02),cfg)
+            with self.assertRaises(ValueError):identity.check_admission(dict(receipt,training_only_initialization_bridge={}),cfg)
+            with self.assertRaises(ValueError):identity.check_admission(dict(receipt,status='PASS_PREREGISTERED_G0_G4_FULL_GRID'),cfg)
+
     def test_failed_g1_g2_cannot_be_relabelled_as_g3_admission(self):
         cfg=configuration('g3');impl={'fixture':True}
         receipt=dict(status='PASS_PREREGISTERED_G0_G3_FULL_GRID',implementation=impl,registration='registered.json',evidence='actual-results.json',

@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT))
 os.environ.update(TF_CPP_MIN_LOG_LEVEL='2', CUDA_VISIBLE_DEVICES='', OMP_NUM_THREADS='1')
 
 
-def verify(output):
+def verify(output,config=None):
     import numpy as np
     import tensorflow as tf
     from frameworks.joint_healthy import backend
@@ -24,7 +24,9 @@ def verify(output):
     from frameworks.joint_healthy.core import interval_return, bootstrap_terminal
     from frameworks.joint_healthy.model import Model
     cfg = configuration('fixed20')
+    if config:cfg.update(json.loads(Path(config).read_text(encoding='utf-8').replace('@PACKAGE@',str(ROOT).replace('\\','/'))))
     cfg.update(run_id='synthetic-pipeline', num_actors=2, memsize=512, batch_size=8,
+        profile='fixed20',fixed_mtp_ms=20.,
         warmup=8, minimum_enqueued_per_actor=4, warmup_physical_seconds=.16,
         calibration_updates=2, forward_calibration_updates=2, calibration_check_updates=1,
         calibration_rows_per_actor_period=1, minimum_holdout_per_period=1,
@@ -70,6 +72,10 @@ def verify(output):
             assert result['counters']['actor_updates'] > 0
             assert result['counters']['critic_optimizer_ops'] == 2*result['counters']['critic_iterations']
             assert [g['phase'] for g in gates if g['admitted']] == [0,1]
+            if cfg.get('teacher_anchor_weight',0)>0:
+                with np.load(str(Path(result['endpoint']).parent/'replay.npz')) as saved:
+                    assert len(saved['teacher_actions'])==400 and np.isfinite(saved['teacher_actions']).all()
+                    result['verified_cached_teacher_rows']=400
             result.pop('endpoint')
             result.update(status='PASS_SYNTHETIC_LEARNER_PIPELINE_ONLY', gates=gates,
                 no_server_or_socket_created=True, new_TCP=0, measured_physical_experience=0,
@@ -81,5 +87,5 @@ def verify(output):
 
 
 if __name__ == '__main__':
-    ap=argparse.ArgumentParser(description=__doc__); ap.add_argument('--output',required=True)
-    verify(ap.parse_args().output)
+    ap=argparse.ArgumentParser(description=__doc__); ap.add_argument('--output',required=True);ap.add_argument('--config')
+    args=ap.parse_args();verify(args.output,args.config)

@@ -64,7 +64,20 @@ class Model:
         self.q1 = self._critic(self.s, self.executed, 'critic')
         self.q2 = self._critic(self.s, self.executed, 'critic2')
         self.losses = [tf.reduce_mean(tf.square(self.label - q)) for q in (self.q1, self.q2)]
-        self.actor_loss = -tf.reduce_mean(self._critic(self.s, self.action, 'critic'))
+        self.policy_loss = -tf.reduce_mean(self._critic(self.s, self.action, 'critic'))
+        self.teacher_output = None;self.teacher_reference = None
+        self.anchor_loss = tf.constant(0.,tf.float32)
+        if float(cfg.get('teacher_anchor_weight',0))>0:
+            self.teacher_output=self._reference_window(self.s)
+            self.teacher_reference=tf.placeholder(tf.float32,(None,1),name='same_state_frozen_teacher')
+            difference=tf.abs(self.action[:,:1]-tf.stop_gradient(self.teacher_reference))
+            delta=float(cfg.get('teacher_anchor_delta',.1))
+            anchor=tf.where(difference<=delta,.5*tf.square(difference),delta*(difference-.5*delta))
+            if cfg.get('teacher_anchor_clock_weighting','constant')=='base_over_planned_squared_stopgrad':
+                planned_ms=20.*tf.pow(8.,(self.action[:,1:2]+1.)/2.)
+                anchor=anchor*tf.stop_gradient(tf.square(20./planned_ms))
+            self.anchor_loss=tf.reduce_mean(anchor)
+        self.actor_loss = self.policy_loss+float(cfg.get('teacher_anchor_weight',0))*self.anchor_loss
         self.actor_vars = self._variables(WINDOW, True) + self._variables('mtp_actor', True)
         self.window_grad = tf.global_norm(tf.gradients(self.actor_loss, self._variables(WINDOW, True)))
         self.time_grad = tf.global_norm(tf.gradients(self.actor_loss, self._variables('mtp_actor', True)))
@@ -76,8 +89,19 @@ class Model:
         with tf.control_dependencies(updates):
             self.critic_step = tf.assign_add(self.global_step, 2)
         self.actor_optimizer = tf.train.AdamOptimizer(cfg.get('lr_a', .0001), name='AdamJointActor')
+        self.actor_optimizer_ops_per_step=1
         with tf.control_dependencies([tf.Assert(self.joint_enabled, [self.phase], name='actor_requires_joint_phase')]):
-            self.actor_step = self.actor_optimizer.minimize(self.actor_loss, var_list=self.actor_vars, global_step=self.global_step)
+            if cfg.get('actor_recipe')=='cost_preserve_v2':
+                self.window_actor_optimizer=tf.train.AdamOptimizer(cfg['window_actor_lr'],name='AdamPreservedWindow')
+                self.time_actor_optimizer=tf.train.AdamOptimizer(cfg['time_actor_lr'],name='AdamPreservedTime')
+                window_step=self.window_actor_optimizer.minimize(self.actor_loss,var_list=self._variables(WINDOW,True))
+                time_gradients=self.time_actor_optimizer.compute_gradients(self.actor_loss,var_list=self._variables('mtp_actor',True))
+                effective_time=[(g,v) for g,v in time_gradients if g is not None]
+                time_step=self.time_actor_optimizer.apply_gradients(effective_time) if effective_time else tf.no_op()
+                self.actor_optimizer_ops_per_step=1+int(bool(effective_time))
+                with tf.control_dependencies([window_step,time_step]):self.actor_step=tf.assign_add(self.global_step,1)
+            else:
+                self.actor_step = self.actor_optimizer.minimize(self.actor_loss, var_list=self.actor_vars, global_step=self.global_step)
         self._add_bn_writers()
         for source, target in ((WINDOW, TARGET_WINDOW), ('mtp_actor', 'target_mtp_actor'),
                                ('critic', 'target_critic'), ('critic2', 'target_critic2')):
@@ -93,6 +117,10 @@ class Model:
         self.target_update = []
         for a, b in self.target_pairs:
             def update(a=a, b=b): return tf.assign(b, .001 * a + .999 * b)
+            frozen_stat=(cfg.get('window_bn_statistics')=='frozen_migrated' and a.op.name.startswith(WINDOW+'/')
+                         and a.op.name.endswith(('/moving_mean','/moving_variance')))
+            if frozen_stat:
+                self.target_update.append(tf.identity(b));continue
             # Calibration must preserve actor/target weights AND statistics exactly.
             if a.op.name.startswith((WINDOW + '/', 'mtp_actor/')):
                 self.target_update.append(tf.cond(self.joint_enabled, update, lambda b=b: tf.identity(b)))
@@ -157,9 +185,24 @@ class Model:
         h = tf.nn.leaky_relu(self._linear(tf.concat([h, action], axis=1), scope + '/fc2', 256))
         return self._linear(h, scope + '/dense', 1)
 
+    def _reference_window(self,state):
+        """Learner-only fixed source network. Its labels are cached once per real row."""
+        tf=self.tf;reader=tf.train.NewCheckpointReader(self.cfg['baseline_checkpoint'])
+        def tensor(name):return tf.constant(reader.get_tensor(WINDOW+'/'+name),dtype=tf.float32)
+        value=state[:,:70]
+        for fc,bn in (('fc1','bn1'),('fc2','bn2')):
+            value=tf.matmul(value,tensor(fc+'/w'))+tensor(fc+'/b')
+            value=tf.nn.batch_normalization(value,tensor(bn+'/moving_mean'),tensor(bn+'/moving_variance'),tensor(bn+'/beta'),None,.001)
+            value=tf.nn.leaky_relu(value)
+        return tf.stop_gradient(tf.tanh(tf.matmul(value,tensor('fc1_1/w'))+tensor('fc1_1/b')))
+
     def _add_bn_writers(self):
         tf = self.tf
         variables = {v.op.name: v for v in self.window_vars}
+        if self.cfg.get('window_bn_statistics')=='frozen_migrated':
+            self.window_update_ops=[tf.identity(variables[WINDOW+'/'+bn+'/'+name])
+                                    for bn in ('bn1','bn2') for name in ('moving_mean','moving_variance')]
+            return
         x = self.s
         for fc, bn in (('fc1', 'bn1'), ('fc2', 'bn2')):
             y = tf.matmul(x, variables[WINDOW + '/' + fc + '/w']) + variables[WINDOW + '/' + fc + '/b']
@@ -200,8 +243,11 @@ class Model:
                     targets='hard_copy_of_migrated_online', copied=[v.op.name for v in variables])
 
     def feed(self, batch):
-        return dict(zip((self.s, self.executed, self.reward, self.s1, self.terminal, self.discount),
+        result=dict(zip((self.s, self.executed, self.reward, self.s1, self.terminal, self.discount),
                         (batch[0], batch[1], batch[2], batch[3], bootstrap_terminal(self.cfg, batch[4]), batch[6])))
+        reference=getattr(self,'teacher_reference',None)
+        if reference is not None and len(batch)>7:result[reference]=batch[7]
+        return result
 
     def digest(self, session, window_only=False):
         h = hashlib.sha256()
@@ -221,6 +267,12 @@ class Model:
         time_limit_default = 'physical_end_is_terminal_legacy'
         if record['cfg'].get('time_limit_handling', time_limit_default) != self.cfg.get('time_limit_handling', time_limit_default):
             raise ValueError('Checkpoint semantics mismatch: time_limit_handling')
+        for key,default in (('window_bn_statistics','adaptive_moving'),('actor_recipe','legacy_joint'),
+                            ('teacher_anchor_weight',0.),('teacher_anchor_delta',.1),('teacher_anchor_clock_weighting','constant')):
+            if record['cfg'].get(key,default)!=self.cfg.get(key,default):raise ValueError('Checkpoint semantics mismatch: '+key)
+        if self.training and self.cfg.get('actor_recipe')=='cost_preserve_v2':
+            for key in ('window_actor_lr','time_actor_lr'):
+                if record['cfg'].get(key)!=self.cfg.get(key):raise ValueError('Checkpoint learning-rate mismatch: '+key)
         for key in ('rate_mode', 'clock_mode', 'utility_normalization', 'decision_cost', 'fixed_mtp_ms',
                     'time_initializer','calibration_main_mode'):
             if record['cfg'].get(key) != self.cfg.get(key): raise ValueError('Checkpoint semantics mismatch: ' + key)

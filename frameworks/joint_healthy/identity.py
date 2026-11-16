@@ -33,6 +33,8 @@ def check_admission(receipt,cfg=None):
     g3=bool(cfg and cfg.get('rate_mode')=='acked_legacy_peak')
     expected='PASS_PREREGISTERED_G0_G3_FULL_GRID' if g3 else 'PASS_PREREGISTERED_G0_G1_G2'
     if cfg and cfg.get('time_initializer')=='feedback_coverage_v1':expected='PASS_PREREGISTERED_G0_G4_FULL_GRID'
+    cost_repair=bool(cfg and cfg.get('actor_recipe')=='cost_preserve_v2')
+    if cost_repair:expected='PASS_PREREGISTERED_G0_G4_COST_PRESERVE_INITIALIZATION'
     if receipt.get('status') != expected:
         raise ValueError('Registered admission for this measurement contract is missing')
     if receipt.get('implementation') != implementation_identity(require_binary=True):
@@ -43,8 +45,17 @@ def check_admission(receipt,cfg=None):
         required=dict(conditions=24,repeats=3,candidate_runs=72,paired_base_runs=72,health_pass=True,g0_mechanism_pass=True)
         if any(receipt.get('validation',{}).get(k)!=v for k,v in required.items()):
             raise ValueError('G3 needs its own full24x3 matched frozen admission')
+        valid_cost=(cfg.get('decision_cost')==0.)
+        if cost_repair:
+            bridge=receipt.get('training_only_initialization_bridge',{})
+            valid_cost=(float(cfg.get('decision_cost',0))>0 and receipt.get('validated_decision_cost')==cfg['decision_cost']
+                and all(bridge.get(k) is True for k in ('initial_policy_function_unchanged','observation_and_action_mapping_unchanged',
+                    'native_unchanged','same_real_input_parity_pass','prior_full_grid_witness_retained')))
+            if (cfg.get('window_bn_statistics')!='frozen_migrated' or float(cfg.get('teacher_anchor_weight',0))<=0
+                    or cfg.get('teacher_anchor_clock_weighting')!='base_over_planned_squared_stopgrad'):
+                raise ValueError('Cost repair preservation contract differs from its registered initialization')
         if (receipt.get('rate_mode')!='acked_legacy_peak' or receipt.get('utility_normalization')!='legacy_delivery_peak'
-                or cfg.get('utility_normalization')!='legacy_delivery_peak' or cfg.get('decision_cost')!=0.):
+                or cfg.get('utility_normalization')!='legacy_delivery_peak' or not valid_cost):
             raise ValueError('G3 admission is only for the declared zero-cost legacy-peak contract')
         initializer=cfg.get('time_initializer','constant')
         if receipt.get('validated_time_initializer','constant')!=initializer:

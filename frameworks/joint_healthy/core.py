@@ -35,6 +35,20 @@ def heldout_position(cfg, actor, episode, sequence):
 def validate(cfg):
     bootstrap_terminal(cfg, np.array([0., 1.], np.float32))
     heldout_position(cfg, 0, 0, 1)
+    if cfg.get('window_bn_statistics','adaptive_moving') not in ('adaptive_moving','frozen_migrated'):
+        raise ValueError('Unknown window BN statistics contract')
+    if cfg.get('actor_recipe','legacy_joint') not in ('legacy_joint','cost_preserve_v2'):
+        raise ValueError('Unknown actor training recipe')
+    if cfg.get('teacher_anchor_clock_weighting','constant') not in ('constant','base_over_planned_squared_stopgrad'):
+        raise ValueError('Unknown teacher clock weighting')
+    for name, default in (('teacher_anchor_weight',0.),('teacher_anchor_delta',.1),
+                          ('window_actor_lr',cfg.get('lr_a',.0001)),('time_actor_lr',cfg.get('lr_a',.0001))):
+        value=float(cfg.get(name,default))
+        if not math.isfinite(value) or value<0 or (name!='teacher_anchor_weight' and value==0):
+            raise ValueError('Invalid actor preservation coefficient: '+name)
+    if cfg.get('actor_recipe')=='cost_preserve_v2':
+        if cfg.get('window_bn_statistics')!='frozen_migrated' or float(cfg.get('teacher_anchor_weight',0))<=0:
+            raise ValueError('Cost preservation requires frozen migrated statistics and a soft teacher reference')
     required = dict(schema=SCHEMA, state_dim=82, action_dim=2,
                     reward_mode='raw',
                     reward_semantics='observed_interval_orca_density',

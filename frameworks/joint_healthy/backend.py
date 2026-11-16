@@ -56,7 +56,7 @@ def run_learner(cfg):
     replay = Replay(cfg); gate = CalibrationGate(cfg); lock = threading.RLock()
     done = {}; errors = []; stop_receiver = threading.Event()
     frozen_hash = model.digest(sess, True)
-    counters = dict(critic_iterations=0, critic_optimizer_ops=0, actor_updates=0, target_updates=0)
+    counters = dict(critic_iterations=0, critic_optimizer_ops=0, actor_updates=0, actor_optimizer_ops=0, target_updates=0)
     saver = tf.train.Saver(max_to_keep=None)
     def checkpoint(kind):
         with lock:
@@ -73,8 +73,13 @@ def run_learner(cfg):
                 count = int(sess.run(size))
                 if not count: stop_receiver.wait(.01); continue
                 columns = sess.run(deq, {number: min(count, 256)})
+                real=np.flatnonzero(columns[8]>=0)
+                teacher={}
+                if model.teacher_output is not None and len(real):
+                    values=sess.run(model.teacher_output,{model.s:columns[0][real]})[:,0]
+                    teacher=dict(zip(map(int,real),map(float,values)))
                 with lock:
-                    for row in zip(*columns):
+                    for row_index,row in enumerate(zip(*columns)):
                         actor, episode, sequence = int(row[7]), int(row[8]), int(row[9])
                         if not 0 <= actor < cfg['num_actors']: raise ValueError('Invalid producer identity')
                         if episode == -1:
@@ -83,7 +88,7 @@ def run_learner(cfg):
                             done[actor] = sequence
                         else:
                             if actor in done: raise ValueError('Experience after producer finished')
-                            replay.append(row[:7], actor, episode, sequence)
+                            replay.append(row[:7], actor, episode, sequence,teacher_action=teacher.get(row_index))
         except Exception:
             errors.append(traceback.format_exc()); stop_receiver.set()
     receiver = threading.Thread(target=receive, daemon=True); receiver.start()
@@ -121,6 +126,7 @@ def run_learner(cfg):
                 if not np.isfinite(latest_gradients).all(): raise RuntimeError('Nonfinite actor gradient')
                 sess.run([model.actor_step, model.window_update_ops], feed)
                 counters['actor_updates'] += 1
+                counters['actor_optimizer_ops'] += model.actor_optimizer_ops_per_step
             sess.run(model.target_update)
             counters['critic_iterations'] += 1; counters['critic_optimizer_ops'] += 2; counters['target_updates'] += 1
             iteration = counters['critic_iterations']

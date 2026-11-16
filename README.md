@@ -13,6 +13,7 @@
 - [双动作首次上线：计量修复、容量与完整性能失败](docs/JOINT_HEALTHY_SEED3_ONLINE_20261113.md)
 - [当前两小时续接：一次3600秒联合训练与独立终点评测](docs/JOINT_HEALTHY_TWOHOUR_20261115.md)（完成：新联合模型健康门FAIL，未替换原基座）
 - [奖励与SMDP复核：成本0、目标差距及审计边界](docs/JOINT_REWARD_SMDP_AUDIT_20261116.md)（纯本机离线，未改算法）
+- [本轮非零调用成本修复：BN、双分支学习及短准入](docs/JOINT_COST_PRESERVE_REPAIR_20261116.md)（独立候选，未替换原基座）
 - [上轮四小时：修复、启动覆盖和联合容量门槛](docs/JOINT_HEALTHY_RESTART_20261115.md)
 - [上轮G4初始化准入、正式训练执行失败与修复证据](docs/JOINT_HEALTHY_RECOVERY_20261114.md)
 

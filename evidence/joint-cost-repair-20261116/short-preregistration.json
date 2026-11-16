@@ -1,0 +1,29 @@
+{
+  "run": "short-cost001-preserve-seed3-720",
+  "seconds_per_actor": 720,
+  "connection_reset_seconds": 30,
+  "maximum_short_runs": 2,
+  "formal_model": false,
+  "criteria": {
+    "all24_complete": true,
+    "final_debt": 0,
+    "minimum_connections_per_actor": 24,
+    "finite_both_action_gradients": true,
+    "both_branches_change": true,
+    "frozen_bn_unchanged": true,
+    "minimum_joint_measured_seconds": 90,
+    "maximum_extra_formal_drain_seconds": 600,
+    "short_frozen_conditions": 24,
+    "repeats": 1,
+    "per_cell_minimum_utilization": 0.95,
+    "overall_utilization_loss_limit": 0.01,
+    "overall_mean_and_p95_queue_ratio_limit": 1.2,
+    "per_cell_disaster": "max(2*reference_mean,reference_mean+10ms)",
+    "full_and_trim_drop_packets": 0,
+    "minimum_policy_call_reduction": 0.2
+  },
+  "short_reference": "All prior72 primary base rows, temporal mismatch retained; new matched72 baseline required for final",
+  "full_replay_capacity": "Independent synthetic prefilled300k benchmark plus actual online rate; do not claim short replay full unless observed",
+  "no_fixed_training": true,
+  "formal_initialization": "fresh healthy seed3, not short checkpoint"
+}

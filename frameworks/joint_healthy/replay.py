@@ -38,16 +38,20 @@ class Replay:
         self.actor_ids = np.full(self.size, -1, np.int32)
         self.period_ids = np.full(self.size, -1, np.int32)
         self.birth = np.zeros(self.size, np.int64); self.pools = [IndexPool() for _ in range(self.actors)]
+        self.teacher_actions = np.zeros((self.size,1),np.float32) if float(cfg.get('teacher_anchor_weight',0))>0 else None
         self.coverage = np.zeros((self.actors, 5), np.int64)
         self.last = {}; self.sample_calls = 0; self.sampled = np.zeros(self.actors, np.int64)
         self.holdout = [[] for _ in range(5)]; self.holdout_seen = np.zeros(5, np.int64)
         self.short_returns = [[] for _ in range(5)]; self.short_seen = np.zeros(5, np.int64)
         self.pending_returns = {}
 
-    def append(self, values, actor, episode, sequence):
+    def append(self, values, actor, episode, sequence, teacher_action=None):
         if len(values) != 7: raise ValueError('SMDP replay needs seven tensors')
         row = [np.asarray(x, np.float64 if i == 5 else np.float32).reshape(n) for i, (x, n) in enumerate(zip(values, (82, 2, 1, 82, 1, 1, 1)))]
         if not all(np.isfinite(x).all() for x in row): raise ValueError('Nonfinite transition')
+        if self.teacher_actions is not None:
+            if teacher_action is None or not math.isfinite(float(teacher_action)) or abs(float(teacher_action))>1.00001:
+                raise ValueError('A finite same-state teacher action is required')
         if np.max(np.abs(row[1])) > 1.00001 or row[4][0] not in (0., 1.): raise ValueError('Action/terminal range')
         dt, discount = float(row[5][0]), float(row[6][0])
         if dt <= 0 or not math.isclose(discount, .995 ** (dt / .02), rel_tol=2e-5, abs_tol=1e-8):
@@ -72,6 +76,7 @@ class Replay:
         self.credit.insert(actor, dt); birth = self.credit.inserted
         self.actor_ids[index], self.period_ids[index], self.birth[index] = actor, period, birth
         for array, value in zip(self.arrays, row): array[index] = value
+        if self.teacher_actions is not None:self.teacher_actions[index,0]=float(teacher_action)
         position = heldout_position(self.cfg, actor, episode, sequence)
         sequence_holdout = position < 8
         if sequence_holdout:
@@ -115,7 +120,9 @@ class Replay:
         self.sample_calls += 1
         index = np.asarray(indices, dtype=np.int64)
         assert np.all(self.birth[index] % 17 != 0)
-        return [array[index].copy() for array in self.arrays]
+        batch=[array[index].copy() for array in self.arrays]
+        if self.teacher_actions is not None:batch.append(self.teacher_actions[index].copy())
+        return batch
 
     def holdout_batch(self, period):
         rows = self.holdout[period]
@@ -137,8 +144,10 @@ class Replay:
 
     def snapshot(self):
         n = min(self.size, self.credit.inserted)
-        return dict(zip(('s0', 'actions', 'rewards', 's1', 'terminal', 'duration', 'discount'), [x[:n] for x in self.arrays]),
+        result=dict(zip(('s0', 'actions', 'rewards', 's1', 'terminal', 'duration', 'discount'), [x[:n] for x in self.arrays]),
                     actor_ids=self.actor_ids[:n], period_ids=self.period_ids[:n], birth=self.birth[:n])
+        if self.teacher_actions is not None:result['teacher_actions']=self.teacher_actions[:n]
+        return result
 
 
 class CalibrationGate:

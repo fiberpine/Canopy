@@ -1,0 +1,145 @@
+{
+  "status": "SAVED_CP_COMMON_STATE_TRAJECTORY_NO_CHECKPOINT_SELECTION",
+  "rows": 1059,
+  "trajectory": [
+    {
+      "checkpoint": "step-0.joint.json",
+      "critic_iterations": 0,
+      "actor_updates": 0,
+      "phase": 0,
+      "window_rmse_from_teacher": 0.0,
+      "window_mean_delta": 0.0,
+      "window_max_abs_delta": 0.0,
+      "mean_period_ms": 20.499999129063777
+    },
+    {
+      "checkpoint": "step-222703.joint.json",
+      "critic_iterations": 30000,
+      "actor_updates": 500,
+      "phase": 2,
+      "window_rmse_from_teacher": 0.4190708100795746,
+      "window_mean_delta": -0.12535448372364044,
+      "window_max_abs_delta": 1.1465039253234863,
+      "mean_period_ms": 20.368561180606054
+    },
+    {
+      "checkpoint": "step-316260.joint.json",
+      "critic_iterations": 40000,
+      "actor_updates": 10500,
+      "phase": 2,
+      "window_rmse_from_teacher": 0.28381407260894775,
+      "window_mean_delta": -0.04462830722332001,
+      "window_max_abs_delta": 1.3647375106811523,
+      "mean_period_ms": 20.00493288681324
+    },
+    {
+      "checkpoint": "step-700410.joint.json",
+      "critic_iterations": 80000,
+      "actor_updates": 50500,
+      "phase": 2,
+      "window_rmse_from_teacher": 0.19097186625003815,
+      "window_mean_delta": 0.007031348068267107,
+      "window_max_abs_delta": 1.1215604543685913,
+      "mean_period_ms": 20.000784644661202
+    },
+    {
+      "checkpoint": "step-1463413.joint.json",
+      "critic_iterations": 160000,
+      "actor_updates": 130500,
+      "phase": 2,
+      "window_rmse_from_teacher": 0.24095137417316437,
+      "window_mean_delta": 0.03937732055783272,
+      "window_max_abs_delta": 1.317317247390747,
+      "mean_period_ms": 20.161516065178514
+    },
+    {
+      "checkpoint": "step-2221202.joint.json",
+      "critic_iterations": 240000,
+      "actor_updates": 210500,
+      "phase": 2,
+      "window_rmse_from_teacher": 0.24363616108894348,
+      "window_mean_delta": 0.01606319099664688,
+      "window_max_abs_delta": 1.1056791543960571,
+      "mean_period_ms": 20.405927749413646
+    },
+    {
+      "checkpoint": "step-2952613.joint.json",
+      "critic_iterations": 320000,
+      "actor_updates": 290500,
+      "phase": 2,
+      "window_rmse_from_teacher": 0.2835126519203186,
+      "window_mean_delta": 0.02613532356917858,
+      "window_max_abs_delta": 1.1357882022857666,
+      "mean_period_ms": 20.000977373682947
+    },
+    {
+      "checkpoint": "step-3470420.joint.json",
+      "critic_iterations": 380000,
+      "actor_updates": 350500,
+      "phase": 2,
+      "window_rmse_from_teacher": 0.3786671757698059,
+      "window_mean_delta": 0.0745038390159607,
+      "window_max_abs_delta": 1.552515983581543,
+      "mean_period_ms": 20.113031289303628
+    },
+    {
+      "checkpoint": "step-3470420-final.joint.json",
+      "critic_iterations": 429699,
+      "actor_updates": 400199,
+      "phase": 2,
+      "window_rmse_from_teacher": 0.2673649191856384,
+      "window_mean_delta": 0.02693106047809124,
+      "window_max_abs_delta": 1.1521031856536865,
+      "mean_period_ms": 20.081782915002766
+    }
+  ],
+  "early_bn_swaps": [
+    {
+      "critic_iterations": 30000,
+      "actor_updates": 500,
+      "cases": {
+        "old_weights_old_statistics": {
+          "rmse": 0.0,
+          "mean_delta": 0.0
+        },
+        "old_weights_new_statistics": {
+          "rmse": 0.6193119287490845,
+          "mean_delta": 0.2676405906677246
+        },
+        "new_weights_old_statistics": {
+          "rmse": 0.37158843874931335,
+          "mean_delta": -0.16125911474227905
+        },
+        "new_weights_new_statistics": {
+          "rmse": 0.4190708100795746,
+          "mean_delta": -0.12535448372364044
+        }
+      }
+    },
+    {
+      "critic_iterations": 40000,
+      "actor_updates": 10500,
+      "cases": {
+        "old_weights_old_statistics": {
+          "rmse": 0.0,
+          "mean_delta": 0.0
+        },
+        "old_weights_new_statistics": {
+          "rmse": 1.262960433959961,
+          "mean_delta": 1.1992994546890259
+        },
+        "new_weights_old_statistics": {
+          "rmse": 1.2589980363845825,
+          "mean_delta": 1.1939258575439453
+        },
+        "new_weights_new_statistics": {
+          "rmse": 0.28381407260894775,
+          "mean_delta": -0.04462830722332001
+        }
+      }
+    }
+  ],
+  "optimizer_updates": 0,
+  "tcp_runs": 0,
+  "limitation": "Output drift on fixed real inputs; not closed-loop performance of intermediate checkpoints"
+}
