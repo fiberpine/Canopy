@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-16",
+  "conversation": "https://claude.ai/chat/78f057d9-dcca-4dbc-9b7a-06b9b0af6eff",
+  "scope": "Three observed UI review rounds; no SSH, TCP, optimizer updates, or algorithm deployment",
+  "fixed_github_revision_sent": "d700cdac809d8d00f213d4ea4b90febf99c1027d",
+  "links_sent": [
+    "https://github.com/fiberpine/Canopy/blob/d700cdac809d8d00f213d4ea4b90febf99c1027d/docs/JOINT_COST_PRESERVE_REPAIR_20261116.md",
+    "https://github.com/fiberpine/Canopy/blob/d700cdac809d8d00f213d4ea4b90febf99c1027d/frameworks/joint_healthy/core.py",
+    "https://github.com/fiberpine/Canopy/blob/d700cdac809d8d00f213d4ea4b90febf99c1027d/frameworks/joint_healthy/model.py",
+    "https://github.com/fiberpine/Canopy/blob/d700cdac809d8d00f213d4ea4b90febf99c1027d/frameworks/joint_healthy/backend.py",
+    "https://github.com/fiberpine/Canopy/tree/d700cdac809d8d00f213d4ea4b90febf99c1027d/evidence/joint-cost-repair-20261116"
+  ],
+  "claude_declared_read": {
+    "full": ["report", "core.py", "model.py"],
+    "partial": ["backend.py phase/exploration lines", "evidence directory file listing"],
+    "not_read": ["evidence JSON/CSV contents", "replay.py", "flow.py", "native", "raw logs", "960 new offline probe data"]
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "summary": "Read actual report/core/model; identified missing current-duration conditioning and impulse-rate coupling. Suggested discrete durations and conditional window; flagged slow-start feasibility and endpoint RTT reward bias.",
+      "limitations": "Slow-start feasibility and reward-bias direction explicitly hypotheses, not established by runtime data. Discrete proposal later withdrawn by user constraint."
+    },
+    {
+      "round": 2,
+      "new_material": "Root-agent read-only960-transition deterministic target decomposition; analytical distinction between one changed action then20ms and permanently fixed-period policy; potential-based residual option",
+      "accepted_corrections": [
+        "There are two critics; two independent actor heads can represent an optimal deterministic joint mapping. The concern is learning path/conditioning, not mathematical impossibility.",
+        "600s failure does not prove a changed recipe cannot learn with more samples; old3.47M cost-zero run is not the same recipe.",
+        "T<=2RTT is only a conditional slow-start approximation, not a proven hard limit.",
+        "Q=Phi+A reparameterization is algebraically equivalent with correct boundary handling; may increase variance and does not guarantee small A or correct ordering."
+      ]
+    },
+    {
+      "round": 3,
+      "user_constraint": "Time head remains continuous; no discrete action set or discrete argmax selector",
+      "continuous_outline_reviewed": [
+        "Continuous T actor followed by window conditioned on actual T; both ultimately train",
+        "Candidate physical-period sigmoid with prior-preserving initialization and recalibrated learning scale",
+        "Conditional-window residual zero initialized; teacher only on20ms base branch",
+        "Actual explored T must be used to recompute window; targets use their own chosen T",
+        "Local continuous exploration plus stratified global continuous exploration",
+        "Known positive/zero/negative advantage tasks, before bounded online learning admission"
+      ],
+      "final_accepted_correction": "TD RMSE greater than a cost advantage does not prove that cost .01 is unlearnable: correlated state-value errors may cancel in action differences. Current gates still do not certify period ranking.",
+      "risks_retained": [
+        "Sigmoid still attenuates boundary gradients; physical learning-rate calibration required",
+        "Conditional action chain can exploit critic window-direction error",
+        "Offline reward injection is a controlled fitting diagnostic, not TCP counterfactual truth",
+        "Physical feasibility and real network evidence still needed; no success promise"
+      ],
+      "outcome": "Supports continuous route with mechanism and value-resolution checks before online structural changes; original health and20percent final call gate remain"
+    }
+  ],
+  "review_limits": "Claude reviewed specified source and discussion outlines, not the newly written final document or an implemented continuous repair. No independent recalculation of the960-probe summary; no full native/kernel or end-to-end code audit.",
+  "cua_completion_recorded": true
+}
