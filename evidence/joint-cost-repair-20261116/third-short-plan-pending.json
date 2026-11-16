@@ -1,5 +1,5 @@
 {
-  "status": "PENDING_USER_SCOPE_AMENDMENT_NO_NEW_TCP",
+  "status": "USER_APPROVED_EXTRA_SHORT_BEFORE_THIRD_LEARNING",
   "epoch": 1794792201.6107097,
   "run": "short3-cost001-coverage-seed3-600",
   "seconds_per_actor": 600,
@@ -16,7 +16,7 @@
   "preserved_criteria": {
     "all24_complete": true,
     "final_debt": 0,
-    "minimum_connections_per_actor": 24,
+    "minimum_connections_per_actor": 20,
     "finite_both_action_gradients": true,
     "both_branches_change": true,
     "frozen_bn_unchanged": true,
@@ -41,5 +41,8 @@
   "original_deadline": 1794801237.3321252,
   "formal_latest_start": 1794793437.3321252,
   "formal_minimum_remaining_seconds": 6600,
-  "independent_fixed_training": false
+  "independent_fixed_training": false,
+  "approval": "scope-amendment-extra-short-approved.json",
+  "approved_epoch": 1794796768.0724835,
+  "execution_length_note": "600s/actor divided into30s reconnects implies20 connections, rather than the earlier720s/24. All performance/call thresholds unchanged."
 }
