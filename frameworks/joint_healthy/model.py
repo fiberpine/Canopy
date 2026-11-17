@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 import numpy as np
 from .core import SCHEMA, STATE_DIM, CALIBRATION, FORWARD_ONLY, JOINT, period_action, softsign_inverse, bootstrap_terminal
+from . import continuous
 
 WINDOW = 'abstract_actor/abstract_actor'
 TARGET_WINDOW = 'target_actor/target_actor'
@@ -33,15 +34,17 @@ class Model:
         self.tf, self.cfg, self.training = tf, cfg, training
         self.s = tf.placeholder(tf.float32, (None, 82), name='state')
         self.phase = tf.get_variable('joint_phase', initializer=0, dtype=tf.int32, trainable=False)
-        self.schema = tf.get_variable('joint_schema', initializer=SCHEMA, dtype=tf.string, trainable=False)
+        self.schema = tf.get_variable('joint_schema', initializer=continuous.schema(cfg), dtype=tf.string, trainable=False)
         self.rate_schema = tf.get_variable('joint_rate_schema', initializer=cfg['rate_mode'], dtype=tf.string, trainable=False)
         self.clock_schema = tf.get_variable('joint_clock_schema', initializer=cfg['clock_mode'], dtype=tf.string, trainable=False)
         self.joint_enabled = tf.equal(self.phase, JOINT)
         self.window_update_ops = []
         self.action = self._policy(self.s, False)
-        self.window_vars = self._variables(WINDOW)
+        self.base_window_vars = self._variables(WINDOW)
+        self.window_vars = self.base_window_vars + self._variables(continuous.CONDITION)
         self.time_vars = self._variables('mtp_actor')
         self.online_vars = self.window_vars + self.time_vars
+        if continuous.enabled(cfg): continuous.behavior(self)
         self.target_pairs = []
         if not training: return
         self.s1 = tf.placeholder(tf.float32, (None, 82), name='next_state')
@@ -70,7 +73,8 @@ class Model:
         if float(cfg.get('teacher_anchor_weight',0))>0:
             self.teacher_output=self._reference_window(self.s)
             self.teacher_reference=tf.placeholder(tf.float32,(None,1),name='same_state_frozen_teacher')
-            difference=tf.abs(self.action[:,:1]-tf.stop_gradient(self.teacher_reference))
+            anchored = self.base_window_action if continuous.enabled(cfg) else self.action[:,:1]
+            difference=tf.abs(anchored-tf.stop_gradient(self.teacher_reference))
             delta=float(cfg.get('teacher_anchor_delta',.1))
             anchor=tf.where(difference<=delta,.5*tf.square(difference),delta*(difference-.5*delta))
             if cfg.get('teacher_anchor_clock_weighting','constant')=='base_over_planned_squared_stopgrad':
@@ -78,8 +82,9 @@ class Model:
                 anchor=anchor*tf.stop_gradient(tf.square(20./planned_ms))
             self.anchor_loss=tf.reduce_mean(anchor)
         self.actor_loss = self.policy_loss+float(cfg.get('teacher_anchor_weight',0))*self.anchor_loss
-        self.actor_vars = self._variables(WINDOW, True) + self._variables('mtp_actor', True)
-        self.window_grad = tf.global_norm(tf.gradients(self.actor_loss, self._variables(WINDOW, True)))
+        window_trainable = self._variables(WINDOW, True) + self._variables(continuous.CONDITION, True)
+        self.actor_vars = window_trainable + self._variables('mtp_actor', True)
+        self.window_grad = tf.global_norm(tf.gradients(self.actor_loss, window_trainable))
         self.time_grad = tf.global_norm(tf.gradients(self.actor_loss, self._variables('mtp_actor', True)))
         self.critic_optimizers = [tf.train.AdamOptimizer(cfg.get('lr_c', .001), name='AdamCritic%dJoint' % i) for i in (1, 2)]
         self.critic_parameters = [self._variables(n, True) for n in ('critic', 'critic2')]
@@ -91,20 +96,31 @@ class Model:
         self.actor_optimizer = tf.train.AdamOptimizer(cfg.get('lr_a', .0001), name='AdamJointActor')
         self.actor_optimizer_ops_per_step=1
         with tf.control_dependencies([tf.Assert(self.joint_enabled, [self.phase], name='actor_requires_joint_phase')]):
-            if cfg.get('actor_recipe')=='cost_preserve_v2':
+            if cfg.get('actor_recipe') in ('cost_preserve_v2', continuous.ARCHITECTURE):
                 self.window_actor_optimizer=tf.train.AdamOptimizer(cfg['window_actor_lr'],name='AdamPreservedWindow')
                 self.time_actor_optimizer=tf.train.AdamOptimizer(cfg['time_actor_lr'],name='AdamPreservedTime')
-                window_step=self.window_actor_optimizer.minimize(self.actor_loss,var_list=self._variables(WINDOW,True))
+                window_gradients=self.window_actor_optimizer.compute_gradients(self.actor_loss,var_list=window_trainable)
                 time_gradients=self.time_actor_optimizer.compute_gradients(self.actor_loss,var_list=self._variables('mtp_actor',True))
+                effective_window=[(g,v) for g,v in window_gradients if g is not None]
                 effective_time=[(g,v) for g,v in time_gradients if g is not None]
+                if continuous.enabled(cfg):
+                    # Both partial derivatives see the SAME pre-update joint
+                    # policy, even though two Adam optimizers own the variables.
+                    gradients=tf.tuple([g for g,_ in effective_window+effective_time])
+                    split=len(effective_window)
+                    effective_window=list(zip(gradients[:split],[v for _,v in effective_window]))
+                    effective_time=list(zip(gradients[split:],[v for _,v in effective_time]))
+                window_step=self.window_actor_optimizer.apply_gradients(effective_window)
                 time_step=self.time_actor_optimizer.apply_gradients(effective_time) if effective_time else tf.no_op()
                 self.actor_optimizer_ops_per_step=1+int(bool(effective_time))
                 with tf.control_dependencies([window_step,time_step]):self.actor_step=tf.assign_add(self.global_step,1)
             else:
                 self.actor_step = self.actor_optimizer.minimize(self.actor_loss, var_list=self.actor_vars, global_step=self.global_step)
         self._add_bn_writers()
-        for source, target in ((WINDOW, TARGET_WINDOW), ('mtp_actor', 'target_mtp_actor'),
-                               ('critic', 'target_critic'), ('critic2', 'target_critic2')):
+        scopes = [(WINDOW, TARGET_WINDOW), ('mtp_actor', 'target_mtp_actor'),
+                  ('critic', 'target_critic'), ('critic2', 'target_critic2')]
+        if continuous.enabled(cfg): scopes.append((continuous.CONDITION, continuous.TARGET_CONDITION))
+        for source, target in scopes:
             a = {v.op.name[len(source) + 1:]: v for v in self._variables(source)}
             b = {v.op.name[len(target) + 1:]: v for v in self._variables(target)}
             assert a and set(a) == set(b)
@@ -122,7 +138,7 @@ class Model:
             if frozen_stat:
                 self.target_update.append(tf.identity(b));continue
             # Calibration must preserve actor/target weights AND statistics exactly.
-            if a.op.name.startswith((WINDOW + '/', 'mtp_actor/')):
+            if a.op.name.startswith((WINDOW + '/', 'mtp_actor/', continuous.CONDITION + '/')):
                 self.target_update.append(tf.cond(self.joint_enabled, update, lambda b=b: tf.identity(b)))
             else: self.target_update.append(update())
 
@@ -147,6 +163,7 @@ class Model:
         return tf.nn.batch_normalization(value, mean, var, beta, None, .001)
 
     def _policy(self, state, target):
+        if continuous.enabled(self.cfg): return continuous.policy(self, state, target)
         tf = self.tf; p = TARGET_WINDOW if target else WINDOW
         h = tf.nn.leaky_relu(self._bn(self._linear(state, p + '/fc1', 256, True), p + '/bn1'))
         h = tf.nn.leaky_relu(self._bn(self._linear(h, p + '/fc2', 256, True), p + '/bn2'))
@@ -185,8 +202,15 @@ class Model:
     def _critic(self, state, action, scope):
         tf = self.tf
         h = tf.nn.leaky_relu(self._linear(state, scope + '/fc1', 256))
-        h = tf.nn.leaky_relu(self._linear(tf.concat([h, action], axis=1), scope + '/fc2', 256))
-        return self._linear(h, scope + '/dense', 1)
+        base_action = action
+        if continuous.enabled(self.cfg):
+            # Preserve a scalar-window Q backbone. Time dependence belongs to
+            # the physical-duration branch, not two competing coordinate maps.
+            base_action = tf.concat([action[:, :1], -tf.ones_like(action[:, 1:2])], 1)
+        h = tf.nn.leaky_relu(self._linear(tf.concat([h, base_action], axis=1), scope + '/fc2', 256))
+        value = self._linear(h, scope + '/dense', 1)
+        if continuous.enabled(self.cfg): value += continuous.critic_residual(self, state, action, scope)
+        return value
 
     def _reference_window(self,state):
         """Learner-only fixed source network. Its labels are cached once per real row."""
@@ -230,8 +254,10 @@ class Model:
         names = rd.get_variable_to_shape_map()
         if names.get(WINDOW + '/fc1/w') != [70, 256] or names.get(WINDOW + '/fc1_1/w') != [256, 1]:
             raise ValueError('Only the declared70/1 baseline may initialize this schema')
-        variables = list(self.window_vars)
-        if self.training and initialize_critics: variables += self._variables('critic') + self._variables('critic2')
+        variables = list(self.base_window_vars)
+        if self.training and initialize_critics:
+            variables += [v for v in self._variables('critic') + self._variables('critic2')
+                          if '/period_residual/' not in v.op.name]
         assignments = []
         for var in variables:
             if var.op.name not in names: raise ValueError('Missing source tensor: ' + var.op.name)
@@ -266,21 +292,22 @@ class Model:
         return h.hexdigest()
 
     def save_manifest(self, prefix, cfg, counters):
-        Path(str(prefix) + '.joint.json').write_text(json.dumps(dict(schema=SCHEMA, cfg=cfg, counters=counters,
+        Path(str(prefix) + '.joint.json').write_text(json.dumps(dict(schema=continuous.schema(cfg), cfg=cfg, counters=counters,
             state_dim=82, action_dim=2, no_complete_resume=True), indent=2) + '\n')
 
     def restore(self, session, prefix, allow_diagnostic=False):
         tf = self.tf
         record = json.loads(Path(str(prefix) + '.joint.json').read_text())
-        if record['schema'] != SCHEMA: raise ValueError('Checkpoint schema mismatch')
+        if record['schema'] != continuous.schema(self.cfg): raise ValueError('Checkpoint schema mismatch')
         time_limit_default = 'physical_end_is_terminal_legacy'
         if record['cfg'].get('time_limit_handling', time_limit_default) != self.cfg.get('time_limit_handling', time_limit_default):
             raise ValueError('Checkpoint semantics mismatch: time_limit_handling')
-        for key,default in (('window_bn_statistics','adaptive_moving'),('actor_recipe','legacy_joint'),
+        for key,default in (('actor_architecture','independent_v2'),('time_parameterization','softsign_log_v1'),
+                            ('window_bn_statistics','adaptive_moving'),('actor_recipe','legacy_joint'),
                             ('teacher_anchor_weight',0.),('teacher_anchor_delta',.1),('teacher_anchor_clock_weighting','constant'),
                             ('time_feature_normalization','none'),('critic_initial_cost_reference_s',0.)):
             if record['cfg'].get(key,default)!=self.cfg.get(key,default):raise ValueError('Checkpoint semantics mismatch: '+key)
-        if self.training and self.cfg.get('actor_recipe')=='cost_preserve_v2':
+        if self.training and self.cfg.get('actor_recipe') in ('cost_preserve_v2', continuous.ARCHITECTURE):
             for key in ('window_actor_lr','time_actor_lr'):
                 if record['cfg'].get(key)!=self.cfg.get(key):raise ValueError('Checkpoint learning-rate mismatch: '+key)
         for key in ('rate_mode', 'clock_mode', 'utility_normalization', 'decision_cost', 'fixed_mtp_ms',
@@ -288,7 +315,7 @@ class Model:
             if record['cfg'].get(key) != self.cfg.get(key): raise ValueError('Checkpoint semantics mismatch: ' + key)
         selected = tf.global_variables() if self.training else self.online_vars + [self.phase, self.schema, self.rate_schema, self.clock_schema]
         tf.train.Saver(var_list=selected).restore(session, str(prefix))
-        if session.run(self.schema).decode() != SCHEMA: raise ValueError('Saved schema tensor mismatch')
+        if session.run(self.schema).decode() != continuous.schema(self.cfg): raise ValueError('Saved schema tensor mismatch')
         if session.run(self.rate_schema).decode() != self.cfg['rate_mode'] or session.run(self.clock_schema).decode() != self.cfg['clock_mode']:
             raise ValueError('Saved measurement schema tensor mismatch')
         if not allow_diagnostic and int(session.run(self.phase)) != JOINT:

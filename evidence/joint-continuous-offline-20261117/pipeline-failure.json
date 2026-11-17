@@ -1,0 +1,14 @@
+{
+  "status": "FAIL_SYNTHETIC_PIPELINE_FIXTURE_NOT_TCP",
+  "learner_status": "PARTIAL_CALIBRATION_ONLY",
+  "real_tcp_runs": 0,
+  "synthetic_rows": 500,
+  "critic_iterations": 201,
+  "actor_updates": 0,
+  "phase": 0,
+  "update_debt": 0,
+  "physical_seconds_are_synthetic": 42.07,
+  "stderr_local": "D:\\Canopy\\experiments\\joint-continuous-offline-20261117\\continuous-pipeline.stderr",
+  "suspected_fixture_issue": "100 rows per actor may not cover episode-rotated holdout blocks modulo257; needs actual gate-reason inspection",
+  "failure_gate_history_not_retained": "TemporaryDirectory deleted fixture outputs; preserve stderr and fix fixture retention before rerun"
+}

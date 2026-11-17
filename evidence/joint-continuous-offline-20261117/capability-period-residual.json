@@ -1,0 +1,369 @@
+{
+  "status": "FAIL_OFFLINE_KNOWN_VALUE_CAPABILITY",
+  "critic_updates_per_task": 3000,
+  "minimum_known_margin": 0.009949999999999895,
+  "maximum_advantage_mae": 0.0024874999999999737,
+  "minimum_ranking_accuracy": 0.95,
+  "critic_tasks": [
+    {
+      "sign": 1.0,
+      "known_advantages": [
+        [
+          0.0,
+          0.009949999999999895,
+          0.029700998750000072,
+          0.06861391284912625
+        ],
+        [
+          0.0,
+          0.009949999999999895,
+          0.029700998750000072,
+          0.06861391284912625
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.002485914883624593,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.012664794921875,
+              0.03179931640625,
+              0.070556640625
+            ],
+            [
+              0.0,
+              0.0130767822265625,
+              0.031280517578125,
+              0.0720672607421875
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.0019950905021141763,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.012451171875,
+              0.031707763671875,
+              0.0698699951171875
+            ],
+            [
+              0.0,
+              0.0122528076171875,
+              0.0316162109375,
+              0.0706024169921875
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.027066227899781553,
+            0.027068135248414366
+          ]
+        },
+        {
+          "updates": 500,
+          "advantage_mae": [
+            0.005805651855468777,
+            0.004888275703125009
+          ]
+        },
+        {
+          "updates": 1500,
+          "advantage_mae": [
+            0.0027647047174059448,
+            0.0024995832574450073
+          ]
+        },
+        {
+          "updates": 3000,
+          "advantage_mae": [
+            0.0018644361627184448,
+            0.0014963178765856323
+          ]
+        }
+      ]
+    },
+    {
+      "sign": 0.0,
+      "known_advantages": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.0010350545247395833,
+          "ranking": null,
+          "maximum_spurious_advantage": 0.001922607421875,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              9.1552734375e-05,
+              -0.000640869140625,
+              0.00115966796875
+            ],
+            [
+              0.0,
+              -0.0009002685546875,
+              -0.001495361328125,
+              0.001922607421875
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.0012486775716145833,
+          "ranking": null,
+          "maximum_spurious_advantage": 0.0017242431640625,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              -0.001495361328125,
+              -0.0013580322265625,
+              0.00042724609375
+            ],
+            [
+              0.0,
+              -0.0013275146484375,
+              -0.0017242431640625,
+              0.00115966796875
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.0,
+            1.9073486328125e-06
+          ]
+        },
+        {
+          "updates": 500,
+          "advantage_mae": [
+            0.006084442138671875,
+            0.0054035186767578125
+          ]
+        },
+        {
+          "updates": 1500,
+          "advantage_mae": [
+            0.0030078887939453125,
+            0.0028629302978515625
+          ]
+        },
+        {
+          "updates": 3000,
+          "advantage_mae": [
+            0.0007762908935546875,
+            0.0009365081787109375
+          ]
+        }
+      ]
+    },
+    {
+      "sign": -1.0,
+      "known_advantages": [
+        [
+          -0.0,
+          -0.009949999999999895,
+          -0.029700998750000072,
+          -0.06861391284912625
+        ],
+        [
+          -0.0,
+          -0.009949999999999895,
+          -0.029700998750000072,
+          -0.06861391284912625
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.0017960283325212628,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              -0.01202392578125,
+              -0.0315093994140625,
+              -0.068572998046875
+            ],
+            [
+              0.0,
+              -0.01348876953125,
+              -0.03240966796875,
+              -0.0680084228515625
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.002890272793780843,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": false,
+          "predicted_advantages": [
+            [
+              0.0,
+              -0.0143890380859375,
+              -0.033416748046875,
+              -0.0696258544921875
+            ],
+            [
+              0.0,
+              -0.0139617919921875,
+              -0.033660888671875,
+              -0.068817138671875
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.027066227899781553,
+            0.02706432055114874
+          ]
+        },
+        {
+          "updates": 500,
+          "advantage_mae": [
+            0.011935928901367196,
+            0.01145909174316407
+          ]
+        },
+        {
+          "updates": 1500,
+          "advantage_mae": [
+            0.0069279233490003225,
+            0.0074123899017346975
+          ]
+        },
+        {
+          "updates": 3000,
+          "advantage_mae": [
+            0.001347021249390947,
+            0.0021677045953356323
+          ]
+        }
+      ]
+    }
+  ],
+  "actor_tasks": [
+    {
+      "time_lr": 0.0001,
+      "trajectory": [
+        {
+          "updates": 0,
+          "periods_ms": [
+            20.5,
+            20.5
+          ],
+          "maximum_period_error_ms": 99.5,
+          "maximum_window_error": 0.14691245555877686
+        },
+        {
+          "updates": 500,
+          "periods_ms": [
+            20.880931854248047,
+            20.880990982055664
+          ],
+          "maximum_period_error_ms": 99.11900901794434,
+          "maximum_window_error": 1.1920928955078125e-07
+        },
+        {
+          "updates": 2000,
+          "periods_ms": [
+            26.745433807373047,
+            26.74544906616211
+          ],
+          "maximum_period_error_ms": 93.25455093383789,
+          "maximum_window_error": 5.364418029785156e-07
+        },
+        {
+          "updates": 5000,
+          "periods_ms": [
+            40.00041580200195,
+            101.39999389648438
+          ],
+          "maximum_period_error_ms": 18.600006103515625,
+          "maximum_window_error": 4.76837158203125e-07
+        }
+      ],
+      "pass_gate": false
+    },
+    {
+      "time_lr": 0.0003,
+      "trajectory": [
+        {
+          "updates": 0,
+          "periods_ms": [
+            20.5,
+            20.5
+          ],
+          "maximum_period_error_ms": 99.5,
+          "maximum_window_error": 0.14691245555877686
+        },
+        {
+          "updates": 500,
+          "periods_ms": [
+            23.39415740966797,
+            23.394163131713867
+          ],
+          "maximum_period_error_ms": 96.60583686828613,
+          "maximum_window_error": 1.1920928955078125e-07
+        },
+        {
+          "updates": 2000,
+          "periods_ms": [
+            40.00012969970703,
+            116.57694244384766
+          ],
+          "maximum_period_error_ms": 3.4230575561523438,
+          "maximum_window_error": 1.7881393432617188e-07
+        },
+        {
+          "updates": 5000,
+          "periods_ms": [
+            39.99959182739258,
+            119.99994659423828
+          ],
+          "maximum_period_error_ms": 0.000408172607421875,
+          "maximum_window_error": 0.0
+        }
+      ],
+      "pass_gate": true
+    }
+  ],
+  "source_state_indices": [
+    412,
+    530
+  ],
+  "source_states_modified_fresh_flag_only": true,
+  "real_tcp_runs": 0,
+  "limits": "Small constructed single-decision Q with known same-policy continuation; no TCP causal/value/performance proof. Actor task uses exact Q, not the fitted critics."
+}

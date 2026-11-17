@@ -33,13 +33,15 @@ def heldout_position(cfg, actor, episode, sequence):
 
 
 def validate(cfg):
+    from . import continuous
+    continuous.validate(cfg)
     bootstrap_terminal(cfg, np.array([0., 1.], np.float32))
     heldout_position(cfg, 0, 0, 1)
     if cfg.get('window_bn_statistics','adaptive_moving') not in ('adaptive_moving','frozen_migrated'):
         raise ValueError('Unknown window BN statistics contract')
-    if cfg.get('actor_recipe','legacy_joint') not in ('legacy_joint','cost_preserve_v2'):
+    if cfg.get('actor_recipe','legacy_joint') not in ('legacy_joint','cost_preserve_v2',continuous.ARCHITECTURE):
         raise ValueError('Unknown actor training recipe')
-    if cfg.get('teacher_anchor_clock_weighting','constant') not in ('constant','base_over_planned_squared_stopgrad'):
+    if cfg.get('teacher_anchor_clock_weighting','constant') not in ('constant','base_over_planned_squared_stopgrad','base20_only'):
         raise ValueError('Unknown teacher clock weighting')
     if cfg.get('time_feature_normalization','none') not in ('none','unit_l2_v1'):
         raise ValueError('Unknown time feature normalization')
@@ -54,10 +56,10 @@ def validate(cfg):
         value=float(cfg.get(name,default))
         if not math.isfinite(value) or value<0 or (name!='teacher_anchor_weight' and value==0):
             raise ValueError('Invalid actor preservation coefficient: '+name)
-    if cfg.get('actor_recipe')=='cost_preserve_v2':
+    if cfg.get('actor_recipe') in ('cost_preserve_v2',continuous.ARCHITECTURE):
         if cfg.get('window_bn_statistics')!='frozen_migrated' or float(cfg.get('teacher_anchor_weight',0))<=0:
             raise ValueError('Cost preservation requires frozen migrated statistics and a soft teacher reference')
-    required = dict(schema=SCHEMA, state_dim=82, action_dim=2,
+    required = dict(schema=continuous.schema(cfg), state_dim=82, action_dim=2,
                     reward_mode='raw',
                     reward_semantics='observed_interval_orca_density',
                     base_period_s=.02, gamma=.995, tau=.001, updates_per_base20ms=.1,

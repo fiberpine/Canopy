@@ -23,15 +23,17 @@ def verify(output,config=None):
     from frameworks.joint_healthy.configuration import configuration
     from frameworks.joint_healthy.core import interval_return, bootstrap_terminal
     from frameworks.joint_healthy.model import Model
+    from frameworks.joint_healthy.continuous import enabled
     cfg = configuration('fixed20')
     if config:cfg.update(json.loads(Path(config).read_text(encoding='utf-8').replace('@PACKAGE@',str(ROOT).replace('\\','/'))))
-    cfg.update(run_id='synthetic-pipeline', num_actors=2, memsize=512, batch_size=8,
-        profile='fixed20',fixed_mtp_ms=20.,
+    conditioned=enabled(cfg);actors=5 if conditioned else 2;rows_per_actor=100 if conditioned else 200
+    cfg.update(run_id='synthetic-pipeline', num_actors=actors, memsize=512, batch_size=8,
+        profile='continuous-v4' if conditioned else 'fixed20',fixed_mtp_ms=None if conditioned else 20.,
         warmup=8, minimum_enqueued_per_actor=4, warmup_physical_seconds=.16,
         calibration_updates=2, forward_calibration_updates=2, calibration_check_updates=1,
         calibration_rows_per_actor_period=1, minimum_holdout_per_period=1,
         minimum_short_return_blocks=1,
-        checkpoint_updates=10000, release_joint=True, physical_seconds_per_actor=1., deadline_epoch=time.time()+90)
+        checkpoint_updates=50 if conditioned else 10000, release_joint=True, physical_seconds_per_actor=1., deadline_epoch=time.time()+90)
     original_r, original_setup = backend.R, backend.setup
     state = np.tile(np.array([1., 1.2, 0., 1., .02, .98, 1.], np.float32), 10)
     state = np.r_[state, np.zeros(12, np.float32)].astype(np.float32)
@@ -46,17 +48,20 @@ def verify(output,config=None):
         enq = fifo.enqueue(ph); number = tf.placeholder(tf.int32, []); deq = fifo.dequeue_many(number); size = fifo.size()
         session = tf.Session(config=tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1))
         session.run(tf.global_variables_initializer()); model.initialize_baseline(session, config['baseline_checkpoint'])
-        q = min(float(v[0,0]) for v in session.run([model.q1, model.q2], {model.s:state[None,:], model.executed:action[None,:]}))
+        from frameworks.joint_healthy.core import period_action
+        periods=[20.4,40.7,79.3,121.2,159.1] if conditioned else [20.,20.]
+        actions=[np.array([0.,period_action(ms)],np.float32) for ms in periods]
+        qs=[min(float(v[0,0]) for v in session.run([model.q1, model.q2], {model.s:state[None,:], model.executed:a[None,:]})) for a in actions]
         # A constant-state Bellman-consistent fixture, not a measured reward.
-        discount = interval_return(1., .02)[1]
-        for i in range(1,201):
-            for actor in range(2):
-                terminal = i == 200
+        for i in range(1,rows_per_actor+1):
+            for actor in range(actors):
+                terminal = i == rows_per_actor
+                discount=interval_return(1.,periods[actor]/1000.)[1];q=qs[actor]
                 absorbing = bool(bootstrap_terminal(cfg, np.array([float(terminal)]))[0])
-                row = [state, action, [q if absorbing else q*(1-discount)], state, [float(terminal)], [.02], [discount], actor, 0, i]
+                row = [state, actions[actor], [q if absorbing else q*(1-discount)], state, [float(terminal)], [periods[actor]/1000.], [discount], actor, 0, i]
                 session.run(enq, dict(zip(ph,row)))
-        for actor in range(2):
-            row = [np.zeros(n) for n in (82,2,1,82,1,1,1)]+[actor,-1,200]
+        for actor in range(actors):
+            row = [np.zeros(n) for n in (82,2,1,82,1,1,1)]+[actor,-1,rows_per_actor]
             session.run(enq,dict(zip(ph,row)))
         return tf, model, session, ph, enq, number, deq, size
     try:
@@ -66,16 +71,21 @@ def verify(output,config=None):
             result = backend.run_learner(cfg)
             gates = json.loads((backend.R/'logs'/cfg['run_id']/'calibration-history.json').read_text())
             assert result['status'] == 'COMPLETED', result
-            assert result['credit']['inserted'] == 400
-            assert result['producer_done'] == {0:200,1:200}
+            assert result['credit']['inserted'] == actors*rows_per_actor
+            assert result['producer_done'] == {a:rows_per_actor for a in range(actors)}
             assert result['update_debt'] == 0
             assert result['counters']['actor_updates'] > 0
             assert result['counters']['critic_optimizer_ops'] == 2*result['counters']['critic_iterations']
             assert [g['phase'] for g in gates if g['admitted']] == [0,1]
             if cfg.get('teacher_anchor_weight',0)>0:
                 with np.load(str(Path(result['endpoint']).parent/'replay.npz')) as saved:
-                    assert len(saved['teacher_actions'])==400 and np.isfinite(saved['teacher_actions']).all()
-                    result['verified_cached_teacher_rows']=400
+                    assert len(saved['teacher_actions'])==actors*rows_per_actor and np.isfinite(saved['teacher_actions']).all()
+                    result['verified_cached_teacher_rows']=actors*rows_per_actor
+            if conditioned:
+                diagnostic=json.loads((backend.R/'logs'/cfg['run_id']/'value-diagnostics-last.json').read_text())
+                assert diagnostic['phase']==2 and diagnostic['rows']>0
+                assert len(list(Path(result['endpoint']).parent.glob('*.joint.json')))>2
+                result['joint_value_monitoring_and_live_checkpoints_verified']=True
             result.pop('endpoint')
             result.update(status='PASS_SYNTHETIC_LEARNER_PIPELINE_ONLY', gates=gates,
                 no_server_or_socket_created=True, new_TCP=0, measured_physical_experience=0,

@@ -101,13 +101,19 @@ def main():
         sess.run(tf.global_variables_initializer())
         if args.checkpoint: model.restore(sess, args.checkpoint)
         else:
-            if cfg['profile'] not in ('g0', 'g1', 'g2', 'g3', 'g4'):
+            if cfg['profile'] not in ('g0', 'g1', 'g2', 'g3', 'g4', 'continuous-v4'):
                 raise ValueError('A joint/fixed candidate needs its own trained checkpoint; baseline initialization is only a frozen G0/G1/G2 diagnostic')
             model.initialize_baseline(sess, cfg['baseline_checkpoint'])
         before = model.digest(sess)
         def action(state):
-            value = sess.run(model.action, {model.s: state[None, :]})[0]
-            if args.override_period_ms is not None: value[1] = period_action(args.override_period_ms)
+            from frameworks.joint_healthy.continuous import enabled
+            if args.override_period_ms is not None and enabled(cfg):
+                period_action(args.override_period_ms)  # Validate before feeding the graph.
+                value = sess.run(model.diagnostic_action, {model.s: state[None, :],
+                    model.diagnostic_ms: np.array([[args.override_period_ms]], np.float32)})[0]
+            else:
+                value = sess.run(model.action, {model.s: state[None, :]})[0]
+                if args.override_period_ms is not None: value[1] = period_action(args.override_period_ms)
             return value, dict(explored=False, checkpoint=args.checkpoint, diagnostic_override_ms=args.override_period_ms)
         result = run_flow(cfg, condition, action, stop, frozen_seconds=args.seconds)
         after = model.digest(sess)

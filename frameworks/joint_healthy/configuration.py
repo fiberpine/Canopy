@@ -33,7 +33,18 @@ def configuration(profile='joint'):
         baseline_checkpoint=str(ROOT / 'models/healthy-baseline-seed3/training/step-6013196'),
         source_policy_sha256='631683b939596cabc85262e2294123c462913bf6b836dff10b84501644ad60e0',
         candidate_status='OFFLINE_ONLY_NOT_TCP_VALIDATED', tf_threads=4)
-    if profile=='g4':
+    if profile == 'continuous-v4':
+        from .continuous import ARCHITECTURE, SCHEMA as continuous_schema
+        cfg.update(schema=continuous_schema, actor_architecture=ARCHITECTURE, actor_recipe=ARCHITECTURE,
+                   time_parameterization='physical_sigmoid_v1', time_logit_exploration_std=.25,
+                   rate_mode='acked_legacy_peak', utility_normalization='legacy_delivery_peak',
+                   time_initializer='feedback_coverage_v1', calibration_main_mode='policy_initializer',
+                   window_bn_statistics='frozen_migrated', time_feature_normalization='unit_l2_v1',
+                   teacher_anchor_weight=10., teacher_anchor_delta=.1, teacher_anchor_clock_weighting='base20_only',
+                   window_actor_lr=.00001, time_actor_lr=.0003, decision_cost=.01,
+                   joint_period_probe_probability=.15, critic_initial_cost_reference_s=.0216,
+                   memsize=300000, connection_reset_seconds=180., candidate_status='OFFLINE_ONLY_NOT_TCP_VALIDATED')
+    elif profile=='g4':
         cfg.update(rate_mode='acked_legacy_peak', utility_normalization='legacy_delivery_peak',
                    time_initializer='feedback_coverage_v1',calibration_main_mode='policy_initializer')
     elif profile in ('g0', 'g1', 'g2', 'g3'):

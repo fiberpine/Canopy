@@ -3,6 +3,18 @@ import hashlib
 import json
 from .configuration import ROOT
 from .core import BASE_COMMIT
+from . import continuous
+
+
+def continuous_contract(cfg):
+    """Bind learned semantics and exploration, independently of host/run paths."""
+    keys = ('schema','actor_architecture','actor_recipe','time_parameterization','gamma','base_period_s',
+            'decision_cost','time_initializer','calibration_main_mode','clock_mode','rate_mode','utility_normalization',
+            'window_bn_statistics','teacher_anchor_weight','teacher_anchor_delta','teacher_anchor_clock_weighting',
+            'time_feature_normalization','window_actor_lr','time_actor_lr','critic_initial_cost_reference_s',
+            'time_logit_exploration_std','exploration_std','joint_period_probe_probability','period_probe_probability',
+            'time_limit_handling','updates_per_base20ms','connection_reset_seconds')
+    return {key: cfg.get(key) for key in keys}
 
 
 def validate_native():
@@ -30,6 +42,20 @@ def implementation_identity(require_binary=False):
 
 
 def check_admission(receipt,cfg=None):
+    if cfg and continuous.enabled(cfg):
+        from .core import validate
+        validate(cfg)
+        if receipt.get('status') != 'PASS_PREREGISTERED_CONTINUOUS_V4_INITIALIZATION':
+            raise ValueError('Continuous conditioned policy needs a fresh admission, not the old G4 receipt')
+        if receipt.get('implementation') != implementation_identity(require_binary=True):
+            raise ValueError('Continuous admission source/native mismatch')
+        if receipt.get('contract') != continuous_contract(cfg):
+            raise ValueError('Continuous admission algorithm contract mismatch')
+        required = ('offline_graph_pass','offline_small_advantage_pass','initial_real_input_parity_pass',
+                    'same_decision_exploration_pass','short_tcp_mechanism_pass','initial_frozen_grid_health_pass')
+        if not receipt.get('registration') or not receipt.get('evidence') or any(receipt.get(k) is not True for k in required):
+            raise ValueError('Continuous initialization evidence is incomplete')
+        return
     g3=bool(cfg and cfg.get('rate_mode')=='acked_legacy_peak')
     expected='PASS_PREREGISTERED_G0_G3_FULL_GRID' if g3 else 'PASS_PREREGISTERED_G0_G1_G2'
     if cfg and cfg.get('time_initializer')=='feedback_coverage_v1':expected='PASS_PREREGISTERED_G0_G4_FULL_GRID'

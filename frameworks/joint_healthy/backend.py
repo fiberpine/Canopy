@@ -12,6 +12,7 @@ from .configuration import ROOT
 from .core import JOINT, calibration_period, period_action, period_ms, joint_exploration
 from .flow import dump, run_flow
 from .replay import Replay, CalibrationGate
+from . import continuous
 
 R = Path(__file__).resolve().parent
 
@@ -130,8 +131,10 @@ def run_learner(cfg):
             sess.run(model.target_update)
             counters['critic_iterations'] += 1; counters['critic_optimizer_ops'] += 2; counters['target_updates'] += 1
             iteration = counters['critic_iterations']
-            if gate.phase < JOINT and iteration % cfg.get('calibration_check_updates', 500) == 0 and iteration != last_gate:
-                assert model.digest(sess, True) == frozen_hash, 'Frozen window/BN changed during calibration'
+            inspect_values = gate.phase < JOINT or continuous.enabled(cfg)
+            if inspect_values and iteration % cfg.get('calibration_check_updates', 500) == 0 and iteration != last_gate:
+                if gate.phase < JOINT:
+                    assert model.digest(sess, True) == frozen_hash, 'Frozen window/BN changed during calibration'
                 reports = []; short_reports = []
                 with lock:
                     batches = [replay.holdout_batch(i) for i in range(5)]; coverage = replay.coverage.copy()
@@ -140,8 +143,10 @@ def run_learner(cfg):
                     if heldout is None: continue
                     q1, q2, target = sess.run([model.q1, model.q2, model.label], model.feed(heldout))
                     scale = max(1., float(np.sqrt(np.mean(target ** 2))))
-                    errors_q = [float(np.sqrt(np.mean((q - target) ** 2)) / scale) for q in (q1,q2)]
-                    reports.append(dict(period=period, rows=len(q1), normalized_td_rmse=max(errors_q), twin_errors=errors_q))
+                    absolute_errors = [float(np.sqrt(np.mean((q-target)**2))) for q in (q1,q2)]
+                    errors_q = [error/scale for error in absolute_errors]
+                    reports.append(dict(period=period, rows=len(q1), normalized_td_rmse=max(errors_q), twin_errors=errors_q,
+                                        absolute_twin_td_rmse=absolute_errors,target_mean=float(np.mean(target))))
                 for period, block in enumerate(short_batches):
                     if block is None: continue
                     first, last, rewards, continuation = block
@@ -152,11 +157,19 @@ def run_learner(cfg):
                     errors_q = [float(np.sqrt(np.mean((q-target)**2))/scale) for q in (q1,q2)]
                     short_reports.append(dict(period=period, blocks=len(q1), normalized_return_rmse=max(errors_q), twin_errors=errors_q,
                                               bootstrap_tail_not_full_MC=True, target_mean=float(np.mean(target))))
-                decision = gate.assess(iteration, coverage, reports, short_reports)
-                if gate.phase == JOINT and not cfg.get('release_joint', False):
-                    gate.phase = decision['phase']; decision['admitted'] = False; decision['reasons'].append('joint_release_not_registered')
-                sess.run(tf.assign(model.phase, gate.phase))
-                dump(folder / 'calibration-history.json', gate.history); last_gate = iteration
+                if continuous.enabled(cfg):
+                    diagnostics = continuous.value_diagnostics(model,sess,batches)
+                    diagnostics.update(phase=gate.phase,iterations=iteration,holdout=reports,short_returns=short_reports)
+                    dump(folder/'value-diagnostics-last.json',diagnostics)
+                    with (folder/'value-diagnostics.jsonl').open('a') as stream:stream.write(json.dumps(diagnostics)+'\n')
+                if gate.phase == JOINT:
+                    last_gate=iteration
+                else:
+                    decision = gate.assess(iteration, coverage, reports, short_reports)
+                    if gate.phase == JOINT and not cfg.get('release_joint', False):
+                        gate.phase = decision['phase']; decision['admitted'] = False; decision['reasons'].append('joint_release_not_registered')
+                    sess.run(tf.assign(model.phase, gate.phase))
+                    dump(folder / 'calibration-history.json', gate.history); last_gate = iteration
             if iteration >= next_checkpoint:
                 checkpoint('live'); next_checkpoint += cfg.get('checkpoint_updates', 10000)
         stop_receiver.set(); receiver.join(10)
@@ -206,6 +219,17 @@ def run_actor(cfg, index):
             errors.append(traceback.format_exc()); stop.set()
     writing = threading.Thread(target=writer, daemon=True); writing.start()
     def action(state):
+        if continuous.enabled(cfg):
+            draws = continuous.exploration_inputs(cfg, rng)
+            feed = {model.s: state[None, :]}
+            feed.update((model.behavior_inputs[name], value) for name, value in draws.items())
+            pure, value, phase, probe = sess.run([model.action, model.behavior_action, model.phase, model.behavior_probe],
+                                                feed, options=tf.RunOptions(timeout_in_ms=10000))
+            explored = bool(probe or int(phase) == JOINT)
+            counts['policy_calls'] += 1; counts['exploration_calls'] += int(explored)
+            return value[0], dict(phase=int(phase), pure_action=pure[0].tolist(), explored=explored,
+                                 joint_period_probe=bool(probe and int(phase) == JOINT),
+                                 continuous_period_probe=bool(probe), conditioned_on_executed_period=True)
         value, phase = sess.run([model.action, model.phase], {model.s: state[None, :]}, options=tf.RunOptions(timeout_in_ms=10000))
         value = value[0]; pure = value.copy(); explored = False;period_probe=False
         if phase < JOINT:

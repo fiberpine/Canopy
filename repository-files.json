@@ -1,5 +1,5 @@
 {
-  "scope": "Frozen healthy seed3 baseline preserved; independent joint82 online measurement/capacity/admission evidence, training status in online report",
+  "scope": "WIP continuous conditioned dual-action offline handoff; value and learner fixture gates FAIL; protected healthy scalar baseline unchanged",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -126,6 +126,11 @@
       "path": "docs/BASE_FIRST_PRINCIPLES_REVIEW.md",
       "bytes": 38702,
       "sha256": "f3d78cc32f820f6861e45717b68a332705be535f29c68baedd07735dc13b1d8a"
+    },
+    {
+      "path": "docs/CLAUDE_OFFLINE_HANDOFF_20261117.md",
+      "bytes": 10412,
+      "sha256": "37aaaf653f117fb8003fffe90a7af53e5ff9553b1a643930580462f524b41114"
     },
     {
       "path": "docs/COMMON_PERIOD_20261102.md",
@@ -14163,6 +14168,61 @@
       "sha256": "4ed6ca034363fea7d382e04dc900423bdaf3ba5abdc77272df1312651e6807e0"
     },
     {
+      "path": "evidence/joint-continuous-offline-20261117/README.md",
+      "bytes": 377,
+      "sha256": "b7e33bc4e686252e645b247b7597c7ba5296c7c4ef157ae791bfd5f5843c30ef"
+    },
+    {
+      "path": "evidence/joint-continuous-offline-20261117/capability-10k.json",
+      "bytes": 9707,
+      "sha256": "a13435c7c7d0cdebd57fb4844dd8d932b670df66d8bef40500c280d35889b594"
+    },
+    {
+      "path": "evidence/joint-continuous-offline-20261117/capability-final.json",
+      "bytes": 9198,
+      "sha256": "28c78dc2645a3bf1670249fa8322ab1c3ebf08ad0461779dc39c0c2040c3f7a5"
+    },
+    {
+      "path": "evidence/joint-continuous-offline-20261117/capability-first.json",
+      "bytes": 8980,
+      "sha256": "f57c1bb352a9d06f4806f9eaa9177df4831b1c6a5f00c0f308388d68731e0c8b"
+    },
+    {
+      "path": "evidence/joint-continuous-offline-20261117/capability-period-residual.json",
+      "bytes": 9132,
+      "sha256": "4c9b23d1e73c91cc437b866c3a8645a3854c7fbdccd3cc01d5c12897e7356aeb"
+    },
+    {
+      "path": "evidence/joint-continuous-offline-20261117/capability-physical-only.json",
+      "bytes": 9170,
+      "sha256": "91563eb4992dc93d45888e7f0f2ee928526d65bb6e47fa3a1275b09e84806af7"
+    },
+    {
+      "path": "evidence/joint-continuous-offline-20261117/continuous-graph-final.json",
+      "bytes": 830,
+      "sha256": "381439525dbc18a3084fb43f7f416f8a26449e38a54d888bba15287f4f7bd62a"
+    },
+    {
+      "path": "evidence/joint-continuous-offline-20261117/handoff-state.json",
+      "bytes": 627,
+      "sha256": "319a66acdccec1c17d7cbf4b43f4bb2a4aba861116e35328585e57a74d2b7eca"
+    },
+    {
+      "path": "evidence/joint-continuous-offline-20261117/initial-graph-smoke.json",
+      "bytes": 938,
+      "sha256": "04660a7fd140af70315310857e95691d2c23d4936c345ac9c997c3b3434449a1"
+    },
+    {
+      "path": "evidence/joint-continuous-offline-20261117/legacy-critic-10k.json",
+      "bytes": 7371,
+      "sha256": "3bc6401832699343ec859add12ff5775d6a719781936dca67a1c9843991eaf9c"
+    },
+    {
+      "path": "evidence/joint-continuous-offline-20261117/pipeline-failure.json",
+      "bytes": 686,
+      "sha256": "f7b5f538a901e432403ff5455720beb92ba6725b8622a878fc9defc80fa67102"
+    },
+    {
       "path": "evidence/joint-continuous-plan-20261116/FILE_MANIFEST.json",
       "bytes": 569,
       "sha256": "dbbd7cdd4ce48cc6aa4e637d80d0d96d9a3d242d6d6e295e61eb2fd6863804c4"
@@ -20535,13 +20595,18 @@
     },
     {
       "path": "frameworks/joint_healthy/backend.py",
-      "bytes": 18855,
-      "sha256": "1ea18d88f6c6d24879cbd94fd715eb3580f31e9f6719f7b528ec4120880266fa"
+      "bytes": 20644,
+      "sha256": "ef95e3e6bee72fc925f31b227acaeb203cdbb670ff8ed5b9577f673b971d75e5"
     },
     {
       "path": "frameworks/joint_healthy/configuration.py",
-      "bytes": 4978,
-      "sha256": "d2430082c721a89de499d8bab2c6e9eb2f615e5fe98ce355bf7bb783ee30e3b9"
+      "bytes": 6001,
+      "sha256": "2033870fb67af00d354555749c092d1d75f7e2d38b5a1fc91b2d321aad7c4d64"
+    },
+    {
+      "path": "frameworks/joint_healthy/continuous.py",
+      "bytes": 9488,
+      "sha256": "524a7fa6fd2c167dc8bb1d15b26661e1708149d92b63f4c5bb4d377bb065f016"
     },
     {
       "path": "frameworks/joint_healthy/controller.py",
@@ -20550,8 +20615,8 @@
     },
     {
       "path": "frameworks/joint_healthy/core.py",
-      "bytes": 15452,
-      "sha256": "6a327ea5d77ad6a43050ded07f7d4bd7fc775f959832ee85fa6a9c9833016c34"
+      "bytes": 15592,
+      "sha256": "3879cfa799a7197cb1b49360f9794a88f64f4d579fbf20dedba6b7fdefbc5ece"
     },
     {
       "path": "frameworks/joint_healthy/flow.py",
@@ -20560,8 +20625,8 @@
     },
     {
       "path": "frameworks/joint_healthy/identity.py",
-      "bytes": 5211,
-      "sha256": "6e0b37bcbf85c6e75023c4814045b4d572f30a3fd5cc33625d8efe43aeca2bd6"
+      "bytes": 7106,
+      "sha256": "f0b0cb3d5ee1e41400ab283d6e78c038c56e4c344cbef57de98ed461d4a51baf"
     },
     {
       "path": "frameworks/joint_healthy/metrics.py",
@@ -20570,8 +20635,8 @@
     },
     {
       "path": "frameworks/joint_healthy/model.py",
-      "bytes": 20432,
-      "sha256": "1628cbf8c69078c392a9d96e07849880f7b0f245bc37b4a8a17f4a7850793f45"
+      "bytes": 22501,
+      "sha256": "ee8617fdf3d40cded4982a33ed85848bbbea7a3369e780ff796004d74a188242"
     },
     {
       "path": "frameworks/joint_healthy/native/joint_protocol.h",
@@ -22887,8 +22952,8 @@
     },
     {
       "path": "joint_healthy.py",
-      "bytes": 7605,
-      "sha256": "8cb8fbd4a49bc40b7e9be5a87a70e911a7a7f8288ec21552ea4a25dde2c4d16d"
+      "bytes": 8058,
+      "sha256": "4f8766d37a2827a93b2fbb63c67a93d16afe8a552dea3f3d4fcdd0ee86b8de31"
     },
     {
       "path": "manifest.json",
@@ -24646,6 +24711,11 @@
       "sha256": "6e713fc6190735194dedb395458ce3f6bf776d257f85115d8338fefbbee7a311"
     },
     {
+      "path": "templates/joint-healthy/joint-continuous-v4.json",
+      "bytes": 13454,
+      "sha256": "367e7b2f96f3857e4f979c4a53cb51dc72c299dc246a4b140cbb8d6ed12bdda3"
+    },
+    {
       "path": "templates/joint-healthy/joint-cost-coverage-v3.json",
       "bytes": 13316,
       "sha256": "cba473198db7e1351b692030b878ec85f0279df181ff6ae944f2d99ea3c8e8ba"
@@ -24714,6 +24784,11 @@
       "path": "tests/joint_healthy/test_audit.py",
       "bytes": 3640,
       "sha256": "ea16585987f9903fdbea1317db2251e58155060ea3cf6d49dd53e87b174740b7"
+    },
+    {
+      "path": "tests/joint_healthy/test_continuous.py",
+      "bytes": 3613,
+      "sha256": "6f6181761827a949ad00f50157d607fb95de4d33a5c1ffb0c9a7da9438c43039"
     },
     {
       "path": "tests/joint_healthy/test_contract.py",
@@ -24859,6 +24934,11 @@
       "path": "tools/capture_baseline_health_validation.py",
       "bytes": 1758,
       "sha256": "7c3bdf49dbcce782509e503d52ab024a56d11ce3dd27cf17799747d3c17dc19b"
+    },
+    {
+      "path": "tools/check_joint_continuous_capability.py",
+      "bytes": 8208,
+      "sha256": "5215b90b6a7571375f3fddfff3d89ada1725ad31d53077efaff470a8ccc8c4de"
     },
     {
       "path": "tools/check_joint_time_learning_scale.py",
@@ -25381,6 +25461,11 @@
       "sha256": "46cf24206209ecd3f649fbc3ee7dae9b3dc4a89db24ab39f23179c5d9fa27d90"
     },
     {
+      "path": "tools/verify_joint_continuous.py",
+      "bytes": 8999,
+      "sha256": "4ef51771592ae9f9e5af36d11edde76888aea54951de0cf466c9cf62586ba7ac"
+    },
+    {
       "path": "tools/verify_joint_cost_preservation.py",
       "bytes": 6413,
       "sha256": "2a33d5add415b66d48530cd4c3d6c37083caff4471062a57bfa0030ea03c2974"
@@ -25392,8 +25477,8 @@
     },
     {
       "path": "tools/verify_joint_healthy_pipeline.py",
-      "bytes": 5205,
-      "sha256": "3f740b148e1f940bb49478b3e86ca1bacb7f3bbff9b1a72246fd303eab69e887"
+      "bytes": 6261,
+      "sha256": "44d64c465e7feeb98aa69e224dfeec2fa0d79244526d626ffb42df650a193ff7"
     },
     {
       "path": "tools/verify_repository.py",
