@@ -1,0 +1,646 @@
+{
+  "status": "NUMPY_REPRODUCTION_ONLY_NOT_TF_GRAPH",
+  "registered_gate_status": {
+    "1e-3_committed": "FAIL",
+    "1e-4_proposed": "FAIL"
+  },
+  "isolated_level_status": {
+    "1e-3_committed": "FAIL",
+    "1e-4_proposed": "PASS"
+  },
+  "gate_maximum_advantage_mae": 0.002487499999999976,
+  "minimum_ranking": 0.95,
+  "updates_per_cell": 10000,
+  "verdict": "endpoint, unchanged gate",
+  "summary": {
+    "None|registered_168_169": {
+      "cells": 6,
+      "endpoint_pass": 4,
+      "nontrivial_late_fraction_within_gate": [
+        0.381,
+        0.238,
+        0.381,
+        0.095
+      ],
+      "late_window_max": 0.0059184544286918425
+    },
+    "None|migrated_initial_q": {
+      "cells": 6,
+      "endpoint_pass": 5,
+      "nontrivial_late_fraction_within_gate": [
+        0.619,
+        0.762,
+        0.762,
+        0.952
+      ],
+      "late_window_max": 0.008676703459193582
+    },
+    "0.0001|registered_168_169": {
+      "cells": 6,
+      "endpoint_pass": 4,
+      "nontrivial_late_fraction_within_gate": [
+        0.571,
+        0.0,
+        0.333,
+        0.0
+      ],
+      "late_window_max": 0.0033062787350371455
+    },
+    "0.0001|migrated_initial_q": {
+      "cells": 6,
+      "endpoint_pass": 6,
+      "nontrivial_late_fraction_within_gate": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "late_window_max": 0.0021320313176447624
+    }
+  },
+  "cells": [
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic2",
+      "sign": 0.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.0,
+      "ranking": null,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_window_min": 0.0,
+      "late_window_max": 0.0,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic2",
+      "sign": 0.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.00014994629943979967,
+      "ranking": null,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        6.95805947543704e-05,
+        0.00015267809001784372,
+        0.0001364805125518842
+      ],
+      "known_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_window_min": 0.00014297081372186918,
+      "late_window_max": 0.0004112897765414421,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic2",
+      "sign": 1.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.0016351437448427375,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.007504482016948089,
+        0.027282732337290838,
+        0.06863902054813309
+      ],
+      "known_advantages": [
+        0.0,
+        0.009950000000000117,
+        0.029700998750000072,
+        0.06861391284912625
+      ],
+      "late_window_min": 0.0016351437448427375,
+      "late_window_max": 0.0020343482328013186,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic2",
+      "sign": 1.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.002151839212158953,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.007160229551743669,
+        0.02626102778744155,
+        0.0685163012377501
+      ],
+      "known_advantages": [
+        0.0,
+        0.009950000000000117,
+        0.029700998750000072,
+        0.06861391284912625
+      ],
+      "late_window_min": 0.002151839212158953,
+      "late_window_max": 0.002894527139376808,
+      "late_window_fraction_within_gate": 0.5714285714285714
+    },
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic2",
+      "sign": -1.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.001674000722778793,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        -0.007449944217313487,
+        -0.027356191638943983,
+        -0.0684367735745326
+      ],
+      "known_advantages": [
+        -0.0,
+        -0.009950000000000117,
+        -0.029700998750000072,
+        -0.06861391284912625
+      ],
+      "late_window_min": 0.001674000722778793,
+      "late_window_max": 0.002028937867219992,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic2",
+      "sign": -1.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.002662572970546916,
+      "ranking": 1.0,
+      "pass_gate": false,
+      "predicted_mean_advantages": [
+        0.0,
+        -0.006782251499771519,
+        -0.025221667811763382,
+        -0.0682732733759508
+      ],
+      "known_advantages": [
+        -0.0,
+        -0.009950000000000117,
+        -0.029700998750000072,
+        -0.06861391284912625
+      ],
+      "late_window_min": 0.0026513133295965868,
+      "late_window_max": 0.0032070588274026018,
+      "late_window_fraction_within_gate": 0.0
+    },
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic",
+      "sign": 0.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.0,
+      "ranking": null,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_window_min": 0.0,
+      "late_window_max": 0.0,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic",
+      "sign": 0.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.00017033849771526852,
+      "ranking": null,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        8.167826875649098e-05,
+        0.00017231629773561963,
+        0.00016557933099647926
+      ],
+      "known_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_window_min": 0.0001546699966468168,
+      "late_window_max": 0.00046490970686363653,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic",
+      "sign": 1.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.001689196166602558,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.007478023275282908,
+        0.027248332058739777,
+        0.06863753160603636
+      ],
+      "known_advantages": [
+        0.0,
+        0.009950000000000117,
+        0.029700998750000072,
+        0.06861391284912625
+      ],
+      "late_window_min": 0.0016528818580517663,
+      "late_window_max": 0.002072919431637087,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic",
+      "sign": 1.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.002285536270674689,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.007143699058104858,
+        0.02606891441163839,
+        0.06853631541247296
+      ],
+      "known_advantages": [
+        0.0,
+        0.009950000000000117,
+        0.029700998750000072,
+        0.06861391284912625
+      ],
+      "late_window_min": 0.002285536270674689,
+      "late_window_max": 0.0029383129414414493,
+      "late_window_fraction_within_gate": 0.3333333333333333
+    },
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic",
+      "sign": -1.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.00171044857522814,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        -0.007457915439459839,
+        -0.02730342313918044,
+        -0.06837222729480175
+      ],
+      "known_advantages": [
+        -0.0,
+        -0.009950000000000117,
+        -0.029700998750000072,
+        -0.06861391284912625
+      ],
+      "late_window_min": 0.00171044857522814,
+      "late_window_max": 0.0021320313176447624,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": 0.0001,
+      "critic": "critic",
+      "sign": -1.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.002603758970075576,
+      "ranking": 1.0,
+      "pass_gate": false,
+      "predicted_mean_advantages": [
+        0.0,
+        -0.0068574541888608564,
+        -0.0251742573016287,
+        -0.06853331086134062
+      ],
+      "known_advantages": [
+        -0.0,
+        -0.009950000000000117,
+        -0.029700998750000072,
+        -0.06861391284912625
+      ],
+      "late_window_min": 0.002603758970075576,
+      "late_window_max": 0.0033062787350371455,
+      "late_window_fraction_within_gate": 0.0
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic2",
+      "sign": 0.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.0,
+      "ranking": null,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_window_min": 0.0,
+      "late_window_max": 0.0,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic2",
+      "sign": 0.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.00019755792992744622,
+      "ranking": null,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.00016199003424333114,
+        0.0002855009223878824,
+        -4.443809523024811e-05
+      ],
+      "known_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_window_min": 0.00019755792992744622,
+      "late_window_max": 0.0008537616839371746,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic2",
+      "sign": 1.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.0021352139594552,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.007795355173605856,
+        0.026715227935198982,
+        0.0698791390862965
+      ],
+      "known_advantages": [
+        0.0,
+        0.009950000000000117,
+        0.029700998750000072,
+        0.06861391284912625
+      ],
+      "late_window_min": 0.0009176392900297972,
+      "late_window_max": 0.008676703459193582,
+      "late_window_fraction_within_gate": 0.6190476190476191
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic2",
+      "sign": 1.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.0021148319614730823,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.008032063055082972,
+        0.026507745767872848,
+        0.06984721880650113
+      ],
+      "known_advantages": [
+        0.0,
+        0.009950000000000117,
+        0.029700998750000072,
+        0.06861391284912625
+      ],
+      "late_window_min": 0.0021148319614730823,
+      "late_window_max": 0.0036900623980800473,
+      "late_window_fraction_within_gate": 0.38095238095238093
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic2",
+      "sign": -1.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.0025068955083925853,
+      "ranking": 1.0,
+      "pass_gate": false,
+      "predicted_mean_advantages": [
+        0.0,
+        -0.00755147497238795,
+        -0.02527259471120402,
+        -0.06886132094660269
+      ],
+      "known_advantages": [
+        -0.0,
+        -0.009950000000000117,
+        -0.029700998750000072,
+        -0.06861391284912625
+      ],
+      "late_window_min": 0.0009159447185895907,
+      "late_window_max": 0.008211502540231362,
+      "late_window_fraction_within_gate": 0.7619047619047619
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic2",
+      "sign": -1.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.0027479458609114163,
+      "ranking": 1.0,
+      "pass_gate": false,
+      "predicted_mean_advantages": [
+        0.0,
+        -0.006657509078735302,
+        -0.025362754828378797,
+        -0.06845419705864231
+      ],
+      "known_advantages": [
+        -0.0,
+        -0.009950000000000117,
+        -0.029700998750000072,
+        -0.06861391284912625
+      ],
+      "late_window_min": 0.001991658923841726,
+      "late_window_max": 0.0059184544286918425,
+      "late_window_fraction_within_gate": 0.23809523809523808
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic",
+      "sign": 0.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.0,
+      "ranking": null,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "known_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_window_min": 0.0,
+      "late_window_max": 0.0,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic",
+      "sign": 0.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.00021504350416042448,
+      "ranking": null,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.00016205195052521049,
+        0.00028301883318704313,
+        3.718117920925579e-05
+      ],
+      "known_advantages": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_window_min": 0.00021504350416042448,
+      "late_window_max": 0.0009568004005444664,
+      "late_window_fraction_within_gate": 1.0
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic",
+      "sign": 1.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.001604745019010731,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.00858240061151605,
+        0.027615522323664266,
+        0.06997507209133857
+      ],
+      "known_advantages": [
+        0.0,
+        0.009950000000000117,
+        0.029700998750000072,
+        0.06861391284912625
+      ],
+      "late_window_min": 0.00042201836657530627,
+      "late_window_max": 0.004661077388215236,
+      "late_window_fraction_within_gate": 0.7619047619047619
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic",
+      "sign": 1.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.002149654523743247,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        0.007942393497842204,
+        0.026484487773515752,
+        0.06983875894171376
+      ],
+      "known_advantages": [
+        0.0,
+        0.009950000000000117,
+        0.029700998750000072,
+        0.06861391284912625
+      ],
+      "late_window_min": 0.002149654523743247,
+      "late_window_max": 0.0036719757247725537,
+      "late_window_fraction_within_gate": 0.38095238095238093
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic",
+      "sign": -1.0,
+      "label_level": "migrated_initial_q",
+      "advantage_mae": 0.0018978415082810333,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "predicted_mean_advantages": [
+        0.0,
+        -0.008329858665817369,
+        -0.02709256091858947,
+        -0.070078858208376
+      ],
+      "known_advantages": [
+        -0.0,
+        -0.009950000000000117,
+        -0.029700998750000072,
+        -0.06861391284912625
+      ],
+      "late_window_min": 0.0006177917218955527,
+      "late_window_max": 0.0029670080657137822,
+      "late_window_fraction_within_gate": 0.9523809523809523
+    },
+    {
+      "critic_period_residual_lr": null,
+      "critic": "critic",
+      "sign": -1.0,
+      "label_level": "registered_168_169",
+      "advantage_mae": 0.005823027154905164,
+      "ranking": 1.0,
+      "pass_gate": false,
+      "predicted_mean_advantages": [
+        0.0,
+        -0.005926124321149473,
+        -0.022249679394647615,
+        -0.06262002641861386
+      ],
+      "known_advantages": [
+        -0.0,
+        -0.009950000000000117,
+        -0.029700998750000072,
+        -0.06861391284912625
+      ],
+      "late_window_min": 0.001721334410376301,
+      "late_window_max": 0.005823027154905164,
+      "late_window_fraction_within_gate": 0.09523809523809523
+    }
+  ],
+  "notes": [
+    "Independent NumPy rebuild of model.py::_critic + continuous.critic_residual at 59cf69a, migrated seed3 tensors read without TF; residual init uses a NumPy seed, so this is a statistical, not bitwise, match of the TF tool.",
+    "TF tool at 59cf69a reported 0.00268/0.00269 (+) and 0.00197/0.00267 (-); the NumPy committed-setting cells give 0.00211-0.00582: same failure mode and magnitude.",
+    "Zero-advantage isolated cells are trivially 0: their labels equal the initial predictions, so no gradient flows. They carry no information.",
+    "Registered labels 168/169 sit ~43 above the migrated critics on these two states (148.7 and 99.4; median over 1059 real inputs 163.5), a large common-level shift the real calibration does not face."
+  ],
+  "reproduce": "python3 tools/joint_numpy_reproduction/capability_matrix.py --residual-lr 1e-4 --critic critic2 --sign -1 --level registered_168_169 --output cell.json"
+}

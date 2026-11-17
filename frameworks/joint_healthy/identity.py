@@ -11,7 +11,7 @@ def continuous_contract(cfg):
     keys = ('schema','actor_architecture','actor_recipe','time_parameterization','gamma','base_period_s',
             'decision_cost','time_initializer','calibration_main_mode','clock_mode','rate_mode','utility_normalization',
             'window_bn_statistics','teacher_anchor_weight','teacher_anchor_delta','teacher_anchor_clock_weighting',
-            'time_feature_normalization','window_actor_lr','time_actor_lr','critic_initial_cost_reference_s',
+            'time_feature_normalization','window_actor_lr','time_actor_lr','critic_initial_cost_reference_s','critic_period_residual_lr',
             'time_logit_exploration_std','exploration_std','joint_period_probe_probability','period_probe_probability',
             'time_limit_handling','updates_per_base20ms','connection_reset_seconds')
     return {key: cfg.get(key) for key in keys}

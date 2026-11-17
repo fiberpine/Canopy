@@ -33,9 +33,15 @@ def validate(cfg):
     if cfg.get('actor_architecture', 'independent_v2') not in ('independent_v2', ARCHITECTURE):
         raise ValueError('Unknown actor architecture')
     if not enabled(cfg):
-        if cfg.get('actor_recipe') == ARCHITECTURE or cfg.get('teacher_anchor_clock_weighting') == 'base20_only':
+        if cfg.get('actor_recipe') == ARCHITECTURE or cfg.get('teacher_anchor_clock_weighting') == 'base20_only' \
+                or cfg.get('critic_period_residual_lr') is not None:
             raise ValueError('Conditioned training semantics require the conditioned architecture')
         return
+    residual_lr = cfg.get('critic_period_residual_lr')
+    if residual_lr is not None:
+        residual_lr = float(residual_lr)
+        if not math.isfinite(residual_lr) or not 0 < residual_lr <= float(cfg.get('lr_c', .001)):
+            raise ValueError('Period-residual critic learning rate must be in (0, lr_c]')
     required = dict(actor_recipe=ARCHITECTURE, time_parameterization='physical_sigmoid_v1',
                     teacher_anchor_clock_weighting='base20_only', window_bn_statistics='frozen_migrated',
                     time_initializer='feedback_coverage_v1', calibration_main_mode='policy_initializer',

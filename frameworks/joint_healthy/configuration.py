@@ -43,6 +43,7 @@ def configuration(profile='joint'):
                    teacher_anchor_weight=10., teacher_anchor_delta=.1, teacher_anchor_clock_weighting='base20_only',
                    window_actor_lr=.00001, time_actor_lr=.0003, decision_cost=.01,
                    joint_period_probe_probability=.15, critic_initial_cost_reference_s=.0216,
+                   critic_period_residual_lr=.0001,
                    memsize=300000, connection_reset_seconds=180., candidate_status='OFFLINE_ONLY_NOT_TCP_VALIDATED')
     elif profile=='g4':
         cfg.update(rate_mode='acked_legacy_peak', utility_normalization='legacy_delivery_peak',

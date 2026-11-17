@@ -89,8 +89,33 @@ class Model:
         self.critic_optimizers = [tf.train.AdamOptimizer(cfg.get('lr_c', .001), name='AdamCritic%dJoint' % i) for i in (1, 2)]
         self.critic_parameters = [self._variables(n, True) for n in ('critic', 'critic2')]
         assert not set(self.critic_parameters[0]) & set(self.critic_parameters[1])
-        updates = [optimizer.minimize(loss, var_list=variables)
-                   for optimizer, loss, variables in zip(self.critic_optimizers, self.losses, self.critic_parameters)]
+        residual_lr = cfg.get('critic_period_residual_lr') if continuous.enabled(cfg) else None
+        if residual_lr is None:
+            updates = [optimizer.minimize(loss, var_list=variables)
+                       for optimizer, loss, variables in zip(self.critic_optimizers, self.losses, self.critic_parameters)]
+            self.critic_adam_applies_per_step = 2
+        else:
+            # The migrated backbone keeps lr_c. The new zero-initialized period
+            # residual gets its own Adam: with ~69 output weights each moving
+            # ~lr per step, lr=1e-3 jitters the period advantage by ~1e-2,
+            # larger than the 0.01-cost single-step margin it must resolve.
+            # Gradients are computed once, from the SAME pre-update critic.
+            self.critic_period_optimizers = [tf.train.AdamOptimizer(float(residual_lr), name='AdamCritic%dPeriod' % i) for i in (1, 2)]
+            updates = []
+            for main_optimizer, period_optimizer, loss, variables in zip(self.critic_optimizers, self.critic_period_optimizers,
+                                                                         self.losses, self.critic_parameters):
+                period = [v for v in variables if '/period_residual/' in v.op.name]
+                main = [v for v in variables if '/period_residual/' not in v.op.name]
+                assert period and main and len(period) + len(main) == len(variables)
+                pairs = [(g, v) for g, v in zip(tf.gradients(loss, main + period), main + period) if g is not None]
+                gradients = tf.tuple([g for g, _ in pairs])
+                pairs = [(g, v) for g, (_, v) in zip(gradients, pairs)]
+                main_pairs = [(g, v) for g, v in pairs if '/period_residual/' not in v.op.name]
+                period_pairs = [(g, v) for g, v in pairs if '/period_residual/' in v.op.name]
+                assert main_pairs and period_pairs, 'Both critic parameter groups need gradients'
+                updates.append(main_optimizer.apply_gradients(main_pairs))
+                updates.append(period_optimizer.apply_gradients(period_pairs))
+            self.critic_adam_applies_per_step = 4
         with tf.control_dependencies(updates):
             self.critic_step = tf.assign_add(self.global_step, 2)
         self.actor_optimizer = tf.train.AdamOptimizer(cfg.get('lr_a', .0001), name='AdamJointActor')
@@ -305,7 +330,8 @@ class Model:
         for key,default in (('actor_architecture','independent_v2'),('time_parameterization','softsign_log_v1'),
                             ('window_bn_statistics','adaptive_moving'),('actor_recipe','legacy_joint'),
                             ('teacher_anchor_weight',0.),('teacher_anchor_delta',.1),('teacher_anchor_clock_weighting','constant'),
-                            ('time_feature_normalization','none'),('critic_initial_cost_reference_s',0.)):
+                            ('time_feature_normalization','none'),('critic_initial_cost_reference_s',0.),
+                            ('critic_period_residual_lr',None)):
             if record['cfg'].get(key,default)!=self.cfg.get(key,default):raise ValueError('Checkpoint semantics mismatch: '+key)
         if self.training and self.cfg.get('actor_recipe') in ('cost_preserve_v2', continuous.ARCHITECTURE):
             for key in ('window_actor_lr','time_actor_lr'):

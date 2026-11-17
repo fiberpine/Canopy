@@ -67,6 +67,15 @@ def verify(config, states_file, output):
                    np.zeros((len(states),1),np.float32),durations,np.full((len(states),1),disc,np.float32),teacher]
             trainfeed=model.feed(batch)
             for _ in range(3): sess.run(model.critic_step,trainfeed);sess.run(model.target_update)
+            separate_period_adam = cfg.get('critic_period_residual_lr') is not None
+            if separate_period_adam:
+                # The zero-initialized period residual has its own Adam; the migrated backbone keeps lr_c.
+                assert model.critic_adam_applies_per_step == 4
+                for main_optimizer, period_optimizer, variables in zip(model.critic_optimizers, model.critic_period_optimizers, model.critic_parameters):
+                    for v in variables:
+                        residual = '/period_residual/' in v.op.name
+                        assert (period_optimizer.get_slot(v, 'm') is not None) == residual, v.op.name
+                        assert (main_optimizer.get_slot(v, 'm') is not None) == (not residual), v.op.name
             assert all(np.array_equal(a,b) for a,b in zip(before,sess.run([a for pair in actor_pairs for a in pair]+stats)))
             try: sess.run(model.actor_step,trainfeed)
             except tf.errors.InvalidArgumentError: pass
@@ -112,7 +121,8 @@ def verify(config, states_file, output):
         joint_both_branches_update=True,teacher_loss_time_gradient_zero=True,online_and_target_bn_frozen=True,
         time_direct_plus_conditioned_chain_gradient_max_error=chain_error,
         target_includes_conditional_weights=True,full_restore_error=restore_error,inference_export_error=export_error,
-        legacy_schema_rejected=True,real_tcp_runs=0)
+        legacy_schema_rejected=True,separate_period_residual_adam=separate_period_adam,
+        critic_period_residual_lr=cfg.get('critic_period_residual_lr'),real_tcp_runs=0)
     Path(output).write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result));return result
 
 

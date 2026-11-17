@@ -2,7 +2,7 @@
 import math
 import random
 import numpy as np
-from .core import PhysicalCredit, PERIODS, CALIBRATION, FORWARD_ONLY, JOINT, bootstrap_terminal, heldout_position
+from .core import PhysicalCredit, PERIODS, CALIBRATION, FORWARD_ONLY, JOINT, bootstrap_terminal, heldout_position, period_bucket
 
 
 class IndexPool:
@@ -67,7 +67,7 @@ class Replay:
         elif sequence != 1 or episode != 0: raise ValueError('First actor sequence must start at episode0/seq1')
         self.last[actor] = (episode, sequence, bool(row[4][0]))
         planned = 20. * 8. ** ((float(row[1][1]) + 1.) / 2.)
-        period = min(range(5), key=lambda i: abs(math.log(planned / PERIODS[i])))
+        period = period_bucket(self.cfg, planned)
         index = self.credit.inserted % self.size
         old = self.actor_ids[index]
         if old >= 0:
@@ -86,7 +86,7 @@ class Replay:
             block = self.pending_returns.get(actor)
             if block is not None: block.append(row)
             if block is not None and (len(block) == 8 or bool(row[4][0])):
-                start_period = min(range(5), key=lambda i: abs(math.log((20.*8.**((float(block[0][1][1])+1.)/2.))/PERIODS[i])))
+                start_period = period_bucket(self.cfg, 20.*8.**((float(block[0][1][1])+1.)/2.))
                 self.short_seen[start_period] += 1; bucket = self.short_returns[start_period]
                 cap = self.cfg.get('short_return_blocks_per_period', 64)
                 if len(bucket) < cap: bucket.append(block)

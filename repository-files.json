@@ -1,5 +1,5 @@
 {
-  "scope": "WIP continuous conditioned dual-action offline handoff; value and learner fixture gates FAIL; protected healthy scalar baseline unchanged",
+  "scope": "Claude offline continuation of continuous conditioned dual-action v4: coverage-bucket deadlock and pipeline fixture fixed, separate period-residual critic Adam added; TF graph paths unexecuted; registered critic capability still FAIL; protected healthy scalar baseline unchanged",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -131,6 +131,11 @@
       "path": "docs/CLAUDE_OFFLINE_HANDOFF_20261117.md",
       "bytes": 10412,
       "sha256": "37aaaf653f117fb8003fffe90a7af53e5ff9553b1a643930580462f524b41114"
+    },
+    {
+      "path": "docs/CLAUDE_OFFLINE_RESULT_20261117.md",
+      "bytes": 10797,
+      "sha256": "c78e5aa73e3eec73041444ee1c43856b04e4337656baf90afc45d4d366c47cce"
     },
     {
       "path": "docs/COMMON_PERIOD_20261102.md",
@@ -14168,6 +14173,31 @@
       "sha256": "4ed6ca034363fea7d382e04dc900423bdaf3ba5abdc77272df1312651e6807e0"
     },
     {
+      "path": "evidence/joint-continuous-claude-20261117/README.md",
+      "bytes": 981,
+      "sha256": "15baefbe04917e3267528bbd6137e2d631eb3525cbe5ec9bf6847f35029e177b"
+    },
+    {
+      "path": "evidence/joint-continuous-claude-20261117/capability-matrix-numpy.json",
+      "bytes": 17668,
+      "sha256": "f4235eb39750341c467920f1d37d96f2c4a2e699c221968a946cf546cbf637db"
+    },
+    {
+      "path": "evidence/joint-continuous-claude-20261117/coverage-nearest-prefix.json",
+      "bytes": 6440,
+      "sha256": "1afe8df56d54a6e4091a6096f1911a7cc75f889c9f0b0a24d8b8c3229d06c628"
+    },
+    {
+      "path": "evidence/joint-continuous-claude-20261117/coverage-strata-fixed.json",
+      "bytes": 6453,
+      "sha256": "9294c47fd9620c3edd3e3f07b1281e4516d99ca299a7155889e9b8b03bd2697e"
+    },
+    {
+      "path": "evidence/joint-continuous-claude-20261117/critic-development-diagnostics-numpy.json",
+      "bytes": 16398,
+      "sha256": "3953189f977b526ecf0d4cc4cae01252ed3dde6b51c9769aa188c521d14c0060"
+    },
+    {
       "path": "evidence/joint-continuous-offline-20261117/README.md",
       "bytes": 377,
       "sha256": "b7e33bc4e686252e645b247b7597c7ba5296c7c4ef157ae791bfd5f5843c30ef"
@@ -20600,13 +20630,13 @@
     },
     {
       "path": "frameworks/joint_healthy/configuration.py",
-      "bytes": 6001,
-      "sha256": "2033870fb67af00d354555749c092d1d75f7e2d38b5a1fc91b2d321aad7c4d64"
+      "bytes": 6053,
+      "sha256": "187c4df1a0d7a6cdfd13e777ec24975a6741cc56fd68dcf1b72191e6235ff529"
     },
     {
       "path": "frameworks/joint_healthy/continuous.py",
-      "bytes": 9488,
-      "sha256": "524a7fa6fd2c167dc8bb1d15b26661e1708149d92b63f4c5bb4d377bb065f016"
+      "bytes": 9874,
+      "sha256": "1f11a5514b70fed038deef57fe3e7712fb628d427afd3231ba60fbcd00fe0b78"
     },
     {
       "path": "frameworks/joint_healthy/controller.py",
@@ -20615,8 +20645,8 @@
     },
     {
       "path": "frameworks/joint_healthy/core.py",
-      "bytes": 15592,
-      "sha256": "3879cfa799a7197cb1b49360f9794a88f64f4d579fbf20dedba6b7fdefbc5ece"
+      "bytes": 16364,
+      "sha256": "f616df14d6fd1d792d1d2f032042f78829de1b83bddb5fa50768402be5d5b1c2"
     },
     {
       "path": "frameworks/joint_healthy/flow.py",
@@ -20625,8 +20655,8 @@
     },
     {
       "path": "frameworks/joint_healthy/identity.py",
-      "bytes": 7106,
-      "sha256": "f0b0cb3d5ee1e41400ab283d6e78c038c56e4c344cbef57de98ed461d4a51baf"
+      "bytes": 7134,
+      "sha256": "178d18026024ce784fd9879a48e293f64b895ab84e63f7a6fb1abf00a29b665f"
     },
     {
       "path": "frameworks/joint_healthy/metrics.py",
@@ -20635,8 +20665,8 @@
     },
     {
       "path": "frameworks/joint_healthy/model.py",
-      "bytes": 22501,
-      "sha256": "ee8617fdf3d40cded4982a33ed85848bbbea7a3369e780ff796004d74a188242"
+      "bytes": 24545,
+      "sha256": "5b9c9cbfcd2bdc793cc3a700d8f5dbec3b18e1bd6f07908813b5a40b4242af83"
     },
     {
       "path": "frameworks/joint_healthy/native/joint_protocol.h",
@@ -20655,8 +20685,8 @@
     },
     {
       "path": "frameworks/joint_healthy/replay.py",
-      "bytes": 11372,
-      "sha256": "100e22f6f6a2762d8d207e8deb5af9a2511c63540ccdeeab7957ee76b45d7a26"
+      "bytes": 11323,
+      "sha256": "0fe32b7f1e018c41eb40270c53391e706f26986ba170edbc68b4b16dce173759"
     },
     {
       "path": "frameworks/mtp20/README.md",
@@ -24712,8 +24742,8 @@
     },
     {
       "path": "templates/joint-healthy/joint-continuous-v4.json",
-      "bytes": 13454,
-      "sha256": "367e7b2f96f3857e4f979c4a53cb51dc72c299dc246a4b140cbb8d6ed12bdda3"
+      "bytes": 13494,
+      "sha256": "06802f16379de410e9df0cbbd63fcc6dd2289db3a715845e17e2aa798f4fb49b"
     },
     {
       "path": "templates/joint-healthy/joint-cost-coverage-v3.json",
@@ -24791,6 +24821,11 @@
       "sha256": "6f6181761827a949ad00f50157d607fb95de4d33a5c1ffb0c9a7da9438c43039"
     },
     {
+      "path": "tests/joint_healthy/test_continuous_coverage.py",
+      "bytes": 4973,
+      "sha256": "1778258933340b0d1511da5970d8aece9673b3db802439e788f8a1fb6b3bf958"
+    },
+    {
       "path": "tests/joint_healthy/test_contract.py",
       "bytes": 14893,
       "sha256": "76845607cea8fef701786db27b73ac1c12b8f87a8f8d8a215c15eb680ab0abb3"
@@ -24809,6 +24844,11 @@
       "path": "tests/joint_healthy/test_metrics.py",
       "bytes": 1486,
       "sha256": "e235098ddafe545db60d1cbc5a1410f5138527d6cc11c5cd52e93ba9d5d57d84"
+    },
+    {
+      "path": "tests/joint_healthy/test_numpy_reproduction.py",
+      "bytes": 3203,
+      "sha256": "7c168ab34313eb37697c4eb6fb7a940e3adcbca2f75a9fc7fd61ac35bf8949b4"
     },
     {
       "path": "tests/joint_healthy/test_ownership.py",
@@ -24937,8 +24977,8 @@
     },
     {
       "path": "tools/check_joint_continuous_capability.py",
-      "bytes": 8208,
-      "sha256": "5215b90b6a7571375f3fddfff3d89ada1725ad31d53077efaff470a8ccc8c4de"
+      "bytes": 9905,
+      "sha256": "5be182060d3437dca5e57bd91be340668364657b0ceb6d590b499c522381f5c9"
     },
     {
       "path": "tools/check_joint_time_learning_scale.py",
@@ -25019,6 +25059,26 @@
       "path": "tools/interval_reward/test_shadow_reward.py",
       "bytes": 2335,
       "sha256": "a3df180e5fb56fa30c6a2aecac199757f55fbc2bd2d227eb41f0cd49715758b2"
+    },
+    {
+      "path": "tools/joint_numpy_reproduction/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/joint_numpy_reproduction/capability_matrix.py",
+      "bytes": 3807,
+      "sha256": "ceee0f6e8cc30d2a22b5fd850f062d97e312b9495fd6e0efe89f5be867c19161"
+    },
+    {
+      "path": "tools/joint_numpy_reproduction/critic_np.py",
+      "bytes": 5824,
+      "sha256": "e8aa0877dc8760eb04f345ae4f3c27e309c85702965c805609ae79bdeae0792e"
+    },
+    {
+      "path": "tools/joint_numpy_reproduction/tfckpt.py",
+      "bytes": 3241,
+      "sha256": "763acbec74eeaab47a5bcd7940cf7f00000c3e9b65010ca4eeda1c33cbaa24a3"
     },
     {
       "path": "tools/packet_window_completion.py",
@@ -25281,6 +25341,11 @@
       "sha256": "3cbb754ae8d5238c6d245ae524480afcebb0e0b36dee258f55d784b20d7afd73"
     },
     {
+      "path": "tools/simulate_joint_continuous_coverage.py",
+      "bytes": 4475,
+      "sha256": "d3769087c5db1d00c28053e7db1940ee914ab6a5609cacae1a4023ea7bdb75f1"
+    },
+    {
       "path": "tools/test_base_first_principles.py",
       "bytes": 2894,
       "sha256": "85e223c0ed9d1738007256942f5a2fef06ba67d3cc527cdac950ca997e0e94a4"
@@ -25462,8 +25527,8 @@
     },
     {
       "path": "tools/verify_joint_continuous.py",
-      "bytes": 8999,
-      "sha256": "4ef51771592ae9f9e5af36d11edde76888aea54951de0cf466c9cf62586ba7ac"
+      "bytes": 9883,
+      "sha256": "3087146202435d0ad2417c55d157b0ff5701f820d6ae9ad469cd4412b24cc447"
     },
     {
       "path": "tools/verify_joint_cost_preservation.py",
@@ -25477,8 +25542,8 @@
     },
     {
       "path": "tools/verify_joint_healthy_pipeline.py",
-      "bytes": 6261,
-      "sha256": "44d64c465e7feeb98aa69e224dfeec2fa0d79244526d626ffb42df650a193ff7"
+      "bytes": 9886,
+      "sha256": "c40b2b69e4c3510a318e68d376b07cf03fab89386dd05f344a4193bc47e77821"
     },
     {
       "path": "tools/verify_repository.py",

@@ -31,8 +31,9 @@ def verify(config, states_file, output, updates=10000, critic_reference=False):
     gamma,cost=.995,.01
     minimum_margin=cost*(gamma-gamma**2)/(1-gamma)
     threshold=minimum_margin/4.
-    critic_results=[]
-    for sign in (1.,0.,-1.):
+    critic_results=[];isolated_results=[]
+    late_start=updates//2;dense=set(range(late_start,updates+1,250))
+    for sign,level in [(x,'registered_168_169') for x in (1.,0.,-1.)]+[(x,'migrated_initial_q') for x in (1.,0.,-1.)]:
         with tf.Graph().as_default():
             tf.set_random_seed(3);model=Model(critic_cfg,True)
             rng=np.random.RandomState(100)
@@ -53,13 +54,21 @@ def verify(config, states_file, output, updates=10000, critic_reference=False):
             truth=(sign*cost*(gamma-gamma**(queries/20.))/(1-gamma)).reshape(2,4)
             with tf.Session(config=session_cfg) as sess:
                 sess.run(tf.global_variables_initializer());model.initialize_baseline(sess,cfg['baseline_checkpoint'])
+                if level=='migrated_initial_q':
+                    # Same known advantages, but on the migrated critics' own initial
+                    # 20ms level, removing the arbitrary 168/169 common shift
+                    # (~43 on these two atypical states; real-input median ~163.5).
+                    reference=np.column_stack([a[:,0],-np.ones(len(a))]).astype(np.float32)
+                    initial=np.minimum(*sess.run([model.q1,model.q2],{model.s:ss,model.executed:reference}))
+                    labels=(initial[:,0]+advantage)[:,None].astype(np.float32)
                 trajectory=[]
                 for i in range(updates+1):
-                    if i in (0,500,1500,5000,updates):
+                    if i in (0,500,1500,5000,updates) or i in dense:
                         predicted=sess.run([model.q1,model.q2],{model.s:qs,model.executed:qa})
                         errors=[]
                         for q in predicted:
-                            q=q.reshape(2,4);errors.append(float(np.mean(np.abs((q-q[:,:1])-truth))))
+                            # Same metric as the gate: the 20ms reference column is zero by construction.
+                            q=q.reshape(2,4);errors.append(float(np.mean(np.abs((q-q[:,:1])-truth)[:,1:])))
                         trajectory.append(dict(updates=i,advantage_mae=errors))
                     if i<updates:
                         at=rng.choice(len(t),min(int(cfg['batch_size']),len(t)),replace=False)
@@ -73,7 +82,11 @@ def verify(config, states_file, output, updates=10000, critic_reference=False):
                 mae=float(np.mean(np.abs(difference[:,1:])))
                 reports.append(dict(advantage_mae=mae,ranking=ranking,maximum_spurious_advantage=float(np.max(np.abs(adv))) if not sign else None,
                     pass_gate=bool(mae<=threshold and (ranking is None or ranking>=.95)),predicted_advantages=adv.tolist()))
-            critic_results.append(dict(sign=sign,known_advantages=truth.tolist(),critics=reports,trajectory=trajectory))
+            late=np.array([x['advantage_mae'] for x in trajectory if x['updates']>=late_start])
+            record=dict(sign=sign,label_level=level,known_advantages=truth.tolist(),critics=reports,trajectory=trajectory,
+                        late_window=dict(first_update=late_start,every=250,minimum_mae=late.min(0).tolist(),maximum_mae=late.max(0).tolist(),
+                                         fraction_within_threshold=np.mean(late<=threshold,axis=0).tolist(),diagnostic_only_endpoint_is_the_verdict=True))
+            (critic_results if level=='registered_168_169' else isolated_results).append(record)
     # Exact known Q gradient tests the *actor* separately, not learned-Q validity.
     actor_results=[]
     for time_lr in (() if critic_reference else (.0001,.0003)):
@@ -104,6 +117,10 @@ def verify(config, states_file, output, updates=10000, critic_reference=False):
     result=dict(status='PASS_OFFLINE_KNOWN_VALUE_CAPABILITY' if all(x['pass_gate'] for r in critic_results for x in r['critics']) and (critic_reference or (selected_actor and all(r['pass_gate'] for r in selected_actor))) else 'FAIL_OFFLINE_KNOWN_VALUE_CAPABILITY',
         critic_updates_per_task=updates,minimum_known_margin=minimum_margin,maximum_advantage_mae=threshold,
         minimum_ranking_accuracy=.95,critic_tasks=critic_results,actor_tasks=actor_results,
+        isolated_level_critic_tasks=isolated_results,
+        isolated_level_status='PASS' if all(x['pass_gate'] for r in isolated_results for x in r['critics']) else 'FAIL',
+        isolated_level_is_diagnostic_not_the_registered_verdict=True,
+        critic_period_residual_lr=critic_cfg.get('critic_period_residual_lr'),
         configured_time_lr=cfg['time_actor_lr'],critic_batch_size=min(int(cfg['batch_size']),len(t)),legacy_critic_reference=critic_reference,
         source_state_indices=indices,source_states_modified_fresh_flag_only=True,real_tcp_runs=0,
         limits='Small constructed single-decision Q with known same-policy continuation; no TCP causal/value/performance proof. Actor task uses exact Q, not the fitted critics.')

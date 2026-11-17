@@ -110,6 +110,22 @@ def period_ms(action):
     return 20. * 8. ** ((float(np.clip(a, -1., 1.)) + 1.) / 2.)
 
 
+def period_bucket(cfg, planned_ms):
+    """Audit/coverage bucket of a planned duration; never a policy action.
+
+    Legacy profiles keep nearest-anchor buckets around PERIODS. The continuous
+    v4 proposal is stratified in five equal log-duration bins; nearest-anchor
+    buckets would give the 160ms bin only ~6.9% of that proposal, so its
+    per-actor retained coverage could never reach the registered 128 rows.
+    """
+    planned = float(planned_ms)
+    if not math.isfinite(planned) or planned <= 0: raise ValueError('Invalid planned duration')
+    from . import continuous
+    if continuous.enabled(cfg):
+        return min(4, max(0, int(5. * math.log(planned / 20.) / math.log(8.))))
+    return min(range(5), key=lambda i: abs(math.log(planned / PERIODS[i])))
+
+
 def period_action(ms):
     if not math.isfinite(float(ms)) or not 20 <= ms <= 160: raise ValueError('Invalid MTP')
     return 2. * math.log(float(ms) / 20.) / math.log(8.) - 1.
