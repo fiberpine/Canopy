@@ -1,0 +1,67 @@
+{
+  "status": "PASS_CONSTRUCTED_ORACLE_HEAD_CAPACITY_ONLY",
+  "cells": [
+    {
+      "critic": "critic",
+      "sign": 1.0,
+      "advantage_mae": 1.059570312496779e-05,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "effective_rank": 41,
+      "maximum_absolute_fitted_weight": 130.62224418902164
+    },
+    {
+      "critic": "critic",
+      "sign": 0.0,
+      "advantage_mae": 5.086263020833333e-06,
+      "ranking": null,
+      "pass_gate": true,
+      "effective_rank": 41,
+      "maximum_absolute_fitted_weight": 130.64418778729632
+    },
+    {
+      "critic": "critic",
+      "sign": -1.0,
+      "advantage_mae": 8.897128094191112e-06,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "effective_rank": 41,
+      "maximum_absolute_fitted_weight": 130.6661313854824
+    },
+    {
+      "critic": "critic2",
+      "sign": 1.0,
+      "advantage_mae": 6.353996583774446e-06,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "effective_rank": 40,
+      "maximum_absolute_fitted_weight": 158.83857940520184
+    },
+    {
+      "critic": "critic2",
+      "sign": 0.0,
+      "advantage_mae": 0.0,
+      "ranking": null,
+      "pass_gate": true,
+      "effective_rank": 40,
+      "maximum_absolute_fitted_weight": 158.83922177215766
+    },
+    {
+      "critic": "critic2",
+      "sign": -1.0,
+      "advantage_mae": 5.509440104134455e-06,
+      "ranking": 1.0,
+      "pass_gate": true,
+      "effective_rank": 40,
+      "maximum_absolute_fitted_weight": 158.83986413912285
+    }
+  ],
+  "maximum_advantage_mae": 0.002487499999999976,
+  "model_features_and_backbone_frozen": true,
+  "predictions_evaluated_in_actual_float32_tensorflow": true,
+  "oracle_labels_used_for_last_linear_layer": true,
+  "updates_to_runtime_algorithm": 0,
+  "real_tcp_runs": 0,
+  "not_a_replacement_for_registered_adam_gate": true,
+  "limits": "Two constructed states, known labels, frozen initialization features. Capacity evidence for this task only, no TD/actor/TCP learning or generalization claim."
+}

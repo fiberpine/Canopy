@@ -53,6 +53,7 @@ class Model:
         self.discount = tf.placeholder(tf.float32, (None, 1), name='transition_discount')
         self.terminal = tf.placeholder(tf.float32, (None, 1), name='terminal')
         self.global_step = tf.train.get_or_create_global_step()
+        self.common_calibration_updates = int(cfg.get('critic_common_calibration_updates',0))
         next_action = self._policy(self.s1, True)
         self.target_action = next_action
         # Retain the scalar baseline's clipped target-window smoothing. The new
@@ -86,6 +87,11 @@ class Model:
         self.actor_vars = window_trainable + self._variables('mtp_actor', True)
         self.window_grad = tf.global_norm(tf.gradients(self.actor_loss, window_trainable))
         self.time_grad = tf.global_norm(tf.gradients(self.actor_loss, self._variables('mtp_actor', True)))
+        # Build this AFTER all random network initializers: an extra early op
+        # can change TF1's implicit per-op seeds and confound matched controls.
+        # Actors cannot run before this stage, so the clock is exactly two per
+        # complete critic iteration here. It remains above it after release.
+        self.period_learning_enabled = tf.greater_equal(self.global_step,2*self.common_calibration_updates)
         self.critic_optimizers = [tf.train.AdamOptimizer(cfg.get('lr_c', .001), name='AdamCritic%dJoint' % i) for i in (1, 2)]
         self.critic_parameters = [self._variables(n, True) for n in ('critic', 'critic2')]
         assert not set(self.critic_parameters[0]) & set(self.critic_parameters[1])
@@ -96,9 +102,10 @@ class Model:
             self.critic_adam_applies_per_step = 2
         else:
             # The migrated backbone keeps lr_c. The new zero-initialized period
-            # residual gets its own Adam: with ~69 output weights each moving
-            # ~lr per step, lr=1e-3 jitters the period advantage by ~1e-2,
-            # larger than the 0.01-cost single-step margin it must resolve.
+            # residual gets its own Adam to resolve smaller value differences.
+            # The smaller rate reduced variation in constructed tests; the
+            # common-value stage below handles remaining level interference.
+            # Output width alone does not imply a fixed advantage-jitter bound.
             # Gradients are computed once, from the SAME pre-update critic.
             self.critic_period_optimizers = [tf.train.AdamOptimizer(float(residual_lr), name='AdamCritic%dPeriod' % i) for i in (1, 2)]
             updates = []
@@ -114,13 +121,21 @@ class Model:
                 period_pairs = [(g, v) for g, v in pairs if '/period_residual/' in v.op.name]
                 assert main_pairs and period_pairs, 'Both critic parameter groups need gradients'
                 updates.append(main_optimizer.apply_gradients(main_pairs))
-                updates.append(period_optimizer.apply_gradients(period_pairs))
+                if self.common_calibration_updates:
+                    def period_apply(optimizer=period_optimizer,pairs=period_pairs):
+                        # apply_gradients creates its slots under init_scope
+                        # in pinned TF1.14, but the apply/Adam clock stays INSIDE
+                        # the branch. A frozen stage advances neither m/v nor t.
+                        with tf.control_dependencies([optimizer.apply_gradients(pairs)]):return tf.constant(1)
+                    updates.append(tf.cond(self.period_learning_enabled,period_apply,lambda:tf.constant(0)))
+                else:updates.append(period_optimizer.apply_gradients(period_pairs))
             self.critic_adam_applies_per_step = 4
         with tf.control_dependencies(updates):
             self.critic_step = tf.assign_add(self.global_step, 2)
         self.actor_optimizer = tf.train.AdamOptimizer(cfg.get('lr_a', .0001), name='AdamJointActor')
         self.actor_optimizer_ops_per_step=1
-        with tf.control_dependencies([tf.Assert(self.joint_enabled, [self.phase], name='actor_requires_joint_phase')]):
+        actor_allowed=tf.logical_and(self.joint_enabled,self.period_learning_enabled)
+        with tf.control_dependencies([tf.Assert(actor_allowed, [self.phase,self.global_step], name='actor_requires_joint_phase')]):
             if cfg.get('actor_recipe') in ('cost_preserve_v2', continuous.ARCHITECTURE):
                 self.window_actor_optimizer=tf.train.AdamOptimizer(cfg['window_actor_lr'],name='AdamPreservedWindow')
                 self.time_actor_optimizer=tf.train.AdamOptimizer(cfg['time_actor_lr'],name='AdamPreservedTime')
@@ -171,6 +186,11 @@ class Model:
         tf = self.tf
         collection = tf.trainable_variables() if trainable else tf.global_variables()
         return sorted([v for v in collection if v.op.name.startswith(scope + '/') and '/Adam' not in v.op.name], key=lambda v: v.op.name)
+
+    def critic_adam_applications(self, complete_iterations_before_step):
+        if self.common_calibration_updates and int(complete_iterations_before_step)<self.common_calibration_updates:
+            return 2
+        return self.critic_adam_applies_per_step
 
     def _linear(self, state, scope, width, sonnet=False):
         tf = self.tf
@@ -331,7 +351,7 @@ class Model:
                             ('window_bn_statistics','adaptive_moving'),('actor_recipe','legacy_joint'),
                             ('teacher_anchor_weight',0.),('teacher_anchor_delta',.1),('teacher_anchor_clock_weighting','constant'),
                             ('time_feature_normalization','none'),('critic_initial_cost_reference_s',0.),
-                            ('critic_period_residual_lr',None)):
+                            ('critic_period_residual_lr',None),('critic_common_calibration_updates',0)):
             if record['cfg'].get(key,default)!=self.cfg.get(key,default):raise ValueError('Checkpoint semantics mismatch: '+key)
         if self.training and self.cfg.get('actor_recipe') in ('cost_preserve_v2', continuous.ARCHITECTURE):
             for key in ('window_actor_lr','time_actor_lr'):

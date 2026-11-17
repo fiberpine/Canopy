@@ -84,10 +84,20 @@ class PeriodResidualLearningRate(unittest.TestCase):
         for value in (0., -1e-4, float('nan'), 2e-3):
             with self.subTest(value=value), self.assertRaises(ValueError):
                 validate(dict(cfg, critic_period_residual_lr=value))
-        validate(dict(cfg, critic_period_residual_lr=None))  # explicit opt-out keeps one Adam per critic
+        validate(dict(cfg, critic_period_residual_lr=None,critic_common_calibration_updates=0))
         with self.assertRaises(ValueError): validate(dict(configuration('g4'), critic_period_residual_lr=1e-4))
         self.assertNotEqual(identity.continuous_contract(cfg),
                             identity.continuous_contract(dict(cfg, critic_period_residual_lr=1e-3)))
+
+    def test_common_calibration_precedes_actor_and_is_admitted_explicitly(self):
+        from frameworks.joint_healthy.core import validate
+        from frameworks.joint_healthy import identity
+        cfg=configuration('continuous-v4')
+        self.assertEqual(cfg['critic_common_calibration_updates'],1000)
+        for value in (-1,1.5,True,cfg['calibration_updates']):
+            with self.subTest(value=value),self.assertRaises(ValueError):validate(dict(cfg,critic_common_calibration_updates=value))
+        with self.assertRaises(ValueError):validate(dict(cfg,critic_period_residual_lr=None))
+        self.assertNotEqual(identity.continuous_contract(cfg),identity.continuous_contract(dict(cfg,critic_common_calibration_updates=0)))
 
 
 if __name__ == '__main__': unittest.main()

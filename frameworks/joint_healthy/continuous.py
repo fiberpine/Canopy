@@ -34,7 +34,7 @@ def validate(cfg):
         raise ValueError('Unknown actor architecture')
     if not enabled(cfg):
         if cfg.get('actor_recipe') == ARCHITECTURE or cfg.get('teacher_anchor_clock_weighting') == 'base20_only' \
-                or cfg.get('critic_period_residual_lr') is not None:
+                or cfg.get('critic_period_residual_lr') is not None or cfg.get('critic_common_calibration_updates',0):
             raise ValueError('Conditioned training semantics require the conditioned architecture')
         return
     residual_lr = cfg.get('critic_period_residual_lr')
@@ -42,6 +42,12 @@ def validate(cfg):
         residual_lr = float(residual_lr)
         if not math.isfinite(residual_lr) or not 0 < residual_lr <= float(cfg.get('lr_c', .001)):
             raise ValueError('Period-residual critic learning rate must be in (0, lr_c]')
+    common = cfg.get('critic_common_calibration_updates',0)
+    if (not isinstance(common,int) or isinstance(common,bool) or common<0
+            or common>=int(cfg.get('calibration_updates',5000))):
+        raise ValueError('Common-value calibration must be an integer below the actor calibration minimum')
+    if common and residual_lr is None:
+        raise ValueError('Common-value calibration requires a separate period-residual Adam')
     required = dict(actor_recipe=ARCHITECTURE, time_parameterization='physical_sigmoid_v1',
                     teacher_anchor_clock_weighting='base20_only', window_bn_statistics='frozen_migrated',
                     time_initializer='feedback_coverage_v1', calibration_main_mode='policy_initializer',

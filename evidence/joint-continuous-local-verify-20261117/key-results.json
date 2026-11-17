@@ -1,0 +1,122 @@
+{
+  "status": "PASS_OFFLINE_KEY_GATES_NOT_TCP_VALIDATED",
+  "parent_claude_commit": "2d2de615f16c04263cc20e33b0861a983bf4099d",
+  "branch": "innovation/joint-continuous-v4-local-verify-20261117",
+  "patch_id": "4311e5c85038e562155a72bda5e65bb3acb82df4",
+  "new_TCP": 0,
+  "SSH_connections": 0,
+  "cloud_training_runs": 0,
+  "independent_fixed_TCP_training_groups": 0,
+  "common_calibration_updates": 1000,
+  "total_complete_critic_iterations_per_constructed_task": 10000,
+  "period_iterations_per_constructed_task": 9000,
+  "actual_critic_adam_applies_per_constructed_task": 38000,
+  "gate_maximum_advantage_mae": 0.0024874999999999737,
+  "registered_tasks_passed": 6,
+  "registered_tasks_total": 6,
+  "all_nonzero_late_recorded_points_pass": true,
+  "isolated_level_status": "PASS",
+  "constructed_training_seeds": 1,
+  "worst_registered_endpoint_advantage_mae": 0.0009066225512712403,
+  "actor_validation_is_exact_known_Q_not_fitted_critic": true,
+  "source_graph_checks": {
+    "status": "PASS_ACTUAL_TF1_CONTINUOUS_GRAPH_NOT_TCP",
+    "inputs": 128,
+    "initial_window_max_error": 0.0,
+    "initial_period_max_error_ms": 1.1444091796875e-05,
+    "same_decision_exploration_max_error": 1.7881393432617188e-07,
+    "old_wrong_window_pairing_detectable_difference": 0.21782249212265015,
+    "base20_structural_parity": true,
+    "calibration_actor_target_and_bn_bitwise_frozen": true,
+    "calibration_actor_update_rejected": true,
+    "joint_both_branches_update": true,
+    "teacher_loss_time_gradient_zero": true,
+    "online_and_target_bn_frozen": true,
+    "time_direct_plus_conditioned_chain_gradient_max_error": 1.4901161193847656e-08,
+    "target_includes_conditional_weights": true,
+    "full_restore_error": 0.0,
+    "inference_export_error": 0.0,
+    "legacy_schema_rejected": true,
+    "separate_period_residual_adam": true,
+    "critic_period_residual_lr": 0.0001,
+    "real_tcp_runs": 0,
+    "common_calibration_freezes_parameters_and_adam_clock": true,
+    "production_common_calibration_updates": 1000,
+    "fixture_common_calibration_updates": 2,
+    "actor_rejected_before_common_calibration": true,
+    "staged_and_simultaneous_network_initialization_bitwise_equal": true,
+    "initial_network_sha256": "8a196e51d1e0a55f76f64e2eff21d40c68467b3b0e4cc0abfa7d07a53ade185c"
+  },
+  "pipeline_counters": {
+    "critic_iterations": 494,
+    "critic_optimizer_ops": 1974,
+    "actor_updates": 490,
+    "actor_optimizer_ops": 980,
+    "target_updates": 494
+  },
+  "unit_tests": {
+    "joint": 79,
+    "tools": 200,
+    "joint_interpreter": "Python3.6/TF1.14 environment",
+    "tools_interpreter": "system Python3.13"
+  },
+  "expected_failure_cli_exit_code": 1,
+  "protected_current_baseline_files": [
+    {
+      "path": "models/healthy-baseline-seed3/policy/model.data-00000-of-00001",
+      "sha256": "3b82c1aaef3270ee4505ab33fa76d82921d8e678dc1bfc7432b77e8ad73066f9"
+    },
+    {
+      "path": "models/healthy-baseline-seed3/policy/model.index",
+      "sha256": "51c4bf78035d0ab5f62258c90195129669f5cfd5463faaca6aa7f1efd505aa48"
+    },
+    {
+      "path": "models/healthy-baseline-seed3/training/step-0.meta",
+      "sha256": "ea68e9f5f0fd17088e03a8f0903236e3b4dd385c7c92c03ffbcd45a4aa61dba1"
+    },
+    {
+      "path": "models/healthy-baseline-seed3/training/step-6013196.data-00000-of-00001",
+      "sha256": "4545c09aa454aa1da8f38324fd129bf289879a8c7d7679cd43016234f4e15e63"
+    },
+    {
+      "path": "models/healthy-baseline-seed3/training/step-6013196.index",
+      "sha256": "6521be2f6be89a679a64d98b06ce26e55b94eb2554fb69eb5695fb4f03c33b9d"
+    },
+    {
+      "path": "models/healthy-baseline-seed3/training/step-6013196.variables.json",
+      "sha256": "0ca725387f7fe026cc479f3619596fc9d7a0de932bcabf11184ec65fb53fdf95"
+    },
+    {
+      "path": "frameworks/baseline/code/runtime/orca-server-cloexec",
+      "sha256": "632bca97e981ddece04379508662ce76c482c2a78213ab2c084c26ed0e12fe1d"
+    },
+    {
+      "path": "frameworks/baseline/code/runtime/orca-server-natural-cubic",
+      "sha256": "3def82b33ba9848313eaab8b0e3779b643d30a333b314171b5a451358b4b50f8"
+    }
+  ],
+  "healthy_scalar_baseline_promoted_or_modified": false,
+  "new_joint_TCP_model_promoted": false,
+  "runtime_source_sha256": {
+    "frameworks/joint_healthy/model.py": "b2beee2ca740f16bab4b316819c26c87e28288929607baf657bd83d7f1cd0c52",
+    "frameworks/joint_healthy/backend.py": "655155177c0369be700d4cc772e6d275d32d22c293dd0ce9f0801b189ae2e6d2",
+    "frameworks/joint_healthy/core.py": "f616df14d6fd1d792d1d2f032042f78829de1b83bddb5fa50768402be5d5b1c2",
+    "frameworks/joint_healthy/replay.py": "0fe32b7f1e018c41eb40270c53391e706f26986ba170edbc68b4b16dce173759",
+    "frameworks/joint_healthy/continuous.py": "dfc23aa7a0e807a21ce8310b09a64ef5eeaf9a0cfc1ec2e01e32a859440f6a11",
+    "frameworks/joint_healthy/configuration.py": "b22722ce6bbe7fcde9463f4d35a4e29c9912cb12550094eb6c4eaf3af85299c8",
+    "frameworks/joint_healthy/identity.py": "944734a731445d2157196b90277d4a03b9a21e3ca1a7d78e8e5c849fa61666c8",
+    "templates/joint-healthy/joint-continuous-v4.json": "2576d0f987d1e0ef54978ab604c9df19fdabee915953e1b6f9bac121725bdaf4",
+    "tools/check_joint_continuous_capability.py": "8d073b7b2904ea3e1c08b5561043768fdbaf203263d088a980c2d1107e4dbf94",
+    "tools/verify_joint_continuous.py": "00396f5b37bc18c2828e2a27b4a6fa2832943a82d587f0c16fbda2ca893aec8d",
+    "tools/verify_joint_healthy_pipeline.py": "6dcbf6d7f0de279b20f3b2e70740afd59099370773b6adad678d8705582cb314"
+  },
+  "limits": [
+    "Constructed values and one seed; no TCP convergence or CPU/call savings demonstrated",
+    "Two-state actor task uses exact Q",
+    "Coverage simulation assumes its behavior mix",
+    "Native unchanged and not newly compiled here; current cloud admission does not exist"
+  ],
+  "legacy_pipeline_regression": "PASS",
+  "driver_clock_negative_control_exit_code": 1,
+  "driver_clock_negative_control_is_expected_scientific_fail": true
+}

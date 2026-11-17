@@ -1,0 +1,92 @@
+{
+  "status": "PASS_TF1_NUMPY_INITIAL_AND_SINGLE_STEP_PARITY",
+  "source_state_indices": [
+    412,
+    530
+  ],
+  "critics": [
+    {
+      "critic": "critic",
+      "initial_q_max_error": 1.5395434616038983e-06,
+      "gradient_max_scaled_error": 1.488800202253031e-07
+    },
+    {
+      "critic": "critic2",
+      "initial_q_max_error": 1.593120418874605e-05,
+      "gradient_max_scaled_error": 3.4000772232224085e-07
+    }
+  ],
+  "identical_tf_initial_weights_copied_into_numpy": true,
+  "numpy_dtype": "float64",
+  "tensorflow_dtype": "float32",
+  "original_initial_q_levels": [
+    [
+      148.08102416992188,
+      102.44007873535156
+    ],
+    [
+      148.38589477539062,
+      105.25289154052734
+    ]
+  ],
+  "tf_isolated_task_labels_use_twin_minimum": true,
+  "numpy_isolated_task_labels_use_each_critic_own_value": true,
+  "production_common_calibration_updates": 1000,
+  "common_calibration_disabled_for_simultaneous_update_parity": true,
+  "later_trajectory_diagnostic": [
+    {
+      "updates": 0,
+      "critics": [
+        {
+          "q_max_error": 1.5395434616038983e-06,
+          "parameter_max_error": 0.0
+        },
+        {
+          "q_max_error": 1.593120418874605e-05,
+          "parameter_max_error": 0.0
+        }
+      ]
+    },
+    {
+      "updates": 1,
+      "critics": [
+        {
+          "q_max_error": 1.889039624813904e-05,
+          "parameter_max_error": 7.247795785758626e-08
+        },
+        {
+          "q_max_error": 1.6954316407691294e-05,
+          "parameter_max_error": 1.667271938288195e-07
+        }
+      ]
+    },
+    {
+      "updates": 10,
+      "critics": [
+        {
+          "q_max_error": 0.00010456895782340325,
+          "parameter_max_error": 8.185630404611288e-07
+        },
+        {
+          "q_max_error": 0.00010131193025131324,
+          "parameter_max_error": 7.366333409919434e-07
+        }
+      ]
+    },
+    {
+      "updates": 100,
+      "critics": [
+        {
+          "q_max_error": 3.866444811251313e-05,
+          "parameter_max_error": 3.4307000964517442e-06
+        },
+        {
+          "q_max_error": 8.67101809376436e-06,
+          "parameter_max_error": 2.8463734516037675e-06
+        }
+      ]
+    }
+  ],
+  "real_tcp_runs": 0,
+  "limits": "Initial/gradient/single-step checks only. Different precision and initialization do not imply matched 10k endpoints; the two isolated-level task definitions differ."
+}

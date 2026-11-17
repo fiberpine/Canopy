@@ -1,0 +1,1592 @@
+{
+  "status": "PASS_OFFLINE_KNOWN_VALUE_CAPABILITY",
+  "critic_updates_per_task": 10000,
+  "minimum_known_margin": 0.009949999999999895,
+  "maximum_advantage_mae": 0.0024874999999999737,
+  "minimum_ranking_accuracy": 0.95,
+  "critic_tasks": [
+    {
+      "sign": 1.0,
+      "label_level": "registered_168_169",
+      "known_advantages": [
+        [
+          0.0,
+          0.009949999999999895,
+          0.029700998750000072,
+          0.06861391284912625
+        ],
+        [
+          0.0,
+          0.009949999999999895,
+          0.029700998750000072,
+          0.06861391284912625
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.0005954378971354054,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.008941650390625,
+              0.0286102294921875,
+              0.067962646484375
+            ],
+            [
+              0.0,
+              0.0096282958984375,
+              0.0293121337890625,
+              0.0687255859375
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.0005454978767920737,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0091552734375,
+              0.0288848876953125,
+              0.068511962890625
+            ],
+            [
+              0.0,
+              0.0093994140625,
+              0.0290374755859375,
+              0.068267822265625
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.036088303866375404,
+            0.03609084699788582
+          ]
+        },
+        {
+          "updates": 500,
+          "advantage_mae": [
+            0.03609847639241707,
+            0.03608321760335457
+          ]
+        },
+        {
+          "updates": 1500,
+          "advantage_mae": [
+            0.0006624819262712403,
+            0.0012871696679687388
+          ]
+        },
+        {
+          "updates": 5000,
+          "advantage_mae": [
+            0.0007311464770524903,
+            0.0005607566658545737
+          ]
+        },
+        {
+          "updates": 5250,
+          "advantage_mae": [
+            0.0006929995043962403,
+            0.000748948397625407
+          ]
+        },
+        {
+          "updates": 5500,
+          "advantage_mae": [
+            0.000748948397625407,
+            0.0006853701098649903
+          ]
+        },
+        {
+          "updates": 5750,
+          "advantage_mae": [
+            0.0005623771874999888,
+            0.000542954745281657
+          ]
+        },
+        {
+          "updates": 6000,
+          "advantage_mae": [
+            0.0005801791080729054,
+            0.0005912742439795737
+          ]
+        },
+        {
+          "updates": 6250,
+          "advantage_mae": [
+            0.0005903516341145722,
+            0.0005938173754899903
+          ]
+        },
+        {
+          "updates": 6500,
+          "advantage_mae": [
+            0.0006208692122395722,
+            0.0005785585864274903
+          ]
+        },
+        {
+          "updates": 6750,
+          "advantage_mae": [
+            0.0006310417382812388,
+            0.0005861879809587403
+          ]
+        },
+        {
+          "updates": 7000,
+          "advantage_mae": [
+            0.0006157829492187388,
+            0.0005861879809587403
+          ]
+        },
+        {
+          "updates": 7250,
+          "advantage_mae": [
+            0.0006523094002295737,
+            0.000581101717937907
+          ]
+        },
+        {
+          "updates": 7500,
+          "advantage_mae": [
+            0.0006284986067708222,
+            0.0005760154549170737
+          ]
+        },
+        {
+          "updates": 7750,
+          "advantage_mae": [
+            0.0005954378971354054,
+            0.000565842928875407
+          ]
+        },
+        {
+          "updates": 8000,
+          "advantage_mae": [
+            0.0006259554752604054,
+            0.0005098940356462403
+          ]
+        },
+        {
+          "updates": 8250,
+          "advantage_mae": [
+            0.0006132398177083222,
+            0.0005149802986670737
+          ]
+        },
+        {
+          "updates": 8500,
+          "advantage_mae": [
+            0.0006488436588541554,
+            0.0005022646411149903
+          ]
+        },
+        {
+          "updates": 8750,
+          "advantage_mae": [
+            0.0005852653710937388,
+            0.0005226096931983237
+          ]
+        },
+        {
+          "updates": 9000,
+          "advantage_mae": [
+            0.0005979810286458222,
+            0.0005531272713233237
+          ]
+        },
+        {
+          "updates": 9250,
+          "advantage_mae": [
+            0.0006005241601562388,
+            0.000550584139812907
+          ]
+        },
+        {
+          "updates": 9500,
+          "advantage_mae": [
+            0.0005776359765624888,
+            0.0005480410083024903
+          ]
+        },
+        {
+          "updates": 9750,
+          "advantage_mae": [
+            0.0005878085026041554,
+            0.0005683860603858237
+          ]
+        },
+        {
+          "updates": 10000,
+          "advantage_mae": [
+            0.0005954378971354054,
+            0.0005454978767920737
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 5000,
+        "every": 250,
+        "minimum_mae": [
+          0.0005623771874999888,
+          0.0005022646411149903
+        ],
+        "maximum_mae": [
+          0.000748948397625407,
+          0.000748948397625407
+        ],
+        "fraction_within_threshold": [
+          1.0,
+          1.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    },
+    {
+      "sign": 0.0,
+      "label_level": "registered_168_169",
+      "known_advantages": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.0,
+          "ranking": null,
+          "maximum_spurious_advantage": 0.0,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.0,
+          "ranking": null,
+          "maximum_spurious_advantage": 0.0,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.0,
+            2.5431315104166665e-06
+          ]
+        },
+        {
+          "updates": 500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 1500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 5000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 5250,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 5500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 5750,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 6000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 6250,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 6500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 6750,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 7000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 7250,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 7500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 7750,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 8000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 8250,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 8500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 8750,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 9000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 9250,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 9500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 9750,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 10000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 5000,
+        "every": 250,
+        "minimum_mae": [
+          0.0,
+          0.0
+        ],
+        "maximum_mae": [
+          0.0,
+          0.0
+        ],
+        "fraction_within_threshold": [
+          1.0,
+          1.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    },
+    {
+      "sign": -1.0,
+      "label_level": "registered_168_169",
+      "known_advantages": [
+        [
+          -0.0,
+          -0.009949999999999895,
+          -0.029700998750000072,
+          -0.06861391284912625
+        ],
+        [
+          -0.0,
+          -0.009949999999999895,
+          -0.029700998750000072,
+          -0.06861391284912625
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.0009066225512712403,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              -0.0087890625,
+              -0.028472900390625,
+              -0.067535400390625
+            ],
+            [
+              0.0,
+              -0.0092010498046875,
+              -0.0290374755859375,
+              -0.06805419921875
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.0006523094002295737,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              -0.009124755859375,
+              -0.028900146484375,
+              -0.0681610107421875
+            ],
+            [
+              0.0,
+              -0.00927734375,
+              -0.0290679931640625,
+              -0.068084716796875
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.036088303866375404,
+            0.03608576073486499
+          ]
+        },
+        {
+          "updates": 500,
+          "advantage_mae": [
+            0.03609339012939624,
+            0.036088303866375404
+          ]
+        },
+        {
+          "updates": 1500,
+          "advantage_mae": [
+            0.000665025057781657,
+            0.001276997141927072
+          ]
+        },
+        {
+          "updates": 5000,
+          "advantage_mae": [
+            0.0008150698168962403,
+            0.0006523094002295737
+          ]
+        },
+        {
+          "updates": 5250,
+          "advantage_mae": [
+            0.0006980857674170737,
+            0.0007896385017920737
+          ]
+        },
+        {
+          "updates": 5500,
+          "advantage_mae": [
+            0.0006243349536149903,
+            0.0005760154549170737
+          ]
+        },
+        {
+          "updates": 5750,
+          "advantage_mae": [
+            0.0007082582934587403,
+            0.000588731112469157
+          ]
+        },
+        {
+          "updates": 6000,
+          "advantage_mae": [
+            0.0007540346606462403,
+            0.0005989036385108237
+          ]
+        },
+        {
+          "updates": 6250,
+          "advantage_mae": [
+            0.000878648104656657,
+            0.000642136874187907
+          ]
+        },
+        {
+          "updates": 6500,
+          "advantage_mae": [
+            0.000642136874187907,
+            0.0006319643481462403
+          ]
+        },
+        {
+          "updates": 6750,
+          "advantage_mae": [
+            0.000657395663250407,
+            0.0008430442635108237
+          ]
+        },
+        {
+          "updates": 7000,
+          "advantage_mae": [
+            0.0008532167895524903,
+            0.000680283846844157
+          ]
+        },
+        {
+          "updates": 7250,
+          "advantage_mae": [
+            0.000680283846844157,
+            0.0005938173754899903
+          ]
+        },
+        {
+          "updates": 7500,
+          "advantage_mae": [
+            0.0007972678963233237,
+            0.0006065330330420737
+          ]
+        },
+        {
+          "updates": 7750,
+          "advantage_mae": [
+            0.000710801424969157,
+            0.000634507479656657
+          ]
+        },
+        {
+          "updates": 8000,
+          "advantage_mae": [
+            0.0007845522387712403,
+            0.000687913241375407
+          ]
+        },
+        {
+          "updates": 8250,
+          "advantage_mae": [
+            0.0008430442635108237,
+            0.000619248690594157
+          ]
+        },
+        {
+          "updates": 8500,
+          "advantage_mae": [
+            0.0007235170825212403,
+            0.0006319643481462403
+          ]
+        },
+        {
+          "updates": 8750,
+          "advantage_mae": [
+            0.000726060214031657,
+            0.0006701113208024903
+          ]
+        },
+        {
+          "updates": 9000,
+          "advantage_mae": [
+            0.000733689608562907,
+            0.000695542635906657
+          ]
+        },
+        {
+          "updates": 9250,
+          "advantage_mae": [
+            0.0007540346606462403,
+            0.0007209739510108237
+          ]
+        },
+        {
+          "updates": 9500,
+          "advantage_mae": [
+            0.000802354159344157,
+            0.0006446800056983237
+          ]
+        },
+        {
+          "updates": 9750,
+          "advantage_mae": [
+            0.000825242342937907,
+            0.0006523094002295737
+          ]
+        },
+        {
+          "updates": 10000,
+          "advantage_mae": [
+            0.0009066225512712403,
+            0.0006523094002295737
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 5000,
+        "every": 250,
+        "minimum_mae": [
+          0.0006243349536149903,
+          0.0005760154549170737
+        ],
+        "maximum_mae": [
+          0.0009066225512712403,
+          0.0008430442635108237
+        ],
+        "fraction_within_threshold": [
+          1.0,
+          1.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    }
+  ],
+  "actor_tasks": [
+    {
+      "time_lr": 0.0001,
+      "trajectory": [
+        {
+          "updates": 0,
+          "periods_ms": [
+            20.5,
+            20.5
+          ],
+          "maximum_period_error_ms": 99.5,
+          "maximum_window_error": 0.14691245555877686
+        },
+        {
+          "updates": 500,
+          "periods_ms": [
+            20.880931854248047,
+            20.880990982055664
+          ],
+          "maximum_period_error_ms": 99.11900901794434,
+          "maximum_window_error": 1.1920928955078125e-07
+        },
+        {
+          "updates": 2000,
+          "periods_ms": [
+            26.745433807373047,
+            26.74544906616211
+          ],
+          "maximum_period_error_ms": 93.25455093383789,
+          "maximum_window_error": 5.364418029785156e-07
+        },
+        {
+          "updates": 5000,
+          "periods_ms": [
+            40.00041580200195,
+            101.39999389648438
+          ],
+          "maximum_period_error_ms": 18.600006103515625,
+          "maximum_window_error": 4.76837158203125e-07
+        }
+      ],
+      "pass_gate": false
+    },
+    {
+      "time_lr": 0.0003,
+      "trajectory": [
+        {
+          "updates": 0,
+          "periods_ms": [
+            20.5,
+            20.5
+          ],
+          "maximum_period_error_ms": 99.5,
+          "maximum_window_error": 0.14691245555877686
+        },
+        {
+          "updates": 500,
+          "periods_ms": [
+            23.39415740966797,
+            23.394163131713867
+          ],
+          "maximum_period_error_ms": 96.60583686828613,
+          "maximum_window_error": 1.1920928955078125e-07
+        },
+        {
+          "updates": 2000,
+          "periods_ms": [
+            40.00012969970703,
+            116.57694244384766
+          ],
+          "maximum_period_error_ms": 3.4230575561523438,
+          "maximum_window_error": 1.7881393432617188e-07
+        },
+        {
+          "updates": 5000,
+          "periods_ms": [
+            39.99959182739258,
+            119.99994659423828
+          ],
+          "maximum_period_error_ms": 0.000408172607421875,
+          "maximum_window_error": 0.0
+        }
+      ],
+      "pass_gate": true
+    }
+  ],
+  "isolated_level_critic_tasks": [
+    {
+      "sign": 1.0,
+      "label_level": "migrated_initial_q",
+      "known_advantages": [
+        [
+          0.0,
+          0.009949999999999895,
+          0.029700998750000072,
+          0.06861391284912625
+        ],
+        [
+          0.0,
+          0.009949999999999895,
+          0.029700998750000072,
+          0.06861391284912625
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.000462846102703532,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.009307861328125,
+              0.028961181640625,
+              0.068145751953125
+            ],
+            [
+              0.0,
+              0.00945281982421875,
+              0.0293426513671875,
+              0.06854248046875
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.0009972526757812388,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0089569091796875,
+              0.0289459228515625,
+              0.0690460205078125
+            ],
+            [
+              0.0,
+              0.00823211669921875,
+              0.02838897705078125,
+              0.067840576171875
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.036088303866375404,
+            0.03609084699788582
+          ]
+        },
+        {
+          "updates": 500,
+          "advantage_mae": [
+            0.036088303866375404,
+            0.036088303866375404
+          ]
+        },
+        {
+          "updates": 1500,
+          "advantage_mae": [
+            0.0006701113208024903,
+            0.0013634636132812388
+          ]
+        },
+        {
+          "updates": 5000,
+          "advantage_mae": [
+            0.000546769442547282,
+            0.0011561983951822806
+          ]
+        },
+        {
+          "updates": 5250,
+          "advantage_mae": [
+            0.000466660799969157,
+            0.0011422111718749888
+          ]
+        },
+        {
+          "updates": 5500,
+          "advantage_mae": [
+            0.00045648827392749035,
+            0.0011307670800781138
+          ]
+        },
+        {
+          "updates": 5750,
+          "advantage_mae": [
+            0.00047683332601082366,
+            0.0011231376855468638
+          ]
+        },
+        {
+          "updates": 6000,
+          "advantage_mae": [
+            0.000478104891766032,
+            0.0011078788964843638
+          ]
+        },
+        {
+          "updates": 6250,
+          "advantage_mae": [
+            0.0004997215096045737,
+            0.001112965159505197
+          ]
+        },
+        {
+          "updates": 6500,
+          "advantage_mae": [
+            0.0005137087329118653,
+            0.0011066073307291556
+          ]
+        },
+        {
+          "updates": 6750,
+          "advantage_mae": [
+            0.00048700585205249035,
+            0.001097706370442697
+          ]
+        },
+        {
+          "updates": 7000,
+          "advantage_mae": [
+            0.00047301862874519866,
+            0.001093891673177072
+          ]
+        },
+        {
+          "updates": 7250,
+          "advantage_mae": [
+            0.000481919589031657,
+            0.0010849907128906138
+          ]
+        },
+        {
+          "updates": 7500,
+          "advantage_mae": [
+            0.000474290194500407,
+            0.0010799044498697806
+          ]
+        },
+        {
+          "updates": 7750,
+          "advantage_mae": [
+            0.00046030297119311535,
+            0.0010760897526041556
+          ]
+        },
+        {
+          "updates": 8000,
+          "advantage_mae": [
+            0.000489548983562907,
+            0.0010621025292968638
+          ]
+        },
+        {
+          "updates": 8250,
+          "advantage_mae": [
+            0.000500993075359782,
+            0.0010582878320312388
+          ]
+        },
+        {
+          "updates": 8500,
+          "advantage_mae": [
+            0.00048700585205249035,
+            0.0010468437402343638
+          ]
+        },
+        {
+          "updates": 8750,
+          "advantage_mae": [
+            0.00047683332601082366,
+            0.0010417574772135306
+          ]
+        },
+        {
+          "updates": 9000,
+          "advantage_mae": [
+            0.00046157453694832366,
+            0.0010417574772135306
+          ]
+        },
+        {
+          "updates": 9250,
+          "advantage_mae": [
+            0.00046157453694832366,
+            0.0010303133854166556
+          ]
+        },
+        {
+          "updates": 9500,
+          "advantage_mae": [
+            0.00046793236572436535,
+            0.0010303133854166556
+          ]
+        },
+        {
+          "updates": 9750,
+          "advantage_mae": [
+            0.00045775983968269866,
+            0.0010353996484374888
+          ]
+        },
+        {
+          "updates": 10000,
+          "advantage_mae": [
+            0.000462846102703532,
+            0.0009972526757812388
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 5000,
+        "every": 250,
+        "minimum_mae": [
+          0.00045648827392749035,
+          0.0009972526757812388
+        ],
+        "maximum_mae": [
+          0.000546769442547282,
+          0.0011561983951822806
+        ],
+        "fraction_within_threshold": [
+          1.0,
+          1.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    },
+    {
+      "sign": 0.0,
+      "label_level": "migrated_initial_q",
+      "known_advantages": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.0,
+          "ranking": null,
+          "maximum_spurious_advantage": 0.0,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.0,
+          "ranking": null,
+          "maximum_spurious_advantage": 0.0,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.0,
+            2.5431315104166665e-06
+          ]
+        },
+        {
+          "updates": 500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 1500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 5000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 5250,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 5500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 5750,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 6000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 6250,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 6500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 6750,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 7000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 7250,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 7500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 7750,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 8000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 8250,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 8500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 8750,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 9000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 9250,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 9500,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 9750,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "updates": 10000,
+          "advantage_mae": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 5000,
+        "every": 250,
+        "minimum_mae": [
+          0.0,
+          0.0
+        ],
+        "maximum_mae": [
+          0.0,
+          0.0
+        ],
+        "fraction_within_threshold": [
+          1.0,
+          1.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    },
+    {
+      "sign": -1.0,
+      "label_level": "migrated_initial_q",
+      "known_advantages": [
+        [
+          -0.0,
+          -0.009949999999999895,
+          -0.029700998750000072,
+          -0.06861391284912625
+        ],
+        [
+          -0.0,
+          -0.009949999999999895,
+          -0.029700998750000072,
+          -0.06861391284912625
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.000542954745281657,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              -0.009185791015625,
+              -0.028961181640625,
+              -0.0679779052734375
+            ],
+            [
+              0.0,
+              -0.00942230224609375,
+              -0.02931976318359375,
+              -0.0684051513671875
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.0010430290429687388,
+          "ranking": 1.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              -0.0089263916015625,
+              -0.0290069580078125,
+              -0.06884765625
+            ],
+            [
+              0.0,
+              -0.0081329345703125,
+              -0.02825164794921875,
+              -0.06757354736328125
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.036088303866375404,
+            0.03608576073486499
+          ]
+        },
+        {
+          "updates": 500,
+          "advantage_mae": [
+            0.03608576073486499,
+            0.036088303866375404
+          ]
+        },
+        {
+          "updates": 1500,
+          "advantage_mae": [
+            0.0006637534920264487,
+            0.0013596489160156138
+          ]
+        },
+        {
+          "updates": 5000,
+          "advantage_mae": [
+            0.0005556704028337403,
+            0.0011956169335937388
+          ]
+        },
+        {
+          "updates": 5250,
+          "advantage_mae": [
+            0.000569657626141032,
+            0.0011841728417968638
+          ]
+        },
+        {
+          "updates": 5500,
+          "advantage_mae": [
+            0.0005785585864274903,
+            0.0011752718815104056
+          ]
+        },
+        {
+          "updates": 5750,
+          "advantage_mae": [
+            0.0005823732836931153,
+            0.001170185618489572
+          ]
+        },
+        {
+          "updates": 6000,
+          "advantage_mae": [
+            0.0005137087329118653,
+            0.0011714571842447806
+          ]
+        },
+        {
+          "updates": 6250,
+          "advantage_mae": [
+            0.0005226096931983237,
+            0.001177815013020822
+          ]
+        },
+        {
+          "updates": 6500,
+          "advantage_mae": [
+            0.0006065330330420737,
+            0.0011523836979166556
+          ]
+        },
+        {
+          "updates": 6750,
+          "advantage_mae": [
+            0.0005187949959326987,
+            0.0011307670800781138
+          ]
+        },
+        {
+          "updates": 7000,
+          "advantage_mae": [
+            0.0005327822192399903,
+            0.001124409251302072
+          ]
+        },
+        {
+          "updates": 7250,
+          "advantage_mae": [
+            0.0005175234301774903,
+            0.001143482737630197
+          ]
+        },
+        {
+          "updates": 7500,
+          "advantage_mae": [
+            0.000554398837078532,
+            0.0011333102115885306
+          ]
+        },
+        {
+          "updates": 7750,
+          "advantage_mae": [
+            0.000554398837078532,
+            0.001101521067708322
+          ]
+        },
+        {
+          "updates": 8000,
+          "advantage_mae": [
+            0.000615433993328532,
+            0.001101521067708322
+          ]
+        },
+        {
+          "updates": 8250,
+          "advantage_mae": [
+            0.000516251864422282,
+            0.001101521067708322
+          ]
+        },
+        {
+          "updates": 8500,
+          "advantage_mae": [
+            0.000508622469891032,
+            0.001116779856770822
+          ]
+        },
+        {
+          "updates": 8750,
+          "advantage_mae": [
+            0.000512437167156657,
+            0.0010926201074218638
+          ]
+        },
+        {
+          "updates": 9000,
+          "advantage_mae": [
+            0.0005149802986670737,
+            0.0011104220279947806
+          ]
+        },
+        {
+          "updates": 9250,
+          "advantage_mae": [
+            0.000531510653484782,
+            0.0010722750553385306
+          ]
+        },
+        {
+          "updates": 9500,
+          "advantage_mae": [
+            0.000504807772625407,
+            0.0010913485416666556
+          ]
+        },
+        {
+          "updates": 9750,
+          "advantage_mae": [
+            0.0005442263110368653,
+            0.0010621025292968638
+          ]
+        },
+        {
+          "updates": 10000,
+          "advantage_mae": [
+            0.000542954745281657,
+            0.0010430290429687388
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 5000,
+        "every": 250,
+        "minimum_mae": [
+          0.000504807772625407,
+          0.0010430290429687388
+        ],
+        "maximum_mae": [
+          0.000615433993328532,
+          0.0011956169335937388
+        ],
+        "fraction_within_threshold": [
+          1.0,
+          1.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    }
+  ],
+  "isolated_level_status": "PASS",
+  "isolated_level_is_diagnostic_not_the_registered_verdict": true,
+  "critic_period_residual_lr": 0.0001,
+  "configured_time_lr": 0.0003,
+  "critic_batch_size": 512,
+  "legacy_critic_reference": false,
+  "source_state_indices": [
+    412,
+    530
+  ],
+  "source_states_modified_fresh_flag_only": true,
+  "real_tcp_runs": 0,
+  "limits": "Small constructed single-decision Q with known same-policy continuation; no TCP causal/value/performance proof. Actor task uses exact Q, not the fitted critics."
+}

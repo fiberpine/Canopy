@@ -1,5 +1,7 @@
 # Claude 离线接手结果：连续双动作 v4（2026-11-17）
 
+后续已在用户本机TF1.14复核，并增加公共价值校准顺序；当前状态见[本机复核报告](JOINT_CONTINUOUS_LOCAL_REVIEW_20261117.md)。以下保留Claude当时的实际范围和原始结论。
+
 接手 `59cf69a`（`innovation/joint-continuous-conditioned-v4`）。本轮没有 SSH、云端 TCP 或训练；时间头保持连续；原健康基座 main/`c67717d` 与负面证据都未改动；没有训练独立固定周期组。**这仍是离线候选，不是训练就绪，也没有任何 TCP 收益结论。**
 
 ## 1 执行环境与范围

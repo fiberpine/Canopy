@@ -132,4 +132,5 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--config',required=True);p.add_argument('--states',required=True)
     p.add_argument('--output',required=True);p.add_argument('--updates',type=int,default=10000)
     p.add_argument('--legacy-critic-reference',action='store_true')
-    args=p.parse_args();verify(args.config,args.states,args.output,args.updates,args.legacy_critic_reference)
+    args=p.parse_args();outcome=verify(args.config,args.states,args.output,args.updates,args.legacy_critic_reference)
+    sys.exit(0 if outcome['status']=='PASS_OFFLINE_KNOWN_VALUE_CAPABILITY' else 1)

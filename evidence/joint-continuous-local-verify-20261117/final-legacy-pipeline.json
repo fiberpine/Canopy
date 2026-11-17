@@ -1,0 +1,261 @@
+{
+  "status": "PASS_SYNTHETIC_LEARNER_PIPELINE_ONLY",
+  "reason": "",
+  "counters": {
+    "critic_iterations": 39,
+    "critic_optimizer_ops": 78,
+    "actor_updates": 35,
+    "actor_optimizer_ops": 35,
+    "target_updates": 39
+  },
+  "phase": 2,
+  "credit": {
+    "inserted": 400,
+    "physical_seconds": 8.0,
+    "warmup_seconds": 0.16,
+    "warmup_inserted": 8,
+    "per_actor": [
+      200,
+      200
+    ],
+    "per_actor_seconds": [
+      4.000000000000003,
+      4.000000000000003
+    ],
+    "update_limit": 39,
+    "updates_per_base20ms": 0.1
+  },
+  "producer_done": {
+    "0": 200,
+    "1": 200
+  },
+  "update_debt": 0,
+  "exposure_complete": true,
+  "trained_joint_endpoint": true,
+  "no_complete_resume": true,
+  "performance_verified": false,
+  "critic_adam_applications_per_iteration": 2,
+  "fixture_common_only_iterations": 0,
+  "all_critic_adam_clocks_match_complete_iterations": true,
+  "gates": [
+    {
+      "phase": 0,
+      "iterations": 1,
+      "admitted": false,
+      "reasons": [
+        "minimum_critic_calibration"
+      ],
+      "holdout": [
+        {
+          "period": 0,
+          "rows": 38,
+          "normalized_td_rmse": 0.09078253434981544,
+          "twin_errors": [
+            0.09078253434981544,
+            0.028680051259549057
+          ],
+          "absolute_twin_td_rmse": [
+            12.406660079956055,
+            3.9195165634155273
+          ],
+          "target_mean": 136.66351318359375
+        }
+      ],
+      "short_returns": [
+        {
+          "period": 0,
+          "blocks": 2,
+          "normalized_return_rmse": 0.09078909460604037,
+          "twin_errors": [
+            0.09078909460604037,
+            0.028686980693638658
+          ],
+          "bootstrap_tail_not_full_MC": true,
+          "target_mean": 136.66446358601024
+        }
+      ],
+      "coverage": [
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "phase": 0,
+      "iterations": 2,
+      "admitted": true,
+      "reasons": [],
+      "holdout": [
+        {
+          "period": 0,
+          "rows": 38,
+          "normalized_td_rmse": 0.05366138911440225,
+          "twin_errors": [
+            0.02308875323257008,
+            0.05366138911440225
+          ],
+          "absolute_twin_td_rmse": [
+            3.15529465675354,
+            7.333332061767578
+          ],
+          "target_mean": 136.65939331054688
+        }
+      ],
+      "short_returns": [
+        {
+          "period": 0,
+          "blocks": 2,
+          "normalized_return_rmse": 0.05367465240097561,
+          "twin_errors": [
+            0.023102432022955633,
+            0.05367465240097561
+          ],
+          "bootstrap_tail_not_full_MC": true,
+          "target_mean": 136.66129723918763
+        }
+      ],
+      "coverage": [
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "phase": 1,
+      "iterations": 3,
+      "admitted": false,
+      "reasons": [
+        "minimum_critic_calibration"
+      ],
+      "holdout": [
+        {
+          "period": 0,
+          "rows": 38,
+          "normalized_td_rmse": 0.04237329383416109,
+          "twin_errors": [
+            0.04237329383416109,
+            0.03350116797086917
+          ],
+          "absolute_twin_td_rmse": [
+            5.790998935699463,
+            4.578478813171387
+          ],
+          "target_mean": 136.666259765625
+        }
+      ],
+      "short_returns": [
+        {
+          "period": 0,
+          "blocks": 2,
+          "normalized_return_rmse": 0.042377328405319575,
+          "twin_errors": [
+            0.042377328405319575,
+            0.03349730462610239
+          ],
+          "bootstrap_tail_not_full_MC": true,
+          "target_mean": 136.66571693162757
+        }
+      ],
+      "coverage": [
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "phase": 1,
+      "iterations": 4,
+      "admitted": true,
+      "reasons": [],
+      "holdout": [
+        {
+          "period": 0,
+          "rows": 38,
+          "normalized_td_rmse": 0.06779566865818444,
+          "twin_errors": [
+            0.06779566865818444,
+            0.0005169805918250549
+          ],
+          "absolute_twin_td_rmse": [
+            9.265995979309082,
+            0.07065849751234055
+          ],
+          "target_mean": 136.6753387451172
+        }
+      ],
+      "short_returns": [
+        {
+          "period": 0,
+          "blocks": 2,
+          "normalized_return_rmse": 0.06779452770240976,
+          "twin_errors": [
+            0.06779452770240976,
+            0.0005149145230041175
+          ],
+          "bootstrap_tail_not_full_MC": true,
+          "target_mean": 136.6755091523568
+        }
+      ],
+      "coverage": [
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          181,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "no_server_or_socket_created": true,
+  "new_TCP": 0,
+  "measured_physical_experience": 0,
+  "fixture_exposure_is_synthetic": true,
+  "reduced_thresholds_are_fixture_only": true,
+  "fixture_periods_ms": [
+    20.0,
+    20.0
+  ],
+  "fixture_rows_per_actor": 200,
+  "fixture_block_starts": []
+}

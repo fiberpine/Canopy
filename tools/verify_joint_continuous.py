@@ -3,6 +3,7 @@
 Uses saved real inputs, temporary checkpoints and synthetic updates only.
 """
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -21,11 +22,19 @@ def verify(config, states_file, output):
     from frameworks.joint_healthy.continuous import CONDITION, exploration_inputs
     from frameworks.joint_healthy.core import interval_return
     cfg = json.loads(Path(config).read_text().replace('@PACKAGE@', str(ROOT).replace('\\', '/')))
+    production_common=int(cfg.get('critic_common_calibration_updates',0))
+    if production_common:cfg['critic_common_calibration_updates']=2  # exercise both stages in this short graph fixture
     with np.load(str(states_file)) as p: states = p['states'][:128].copy()
     # Include empty-feedback initializers in addition to actual fresh samples.
     states[::3, 66] = 0.
     prior = np.where(states[:, 66] > 0., 20.5, np.clip(np.expm1(states[:, 79])*20., 40., 120.))
     session_cfg = tf.ConfigProto(intra_op_parallelism_threads=2, inter_op_parallelism_threads=2)
+    def network_digest(model,session):
+        values={v.op.name:v for v in model.online_vars+[v for pair in model.target_pairs for v in pair]}
+        digest=hashlib.sha256()
+        for name in sorted(values):
+            digest.update(name.encode());digest.update(np.ascontiguousarray(session.run(values[name])).tobytes())
+        return digest.hexdigest()
     with tf.Graph().as_default():
         tf.set_random_seed(3); model = Model(cfg, True)
         anchor_time = [g for g in tf.gradients(model.anchor_loss, model.time_vars) if g is not None]
@@ -43,6 +52,7 @@ def verify(config, states_file, output):
         saver = tf.train.Saver()
         with tf.Session(config=session_cfg) as sess:
             sess.run(tf.global_variables_initializer()); model.initialize_baseline(sess, cfg['baseline_checkpoint'])
+            initial_network_digest=network_digest(model,sess)
             action, teacher, duration = sess.run([model.action, model.teacher_output, model.planned_ms], {model.s: states})
             parity = float(np.max(np.abs(action[:, :1]-teacher))); assert parity < 1e-5
             time_parity = float(np.max(np.abs(duration[:,0]-prior))); assert time_parity < .0001
@@ -66,7 +76,23 @@ def verify(config, states_file, output):
             batch=[states, action, np.full((len(states),1),reward,np.float32), states*.99,
                    np.zeros((len(states),1),np.float32),durations,np.full((len(states),1),disc,np.float32),teacher]
             trainfeed=model.feed(batch)
-            for _ in range(3): sess.run(model.critic_step,trainfeed);sess.run(model.target_update)
+            if production_common:
+                sess.run(tf.assign(model.phase,2));actor_before=model.digest(sess)
+                try:sess.run(model.actor_step,trainfeed)
+                except tf.errors.InvalidArgumentError:pass
+                else:raise AssertionError('Actor updated before common calibration completed')
+                assert actor_before==model.digest(sess) and int(sess.run(model.global_step))==0
+                sess.run(tf.assign(model.phase,0))
+            residual_vars=[v for variables in model.critic_parameters for v in variables if '/period_residual/' in v.op.name]
+            residual_before=sess.run(residual_vars)
+            common_checked=False
+            for iteration in range(3):
+                sess.run(model.critic_step,trainfeed);sess.run(model.target_update)
+                if production_common and iteration==1:
+                    assert all(np.array_equal(a,b) for a,b in zip(residual_before,sess.run(residual_vars)))
+                    assert all(float(sess.run(opt._get_beta_accumulators()[1]))==np.float32(.999) for opt in model.critic_period_optimizers)
+                    common_checked=True
+            if production_common:assert any(not np.array_equal(a,b) for a,b in zip(residual_before,sess.run(residual_vars)))
             separate_period_adam = cfg.get('critic_period_residual_lr') is not None
             if separate_period_adam:
                 # The zero-initialized period residual has its own Adam; the migrated backbone keeps lr_c.
@@ -114,6 +140,11 @@ def verify(config, states_file, output):
         with tf.Session(config=session_cfg) as sess:
             sess.run(tf.global_variables_initializer());sess.run([tf.assign(v,x) for v,x in zip(selected,export)])
             export_error=float(np.max(np.abs(prediction-sess.run(frozen.action,{frozen.s:states}))));assert export_error==0
+    with tf.Graph().as_default():
+        tf.set_random_seed(3);simultaneous=Model(dict(cfg,critic_common_calibration_updates=0),True)
+        with tf.Session(config=session_cfg) as sess:
+            sess.run(tf.global_variables_initializer());simultaneous.initialize_baseline(sess,cfg['baseline_checkpoint'])
+            assert network_digest(simultaneous,sess)==initial_network_digest
     result=dict(status='PASS_ACTUAL_TF1_CONTINUOUS_GRAPH_NOT_TCP',inputs=len(states),initial_window_max_error=parity,
         initial_period_max_error_ms=time_parity,same_decision_exploration_max_error=probe_error,
         old_wrong_window_pairing_detectable_difference=mismatch_visible,base20_structural_parity=True,
@@ -123,6 +154,10 @@ def verify(config, states_file, output):
         target_includes_conditional_weights=True,full_restore_error=restore_error,inference_export_error=export_error,
         legacy_schema_rejected=True,separate_period_residual_adam=separate_period_adam,
         critic_period_residual_lr=cfg.get('critic_period_residual_lr'),real_tcp_runs=0)
+    result.update(common_calibration_freezes_parameters_and_adam_clock=common_checked,
+                  production_common_calibration_updates=production_common,fixture_common_calibration_updates=cfg.get('critic_common_calibration_updates',0),
+                  actor_rejected_before_common_calibration=True if production_common else None,
+                  staged_and_simultaneous_network_initialization_bitwise_equal=True,initial_network_sha256=initial_network_digest)
     Path(output).write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result));return result
 
 

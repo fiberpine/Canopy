@@ -1,0 +1,212 @@
+{
+  "status": "COVERAGE_REACHABLE",
+  "bucketing": "code",
+  "required_rows_per_actor_bucket": 128,
+  "memsize": 300000,
+  "actors": 24,
+  "calibration_probe_probability": 0.1,
+  "assumed_empty_rtt_fraction": 0.02,
+  "assumed_minimum_rtt_classes_ms": [
+    20,
+    50,
+    100,
+    200
+  ],
+  "simulated_physical_seconds_per_actor": 480.0,
+  "appended_rows": 440428,
+  "reports": [
+    {
+      "physical_seconds_per_actor": 60.0,
+      "minimum_retained_rows_per_actor_by_bucket": [
+        1736,
+        33,
+        28,
+        29,
+        39
+      ],
+      "holdout_rows_by_bucket": [
+        256,
+        107,
+        116,
+        134,
+        116
+      ],
+      "short_return_blocks_by_bucket": [
+        64,
+        9,
+        6,
+        7,
+        6
+      ]
+    },
+    {
+      "physical_seconds_per_actor": 120.0,
+      "minimum_retained_rows_per_actor_by_bucket": [
+        3543,
+        70,
+        50,
+        71,
+        73
+      ],
+      "holdout_rows_by_bucket": [
+        256,
+        242,
+        218,
+        230,
+        228
+      ],
+      "short_return_blocks_by_bucket": [
+        64,
+        17,
+        8,
+        8,
+        10
+      ]
+    },
+    {
+      "physical_seconds_per_actor": 180.0,
+      "minimum_retained_rows_per_actor_by_bucket": [
+        5413,
+        104,
+        95,
+        109,
+        112
+      ],
+      "holdout_rows_by_bucket": [
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "short_return_blocks_by_bucket": [
+        64,
+        20,
+        12,
+        14,
+        13
+      ]
+    },
+    {
+      "physical_seconds_per_actor": 240.0,
+      "minimum_retained_rows_per_actor_by_bucket": [
+        7271,
+        143,
+        138,
+        144,
+        154
+      ],
+      "holdout_rows_by_bucket": [
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "short_return_blocks_by_bucket": [
+        64,
+        24,
+        17,
+        15,
+        19
+      ]
+    },
+    {
+      "physical_seconds_per_actor": 300.0,
+      "minimum_retained_rows_per_actor_by_bucket": [
+        9070,
+        188,
+        165,
+        179,
+        185
+      ],
+      "holdout_rows_by_bucket": [
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "short_return_blocks_by_bucket": [
+        64,
+        30,
+        21,
+        19,
+        21
+      ]
+    },
+    {
+      "physical_seconds_per_actor": 360.0,
+      "minimum_retained_rows_per_actor_by_bucket": [
+        9906,
+        208,
+        167,
+        204,
+        209
+      ],
+      "holdout_rows_by_bucket": [
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "short_return_blocks_by_bucket": [
+        64,
+        39,
+        24,
+        26,
+        26
+      ]
+    },
+    {
+      "physical_seconds_per_actor": 420.0,
+      "minimum_retained_rows_per_actor_by_bucket": [
+        9928,
+        202,
+        171,
+        206,
+        204
+      ],
+      "holdout_rows_by_bucket": [
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "short_return_blocks_by_bucket": [
+        64,
+        43,
+        26,
+        28,
+        39
+      ]
+    },
+    {
+      "physical_seconds_per_actor": 480.0,
+      "minimum_retained_rows_per_actor_by_bucket": [
+        9896,
+        196,
+        185,
+        199,
+        191
+      ],
+      "holdout_rows_by_bucket": [
+        256,
+        256,
+        256,
+        256,
+        256
+      ],
+      "short_return_blocks_by_bucket": [
+        64,
+        55,
+        28,
+        35,
+        45
+      ]
+    }
+  ],
+  "limits": "Real replay bookkeeping with an assumed behavior mix; no TF, values, TCP or measured RTT frames."
+}

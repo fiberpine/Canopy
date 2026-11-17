@@ -1,0 +1,159 @@
+{
+  "status": "FAIL_CONSTRUCTED_COMMON_CALIBRATION",
+  "critic_tasks": [
+    {
+      "sign": 1.0,
+      "critics": [
+        {
+          "advantage_mae": 0.035878495516766064,
+          "ranking": 1.0,
+          "pass_gate": false
+        },
+        {
+          "advantage_mae": 0.0359140993579119,
+          "ranking": 1.0,
+          "pass_gate": false
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.03608830386637544,
+            0.03609084699788586
+          ]
+        },
+        {
+          "updates": 1,
+          "advantage_mae": [
+            0.03608321760335461,
+            0.03608830386637544
+          ]
+        },
+        {
+          "updates": 2,
+          "advantage_mae": [
+            0.035878495516766064,
+            0.0359140993579119
+          ]
+        }
+      ],
+      "late_maximum_mae": [
+        0.03608321760335461,
+        0.03608830386637544
+      ],
+      "late_fraction_within_gate": [
+        0.0,
+        0.0
+      ],
+      "period_parameters_bitwise_unchanged_during_common_calibration": true,
+      "adam_clock_checks": true
+    },
+    {
+      "sign": 0.0,
+      "critics": [
+        {
+          "advantage_mae": 0.00020472208658854166,
+          "ranking": null,
+          "pass_gate": true
+        },
+        {
+          "advantage_mae": 0.00017420450846354166,
+          "ranking": null,
+          "pass_gate": true
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.0,
+            2.5431315104166665e-06
+          ]
+        },
+        {
+          "updates": 1,
+          "advantage_mae": [
+            5.086263020833333e-06,
+            0.0
+          ]
+        },
+        {
+          "updates": 2,
+          "advantage_mae": [
+            0.00020472208658854166,
+            0.00017420450846354166
+          ]
+        }
+      ],
+      "late_maximum_mae": [
+        0.00020472208658854166,
+        0.00017420450846354166
+      ],
+      "late_fraction_within_gate": [
+        1.0,
+        1.0
+      ],
+      "period_parameters_bitwise_unchanged_during_common_calibration": true,
+      "adam_clock_checks": true
+    },
+    {
+      "sign": -1.0,
+      "critics": [
+        {
+          "advantage_mae": 0.036298112215984814,
+          "ranking": 0.0,
+          "pass_gate": false
+        },
+        {
+          "advantage_mae": 0.036259965243328564,
+          "ranking": 0.0,
+          "pass_gate": false
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.03608830386637544,
+            0.036085760734865024
+          ]
+        },
+        {
+          "updates": 1,
+          "advantage_mae": [
+            0.036093390129396274,
+            0.03608830386637544
+          ]
+        },
+        {
+          "updates": 2,
+          "advantage_mae": [
+            0.036298112215984814,
+            0.036259965243328564
+          ]
+        }
+      ],
+      "late_maximum_mae": [
+        0.036298112215984814,
+        0.036259965243328564
+      ],
+      "late_fraction_within_gate": [
+        0.0,
+        0.0
+      ],
+      "period_parameters_bitwise_unchanged_during_common_calibration": true,
+      "adam_clock_checks": true
+    }
+  ],
+  "total_complete_critic_iterations_per_task": 2,
+  "common_only_iterations": 1,
+  "period_iterations": 1,
+  "adam_applications_per_task": 6,
+  "maximum_advantage_mae": 0.002487499999999976,
+  "minimum_ranking": 0.95,
+  "real_tcp_runs": 0,
+  "runtime_algorithm_changed": false,
+  "driver_owns_schedule_and_disables_model_common_stage": true,
+  "limits": "Three known-label tasks and a single seed, fixed 10k endpoint. Diagnostic only; no runtime/TD/actor/TCP or generalization validation."
+}

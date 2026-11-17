@@ -55,10 +55,12 @@ def verify(output,config=None,keep=None):
     cfg = configuration('fixed20')
     if config:cfg.update(json.loads(Path(config).read_text(encoding='utf-8').replace('@PACKAGE@',str(ROOT).replace('\\','/'))))
     conditioned=enabled(cfg);actors=5 if conditioned else 2;rows_per_actor=300 if conditioned else 200
+    fixture_common=1 if conditioned and int(cfg.get('critic_common_calibration_updates',0))>0 else 0
     cfg.update(run_id='synthetic-pipeline', num_actors=actors, memsize=2048 if conditioned else 512, batch_size=8,
         profile='continuous-v4' if conditioned else 'fixed20',fixed_mtp_ms=None if conditioned else 20.,
         warmup=8, minimum_enqueued_per_actor=4, warmup_physical_seconds=.16,
         calibration_updates=2, forward_calibration_updates=2, calibration_check_updates=1,
+        critic_common_calibration_updates=fixture_common,
         calibration_rows_per_actor_period=1, minimum_holdout_per_period=1,
         minimum_short_return_blocks=1,
         checkpoint_updates=100 if conditioned else 10000, release_joint=True, physical_seconds_per_actor=1.,
@@ -66,7 +68,10 @@ def verify(output,config=None,keep=None):
     if conditioned: periods, schedule, block_starts = conditioned_schedule(cfg, actors, rows_per_actor)
     else: periods, schedule, block_starts = [20.,20.], [[20.]*rows_per_actor for _ in range(actors)], []
     fifo_capacity = actors*(rows_per_actor+1) + 16  # every row is enqueued before the learner starts
+    if keep and Path(keep).exists():
+        raise ValueError('Use a new --keep directory; existing evidence must be preserved')
     original_r, original_setup = backend.R, backend.setup
+    sessions = []
     state = np.tile(np.array([1., 1.2, 0., 1., .02, .98, 1.], np.float32), 10)
     state = np.r_[state, np.zeros(12, np.float32)].astype(np.float32)
     action = np.array([0., -1.], np.float32)
@@ -79,6 +84,7 @@ def verify(output,config=None,keep=None):
         ph = [tf.placeholder(t, s) for t, s in zip(dtypes, shapes)]
         enq = fifo.enqueue(ph); number = tf.placeholder(tf.int32, []); deq = fifo.dequeue_many(number); size = fifo.size()
         session = tf.Session(config=tf.ConfigProto(intra_op_parallelism_threads=1, inter_op_parallelism_threads=1))
+        sessions.append((model,session))
         session.run(tf.global_variables_initializer()); model.initialize_baseline(session, config['baseline_checkpoint'])
         from frameworks.joint_healthy.core import period_action
         actions={ms:np.array([0.,period_action(ms)],np.float32) for ms in periods}
@@ -107,7 +113,18 @@ def verify(output,config=None,keep=None):
             assert result['producer_done'] == {a:rows_per_actor for a in range(actors)}
             assert result['update_debt'] == 0
             assert result['counters']['actor_updates'] > 0
-            assert result['counters']['critic_optimizer_ops'] == 2*result['counters']['critic_iterations']
+            fixture_model,fixture_session=sessions[-1]
+            applies=fixture_model.critic_adam_applies_per_step
+            count=result['counters']['critic_iterations'];common=min(fixture_model.common_calibration_updates,count)
+            expected_ops=2*common+applies*(count-common)
+            assert result['counters']['critic_optimizer_ops'] == expected_ops
+            optimizers=list(fixture_model.critic_optimizers)+list(getattr(fixture_model,'critic_period_optimizers',[]))
+            powers=[float(fixture_session.run(opt._get_beta_accumulators()[1])) for opt in optimizers]
+            expected=[.999**(count+1)]*2+[.999**(count-common+1)]*(applies-2)
+            assert len(powers)==applies and np.allclose(powers,expected,rtol=2e-5),powers
+            result['critic_adam_applications_per_iteration']=applies
+            result['fixture_common_only_iterations']=common
+            result['all_critic_adam_clocks_match_complete_iterations']=True
             assert [g['phase'] for g in gates if g['admitted']] == [0,1]
             if cfg.get('teacher_anchor_weight',0)>0:
                 with np.load(str(Path(result['endpoint']).parent/'replay.npz')) as saved:
@@ -131,7 +148,10 @@ def verify(output,config=None,keep=None):
             try: return json.loads((logs/name).read_text())
             except Exception: return None
         retained = Path(keep) if keep else Path(output).with_name(Path(output).stem + '-failure-scene')
-        if retained.exists(): shutil.rmtree(str(retained))
+        if retained.exists():
+            suffix=1
+            while retained.with_name(retained.name+'-'+str(suffix)).exists():suffix+=1
+            retained=retained.with_name(retained.name+'-'+str(suffix))
         shutil.copytree(temporary, str(retained))
         history = load('calibration-history.json') or []
         result = dict(status='FAIL_SYNTHETIC_PIPELINE_FIXTURE_NOT_TCP', exception=traceback.format_exc(),
@@ -140,9 +160,9 @@ def verify(output,config=None,keep=None):
             retained_scene=str(retained), fixture_periods_ms=periods, fixture_rows_per_actor=rows_per_actor,
             fixture_block_starts=block_starts, new_TCP=0)
     finally:
+        for _,session in sessions:session.close()
         backend.R, backend.setup = original_r, original_setup
         if passed and keep:
-            if Path(keep).exists(): shutil.rmtree(keep)
             shutil.copytree(temporary, keep)
         shutil.rmtree(temporary, ignore_errors=True)  # failures were already copied above
     Path(output).write_text(json.dumps(result,indent=2)+'\n')

@@ -129,7 +129,9 @@ def run_learner(cfg):
                 counters['actor_updates'] += 1
                 counters['actor_optimizer_ops'] += model.actor_optimizer_ops_per_step
             sess.run(model.target_update)
-            counters['critic_iterations'] += 1; counters['critic_optimizer_ops'] += 2; counters['target_updates'] += 1
+            counters['critic_optimizer_ops'] += model.critic_adam_applications(counters['critic_iterations'])
+            counters['critic_iterations'] += 1
+            counters['target_updates'] += 1
             iteration = counters['critic_iterations']
             inspect_values = gate.phase < JOINT or continuous.enabled(cfg)
             if inspect_values and iteration % cfg.get('calibration_check_updates', 500) == 0 and iteration != last_gate:

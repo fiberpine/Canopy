@@ -1,5 +1,5 @@
 {
-  "scope": "Claude offline continuation of continuous conditioned dual-action v4: coverage-bucket deadlock and pipeline fixture fixed, separate period-residual critic Adam added; TF graph paths unexecuted; registered critic capability still FAIL; protected healthy scalar baseline unchanged",
+  "scope": "Continuous dual-action offline TF1 key gates pass after common-value calibration; no new TCP or promotion; protected seed3 preserved",
   "original_source_archive_sha256": "7cb05dbbf33ca91e7ad237585df858063fc6fa3b5e1bf57115f6c59f6ecff17b",
   "files": [
     {
@@ -134,8 +134,8 @@
     },
     {
       "path": "docs/CLAUDE_OFFLINE_RESULT_20261117.md",
-      "bytes": 10797,
-      "sha256": "c78e5aa73e3eec73041444ee1c43856b04e4337656baf90afc45d4d366c47cce"
+      "bytes": 11012,
+      "sha256": "350dfa6bef0c45085951629f94e341ea78b7451e4c7c551659fbecfa9502adb8"
     },
     {
       "path": "docs/COMMON_PERIOD_20261102.md",
@@ -156,6 +156,11 @@
       "path": "docs/HISTORY_STATUS_20261113.md",
       "bytes": 16670,
       "sha256": "c9cbba0968a022e4b71d4fd8286343a0178a1c91d24383c23fbf187b54d22ecf"
+    },
+    {
+      "path": "docs/JOINT_CONTINUOUS_LOCAL_REVIEW_20261117.md",
+      "bytes": 10438,
+      "sha256": "ec6804fa0e286bf3d899212547af46dcbf9da5c47f9a7b05b81100f3bbfc2f09"
     },
     {
       "path": "docs/JOINT_CONTINUOUS_REPAIR_PLAN_20261116.md",
@@ -14198,6 +14203,141 @@
       "sha256": "3953189f977b526ecf0d4cc4cae01252ed3dde6b51c9769aa188c521d14c0060"
     },
     {
+      "path": "evidence/joint-continuous-local-verify-20261117/README.md",
+      "bytes": 1503,
+      "sha256": "9c87bda52f2cb8d1677031860382f4717663aa6467677a98bb19746f309f4a46"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/claude-capability-tf.json",
+      "bytes": 37663,
+      "sha256": "70039e98809ba69bccb96784d0ef8b8e77e5bc68457fbdd60d8f07a83a2619a6"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/claude-graph.json",
+      "bytes": 911,
+      "sha256": "43d8a952bb20f58db9af94f7c1a133482fac7b75859ad031f37388f27e6dadd7"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/claude-pipeline.json",
+      "bytes": 18390,
+      "sha256": "121a399aa106f997d5202a3b36180262edfc011a25471b56f3a4ccec449da2c9"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/common-first-1000.json",
+      "bytes": 12952,
+      "sha256": "a966d551089ea072b99fcb17edbe2c42c3645c03d3458515ec66ebcd888500c4"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/control-simultaneous-1e-3.json",
+      "bytes": 13536,
+      "sha256": "39fc1bb07db1547ffdc1a2fcbea110aa2f3f44690c2abe8a2a1b550f1870bccb"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/control-simultaneous-1e-4.json",
+      "bytes": 13537,
+      "sha256": "ba8494f06c6c25c1a1f2db43b8d090f58355db0fcd576aecaf6adc95c263ddbf"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/counter-fixed-pipeline.json",
+      "bytes": 18760,
+      "sha256": "285423edc5c0c90a304cf805379787c140226b303aa29f90bc022e8fb1d4d0ba"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/coverage-local-nearest-480.json",
+      "bytes": 3873,
+      "sha256": "838c41b802f3f13a9ca0d022c7c12c1721c28621983b496dc07dc46e6467aaf7"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/coverage-local-strata-480.json",
+      "bytes": 3879,
+      "sha256": "a8bb33f30652fb938f3ca0b24a5bb40be14b808773f95973e9b1ffef9098ccc9"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/expected-fail-driver-clock-control.json",
+      "bytes": 3920,
+      "sha256": "2f6e6738c9f5fe0af7e29d76bf8497be373bf02598f60dcf669e026d76eceb80"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/expected-fail-exit-control.json",
+      "bytes": 12381,
+      "sha256": "6d1ae90b4eeb055b1e83afc1cce2166ecf8647c72806249ab7054f114f63b31b"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/figures/value-resolution.csv",
+      "bytes": 19372,
+      "sha256": "96cf186980c210b819c5ac415961177026a8d213ff2e3aefe9719669200e15cc"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/figures/value-resolution.pdf",
+      "bytes": 31312,
+      "sha256": "6550252699e09489f5994408b80c8aa649cbc44572a7960f3369f66ae680b4b8"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/figures/value-resolution.png",
+      "bytes": 182010,
+      "sha256": "a008f16d52e46814a92f10c4d7a7258b8b448a61182537047875969c4bcf6cc0"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/figures/value-resolution.svg",
+      "bytes": 139015,
+      "sha256": "d5b8d4f1067012fc8e2216babaad0a0910fa6337228730d090d35ea0774175d4"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/final-legacy-model-regression.json",
+      "bytes": 3064,
+      "sha256": "fb76851cc730ed4b63f583165cedd2534339912955796ee49db296fbb4b73902"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/final-legacy-pipeline.json",
+      "bytes": 5803,
+      "sha256": "994e5ab712596fe0bdb972fcd1e00da332693d2699d7549fbb14c7e738db39a5"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/final-numpy-tf-parity.json",
+      "bytes": 2484,
+      "sha256": "a75cdbfa2e2d72abde4c3a66359e1e981a2170fe6eb0ff12ecc98f8d9b6b828f"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/final-staged-graph.json",
+      "bytes": 1294,
+      "sha256": "5f293dd397a67684bdf1e5e9a6ad9c6a6bee98248b67de59a83a74f03194c7c6"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/key-results.json",
+      "bytes": 6044,
+      "sha256": "5c86e219ea41000b495e79d55161aae255fb22a34c35ca86201f26da3b77e611"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/manifest.json",
+      "bytes": 4400,
+      "sha256": "11ffa43eee5f828d9ef0aefae0dc2fcd7e75d305c9acc7e733298418f3462b3b"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/matched-high-period-lr-capability-tf.json",
+      "bytes": 37786,
+      "sha256": "cbf5ff0bdb0679410ee40486af54e5459015fa9aa15d849bec4410962d402d03"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/oracle-head-capacity.json",
+      "bytes": 2056,
+      "sha256": "8bd19707f174d1b156f7f407b7d2ff5dc1700b095f27a7e4e1e70f6e73ba6a4c"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/staged-pipeline.json",
+      "bytes": 18787,
+      "sha256": "9c030dfc324abec0ad92b0872ae535cc8c2bc57c73f99b5f066f78db93135689"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/staged-production-capability.json",
+      "bytes": 36101,
+      "sha256": "fb845e6f0486f7b8ce67135eac07cafd824d9799efe963e8ddf02d5fbbce660c"
+    },
+    {
+      "path": "evidence/joint-continuous-local-verify-20261117/unit-tests.json",
+      "bytes": 160,
+      "sha256": "37332b69874ba905538ee587ae3c73493cf346a70a894c248528cc331ad8e68d"
+    },
+    {
       "path": "evidence/joint-continuous-offline-20261117/README.md",
       "bytes": 377,
       "sha256": "b7e33bc4e686252e645b247b7597c7ba5296c7c4ef157ae791bfd5f5843c30ef"
@@ -20625,18 +20765,18 @@
     },
     {
       "path": "frameworks/joint_healthy/backend.py",
-      "bytes": 20644,
-      "sha256": "ef95e3e6bee72fc925f31b227acaeb203cdbb670ff8ed5b9577f673b971d75e5"
+      "bytes": 20726,
+      "sha256": "655155177c0369be700d4cc772e6d275d32d22c293dd0ce9f0801b189ae2e6d2"
     },
     {
       "path": "frameworks/joint_healthy/configuration.py",
-      "bytes": 6053,
-      "sha256": "187c4df1a0d7a6cdfd13e777ec24975a6741cc56fd68dcf1b72191e6235ff529"
+      "bytes": 6093,
+      "sha256": "b22722ce6bbe7fcde9463f4d35a4e29c9912cb12550094eb6c4eaf3af85299c8"
     },
     {
       "path": "frameworks/joint_healthy/continuous.py",
-      "bytes": 9874,
-      "sha256": "1f11a5514b70fed038deef57fe3e7712fb628d427afd3231ba60fbcd00fe0b78"
+      "bytes": 10365,
+      "sha256": "dfc23aa7a0e807a21ce8310b09a64ef5eeaf9a0cfc1ec2e01e32a859440f6a11"
     },
     {
       "path": "frameworks/joint_healthy/controller.py",
@@ -20655,8 +20795,8 @@
     },
     {
       "path": "frameworks/joint_healthy/identity.py",
-      "bytes": 7134,
-      "sha256": "178d18026024ce784fd9879a48e293f64b895ab84e63f7a6fb1abf00a29b665f"
+      "bytes": 7183,
+      "sha256": "944734a731445d2157196b90277d4a03b9a21e3ca1a7d78e8e5c849fa61666c8"
     },
     {
       "path": "frameworks/joint_healthy/metrics.py",
@@ -20665,8 +20805,8 @@
     },
     {
       "path": "frameworks/joint_healthy/model.py",
-      "bytes": 24545,
-      "sha256": "5b9c9cbfcd2bdc793cc3a700d8f5dbec3b18e1bd6f07908813b5a40b4242af83"
+      "bytes": 26144,
+      "sha256": "b2beee2ca740f16bab4b316819c26c87e28288929607baf657bd83d7f1cd0c52"
     },
     {
       "path": "frameworks/joint_healthy/native/joint_protocol.h",
@@ -24742,8 +24882,8 @@
     },
     {
       "path": "templates/joint-healthy/joint-continuous-v4.json",
-      "bytes": 13494,
-      "sha256": "06802f16379de410e9df0cbbd63fcc6dd2289db3a715845e17e2aa798f4fb49b"
+      "bytes": 13540,
+      "sha256": "6d5a77d30102d4a206b7534a94d6d216d87e462de3becdfa3df4fdcd10296123"
     },
     {
       "path": "templates/joint-healthy/joint-cost-coverage-v3.json",
@@ -24822,8 +24962,8 @@
     },
     {
       "path": "tests/joint_healthy/test_continuous_coverage.py",
-      "bytes": 4973,
-      "sha256": "1778258933340b0d1511da5970d8aece9673b3db802439e788f8a1fb6b3bf958"
+      "bytes": 5702,
+      "sha256": "1887e13d3487b54d0be45f2ef8f2d6e6e9a4fdabbc47b6a7c64add1390f27412"
     },
     {
       "path": "tests/joint_healthy/test_contract.py",
@@ -24976,9 +25116,14 @@
       "sha256": "7c3bdf49dbcce782509e503d52ab024a56d11ce3dd27cf17799747d3c17dc19b"
     },
     {
+      "path": "tools/check_joint_common_level_warmup.py",
+      "bytes": 6253,
+      "sha256": "30ffd9730655bceaaf61f0f59b5ff0ca18e3f61df0c82f9c78705472e6afb917"
+    },
+    {
       "path": "tools/check_joint_continuous_capability.py",
-      "bytes": 9905,
-      "sha256": "5be182060d3437dca5e57bd91be340668364657b0ceb6d590b499c522381f5c9"
+      "bytes": 9996,
+      "sha256": "8d073b7b2904ea3e1c08b5561043768fdbaf203263d088a980c2d1107e4dbf94"
     },
     {
       "path": "tools/check_joint_time_learning_scale.py",
@@ -24994,6 +25139,11 @@
       "path": "tools/comprehensive_audit.py",
       "bytes": 12667,
       "sha256": "a6bbecb0bb82c704b00809d900501cac12173b26df6591bb1b1b5d5c6bea494e"
+    },
+    {
+      "path": "tools/diagnose_joint_period_head_fit.py",
+      "bytes": 5157,
+      "sha256": "addce26f191fe3459ed6dd0d7eeddd850a9883f4d4f02baa74d4f6de747a39fd"
     },
     {
       "path": "tools/e2_handover/README.md",
@@ -25104,6 +25254,11 @@
       "path": "tools/plot_baseline_repair_6m.py",
       "bytes": 12562,
       "sha256": "6f9ce94f3c9125c906fa6d969dbc9975c879baadece77f2c5d5e9a82fae5a52a"
+    },
+    {
+      "path": "tools/plot_joint_continuous_value_audit.py",
+      "bytes": 3707,
+      "sha256": "a6e6a478a51038634d599e49b8e9af416107b76013d8e8d68cf11cc7cdbf926e"
     },
     {
       "path": "tools/prepare_baseline_health_validation.py",
@@ -25527,8 +25682,8 @@
     },
     {
       "path": "tools/verify_joint_continuous.py",
-      "bytes": 9883,
-      "sha256": "3087146202435d0ad2417c55d157b0ff5701f820d6ae9ad469cd4412b24cc447"
+      "bytes": 12551,
+      "sha256": "00396f5b37bc18c2828e2a27b4a6fa2832943a82d587f0c16fbda2ca893aec8d"
     },
     {
       "path": "tools/verify_joint_cost_preservation.py",
@@ -25542,8 +25697,13 @@
     },
     {
       "path": "tools/verify_joint_healthy_pipeline.py",
-      "bytes": 9886,
-      "sha256": "c40b2b69e4c3510a318e68d376b07cf03fab89386dd05f344a4193bc47e77821"
+      "bytes": 11236,
+      "sha256": "6dcbf6d7f0de279b20f3b2e70740afd59099370773b6adad678d8705582cb314"
+    },
+    {
+      "path": "tools/verify_joint_numpy_tf_parity.py",
+      "bytes": 6125,
+      "sha256": "23df8ef6dbc7e2f61fc4f146cb844f661b55ee705a9f23fa4e6d7b8de6394b3c"
     },
     {
       "path": "tools/verify_repository.py",

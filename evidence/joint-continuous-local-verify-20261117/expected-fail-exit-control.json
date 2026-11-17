@@ -1,0 +1,541 @@
+{
+  "status": "FAIL_OFFLINE_KNOWN_VALUE_CAPABILITY",
+  "critic_updates_per_task": 0,
+  "minimum_known_margin": 0.009949999999999895,
+  "maximum_advantage_mae": 0.0024874999999999737,
+  "minimum_ranking_accuracy": 0.95,
+  "critic_tasks": [
+    {
+      "sign": 1.0,
+      "label_level": "registered_168_169",
+      "known_advantages": [
+        [
+          0.0,
+          0.009949999999999895,
+          0.029700998750000072,
+          0.06861391284912625
+        ],
+        [
+          0.0,
+          0.009949999999999895,
+          0.029700998750000072,
+          0.06861391284912625
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.036088303866375404,
+          "ranking": 0.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": false,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.03609084699788582,
+          "ranking": 0.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": false,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -7.62939453125e-06,
+              -7.62939453125e-06
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.036088303866375404,
+            0.03609084699788582
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 0,
+        "every": 250,
+        "minimum_mae": [
+          0.036088303866375404,
+          0.03609084699788582
+        ],
+        "maximum_mae": [
+          0.036088303866375404,
+          0.03609084699788582
+        ],
+        "fraction_within_threshold": [
+          0.0,
+          0.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    },
+    {
+      "sign": 0.0,
+      "label_level": "registered_168_169",
+      "known_advantages": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.0,
+          "ranking": null,
+          "maximum_spurious_advantage": 0.0,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 2.5431315104166665e-06,
+          "ranking": null,
+          "maximum_spurious_advantage": 7.62939453125e-06,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -7.62939453125e-06,
+              -7.62939453125e-06
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.0,
+            2.5431315104166665e-06
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 0,
+        "every": 250,
+        "minimum_mae": [
+          0.0,
+          2.5431315104166665e-06
+        ],
+        "maximum_mae": [
+          0.0,
+          2.5431315104166665e-06
+        ],
+        "fraction_within_threshold": [
+          1.0,
+          1.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    },
+    {
+      "sign": -1.0,
+      "label_level": "registered_168_169",
+      "known_advantages": [
+        [
+          -0.0,
+          -0.009949999999999895,
+          -0.029700998750000072,
+          -0.06861391284912625
+        ],
+        [
+          -0.0,
+          -0.009949999999999895,
+          -0.029700998750000072,
+          -0.06861391284912625
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.036088303866375404,
+          "ranking": 0.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": false,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.03608576073486499,
+          "ranking": 0.3333333333333333,
+          "maximum_spurious_advantage": null,
+          "pass_gate": false,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -7.62939453125e-06,
+              -7.62939453125e-06
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.036088303866375404,
+            0.03608576073486499
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 0,
+        "every": 250,
+        "minimum_mae": [
+          0.036088303866375404,
+          0.03608576073486499
+        ],
+        "maximum_mae": [
+          0.036088303866375404,
+          0.03608576073486499
+        ],
+        "fraction_within_threshold": [
+          0.0,
+          0.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    }
+  ],
+  "actor_tasks": [],
+  "isolated_level_critic_tasks": [
+    {
+      "sign": 1.0,
+      "label_level": "migrated_initial_q",
+      "known_advantages": [
+        [
+          0.0,
+          0.009949999999999895,
+          0.029700998750000072,
+          0.06861391284912625
+        ],
+        [
+          0.0,
+          0.009949999999999895,
+          0.029700998750000072,
+          0.06861391284912625
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.036088303866375404,
+          "ranking": 0.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": false,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.03609084699788582,
+          "ranking": 0.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": false,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -7.62939453125e-06,
+              -7.62939453125e-06
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.036088303866375404,
+            0.03609084699788582
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 0,
+        "every": 250,
+        "minimum_mae": [
+          0.036088303866375404,
+          0.03609084699788582
+        ],
+        "maximum_mae": [
+          0.036088303866375404,
+          0.03609084699788582
+        ],
+        "fraction_within_threshold": [
+          0.0,
+          0.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    },
+    {
+      "sign": 0.0,
+      "label_level": "migrated_initial_q",
+      "known_advantages": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.0,
+          "ranking": null,
+          "maximum_spurious_advantage": 0.0,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 2.5431315104166665e-06,
+          "ranking": null,
+          "maximum_spurious_advantage": 7.62939453125e-06,
+          "pass_gate": true,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -7.62939453125e-06,
+              -7.62939453125e-06
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.0,
+            2.5431315104166665e-06
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 0,
+        "every": 250,
+        "minimum_mae": [
+          0.0,
+          2.5431315104166665e-06
+        ],
+        "maximum_mae": [
+          0.0,
+          2.5431315104166665e-06
+        ],
+        "fraction_within_threshold": [
+          1.0,
+          1.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    },
+    {
+      "sign": -1.0,
+      "label_level": "migrated_initial_q",
+      "known_advantages": [
+        [
+          -0.0,
+          -0.009949999999999895,
+          -0.029700998750000072,
+          -0.06861391284912625
+        ],
+        [
+          -0.0,
+          -0.009949999999999895,
+          -0.029700998750000072,
+          -0.06861391284912625
+        ]
+      ],
+      "critics": [
+        {
+          "advantage_mae": 0.036088303866375404,
+          "ranking": 0.0,
+          "maximum_spurious_advantage": null,
+          "pass_gate": false,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ]
+        },
+        {
+          "advantage_mae": 0.03608576073486499,
+          "ranking": 0.3333333333333333,
+          "maximum_spurious_advantage": null,
+          "pass_gate": false,
+          "predicted_advantages": [
+            [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -7.62939453125e-06,
+              -7.62939453125e-06
+            ]
+          ]
+        }
+      ],
+      "trajectory": [
+        {
+          "updates": 0,
+          "advantage_mae": [
+            0.036088303866375404,
+            0.03608576073486499
+          ]
+        }
+      ],
+      "late_window": {
+        "first_update": 0,
+        "every": 250,
+        "minimum_mae": [
+          0.036088303866375404,
+          0.03608576073486499
+        ],
+        "maximum_mae": [
+          0.036088303866375404,
+          0.03608576073486499
+        ],
+        "fraction_within_threshold": [
+          0.0,
+          0.0
+        ],
+        "diagnostic_only_endpoint_is_the_verdict": true
+      }
+    }
+  ],
+  "isolated_level_status": "FAIL",
+  "isolated_level_is_diagnostic_not_the_registered_verdict": true,
+  "critic_period_residual_lr": null,
+  "configured_time_lr": 0.0003,
+  "critic_batch_size": 512,
+  "legacy_critic_reference": true,
+  "source_state_indices": [
+    412,
+    530
+  ],
+  "source_states_modified_fresh_flag_only": true,
+  "real_tcp_runs": 0,
+  "limits": "Small constructed single-decision Q with known same-policy continuation; no TCP causal/value/performance proof. Actor task uses exact Q, not the fitted critics."
+}
