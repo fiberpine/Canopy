@@ -9,7 +9,7 @@ cache="$(cd "$cache" && pwd)"
 fetch() {
   local file="$1"
   if [[ ! -f "$cache/$file" ]]; then
-    curl --fail --location --retry 3 --output "$cache/$file.partial" \
+    curl --fail --location --continue-at - --retry 5 --retry-delay 2 --output "$cache/$file.partial" \
       "https://github.com/fiberpine/Canopy/releases/download/$tag/$file"
     mv "$cache/$file.partial" "$cache/$file"
   fi
