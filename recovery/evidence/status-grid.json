@@ -1,0 +1,222 @@
+[
+  {
+    "results": [
+      {
+        "slot": {
+          "id": "v4-1118-grid-00-v4",
+          "group": "v4",
+          "scenario": 0,
+          "seconds": 40
+        },
+        "status": "COMPLETED",
+        "windows": [
+          {
+            "window": "full",
+            "start_s": 0,
+            "end_s": 40,
+            "departure_mbps": 11.961944,
+            "capacity_mbps": 11.9956032,
+            "utilization": 0.997194038562396,
+            "queue_mean_ms": 8.8110968650225,
+            "queue_p95_ms": 12.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 39783.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 40.023,
+            "complete_window": true,
+            "queue_p99_ms": 14.0,
+            "departure_samples": 39777,
+            "policy_calls_per_s": 45.05
+          },
+          {
+            "window": "trim10",
+            "start_s": 10,
+            "end_s": 40,
+            "departure_mbps": 11.995931733333332,
+            "capacity_mbps": 11.995904,
+            "utilization": 1.0000023119002397,
+            "queue_mean_ms": 8.757054025140413,
+            "queue_p95_ms": 12.0,
+            "dropped_packets": 0.0,
+            "arrival_packets": 29908.0,
+            "drop_fraction": 0.0,
+            "last_log_s": 40.023,
+            "complete_window": true,
+            "queue_p99_ms": 13.0,
+            "departure_samples": 29912,
+            "policy_calls_per_s": 45.233333333333334
+          }
+        ],
+        "proof": {
+          "status": "PASS_EXECUTION_CONTRACT_ONLY",
+          "controls": 1802,
+          "feedback": 1802,
+          "startup": {
+            "mode": "natural-cubic",
+            "time_us": "244495",
+            "scheme": "cubic",
+            "assist_writes": "0",
+            "cwnd": "47",
+            "packets_out": "47",
+            "max_packets_out": "47",
+            "retrans_out": "0",
+            "lost_bytes": "0",
+            "avg_urtt": "36134",
+            "srtt_scaled8": "282186",
+            "min_rtt": "21473",
+            "mss": "1448",
+            "pacing_rate": "1998695",
+            "ssthresh": "46"
+          },
+          "no_hidden_periodic_rl_observations": true,
+          "mean_empty_rtt_fraction": 0.0,
+          "performance_health_claim": false,
+          "windows": [
+            {
+              "window": "full",
+              "start_s": 0,
+              "end_s": 40,
+              "departure_mbps": 11.961944,
+              "capacity_mbps": 11.9956032,
+              "utilization": 0.997194038562396,
+              "queue_mean_ms": 8.8110968650225,
+              "queue_p95_ms": 12.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 39783.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 40.023,
+              "complete_window": true,
+              "queue_p99_ms": 14.0,
+              "departure_samples": 39777,
+              "policy_calls_per_s": 45.05
+            },
+            {
+              "window": "trim10",
+              "start_s": 10,
+              "end_s": 40,
+              "departure_mbps": 11.995931733333332,
+              "capacity_mbps": 11.995904,
+              "utilization": 1.0000023119002397,
+              "queue_mean_ms": 8.757054025140413,
+              "queue_p95_ms": 12.0,
+              "dropped_packets": 0.0,
+              "arrival_packets": 29908.0,
+              "drop_fraction": 0.0,
+              "last_log_s": 40.023,
+              "complete_window": true,
+              "queue_p99_ms": 13.0,
+              "departure_samples": 29912,
+              "policy_calls_per_s": 45.233333333333334
+            }
+          ],
+          "handoff_s": 0.18689599609375,
+          "cpu": {
+            "status": "SAMPLED_CPU_ACCOUNTING_ONLY",
+            "sample_start_s": 0.05502728399994794,
+            "sample_end_s": 38.29423051399999,
+            "sample_span_s": 38.239203230000044,
+            "logical_cpus": 8,
+            "python_cpu_seconds": 2.4699999999999998,
+            "native_cpu_seconds": 0.96,
+            "observed_run_tree_cpu_seconds": 3.4299999999999997,
+            "python_core_equivalents": 0.0645933960795029,
+            "observed_run_tree_core_equivalents": 0.08969852168125303,
+            "observed_run_tree_all_core_fraction": 0.011212315210156629,
+            "machine_busy_fraction": 0.015092358673184711,
+            "unique_process_identities": 2,
+            "includes_mahimahi": false,
+            "mahimahi_coverage": "NOT_VERIFIED_DETACHED_EMULATOR_MAY_BE_MISSING",
+            "excludes_children_user_system_to_avoid_double_count": true,
+            "sampling_may_miss_short_lived_processes_and_final_cpu": true,
+            "sample_window_is_not_packet_trim10": true,
+            "not_a_training_cluster_CPU_measurement": true
+          }
+        },
+        "policy_sha256": "c83285f52021f4dceb7e0feb87fa41166c400fcf11cc9be2e512e41d01c929c4",
+        "planned_ms": {
+          "median": 20.499999129063777,
+          "p95": 20.499999129063777,
+          "minimum": 20.499999129063777,
+          "maximum": 20.499999129063777
+        },
+        "actual_ms": {
+          "median": 22.176000000000002,
+          "p95": 22.256,
+          "minimum": 21.558999999999997,
+          "maximum": 44.807
+        },
+        "cwnd": {
+          "median": 46.0,
+          "p95": 47.0,
+          "minimum": 41.0,
+          "maximum": 47.0
+        },
+        "ssthresh": {
+          "median": 46.0,
+          "p95": 46.0,
+          "minimum": 46.0,
+          "maximum": 46.0
+        },
+        "cwnd_below_ssthresh_fraction": 0.47271386430678464,
+        "window_multiplier": {
+          "median": 0.5580746069480081,
+          "p95": 0.5877801156126411,
+          "minimum": 0.49399860524816475,
+          "maximum": 0.6194288339524536
+        },
+        "reward_records": 1801,
+        "max_reward_error": 5.9468887814162485e-08,
+        "max_discount_error": 2.9790100386506424e-08,
+        "handoff_s": 0.18689599609375
+      },
+      {
+        "slot": {
+          "id": "v4-1118-grid-00-baseline",
+          "group": "baseline",
+          "scenario": 0,
+          "seconds": 40,
+          "baseline_scenario": 0
+        },
+        "status": "FAILED"
+      }
+    ],
+    "current": {
+      "id": "v4-1118-grid-00-baseline",
+      "group": "baseline",
+      "scenario": 0,
+      "seconds": 40,
+      "baseline_scenario": 0
+    },
+    "finished": {
+      "count": 2,
+      "planned": 24,
+      "status": "PARTIAL_OR_FAILED"
+    }
+  },
+  {
+    "results": [
+      {
+        "slot": {
+          "id": "v4-1118-grid-01-baseline",
+          "group": "baseline",
+          "scenario": 1,
+          "seconds": 40,
+          "baseline_scenario": 1
+        },
+        "status": "FAILED"
+      }
+    ],
+    "current": {
+      "id": "v4-1118-grid-01-baseline",
+      "group": "baseline",
+      "scenario": 1,
+      "seconds": 40,
+      "baseline_scenario": 1
+    },
+    "finished": {
+      "count": 1,
+      "planned": 24,
+      "status": "PARTIAL_OR_FAILED"
+    }
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {"ip": "LEARNER_PRIVATE_IP"},
+    {"ip": "ACTOR1_PRIVATE_IP"},
+    {"ip": "ACTOR2_PRIVATE_IP"},
+    {"ip": "ACTOR3_PRIVATE_IP"},
+    {"ip": "ACTOR4_PRIVATE_IP"}
+  ],
+  "learner_endpoint_ip": "LEARNER_PRIVATE_IP",
+  "learner_port": 25000,
+  "ssh_key_path": "/absolute/local/path/to/new-cluster-key",
+  "known_hosts_path": "/absolute/local/path/to/verified-known-hosts",
+  "allow_tcp": false
+}

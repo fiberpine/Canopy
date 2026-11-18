@@ -1,0 +1,30 @@
+{
+  "status": "COMPILED_NOT_TCP_VALIDATED",
+  "sha256": "0174f0a772b984249f43ef664adb249f476fe86c6b216922d553f73cf98d6197",
+  "source_sha256": {
+    "frameworks/joint_healthy/native/orca-server-joint-healthy.cc": "87e07dbc9ffff74168419bfbf69748258cc4f9e6faceffe3d963d1ed28fb4998",
+    "frameworks/joint_healthy/native/joint_protocol.h": "6c967350bdceabe0347b86bee86f0ef9126a00e57624d290cbf6aa79b5107e38",
+    "frameworks/baseline/code/runtime/src/flow.cc": "d7f1f2c32cfa123a6a0c4251ba535f66e38a2731d2edde470906349825f5852a",
+    "frameworks/baseline/code/runtime/src/flow.h": "ad46f1853ae31680469f5ac0c75947cd1280e638754ee660d84bf976c5a96750",
+    "frameworks/baseline/code/runtime/src/define_v2.h": "97a9ce508cfcf2ad3dd6b158f4fba4aac3a120d3545f17aa796430f8659f92cd",
+    "frameworks/baseline/code/runtime/src/common.h": "7b628edc25fc856101a99515029f2fef4e7074ad6a6285c56047500c89315b97",
+    "frameworks/baseline/code/runtime/src/util.h": "a9982aa98b5441d5d8ee5692ebc94526c1c7f384702e150ae184554836fc58c7"
+  },
+  "command": [
+    "g++",
+    "-std=c++11",
+    "-pthread",
+    "-DORCA_NATURAL_CUBIC_HANDOFF",
+    "-DORCA_STARTUP_AUDIT",
+    "-I",
+    "/home/ubuntu/canopy-joint-healthy-20261113-220132/frameworks/joint_healthy/native",
+    "-I",
+    "/home/ubuntu/canopy-joint-healthy-20261113-220132/frameworks/baseline/code/runtime/src",
+    "/home/ubuntu/canopy-joint-healthy-20261113-220132/frameworks/joint_healthy/native/orca-server-joint-healthy.cc",
+    "/home/ubuntu/canopy-joint-healthy-20261113-220132/frameworks/baseline/code/runtime/src/flow.cc",
+    "-o",
+    "@TEMP_OUTPUT@"
+  ],
+  "startup": "natural-cubic",
+  "new_TCP": 0
+}
