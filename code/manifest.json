@@ -1,0 +1,442 @@
+{
+  "status": "VERIFIED_PORTABLE_RELEASE",
+  "created_epoch": 1792289773.046605,
+  "main_versions": {
+    "baseline": "frozen seed3",
+    "mtp20": "V14 PARTIAL",
+    "mtpjoint": "V31 PARTIAL"
+  },
+  "proof": {
+    "baseline": {
+      "original_root": "/home/ubuntu/orca-repair-20261010-114820",
+      "original_run": "formal24-grid24-seed3-balanced-u010",
+      "original_training_commit": "bfe060b27e7608e3ec45b137bf00691c8bcce856",
+      "modules": [
+        "cluster_control",
+        "consistent_target_bn",
+        "distributed",
+        "evaluate",
+        "frozen_evaluate",
+        "mahimahi_metrics",
+        "moving_stats_backend",
+        "node_control",
+        "remote_frozen_evaluate",
+        "repair_evaluate",
+        "timed_distributed"
+      ],
+      "selected_files": [
+        {
+          "source": "/home/ubuntu/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694.index",
+          "path": "models/baseline/model.index",
+          "sha256": "a825421928488439b3d15575775fc29b9a7068e9a1dbc9a857d8ed88c9b87839",
+          "bytes": 3692
+        },
+        {
+          "source": "/home/ubuntu/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694.variables.json",
+          "path": "models/baseline/model.variables.json",
+          "sha256": "3f1a63de031ec945b93085e3bc82c7a81fc5ce62dc3f2eb4763cf7e144304244",
+          "bytes": 4165
+        },
+        {
+          "source": "/home/ubuntu/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694.data-00000-of-00001",
+          "path": "models/baseline/model.data-00000-of-00001",
+          "sha256": "bc85696e43a066544865a2be274bc2f8cee4529a9d7ddbb4db5b199a9ed65e6f",
+          "bytes": 4410448
+        },
+        {
+          "source": "/home/ubuntu/orca-repair-20261010-114820/checkpoints/formal24-grid24-seed3-balanced-u010/step-2412694.counters.json",
+          "path": "models/baseline/model.counters.json",
+          "sha256": "00918732233453663c6e47d732ddf091af5f9b634745a6af44715c7ef9953189",
+          "bytes": 13031
+        }
+      ]
+    },
+    "mtp20": {
+      "original_root": "/home/ubuntu/orca-adaptive-mtp-20261014-115233",
+      "original_run": "v14-joint1800",
+      "original_training_commit": "c43c72f9e8fbe1c9402560ed6ca33f85572dc2a8",
+      "modules": [
+        "atomic_ipc_v13",
+        "cluster_control",
+        "connection_reset",
+        "consistent_target_bn",
+        "control_mapping",
+        "distributed",
+        "evaluate",
+        "frozen_evaluate",
+        "frozen_window",
+        "joint_mtp",
+        "local_mtp_probe_v11",
+        "mahimahi_metrics",
+        "moving_stats_backend",
+        "node_control",
+        "observation_noise_v14",
+        "period_coverage",
+        "remote_frozen_evaluate",
+        "repair_evaluate",
+        "resource_cost",
+        "staged_timing",
+        "timed_distributed",
+        "trainable_timing",
+        "update_credit",
+        "window_warm_start"
+      ],
+      "selected_files": [
+        {
+          "source": "/home/ubuntu/orca-adaptive-mtp-20261014-115233/checkpoints/v14-joint1800/step-277317.index",
+          "path": "models/mtp20/model.index",
+          "sha256": "f307c3ee90c8dc5a46546c3eaaa82794463e77226e592893cd8acbbad13ece94",
+          "bytes": 3733
+        },
+        {
+          "source": "/home/ubuntu/orca-adaptive-mtp-20261014-115233/checkpoints/v14-joint1800/step-277317.variables.json",
+          "path": "models/mtp20/model.variables.json",
+          "sha256": "00a8dbae22134a77a852e52e9f345b00634eb2a4b326e35f917b67b393a36425",
+          "bytes": 4198
+        },
+        {
+          "source": "/home/ubuntu/orca-adaptive-mtp-20261014-115233/checkpoints/v14-joint1800/step-277317.counters.json",
+          "path": "models/mtp20/model.counters.json",
+          "sha256": "45f1a7c04d78b8eb98f6d1b80febf5abd08d25ec1028eeae3400e2e59e2fc8a2",
+          "bytes": 1227519
+        },
+        {
+          "source": "/home/ubuntu/orca-adaptive-mtp-20261014-115233/checkpoints/v14-joint1800/step-277317.data-00000-of-00001",
+          "path": "models/mtp20/model.data-00000-of-00001",
+          "sha256": "875bbbad8788706c88e42bfa28e9420fa73f7c5536e0056f53d985688496e17e",
+          "bytes": 4450405
+        },
+        {
+          "source": "/home/ubuntu/orca-adaptive-mtp-20261014-115233/checkpoints/v14-joint1800/step-277317.timing-stage.json",
+          "path": "models/mtp20/model.timing-stage.json",
+          "sha256": "57de8391f65cef55281b2e425b742dd2b145944d3f456cabf666938632f462e0",
+          "bytes": 1552
+        }
+      ]
+    },
+    "mtpjoint": {
+      "original_root": "/home/ubuntu/orca-feedback-context-20261016-1203",
+      "original_run": "v31-feedback600",
+      "original_training_commit": "bfd41ba39375bd4024d07ced2ec46ad786581a8f",
+      "modules": [
+        "atomic_ipc_v13",
+        "cluster_control",
+        "connection_reset",
+        "consistent_target_bn",
+        "control_mapping",
+        "decision_clock_v21",
+        "distributed",
+        "duration_head_v16",
+        "evaluate",
+        "feedback_context_v31",
+        "frozen_evaluate",
+        "frozen_window",
+        "graceful_pause_v21",
+        "head_factor_v25",
+        "joint_mtp",
+        "local_mtp_probe_v11",
+        "mahimahi_metrics",
+        "moving_stats_backend",
+        "node_control",
+        "observation_noise_v14",
+        "period_coverage",
+        "remote_frozen_evaluate",
+        "repair_evaluate",
+        "resource_cost",
+        "reward_reference_v26",
+        "staged_timing",
+        "time_statistics_v27",
+        "timed_distributed",
+        "timing_context_v17",
+        "trainable_timing",
+        "update_credit",
+        "window_warm_start"
+      ],
+      "selected_files": [
+        {
+          "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-feedback600/step-157704.timing-stage.json",
+          "path": "models/mtpjoint/model.timing-stage.json",
+          "sha256": "c80c663af51eedbc40d74d295fe2094f26801bea8184d7cc99c3e09a45002d3a",
+          "bytes": 1698
+        },
+        {
+          "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-feedback600/step-157704.variables.json",
+          "path": "models/mtpjoint/model.variables.json",
+          "sha256": "4c70e7cfe21dabf9b63f2ea1873000653f35b161fa517854dbb9f2f7938ed106",
+          "bytes": 4392
+        },
+        {
+          "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-feedback600/step-157704.counters.json",
+          "path": "models/mtpjoint/model.counters.json",
+          "sha256": "291d7df0000e4a62925f130373c77e199037b7cfcc8cb8838599610ecd3b4b2b",
+          "bytes": 1241118
+        },
+        {
+          "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-feedback600/step-157704.data-00000-of-00001",
+          "path": "models/mtpjoint/model.data-00000-of-00001",
+          "sha256": "c268025287679988c80168758c0dbc0c2a404486dff04fe41ed868f378eebc36",
+          "bytes": 5475453
+        },
+        {
+          "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-feedback600/step-157704.index",
+          "path": "models/mtpjoint/model.index",
+          "sha256": "2417187cd0f9ccb2147382218135b9f978cb2fe3e94c2ff1825859516aadd5f7",
+          "bytes": 3982
+        }
+      ]
+    },
+    "prior-v13": [
+      {
+        "source": "/home/ubuntu/orca-clock-mtp-20261014-101009/checkpoints/v13-fixed80-paired900/step-248242.timing-stage.json",
+        "path": "models/prior-v13/model.timing-stage.json",
+        "sha256": "129711929d0323e31b7643841c2ca87d649eecc5fe923350173c782e9f6e261c",
+        "bytes": 666
+      },
+      {
+        "source": "/home/ubuntu/orca-clock-mtp-20261014-101009/checkpoints/v13-fixed80-paired900/step-248242.variables.json",
+        "path": "models/prior-v13/model.variables.json",
+        "sha256": "fb0b87f58c1163f9b05c8fb3a77cc55bec8743079f8919fd24f9d481957ab4a8",
+        "bytes": 4198
+      },
+      {
+        "source": "/home/ubuntu/orca-clock-mtp-20261014-101009/checkpoints/v13-fixed80-paired900/step-248242.counters.json",
+        "path": "models/prior-v13/model.counters.json",
+        "sha256": "1fef5ab51ad8dd1a2dc5f851363f86f14b473aedab793ddf994374bb190c2480",
+        "bytes": 1038370
+      },
+      {
+        "source": "/home/ubuntu/orca-clock-mtp-20261014-101009/checkpoints/v13-fixed80-paired900/step-248242.index",
+        "path": "models/prior-v13/model.index",
+        "sha256": "30de406d34a6d68f2976882706c3a0ae34b868dceda44e7ea34c57b27699403e",
+        "bytes": 3733
+      },
+      {
+        "source": "/home/ubuntu/orca-clock-mtp-20261014-101009/checkpoints/v13-fixed80-paired900/step-248242.data-00000-of-00001",
+        "path": "models/prior-v13/model.data-00000-of-00001",
+        "sha256": "11da296e85d7e757a9cec22c9b29ef30ecfad2575ab95de2fc2bca636dec059e",
+        "bytes": 4450405
+      }
+    ],
+    "prior-v28": [
+      {
+        "source": "/home/ubuntu/orca-interval-accounting-20261015-205000/checkpoints/v28-acked900/step-283381.counters.json",
+        "path": "models/prior-v28/model.counters.json",
+        "sha256": "b806df60ab0c474fe617fbab513c7a9374846c7f48deafb05abc91b006c60771",
+        "bytes": 1240998
+      },
+      {
+        "source": "/home/ubuntu/orca-interval-accounting-20261015-205000/checkpoints/v28-acked900/step-283381.timing-stage.json",
+        "path": "models/prior-v28/model.timing-stage.json",
+        "sha256": "3788baa7cf1287afa7b3b753dd36fd8aad1aa72e59956571a9e21b84790cce67",
+        "bytes": 1672
+      },
+      {
+        "source": "/home/ubuntu/orca-interval-accounting-20261015-205000/checkpoints/v28-acked900/step-283381.data-00000-of-00001",
+        "path": "models/prior-v28/model.data-00000-of-00001",
+        "sha256": "231a788a12c2402c61467a62aaa658083e01be44e951eb3563d6f1ad0d8b743e",
+        "bytes": 4769905
+      },
+      {
+        "source": "/home/ubuntu/orca-interval-accounting-20261015-205000/checkpoints/v28-acked900/step-283381.index",
+        "path": "models/prior-v28/model.index",
+        "sha256": "0820ab3f8c83f2eac69ffed12a486dc6a95635ccd561fad8cfd153dc92e041a4",
+        "bytes": 3846
+      },
+      {
+        "source": "/home/ubuntu/orca-interval-accounting-20261015-205000/checkpoints/v28-acked900/step-283381.variables.json",
+        "path": "models/prior-v28/model.variables.json",
+        "sha256": "d1f69e6369a99ab7d2bd8a55b6d1d5a0a808ae4bf69c117e79e186ce171ea0d9",
+        "bytes": 4290
+      }
+    ],
+    "fixed20": [
+      {
+        "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-fixed20600/step-642947.timing-stage.json",
+        "path": "models/fixed20/model.timing-stage.json",
+        "sha256": "072d2b686daae50631050017ac22932fb50058a4e3c5e787c141e63861996484",
+        "bytes": 1530
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-fixed20600/step-642947.counters.json",
+        "path": "models/fixed20/model.counters.json",
+        "sha256": "9840ab27ed6cfa96a4d269eab046cc867b06d32778568965e3dc89514ee532e6",
+        "bytes": 1241110
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-fixed20600/step-642947.index",
+        "path": "models/fixed20/model.index",
+        "sha256": "095cb01f813df56041dc1ae648e345821d7ec448544337a8b7a032b2f50d40fb",
+        "bytes": 3982
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-fixed20600/step-642947.variables.json",
+        "path": "models/fixed20/model.variables.json",
+        "sha256": "516f54fac492b8ef388bc6ecce918903eb882598918685188214d21647986788",
+        "bytes": 4392
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-fixed20600/step-642947.data-00000-of-00001",
+        "path": "models/fixed20/model.data-00000-of-00001",
+        "sha256": "f4d5ada93511366e59e038eb8474bac06daf95c8470e6cca83db3bc3d13ecedd",
+        "bytes": 5475453
+      }
+    ],
+    "fixed40": [
+      {
+        "source": "/home/ubuntu/orca-v31-recovery-v34-20261017-1300/checkpoints/v34-fixed40600-r2/step-338594.data-00000-of-00001",
+        "path": "models/fixed40/model.data-00000-of-00001",
+        "sha256": "c42c9e3f14019662d9b33dae2dea74ca2f26959905cbfcc6702e147a620972c0",
+        "bytes": 5475453
+      },
+      {
+        "source": "/home/ubuntu/orca-v31-recovery-v34-20261017-1300/checkpoints/v34-fixed40600-r2/step-338594.variables.json",
+        "path": "models/fixed40/model.variables.json",
+        "sha256": "7a70b82220d269217ee1b25993435934ddc27432947bb0ee4546715afb24d599",
+        "bytes": 4392
+      },
+      {
+        "source": "/home/ubuntu/orca-v31-recovery-v34-20261017-1300/checkpoints/v34-fixed40600-r2/step-338594.timing-stage.json",
+        "path": "models/fixed40/model.timing-stage.json",
+        "sha256": "7c659af467f84202ca5fee4bea2068d22fabd7e5a716635aa0863a709521a8eb",
+        "bytes": 1530
+      },
+      {
+        "source": "/home/ubuntu/orca-v31-recovery-v34-20261017-1300/checkpoints/v34-fixed40600-r2/step-338594.counters.json",
+        "path": "models/fixed40/model.counters.json",
+        "sha256": "241991cb7d80dea3d09e1ba45eb056a698b564d41db7d6bb446d9098a534e545",
+        "bytes": 1240688
+      },
+      {
+        "source": "/home/ubuntu/orca-v31-recovery-v34-20261017-1300/checkpoints/v34-fixed40600-r2/step-338594.index",
+        "path": "models/fixed40/model.index",
+        "sha256": "5699453876f915818389cca6556adcdbeffc1129b4e8d478342ada38d07519b9",
+        "bytes": 3982
+      }
+    ],
+    "fixed80": [
+      {
+        "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-fixed80600/step-174290.data-00000-of-00001",
+        "path": "models/fixed80/model.data-00000-of-00001",
+        "sha256": "762f31d8e861c6a3d83e3b958b19b2c9db3346f653d348be5d61cff1c85899db",
+        "bytes": 5475453
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-fixed80600/step-174290.index",
+        "path": "models/fixed80/model.index",
+        "sha256": "dbbbd24efc278999371fe3af6acaff09564bd495393cc1d1b5cc56e0ca78376e",
+        "bytes": 3982
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-fixed80600/step-174290.variables.json",
+        "path": "models/fixed80/model.variables.json",
+        "sha256": "6977274f8cff45da3555577255f65acab16f74f9cc505c06e66b996c63876ed3",
+        "bytes": 4392
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-fixed80600/step-174290.counters.json",
+        "path": "models/fixed80/model.counters.json",
+        "sha256": "9665023f93d60d825ec17afe88a687601ea0890faf497f0bf6b1b4607235902f",
+        "bytes": 1241110
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-20261016-1203/checkpoints/v31-fixed80600/step-174290.timing-stage.json",
+        "path": "models/fixed80/model.timing-stage.json",
+        "sha256": "3358aa616b3441aa9bb6aed9db5dd4614444f5b193bf1e99c16ca2c7eb23baff",
+        "bytes": 1530
+      }
+    ],
+    "fixed120": [
+      {
+        "source": "/home/ubuntu/orca-v31-recovery-v34-20261017-1300/checkpoints/v34-fixed120600-r2/step-117319.timing-stage.json",
+        "path": "models/fixed120/model.timing-stage.json",
+        "sha256": "9bd154c099eb1c82f2d2ef7ff571440b29122385f2e8220067769e80f0985406",
+        "bytes": 1530
+      },
+      {
+        "source": "/home/ubuntu/orca-v31-recovery-v34-20261017-1300/checkpoints/v34-fixed120600-r2/step-117319.variables.json",
+        "path": "models/fixed120/model.variables.json",
+        "sha256": "b49c0e6e9eee2bf1fb0fbe7d6f111059e786b13899bc01ce99f03e098d53f8b2",
+        "bytes": 4392
+      },
+      {
+        "source": "/home/ubuntu/orca-v31-recovery-v34-20261017-1300/checkpoints/v34-fixed120600-r2/step-117319.data-00000-of-00001",
+        "path": "models/fixed120/model.data-00000-of-00001",
+        "sha256": "e624ddf7d0b1f0798659b0a13f0fbbc746027bd8f7ecf7dea9ed03743b312b2a",
+        "bytes": 5475453
+      },
+      {
+        "source": "/home/ubuntu/orca-v31-recovery-v34-20261017-1300/checkpoints/v34-fixed120600-r2/step-117319.index",
+        "path": "models/fixed120/model.index",
+        "sha256": "642477092c803de73e838907511829f8b280213557aff753f81c9e44ed0a686a",
+        "bytes": 3982
+      },
+      {
+        "source": "/home/ubuntu/orca-v31-recovery-v34-20261017-1300/checkpoints/v34-fixed120600-r2/step-117319.counters.json",
+        "path": "models/fixed120/model.counters.json",
+        "sha256": "3f456616a08f19c698ed10cde33c523a8adb013bc7e3edafaec82d271ae9371c",
+        "bytes": 1240690
+      }
+    ],
+    "fixed160": [
+      {
+        "source": "/home/ubuntu/orca-feedback-context-r2-20261016-1527/checkpoints/v31-fixed160600-r2/step-88487.timing-stage.json",
+        "path": "models/fixed160/model.timing-stage.json",
+        "sha256": "04efca0f96984cc6587bc822ac782255d9f1cfe87329e5aab6f21f1e61a02fd5",
+        "bytes": 1530
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-r2-20261016-1527/checkpoints/v31-fixed160600-r2/step-88487.data-00000-of-00001",
+        "path": "models/fixed160/model.data-00000-of-00001",
+        "sha256": "ecd12b23afccceb5920587a88e9cbde3147f754a1d0c961ea2bf9af0fa19e233",
+        "bytes": 5475453
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-r2-20261016-1527/checkpoints/v31-fixed160600-r2/step-88487.index",
+        "path": "models/fixed160/model.index",
+        "sha256": "354b7db2279e765166209e18c3a3260ac57c7281d50bf892d239548f04e38414",
+        "bytes": 3982
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-r2-20261016-1527/checkpoints/v31-fixed160600-r2/step-88487.counters.json",
+        "path": "models/fixed160/model.counters.json",
+        "sha256": "c78a0d050fec6ff900a7ae5b8f49ad2eec0971665565a5f2072c9155725162cd",
+        "bytes": 1241127
+      },
+      {
+        "source": "/home/ubuntu/orca-feedback-context-r2-20261016-1527/checkpoints/v31-fixed160600-r2/step-88487.variables.json",
+        "path": "models/fixed160/model.variables.json",
+        "sha256": "c7907e3875994d2c467053324cf38628cb32106aeeccb71890d87e305361e09f",
+        "bytes": 4392
+      }
+    ],
+    "official-orca": [
+      {
+        "source": "/home/ubuntu/orca-canopy-pretrained-eval-20261008-1148/models/orca/model.ckpt-1283529.index",
+        "path": "models/official-orca/model.index",
+        "sha256": "6b53b92fe91d6ab0b953498b431b7fc310bf00f42953c335b366a565dc45e8fa",
+        "bytes": 3194
+      },
+      {
+        "source": "/home/ubuntu/orca-canopy-pretrained-eval-20261008-1148/models/orca/model.ckpt-1283529.data-00000-of-00001",
+        "path": "models/official-orca/model.data-00000-of-00001",
+        "sha256": "0492c22b07509acaef85ceafd919a5315e79fb993a39745fe32ae993a656aaa7",
+        "bytes": 4067404
+      }
+    ]
+  },
+  "private_keys_included": false,
+  "full_resume_supported": false,
+  "compatible_platform": "Ubuntu18.04 x86_64 Python3.6 custom4.13.1-0521-learner TCP ABI",
+  "validated_epoch": 1792290651.9798124,
+  "verification": "evidence/validation/final-verification.json",
+  "scope": "Three implementations: relocated real-TCP local training, four-actor distributed training, frozen model evaluation; eight comparator evaluation entrypoints",
+  "research_status": "PARTIAL",
+  "portability_changes": [
+    "Interpreter and dependency relocation",
+    "Local RPC role filtering",
+    "Generic cluster/run/port/budget entrypoint",
+    "Smoke-only reduced calibration and warmup; production gates preserved",
+    "V31 matching native boundary/interval-rate source bundled"
+  ],
+  "resume": "Fresh initialization from documented priors; no seamless TCP/optimizer/replay continuation"
+}

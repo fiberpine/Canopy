@@ -1,0 +1,1163 @@
+{
+  "status": "COMMON_REAL_STATE_BN_WEIGHT_SWAP_DIAGNOSIS_ONLY",
+  "rows": 1059,
+  "summary": {
+    "g4_logged_action_parity": 4.26173210144043e-06,
+    "joint_logged_action_parity": 9.59634780883789e-06,
+    "old_weights_old_statistics": {
+      "rmse": 0.0,
+      "mean_delta": 0.0,
+      "max_abs_delta": 0.0
+    },
+    "old_weights_new_statistics": {
+      "rmse": 0.8828751444816589,
+      "mean_delta": -0.784213125705719,
+      "max_abs_delta": 1.9999992847442627
+    },
+    "new_weights_old_statistics": {
+      "rmse": 0.7219586372375488,
+      "mean_delta": -0.29409417510032654,
+      "max_abs_delta": 1.9878785610198975
+    },
+    "new_weights_new_statistics": {
+      "rmse": 0.26736485958099365,
+      "mean_delta": 0.026931000873446465,
+      "max_abs_delta": 1.1521049737930298
+    }
+  },
+  "cells": [
+    {
+      "group": "g4",
+      "scenario": 0,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.3582872450351715,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.6833574771881104
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.691476583480835,
+          "rmse_vs_old": 0.5737233757972717
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.5502885580062866,
+          "rmse_vs_old": 0.4091716706752777
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 1,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.2857329845428467,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.8030015230178833
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9182285666465759,
+          "rmse_vs_old": 0.6889016032218933
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.22975881397724152,
+          "rmse_vs_old": 0.11994151026010513
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 2,
+      "rows": 22,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.18579906225204468,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9263271689414978
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9915745258331299,
+          "rmse_vs_old": 0.9181752800941467
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.11289143562316895,
+          "rmse_vs_old": 0.3099521994590759
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 3,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.11300534754991531,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 1.1190643310546875
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.0007883873186074197,
+          "rmse_vs_old": 0.36016446352005005
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.0061421263962984085,
+          "rmse_vs_old": 0.11643031239509583
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 4,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.24768440425395966,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9943860769271851
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.22129316627979279,
+          "rmse_vs_old": 0.3525739312171936
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.1074807196855545,
+          "rmse_vs_old": 0.1452573537826538
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 5,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.2343108206987381,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.8123130798339844
+        },
+        "new_weights_old_statistics": {
+          "mean": 0.08612656593322754,
+          "rmse_vs_old": 0.7963312864303589
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.4084916114807129,
+          "rmse_vs_old": 0.46269556879997253
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 6,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.33894482254981995,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.7043441534042358
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9939061999320984,
+          "rmse_vs_old": 0.6977617144584656
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.2132805585861206,
+          "rmse_vs_old": 0.13939930498600006
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 7,
+      "rows": 23,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.26784858107566833,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.7922871112823486
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9914518594741821,
+          "rmse_vs_old": 0.7827932238578796
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.11143326759338379,
+          "rmse_vs_old": 0.19851209223270416
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 8,
+      "rows": 22,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.23237644135951996,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.8394047021865845
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9879661202430725,
+          "rmse_vs_old": 0.8253403306007385
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.09454169124364853,
+          "rmse_vs_old": 0.26056578755378723
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 9,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.1612320989370346,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 1.103143572807312
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.1185988187789917,
+          "rmse_vs_old": 0.29557961225509644
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.08495735377073288,
+          "rmse_vs_old": 0.2192123532295227
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 10,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.10546942800283432,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9298185110092163
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.5063133239746094,
+          "rmse_vs_old": 0.6423259377479553
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.5178683400154114,
+          "rmse_vs_old": 0.4701363146305084
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 11,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.06762456893920898,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9714555144309998
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.981627881526947,
+          "rmse_vs_old": 0.9495830535888672
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.08752673119306564,
+          "rmse_vs_old": 0.08095405250787735
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 12,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.07705482095479965,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9509307146072388
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9935105443000793,
+          "rmse_vs_old": 0.9438177943229675
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.0935198962688446,
+          "rmse_vs_old": 0.10283887386322021
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 13,
+      "rows": 22,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.24129949510097504,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.833185076713562
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9897944927215576,
+          "rmse_vs_old": 0.8211964964866638
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.10023183375597,
+          "rmse_vs_old": 0.24545077979564667
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 14,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.23520329594612122,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 1.042380452156067
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.23091933131217957,
+          "rmse_vs_old": 0.2811448574066162
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.10936455428600311,
+          "rmse_vs_old": 0.25436902046203613
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 15,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.12137774378061295,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.916949987411499
+        },
+        "new_weights_old_statistics": {
+          "mean": 0.5487845540046692,
+          "rmse_vs_old": 0.8681244850158691
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.44841599464416504,
+          "rmse_vs_old": 0.4675932228565216
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 16,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.041152309626340866,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 1.0117907524108887
+        },
+        "new_weights_old_statistics": {
+          "mean": 0.6763253808021545,
+          "rmse_vs_old": 0.8575882315635681
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.40084075927734375,
+          "rmse_vs_old": 0.4508969485759735
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 17,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.04588989540934563,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9893030524253845
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9340083003044128,
+          "rmse_vs_old": 0.9270319938659668
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.08699642866849899,
+          "rmse_vs_old": 0.10202982276678085
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 18,
+      "rows": 22,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.1598179191350937,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9467551708221436
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.8867550492286682,
+          "rmse_vs_old": 0.8711535334587097
+        },
+        "new_weights_new_statistics": {
+          "mean": 0.009604915045201778,
+          "rmse_vs_old": 0.3116619288921356
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 19,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.17440737783908844,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 1.089943289756775
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.11635728925466537,
+          "rmse_vs_old": 0.29893168807029724
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.04769749194383621,
+          "rmse_vs_old": 0.27160897850990295
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 20,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.5304273962974548,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.7294129133224487
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.6619836688041687,
+          "rmse_vs_old": 0.2491014301776886
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.26847946643829346,
+          "rmse_vs_old": 0.3191361427307129
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 21,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": 0.034927014261484146,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 1.0974094867706299
+        },
+        "new_weights_old_statistics": {
+          "mean": 0.8233022689819336,
+          "rmse_vs_old": 0.8769344687461853
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.2342880517244339,
+          "rmse_vs_old": 0.3751020133495331
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 22,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.02642977237701416,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 1.0025207996368408
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.8531320095062256,
+          "rmse_vs_old": 0.9070134162902832
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.06695716828107834,
+          "rmse_vs_old": 0.11121044307947159
+        }
+      }
+    },
+    {
+      "group": "g4",
+      "scenario": 23,
+      "rows": 22,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.19144748151302338,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.8929013013839722
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9883204102516174,
+          "rmse_vs_old": 0.8789852261543274
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.10286453366279602,
+          "rmse_vs_old": 0.19008126854896545
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 0,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.366131991147995,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.6879388689994812
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.5652065277099609,
+          "rmse_vs_old": 0.6015059351921082
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.38543787598609924,
+          "rmse_vs_old": 0.27186575531959534
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 1,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.3817481994628906,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.6654011011123657
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9973174929618835,
+          "rmse_vs_old": 0.6624658703804016
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.33166226744651794,
+          "rmse_vs_old": 0.06810453534126282
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 2,
+      "rows": 21,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.3639692962169647,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.7374710440635681
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.7069698572158813,
+          "rmse_vs_old": 0.5407919883728027
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.28270283341407776,
+          "rmse_vs_old": 0.22182852029800415
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 3,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.23238202929496765,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9654395580291748
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.10245034843683243,
+          "rmse_vs_old": 0.44652801752090454
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.19147497415542603,
+          "rmse_vs_old": 0.05406218767166138
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 4,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.23109139502048492,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9639608860015869
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.11036539822816849,
+          "rmse_vs_old": 0.45135799050331116
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.16213828325271606,
+          "rmse_vs_old": 0.10137173533439636
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 5,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.3211343288421631,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.7454652190208435
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.5049704909324646,
+          "rmse_vs_old": 0.5644849538803101
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.34801435470581055,
+          "rmse_vs_old": 0.29764461517333984
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 6,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.3586410582065582,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.6841254234313965
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9989717602729797,
+          "rmse_vs_old": 0.6830295324325562
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.3126973807811737,
+          "rmse_vs_old": 0.07131410390138626
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 7,
+      "rows": 21,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.27701443433761597,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.8205723166465759
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.7183327078819275,
+          "rmse_vs_old": 0.5372973084449768
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.15157243609428406,
+          "rmse_vs_old": 0.20178915560245514
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 8,
+      "rows": 22,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.33010974526405334,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.7579149603843689
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.913678765296936,
+          "rmse_vs_old": 0.658958375453949
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.15911629796028137,
+          "rmse_vs_old": 0.27868837118148804
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 9,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.33425331115722656,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.7960866689682007
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.27217578887939453,
+          "rmse_vs_old": 0.3958643078804016
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.129193514585495,
+          "rmse_vs_old": 0.24390554428100586
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 10,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.19933806359767914,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.8638103604316711
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.01437254250049591,
+          "rmse_vs_old": 0.5776631832122803
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.27922239899635315,
+          "rmse_vs_old": 0.30919814109802246
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 11,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.11055868864059448,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9245026111602783
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9989176392555237,
+          "rmse_vs_old": 0.9232902526855469
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.11118096113204956,
+          "rmse_vs_old": 0.03399984911084175
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 12,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.18657898902893066,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.8459311723709106
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9991845488548279,
+          "rmse_vs_old": 0.845071017742157
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.18038813769817352,
+          "rmse_vs_old": 0.08129482716321945
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 13,
+      "rows": 23,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.40884536504745483,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.6663510799407959
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9967310428619385,
+          "rmse_vs_old": 0.6621667742729187
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.2021573781967163,
+          "rmse_vs_old": 0.32803210616111755
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 14,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.38388383388519287,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.7064947485923767
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.7330501079559326,
+          "rmse_vs_old": 0.5063235759735107
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.13442158699035645,
+          "rmse_vs_old": 0.30115988850593567
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 15,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.03363119065761566,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 1.0172210931777954
+        },
+        "new_weights_old_statistics": {
+          "mean": 0.7501921057701111,
+          "rmse_vs_old": 0.8654959201812744
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.09700340032577515,
+          "rmse_vs_old": 0.2686215341091156
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 16,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.1293831616640091,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9225714802742004
+        },
+        "new_weights_old_statistics": {
+          "mean": 0.7399879097938538,
+          "rmse_vs_old": 0.9724513292312622
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.17734920978546143,
+          "rmse_vs_old": 0.2035732865333557
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 17,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.05762077495455742,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.9702876210212708
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9365713000297546,
+          "rmse_vs_old": 0.9002942442893982
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.1195562481880188,
+          "rmse_vs_old": 0.1183297336101532
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 18,
+      "rows": 23,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.36131569743156433,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.7277370095252991
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9904208183288574,
+          "rmse_vs_old": 0.7149848341941833
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.10456503182649612,
+          "rmse_vs_old": 0.3648228347301483
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 19,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.4137829840183258,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.7334272265434265
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.6735525727272034,
+          "rmse_vs_old": 0.3363996148109436
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.16373760998249054,
+          "rmse_vs_old": 0.33266568183898926
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 20,
+      "rows": 18,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.34921982884407043,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.8163444995880127
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.48026043176651,
+          "rmse_vs_old": 0.2964928448200226
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.09605852514505386,
+          "rmse_vs_old": 0.35229650139808655
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 21,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": 0.007970412261784077,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 1.0554777383804321
+        },
+        "new_weights_old_statistics": {
+          "mean": 0.7501838803291321,
+          "rmse_vs_old": 0.8294190168380737
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.06717493385076523,
+          "rmse_vs_old": 0.2073976695537567
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 22,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.026861518621444702,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 1.0016423463821411
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.8490573763847351,
+          "rmse_vs_old": 0.8548353910446167
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.09370625764131546,
+          "rmse_vs_old": 0.12353233247995377
+        }
+      }
+    },
+    {
+      "group": "joint",
+      "scenario": 23,
+      "rows": 24,
+      "cases": {
+        "old_weights_old_statistics": {
+          "mean": -0.3509298861026764,
+          "rmse_vs_old": 0.0
+        },
+        "old_weights_new_statistics": {
+          "mean": -1.0,
+          "rmse_vs_old": 0.7519218325614929
+        },
+        "new_weights_old_statistics": {
+          "mean": -0.9654030203819275,
+          "rmse_vs_old": 0.7098776698112488
+        },
+        "new_weights_new_statistics": {
+          "mean": -0.07168681919574738,
+          "rmse_vs_old": 0.4085852801799774
+        }
+      }
+    }
+  ],
+  "statistics": {
+    "abstract_actor/abstract_actor/bn1/moving_mean": {
+      "rms_old": 18.84296226501465,
+      "rms_new": 39.03081130981445,
+      "rms_change": 34.29481506347656
+    },
+    "abstract_actor/abstract_actor/bn1/moving_variance": {
+      "rms_old": 1.0299224853515625,
+      "rms_new": 3.4585177898406982,
+      "rms_change": 2.8715131282806396
+    },
+    "abstract_actor/abstract_actor/bn2/moving_mean": {
+      "rms_old": 4.608291149139404,
+      "rms_new": 7.1797380447387695,
+      "rms_change": 5.273336410522461
+    },
+    "abstract_actor/abstract_actor/bn2/moving_variance": {
+      "rms_old": 22.065038681030273,
+      "rms_new": 23.378887176513672,
+      "rms_change": 18.715444564819336
+    }
+  },
+  "optimizer_updates": 0,
+  "tcp_runs": 0,
+  "limits": [
+    "Real states cover initializer and failed final frozen runs, not all training history",
+    "Swapping weights/statistics is a model sensitivity intervention, not closed-loop TCP causality",
+    "A smaller action distance to the teacher is not itself proof of healthy TCP performance"
+  ]
+}

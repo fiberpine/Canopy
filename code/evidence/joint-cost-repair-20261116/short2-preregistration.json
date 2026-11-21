@@ -1,0 +1,39 @@
+{
+  "status": "BEFORE_SECOND_CANDIDATE_LEARNING",
+  "epoch": 1794790475.1963997,
+  "run": "short2-cost001-conditioned-seed3-720",
+  "previous_short": "short1 FAIL retained; mean queue +21.06%, no call saving",
+  "changes": [
+    "Unit-L2 normalize time hidden features before zero-initialized output",
+    "Subtract constant21.6ms future-call-cost prior from both imported online critics and hard-copy targets"
+  ],
+  "actual_saturation_evidence": "short1-time-geometry-and-cost-initialization.json",
+  "same_original_short_criteria": {
+    "all24_complete": true,
+    "final_debt": 0,
+    "minimum_connections_per_actor": 24,
+    "finite_both_action_gradients": true,
+    "both_branches_change": true,
+    "frozen_bn_unchanged": true,
+    "minimum_joint_measured_seconds": 90,
+    "maximum_extra_formal_drain_seconds": 600,
+    "short_frozen_conditions": 24,
+    "repeats": 1,
+    "per_cell_minimum_utilization": 0.95,
+    "overall_utilization_loss_limit": 0.01,
+    "overall_mean_and_p95_queue_ratio_limit": 1.2,
+    "per_cell_disaster": "max(2*reference_mean,reference_mean+10ms)",
+    "full_and_trim_drop_packets": 0,
+    "minimum_policy_call_reduction": 0.2
+  },
+  "decision_cost": 0.01,
+  "cost_reference_s": 0.0216,
+  "cost_reference_is_approximate_initial_value_not_true_joint_return": true,
+  "no_reward_discount_change": true,
+  "no_extra_time_regularizer": true,
+  "no_action_mask_or_fallback": true,
+  "initial_policy_unchanged_by_zero_output_weights": true,
+  "fresh_healthy_initialization_not_recover_saturated_short1": true,
+  "second_and_last_short_training": true,
+  "no_independent_fixed_training": true
+}

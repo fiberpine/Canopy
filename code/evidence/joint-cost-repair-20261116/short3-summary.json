@@ -1,0 +1,325 @@
+{
+  "status": "NETWORK_SCREEN_PASS_CALL_GATE_FAIL_NOT_PROMOTED",
+  "network_gate_pass": true,
+  "call_gate_pass": false,
+  "measurements": {
+    "utilization": 0.9996882849457086,
+    "queue_mean_ms": 14.670623479149908,
+    "queue_p95_ms": 19.166666666666668,
+    "queue_p99_ms": 20.625
+  },
+  "calls_per_second": 45.94,
+  "call_reduction_fraction": 0.005896672978090378,
+  "queue_mean_ratio": 1.1687032555349992,
+  "queue_p95_ratio": 1.069767441860465,
+  "run": "short3-cost001-coverage-seed3-600",
+  "training": {
+    "status": "PASS_TRAINING_EXECUTION_ONLY_NOT_FROZEN_PERFORMANCE",
+    "counters": {
+      "critic_iterations": 69736,
+      "critic_optimizer_ops": 139472,
+      "actor_updates": 40236,
+      "actor_optimizer_ops": 80472,
+      "target_updates": 69736
+    },
+    "inserted": 446978,
+    "physical_seconds": 14400.692546,
+    "actor_exposure_and_ledger_pass": true,
+    "period_coverage_and_value_gates_pass": true,
+    "performance_verified": false,
+    "retained_replay_rows": 300000,
+    "discount_error": 2.980225732862607e-08,
+    "reward_error": 1.2324756539783266e-06
+  },
+  "coverage": {
+    "status": "PASS_RETAINED_ALL_ACTOR_PERIOD_STRATA",
+    "minimum": 184,
+    "required": 128,
+    "actors": [
+      {
+        "actor": 0,
+        "counts": [
+          4537,
+          248,
+          264,
+          275,
+          260
+        ]
+      },
+      {
+        "actor": 1,
+        "counts": [
+          3711,
+          208,
+          190,
+          250,
+          305
+        ]
+      },
+      {
+        "actor": 2,
+        "counts": [
+          3417,
+          206,
+          225,
+          217,
+          301
+        ]
+      },
+      {
+        "actor": 3,
+        "counts": [
+          2743,
+          213,
+          203,
+          203,
+          368
+        ]
+      },
+      {
+        "actor": 4,
+        "counts": [
+          2805,
+          196,
+          216,
+          202,
+          376
+        ]
+      },
+      {
+        "actor": 5,
+        "counts": [
+          4575,
+          238,
+          260,
+          252,
+          249
+        ]
+      },
+      {
+        "actor": 6,
+        "counts": [
+          3775,
+          252,
+          217,
+          208,
+          282
+        ]
+      },
+      {
+        "actor": 7,
+        "counts": [
+          3459,
+          226,
+          220,
+          225,
+          328
+        ]
+      },
+      {
+        "actor": 8,
+        "counts": [
+          3554,
+          211,
+          221,
+          217,
+          318
+        ]
+      },
+      {
+        "actor": 9,
+        "counts": [
+          2903,
+          188,
+          214,
+          211,
+          375
+        ]
+      },
+      {
+        "actor": 10,
+        "counts": [
+          4633,
+          279,
+          254,
+          241,
+          254
+        ]
+      },
+      {
+        "actor": 11,
+        "counts": [
+          3702,
+          243,
+          237,
+          206,
+          263
+        ]
+      },
+      {
+        "actor": 12,
+        "counts": [
+          3974,
+          246,
+          218,
+          217,
+          294
+        ]
+      },
+      {
+        "actor": 13,
+        "counts": [
+          3620,
+          218,
+          239,
+          218,
+          327
+        ]
+      },
+      {
+        "actor": 14,
+        "counts": [
+          2843,
+          184,
+          199,
+          189,
+          377
+        ]
+      },
+      {
+        "actor": 15,
+        "counts": [
+          4451,
+          251,
+          257,
+          256,
+          269
+        ]
+      },
+      {
+        "actor": 16,
+        "counts": [
+          4468,
+          265,
+          227,
+          218,
+          285
+        ]
+      },
+      {
+        "actor": 17,
+        "counts": [
+          4047,
+          238,
+          224,
+          238,
+          291
+        ]
+      },
+      {
+        "actor": 18,
+        "counts": [
+          3570,
+          218,
+          216,
+          222,
+          293
+        ]
+      },
+      {
+        "actor": 19,
+        "counts": [
+          2630,
+          212,
+          191,
+          220,
+          417
+        ]
+      },
+      {
+        "actor": 20,
+        "counts": [
+          2937,
+          224,
+          199,
+          197,
+          377
+        ]
+      },
+      {
+        "actor": 21,
+        "counts": [
+          4682,
+          276,
+          248,
+          240,
+          246
+        ]
+      },
+      {
+        "actor": 22,
+        "counts": [
+          3906,
+          242,
+          257,
+          236,
+          282
+        ]
+      },
+      {
+        "actor": 23,
+        "counts": [
+          3827,
+          231,
+          250,
+          219,
+          311
+        ]
+      }
+    ]
+  },
+  "capacity": {
+    "status": "PASS_FULL_REPLAY_JOINT_CAPACITY",
+    "run": "short3-cost001-coverage-seed3-600",
+    "measured_wall_seconds": 170.1359622478485,
+    "complete_updates_per_wall_second": 109.20677647758716,
+    "credit_rate": 108.93640447984933,
+    "nominal_credit_rate": 120.0,
+    "projected_extra_formal_drain_seconds": 355.79847637624084,
+    "inserted": 446978,
+    "final_debt": 0,
+    "both_action_gradients_finite_positive_snapshots": 74,
+    "minimum_gradient_by_branch": [
+      0.378591924905777,
+      0.00032702076714485884
+    ],
+    "both_action_branches_remain_trainable": true,
+    "maximum_memory_replay_rows": 300000
+  },
+  "same_external_cpu_sampling": {
+    "short2": {
+      "python_core_equivalents": 0.05320345940747315,
+      "native_core_equivalents": 0.026282591177535758,
+      "observed_tree_core_equivalents": 0.0794860505850089
+    },
+    "short3": {
+      "python_core_equivalents": 0.05650245679576245,
+      "native_core_equivalents": 0.02901026623964612,
+      "observed_tree_core_equivalents": 0.08551272303540858
+    }
+  },
+  "cpu_limits": [
+    "Only observed exact process counters25-50s after native creation",
+    "Only short2/short3 share this external sampler; earlier scalar CPU is not an identical measurement",
+    "Different frozen wall times, no whole-emulator or cluster-CPU benefit claim"
+  ],
+  "formal_started": false,
+  "independent_fixed_training": false,
+  "protected_baseline_unchanged": true,
+  "limitations": [
+    "One seed,600s short training,24 single frozen tests",
+    "Baseline72 came from the earlier reference window",
+    "Two changes plus different training length/asynchronous timing; no single-component causal attribution"
+  ],
+  "full_frozen_condition_equal_mean_planned_ms": 20.20573424018465
+}

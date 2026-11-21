@@ -1,0 +1,13 @@
+{
+  "status": "ACTUAL_FIFTH_SUMMARY_REVIEW_READ",
+  "scope": "Supplied summaries only; no independent code/raw audit",
+  "recommendation": [
+    "Offline stratify similar replay states and decompose20-versus40 one-step utility and critic continuation values",
+    "If later authorized, same-weight frozen learned/forced20/forced40 comparisons without new training"
+  ],
+  "qualification": [
+    "Matched-state observational decomposition is a clue, not proof of a trueQ ordering",
+    "A whole-rollout forced-period intervention estimates a different policy effect, not ground truth for one-step Q with a mixed continuation policy",
+    "No new network diagnostic or training performed after the24 final frozen slots"
+  ]
+}

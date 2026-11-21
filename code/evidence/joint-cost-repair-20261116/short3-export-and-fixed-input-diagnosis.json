@@ -1,0 +1,98 @@
+{
+  "status": "PASS_FULL_EXPORT_AND_REAL_FROZEN_ACTION_PARITY",
+  "full_vs_export_max_errors": {
+    "frozen": 0.0,
+    "recent_training_replay": 0.0
+  },
+  "logged_frozen_action_error": 7.510185241699219e-06,
+  "all_full_model_variables_unchanged": true,
+  "optimizer_updates": 0,
+  "tcp_runs": 0,
+  "datasets": {
+    "frozen": {
+      "rows": 175,
+      "period_mean_ms": 20.216612209850567,
+      "period_p10_p50_p90_ms": [
+        20.19131757209133,
+        20.201662216545223,
+        20.231127622930153
+      ],
+      "period_min_ms": 20.19003628141659,
+      "period_max_ms": 20.840869789146915,
+      "softsign_derivative_median": 9.310969471698627e-05,
+      "window_teacher_rmse": 0.08594011515378952,
+      "queries_learned_not_ground_truth": [
+        {
+          "period_ms": 20,
+          "mean_min_q": 168.96560668945312,
+          "positive_time_q_gradient_fraction": 0.005714285714285714
+        },
+        {
+          "period_ms": 40,
+          "mean_min_q": 168.54498291015625,
+          "positive_time_q_gradient_fraction": 0.07428571428571429
+        },
+        {
+          "period_ms": 80,
+          "mean_min_q": 168.1048126220703,
+          "positive_time_q_gradient_fraction": 0.3657142857142857
+        },
+        {
+          "period_ms": 120,
+          "mean_min_q": 167.50315856933594,
+          "positive_time_q_gradient_fraction": 0.25142857142857145
+        },
+        {
+          "period_ms": 160,
+          "mean_min_q": 166.82078552246094,
+          "positive_time_q_gradient_fraction": 0.13142857142857142
+        }
+      ]
+    },
+    "recent_training_replay": {
+      "rows": 512,
+      "period_mean_ms": 24.77626321771242,
+      "period_p10_p50_p90_ms": [
+        20.191453338595192,
+        20.200496693154076,
+        20.321049428975417
+      ],
+      "period_min_ms": 20.188298410651324,
+      "period_max_ms": 157.217223069904,
+      "softsign_derivative_median": 9.20418679015711e-05,
+      "window_teacher_rmse": 0.13063295185565948,
+      "queries_learned_not_ground_truth": [
+        {
+          "period_ms": 20,
+          "mean_min_q": 168.90057373046875,
+          "positive_time_q_gradient_fraction": 0.06640625
+        },
+        {
+          "period_ms": 40,
+          "mean_min_q": 168.58786010742188,
+          "positive_time_q_gradient_fraction": 0.134765625
+        },
+        {
+          "period_ms": 80,
+          "mean_min_q": 168.2022705078125,
+          "positive_time_q_gradient_fraction": 0.138671875
+        },
+        {
+          "period_ms": 120,
+          "mean_min_q": 167.70643615722656,
+          "positive_time_q_gradient_fraction": 0.177734375
+        },
+        {
+          "period_ms": 160,
+          "mean_min_q": 167.0926971435547,
+          "positive_time_q_gradient_fraction": 0.1796875
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Same final checkpoint on both real datasets; training-state observations were generated under older exploratory policies",
+    "No learnedQ ordering is asserted to be a correct counterfactual value",
+    "No true state-distribution or attractor cause is proven by sensitivity alone"
+  ]
+}

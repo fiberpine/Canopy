@@ -1,0 +1,17 @@
+{
+  "status": "RECORDED_BEFORE_NEW_TCP_OR_LEARNING_RESULTS",
+  "cost": 0.01,
+  "window_actor_lr": 1e-05,
+  "time_actor_lr": 0.0001,
+  "window_bn_statistics": "frozen_migrated",
+  "teacher_anchor_weight": 10.0,
+  "teacher_anchor_huber_delta": 0.1,
+  "interpretation": "Engineering preservation bundle plus explicit cost; not a causal ablation of each component",
+  "weight_rationale": "Old final critic |dQ/da_window| median.39/p901.48 on1059 real states; Huber weighted gradient caps at1; not ground truth or proof of optimal coefficient",
+  "source_teacher": "Frozen healthy seed3 same-state window, learner-only per-new-row cache, not a deployed fallback",
+  "cost_is_cpu_measurement": false,
+  "full_action_range_preserved": true,
+  "both_actions_train": true,
+  "property_reward": false,
+  "next_short_revision_policy": "At most one further short attempt if first fails; preserve first configuration/results, no automatic coefficient sweep or second formal"
+}

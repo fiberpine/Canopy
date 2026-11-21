@@ -1,0 +1,25 @@
+{
+  "status": "PASS_ACTUAL_TF1_COST_PRESERVATION_GRAPH_NOT_TCP_HEALTH",
+  "fixed_inputs": 128,
+  "initial_teacher_window_error": 0.0,
+  "time_feature_normalization": "unit_l2_v1",
+  "initial_time_feature_max_norm": 1.000000238418579,
+  "critic_initial_cost_reference_s": 0.0216,
+  "both_branches_changed": true,
+  "window_parameter_max_change": 0.0003173165023326874,
+  "time_parameter_max_change": 0.016707750037312508,
+  "all_online_and_target_bn_statistics_bitwise_unchanged": true,
+  "teacher_prediction_bitwise_unchanged": true,
+  "teacher_loss_time_parameter_gradients_exactly_zero": true,
+  "independent_actor_optimizer_slots": true,
+  "synthetic_complete_critic_updates": 30,
+  "synthetic_complete_joint_updates": 30,
+  "global_step": 90,
+  "gradient_norms": [
+    4.869531154632568,
+    2.660122618181049e-06
+  ],
+  "save_restore_action_error": 0.0,
+  "real_tcp_runs": 0,
+  "physical_experience": 0
+}

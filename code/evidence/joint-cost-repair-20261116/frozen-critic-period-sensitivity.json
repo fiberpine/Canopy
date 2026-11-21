@@ -1,0 +1,62 @@
+{
+  "status": "ACTUAL_FINAL_CRITIC_COMMON_STATE_SENSITIVITY_NOT_TRUE_COUNTERFACTUAL_VALUES",
+  "queries": [
+    {
+      "window": "teacher",
+      "periods_ms": [
+        20,
+        40,
+        80,
+        120,
+        160
+      ],
+      "mean_min_q": [
+        186.4092254638672,
+        186.3904266357422,
+        186.2342529296875,
+        186.05035400390625,
+        185.85528564453125
+      ],
+      "greedy_duration_counts": [
+        583,
+        329,
+        36,
+        56,
+        55
+      ],
+      "median_abs_window_q_gradient": 0.4815264642238617,
+      "window_q_gradient_p90": 1.578358817100525,
+      "median_abs_time_q_gradient": 0.35178202390670776
+    },
+    {
+      "window": "trained",
+      "periods_ms": [
+        20,
+        40,
+        80,
+        120,
+        160
+      ],
+      "mean_min_q": [
+        186.4823455810547,
+        186.4647979736328,
+        186.29750061035156,
+        186.11058044433594,
+        185.91018676757812
+      ],
+      "greedy_duration_counts": [
+        637,
+        276,
+        21,
+        16,
+        109
+      ],
+      "median_abs_window_q_gradient": 0.3924720287322998,
+      "window_q_gradient_p90": 1.4831569194793701,
+      "median_abs_time_q_gradient": 0.38561248779296875
+    }
+  ],
+  "tcp_runs": 0,
+  "optimizer_updates": 0,
+  "limitation": "These are learned predictions; no ground-truth return for unexecuted durations"
+}
